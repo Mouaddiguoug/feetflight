@@ -1,0 +1,1 @@
+{"version":3,"sources":["../../src/enums/RolesEnums.ts"],"sourcesContent":["export const RolesEnum = {\n  BUYER: \"Buyer\",\n  SELLER: \"Seller\"\n}\n"],"names":["RolesEnum","BUYER","SELLER"],"mappings":";;;;+BAAaA;;aAAAA;;AAAN,MAAMA,YAAY;IACvBC,OAAO;IACPC,QAAQ;AACV"}

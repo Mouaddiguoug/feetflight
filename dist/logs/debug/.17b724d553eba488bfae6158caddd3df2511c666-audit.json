@@ -1,0 +1,15 @@
+{
+    "keep": {
+        "days": false,
+        "amount": 30
+    },
+    "auditLog": "C:\\Users\\Devops3\\Documents\\Projects\\feetflight-main\\feetflight-main\\dist\\logs\\debug\\.17b724d553eba488bfae6158caddd3df2511c666-audit.json",
+    "files": [
+        {
+            "date": 1678095747351,
+            "name": "C:\\Users\\Devops3\\Documents\\Projects\\feetflight-main\\feetflight-main\\dist\\logs\\debug\\2023-03-06.log",
+            "hash": "3a48f6850bde21a4fd52900f3b1c4d6cc0798f059251556ff81ebe86786b942a"
+        }
+    ],
+    "hashType": "sha256"
+}

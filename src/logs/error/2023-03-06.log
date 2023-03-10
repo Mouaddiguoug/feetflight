@@ -1,0 +1,37 @@
+2023-03-06 12:29:22 error: uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/services/post.service.ts[0m:[93m84[0m:[93m86[0m - [91merror[0m[90m TS1005: [0m')' expected.
+
+[7m84[0m       console.log(createdCollection.records.map(record => record.get('c').properties);
+[7m  [0m [91m                                                                                     ~[0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/services/post.service.ts[0m:[93m84[0m:[93m86[0m - [91merror[0m[90m TS1005: [0m')' expected.
+
+[7m84[0m       console.log(createdCollection.records.map(record => record.get('c').properties);
+[7m  [0m [91m                                                                                     ~[0m
+
+    at createTSError (C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\node_modules\ts-node\src\index.ts:863:19)
+    at C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\node_modules\ts-node\src\index.ts:1379:34
+    at Object.compile (C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\node_modules\ts-node\src\index.ts:1458:13)
+    at Module.m._compile (C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\node_modules\ts-node\src\index.ts:1617:30)
+    at Module._extensions..js (internal/modules/cjs/loader.js:1114:10)
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (internal/modules/cjs/loader.js:950:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:790:12)
+    at Module.require (internal/modules/cjs/loader.js:974:19)
+2023-03-06 13:09:58 error: [GET] /signup >> StatusCode:: 400, Message:: Unexpected token } in JSON at position 185
+2023-03-06 15:35:19 error: [GET] /post/popular >> StatusCode:: 500, Message:: Converting circular structure to JSON
+    --> starting at object with constructor 'Object'
+    |     property 'pictures' -> object with constructor 'Array'
+    |     index 0 -> object with constructor 'Record'
+    |     ...
+    |     index 2 -> object with constructor 'Node'
+    --- property 'properties' closes the circle
+2023-03-06 15:35:52 error: [GET] /post/popular >> StatusCode:: 500, Message:: Converting circular structure to JSON
+    --> starting at object with constructor 'Object'
+    |     property 'pictures' -> object with constructor 'Array'
+    |     index 0 -> object with constructor 'Record'
+    |     ...
+    |     index 2 -> object with constructor 'Node'
+    --- property 'properties' closes the circle

@@ -1,0 +1,15 @@
+{
+    "keep": {
+        "days": false,
+        "amount": 30
+    },
+    "auditLog": "C:\\Users\\diguo\\Documents\\feetflight\\default\\dist\\logs\\debug\\.11956f827cca2a7468347da270a4ec0e02725d5a-audit.json",
+    "files": [
+        {
+            "date": 1677938225897,
+            "name": "C:\\Users\\diguo\\Documents\\feetflight\\default\\dist\\logs\\debug\\2023-03-04.log",
+            "hash": "4eb2c681478dc10b18202a7e295657f5e5e3d95453741e65b109f06373b25405"
+        }
+    ],
+    "hashType": "sha256"
+}
