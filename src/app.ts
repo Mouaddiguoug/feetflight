@@ -12,6 +12,18 @@ import { NODE_ENV, PORT, LOG_FORMAT, ORIGIN, CREDENTIALS } from '@config';
 import { Routes } from '@interfaces/routes.interface';
 import errorMiddleware from '@middlewares/error.middleware';
 import { logger, stream } from '@utils/logger';
+import nodemailer from 'nodemailer';
+import hbs from 'nodemailer-express-handlebars';
+import path from 'path';
+
+export const transporter = nodemailer.createTransport({
+  service: process.env.SERVICE,
+  secure: Boolean(process.env.SECURE),
+  auth: {
+    user: process.env.USER,
+    pass: process.env.PASS,
+  },
+});
 
 class App {
   public app: express.Application;
@@ -41,6 +53,8 @@ class App {
   public getServer() {
     return this.app;
   }
+  
+  
 
   private initializeMiddlewares() {
     this.app.use(morgan(LOG_FORMAT, { stream }));
@@ -51,6 +65,19 @@ class App {
     this.app.use(express.json());
     this.app.use(express.urlencoded({ extended: true }));
     this.app.use(cookieParser());
+    console.log(__dirname);
+    transporter.use(
+      'compile',
+      hbs({
+        viewEngine: {
+          extname: '.handlebars',
+          layoutsDir: path.resolve(__dirname,'../public/views/'),
+          partialsDir: path.resolve(__dirname,'../public/views/'),
+        },
+        viewPath: path.resolve(__dirname,'../public/views/'),
+        extName: '.handlebars',
+      }),
+    );
   }
 
   private initializeRoutes(routes: Routes[]) {

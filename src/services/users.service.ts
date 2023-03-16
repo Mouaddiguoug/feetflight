@@ -5,6 +5,7 @@ import { User } from '@interfaces/users.interface';
 import userModel from '@models/users.model';
 import { isEmpty } from '@utils/util';
 import { initializeDbConnection } from '@/app';
+import { verify } from 'jsonwebtoken';
 
 class UserService {
   public users = userModel;
@@ -17,37 +18,31 @@ class UserService {
   public async findUserById(userId) {
     const getUserSession = initializeDbConnection().session();
     try {
-      const result = await getUserSession.executeWrite(tx =>
-        tx.run('match (u:user {id: $userId})-[:IS_A]->(s:seller) return s, u', {
+      const result = await getUserSession.executeRead(tx =>
+        tx.run('match (u:user {id: $userId}) return u', {
           userId: userId,
         }),
       );
+
       if (!result.records.map(record => record.get('u').properties)) throw new HttpException(409, "User doesn't exist");
 
-      const findUser = result.records.map(record => record.get('u').properties);
-      const sellerData = result.records.map(record => record.get('s').properties);
-
-      findUser[0].sellerData = sellerData[0];
-
-      return findUser;
+      return result.records.map(record => record.get('u').properties)[0];
     } catch (error) {
       console.log(error);
-    }
-    finally{
+    } finally {
       getUserSession.close();
     }
   }
 
-  public async changePassword(userId, userData) {
+  public async changePassword(email, userData) {
     if (isEmpty(userData)) throw new HttpException(400, 'userData is empty');
     const hashedPassword = await hash(userData.data.password, 10);
-    
     const changePasswordSession = initializeDbConnection().session();
     try {
       const updatedUser = await changePasswordSession.executeWrite(tx =>
-        tx.run('match (u:user {id: $userId}) set u.password: $password return u', {
-          userId: userId,
-          password: hashedPassword
+        tx.run('match (u:user {email: $email}) set u.password: $password return u', {
+          email: email,
+          password: hashedPassword,
         }),
       );
       if (!updatedUser.records.map(record => record.get('u').properties)) throw new HttpException(409, "User doesn't exist");
@@ -59,27 +54,73 @@ class UserService {
     }
   }
 
-  public async updateUser(userId: number, userData: CreateUserDto): Promise<User[]> {
-    if (isEmpty(userData)) throw new HttpException(400, 'userData is empty');
+  public async emailConfirming(token) {
+    const confirmEmailSession = initializeDbConnection().session();
+    try {
+      const tokenData = verify(token, process.env.EMAIL_SECRET);
 
-    const findUser: User = this.users.find(user => user.id === userId);
-    if (!findUser) throw new HttpException(409, "User doesn't exist");
+      const checkConfirmation = await confirmEmailSession.executeRead(tx =>
+        tx.run('match (u:user {id: $userId}) return u', {
+          userId: tokenData.data,
+        }),
+      );
 
-    const hashedPassword = await hash(userData.password, 10);
-    const updateUserData: User[] = this.users.map((user: User) => {
-      if (user.id === findUser.id) user = { id: userId, ...userData, password: hashedPassword };
-      return user;
-    });
+      if (checkConfirmation.records.map(record => record.get('u').properties.confirmed)[0]) return 'this account is already confirmed';
 
-    return updateUserData;
+      const confirmed = await confirmEmailSession.executeWrite(tx =>
+        tx.run('match (u:user {id: $userId}) set u.confirmed = true return u', {
+          userId: tokenData.data,
+        }),
+      );
+
+      return confirmed.records.map(record => record.get('u').properties.confirmed)[0];
+    } catch (error) {
+      console.log(error);
+    } finally {
+      confirmEmailSession.close();
+    }
   }
 
-  public async deleteUser(userId: number): Promise<User[]> {
-    const findUser: User = this.users.find(user => user.id === userId);
-    if (!findUser) throw new HttpException(409, "User doesn't exist");
+  public async updateUser(userId, userData): Promise<User[]> {
+    const updateUserSession = initializeDbConnection().session();
+    try {
+      const existUser = await this.findUserById(userId);
 
-    const deleteUserData: User[] = this.users.filter(user => user.id !== findUser.id);
-    return deleteUserData;
+      const updatedUser = await updateUserSession.executeWrite(tx =>
+        tx.run('match (u:user {id: $userId}) set u.name = $name, u.avatar = $avatar, u.username = $username,  return u', {
+          userId: userId,
+          name: userData.data.name ? userData.data.name : existUser.name,
+          userName: userData.data.userName ? userData.data.userName : existUser.userName,
+          avatar: userData.data.avatar ? userData.data.avatar : existUser.avatar,
+        }),
+      );
+
+      return updatedUser.records.map(record => record.get('u').properties)[0];
+    } catch (error) {
+      console.log(error);
+    } finally {
+      updateUserSession.close();
+    }
+  }
+
+  public async buyPost(postId, userData): Promise<User[]> {
+    const butPostSession = initializeDbConnection().session();
+    try {
+      const boughtPost = await butPostSession.executeWrite(tx => tx.run('match ()'));
+      return boughtPost.records.map(record => record.get("u").properties)[0];
+    } catch (error) {
+      console.log(error);
+    }
+  }
+
+  public async desactivateUser(userId: number): Promise<User[]> {
+    const desactivateUserSession = initializeDbConnection().session();
+    try {
+      const desactivatedUser = await desactivateUserSession.executeWrite(tx => tx.run('match (u:user {id: $userId}) set u.desactivated = true'));
+      return desactivatedUser.records.map(record => record.get("u").properties)[0];
+    } catch (error) {
+      console.log(error);
+    }
   }
 }
 

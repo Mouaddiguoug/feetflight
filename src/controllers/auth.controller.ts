@@ -1,5 +1,4 @@
 import { NextFunction, Request, Response } from 'express';
-import { CreateUserDto } from '@dtos/users.dto';
 import { RequestWithUser } from '@interfaces/auth.interface';
 import { User } from '@interfaces/users.interface';
 import AuthService from '@services/auth.service';
@@ -24,7 +23,18 @@ class AuthController {
       const loggedInData = await this.authService.login(userData);
       res.status(200).json(loggedInData);
     } catch (error) {
-      console.log(error)
+      console.log(error);
+    }
+  };
+
+  public changePassword = async (req: Request, res: Response, next: NextFunction): Promise<void> => {
+    try {
+      const userData = req.body;
+      const userId: string = String(req.params.id);
+      const chengedData = await this.authService.changePassword(userId, userData);
+      res.status(200).json({data: chengedData});
+    } catch (error) {
+      console.log(error);
     }
   };
 

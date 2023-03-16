@@ -21,18 +21,42 @@ class UsersController {
       const userId = String(req.params.id);
       const findOneUserData = await this.userService.findUserById(userId);
 
+      res.status(200).json({ data: findOneUserData });
+    } catch (error) {
+      next(error);
+    }
+  };
+
+  public changePassword = async (req: Request, res: Response, next: NextFunction): Promise<void> => {
+    try {
+      const email = String(req.params.email);
+      const userData = req.body;
+      const findOneUserData = await this.userService.changePassword(email, userData);
+
       res.status(200).json({ data: findOneUserData, message: 'findOne' });
     } catch (error) {
       next(error);
     }
   };
 
-  public createUser = async (req: Request, res: Response, next: NextFunction): Promise<void> => {
+  public emailConfirming = async (req: Request, res: Response, next: NextFunction): Promise<void> => {
     try {
-      const userData: CreateUserDto = req.body;
-      const createUserData: User = await this.userService.createUser(userData);
+      const token = String(req.params.token);
+      const confirmed = await this.userService.emailConfirming(token);
 
-      res.status(201).json({ data: createUserData, message: 'created' });
+      res.status(201).json({ data: confirmed });
+    } catch (error) {
+      next(error);
+    }
+  };
+
+  public buyPost = async (req: Request, res: Response, next: NextFunction): Promise<void> => {
+    try {
+      const postId = Number(req.params.id);
+      const userData = req.body;
+      const boughtPost = await this.userService.buyPost(postId, userData);
+
+      res.status(200).json({ data: boughtPost });
     } catch (error) {
       next(error);
     }
@@ -50,12 +74,12 @@ class UsersController {
     }
   };
 
-  public deleteUser = async (req: Request, res: Response, next: NextFunction): Promise<void> => {
+  public desactivateUser = async (req: Request, res: Response, next: NextFunction): Promise<void> => {
     try {
       const userId = Number(req.params.id);
-      const deleteUserData: User[] = await this.userService.deleteUser(userId);
+      const desactivatedUser = await this.userService.desactivateUser(userId);
 
-      res.status(200).json({ data: deleteUserData, message: 'deleted' });
+      res.status(200).json({ data: desactivatedUser });
     } catch (error) {
       next(error);
     }

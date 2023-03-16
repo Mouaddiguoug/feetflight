@@ -1,0 +1,1080 @@
+2023-03-16 13:35:49 error: uncaughtException: Route.delete() requires a callback function but got a [object Undefined]
+Error: Route.delete() requires a callback function but got a [object Undefined]
+    at Route.<computed> [as delete] (C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\node_modules\express\lib\router\route.js:211:15)
+    at Function.proto.<computed> [as delete] (C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\node_modules\express\lib\router\index.js:521:19)
+    at UsersRoute.initializeRoutes (C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\src\routes\users.route.ts:23:23)
+    at new UsersRoute (C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\src\routes\users.route.ts:13:10)
+    at Object.<anonymous> (C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\src\server.ts:11:40)
+    at Module._compile (internal/modules/cjs/loader.js:1085:14)
+    at Module.m._compile (C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\node_modules\ts-node\src\index.ts:1618:23)
+    at Module._extensions..js (internal/modules/cjs/loader.js:1114:10)
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (internal/modules/cjs/loader.js:950:32)
+2023-03-16 13:36:29 error: uncaughtException: this.router.POST is not a function
+TypeError: this.router.POST is not a function
+    at UsersRoute.initializeRoutes (C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\src\routes\users.route.ts:23:17)
+    at new UsersRoute (C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\src\routes\users.route.ts:13:10)
+    at Object.<anonymous> (C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\src\server.ts:11:40)
+    at Module._compile (internal/modules/cjs/loader.js:1085:14)
+    at Module.m._compile (C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\node_modules\ts-node\src\index.ts:1618:23)
+    at Module._extensions..js (internal/modules/cjs/loader.js:1114:10)
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (internal/modules/cjs/loader.js:950:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:790:12)
+    at Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:75:12)
+2023-03-16 13:36:36 error: uncaughtException: this.route is not a function
+TypeError: this.route is not a function
+    at UsersRoute.initializeRoutes (C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\src\routes\users.route.ts:23:10)
+    at new UsersRoute (C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\src\routes\users.route.ts:13:10)
+    at Object.<anonymous> (C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\src\server.ts:11:40)
+    at Module._compile (internal/modules/cjs/loader.js:1085:14)
+    at Module.m._compile (C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\node_modules\ts-node\src\index.ts:1618:23)
+    at Module._extensions..js (internal/modules/cjs/loader.js:1114:10)
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (internal/modules/cjs/loader.js:950:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:790:12)
+    at Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:75:12)
+2023-03-16 13:36:40 error: uncaughtException: Cannot read property 'post' of undefined
+TypeError: Cannot read property 'post' of undefined
+    at UsersRoute.initializeRoutes (C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\src\routes\users.route.ts:23:16)
+    at new UsersRoute (C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\src\routes\users.route.ts:13:10)
+    at Object.<anonymous> (C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\src\server.ts:11:40)
+    at Module._compile (internal/modules/cjs/loader.js:1085:14)
+    at Module.m._compile (C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\node_modules\ts-node\src\index.ts:1618:23)
+    at Module._extensions..js (internal/modules/cjs/loader.js:1114:10)
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (internal/modules/cjs/loader.js:950:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:790:12)
+    at Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:75:12)
+2023-03-16 13:36:48 error: uncaughtException: Cannot read property 'post' of undefined
+TypeError: Cannot read property 'post' of undefined
+    at UsersRoute.initializeRoutes (C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\src\routes\users.route.ts:23:16)
+    at new UsersRoute (C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\src\routes\users.route.ts:13:10)
+    at Object.<anonymous> (C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\src\server.ts:11:40)
+    at Module._compile (internal/modules/cjs/loader.js:1085:14)
+    at Module.m._compile (C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\node_modules\ts-node\src\index.ts:1618:23)
+    at Module._extensions..js (internal/modules/cjs/loader.js:1114:10)
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (internal/modules/cjs/loader.js:950:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:790:12)
+    at Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:75:12)
+2023-03-16 13:36:53 error: uncaughtException: Cannot read property 'post' of undefined
+TypeError: Cannot read property 'post' of undefined
+    at UsersRoute.initializeRoutes (C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\src\routes\users.route.ts:23:16)
+    at new UsersRoute (C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\src\routes\users.route.ts:13:10)
+    at Object.<anonymous> (C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\src\server.ts:11:40)
+    at Module._compile (internal/modules/cjs/loader.js:1085:14)
+    at Module.m._compile (C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\node_modules\ts-node\src\index.ts:1618:23)
+    at Module._extensions..js (internal/modules/cjs/loader.js:1114:10)
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (internal/modules/cjs/loader.js:950:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:790:12)
+    at Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:75:12)
+2023-03-16 13:37:01 error: uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/routes/users.route.ts[0m:[93m23[0m:[93m96[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m23[0m     this.route.post(`${this.path}/desactivate/:id`, this.usersController.changePassword[Symbol]........);
+[7m  [0m [91m                                                                                               ~~~[0m
+[96msrc/routes/users.route.ts[0m:[93m23[0m:[93m99[0m - [91merror[0m[90m TS1109: [0mExpression expected.
+
+[7m23[0m     this.route.post(`${this.path}/desactivate/:id`, this.usersController.changePassword[Symbol]........);
+[7m  [0m [91m                                                                                                  ~~~[0m
+[96msrc/routes/users.route.ts[0m:[93m23[0m:[93m102[0m - [91merror[0m[90m TS1109: [0mExpression expected.
+
+[7m23[0m     this.route.post(`${this.path}/desactivate/:id`, this.usersController.changePassword[Symbol]........);
+[7m  [0m [91m                                                                                                     ~[0m
+[96msrc/routes/users.route.ts[0m:[93m23[0m:[93m103[0m - [91merror[0m[90m TS1003: [0mIdentifier expected.
+
+[7m23[0m     this.route.post(`${this.path}/desactivate/:id`, this.usersController.changePassword[Symbol]........);
+[7m  [0m [91m                                                                                                      ~[0m
+[96msrc/routes/users.route.ts[0m:[93m23[0m:[93m104[0m - [91merror[0m[90m TS1003: [0mIdentifier expected.
+
+[7m23[0m     this.route.post(`${this.path}/desactivate/:id`, this.usersController.changePassword[Symbol]........);
+[7m  [0m [91m                                                                                                       ~[0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/routes/users.route.ts[0m:[93m23[0m:[93m96[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m23[0m     this.route.post(`${this.path}/desactivate/:id`, this.usersController.changePassword[Symbol]........);
+[7m  [0m [91m                                                                                               ~~~[0m
+[96msrc/routes/users.route.ts[0m:[93m23[0m:[93m99[0m - [91merror[0m[90m TS1109: [0mExpression expected.
+
+[7m23[0m     this.route.post(`${this.path}/desactivate/:id`, this.usersController.changePassword[Symbol]........);
+[7m  [0m [91m                                                                                                  ~~~[0m
+[96msrc/routes/users.route.ts[0m:[93m23[0m:[93m102[0m - [91merror[0m[90m TS1109: [0mExpression expected.
+
+[7m23[0m     this.route.post(`${this.path}/desactivate/:id`, this.usersController.changePassword[Symbol]........);
+[7m  [0m [91m                                                                                                     ~[0m
+[96msrc/routes/users.route.ts[0m:[93m23[0m:[93m103[0m - [91merror[0m[90m TS1003: [0mIdentifier expected.
+
+[7m23[0m     this.route.post(`${this.path}/desactivate/:id`, this.usersController.changePassword[Symbol]........);
+[7m  [0m [91m                                                                                                      ~[0m
+[96msrc/routes/users.route.ts[0m:[93m23[0m:[93m104[0m - [91merror[0m[90m TS1003: [0mIdentifier expected.
+
+[7m23[0m     this.route.post(`${this.path}/desactivate/:id`, this.usersController.changePassword[Symbol]........);
+[7m  [0m [91m                                                                                                       ~[0m
+
+    at createTSError (C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\node_modules\ts-node\src\index.ts:863:19)
+    at C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\node_modules\ts-node\src\index.ts:1379:34
+    at Object.compile (C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\node_modules\ts-node\src\index.ts:1458:13)
+    at Module.m._compile (C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\node_modules\ts-node\src\index.ts:1617:30)
+    at Module._extensions..js (internal/modules/cjs/loader.js:1114:10)
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (internal/modules/cjs/loader.js:950:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:790:12)
+    at Module.require (internal/modules/cjs/loader.js:974:19)
+2023-03-16 13:37:03 error: uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/routes/users.route.ts[0m:[93m23[0m:[93m96[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m23[0m     this.route.post(`${this.path}/desactivate/:id`, this.usersController.changePassword[Symbol]........);
+[7m  [0m [91m                                                                                               ~~~[0m
+[96msrc/routes/users.route.ts[0m:[93m23[0m:[93m99[0m - [91merror[0m[90m TS1109: [0mExpression expected.
+
+[7m23[0m     this.route.post(`${this.path}/desactivate/:id`, this.usersController.changePassword[Symbol]........);
+[7m  [0m [91m                                                                                                  ~~~[0m
+[96msrc/routes/users.route.ts[0m:[93m23[0m:[93m102[0m - [91merror[0m[90m TS1109: [0mExpression expected.
+
+[7m23[0m     this.route.post(`${this.path}/desactivate/:id`, this.usersController.changePassword[Symbol]........);
+[7m  [0m [91m                                                                                                     ~[0m
+[96msrc/routes/users.route.ts[0m:[93m23[0m:[93m103[0m - [91merror[0m[90m TS1003: [0mIdentifier expected.
+
+[7m23[0m     this.route.post(`${this.path}/desactivate/:id`, this.usersController.changePassword[Symbol]........);
+[7m  [0m [91m                                                                                                      ~[0m
+[96msrc/routes/users.route.ts[0m:[93m23[0m:[93m104[0m - [91merror[0m[90m TS1003: [0mIdentifier expected.
+
+[7m23[0m     this.route.post(`${this.path}/desactivate/:id`, this.usersController.changePassword[Symbol]........);
+[7m  [0m [91m                                                                                                       ~[0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/routes/users.route.ts[0m:[93m23[0m:[93m96[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m23[0m     this.route.post(`${this.path}/desactivate/:id`, this.usersController.changePassword[Symbol]........);
+[7m  [0m [91m                                                                                               ~~~[0m
+[96msrc/routes/users.route.ts[0m:[93m23[0m:[93m99[0m - [91merror[0m[90m TS1109: [0mExpression expected.
+
+[7m23[0m     this.route.post(`${this.path}/desactivate/:id`, this.usersController.changePassword[Symbol]........);
+[7m  [0m [91m                                                                                                  ~~~[0m
+[96msrc/routes/users.route.ts[0m:[93m23[0m:[93m102[0m - [91merror[0m[90m TS1109: [0mExpression expected.
+
+[7m23[0m     this.route.post(`${this.path}/desactivate/:id`, this.usersController.changePassword[Symbol]........);
+[7m  [0m [91m                                                                                                     ~[0m
+[96msrc/routes/users.route.ts[0m:[93m23[0m:[93m103[0m - [91merror[0m[90m TS1003: [0mIdentifier expected.
+
+[7m23[0m     this.route.post(`${this.path}/desactivate/:id`, this.usersController.changePassword[Symbol]........);
+[7m  [0m [91m                                                                                                      ~[0m
+[96msrc/routes/users.route.ts[0m:[93m23[0m:[93m104[0m - [91merror[0m[90m TS1003: [0mIdentifier expected.
+
+[7m23[0m     this.route.post(`${this.path}/desactivate/:id`, this.usersController.changePassword[Symbol]........);
+[7m  [0m [91m                                                                                                       ~[0m
+
+    at createTSError (C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\node_modules\ts-node\src\index.ts:863:19)
+    at C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\node_modules\ts-node\src\index.ts:1379:34
+    at Object.compile (C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\node_modules\ts-node\src\index.ts:1458:13)
+    at Module.m._compile (C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\node_modules\ts-node\src\index.ts:1617:30)
+    at Module._extensions..js (internal/modules/cjs/loader.js:1114:10)
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (internal/modules/cjs/loader.js:950:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:790:12)
+    at Module.require (internal/modules/cjs/loader.js:974:19)
+2023-03-16 13:37:10 error: uncaughtException: Cannot read property 'post' of undefined
+TypeError: Cannot read property 'post' of undefined
+    at UsersRoute.initializeRoutes (C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\src\routes\users.route.ts:23:16)
+    at new UsersRoute (C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\src\routes\users.route.ts:13:10)
+    at Object.<anonymous> (C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\src\server.ts:11:40)
+    at Module._compile (internal/modules/cjs/loader.js:1085:14)
+    at Module.m._compile (C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\node_modules\ts-node\src\index.ts:1618:23)
+    at Module._extensions..js (internal/modules/cjs/loader.js:1114:10)
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (internal/modules/cjs/loader.js:950:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:790:12)
+    at Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:75:12)
+2023-03-16 13:39:36 error: uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/controllers/auth.controller.ts[0m:[93m14[0m:[93m44[0m - [91merror[0m[90m TS1005: [0m';' expected.
+
+[7m14[0m       res.status(201).json(signUpUserData) : res.status(302).json(signUpUserData);
+[7m  [0m [91m                                           ~[0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/controllers/auth.controller.ts[0m:[93m14[0m:[93m44[0m - [91merror[0m[90m TS1005: [0m';' expected.
+
+[7m14[0m       res.status(201).json(signUpUserData) : res.status(302).json(signUpUserData);
+[7m  [0m [91m                                           ~[0m
+
+    at createTSError (C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\node_modules\ts-node\src\index.ts:863:19)
+    at C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\node_modules\ts-node\src\index.ts:1379:34
+    at Object.compile (C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\node_modules\ts-node\src\index.ts:1458:13)
+    at Module.m._compile (C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\node_modules\ts-node\src\index.ts:1617:30)
+    at Module._extensions..js (internal/modules/cjs/loader.js:1114:10)
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (internal/modules/cjs/loader.js:950:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:790:12)
+    at Module.require (internal/modules/cjs/loader.js:974:19)
+2023-03-16 13:39:47 error: uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/controllers/auth.controller.ts[0m:[93m14[0m:[93m32[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m14[0m       res.status(201).json(data: signUpUserData);
+[7m  [0m [91m                               ~[0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/controllers/auth.controller.ts[0m:[93m14[0m:[93m32[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m14[0m       res.status(201).json(data: signUpUserData);
+[7m  [0m [91m                               ~[0m
+
+    at createTSError (C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\node_modules\ts-node\src\index.ts:863:19)
+    at C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\node_modules\ts-node\src\index.ts:1379:34
+    at Object.compile (C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\node_modules\ts-node\src\index.ts:1458:13)
+    at Module.m._compile (C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\node_modules\ts-node\src\index.ts:1617:30)
+    at Module._extensions..js (internal/modules/cjs/loader.js:1114:10)
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (internal/modules/cjs/loader.js:950:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:790:12)
+    at Module.require (internal/modules/cjs/loader.js:974:19)
+2023-03-16 13:51:25 error: uncaughtException: Unexpected token ';'
+C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\src\controllers\auth.controller.ts:31
+                const ;
+                      ^
+
+SyntaxError: Unexpected token ';'
+    at wrapSafe (internal/modules/cjs/loader.js:1001:16)
+    at Module._compile (internal/modules/cjs/loader.js:1049:27)
+    at Module.m._compile (C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\node_modules\ts-node\src\index.ts:1618:23)
+    at Module._extensions..js (internal/modules/cjs/loader.js:1114:10)
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (internal/modules/cjs/loader.js:950:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:790:12)
+    at Module.require (internal/modules/cjs/loader.js:974:19)
+    at require (internal/modules/cjs/helpers.js:101:18)
+    at Object.<anonymous> (C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\src\routes\auth.route.ts:2:1)
+2023-03-16 13:51:29 error: uncaughtException: Unexpected token ';'
+C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\src\controllers\auth.controller.ts:31
+                const ;
+                      ^
+
+SyntaxError: Unexpected token ';'
+    at wrapSafe (internal/modules/cjs/loader.js:1001:16)
+    at Module._compile (internal/modules/cjs/loader.js:1049:27)
+    at Module.m._compile (C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\node_modules\ts-node\src\index.ts:1618:23)
+    at Module._extensions..js (internal/modules/cjs/loader.js:1114:10)
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (internal/modules/cjs/loader.js:950:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:790:12)
+    at Module.require (internal/modules/cjs/loader.js:974:19)
+    at require (internal/modules/cjs/helpers.js:101:18)
+    at Object.<anonymous> (C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\src\routes\auth.route.ts:2:1)
+2023-03-16 13:51:32 error: uncaughtException: Missing initializer in const declaration
+C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\src\controllers\auth.controller.ts:31
+                const userId;
+                      ^^^^^^
+
+SyntaxError: Missing initializer in const declaration
+    at wrapSafe (internal/modules/cjs/loader.js:1001:16)
+    at Module._compile (internal/modules/cjs/loader.js:1049:27)
+    at Module.m._compile (C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\node_modules\ts-node\src\index.ts:1618:23)
+    at Module._extensions..js (internal/modules/cjs/loader.js:1114:10)
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (internal/modules/cjs/loader.js:950:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:790:12)
+    at Module.require (internal/modules/cjs/loader.js:974:19)
+    at require (internal/modules/cjs/helpers.js:101:18)
+    at Object.<anonymous> (C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\src\routes\auth.route.ts:2:1)
+2023-03-16 13:51:35 error: uncaughtException: Missing initializer in const declaration
+C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\src\controllers\auth.controller.ts:31
+                const userId;
+                      ^^^^^^
+
+SyntaxError: Missing initializer in const declaration
+    at wrapSafe (internal/modules/cjs/loader.js:1001:16)
+    at Module._compile (internal/modules/cjs/loader.js:1049:27)
+    at Module.m._compile (C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\node_modules\ts-node\src\index.ts:1618:23)
+    at Module._extensions..js (internal/modules/cjs/loader.js:1114:10)
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (internal/modules/cjs/loader.js:950:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:790:12)
+    at Module.require (internal/modules/cjs/loader.js:974:19)
+    at require (internal/modules/cjs/helpers.js:101:18)
+    at Object.<anonymous> (C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\src\routes\auth.route.ts:2:1)
+2023-03-16 13:51:38 error: uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/controllers/auth.controller.ts[0m:[93m34[0m:[93m7[0m - [91merror[0m[90m TS1109: [0mExpression expected.
+
+[7m34[0m       const chengedData = await this.authService.changePassword(userData);
+[7m  [0m [91m      ~~~~~[0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/controllers/auth.controller.ts[0m:[93m34[0m:[93m7[0m - [91merror[0m[90m TS1109: [0mExpression expected.
+
+[7m34[0m       const chengedData = await this.authService.changePassword(userData);
+[7m  [0m [91m      ~~~~~[0m
+
+    at createTSError (C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\node_modules\ts-node\src\index.ts:863:19)
+    at C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\node_modules\ts-node\src\index.ts:1379:34
+    at Object.compile (C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\node_modules\ts-node\src\index.ts:1458:13)
+    at Module.m._compile (C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\node_modules\ts-node\src\index.ts:1617:30)
+    at Module._extensions..js (internal/modules/cjs/loader.js:1114:10)
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (internal/modules/cjs/loader.js:950:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:790:12)
+    at Module.require (internal/modules/cjs/loader.js:974:19)
+2023-03-16 13:52:14 error: uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/controllers/auth.controller.ts[0m:[93m35[0m:[93m35[0m - [91merror[0m[90m TS1109: [0mExpression expected.
+
+[7m35[0m       res.status(200).json({data: });
+[7m  [0m [91m                                  ~[0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/controllers/auth.controller.ts[0m:[93m35[0m:[93m35[0m - [91merror[0m[90m TS1109: [0mExpression expected.
+
+[7m35[0m       res.status(200).json({data: });
+[7m  [0m [91m                                  ~[0m
+
+    at createTSError (C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\node_modules\ts-node\src\index.ts:863:19)
+    at C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\node_modules\ts-node\src\index.ts:1379:34
+    at Object.compile (C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\node_modules\ts-node\src\index.ts:1458:13)
+    at Module.m._compile (C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\node_modules\ts-node\src\index.ts:1617:30)
+    at Module._extensions..js (internal/modules/cjs/loader.js:1114:10)
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (internal/modules/cjs/loader.js:950:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:790:12)
+    at Module.require (internal/modules/cjs/loader.js:974:19)
+2023-03-16 13:58:19 error: uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/services/auth.service.ts[0m:[93m122[0m:[93m11[0m - [91merror[0m[90m TS1136: [0mProperty assignment expected.
+
+[7m122[0m           : sellerId,
+[7m   [0m [91m          ~[0m
+[96msrc/services/auth.service.ts[0m:[93m123[0m:[93m9[0m - [91merror[0m[90m TS1109: [0mExpression expected.
+
+[7m123[0m         }),
+[7m   [0m [91m        ~[0m
+[96msrc/services/auth.service.ts[0m:[93m123[0m:[93m10[0m - [91merror[0m[90m TS1472: [0m'catch' or 'finally' expected.
+
+[7m123[0m         }),
+[7m   [0m [91m         ~[0m
+[96msrc/services/auth.service.ts[0m:[93m123[0m:[93m11[0m - [91merror[0m[90m TS1128: [0mDeclaration or statement expected.
+
+[7m123[0m         }),
+[7m   [0m [91m          ~[0m
+[96msrc/services/auth.service.ts[0m:[93m124[0m:[93m7[0m - [91merror[0m[90m TS1128: [0mDeclaration or statement expected.
+
+[7m124[0m       );
+[7m   [0m [91m      ~[0m
+[96msrc/services/auth.service.ts[0m:[93m129[0m:[93m7[0m - [91merror[0m[90m TS1068: [0mUnexpected token. A constructor, method, accessor, or property was expected.
+
+[7m129[0m     } finally {
+[7m   [0m [91m      ~~~~~~~[0m
+[96msrc/services/auth.service.ts[0m:[93m132[0m:[93m3[0m - [91merror[0m[90m TS1128: [0mDeclaration or statement expected.
+
+[7m132[0m   }
+[7m   [0m [91m  ~[0m
+[96msrc/services/auth.service.ts[0m:[93m135[0m:[93m3[0m - [91merror[0m[90m TS1128: [0mDeclaration or statement expected.
+
+[7m135[0m   public async login(userData) {
+[7m   [0m [91m  ~~~~~~[0m
+[96msrc/services/auth.service.ts[0m:[93m135[0m:[93m10[0m - [91merror[0m[90m TS1434: [0mUnexpected keyword or identifier.
+
+[7m135[0m   public async login(userData) {
+[7m   [0m [91m         ~~~~~[0m
+[96msrc/services/auth.service.ts[0m:[93m135[0m:[93m32[0m - [91merror[0m[90m TS1005: [0m';' expected.
+
+[7m135[0m   public async login(userData) {
+[7m   [0m [91m                               ~[0m
+[96msrc/services/auth.service.ts[0m:[93m166[0m:[93m3[0m - [91merror[0m[90m TS1128: [0mDeclaration or statement expected.
+
+[7m166[0m   public async refreshToken(token) {
+[7m   [0m [91m  ~~~~~~[0m
+[96msrc/services/auth.service.ts[0m:[93m166[0m:[93m10[0m - [91merror[0m[90m TS1434: [0mUnexpected keyword or identifier.
+
+[7m166[0m   public async refreshToken(token) {
+[7m   [0m [91m         ~~~~~[0m
+[96msrc/services/auth.service.ts[0m:[93m166[0m:[93m36[0m - [91merror[0m[90m TS1005: [0m';' expected.
+
+[7m166[0m   public async refreshToken(token) {
+[7m   [0m [91m                                   ~[0m
+[96msrc/services/auth.service.ts[0m:[93m188[0m:[93m3[0m - [91merror[0m[90m TS1128: [0mDeclaration or statement expected.
+
+[7m188[0m   public async logout(userData: User): Promise<User> {
+[7m   [0m [91m  ~~~~~~[0m
+[96msrc/services/auth.service.ts[0m:[93m188[0m:[93m10[0m - [91merror[0m[90m TS1434: [0mUnexpected keyword or identifier.
+
+[7m188[0m   public async logout(userData: User): Promise<User> {
+[7m   [0m [91m         ~~~~~[0m
+[96msrc/services/auth.service.ts[0m:[93m188[0m:[93m31[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m188[0m   public async logout(userData: User): Promise<User> {
+[7m   [0m [91m                              ~[0m
+[96msrc/services/auth.service.ts[0m:[93m188[0m:[93m38[0m - [91merror[0m[90m TS1005: [0m';' expected.
+
+[7m188[0m   public async logout(userData: User): Promise<User> {
+[7m   [0m [91m                                     ~[0m
+[96msrc/services/auth.service.ts[0m:[93m189[0m:[93m16[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m189[0m     if (isEmpty(userData)) throw new HttpException(400, 'userData is empty');
+[7m   [0m [91m               ~[0m
+[96msrc/services/auth.service.ts[0m:[93m189[0m:[93m26[0m - [91merror[0m[90m TS1005: [0m';' expected.
+
+[7m189[0m     if (isEmpty(userData)) throw new HttpException(400, 'userData is empty');
+[7m   [0m [91m                         ~[0m
+[96msrc/services/auth.service.ts[0m:[93m195[0m:[93m3[0m - [91merror[0m[90m TS1128: [0mDeclaration or statement expected.
+
+[7m195[0m   }
+[7m   [0m [91m  ~[0m
+[96msrc/services/auth.service.ts[0m:[93m197[0m:[93m3[0m - [91merror[0m[90m TS1128: [0mDeclaration or statement expected.
+
+[7m197[0m   public createToken(secret, data) {
+[7m   [0m [91m  ~~~~~~[0m
+[96msrc/services/auth.service.ts[0m:[93m197[0m:[93m36[0m - [91merror[0m[90m TS1005: [0m';' expected.
+
+[7m197[0m   public createToken(secret, data) {
+[7m   [0m [91m                                   ~[0m
+[96msrc/services/auth.service.ts[0m:[93m209[0m:[93m3[0m - [91merror[0m[90m TS1128: [0mDeclaration or statement expected.
+
+[7m209[0m   public createRefreshToken(data) {
+[7m   [0m [91m  ~~~~~~[0m
+[96msrc/services/auth.service.ts[0m:[93m209[0m:[93m35[0m - [91merror[0m[90m TS1005: [0m';' expected.
+
+[7m209[0m   public createRefreshToken(data) {
+[7m   [0m [91m                                  ~[0m
+[96msrc/services/auth.service.ts[0m:[93m221[0m:[93m3[0m - [91merror[0m[90m TS1128: [0mDeclaration or statement expected.
+
+[7m221[0m   public createCookie(tokenData): string {
+[7m   [0m [91m  ~~~~~~[0m
+[96msrc/services/auth.service.ts[0m:[93m221[0m:[93m33[0m - [91merror[0m[90m TS1005: [0m';' expected.
+
+[7m221[0m   public createCookie(tokenData): string {
+[7m   [0m [91m                                ~[0m
+[96msrc/services/auth.service.ts[0m:[93m221[0m:[93m35[0m - [91merror[0m[90m TS1434: [0mUnexpected keyword or identifier.
+
+[7m221[0m   public createCookie(tokenData): string {
+[7m   [0m [91m                                  ~~~~~~[0m
+[96msrc/services/auth.service.ts[0m:[93m224[0m:[93m1[0m - [91merror[0m[90m TS1128: [0mDeclaration or statement expected.
+
+[7m224[0m }
+[7m   [0m [91m~[0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/services/auth.service.ts[0m:[93m122[0m:[93m11[0m - [91merror[0m[90m TS1136: [0mProperty assignment expected.
+
+[7m122[0m           : sellerId,
+[7m   [0m [91m          ~[0m
+[96msrc/services/auth.service.ts[0m:[93m123[0m:[93m9[0m - [91merror[0m[90m TS1109: [0mExpression expected.
+
+[7m123[0m         }),
+[7m   [0m [91m        ~[0m
+[96msrc/services/auth.service.ts[0m:[93m123[0m:[93m10[0m - [91merror[0m[90m TS1472: [0m'catch' or 'finally' expected.
+
+[7m123[0m         }),
+[7m   [0m [91m         ~[0m
+[96msrc/services/auth.service.ts[0m:[93m123[0m:[93m11[0m - [91merror[0m[90m TS1128: [0mDeclaration or statement expected.
+
+[7m123[0m         }),
+[7m   [0m [91m          ~[0m
+[96msrc/services/auth.service.ts[0m:[93m124[0m:[93m7[0m - [91merror[0m[90m TS1128: [0mDeclaration or statement expected.
+
+[7m124[0m       );
+[7m   [0m [91m      ~[0m
+[96msrc/services/auth.service.ts[0m:[93m129[0m:[93m7[0m - [91merror[0m[90m TS1068: [0mUnexpected token. A constructor, method, accessor, or property was expected.
+
+[7m129[0m     } finally {
+[7m   [0m [91m      ~~~~~~~[0m
+[96msrc/services/auth.service.ts[0m:[93m132[0m:[93m3[0m - [91merror[0m[90m TS1128: [0mDeclaration or statement expected.
+
+[7m132[0m   }
+[7m   [0m [91m  ~[0m
+[96msrc/services/auth.service.ts[0m:[93m135[0m:[93m3[0m - [91merror[0m[90m TS1128: [0mDeclaration or statement expected.
+
+[7m135[0m   public async login(userData) {
+[7m   [0m [91m  ~~~~~~[0m
+[96msrc/services/auth.service.ts[0m:[93m135[0m:[93m10[0m - [91merror[0m[90m TS1434: [0mUnexpected keyword or identifier.
+
+[7m135[0m   public async login(userData) {
+[7m   [0m [91m         ~~~~~[0m
+[96msrc/services/auth.service.ts[0m:[93m135[0m:[93m32[0m - [91merror[0m[90m TS1005: [0m';' expected.
+
+[7m135[0m   public async login(userData) {
+[7m   [0m [91m                               ~[0m
+[96msrc/services/auth.service.ts[0m:[93m166[0m:[93m3[0m - [91merror[0m[90m TS1128: [0mDeclaration or statement expected.
+
+[7m166[0m   public async refreshToken(token) {
+[7m   [0m [91m  ~~~~~~[0m
+[96msrc/services/auth.service.ts[0m:[93m166[0m:[93m10[0m - [91merror[0m[90m TS1434: [0mUnexpected keyword or identifier.
+
+[7m166[0m   public async refreshToken(token) {
+[7m   [0m [91m         ~~~~~[0m
+[96msrc/services/auth.service.ts[0m:[93m166[0m:[93m36[0m - [91merror[0m[90m TS1005: [0m';' expected.
+
+[7m166[0m   public async refreshToken(token) {
+[7m   [0m [91m                                   ~[0m
+[96msrc/services/auth.service.ts[0m:[93m188[0m:[93m3[0m - [91merror[0m[90m TS1128: [0mDeclaration or statement expected.
+
+[7m188[0m   public async logout(userData: User): Promise<User> {
+[7m   [0m [91m  ~~~~~~[0m
+[96msrc/services/auth.service.ts[0m:[93m188[0m:[93m10[0m - [91merror[0m[90m TS1434: [0mUnexpected keyword or identifier.
+
+[7m188[0m   public async logout(userData: User): Promise<User> {
+[7m   [0m [91m         ~~~~~[0m
+[96msrc/services/auth.service.ts[0m:[93m188[0m:[93m31[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m188[0m   public async logout(userData: User): Promise<User> {
+[7m   [0m [91m                              ~[0m
+[96msrc/services/auth.service.ts[0m:[93m188[0m:[93m38[0m - [91merror[0m[90m TS1005: [0m';' expected.
+
+[7m188[0m   public async logout(userData: User): Promise<User> {
+[7m   [0m [91m                                     ~[0m
+[96msrc/services/auth.service.ts[0m:[93m189[0m:[93m16[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m189[0m     if (isEmpty(userData)) throw new HttpException(400, 'userData is empty');
+[7m   [0m [91m               ~[0m
+[96msrc/services/auth.service.ts[0m:[93m189[0m:[93m26[0m - [91merror[0m[90m TS1005: [0m';' expected.
+
+[7m189[0m     if (isEmpty(userData)) throw new HttpException(400, 'userData is empty');
+[7m   [0m [91m                         ~[0m
+[96msrc/services/auth.service.ts[0m:[93m195[0m:[93m3[0m - [91merror[0m[90m TS1128: [0mDeclaration or statement expected.
+
+[7m195[0m   }
+[7m   [0m [91m  ~[0m
+[96msrc/services/auth.service.ts[0m:[93m197[0m:[93m3[0m - [91merror[0m[90m TS1128: [0mDeclaration or statement expected.
+
+[7m197[0m   public createToken(secret, data) {
+[7m   [0m [91m  ~~~~~~[0m
+[96msrc/services/auth.service.ts[0m:[93m197[0m:[93m36[0m - [91merror[0m[90m TS1005: [0m';' expected.
+
+[7m197[0m   public createToken(secret, data) {
+[7m   [0m [91m                                   ~[0m
+[96msrc/services/auth.service.ts[0m:[93m209[0m:[93m3[0m - [91merror[0m[90m TS1128: [0mDeclaration or statement expected.
+
+[7m209[0m   public createRefreshToken(data) {
+[7m   [0m [91m  ~~~~~~[0m
+[96msrc/services/auth.service.ts[0m:[93m209[0m:[93m35[0m - [91merror[0m[90m TS1005: [0m';' expected.
+
+[7m209[0m   public createRefreshToken(data) {
+[7m   [0m [91m                                  ~[0m
+[96msrc/services/auth.service.ts[0m:[93m221[0m:[93m3[0m - [91merror[0m[90m TS1128: [0mDeclaration or statement expected.
+
+[7m221[0m   public createCookie(tokenData): string {
+[7m   [0m [91m  ~~~~~~[0m
+[96msrc/services/auth.service.ts[0m:[93m221[0m:[93m33[0m - [91merror[0m[90m TS1005: [0m';' expected.
+
+[7m221[0m   public createCookie(tokenData): string {
+[7m   [0m [91m                                ~[0m
+[96msrc/services/auth.service.ts[0m:[93m221[0m:[93m35[0m - [91merror[0m[90m TS1434: [0mUnexpected keyword or identifier.
+
+[7m221[0m   public createCookie(tokenData): string {
+[7m   [0m [91m                                  ~~~~~~[0m
+[96msrc/services/auth.service.ts[0m:[93m224[0m:[93m1[0m - [91merror[0m[90m TS1128: [0mDeclaration or statement expected.
+
+[7m224[0m }
+[7m   [0m [91m~[0m
+
+    at createTSError (C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\node_modules\ts-node\src\index.ts:863:19)
+    at C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\node_modules\ts-node\src\index.ts:1379:34
+    at Object.compile (C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\node_modules\ts-node\src\index.ts:1458:13)
+    at Module.m._compile (C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\node_modules\ts-node\src\index.ts:1617:30)
+    at Module._extensions..js (internal/modules/cjs/loader.js:1114:10)
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (internal/modules/cjs/loader.js:950:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:790:12)
+    at Module.require (internal/modules/cjs/loader.js:974:19)
+2023-03-16 13:58:22 error: uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/services/auth.service.ts[0m:[93m122[0m:[93m11[0m - [91merror[0m[90m TS1136: [0mProperty assignment expected.
+
+[7m122[0m           : sellerId,
+[7m   [0m [91m          ~[0m
+[96msrc/services/auth.service.ts[0m:[93m123[0m:[93m9[0m - [91merror[0m[90m TS1109: [0mExpression expected.
+
+[7m123[0m         }),
+[7m   [0m [91m        ~[0m
+[96msrc/services/auth.service.ts[0m:[93m123[0m:[93m10[0m - [91merror[0m[90m TS1472: [0m'catch' or 'finally' expected.
+
+[7m123[0m         }),
+[7m   [0m [91m         ~[0m
+[96msrc/services/auth.service.ts[0m:[93m123[0m:[93m11[0m - [91merror[0m[90m TS1128: [0mDeclaration or statement expected.
+
+[7m123[0m         }),
+[7m   [0m [91m          ~[0m
+[96msrc/services/auth.service.ts[0m:[93m124[0m:[93m7[0m - [91merror[0m[90m TS1128: [0mDeclaration or statement expected.
+
+[7m124[0m       );
+[7m   [0m [91m      ~[0m
+[96msrc/services/auth.service.ts[0m:[93m129[0m:[93m7[0m - [91merror[0m[90m TS1068: [0mUnexpected token. A constructor, method, accessor, or property was expected.
+
+[7m129[0m     } finally {
+[7m   [0m [91m      ~~~~~~~[0m
+[96msrc/services/auth.service.ts[0m:[93m132[0m:[93m3[0m - [91merror[0m[90m TS1128: [0mDeclaration or statement expected.
+
+[7m132[0m   }
+[7m   [0m [91m  ~[0m
+[96msrc/services/auth.service.ts[0m:[93m135[0m:[93m3[0m - [91merror[0m[90m TS1128: [0mDeclaration or statement expected.
+
+[7m135[0m   public async login(userData) {
+[7m   [0m [91m  ~~~~~~[0m
+[96msrc/services/auth.service.ts[0m:[93m135[0m:[93m10[0m - [91merror[0m[90m TS1434: [0mUnexpected keyword or identifier.
+
+[7m135[0m   public async login(userData) {
+[7m   [0m [91m         ~~~~~[0m
+[96msrc/services/auth.service.ts[0m:[93m135[0m:[93m32[0m - [91merror[0m[90m TS1005: [0m';' expected.
+
+[7m135[0m   public async login(userData) {
+[7m   [0m [91m                               ~[0m
+[96msrc/services/auth.service.ts[0m:[93m166[0m:[93m3[0m - [91merror[0m[90m TS1128: [0mDeclaration or statement expected.
+
+[7m166[0m   public async refreshToken(token) {
+[7m   [0m [91m  ~~~~~~[0m
+[96msrc/services/auth.service.ts[0m:[93m166[0m:[93m10[0m - [91merror[0m[90m TS1434: [0mUnexpected keyword or identifier.
+
+[7m166[0m   public async refreshToken(token) {
+[7m   [0m [91m         ~~~~~[0m
+[96msrc/services/auth.service.ts[0m:[93m166[0m:[93m36[0m - [91merror[0m[90m TS1005: [0m';' expected.
+
+[7m166[0m   public async refreshToken(token) {
+[7m   [0m [91m                                   ~[0m
+[96msrc/services/auth.service.ts[0m:[93m188[0m:[93m3[0m - [91merror[0m[90m TS1128: [0mDeclaration or statement expected.
+
+[7m188[0m   public async logout(userData: User): Promise<User> {
+[7m   [0m [91m  ~~~~~~[0m
+[96msrc/services/auth.service.ts[0m:[93m188[0m:[93m10[0m - [91merror[0m[90m TS1434: [0mUnexpected keyword or identifier.
+
+[7m188[0m   public async logout(userData: User): Promise<User> {
+[7m   [0m [91m         ~~~~~[0m
+[96msrc/services/auth.service.ts[0m:[93m188[0m:[93m31[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m188[0m   public async logout(userData: User): Promise<User> {
+[7m   [0m [91m                              ~[0m
+[96msrc/services/auth.service.ts[0m:[93m188[0m:[93m38[0m - [91merror[0m[90m TS1005: [0m';' expected.
+
+[7m188[0m   public async logout(userData: User): Promise<User> {
+[7m   [0m [91m                                     ~[0m
+[96msrc/services/auth.service.ts[0m:[93m189[0m:[93m16[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m189[0m     if (isEmpty(userData)) throw new HttpException(400, 'userData is empty');
+[7m   [0m [91m               ~[0m
+[96msrc/services/auth.service.ts[0m:[93m189[0m:[93m26[0m - [91merror[0m[90m TS1005: [0m';' expected.
+
+[7m189[0m     if (isEmpty(userData)) throw new HttpException(400, 'userData is empty');
+[7m   [0m [91m                         ~[0m
+[96msrc/services/auth.service.ts[0m:[93m195[0m:[93m3[0m - [91merror[0m[90m TS1128: [0mDeclaration or statement expected.
+
+[7m195[0m   }
+[7m   [0m [91m  ~[0m
+[96msrc/services/auth.service.ts[0m:[93m197[0m:[93m3[0m - [91merror[0m[90m TS1128: [0mDeclaration or statement expected.
+
+[7m197[0m   public createToken(secret, data) {
+[7m   [0m [91m  ~~~~~~[0m
+[96msrc/services/auth.service.ts[0m:[93m197[0m:[93m36[0m - [91merror[0m[90m TS1005: [0m';' expected.
+
+[7m197[0m   public createToken(secret, data) {
+[7m   [0m [91m                                   ~[0m
+[96msrc/services/auth.service.ts[0m:[93m209[0m:[93m3[0m - [91merror[0m[90m TS1128: [0mDeclaration or statement expected.
+
+[7m209[0m   public createRefreshToken(data) {
+[7m   [0m [91m  ~~~~~~[0m
+[96msrc/services/auth.service.ts[0m:[93m209[0m:[93m35[0m - [91merror[0m[90m TS1005: [0m';' expected.
+
+[7m209[0m   public createRefreshToken(data) {
+[7m   [0m [91m                                  ~[0m
+[96msrc/services/auth.service.ts[0m:[93m221[0m:[93m3[0m - [91merror[0m[90m TS1128: [0mDeclaration or statement expected.
+
+[7m221[0m   public createCookie(tokenData): string {
+[7m   [0m [91m  ~~~~~~[0m
+[96msrc/services/auth.service.ts[0m:[93m221[0m:[93m33[0m - [91merror[0m[90m TS1005: [0m';' expected.
+
+[7m221[0m   public createCookie(tokenData): string {
+[7m   [0m [91m                                ~[0m
+[96msrc/services/auth.service.ts[0m:[93m221[0m:[93m35[0m - [91merror[0m[90m TS1434: [0mUnexpected keyword or identifier.
+
+[7m221[0m   public createCookie(tokenData): string {
+[7m   [0m [91m                                  ~~~~~~[0m
+[96msrc/services/auth.service.ts[0m:[93m224[0m:[93m1[0m - [91merror[0m[90m TS1128: [0mDeclaration or statement expected.
+
+[7m224[0m }
+[7m   [0m [91m~[0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/services/auth.service.ts[0m:[93m122[0m:[93m11[0m - [91merror[0m[90m TS1136: [0mProperty assignment expected.
+
+[7m122[0m           : sellerId,
+[7m   [0m [91m          ~[0m
+[96msrc/services/auth.service.ts[0m:[93m123[0m:[93m9[0m - [91merror[0m[90m TS1109: [0mExpression expected.
+
+[7m123[0m         }),
+[7m   [0m [91m        ~[0m
+[96msrc/services/auth.service.ts[0m:[93m123[0m:[93m10[0m - [91merror[0m[90m TS1472: [0m'catch' or 'finally' expected.
+
+[7m123[0m         }),
+[7m   [0m [91m         ~[0m
+[96msrc/services/auth.service.ts[0m:[93m123[0m:[93m11[0m - [91merror[0m[90m TS1128: [0mDeclaration or statement expected.
+
+[7m123[0m         }),
+[7m   [0m [91m          ~[0m
+[96msrc/services/auth.service.ts[0m:[93m124[0m:[93m7[0m - [91merror[0m[90m TS1128: [0mDeclaration or statement expected.
+
+[7m124[0m       );
+[7m   [0m [91m      ~[0m
+[96msrc/services/auth.service.ts[0m:[93m129[0m:[93m7[0m - [91merror[0m[90m TS1068: [0mUnexpected token. A constructor, method, accessor, or property was expected.
+
+[7m129[0m     } finally {
+[7m   [0m [91m      ~~~~~~~[0m
+[96msrc/services/auth.service.ts[0m:[93m132[0m:[93m3[0m - [91merror[0m[90m TS1128: [0mDeclaration or statement expected.
+
+[7m132[0m   }
+[7m   [0m [91m  ~[0m
+[96msrc/services/auth.service.ts[0m:[93m135[0m:[93m3[0m - [91merror[0m[90m TS1128: [0mDeclaration or statement expected.
+
+[7m135[0m   public async login(userData) {
+[7m   [0m [91m  ~~~~~~[0m
+[96msrc/services/auth.service.ts[0m:[93m135[0m:[93m10[0m - [91merror[0m[90m TS1434: [0mUnexpected keyword or identifier.
+
+[7m135[0m   public async login(userData) {
+[7m   [0m [91m         ~~~~~[0m
+[96msrc/services/auth.service.ts[0m:[93m135[0m:[93m32[0m - [91merror[0m[90m TS1005: [0m';' expected.
+
+[7m135[0m   public async login(userData) {
+[7m   [0m [91m                               ~[0m
+[96msrc/services/auth.service.ts[0m:[93m166[0m:[93m3[0m - [91merror[0m[90m TS1128: [0mDeclaration or statement expected.
+
+[7m166[0m   public async refreshToken(token) {
+[7m   [0m [91m  ~~~~~~[0m
+[96msrc/services/auth.service.ts[0m:[93m166[0m:[93m10[0m - [91merror[0m[90m TS1434: [0mUnexpected keyword or identifier.
+
+[7m166[0m   public async refreshToken(token) {
+[7m   [0m [91m         ~~~~~[0m
+[96msrc/services/auth.service.ts[0m:[93m166[0m:[93m36[0m - [91merror[0m[90m TS1005: [0m';' expected.
+
+[7m166[0m   public async refreshToken(token) {
+[7m   [0m [91m                                   ~[0m
+[96msrc/services/auth.service.ts[0m:[93m188[0m:[93m3[0m - [91merror[0m[90m TS1128: [0mDeclaration or statement expected.
+
+[7m188[0m   public async logout(userData: User): Promise<User> {
+[7m   [0m [91m  ~~~~~~[0m
+[96msrc/services/auth.service.ts[0m:[93m188[0m:[93m10[0m - [91merror[0m[90m TS1434: [0mUnexpected keyword or identifier.
+
+[7m188[0m   public async logout(userData: User): Promise<User> {
+[7m   [0m [91m         ~~~~~[0m
+[96msrc/services/auth.service.ts[0m:[93m188[0m:[93m31[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m188[0m   public async logout(userData: User): Promise<User> {
+[7m   [0m [91m                              ~[0m
+[96msrc/services/auth.service.ts[0m:[93m188[0m:[93m38[0m - [91merror[0m[90m TS1005: [0m';' expected.
+
+[7m188[0m   public async logout(userData: User): Promise<User> {
+[7m   [0m [91m                                     ~[0m
+[96msrc/services/auth.service.ts[0m:[93m189[0m:[93m16[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m189[0m     if (isEmpty(userData)) throw new HttpException(400, 'userData is empty');
+[7m   [0m [91m               ~[0m
+[96msrc/services/auth.service.ts[0m:[93m189[0m:[93m26[0m - [91merror[0m[90m TS1005: [0m';' expected.
+
+[7m189[0m     if (isEmpty(userData)) throw new HttpException(400, 'userData is empty');
+[7m   [0m [91m                         ~[0m
+[96msrc/services/auth.service.ts[0m:[93m195[0m:[93m3[0m - [91merror[0m[90m TS1128: [0mDeclaration or statement expected.
+
+[7m195[0m   }
+[7m   [0m [91m  ~[0m
+[96msrc/services/auth.service.ts[0m:[93m197[0m:[93m3[0m - [91merror[0m[90m TS1128: [0mDeclaration or statement expected.
+
+[7m197[0m   public createToken(secret, data) {
+[7m   [0m [91m  ~~~~~~[0m
+[96msrc/services/auth.service.ts[0m:[93m197[0m:[93m36[0m - [91merror[0m[90m TS1005: [0m';' expected.
+
+[7m197[0m   public createToken(secret, data) {
+[7m   [0m [91m                                   ~[0m
+[96msrc/services/auth.service.ts[0m:[93m209[0m:[93m3[0m - [91merror[0m[90m TS1128: [0mDeclaration or statement expected.
+
+[7m209[0m   public createRefreshToken(data) {
+[7m   [0m [91m  ~~~~~~[0m
+[96msrc/services/auth.service.ts[0m:[93m209[0m:[93m35[0m - [91merror[0m[90m TS1005: [0m';' expected.
+
+[7m209[0m   public createRefreshToken(data) {
+[7m   [0m [91m                                  ~[0m
+[96msrc/services/auth.service.ts[0m:[93m221[0m:[93m3[0m - [91merror[0m[90m TS1128: [0mDeclaration or statement expected.
+
+[7m221[0m   public createCookie(tokenData): string {
+[7m   [0m [91m  ~~~~~~[0m
+[96msrc/services/auth.service.ts[0m:[93m221[0m:[93m33[0m - [91merror[0m[90m TS1005: [0m';' expected.
+
+[7m221[0m   public createCookie(tokenData): string {
+[7m   [0m [91m                                ~[0m
+[96msrc/services/auth.service.ts[0m:[93m221[0m:[93m35[0m - [91merror[0m[90m TS1434: [0mUnexpected keyword or identifier.
+
+[7m221[0m   public createCookie(tokenData): string {
+[7m   [0m [91m                                  ~~~~~~[0m
+[96msrc/services/auth.service.ts[0m:[93m224[0m:[93m1[0m - [91merror[0m[90m TS1128: [0mDeclaration or statement expected.
+
+[7m224[0m }
+[7m   [0m [91m~[0m
+
+    at createTSError (C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\node_modules\ts-node\src\index.ts:863:19)
+    at C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\node_modules\ts-node\src\index.ts:1379:34
+    at Object.compile (C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\node_modules\ts-node\src\index.ts:1458:13)
+    at Module.m._compile (C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\node_modules\ts-node\src\index.ts:1617:30)
+    at Module._extensions..js (internal/modules/cjs/loader.js:1114:10)
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (internal/modules/cjs/loader.js:950:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:790:12)
+    at Module.require (internal/modules/cjs/loader.js:974:19)
+2023-03-16 13:58:29 error: uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/services/auth.service.ts[0m:[93m122[0m:[93m11[0m - [91merror[0m[90m TS1136: [0mProperty assignment expected.
+
+[7m122[0m           : sellerId,
+[7m   [0m [91m          ~[0m
+[96msrc/services/auth.service.ts[0m:[93m123[0m:[93m9[0m - [91merror[0m[90m TS1109: [0mExpression expected.
+
+[7m123[0m         }),
+[7m   [0m [91m        ~[0m
+[96msrc/services/auth.service.ts[0m:[93m123[0m:[93m10[0m - [91merror[0m[90m TS1472: [0m'catch' or 'finally' expected.
+
+[7m123[0m         }),
+[7m   [0m [91m         ~[0m
+[96msrc/services/auth.service.ts[0m:[93m123[0m:[93m11[0m - [91merror[0m[90m TS1128: [0mDeclaration or statement expected.
+
+[7m123[0m         }),
+[7m   [0m [91m          ~[0m
+[96msrc/services/auth.service.ts[0m:[93m124[0m:[93m7[0m - [91merror[0m[90m TS1128: [0mDeclaration or statement expected.
+
+[7m124[0m       );
+[7m   [0m [91m      ~[0m
+[96msrc/services/auth.service.ts[0m:[93m129[0m:[93m7[0m - [91merror[0m[90m TS1068: [0mUnexpected token. A constructor, method, accessor, or property was expected.
+
+[7m129[0m     } finally {
+[7m   [0m [91m      ~~~~~~~[0m
+[96msrc/services/auth.service.ts[0m:[93m132[0m:[93m3[0m - [91merror[0m[90m TS1128: [0mDeclaration or statement expected.
+
+[7m132[0m   }
+[7m   [0m [91m  ~[0m
+[96msrc/services/auth.service.ts[0m:[93m135[0m:[93m3[0m - [91merror[0m[90m TS1128: [0mDeclaration or statement expected.
+
+[7m135[0m   public async login(userData) {
+[7m   [0m [91m  ~~~~~~[0m
+[96msrc/services/auth.service.ts[0m:[93m135[0m:[93m10[0m - [91merror[0m[90m TS1434: [0mUnexpected keyword or identifier.
+
+[7m135[0m   public async login(userData) {
+[7m   [0m [91m         ~~~~~[0m
+[96msrc/services/auth.service.ts[0m:[93m135[0m:[93m32[0m - [91merror[0m[90m TS1005: [0m';' expected.
+
+[7m135[0m   public async login(userData) {
+[7m   [0m [91m                               ~[0m
+[96msrc/services/auth.service.ts[0m:[93m166[0m:[93m3[0m - [91merror[0m[90m TS1128: [0mDeclaration or statement expected.
+
+[7m166[0m   public async refreshToken(token) {
+[7m   [0m [91m  ~~~~~~[0m
+[96msrc/services/auth.service.ts[0m:[93m166[0m:[93m10[0m - [91merror[0m[90m TS1434: [0mUnexpected keyword or identifier.
+
+[7m166[0m   public async refreshToken(token) {
+[7m   [0m [91m         ~~~~~[0m
+[96msrc/services/auth.service.ts[0m:[93m166[0m:[93m36[0m - [91merror[0m[90m TS1005: [0m';' expected.
+
+[7m166[0m   public async refreshToken(token) {
+[7m   [0m [91m                                   ~[0m
+[96msrc/services/auth.service.ts[0m:[93m188[0m:[93m3[0m - [91merror[0m[90m TS1128: [0mDeclaration or statement expected.
+
+[7m188[0m   public async logout(userData: User): Promise<User> {
+[7m   [0m [91m  ~~~~~~[0m
+[96msrc/services/auth.service.ts[0m:[93m188[0m:[93m10[0m - [91merror[0m[90m TS1434: [0mUnexpected keyword or identifier.
+
+[7m188[0m   public async logout(userData: User): Promise<User> {
+[7m   [0m [91m         ~~~~~[0m
+[96msrc/services/auth.service.ts[0m:[93m188[0m:[93m31[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m188[0m   public async logout(userData: User): Promise<User> {
+[7m   [0m [91m                              ~[0m
+[96msrc/services/auth.service.ts[0m:[93m188[0m:[93m38[0m - [91merror[0m[90m TS1005: [0m';' expected.
+
+[7m188[0m   public async logout(userData: User): Promise<User> {
+[7m   [0m [91m                                     ~[0m
+[96msrc/services/auth.service.ts[0m:[93m189[0m:[93m16[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m189[0m     if (isEmpty(userData)) throw new HttpException(400, 'userData is empty');
+[7m   [0m [91m               ~[0m
+[96msrc/services/auth.service.ts[0m:[93m189[0m:[93m26[0m - [91merror[0m[90m TS1005: [0m';' expected.
+
+[7m189[0m     if (isEmpty(userData)) throw new HttpException(400, 'userData is empty');
+[7m   [0m [91m                         ~[0m
+[96msrc/services/auth.service.ts[0m:[93m195[0m:[93m3[0m - [91merror[0m[90m TS1128: [0mDeclaration or statement expected.
+
+[7m195[0m   }
+[7m   [0m [91m  ~[0m
+[96msrc/services/auth.service.ts[0m:[93m197[0m:[93m3[0m - [91merror[0m[90m TS1128: [0mDeclaration or statement expected.
+
+[7m197[0m   public createToken(secret, data) {
+[7m   [0m [91m  ~~~~~~[0m
+[96msrc/services/auth.service.ts[0m:[93m197[0m:[93m36[0m - [91merror[0m[90m TS1005: [0m';' expected.
+
+[7m197[0m   public createToken(secret, data) {
+[7m   [0m [91m                                   ~[0m
+[96msrc/services/auth.service.ts[0m:[93m209[0m:[93m3[0m - [91merror[0m[90m TS1128: [0mDeclaration or statement expected.
+
+[7m209[0m   public createRefreshToken(data) {
+[7m   [0m [91m  ~~~~~~[0m
+[96msrc/services/auth.service.ts[0m:[93m209[0m:[93m35[0m - [91merror[0m[90m TS1005: [0m';' expected.
+
+[7m209[0m   public createRefreshToken(data) {
+[7m   [0m [91m                                  ~[0m
+[96msrc/services/auth.service.ts[0m:[93m221[0m:[93m3[0m - [91merror[0m[90m TS1128: [0mDeclaration or statement expected.
+
+[7m221[0m   public createCookie(tokenData): string {
+[7m   [0m [91m  ~~~~~~[0m
+[96msrc/services/auth.service.ts[0m:[93m221[0m:[93m33[0m - [91merror[0m[90m TS1005: [0m';' expected.
+
+[7m221[0m   public createCookie(tokenData): string {
+[7m   [0m [91m                                ~[0m
+[96msrc/services/auth.service.ts[0m:[93m221[0m:[93m35[0m - [91merror[0m[90m TS1434: [0mUnexpected keyword or identifier.
+
+[7m221[0m   public createCookie(tokenData): string {
+[7m   [0m [91m                                  ~~~~~~[0m
+[96msrc/services/auth.service.ts[0m:[93m224[0m:[93m1[0m - [91merror[0m[90m TS1128: [0mDeclaration or statement expected.
+
+[7m224[0m }
+[7m   [0m [91m~[0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/services/auth.service.ts[0m:[93m122[0m:[93m11[0m - [91merror[0m[90m TS1136: [0mProperty assignment expected.
+
+[7m122[0m           : sellerId,
+[7m   [0m [91m          ~[0m
+[96msrc/services/auth.service.ts[0m:[93m123[0m:[93m9[0m - [91merror[0m[90m TS1109: [0mExpression expected.
+
+[7m123[0m         }),
+[7m   [0m [91m        ~[0m
+[96msrc/services/auth.service.ts[0m:[93m123[0m:[93m10[0m - [91merror[0m[90m TS1472: [0m'catch' or 'finally' expected.
+
+[7m123[0m         }),
+[7m   [0m [91m         ~[0m
+[96msrc/services/auth.service.ts[0m:[93m123[0m:[93m11[0m - [91merror[0m[90m TS1128: [0mDeclaration or statement expected.
+
+[7m123[0m         }),
+[7m   [0m [91m          ~[0m
+[96msrc/services/auth.service.ts[0m:[93m124[0m:[93m7[0m - [91merror[0m[90m TS1128: [0mDeclaration or statement expected.
+
+[7m124[0m       );
+[7m   [0m [91m      ~[0m
+[96msrc/services/auth.service.ts[0m:[93m129[0m:[93m7[0m - [91merror[0m[90m TS1068: [0mUnexpected token. A constructor, method, accessor, or property was expected.
+
+[7m129[0m     } finally {
+[7m   [0m [91m      ~~~~~~~[0m
+[96msrc/services/auth.service.ts[0m:[93m132[0m:[93m3[0m - [91merror[0m[90m TS1128: [0mDeclaration or statement expected.
+
+[7m132[0m   }
+[7m   [0m [91m  ~[0m
+[96msrc/services/auth.service.ts[0m:[93m135[0m:[93m3[0m - [91merror[0m[90m TS1128: [0mDeclaration or statement expected.
+
+[7m135[0m   public async login(userData) {
+[7m   [0m [91m  ~~~~~~[0m
+[96msrc/services/auth.service.ts[0m:[93m135[0m:[93m10[0m - [91merror[0m[90m TS1434: [0mUnexpected keyword or identifier.
+
+[7m135[0m   public async login(userData) {
+[7m   [0m [91m         ~~~~~[0m
+[96msrc/services/auth.service.ts[0m:[93m135[0m:[93m32[0m - [91merror[0m[90m TS1005: [0m';' expected.
+
+[7m135[0m   public async login(userData) {
+[7m   [0m [91m                               ~[0m
+[96msrc/services/auth.service.ts[0m:[93m166[0m:[93m3[0m - [91merror[0m[90m TS1128: [0mDeclaration or statement expected.
+
+[7m166[0m   public async refreshToken(token) {
+[7m   [0m [91m  ~~~~~~[0m
+[96msrc/services/auth.service.ts[0m:[93m166[0m:[93m10[0m - [91merror[0m[90m TS1434: [0mUnexpected keyword or identifier.
+
+[7m166[0m   public async refreshToken(token) {
+[7m   [0m [91m         ~~~~~[0m
+[96msrc/services/auth.service.ts[0m:[93m166[0m:[93m36[0m - [91merror[0m[90m TS1005: [0m';' expected.
+
+[7m166[0m   public async refreshToken(token) {
+[7m   [0m [91m                                   ~[0m
+[96msrc/services/auth.service.ts[0m:[93m188[0m:[93m3[0m - [91merror[0m[90m TS1128: [0mDeclaration or statement expected.
+
+[7m188[0m   public async logout(userData: User): Promise<User> {
+[7m   [0m [91m  ~~~~~~[0m
+[96msrc/services/auth.service.ts[0m:[93m188[0m:[93m10[0m - [91merror[0m[90m TS1434: [0mUnexpected keyword or identifier.
+
+[7m188[0m   public async logout(userData: User): Promise<User> {
+[7m   [0m [91m         ~~~~~[0m
+[96msrc/services/auth.service.ts[0m:[93m188[0m:[93m31[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m188[0m   public async logout(userData: User): Promise<User> {
+[7m   [0m [91m                              ~[0m
+[96msrc/services/auth.service.ts[0m:[93m188[0m:[93m38[0m - [91merror[0m[90m TS1005: [0m';' expected.
+
+[7m188[0m   public async logout(userData: User): Promise<User> {
+[7m   [0m [91m                                     ~[0m
+[96msrc/services/auth.service.ts[0m:[93m189[0m:[93m16[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m189[0m     if (isEmpty(userData)) throw new HttpException(400, 'userData is empty');
+[7m   [0m [91m               ~[0m
+[96msrc/services/auth.service.ts[0m:[93m189[0m:[93m26[0m - [91merror[0m[90m TS1005: [0m';' expected.
+
+[7m189[0m     if (isEmpty(userData)) throw new HttpException(400, 'userData is empty');
+[7m   [0m [91m                         ~[0m
+[96msrc/services/auth.service.ts[0m:[93m195[0m:[93m3[0m - [91merror[0m[90m TS1128: [0mDeclaration or statement expected.
+
+[7m195[0m   }
+[7m   [0m [91m  ~[0m
+[96msrc/services/auth.service.ts[0m:[93m197[0m:[93m3[0m - [91merror[0m[90m TS1128: [0mDeclaration or statement expected.
+
+[7m197[0m   public createToken(secret, data) {
+[7m   [0m [91m  ~~~~~~[0m
+[96msrc/services/auth.service.ts[0m:[93m197[0m:[93m36[0m - [91merror[0m[90m TS1005: [0m';' expected.
+
+[7m197[0m   public createToken(secret, data) {
+[7m   [0m [91m                                   ~[0m
+[96msrc/services/auth.service.ts[0m:[93m209[0m:[93m3[0m - [91merror[0m[90m TS1128: [0mDeclaration or statement expected.
+
+[7m209[0m   public createRefreshToken(data) {
+[7m   [0m [91m  ~~~~~~[0m
+[96msrc/services/auth.service.ts[0m:[93m209[0m:[93m35[0m - [91merror[0m[90m TS1005: [0m';' expected.
+
+[7m209[0m   public createRefreshToken(data) {
+[7m   [0m [91m                                  ~[0m
+[96msrc/services/auth.service.ts[0m:[93m221[0m:[93m3[0m - [91merror[0m[90m TS1128: [0mDeclaration or statement expected.
+
+[7m221[0m   public createCookie(tokenData): string {
+[7m   [0m [91m  ~~~~~~[0m
+[96msrc/services/auth.service.ts[0m:[93m221[0m:[93m33[0m - [91merror[0m[90m TS1005: [0m';' expected.
+
+[7m221[0m   public createCookie(tokenData): string {
+[7m   [0m [91m                                ~[0m
+[96msrc/services/auth.service.ts[0m:[93m221[0m:[93m35[0m - [91merror[0m[90m TS1434: [0mUnexpected keyword or identifier.
+
+[7m221[0m   public createCookie(tokenData): string {
+[7m   [0m [91m                                  ~~~~~~[0m
+[96msrc/services/auth.service.ts[0m:[93m224[0m:[93m1[0m - [91merror[0m[90m TS1128: [0mDeclaration or statement expected.
+
+[7m224[0m }
+[7m   [0m [91m~[0m
+
+    at createTSError (C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\node_modules\ts-node\src\index.ts:863:19)
+    at C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\node_modules\ts-node\src\index.ts:1379:34
+    at Object.compile (C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\node_modules\ts-node\src\index.ts:1458:13)
+    at Module.m._compile (C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\node_modules\ts-node\src\index.ts:1617:30)
+    at Module._extensions..js (internal/modules/cjs/loader.js:1114:10)
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (internal/modules/cjs/loader.js:950:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:790:12)
+    at Module.require (internal/modules/cjs/loader.js:974:19)
+2023-03-16 13:59:30 error: uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/services/auth.service.ts[0m:[93m124[0m:[93m9[0m - [91merror[0m[90m TS1109: [0mExpression expected.
+
+[7m124[0m         }),
+[7m   [0m [91m        ~[0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/services/auth.service.ts[0m:[93m124[0m:[93m9[0m - [91merror[0m[90m TS1109: [0mExpression expected.
+
+[7m124[0m         }),
+[7m   [0m [91m        ~[0m
+
+    at createTSError (C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\node_modules\ts-node\src\index.ts:863:19)
+    at C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\node_modules\ts-node\src\index.ts:1379:34
+    at Object.compile (C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\node_modules\ts-node\src\index.ts:1458:13)
+    at Module.m._compile (C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\node_modules\ts-node\src\index.ts:1617:30)
+    at Module._extensions..js (internal/modules/cjs/loader.js:1114:10)
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (internal/modules/cjs/loader.js:950:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:790:12)
+    at Module.require (internal/modules/cjs/loader.js:974:19)

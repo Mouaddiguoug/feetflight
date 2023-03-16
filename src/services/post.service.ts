@@ -1,6 +1,5 @@
 import { initializeDbConnection } from '@/app';
 import { uid } from 'uid';
-import fileUploader from 'express-fileupload';
 import aws from 'aws-sdk';
 import moment from 'moment';
 
@@ -9,13 +8,15 @@ class postService {
     const popularPostsSessio = initializeDbConnection().session({ database: 'neo4j' });
     try {
       const popularPosts = await popularPostsSessio.executeRead(tx =>
-        tx.run('match (category {id: $categoryId})<-[:OF_A]-(p:post)<-[:HAS_A]-(s:seller)-[:IS_A]-(u:user) return u ,p order by p.views DESC limit 20', {
-          categoryId: categoryId,
-        }),
+        tx.run(
+          'match (category {id: $categoryId})<-[:OF_A]-(p:post)<-[:HAS_A]-(s:seller)-[:IS_A]-(u:user) return u ,p order by p.views DESC limit 20',
+          {
+            categoryId: categoryId,
+          },
+        ),
       );
 
       console.log(categoryId);
-      
 
       const posts = popularPosts.records.map(record => record.get('p').properties);
 
@@ -92,13 +93,13 @@ class postService {
     const createPostSession = initializeDbConnection().session({ database: 'neo4j' });
     const linkCategorySession = initializeDbConnection().session({ database: 'neo4j' });
     try {
-      const findUser = await createPostSession.executeRead(tx => tx.run('match (u:user {id: $id}) return u', { id: userId }));
-      if (findUser.records.length == 0) return { message: `This user doesn't exists` };
+      const findUser = await createPostSession.executeRead(tx => tx.run('match (u:user {id: $userId}) return u', { userId: userId }));
+      if (findUser.records.length == 0) return { message: `This user doesn't exist` };
       if (!postData.data.postTitle || !postData.data.postDescription || !postData.data.price || !postData.data.preview || !postData.data.pictures)
         return { message: `missing data` };
       const createdCollection = await createPostSession.executeWrite(tx =>
         tx.run(
-          'match (u:user {id: $userId})-[IS_A]-(s:seller) create (s)-[h: HAS_A]->(p:post {id: $postId, description: $description, title: $title, price: $price, createdAt: $createdAt, views: 0})-[:HAS_A]->(c:collection {id: $collectionId, preview: $preview}) return c, p',
+          'match (u:user {id: $userId})-[IS_A]-(s:seller) create (s)-[h: HAS_A]->(p:post {id: $postId, description: $description, title: $title, price: $price, createdAt: $createdAt, views: 0, likes: 0})-[:HAS_A]->(c:collection {id: $collectionId, preview: $preview}) return c, p',
           {
             userId: userId,
             postId: uid(40),
@@ -140,12 +141,29 @@ class postService {
         }),
       );
 
-      return createdCollection;
+      return createdCollection.records.map(record => record.get('p').properties)[0];
     } catch (error) {
       console.log(error);
     } finally {
       createPostSession.close();
       linkCategorySession.close();
+    }
+  }
+
+  public async likePost(postId) {
+    const likePostSession = initializeDbConnection().session({ database: 'neo4j' });
+    try {
+      const likes = await likePostSession.executeWrite(tx =>
+        tx.run('match (p:post {id: $postId}) set p.likes = p.likes + 1 return p', {
+          postId: postId,
+        }),
+      );
+
+      return likes.records.map(record => record.get('p').properties.likes.low)[0];
+    } catch (error) {
+      console.log(error);
+    } finally {
+      likePostSession.close();
     }
   }
 

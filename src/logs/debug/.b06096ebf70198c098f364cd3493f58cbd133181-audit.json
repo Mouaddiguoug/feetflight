@@ -29,6 +29,21 @@
             "date": 1678446666796,
             "name": "C:\\Users\\Devops3\\Documents\\Projects\\feetflight-main\\feetflight-main\\src\\logs\\debug\\2023-03-10.log",
             "hash": "488a25d0317119961310860e8f1d46213243b806d3e3f56b69a70c4de730891e"
+        },
+        {
+            "date": 1678789009828,
+            "name": "C:\\Users\\Devops3\\Documents\\Projects\\feetflight-main\\feetflight-main\\src\\logs\\debug\\2023-03-14.log",
+            "hash": "9e7432fa35ef25fbcb5411f2b43f55bd0cf45cd6f5b1838332f80f7124da06ac"
+        },
+        {
+            "date": 1678868826096,
+            "name": "C:\\Users\\Devops3\\Documents\\Projects\\feetflight-main\\feetflight-main\\src\\logs\\debug\\2023-03-15.log",
+            "hash": "b160d4e0bc18af4064412724a970ddd1c62729015c4c341d4cef6c5f062fb752"
+        },
+        {
+            "date": 1678962586067,
+            "name": "C:\\Users\\Devops3\\Documents\\Projects\\feetflight-main\\feetflight-main\\src\\logs\\debug\\2023-03-16.log",
+            "hash": "528e63626ca2a6ebab7fc8559879e5a8ca82b5084f33be503e3fe79f20fa8842"
         }
     ],
     "hashType": "sha256"

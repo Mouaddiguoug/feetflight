@@ -1,26 +1,27 @@
 import { NextFunction, Request, Response } from 'express';
-import postService from '@/services/post.service';
+import walletService from '@/services/wallet.service';
 
-class postController {
-  public postService = new postService();
+class WalletController {
+  public walletService = new walletService();
 
-  public getPopularPosts = async (req: Request, res: Response, next: NextFunction): Promise<void> => {
+  public updateAmount = async (req: Request, res: Response, next: NextFunction): Promise<void> => {
     try {
-      const categoryId = String(req.params.id);
-      const popularPosts = await this.postService.getPopularPosts(categoryId);
+      const sellerId = String(req.params.id);
+      const walletData = req.body;
+      const newAmount = await this.walletService.UpdateAmount(sellerId, walletData);
 
-      res.status(201).json({ data: popularPosts });
+      res.status(201).json({ data: newAmount });
     } catch (error) {
       next(error);
     }
   };
 
-  public getRecentPosts = async (req: Request, res: Response, next: NextFunction): Promise<void> => {
+  public getAmountWallet = async (req: Request, res: Response, next: NextFunction): Promise<void> => {
     try {
-      const categoryId = String(req.params.id);
-      const recentPosts = await this.postService.getRecentPosts(categoryId);
+      const userId = String(req.params.id);
+      const amountWallet = await this.walletService.getAmount(userId);
 
-      res.status(201).json({ data: recentPosts });
+      res.status(201).json({ data: amountWallet });
     } catch (error) {
       next(error);
     }
@@ -48,17 +49,6 @@ class postController {
     }
   };
 
-  public likePost = async (req: Request, res: Response, next: NextFunction): Promise<void> => {
-    try {
-      const postId = String(req.params.id);
-      const likes = await this.postService.likePost(postId);
-
-      res.status(201).json({ like: likes });
-    } catch (error) {
-      next(error);
-    }
-  };
-
   public createPost = async (req: Request, res: Response, next: NextFunction): Promise<void> => {
     try {
       const postData = req.body;
@@ -72,4 +62,4 @@ class postController {
   };
 }
 
-export default postController;
+export default WalletController;
