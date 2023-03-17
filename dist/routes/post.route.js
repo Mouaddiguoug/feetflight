@@ -15,9 +15,11 @@ function _interopRequireDefault(obj) {
 }
 let postRoute = class postRoute {
     initializeRoutes() {
-        this.router.get(`${this.path}/popular`, this.postController.getPopularPosts);
-        this.router.get(`${this.path}/recent`, this.postController.getRecentPosts);
+        this.router.get(`${this.path}/popular/:id`, this.postController.getPopularPosts);
+        this.router.get(`${this.path}/recent/:id`, this.postController.getRecentPosts);
+        this.router.get(`${this.path}/pictures/:id`, this.postController.getPostPictures);
         this.router.post(`${this.path}/:id`, this.postController.createPost);
+        this.router.post(`${this.path}/likes/:id`, this.postController.likePost);
         this.router.put(`${this.path}/views/:id`, this.postController.updateViews);
     }
     constructor(){

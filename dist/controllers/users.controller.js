@@ -28,8 +28,20 @@ let UsersController = class UsersController {
         };
         this.getUserById = async (req, res, next)=>{
             try {
-                const userId = Number(req.params.id);
+                const userId = String(req.params.id);
                 const findOneUserData = await this.userService.findUserById(userId);
+                res.status(200).json({
+                    data: findOneUserData
+                });
+            } catch (error) {
+                next(error);
+            }
+        };
+        this.changePassword = async (req, res, next)=>{
+            try {
+                const email = String(req.params.email);
+                const userData = req.body;
+                const findOneUserData = await this.userService.changePassword(email, userData);
                 res.status(200).json({
                     data: findOneUserData,
                     message: 'findOne'
@@ -38,13 +50,24 @@ let UsersController = class UsersController {
                 next(error);
             }
         };
-        this.createUser = async (req, res, next)=>{
+        this.emailConfirming = async (req, res, next)=>{
             try {
-                const userData = req.body;
-                const createUserData = await this.userService.createUser(userData);
+                const token = String(req.params.token);
+                const confirmed = await this.userService.emailConfirming(token);
                 res.status(201).json({
-                    data: createUserData,
-                    message: 'created'
+                    data: confirmed
+                });
+            } catch (error) {
+                next(error);
+            }
+        };
+        this.buyPost = async (req, res, next)=>{
+            try {
+                const postId = Number(req.params.id);
+                const userData = req.body;
+                const boughtPost = await this.userService.buyPost(postId, userData);
+                res.status(200).json({
+                    data: boughtPost
                 });
             } catch (error) {
                 next(error);
@@ -63,13 +86,12 @@ let UsersController = class UsersController {
                 next(error);
             }
         };
-        this.deleteUser = async (req, res, next)=>{
+        this.desactivateUser = async (req, res, next)=>{
             try {
                 const userId = Number(req.params.id);
-                const deleteUserData = await this.userService.deleteUser(userId);
+                const desactivatedUser = await this.userService.desactivateUser(userId);
                 res.status(200).json({
-                    data: deleteUserData,
-                    message: 'deleted'
+                    data: desactivatedUser
                 });
             } catch (error) {
                 next(error);

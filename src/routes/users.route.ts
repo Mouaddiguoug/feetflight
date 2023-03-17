@@ -19,7 +19,6 @@ class UsersRoute implements Routes {
     this.router.get(`${this.path}/buy/:id`, this.usersController.buyPost);
     this.router.get(`${this.path}/confirmation/:token`, this.usersController.emailConfirming);
     this.router.get(`${this.path}/:email`, this.usersController.changePassword);
-    this.router.post(`${this.path}`, validationMiddleware(CreateUserDto, 'body'), this.usersController.createUser);
     this.router.put(`${this.path}/:id`, this.usersController.updateUser);
     this.router.post(`${this.path}/desactivate/:id`, this.usersController.desactivateUser);
   }

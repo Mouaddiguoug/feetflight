@@ -17,11 +17,14 @@ function _interopRequireDefault(obj) {
 }
 let UsersRoute = class UsersRoute {
     initializeRoutes() {
+        this.router.get(`${this.path}/:id`, this.usersController.getUserById);
         this.router.get(`${this.path}`, this.usersController.getUsers);
-        this.router.get(`${this.path}/:id(\\d+)`, this.usersController.getUserById);
+        this.router.get(`${this.path}/buy/:id`, this.usersController.buyPost);
+        this.router.get(`${this.path}/confirmation/:token`, this.usersController.emailConfirming);
+        this.router.get(`${this.path}/:email`, this.usersController.changePassword);
         this.router.post(`${this.path}`, (0, _validationMiddleware.default)(_usersDto.CreateUserDto, 'body'), this.usersController.createUser);
-        this.router.put(`${this.path}/:id(\\d+)`, (0, _validationMiddleware.default)(_usersDto.CreateUserDto, 'body', true), this.usersController.updateUser);
-        this.router.delete(`${this.path}/:id(\\d+)`, this.usersController.deleteUser);
+        this.router.put(`${this.path}/:id`, this.usersController.updateUser);
+        this.router.post(`${this.path}/desactivate/:id`, this.usersController.desactivateUser);
     }
     constructor(){
         this.path = '/users';

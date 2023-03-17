@@ -6,32 +6,33 @@ Object.defineProperty(exports, "default", {
     enumerable: true,
     get: ()=>_default
 });
-const _postService = _interopRequireDefault(require("../services/post.service"));
+const _walletService = _interopRequireDefault(require("../services/wallet.service"));
 function _interopRequireDefault(obj) {
     return obj && obj.__esModule ? obj : {
         default: obj
     };
 }
-let postController = class postController {
+let WalletController = class WalletController {
     constructor(){
-        this.postService = new _postService.default();
-        this.getPopularPosts = async (req, res, next)=>{
+        this.walletService = new _walletService.default();
+        this.updateAmount = async (req, res, next)=>{
             try {
-                const categoryId = String(req.params.id);
-                const popularPosts = await this.postService.getPopularPosts(categoryId);
+                const sellerId = String(req.params.id);
+                const walletData = req.body;
+                const newAmount = await this.walletService.UpdateAmount(sellerId, walletData);
                 res.status(201).json({
-                    data: popularPosts
+                    data: newAmount
                 });
             } catch (error) {
                 next(error);
             }
         };
-        this.getRecentPosts = async (req, res, next)=>{
+        this.getAmountWallet = async (req, res, next)=>{
             try {
-                const categoryId = String(req.params.id);
-                const recentPosts = await this.postService.getRecentPosts(categoryId);
+                const userId = String(req.params.id);
+                const amountWallet = await this.walletService.getAmount(userId);
                 res.status(201).json({
-                    data: recentPosts
+                    data: amountWallet
                 });
             } catch (error) {
                 next(error);
@@ -59,17 +60,6 @@ let postController = class postController {
                 next(error);
             }
         };
-        this.likePost = async (req, res, next)=>{
-            try {
-                const postId = String(req.params.id);
-                const likes = await this.postService.likePost(postId);
-                res.status(201).json({
-                    like: likes
-                });
-            } catch (error) {
-                next(error);
-            }
-        };
         this.createPost = async (req, res, next)=>{
             try {
                 const postData = req.body;
@@ -84,6 +74,6 @@ let postController = class postController {
         };
     }
 };
-const _default = postController;
+const _default = WalletController;
 
-//# sourceMappingURL=post.controller.js.map
+//# sourceMappingURL=wallet.controller.js.map

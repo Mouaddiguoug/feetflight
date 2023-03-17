@@ -9,6 +9,7 @@ function _export(target, all) {
     });
 }
 _export(exports, {
+    transporter: ()=>transporter,
     initializeDbConnection: ()=>initializeDbConnection,
     default: ()=>_default
 });
@@ -25,11 +26,22 @@ const _swaggerUiExpress = _interopRequireDefault(require("swagger-ui-express"));
 const _config = require("./config");
 const _errorMiddleware = _interopRequireDefault(require("./middlewares/error.middleware"));
 const _logger = require("./utils/logger");
+const _nodemailer = _interopRequireDefault(require("nodemailer"));
+const _nodemailerExpressHandlebars = _interopRequireDefault(require("nodemailer-express-handlebars"));
+const _path = _interopRequireDefault(require("path"));
 function _interopRequireDefault(obj) {
     return obj && obj.__esModule ? obj : {
         default: obj
     };
 }
+const transporter = _nodemailer.default.createTransport({
+    service: process.env.SERVICE,
+    secure: Boolean(process.env.SECURE),
+    auth: {
+        user: process.env.USER,
+        pass: process.env.PASS
+    }
+});
 let App = class App {
     listen() {
         this.app.listen(this.port, ()=>{
@@ -58,6 +70,16 @@ let App = class App {
             extended: true
         }));
         this.app.use((0, _cookieParser.default)());
+        console.log(__dirname);
+        transporter.use('compile', (0, _nodemailerExpressHandlebars.default)({
+            viewEngine: {
+                extname: '.handlebars',
+                layoutsDir: _path.default.resolve(__dirname, '../public/views/'),
+                partialsDir: _path.default.resolve(__dirname, '../public/views/')
+            },
+            viewPath: _path.default.resolve(__dirname, '../public/views/'),
+            extName: '.handlebars'
+        }));
     }
     initializeRoutes(routes) {
         routes.forEach((route)=>{

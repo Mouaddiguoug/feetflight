@@ -33,6 +33,18 @@ let AuthController = class AuthController {
                 console.log(error);
             }
         };
+        this.changePassword = async (req, res, next)=>{
+            try {
+                const userData = req.body;
+                const userId = String(req.params.id);
+                const chengedData = await this.authService.changePassword(userId, userData);
+                res.status(200).json({
+                    data: chengedData
+                });
+            } catch (error) {
+                console.log(error);
+            }
+        };
         this.generateRefreshToken = async (req, res, next)=>{
             try {
                 const token = req.body.data.token;
