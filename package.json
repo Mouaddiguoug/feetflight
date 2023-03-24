@@ -37,6 +37,7 @@
     "node-mailer": "^0.1.1",
     "nodemailer": "^6.9.1",
     "nodemailer-express-handlebars": "^6.1.0",
+    "stripe": "^11.15.0",
     "swagger-jsdoc": "^6.2.1",
     "swagger-ui-express": "^4.5.0",
     "uid": "^2.0.1",

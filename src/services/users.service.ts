@@ -6,6 +6,7 @@ import userModel from '@models/users.model';
 import { isEmpty } from '@utils/util';
 import { initializeDbConnection } from '@/app';
 import { verify } from 'jsonwebtoken';
+import Stripe from 'stripe';
 
 class UserService {
   public users = userModel;
@@ -104,10 +105,21 @@ class UserService {
   }
 
   public async buyPost(postId, userData): Promise<User[]> {
-    const butPostSession = initializeDbConnection().session();
+    const buyPostSession = initializeDbConnection().session();
     try {
-      const boughtPost = await butPostSession.executeWrite(tx => tx.run('match ()'));
-      return boughtPost.records.map(record => record.get("u").properties)[0];
+      const boughtPost = await buyPostSession.executeWrite(tx =>
+        tx.run('match (u:user {id: $userId}), (p:post {id: $postId}) create (u)-[bought:BOUGHT_A]->(p)', {
+          userId: userData.data.id,
+          postId: postId,
+        }),
+      );
+      const stripe = new Stripe(process.env.STRIPE_TEST_KEY, { apiVersion: '2022-11-15' });
+      const boughtPostFromStripe = await stripe.checkout.sessions.create({
+        success_url: "http://localhost:3000/signup",
+        line_items: 
+      })
+
+      return boughtPost.records.map(record => record.get('u').properties)[0];
     } catch (error) {
       console.log(error);
     }
@@ -117,7 +129,7 @@ class UserService {
     const desactivateUserSession = initializeDbConnection().session();
     try {
       const desactivatedUser = await desactivateUserSession.executeWrite(tx => tx.run('match (u:user {id: $userId}) set u.desactivated = true'));
-      return desactivatedUser.records.map(record => record.get("u").properties)[0];
+      return desactivatedUser.records.map(record => record.get('u').properties)[0];
     } catch (error) {
       console.log(error);
     }

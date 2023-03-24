@@ -2,6 +2,8 @@ import { initializeDbConnection } from '@/app';
 import { uid } from 'uid';
 import aws from 'aws-sdk';
 import moment from 'moment';
+import { stripVTControlCharacters } from 'util';
+import Stripe from 'stripe';
 
 class postService {
   public async getPopularPosts(categoryId) {
@@ -132,6 +134,17 @@ class postService {
           if (err) return console.log(err);
           this.createPictures(picture.description, data.Location, createdCollection.records.map(record => record.get('c').properties.id)[0]);
         });
+      });
+
+      const stripe = new Stripe(process.env.STRIPE_TEST_KEY, { apiVersion: '2022-11-15' });
+      const product = await stripe.products.create({
+        id: createdCollection.records.map(record => record.get('p').properties.id)[0],
+        name: postData.data.postTitle,
+        description: postData.data.postDescription,
+        default_price_data: {
+          currency: 'EUR',
+          unit_amount: postData.data.price * 100,
+        },
       });
 
       await linkCategorySession.executeWrite(tx =>

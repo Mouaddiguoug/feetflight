@@ -57,7 +57,7 @@ class AuthService {
           );
 
           const sellerToken = this.createToken(process.env.EMAIL_SECRET, createUserSeller.records.map(record => record.get('u').properties.id)[0]);
-
+  
           this.sendVerificationEmail(email, userData.data.userName, sellerToken.token, 'selling');
           return { data: createUserSeller.records.map(record => record.get('u').properties) };
           break;

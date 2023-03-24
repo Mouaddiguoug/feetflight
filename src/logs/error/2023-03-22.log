@@ -1,0 +1,1544 @@
+2023-03-22 11:31:33 error: uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/services/auth.service.ts[0m:[93m59[0m:[93m91[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m59[0m           const sellerToken = this.createToken(process.env.EMAIL_SECRET, {createUserSeller.records.map(record => record.get('u').properties.id)[0]});
+[7m  [0m [91m                                                                                          ~[0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/services/auth.service.ts[0m:[93m59[0m:[93m91[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m59[0m           const sellerToken = this.createToken(process.env.EMAIL_SECRET, {createUserSeller.records.map(record => record.get('u').properties.id)[0]});
+[7m  [0m [91m                                                                                          ~[0m
+
+    at createTSError (C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\node_modules\ts-node\src\index.ts:863:19)
+    at C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\node_modules\ts-node\src\index.ts:1379:34
+    at Object.compile (C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\node_modules\ts-node\src\index.ts:1458:13)
+    at Module.m._compile (C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\node_modules\ts-node\src\index.ts:1617:30)
+    at Module._extensions..js (internal/modules/cjs/loader.js:1114:10)
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (internal/modules/cjs/loader.js:950:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:790:12)
+    at Module.require (internal/modules/cjs/loader.js:974:19)
+2023-03-22 11:31:54 error: uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/services/auth.service.ts[0m:[93m59[0m:[93m91[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m59[0m           const sellerToken = this.createToken(process.env.EMAIL_SECRET, {createUserSeller.records.map(record => record.get('u').properties.id)[0], });
+[7m  [0m [91m                                                                                          ~[0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/services/auth.service.ts[0m:[93m59[0m:[93m91[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m59[0m           const sellerToken = this.createToken(process.env.EMAIL_SECRET, {createUserSeller.records.map(record => record.get('u').properties.id)[0], });
+[7m  [0m [91m                                                                                          ~[0m
+
+    at createTSError (C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\node_modules\ts-node\src\index.ts:863:19)
+    at C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\node_modules\ts-node\src\index.ts:1379:34
+    at Object.compile (C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\node_modules\ts-node\src\index.ts:1458:13)
+    at Module.m._compile (C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\node_modules\ts-node\src\index.ts:1617:30)
+    at Module._extensions..js (internal/modules/cjs/loader.js:1114:10)
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (internal/modules/cjs/loader.js:950:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:790:12)
+    at Module.require (internal/modules/cjs/loader.js:974:19)
+2023-03-22 11:32:07 error: uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/services/auth.service.ts[0m:[93m59[0m:[93m91[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m59[0m           const sellerToken = this.createToken(process.env.EMAIL_SECRET, {createUserSeller.records.map(record => record.get('u').properties.id)[0], createUserSeller.records.map(record => record.get('u').properties.id)[0]});
+[7m  [0m [91m                                                                                          ~[0m
+[96msrc/services/auth.service.ts[0m:[93m59[0m:[93m165[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m59[0m           const sellerToken = this.createToken(process.env.EMAIL_SECRET, {createUserSeller.records.map(record => record.get('u').properties.id)[0], createUserSeller.records.map(record => record.get('u').properties.id)[0]});
+[7m  [0m [91m                                                                                                                                                                    ~[0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/services/auth.service.ts[0m:[93m59[0m:[93m91[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m59[0m           const sellerToken = this.createToken(process.env.EMAIL_SECRET, {createUserSeller.records.map(record => record.get('u').properties.id)[0], createUserSeller.records.map(record => record.get('u').properties.id)[0]});
+[7m  [0m [91m                                                                                          ~[0m
+[96msrc/services/auth.service.ts[0m:[93m59[0m:[93m165[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m59[0m           const sellerToken = this.createToken(process.env.EMAIL_SECRET, {createUserSeller.records.map(record => record.get('u').properties.id)[0], createUserSeller.records.map(record => record.get('u').properties.id)[0]});
+[7m  [0m [91m                                                                                                                                                                    ~[0m
+
+    at createTSError (C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\node_modules\ts-node\src\index.ts:863:19)
+    at C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\node_modules\ts-node\src\index.ts:1379:34
+    at Object.compile (C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\node_modules\ts-node\src\index.ts:1458:13)
+    at Module.m._compile (C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\node_modules\ts-node\src\index.ts:1617:30)
+    at Module._extensions..js (internal/modules/cjs/loader.js:1114:10)
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (internal/modules/cjs/loader.js:950:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:790:12)
+    at Module.require (internal/modules/cjs/loader.js:974:19)
+2023-03-22 11:32:10 error: uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/services/auth.service.ts[0m:[93m59[0m:[93m91[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m59[0m           const sellerToken = this.createToken(process.env.EMAIL_SECRET, {createUserSeller.records.map(record => record.get('u').properties.id)[0], createUserSeller.records.map(record => record.get('u').properties.)[0]});
+[7m  [0m [91m                                                                                          ~[0m
+[96msrc/services/auth.service.ts[0m:[93m59[0m:[93m165[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m59[0m           const sellerToken = this.createToken(process.env.EMAIL_SECRET, {createUserSeller.records.map(record => record.get('u').properties.id)[0], createUserSeller.records.map(record => record.get('u').properties.)[0]});
+[7m  [0m [91m                                                                                                                                                                    ~[0m
+[96msrc/services/auth.service.ts[0m:[93m59[0m:[93m215[0m - [91merror[0m[90m TS1003: [0mIdentifier expected.
+
+[7m59[0m           const sellerToken = this.createToken(process.env.EMAIL_SECRET, {createUserSeller.records.map(record => record.get('u').properties.id)[0], createUserSeller.records.map(record => record.get('u').properties.)[0]});
+[7m  [0m [91m                                                                                                                                                                                                                      ~[0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/services/auth.service.ts[0m:[93m59[0m:[93m91[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m59[0m           const sellerToken = this.createToken(process.env.EMAIL_SECRET, {createUserSeller.records.map(record => record.get('u').properties.id)[0], createUserSeller.records.map(record => record.get('u').properties.)[0]});
+[7m  [0m [91m                                                                                          ~[0m
+[96msrc/services/auth.service.ts[0m:[93m59[0m:[93m165[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m59[0m           const sellerToken = this.createToken(process.env.EMAIL_SECRET, {createUserSeller.records.map(record => record.get('u').properties.id)[0], createUserSeller.records.map(record => record.get('u').properties.)[0]});
+[7m  [0m [91m                                                                                                                                                                    ~[0m
+[96msrc/services/auth.service.ts[0m:[93m59[0m:[93m215[0m - [91merror[0m[90m TS1003: [0mIdentifier expected.
+
+[7m59[0m           const sellerToken = this.createToken(process.env.EMAIL_SECRET, {createUserSeller.records.map(record => record.get('u').properties.id)[0], createUserSeller.records.map(record => record.get('u').properties.)[0]});
+[7m  [0m [91m                                                                                                                                                                                                                      ~[0m
+
+    at createTSError (C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\node_modules\ts-node\src\index.ts:863:19)
+    at C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\node_modules\ts-node\src\index.ts:1379:34
+    at Object.compile (C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\node_modules\ts-node\src\index.ts:1458:13)
+    at Module.m._compile (C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\node_modules\ts-node\src\index.ts:1617:30)
+    at Module._extensions..js (internal/modules/cjs/loader.js:1114:10)
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (internal/modules/cjs/loader.js:950:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:790:12)
+    at Module.require (internal/modules/cjs/loader.js:974:19)
+2023-03-22 11:32:14 error: uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/services/auth.service.ts[0m:[93m59[0m:[93m91[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m59[0m           const sellerToken = this.createToken(process.env.EMAIL_SECRET, {createUserSeller.records.map(record => record.get('u').properties.id)[0], createUserSeller.records.map(record => record.get('u').properties.)[0]});
+[7m  [0m [91m                                                                                          ~[0m
+[96msrc/services/auth.service.ts[0m:[93m59[0m:[93m165[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m59[0m           const sellerToken = this.createToken(process.env.EMAIL_SECRET, {createUserSeller.records.map(record => record.get('u').properties.id)[0], createUserSeller.records.map(record => record.get('u').properties.)[0]});
+[7m  [0m [91m                                                                                                                                                                    ~[0m
+[96msrc/services/auth.service.ts[0m:[93m59[0m:[93m215[0m - [91merror[0m[90m TS1003: [0mIdentifier expected.
+
+[7m59[0m           const sellerToken = this.createToken(process.env.EMAIL_SECRET, {createUserSeller.records.map(record => record.get('u').properties.id)[0], createUserSeller.records.map(record => record.get('u').properties.)[0]});
+[7m  [0m [91m                                                                                                                                                                                                                      ~[0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/services/auth.service.ts[0m:[93m59[0m:[93m91[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m59[0m           const sellerToken = this.createToken(process.env.EMAIL_SECRET, {createUserSeller.records.map(record => record.get('u').properties.id)[0], createUserSeller.records.map(record => record.get('u').properties.)[0]});
+[7m  [0m [91m                                                                                          ~[0m
+[96msrc/services/auth.service.ts[0m:[93m59[0m:[93m165[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m59[0m           const sellerToken = this.createToken(process.env.EMAIL_SECRET, {createUserSeller.records.map(record => record.get('u').properties.id)[0], createUserSeller.records.map(record => record.get('u').properties.)[0]});
+[7m  [0m [91m                                                                                                                                                                    ~[0m
+[96msrc/services/auth.service.ts[0m:[93m59[0m:[93m215[0m - [91merror[0m[90m TS1003: [0mIdentifier expected.
+
+[7m59[0m           const sellerToken = this.createToken(process.env.EMAIL_SECRET, {createUserSeller.records.map(record => record.get('u').properties.id)[0], createUserSeller.records.map(record => record.get('u').properties.)[0]});
+[7m  [0m [91m                                                                                                                                                                                                                      ~[0m
+
+    at createTSError (C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\node_modules\ts-node\src\index.ts:863:19)
+    at C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\node_modules\ts-node\src\index.ts:1379:34
+    at Object.compile (C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\node_modules\ts-node\src\index.ts:1458:13)
+    at Module.m._compile (C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\node_modules\ts-node\src\index.ts:1617:30)
+    at Module._extensions..js (internal/modules/cjs/loader.js:1114:10)
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (internal/modules/cjs/loader.js:950:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:790:12)
+    at Module.require (internal/modules/cjs/loader.js:974:19)
+2023-03-22 11:32:17 error: uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/services/auth.service.ts[0m:[93m59[0m:[93m91[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m59[0m           const sellerToken = this.createToken(process.env.EMAIL_SECRET, {createUserSeller.records.map(record => record.get('u').properties.id)[0], createUserSeller.records.map(record => record.get('u').properties.verified)[0]});
+[7m  [0m [91m                                                                                          ~[0m
+[96msrc/services/auth.service.ts[0m:[93m59[0m:[93m165[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m59[0m           const sellerToken = this.createToken(process.env.EMAIL_SECRET, {createUserSeller.records.map(record => record.get('u').properties.id)[0], createUserSeller.records.map(record => record.get('u').properties.verified)[0]});
+[7m  [0m [91m                                                                                                                                                                    ~[0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/services/auth.service.ts[0m:[93m59[0m:[93m91[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m59[0m           const sellerToken = this.createToken(process.env.EMAIL_SECRET, {createUserSeller.records.map(record => record.get('u').properties.id)[0], createUserSeller.records.map(record => record.get('u').properties.verified)[0]});
+[7m  [0m [91m                                                                                          ~[0m
+[96msrc/services/auth.service.ts[0m:[93m59[0m:[93m165[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m59[0m           const sellerToken = this.createToken(process.env.EMAIL_SECRET, {createUserSeller.records.map(record => record.get('u').properties.id)[0], createUserSeller.records.map(record => record.get('u').properties.verified)[0]});
+[7m  [0m [91m                                                                                                                                                                    ~[0m
+
+    at createTSError (C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\node_modules\ts-node\src\index.ts:863:19)
+    at C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\node_modules\ts-node\src\index.ts:1379:34
+    at Object.compile (C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\node_modules\ts-node\src\index.ts:1458:13)
+    at Module.m._compile (C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\node_modules\ts-node\src\index.ts:1617:30)
+    at Module._extensions..js (internal/modules/cjs/loader.js:1114:10)
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (internal/modules/cjs/loader.js:950:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:790:12)
+    at Module.require (internal/modules/cjs/loader.js:974:19)
+2023-03-22 11:32:26 error: uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/services/auth.service.ts[0m:[93m59[0m:[93m91[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m59[0m           const sellerToken = this.createToken(process.env.EMAIL_SECRET, {createUserSeller.records.map(record => record.get('u').properties.id)[0], createUserSeller.records.map(record => record.get('s').properties.verified)[0]});
+[7m  [0m [91m                                                                                          ~[0m
+[96msrc/services/auth.service.ts[0m:[93m59[0m:[93m165[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m59[0m           const sellerToken = this.createToken(process.env.EMAIL_SECRET, {createUserSeller.records.map(record => record.get('u').properties.id)[0], createUserSeller.records.map(record => record.get('s').properties.verified)[0]});
+[7m  [0m [91m                                                                                                                                                                    ~[0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/services/auth.service.ts[0m:[93m59[0m:[93m91[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m59[0m           const sellerToken = this.createToken(process.env.EMAIL_SECRET, {createUserSeller.records.map(record => record.get('u').properties.id)[0], createUserSeller.records.map(record => record.get('s').properties.verified)[0]});
+[7m  [0m [91m                                                                                          ~[0m
+[96msrc/services/auth.service.ts[0m:[93m59[0m:[93m165[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m59[0m           const sellerToken = this.createToken(process.env.EMAIL_SECRET, {createUserSeller.records.map(record => record.get('u').properties.id)[0], createUserSeller.records.map(record => record.get('s').properties.verified)[0]});
+[7m  [0m [91m                                                                                                                                                                    ~[0m
+
+    at createTSError (C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\node_modules\ts-node\src\index.ts:863:19)
+    at C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\node_modules\ts-node\src\index.ts:1379:34
+    at Object.compile (C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\node_modules\ts-node\src\index.ts:1458:13)
+    at Module.m._compile (C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\node_modules\ts-node\src\index.ts:1617:30)
+    at Module._extensions..js (internal/modules/cjs/loader.js:1114:10)
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (internal/modules/cjs/loader.js:950:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:790:12)
+    at Module.require (internal/modules/cjs/loader.js:974:19)
+2023-03-22 11:33:10 error: uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/services/auth.service.ts[0m:[93m59[0m:[93m91[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m59[0m           const sellerToken = this.createToken(process.env.EMAIL_SECRET, {createUserSeller.records.map(record => record.get('u').properties.id)[0]);
+[7m  [0m [91m                                                                                          ~[0m
+[96msrc/services/auth.service.ts[0m:[93m59[0m:[93m147[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m59[0m           const sellerToken = this.createToken(process.env.EMAIL_SECRET, {createUserSeller.records.map(record => record.get('u').properties.id)[0]);
+[7m  [0m [91m                                                                                                                                                  ~[0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/services/auth.service.ts[0m:[93m59[0m:[93m91[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m59[0m           const sellerToken = this.createToken(process.env.EMAIL_SECRET, {createUserSeller.records.map(record => record.get('u').properties.id)[0]);
+[7m  [0m [91m                                                                                          ~[0m
+[96msrc/services/auth.service.ts[0m:[93m59[0m:[93m147[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m59[0m           const sellerToken = this.createToken(process.env.EMAIL_SECRET, {createUserSeller.records.map(record => record.get('u').properties.id)[0]);
+[7m  [0m [91m                                                                                                                                                  ~[0m
+
+    at createTSError (C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\node_modules\ts-node\src\index.ts:863:19)
+    at C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\node_modules\ts-node\src\index.ts:1379:34
+    at Object.compile (C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\node_modules\ts-node\src\index.ts:1458:13)
+    at Module.m._compile (C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\node_modules\ts-node\src\index.ts:1617:30)
+    at Module._extensions..js (internal/modules/cjs/loader.js:1114:10)
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (internal/modules/cjs/loader.js:950:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:790:12)
+    at Module.require (internal/modules/cjs/loader.js:974:19)
+2023-03-22 11:50:40 error: uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/services/users.service.ts[0m:[93m111[0m:[93m7[0m - [91merror[0m[90m TS1109: [0mExpression expected.
+
+[7m111[0m       });
+[7m   [0m [91m      ~[0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/services/users.service.ts[0m:[93m111[0m:[93m7[0m - [91merror[0m[90m TS1109: [0mExpression expected.
+
+[7m111[0m       });
+[7m   [0m [91m      ~[0m
+
+    at createTSError (C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\node_modules\ts-node\src\index.ts:863:19)
+    at C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\node_modules\ts-node\src\index.ts:1379:34
+    at Object.compile (C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\node_modules\ts-node\src\index.ts:1458:13)
+    at Module.m._compile (C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\node_modules\ts-node\src\index.ts:1617:30)
+    at Module._extensions..js (internal/modules/cjs/loader.js:1114:10)
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (internal/modules/cjs/loader.js:950:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:790:12)
+    at Module.require (internal/modules/cjs/loader.js:974:19)
+2023-03-22 11:51:03 error: uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/services/users.service.ts[0m:[93m112[0m:[93m7[0m - [91merror[0m[90m TS1109: [0mExpression expected.
+
+[7m112[0m       });
+[7m   [0m [91m      ~[0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/services/users.service.ts[0m:[93m112[0m:[93m7[0m - [91merror[0m[90m TS1109: [0mExpression expected.
+
+[7m112[0m       });
+[7m   [0m [91m      ~[0m
+
+    at createTSError (C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\node_modules\ts-node\src\index.ts:863:19)
+    at C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\node_modules\ts-node\src\index.ts:1379:34
+    at Object.compile (C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\node_modules\ts-node\src\index.ts:1458:13)
+    at Module.m._compile (C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\node_modules\ts-node\src\index.ts:1617:30)
+    at Module._extensions..js (internal/modules/cjs/loader.js:1114:10)
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (internal/modules/cjs/loader.js:950:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:790:12)
+    at Module.require (internal/modules/cjs/loader.js:974:19)
+2023-03-22 11:51:09 error: uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/services/users.service.ts[0m:[93m112[0m:[93m7[0m - [91merror[0m[90m TS1109: [0mExpression expected.
+
+[7m112[0m       });
+[7m   [0m [91m      ~[0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/services/users.service.ts[0m:[93m112[0m:[93m7[0m - [91merror[0m[90m TS1109: [0mExpression expected.
+
+[7m112[0m       });
+[7m   [0m [91m      ~[0m
+
+    at createTSError (C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\node_modules\ts-node\src\index.ts:863:19)
+    at C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\node_modules\ts-node\src\index.ts:1379:34
+    at Object.compile (C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\node_modules\ts-node\src\index.ts:1458:13)
+    at Module.m._compile (C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\node_modules\ts-node\src\index.ts:1617:30)
+    at Module._extensions..js (internal/modules/cjs/loader.js:1114:10)
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (internal/modules/cjs/loader.js:950:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:790:12)
+    at Module.require (internal/modules/cjs/loader.js:974:19)
+2023-03-22 14:50:22 error: uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/services/post.service.ts[0m:[93m102[0m:[93m7[0m - [91merror[0m[90m TS1109: [0mExpression expected.
+
+[7m102[0m       const createdCollection = await createPostSession.executeWrite(tx =>
+[7m   [0m [91m      ~~~~~[0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/services/post.service.ts[0m:[93m102[0m:[93m7[0m - [91merror[0m[90m TS1109: [0mExpression expected.
+
+[7m102[0m       const createdCollection = await createPostSession.executeWrite(tx =>
+[7m   [0m [91m      ~~~~~[0m
+
+    at createTSError (C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\node_modules\ts-node\src\index.ts:863:19)
+    at C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\node_modules\ts-node\src\index.ts:1379:34
+    at Object.compile (C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\node_modules\ts-node\src\index.ts:1458:13)
+    at Module.m._compile (C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\node_modules\ts-node\src\index.ts:1617:30)
+    at Module._extensions..js (internal/modules/cjs/loader.js:1114:10)
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (internal/modules/cjs/loader.js:950:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:790:12)
+    at Module.require (internal/modules/cjs/loader.js:974:19)
+2023-03-22 14:50:43 error: uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/services/post.service.ts[0m:[93m8[0m:[93m1[0m - [91merror[0m[90m TS1005: [0m'=' expected.
+
+[7m8[0m class postService {
+[7m [0m [91m~~~~~[0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/services/post.service.ts[0m:[93m8[0m:[93m1[0m - [91merror[0m[90m TS1005: [0m'=' expected.
+
+[7m8[0m class postService {
+[7m [0m [91m~~~~~[0m
+
+    at createTSError (C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\node_modules\ts-node\src\index.ts:863:19)
+    at C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\node_modules\ts-node\src\index.ts:1379:34
+    at Object.compile (C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\node_modules\ts-node\src\index.ts:1458:13)
+    at Module.m._compile (C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\node_modules\ts-node\src\index.ts:1617:30)
+    at Module._extensions..js (internal/modules/cjs/loader.js:1114:10)
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (internal/modules/cjs/loader.js:950:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:790:12)
+    at Module.require (internal/modules/cjs/loader.js:974:19)
+2023-03-22 14:51:07 error: uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/services/post.service.ts[0m:[93m103[0m:[93m34[0m - [91merror[0m[90m TS1109: [0mExpression expected.
+
+[7m103[0m       const createPostInStripe = ;
+[7m   [0m [91m                                 ~[0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/services/post.service.ts[0m:[93m103[0m:[93m34[0m - [91merror[0m[90m TS1109: [0mExpression expected.
+
+[7m103[0m       const createPostInStripe = ;
+[7m   [0m [91m                                 ~[0m
+
+    at createTSError (C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\node_modules\ts-node\src\index.ts:863:19)
+    at C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\node_modules\ts-node\src\index.ts:1379:34
+    at Object.compile (C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\node_modules\ts-node\src\index.ts:1458:13)
+    at Module.m._compile (C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\node_modules\ts-node\src\index.ts:1617:30)
+    at Module._extensions..js (internal/modules/cjs/loader.js:1114:10)
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (internal/modules/cjs/loader.js:950:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:790:12)
+    at Module.require (internal/modules/cjs/loader.js:974:19)
+2023-03-22 14:51:14 error: uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/services/post.service.ts[0m:[93m103[0m:[93m41[0m - [91merror[0m[90m TS1003: [0mIdentifier expected.
+
+[7m103[0m       const createPostInStripe = stripe.;
+[7m   [0m [91m                                        ~[0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/services/post.service.ts[0m:[93m103[0m:[93m41[0m - [91merror[0m[90m TS1003: [0mIdentifier expected.
+
+[7m103[0m       const createPostInStripe = stripe.;
+[7m   [0m [91m                                        ~[0m
+
+    at createTSError (C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\node_modules\ts-node\src\index.ts:863:19)
+    at C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\node_modules\ts-node\src\index.ts:1379:34
+    at Object.compile (C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\node_modules\ts-node\src\index.ts:1458:13)
+    at Module.m._compile (C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\node_modules\ts-node\src\index.ts:1617:30)
+    at Module._extensions..js (internal/modules/cjs/loader.js:1114:10)
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (internal/modules/cjs/loader.js:950:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:790:12)
+    at Module.require (internal/modules/cjs/loader.js:974:19)
+2023-03-22 14:51:30 error: uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/services/post.service.ts[0m:[93m103[0m:[93m41[0m - [91merror[0m[90m TS1003: [0mIdentifier expected.
+
+[7m103[0m       const createPostInStripe = stripe.;
+[7m   [0m [91m                                        ~[0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/services/post.service.ts[0m:[93m103[0m:[93m41[0m - [91merror[0m[90m TS1003: [0mIdentifier expected.
+
+[7m103[0m       const createPostInStripe = stripe.;
+[7m   [0m [91m                                        ~[0m
+
+    at createTSError (C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\node_modules\ts-node\src\index.ts:863:19)
+    at C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\node_modules\ts-node\src\index.ts:1379:34
+    at Object.compile (C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\node_modules\ts-node\src\index.ts:1458:13)
+    at Module.m._compile (C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\node_modules\ts-node\src\index.ts:1617:30)
+    at Module._extensions..js (internal/modules/cjs/loader.js:1114:10)
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (internal/modules/cjs/loader.js:950:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:790:12)
+    at Module.require (internal/modules/cjs/loader.js:974:19)
+2023-03-22 14:51:48 error: uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/services/post.service.ts[0m:[93m103[0m:[93m41[0m - [91merror[0m[90m TS1003: [0mIdentifier expected.
+
+[7m103[0m       const createPostInStripe = stripe.;
+[7m   [0m [91m                                        ~[0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/services/post.service.ts[0m:[93m103[0m:[93m41[0m - [91merror[0m[90m TS1003: [0mIdentifier expected.
+
+[7m103[0m       const createPostInStripe = stripe.;
+[7m   [0m [91m                                        ~[0m
+
+    at createTSError (C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\node_modules\ts-node\src\index.ts:863:19)
+    at C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\node_modules\ts-node\src\index.ts:1379:34
+    at Object.compile (C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\node_modules\ts-node\src\index.ts:1458:13)
+    at Module.m._compile (C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\node_modules\ts-node\src\index.ts:1617:30)
+    at Module._extensions..js (internal/modules/cjs/loader.js:1114:10)
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (internal/modules/cjs/loader.js:950:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:790:12)
+    at Module.require (internal/modules/cjs/loader.js:974:19)
+2023-03-22 14:52:13 error: uncaughtException: Cannot find module 'str'
+Require stack:
+- C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\src\services\post.service.ts
+- C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\src\controllers\post.controller.ts
+- C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\src\routes\post.route.ts
+- C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\src\server.ts
+Error: Cannot find module 'str'
+Require stack:
+- C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\src\services\post.service.ts
+- C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\src\controllers\post.controller.ts
+- C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\src\routes\post.route.ts
+- C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\src\server.ts
+    at Function.Module._resolveFilename (internal/modules/cjs/loader.js:902:15)
+    at Function.Module._resolveFilename.sharedData.moduleResolveFilenameHook.installedValue (C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\node_modules\@cspotcode\source-map-support\source-map-support.js:811:30)
+    at Function.Module._resolveFilename (C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\node_modules\tsconfig-paths\src\register.ts:115:36)
+    at Function.Module._load (internal/modules/cjs/loader.js:746:27)
+    at Module.require (internal/modules/cjs/loader.js:974:19)
+    at require (internal/modules/cjs/helpers.js:101:18)
+    at Object.<anonymous> (C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\src\services\post.service.ts:6:1)
+    at Module._compile (internal/modules/cjs/loader.js:1085:14)
+    at Module.m._compile (C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\node_modules\ts-node\src\index.ts:1618:23)
+    at Module._extensions..js (internal/modules/cjs/loader.js:1114:10)
+2023-03-22 14:52:52 error: uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/services/post.service.ts[0m:[93m102[0m:[93m29[0m - [91merror[0m[90m TS1003: [0mIdentifier expected.
+
+[7m102[0m       const stripe = stripe.;
+[7m   [0m [91m                            ~[0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/services/post.service.ts[0m:[93m102[0m:[93m29[0m - [91merror[0m[90m TS1003: [0mIdentifier expected.
+
+[7m102[0m       const stripe = stripe.;
+[7m   [0m [91m                            ~[0m
+
+    at createTSError (C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\node_modules\ts-node\src\index.ts:863:19)
+    at C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\node_modules\ts-node\src\index.ts:1379:34
+    at Object.compile (C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\node_modules\ts-node\src\index.ts:1458:13)
+    at Module.m._compile (C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\node_modules\ts-node\src\index.ts:1617:30)
+    at Module._extensions..js (internal/modules/cjs/loader.js:1114:10)
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (internal/modules/cjs/loader.js:950:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:790:12)
+    at Module.require (internal/modules/cjs/loader.js:974:19)
+2023-03-22 16:25:18 error: uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/services/post.service.ts[0m:[93m102[0m:[93m45[0m - [91merror[0m[90m TS1003: [0mIdentifier expected.
+
+[7m102[0m       const stripe = new Stripe(process.env.);
+[7m   [0m [91m                                            ~[0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/services/post.service.ts[0m:[93m102[0m:[93m45[0m - [91merror[0m[90m TS1003: [0mIdentifier expected.
+
+[7m102[0m       const stripe = new Stripe(process.env.);
+[7m   [0m [91m                                            ~[0m
+
+    at createTSError (C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\node_modules\ts-node\src\index.ts:863:19)
+    at C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\node_modules\ts-node\src\index.ts:1379:34
+    at Object.compile (C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\node_modules\ts-node\src\index.ts:1458:13)
+    at Module.m._compile (C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\node_modules\ts-node\src\index.ts:1617:30)
+    at Module._extensions..js (internal/modules/cjs/loader.js:1114:10)
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (internal/modules/cjs/loader.js:950:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:790:12)
+    at Module.require (internal/modules/cjs/loader.js:974:19)
+2023-03-22 16:25:58 error: uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/services/post.service.ts[0m:[93m102[0m:[93m72[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m102[0m       const stripe = new Stripe(process.env.STRIPE_TEST_KEY, apiVersion: '2022-11-15',);
+[7m   [0m [91m                                                                       ~[0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/services/post.service.ts[0m:[93m102[0m:[93m72[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m102[0m       const stripe = new Stripe(process.env.STRIPE_TEST_KEY, apiVersion: '2022-11-15',);
+[7m   [0m [91m                                                                       ~[0m
+
+    at createTSError (C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\node_modules\ts-node\src\index.ts:863:19)
+    at C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\node_modules\ts-node\src\index.ts:1379:34
+    at Object.compile (C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\node_modules\ts-node\src\index.ts:1458:13)
+    at Module.m._compile (C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\node_modules\ts-node\src\index.ts:1617:30)
+    at Module._extensions..js (internal/modules/cjs/loader.js:1114:10)
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (internal/modules/cjs/loader.js:950:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:790:12)
+    at Module.require (internal/modules/cjs/loader.js:974:19)
+2023-03-22 16:26:04 error: uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/services/post.service.ts[0m:[93m102[0m:[93m72[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m102[0m       const stripe = new Stripe(process.env.STRIPE_TEST_KEY, apiVersion: '2022-11-15');
+[7m   [0m [91m                                                                       ~[0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/services/post.service.ts[0m:[93m102[0m:[93m72[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m102[0m       const stripe = new Stripe(process.env.STRIPE_TEST_KEY, apiVersion: '2022-11-15');
+[7m   [0m [91m                                                                       ~[0m
+
+    at createTSError (C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\node_modules\ts-node\src\index.ts:863:19)
+    at C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\node_modules\ts-node\src\index.ts:1379:34
+    at Object.compile (C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\node_modules\ts-node\src\index.ts:1458:13)
+    at Module.m._compile (C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\node_modules\ts-node\src\index.ts:1617:30)
+    at Module._extensions..js (internal/modules/cjs/loader.js:1114:10)
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (internal/modules/cjs/loader.js:950:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:790:12)
+    at Module.require (internal/modules/cjs/loader.js:974:19)
+2023-03-22 17:35:01 error: uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/services/post.service.ts[0m:[93m103[0m:[93m7[0m - [91merror[0m[90m TS1435: [0mUnknown keyword or identifier. Did you mean 'const'?
+
+[7m103[0m       conjst product = s
+[7m   [0m [91m      ~~~~~~[0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/services/post.service.ts[0m:[93m103[0m:[93m7[0m - [91merror[0m[90m TS1435: [0mUnknown keyword or identifier. Did you mean 'const'?
+
+[7m103[0m       conjst product = s
+[7m   [0m [91m      ~~~~~~[0m
+
+    at createTSError (C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\node_modules\ts-node\src\index.ts:863:19)
+    at C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\node_modules\ts-node\src\index.ts:1379:34
+    at Object.compile (C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\node_modules\ts-node\src\index.ts:1458:13)
+    at Module.m._compile (C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\node_modules\ts-node\src\index.ts:1617:30)
+    at Module._extensions..js (internal/modules/cjs/loader.js:1114:10)
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (internal/modules/cjs/loader.js:950:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:790:12)
+    at Module.require (internal/modules/cjs/loader.js:974:19)
+2023-03-22 17:35:08 error: uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/services/post.service.ts[0m:[93m103[0m:[93m7[0m - [91merror[0m[90m TS1435: [0mUnknown keyword or identifier. Did you mean 'const'?
+
+[7m103[0m       conjst product = stripe.products.create()
+[7m   [0m [91m      ~~~~~~[0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/services/post.service.ts[0m:[93m103[0m:[93m7[0m - [91merror[0m[90m TS1435: [0mUnknown keyword or identifier. Did you mean 'const'?
+
+[7m103[0m       conjst product = stripe.products.create()
+[7m   [0m [91m      ~~~~~~[0m
+
+    at createTSError (C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\node_modules\ts-node\src\index.ts:863:19)
+    at C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\node_modules\ts-node\src\index.ts:1379:34
+    at Object.compile (C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\node_modules\ts-node\src\index.ts:1458:13)
+    at Module.m._compile (C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\node_modules\ts-node\src\index.ts:1617:30)
+    at Module._extensions..js (internal/modules/cjs/loader.js:1114:10)
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (internal/modules/cjs/loader.js:950:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:790:12)
+    at Module.require (internal/modules/cjs/loader.js:974:19)
+2023-03-22 17:35:13 error: uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/services/post.service.ts[0m:[93m103[0m:[93m7[0m - [91merror[0m[90m TS1435: [0mUnknown keyword or identifier. Did you mean 'const'?
+
+[7m103[0m       conjst product = stripe.products.create(
+[7m   [0m [91m      ~~~~~~[0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/services/post.service.ts[0m:[93m103[0m:[93m7[0m - [91merror[0m[90m TS1435: [0mUnknown keyword or identifier. Did you mean 'const'?
+
+[7m103[0m       conjst product = stripe.products.create(
+[7m   [0m [91m      ~~~~~~[0m
+
+    at createTSError (C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\node_modules\ts-node\src\index.ts:863:19)
+    at C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\node_modules\ts-node\src\index.ts:1379:34
+    at Object.compile (C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\node_modules\ts-node\src\index.ts:1458:13)
+    at Module.m._compile (C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\node_modules\ts-node\src\index.ts:1617:30)
+    at Module._extensions..js (internal/modules/cjs/loader.js:1114:10)
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (internal/modules/cjs/loader.js:950:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:790:12)
+    at Module.require (internal/modules/cjs/loader.js:974:19)
+2023-03-22 17:35:18 error: uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/services/post.service.ts[0m:[93m103[0m:[93m7[0m - [91merror[0m[90m TS1435: [0mUnknown keyword or identifier. Did you mean 'const'?
+
+[7m103[0m       conjst product = stripe.products.create({
+[7m   [0m [91m      ~~~~~~[0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/services/post.service.ts[0m:[93m103[0m:[93m7[0m - [91merror[0m[90m TS1435: [0mUnknown keyword or identifier. Did you mean 'const'?
+
+[7m103[0m       conjst product = stripe.products.create({
+[7m   [0m [91m      ~~~~~~[0m
+
+    at createTSError (C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\node_modules\ts-node\src\index.ts:863:19)
+    at C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\node_modules\ts-node\src\index.ts:1379:34
+    at Object.compile (C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\node_modules\ts-node\src\index.ts:1458:13)
+    at Module.m._compile (C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\node_modules\ts-node\src\index.ts:1617:30)
+    at Module._extensions..js (internal/modules/cjs/loader.js:1114:10)
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (internal/modules/cjs/loader.js:950:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:790:12)
+    at Module.require (internal/modules/cjs/loader.js:974:19)
+2023-03-22 17:35:23 error: uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/services/post.service.ts[0m:[93m103[0m:[93m7[0m - [91merror[0m[90m TS1435: [0mUnknown keyword or identifier. Did you mean 'const'?
+
+[7m103[0m       conjst product = await stripe.products.create({
+[7m   [0m [91m      ~~~~~~[0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/services/post.service.ts[0m:[93m103[0m:[93m7[0m - [91merror[0m[90m TS1435: [0mUnknown keyword or identifier. Did you mean 'const'?
+
+[7m103[0m       conjst product = await stripe.products.create({
+[7m   [0m [91m      ~~~~~~[0m
+
+    at createTSError (C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\node_modules\ts-node\src\index.ts:863:19)
+    at C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\node_modules\ts-node\src\index.ts:1379:34
+    at Object.compile (C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\node_modules\ts-node\src\index.ts:1458:13)
+    at Module.m._compile (C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\node_modules\ts-node\src\index.ts:1617:30)
+    at Module._extensions..js (internal/modules/cjs/loader.js:1114:10)
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (internal/modules/cjs/loader.js:950:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:790:12)
+    at Module.require (internal/modules/cjs/loader.js:974:19)
+2023-03-22 17:36:18 error: uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/services/post.service.ts[0m:[93m105[0m:[93m7[0m - [91merror[0m[90m TS1109: [0mExpression expected.
+
+[7m105[0m       })
+[7m   [0m [91m      ~[0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/services/post.service.ts[0m:[93m105[0m:[93m7[0m - [91merror[0m[90m TS1109: [0mExpression expected.
+
+[7m105[0m       })
+[7m   [0m [91m      ~[0m
+
+    at createTSError (C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\node_modules\ts-node\src\index.ts:863:19)
+    at C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\node_modules\ts-node\src\index.ts:1379:34
+    at Object.compile (C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\node_modules\ts-node\src\index.ts:1458:13)
+    at Module.m._compile (C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\node_modules\ts-node\src\index.ts:1617:30)
+    at Module._extensions..js (internal/modules/cjs/loader.js:1114:10)
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (internal/modules/cjs/loader.js:950:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:790:12)
+    at Module.require (internal/modules/cjs/loader.js:974:19)
+2023-03-22 17:36:27 error: uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/services/post.service.ts[0m:[93m105[0m:[93m7[0m - [91merror[0m[90m TS1003: [0mIdentifier expected.
+
+[7m105[0m       })
+[7m   [0m [91m      ~[0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/services/post.service.ts[0m:[93m105[0m:[93m7[0m - [91merror[0m[90m TS1003: [0mIdentifier expected.
+
+[7m105[0m       })
+[7m   [0m [91m      ~[0m
+
+    at createTSError (C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\node_modules\ts-node\src\index.ts:863:19)
+    at C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\node_modules\ts-node\src\index.ts:1379:34
+    at Object.compile (C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\node_modules\ts-node\src\index.ts:1458:13)
+    at Module.m._compile (C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\node_modules\ts-node\src\index.ts:1617:30)
+    at Module._extensions..js (internal/modules/cjs/loader.js:1114:10)
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (internal/modules/cjs/loader.js:950:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:790:12)
+    at Module.require (internal/modules/cjs/loader.js:974:19)
+2023-03-22 17:36:53 error: uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/services/post.service.ts[0m:[93m106[0m:[93m7[0m - [91merror[0m[90m TS1109: [0mExpression expected.
+
+[7m106[0m       })
+[7m   [0m [91m      ~[0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/services/post.service.ts[0m:[93m106[0m:[93m7[0m - [91merror[0m[90m TS1109: [0mExpression expected.
+
+[7m106[0m       })
+[7m   [0m [91m      ~[0m
+
+    at createTSError (C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\node_modules\ts-node\src\index.ts:863:19)
+    at C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\node_modules\ts-node\src\index.ts:1379:34
+    at Object.compile (C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\node_modules\ts-node\src\index.ts:1458:13)
+    at Module.m._compile (C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\node_modules\ts-node\src\index.ts:1617:30)
+    at Module._extensions..js (internal/modules/cjs/loader.js:1114:10)
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (internal/modules/cjs/loader.js:950:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:790:12)
+    at Module.require (internal/modules/cjs/loader.js:974:19)
+2023-03-22 17:37:01 error: uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/services/post.service.ts[0m:[93m106[0m:[93m7[0m - [91merror[0m[90m TS1003: [0mIdentifier expected.
+
+[7m106[0m       })
+[7m   [0m [91m      ~[0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/services/post.service.ts[0m:[93m106[0m:[93m7[0m - [91merror[0m[90m TS1003: [0mIdentifier expected.
+
+[7m106[0m       })
+[7m   [0m [91m      ~[0m
+
+    at createTSError (C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\node_modules\ts-node\src\index.ts:863:19)
+    at C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\node_modules\ts-node\src\index.ts:1379:34
+    at Object.compile (C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\node_modules\ts-node\src\index.ts:1458:13)
+    at Module.m._compile (C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\node_modules\ts-node\src\index.ts:1617:30)
+    at Module._extensions..js (internal/modules/cjs/loader.js:1114:10)
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (internal/modules/cjs/loader.js:950:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:790:12)
+    at Module.require (internal/modules/cjs/loader.js:974:19)
+2023-03-22 17:37:03 error: uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/services/post.service.ts[0m:[93m106[0m:[93m7[0m - [91merror[0m[90m TS1003: [0mIdentifier expected.
+
+[7m106[0m       })
+[7m   [0m [91m      ~[0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/services/post.service.ts[0m:[93m106[0m:[93m7[0m - [91merror[0m[90m TS1003: [0mIdentifier expected.
+
+[7m106[0m       })
+[7m   [0m [91m      ~[0m
+
+    at createTSError (C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\node_modules\ts-node\src\index.ts:863:19)
+    at C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\node_modules\ts-node\src\index.ts:1379:34
+    at Object.compile (C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\node_modules\ts-node\src\index.ts:1458:13)
+    at Module.m._compile (C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\node_modules\ts-node\src\index.ts:1617:30)
+    at Module._extensions..js (internal/modules/cjs/loader.js:1114:10)
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (internal/modules/cjs/loader.js:950:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:790:12)
+    at Module.require (internal/modules/cjs/loader.js:974:19)
+2023-03-22 17:38:09 error: uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/services/post.service.ts[0m:[93m108[0m:[93m7[0m - [91merror[0m[90m TS1109: [0mExpression expected.
+
+[7m108[0m       })
+[7m   [0m [91m      ~[0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/services/post.service.ts[0m:[93m108[0m:[93m7[0m - [91merror[0m[90m TS1109: [0mExpression expected.
+
+[7m108[0m       })
+[7m   [0m [91m      ~[0m
+
+    at createTSError (C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\node_modules\ts-node\src\index.ts:863:19)
+    at C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\node_modules\ts-node\src\index.ts:1379:34
+    at Object.compile (C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\node_modules\ts-node\src\index.ts:1458:13)
+    at Module.m._compile (C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\node_modules\ts-node\src\index.ts:1617:30)
+    at Module._extensions..js (internal/modules/cjs/loader.js:1114:10)
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (internal/modules/cjs/loader.js:950:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:790:12)
+    at Module.require (internal/modules/cjs/loader.js:974:19)
+2023-03-22 17:39:38 error: uncaughtException: await is only valid in async function
+C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\src\services\post.service.ts:118
+                    const product = await stripe.products.create({
+                                    ^^^^^
+
+SyntaxError: await is only valid in async function
+    at wrapSafe (internal/modules/cjs/loader.js:1001:16)
+    at Module._compile (internal/modules/cjs/loader.js:1049:27)
+    at Module.m._compile (C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\node_modules\ts-node\src\index.ts:1618:23)
+    at Module._extensions..js (internal/modules/cjs/loader.js:1114:10)
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (internal/modules/cjs/loader.js:950:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:790:12)
+    at Module.require (internal/modules/cjs/loader.js:974:19)
+    at require (internal/modules/cjs/helpers.js:101:18)
+    at Object.<anonymous> (C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\src\controllers\post.controller.ts:2:1)
+2023-03-22 17:43:36 error: uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/services/post.service.ts[0m:[93m108[0m:[93m9[0m - [91merror[0m[90m TS1109: [0mExpression expected.
+
+[7m108[0m         },
+[7m   [0m [91m        ~[0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/services/post.service.ts[0m:[93m108[0m:[93m9[0m - [91merror[0m[90m TS1109: [0mExpression expected.
+
+[7m108[0m         },
+[7m   [0m [91m        ~[0m
+
+    at createTSError (C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\node_modules\ts-node\src\index.ts:863:19)
+    at C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\node_modules\ts-node\src\index.ts:1379:34
+    at Object.compile (C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\node_modules\ts-node\src\index.ts:1458:13)
+    at Module.m._compile (C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\node_modules\ts-node\src\index.ts:1617:30)
+    at Module._extensions..js (internal/modules/cjs/loader.js:1114:10)
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (internal/modules/cjs/loader.js:950:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:790:12)
+    at Module.require (internal/modules/cjs/loader.js:974:19)
+2023-03-22 17:45:52 error: uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/services/post.service.ts[0m:[93m109[0m:[93m9[0m - [91merror[0m[90m TS1109: [0mExpression expected.
+
+[7m109[0m         },
+[7m   [0m [91m        ~[0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/services/post.service.ts[0m:[93m109[0m:[93m9[0m - [91merror[0m[90m TS1109: [0mExpression expected.
+
+[7m109[0m         },
+[7m   [0m [91m        ~[0m
+
+    at createTSError (C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\node_modules\ts-node\src\index.ts:863:19)
+    at C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\node_modules\ts-node\src\index.ts:1379:34
+    at Object.compile (C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\node_modules\ts-node\src\index.ts:1458:13)
+    at Module.m._compile (C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\node_modules\ts-node\src\index.ts:1617:30)
+    at Module._extensions..js (internal/modules/cjs/loader.js:1114:10)
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (internal/modules/cjs/loader.js:950:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:790:12)
+    at Module.require (internal/modules/cjs/loader.js:974:19)
+2023-03-22 17:53:44 error: uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/services/post.service.ts[0m:[93m109[0m:[93m9[0m - [91merror[0m[90m TS1109: [0mExpression expected.
+
+[7m109[0m         },
+[7m   [0m [91m        ~[0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/services/post.service.ts[0m:[93m109[0m:[93m9[0m - [91merror[0m[90m TS1109: [0mExpression expected.
+
+[7m109[0m         },
+[7m   [0m [91m        ~[0m
+
+    at createTSError (C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\node_modules\ts-node\src\index.ts:863:19)
+    at C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\node_modules\ts-node\src\index.ts:1379:34
+    at Object.compile (C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\node_modules\ts-node\src\index.ts:1458:13)
+    at Module.m._compile (C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\node_modules\ts-node\src\index.ts:1617:30)
+    at Module._extensions..js (internal/modules/cjs/loader.js:1114:10)
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (internal/modules/cjs/loader.js:950:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:790:12)
+    at Module.require (internal/modules/cjs/loader.js:974:19)
+2023-03-22 17:58:06 error: uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/services/post.service.ts[0m:[93m105[0m:[93m13[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m105[0m         name: postData.data.postTitle,
+[7m   [0m [91m            ~[0m
+[96msrc/services/post.service.ts[0m:[93m105[0m:[93m23[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m105[0m         name: postData.data.postTitle,
+[7m   [0m [91m                      ~[0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/services/post.service.ts[0m:[93m105[0m:[93m13[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m105[0m         name: postData.data.postTitle,
+[7m   [0m [91m            ~[0m
+[96msrc/services/post.service.ts[0m:[93m105[0m:[93m23[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m105[0m         name: postData.data.postTitle,
+[7m   [0m [91m                      ~[0m
+
+    at createTSError (C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\node_modules\ts-node\src\index.ts:863:19)
+    at C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\node_modules\ts-node\src\index.ts:1379:34
+    at Object.compile (C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\node_modules\ts-node\src\index.ts:1458:13)
+    at Module.m._compile (C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\node_modules\ts-node\src\index.ts:1617:30)
+    at Module._extensions..js (internal/modules/cjs/loader.js:1114:10)
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (internal/modules/cjs/loader.js:950:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:790:12)
+    at Module.require (internal/modules/cjs/loader.js:974:19)
+2023-03-22 17:58:22 error: uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/services/post.service.ts[0m:[93m144[0m:[93m13[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m144[0m         name: postData.data.postTitle,
+[7m   [0m [91m            ~[0m
+[96msrc/services/post.service.ts[0m:[93m144[0m:[93m23[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m144[0m         name: postData.data.postTitle,
+[7m   [0m [91m                      ~[0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/services/post.service.ts[0m:[93m144[0m:[93m13[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m144[0m         name: postData.data.postTitle,
+[7m   [0m [91m            ~[0m
+[96msrc/services/post.service.ts[0m:[93m144[0m:[93m23[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m144[0m         name: postData.data.postTitle,
+[7m   [0m [91m                      ~[0m
+
+    at createTSError (C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\node_modules\ts-node\src\index.ts:863:19)
+    at C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\node_modules\ts-node\src\index.ts:1379:34
+    at Object.compile (C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\node_modules\ts-node\src\index.ts:1458:13)
+    at Module.m._compile (C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\node_modules\ts-node\src\index.ts:1617:30)
+    at Module._extensions..js (internal/modules/cjs/loader.js:1114:10)
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (internal/modules/cjs/loader.js:950:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:790:12)
+    at Module.require (internal/modules/cjs/loader.js:974:19)
+2023-03-22 17:58:27 error: uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/services/post.service.ts[0m:[93m144[0m:[93m9[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m144[0m         name: postData.data.postTitle,
+[7m   [0m [91m        ~~~~[0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/services/post.service.ts[0m:[93m144[0m:[93m9[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m144[0m         name: postData.data.postTitle,
+[7m   [0m [91m        ~~~~[0m
+
+    at createTSError (C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\node_modules\ts-node\src\index.ts:863:19)
+    at C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\node_modules\ts-node\src\index.ts:1379:34
+    at Object.compile (C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\node_modules\ts-node\src\index.ts:1458:13)
+    at Module.m._compile (C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\node_modules\ts-node\src\index.ts:1617:30)
+    at Module._extensions..js (internal/modules/cjs/loader.js:1114:10)
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (internal/modules/cjs/loader.js:950:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:790:12)
+    at Module.require (internal/modules/cjs/loader.js:974:19)
+2023-03-22 17:58:31 error: uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/services/post.service.ts[0m:[93m144[0m:[93m13[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m144[0m         name: postData.data.postTitle,
+[7m   [0m [91m            ~[0m
+[96msrc/services/post.service.ts[0m:[93m144[0m:[93m23[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m144[0m         name: postData.data.postTitle,
+[7m   [0m [91m                      ~[0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/services/post.service.ts[0m:[93m144[0m:[93m13[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m144[0m         name: postData.data.postTitle,
+[7m   [0m [91m            ~[0m
+[96msrc/services/post.service.ts[0m:[93m144[0m:[93m23[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m144[0m         name: postData.data.postTitle,
+[7m   [0m [91m                      ~[0m
+
+    at createTSError (C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\node_modules\ts-node\src\index.ts:863:19)
+    at C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\node_modules\ts-node\src\index.ts:1379:34
+    at Object.compile (C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\node_modules\ts-node\src\index.ts:1458:13)
+    at Module.m._compile (C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\node_modules\ts-node\src\index.ts:1617:30)
+    at Module._extensions..js (internal/modules/cjs/loader.js:1114:10)
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (internal/modules/cjs/loader.js:950:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:790:12)
+    at Module.require (internal/modules/cjs/loader.js:974:19)
+2023-03-22 17:59:00 error: uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/services/post.service.ts[0m:[93m144[0m:[93m13[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m144[0m         name: postData.data.postTitle,
+[7m   [0m [91m            ~[0m
+[96msrc/services/post.service.ts[0m:[93m144[0m:[93m23[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m144[0m         name: postData.data.postTitle,
+[7m   [0m [91m                      ~[0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/services/post.service.ts[0m:[93m144[0m:[93m13[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m144[0m         name: postData.data.postTitle,
+[7m   [0m [91m            ~[0m
+[96msrc/services/post.service.ts[0m:[93m144[0m:[93m23[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m144[0m         name: postData.data.postTitle,
+[7m   [0m [91m                      ~[0m
+
+    at createTSError (C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\node_modules\ts-node\src\index.ts:863:19)
+    at C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\node_modules\ts-node\src\index.ts:1379:34
+    at Object.compile (C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\node_modules\ts-node\src\index.ts:1458:13)
+    at Module.m._compile (C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\node_modules\ts-node\src\index.ts:1617:30)
+    at Module._extensions..js (internal/modules/cjs/loader.js:1114:10)
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (internal/modules/cjs/loader.js:950:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:790:12)
+    at Module.require (internal/modules/cjs/loader.js:974:19)
+2023-03-22 17:59:04 error: uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/services/post.service.ts[0m:[93m144[0m:[93m9[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m144[0m         name: postData.data.postTitle,
+[7m   [0m [91m        ~~~~[0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/services/post.service.ts[0m:[93m144[0m:[93m9[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m144[0m         name: postData.data.postTitle,
+[7m   [0m [91m        ~~~~[0m
+
+    at createTSError (C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\node_modules\ts-node\src\index.ts:863:19)
+    at C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\node_modules\ts-node\src\index.ts:1379:34
+    at Object.compile (C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\node_modules\ts-node\src\index.ts:1458:13)
+    at Module.m._compile (C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\node_modules\ts-node\src\index.ts:1617:30)
+    at Module._extensions..js (internal/modules/cjs/loader.js:1114:10)
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (internal/modules/cjs/loader.js:950:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:790:12)
+    at Module.require (internal/modules/cjs/loader.js:974:19)
+2023-03-22 18:39:46 error: uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/services/users.service.ts[0m:[93m117[0m:[93m14[0m - [91merror[0m[90m TS1003: [0mIdentifier expected.
+
+[7m117[0m       stripe.
+[7m   [0m [91m             [0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/services/users.service.ts[0m:[93m117[0m:[93m14[0m - [91merror[0m[90m TS1003: [0mIdentifier expected.
+
+[7m117[0m       stripe.
+[7m   [0m [91m             [0m
+
+    at createTSError (C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\node_modules\ts-node\src\index.ts:863:19)
+    at C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\node_modules\ts-node\src\index.ts:1379:34
+    at Object.compile (C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\node_modules\ts-node\src\index.ts:1458:13)
+    at Module.m._compile (C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\node_modules\ts-node\src\index.ts:1617:30)
+    at Module._extensions..js (internal/modules/cjs/loader.js:1114:10)
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (internal/modules/cjs/loader.js:950:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:790:12)
+    at Module.require (internal/modules/cjs/loader.js:974:19)
+2023-03-22 18:39:49 error: uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/services/users.service.ts[0m:[93m117[0m:[93m20[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m117[0m       const  stripe.
+[7m   [0m [91m                   ~[0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/services/users.service.ts[0m:[93m117[0m:[93m20[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m117[0m       const  stripe.
+[7m   [0m [91m                   ~[0m
+
+    at createTSError (C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\node_modules\ts-node\src\index.ts:863:19)
+    at C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\node_modules\ts-node\src\index.ts:1379:34
+    at Object.compile (C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\node_modules\ts-node\src\index.ts:1458:13)
+    at Module.m._compile (C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\node_modules\ts-node\src\index.ts:1617:30)
+    at Module._extensions..js (internal/modules/cjs/loader.js:1114:10)
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (internal/modules/cjs/loader.js:950:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:790:12)
+    at Module.require (internal/modules/cjs/loader.js:974:19)
+2023-03-22 18:39:54 error: uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/services/users.service.ts[0m:[93m117[0m:[93m20[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m117[0m       const  stripe.
+[7m   [0m [91m                   ~[0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/services/users.service.ts[0m:[93m117[0m:[93m20[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m117[0m       const  stripe.
+[7m   [0m [91m                   ~[0m
+
+    at createTSError (C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\node_modules\ts-node\src\index.ts:863:19)
+    at C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\node_modules\ts-node\src\index.ts:1379:34
+    at Object.compile (C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\node_modules\ts-node\src\index.ts:1458:13)
+    at Module.m._compile (C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\node_modules\ts-node\src\index.ts:1617:30)
+    at Module._extensions..js (internal/modules/cjs/loader.js:1114:10)
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (internal/modules/cjs/loader.js:950:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:790:12)
+    at Module.require (internal/modules/cjs/loader.js:974:19)
+2023-03-22 18:39:57 error: uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/services/users.service.ts[0m:[93m117[0m:[93m24[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m117[0m       const boughtpost stripe.
+[7m   [0m [91m                       ~~~~~~[0m
+[96msrc/services/users.service.ts[0m:[93m117[0m:[93m30[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m117[0m       const boughtpost stripe.
+[7m   [0m [91m                             ~[0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/services/users.service.ts[0m:[93m117[0m:[93m24[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m117[0m       const boughtpost stripe.
+[7m   [0m [91m                       ~~~~~~[0m
+[96msrc/services/users.service.ts[0m:[93m117[0m:[93m30[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m117[0m       const boughtpost stripe.
+[7m   [0m [91m                             ~[0m
+
+    at createTSError (C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\node_modules\ts-node\src\index.ts:863:19)
+    at C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\node_modules\ts-node\src\index.ts:1379:34
+    at Object.compile (C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\node_modules\ts-node\src\index.ts:1458:13)
+    at Module.m._compile (C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\node_modules\ts-node\src\index.ts:1617:30)
+    at Module._extensions..js (internal/modules/cjs/loader.js:1114:10)
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (internal/modules/cjs/loader.js:950:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:790:12)
+    at Module.require (internal/modules/cjs/loader.js:974:19)
+2023-03-22 18:40:00 error: uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/services/users.service.ts[0m:[93m117[0m:[93m24[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m117[0m       const boughtPost stripe.
+[7m   [0m [91m                       ~~~~~~[0m
+[96msrc/services/users.service.ts[0m:[93m117[0m:[93m30[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m117[0m       const boughtPost stripe.
+[7m   [0m [91m                             ~[0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/services/users.service.ts[0m:[93m117[0m:[93m24[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m117[0m       const boughtPost stripe.
+[7m   [0m [91m                       ~~~~~~[0m
+[96msrc/services/users.service.ts[0m:[93m117[0m:[93m30[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m117[0m       const boughtPost stripe.
+[7m   [0m [91m                             ~[0m
+
+    at createTSError (C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\node_modules\ts-node\src\index.ts:863:19)
+    at C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\node_modules\ts-node\src\index.ts:1379:34
+    at Object.compile (C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\node_modules\ts-node\src\index.ts:1458:13)
+    at Module.m._compile (C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\node_modules\ts-node\src\index.ts:1617:30)
+    at Module._extensions..js (internal/modules/cjs/loader.js:1114:10)
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (internal/modules/cjs/loader.js:950:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:790:12)
+    at Module.require (internal/modules/cjs/loader.js:974:19)
+2023-03-22 18:40:06 error: uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/services/users.service.ts[0m:[93m117[0m:[93m34[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m117[0m       const boughtPostFromStripe stripe.
+[7m   [0m [91m                                 ~~~~~~[0m
+[96msrc/services/users.service.ts[0m:[93m117[0m:[93m40[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m117[0m       const boughtPostFromStripe stripe.
+[7m   [0m [91m                                       ~[0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/services/users.service.ts[0m:[93m117[0m:[93m34[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m117[0m       const boughtPostFromStripe stripe.
+[7m   [0m [91m                                 ~~~~~~[0m
+[96msrc/services/users.service.ts[0m:[93m117[0m:[93m40[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m117[0m       const boughtPostFromStripe stripe.
+[7m   [0m [91m                                       ~[0m
+
+    at createTSError (C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\node_modules\ts-node\src\index.ts:863:19)
+    at C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\node_modules\ts-node\src\index.ts:1379:34
+    at Object.compile (C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\node_modules\ts-node\src\index.ts:1458:13)
+    at Module.m._compile (C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\node_modules\ts-node\src\index.ts:1617:30)
+    at Module._extensions..js (internal/modules/cjs/loader.js:1114:10)
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (internal/modules/cjs/loader.js:950:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:790:12)
+    at Module.require (internal/modules/cjs/loader.js:974:19)
+2023-03-22 18:40:08 error: uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/services/users.service.ts[0m:[93m117[0m:[93m43[0m - [91merror[0m[90m TS1003: [0mIdentifier expected.
+
+[7m117[0m       const boughtPostFromStripe = stripe.
+[7m   [0m [91m                                          [0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/services/users.service.ts[0m:[93m117[0m:[93m43[0m - [91merror[0m[90m TS1003: [0mIdentifier expected.
+
+[7m117[0m       const boughtPostFromStripe = stripe.
+[7m   [0m [91m                                          [0m
+
+    at createTSError (C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\node_modules\ts-node\src\index.ts:863:19)
+    at C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\node_modules\ts-node\src\index.ts:1379:34
+    at Object.compile (C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\node_modules\ts-node\src\index.ts:1458:13)
+    at Module.m._compile (C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\node_modules\ts-node\src\index.ts:1617:30)
+    at Module._extensions..js (internal/modules/cjs/loader.js:1114:10)
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (internal/modules/cjs/loader.js:950:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:790:12)
+    at Module.require (internal/modules/cjs/loader.js:974:19)
+2023-03-22 18:40:13 error: uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/services/users.service.ts[0m:[93m117[0m:[93m49[0m - [91merror[0m[90m TS1003: [0mIdentifier expected.
+
+[7m117[0m       const boughtPostFromStripe = await stripe.
+[7m   [0m [91m                                                [0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/services/users.service.ts[0m:[93m117[0m:[93m49[0m - [91merror[0m[90m TS1003: [0mIdentifier expected.
+
+[7m117[0m       const boughtPostFromStripe = await stripe.
+[7m   [0m [91m                                                [0m
+
+    at createTSError (C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\node_modules\ts-node\src\index.ts:863:19)
+    at C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\node_modules\ts-node\src\index.ts:1379:34
+    at Object.compile (C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\node_modules\ts-node\src\index.ts:1458:13)
+    at Module.m._compile (C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\node_modules\ts-node\src\index.ts:1617:30)
+    at Module._extensions..js (internal/modules/cjs/loader.js:1114:10)
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (internal/modules/cjs/loader.js:950:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:790:12)
+    at Module.require (internal/modules/cjs/loader.js:974:19)
+2023-03-22 18:40:18 error: uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/services/users.service.ts[0m:[93m117[0m:[93m49[0m - [91merror[0m[90m TS1003: [0mIdentifier expected.
+
+[7m117[0m       const boughtPostFromStripe = await stripe.
+[7m   [0m [91m                                                [0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/services/users.service.ts[0m:[93m117[0m:[93m49[0m - [91merror[0m[90m TS1003: [0mIdentifier expected.
+
+[7m117[0m       const boughtPostFromStripe = await stripe.
+[7m   [0m [91m                                                [0m
+
+    at createTSError (C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\node_modules\ts-node\src\index.ts:863:19)
+    at C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\node_modules\ts-node\src\index.ts:1379:34
+    at Object.compile (C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\node_modules\ts-node\src\index.ts:1458:13)
+    at Module.m._compile (C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\node_modules\ts-node\src\index.ts:1617:30)
+    at Module._extensions..js (internal/modules/cjs/loader.js:1114:10)
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (internal/modules/cjs/loader.js:950:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:790:12)
+    at Module.require (internal/modules/cjs/loader.js:974:19)
+2023-03-22 18:40:21 error: uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/services/users.service.ts[0m:[93m117[0m:[93m49[0m - [91merror[0m[90m TS1003: [0mIdentifier expected.
+
+[7m117[0m       const boughtPostFromStripe = await stripe.
+[7m   [0m [91m                                                [0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/services/users.service.ts[0m:[93m117[0m:[93m49[0m - [91merror[0m[90m TS1003: [0mIdentifier expected.
+
+[7m117[0m       const boughtPostFromStripe = await stripe.
+[7m   [0m [91m                                                [0m
+
+    at createTSError (C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\node_modules\ts-node\src\index.ts:863:19)
+    at C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\node_modules\ts-node\src\index.ts:1379:34
+    at Object.compile (C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\node_modules\ts-node\src\index.ts:1458:13)
+    at Module.m._compile (C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\node_modules\ts-node\src\index.ts:1617:30)
+    at Module._extensions..js (internal/modules/cjs/loader.js:1114:10)
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (internal/modules/cjs/loader.js:950:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:790:12)
+    at Module.require (internal/modules/cjs/loader.js:974:19)
+2023-03-22 18:40:28 error: uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/services/users.service.ts[0m:[93m117[0m:[93m49[0m - [91merror[0m[90m TS1003: [0mIdentifier expected.
+
+[7m117[0m       const boughtPostFromStripe = await stripe.
+[7m   [0m [91m                                                [0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/services/users.service.ts[0m:[93m117[0m:[93m49[0m - [91merror[0m[90m TS1003: [0mIdentifier expected.
+
+[7m117[0m       const boughtPostFromStripe = await stripe.
+[7m   [0m [91m                                                [0m
+
+    at createTSError (C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\node_modules\ts-node\src\index.ts:863:19)
+    at C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\node_modules\ts-node\src\index.ts:1379:34
+    at Object.compile (C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\node_modules\ts-node\src\index.ts:1458:13)
+    at Module.m._compile (C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\node_modules\ts-node\src\index.ts:1617:30)
+    at Module._extensions..js (internal/modules/cjs/loader.js:1114:10)
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (internal/modules/cjs/loader.js:950:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:790:12)
+    at Module.require (internal/modules/cjs/loader.js:974:19)
+2023-03-22 18:40:34 error: uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/services/users.service.ts[0m:[93m117[0m:[93m58[0m - [91merror[0m[90m TS1003: [0mIdentifier expected.
+
+[7m117[0m       const boughtPostFromStripe = await stripe.products.
+[7m   [0m [91m                                                         [0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/services/users.service.ts[0m:[93m117[0m:[93m58[0m - [91merror[0m[90m TS1003: [0mIdentifier expected.
+
+[7m117[0m       const boughtPostFromStripe = await stripe.products.
+[7m   [0m [91m                                                         [0m
+
+    at createTSError (C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\node_modules\ts-node\src\index.ts:863:19)
+    at C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\node_modules\ts-node\src\index.ts:1379:34
+    at Object.compile (C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\node_modules\ts-node\src\index.ts:1458:13)
+    at Module.m._compile (C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\node_modules\ts-node\src\index.ts:1617:30)
+    at Module._extensions..js (internal/modules/cjs/loader.js:1114:10)
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (internal/modules/cjs/loader.js:950:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:790:12)
+    at Module.require (internal/modules/cjs/loader.js:974:19)
+2023-03-22 18:42:00 error: uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/services/users.service.ts[0m:[93m117[0m:[93m49[0m - [91merror[0m[90m TS1003: [0mIdentifier expected.
+
+[7m117[0m       const boughtPostFromStripe = await stripe.
+[7m   [0m [91m                                                [0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/services/users.service.ts[0m:[93m117[0m:[93m49[0m - [91merror[0m[90m TS1003: [0mIdentifier expected.
+
+[7m117[0m       const boughtPostFromStripe = await stripe.
+[7m   [0m [91m                                                [0m
+
+    at createTSError (C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\node_modules\ts-node\src\index.ts:863:19)
+    at C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\node_modules\ts-node\src\index.ts:1379:34
+    at Object.compile (C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\node_modules\ts-node\src\index.ts:1458:13)
+    at Module.m._compile (C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\node_modules\ts-node\src\index.ts:1617:30)
+    at Module._extensions..js (internal/modules/cjs/loader.js:1114:10)
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (internal/modules/cjs/loader.js:950:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:790:12)
+    at Module.require (internal/modules/cjs/loader.js:974:19)
+2023-03-22 18:42:07 error: uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/services/users.service.ts[0m:[93m117[0m:[93m49[0m - [91merror[0m[90m TS1003: [0mIdentifier expected.
+
+[7m117[0m       const boughtPostFromStripe = await stripe.
+[7m   [0m [91m                                                [0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/services/users.service.ts[0m:[93m117[0m:[93m49[0m - [91merror[0m[90m TS1003: [0mIdentifier expected.
+
+[7m117[0m       const boughtPostFromStripe = await stripe.
+[7m   [0m [91m                                                [0m
+
+    at createTSError (C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\node_modules\ts-node\src\index.ts:863:19)
+    at C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\node_modules\ts-node\src\index.ts:1379:34
+    at Object.compile (C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\node_modules\ts-node\src\index.ts:1458:13)
+    at Module.m._compile (C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\node_modules\ts-node\src\index.ts:1617:30)
+    at Module._extensions..js (internal/modules/cjs/loader.js:1114:10)
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (internal/modules/cjs/loader.js:950:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:790:12)
+    at Module.require (internal/modules/cjs/loader.js:974:19)
+2023-03-22 18:44:06 error: uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/services/users.service.ts[0m:[93m117[0m:[93m49[0m - [91merror[0m[90m TS1003: [0mIdentifier expected.
+
+[7m117[0m       const boughtPostFromStripe = await stripe.
+[7m   [0m [91m                                                [0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/services/users.service.ts[0m:[93m117[0m:[93m49[0m - [91merror[0m[90m TS1003: [0mIdentifier expected.
+
+[7m117[0m       const boughtPostFromStripe = await stripe.
+[7m   [0m [91m                                                [0m
+
+    at createTSError (C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\node_modules\ts-node\src\index.ts:863:19)
+    at C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\node_modules\ts-node\src\index.ts:1379:34
+    at Object.compile (C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\node_modules\ts-node\src\index.ts:1458:13)
+    at Module.m._compile (C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\node_modules\ts-node\src\index.ts:1617:30)
+    at Module._extensions..js (internal/modules/cjs/loader.js:1114:10)
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (internal/modules/cjs/loader.js:950:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:790:12)
+    at Module.require (internal/modules/cjs/loader.js:974:19)
+2023-03-22 18:44:12 error: uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/services/users.service.ts[0m:[93m117[0m:[93m49[0m - [91merror[0m[90m TS1003: [0mIdentifier expected.
+
+[7m117[0m       const boughtPostFromStripe = await stripe.
+[7m   [0m [91m                                                [0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/services/users.service.ts[0m:[93m117[0m:[93m49[0m - [91merror[0m[90m TS1003: [0mIdentifier expected.
+
+[7m117[0m       const boughtPostFromStripe = await stripe.
+[7m   [0m [91m                                                [0m
+
+    at createTSError (C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\node_modules\ts-node\src\index.ts:863:19)
+    at C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\node_modules\ts-node\src\index.ts:1379:34
+    at Object.compile (C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\node_modules\ts-node\src\index.ts:1458:13)
+    at Module.m._compile (C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\node_modules\ts-node\src\index.ts:1617:30)
+    at Module._extensions..js (internal/modules/cjs/loader.js:1114:10)
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (internal/modules/cjs/loader.js:950:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:790:12)
+    at Module.require (internal/modules/cjs/loader.js:974:19)
+2023-03-22 18:44:16 error: uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/services/users.service.ts[0m:[93m117[0m:[93m49[0m - [91merror[0m[90m TS1003: [0mIdentifier expected.
+
+[7m117[0m       const boughtPostFromStripe = await stripe.
+[7m   [0m [91m                                                [0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/services/users.service.ts[0m:[93m117[0m:[93m49[0m - [91merror[0m[90m TS1003: [0mIdentifier expected.
+
+[7m117[0m       const boughtPostFromStripe = await stripe.
+[7m   [0m [91m                                                [0m
+
+    at createTSError (C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\node_modules\ts-node\src\index.ts:863:19)
+    at C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\node_modules\ts-node\src\index.ts:1379:34
+    at Object.compile (C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\node_modules\ts-node\src\index.ts:1458:13)
+    at Module.m._compile (C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\node_modules\ts-node\src\index.ts:1617:30)
+    at Module._extensions..js (internal/modules/cjs/loader.js:1114:10)
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (internal/modules/cjs/loader.js:950:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:790:12)
+    at Module.require (internal/modules/cjs/loader.js:974:19)
+2023-03-22 18:59:00 error: uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/services/users.service.ts[0m:[93m117[0m:[93m49[0m - [91merror[0m[90m TS1003: [0mIdentifier expected.
+
+[7m117[0m       const boughtPostFromStripe = await stripe.
+[7m   [0m [91m                                                [0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/services/users.service.ts[0m:[93m117[0m:[93m49[0m - [91merror[0m[90m TS1003: [0mIdentifier expected.
+
+[7m117[0m       const boughtPostFromStripe = await stripe.
+[7m   [0m [91m                                                [0m
+
+    at createTSError (C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\node_modules\ts-node\src\index.ts:863:19)
+    at C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\node_modules\ts-node\src\index.ts:1379:34
+    at Object.compile (C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\node_modules\ts-node\src\index.ts:1458:13)
+    at Module.m._compile (C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\node_modules\ts-node\src\index.ts:1617:30)
+    at Module._extensions..js (internal/modules/cjs/loader.js:1114:10)
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (internal/modules/cjs/loader.js:950:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:790:12)
+    at Module.require (internal/modules/cjs/loader.js:974:19)
+2023-03-22 19:23:42 error: uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/services/users.service.ts[0m:[93m117[0m:[93m49[0m - [91merror[0m[90m TS1003: [0mIdentifier expected.
+
+[7m117[0m       const boughtPostFromStripe = await stripe.
+[7m   [0m [91m                                                [0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/services/users.service.ts[0m:[93m117[0m:[93m49[0m - [91merror[0m[90m TS1003: [0mIdentifier expected.
+
+[7m117[0m       const boughtPostFromStripe = await stripe.
+[7m   [0m [91m                                                [0m
+
+    at createTSError (C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\node_modules\ts-node\src\index.ts:863:19)
+    at C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\node_modules\ts-node\src\index.ts:1379:34
+    at Object.compile (C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\node_modules\ts-node\src\index.ts:1458:13)
+    at Module.m._compile (C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\node_modules\ts-node\src\index.ts:1617:30)
+    at Module._extensions..js (internal/modules/cjs/loader.js:1114:10)
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (internal/modules/cjs/loader.js:950:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:790:12)
+    at Module.require (internal/modules/cjs/loader.js:974:19)
+2023-03-22 19:24:37 error: uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/services/users.service.ts[0m:[93m117[0m:[93m49[0m - [91merror[0m[90m TS1003: [0mIdentifier expected.
+
+[7m117[0m       const boughtPostFromStripe = await stripe.
+[7m   [0m [91m                                                [0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/services/users.service.ts[0m:[93m117[0m:[93m49[0m - [91merror[0m[90m TS1003: [0mIdentifier expected.
+
+[7m117[0m       const boughtPostFromStripe = await stripe.
+[7m   [0m [91m                                                [0m
+
+    at createTSError (C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\node_modules\ts-node\src\index.ts:863:19)
+    at C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\node_modules\ts-node\src\index.ts:1379:34
+    at Object.compile (C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\node_modules\ts-node\src\index.ts:1458:13)
+    at Module.m._compile (C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\node_modules\ts-node\src\index.ts:1617:30)
+    at Module._extensions..js (internal/modules/cjs/loader.js:1114:10)
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (internal/modules/cjs/loader.js:950:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:790:12)
+    at Module.require (internal/modules/cjs/loader.js:974:19)
+2023-03-22 19:32:47 error: uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/services/users.service.ts[0m:[93m120[0m:[93m7[0m - [91merror[0m[90m TS1109: [0mExpression expected.
+
+[7m120[0m       })
+[7m   [0m [91m      ~[0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/services/users.service.ts[0m:[93m120[0m:[93m7[0m - [91merror[0m[90m TS1109: [0mExpression expected.
+
+[7m120[0m       })
+[7m   [0m [91m      ~[0m
+
+    at createTSError (C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\node_modules\ts-node\src\index.ts:863:19)
+    at C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\node_modules\ts-node\src\index.ts:1379:34
+    at Object.compile (C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\node_modules\ts-node\src\index.ts:1458:13)
+    at Module.m._compile (C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\node_modules\ts-node\src\index.ts:1617:30)
+    at Module._extensions..js (internal/modules/cjs/loader.js:1114:10)
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (internal/modules/cjs/loader.js:950:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:790:12)
+    at Module.require (internal/modules/cjs/loader.js:974:19)
+2023-03-22 19:33:57 error: uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/services/users.service.ts[0m:[93m120[0m:[93m7[0m - [91merror[0m[90m TS1109: [0mExpression expected.
+
+[7m120[0m       })
+[7m   [0m [91m      ~[0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/services/users.service.ts[0m:[93m120[0m:[93m7[0m - [91merror[0m[90m TS1109: [0mExpression expected.
+
+[7m120[0m       })
+[7m   [0m [91m      ~[0m
+
+    at createTSError (C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\node_modules\ts-node\src\index.ts:863:19)
+    at C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\node_modules\ts-node\src\index.ts:1379:34
+    at Object.compile (C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\node_modules\ts-node\src\index.ts:1458:13)
+    at Module.m._compile (C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\node_modules\ts-node\src\index.ts:1617:30)
+    at Module._extensions..js (internal/modules/cjs/loader.js:1114:10)
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\Devops3\Documents\Projects\feetflight-main\feetflight-main\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (internal/modules/cjs/loader.js:950:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:790:12)
+    at Module.require (internal/modules/cjs/loader.js:974:19)
