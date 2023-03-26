@@ -101,22 +101,7 @@ class UserService {
   }
 
   public async buyPosts(userId, saleData) {
-    const checkForSaleSession = initializeDbConnection().session();
     try {
-      const relationshipAlreadyExists = await saleData.data.posts.map(post => {
-        return checkForSaleSession
-          .executeRead(tx =>
-            tx.run('match (u:user {id: $userId})-[bought:BOUGHT_A]->(p:post {id: $postId}) return bought', {
-              userId: userId,
-              postId: post.id,
-            }),
-          )
-          .then(record => {
-            if (record.records.map(bought => bought.get('bought')).length > 0)
-              return { message: `this post with the id ${post.id} has been already boght`, id: post.id };
-          });
-      });
-
       const pricesPromises = await saleData.data.posts.map(post => {
         this.buyPost(post.id, userId);
         return this.stripe.prices
@@ -128,9 +113,7 @@ class UserService {
           });
       });
 
-      let prices = await Promise.all(pricesPromises);
-
-      console.log(prices);
+      const prices = await Promise.all(pricesPromises);
 
       const session = await this.stripe.checkout.sessions.create({
         success_url: 'https://example.com/success',
@@ -138,19 +121,28 @@ class UserService {
         mode: 'payment',
       });
 
-      return { message: 'posts has been successfully bought' };
+      console.log(session);
+
+      return { message: 'posts has been successfully bought', session };
     } catch (error) {
       console.log(error);
-    } finally {
-      checkForSaleSession.close();
     }
   }
 
   public buyPost = async (postId, userId) => {
     const buyPostSession = initializeDbConnection().session();
+    const checkForExistingRelationship = initializeDbConnection().session();
     try {
-      const boughtPost = await buyPostSession.executeWrite(tx =>
-        tx.run('match (u:user {id: $userId}), (p:post {id: $postId}) create (u)-[bought:BOUGHT_A]->(p) return p', {
+      const saleAlreadyExists = await checkForExistingRelationship.executeWrite(tx =>
+        tx.run('match (u:user {id: $userId})-[bought:BOUGHT_A]->(p:post {id: $postId}) return bought', {
+          userId: userId,
+          postId: postId,
+        }),
+      );
+
+      if (saleAlreadyExists.records.map(record => record.get('bought')).length > 0) return;
+      await buyPostSession.executeWrite(tx =>
+        tx.run('match (u:user {id: $userId}), (p:post {id: $postId}) create (u)-[bought:BOUGHT_A]->(p)', {
           userId: userId,
           postId: postId,
         }),
