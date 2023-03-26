@@ -1,0 +1,59 @@
+2023-03-26 15:46:22 error: uncaughtException: Invalid input ')': expected
+  "("
+  ","
+  "CALL"
+  "CREATE"
+  "DELETE"
+  "DETACH"
+  "FOREACH"
+  "LOAD"
+  "MATCH"
+  "MERGE"
+  "OPTIONAL"
+  "REMOVE"
+  "RETURN"
+  "SET"
+  "UNION"
+  "UNWIND"
+  "USE"
+  "USING"
+  "WHERE"
+  "WITH"
+  <EOF> (line 1, column 71 (offset: 70))
+"match (u:user {id: $userId})-[bought:BOUGHT_A]->(p:post {id: $postId})) return bought"
+                                                                       ^
+Neo4jError: Invalid input ')': expected
+  "("
+  ","
+  "CALL"
+  "CREATE"
+  "DELETE"
+  "DETACH"
+  "FOREACH"
+  "LOAD"
+  "MATCH"
+  "MERGE"
+  "OPTIONAL"
+  "REMOVE"
+  "RETURN"
+  "SET"
+  "UNION"
+  "UNWIND"
+  "USE"
+  "USING"
+  "WHERE"
+  "WITH"
+  <EOF> (line 1, column 71 (offset: 70))
+"match (u:user {id: $userId})-[bought:BOUGHT_A]->(p:post {id: $postId})) return bought"
+                                                                       ^
+
+    at captureStacktrace (C:\Users\diguo\Documents\feetflight\node_modules\neo4j-driver-core\lib\result.js:611:17)
+    at new Result (C:\Users\diguo\Documents\feetflight\node_modules\neo4j-driver-core\lib\result.js:105:23)
+    at newCompletedResult (C:\Users\diguo\Documents\feetflight\node_modules\neo4j-driver-core\lib\transaction.js:502:12)
+    at Object.run (C:\Users\diguo\Documents\feetflight\node_modules\neo4j-driver-core\lib\transaction.js:334:20)
+    at TransactionPromise.Transaction.run (C:\Users\diguo\Documents\feetflight\node_modules\neo4j-driver-core\lib\transaction.js:175:34)
+    at ManagedTransaction.run (C:\Users\diguo\Documents\feetflight\node_modules\neo4j-driver-core\lib\transaction-managed.js:56:21)
+    at C:\Users\diguo\Documents\feetflight\src\services\users.service.ts:109:16
+    at TransactionExecutor._safeExecuteTransactionWork (C:\Users\diguo\Documents\feetflight\node_modules\neo4j-driver-core\lib\internal\transaction-executor.js:141:26)
+    at TransactionExecutor.<anonymous> (C:\Users\diguo\Documents\feetflight\node_modules\neo4j-driver-core\lib\internal\transaction-executor.js:128:46)
+    at step (C:\Users\diguo\Documents\feetflight\node_modules\neo4j-driver-core\lib\internal\transaction-executor.js:52:23)

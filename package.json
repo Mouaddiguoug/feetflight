@@ -17,7 +17,7 @@
   },
   "dependencies": {
     "aws-sdk": "^2.1329.0",
-    "bcrypt": "^5.0.1",
+    "bcrypt": "^5.1.0",
     "class-transformer": "^0.5.1",
     "class-validator": "^0.13.2",
     "compression": "^1.7.4",

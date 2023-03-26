@@ -10,13 +10,14 @@ import { RolesEnum } from '../enums/RolesEnums';
 import uid from 'uid';
 import moment from 'moment';
 import { transporter } from '@/app';
+import Stripe from 'stripe';
 
 class AuthService {
   public users = userModel;
 
   public async signup(userData) {
     if (isEmpty(userData)) throw new HttpException(400, 'userData is empty');
-
+    const stripe = new Stripe(process.env.STRIPE_TEST_KEY, { apiVersion: '2022-11-15' });
     const signupSession = initializeDbConnection().session({ database: 'neo4j' });
     const createWalletSession = initializeDbConnection().session({ database: 'neo4j' });
     const email = userData.data.email;
@@ -27,11 +28,11 @@ class AuthService {
       if (!userData.data.role || !userData.data.name || !userData.data.userName || !userData.data.password) return { message: 'mlissing data' };
       switch (userData.data.role) {
         case RolesEnum.SELLER:
-          if (!userData.data.subscriptionPrice || !userData.data.identityPhoto) return { message: 'data missing' };
+          if (!userData.data.subscriptionPrice || !userData.data.identityPhoto || !userData.data.identityPhoto || !userData.data.city) return { message: 'data missing' };
 
           const createUserSeller = await signupSession.executeWrite(tx =>
             tx.run(
-              'create (u:user {id: $userId, name: $name, email: $email, userName: $userName, password: $password, createdAt: $createdAt, avatar: $avatar, confirmed: false, desactivated: false})-[r: IS_A]->(s:seller {id: $sellerId, verified: $verified, identityPhoto: $identityPhoto, subscriptionPrice: $subscriptionPrice}) return u, s',
+              'create (u:user {id: $userId, name: $name, email: $email, userName: $userName, password: $password, createdAt: $createdAt, avatar: $avatar, confirmed: false, desactivated: false, city: $city, country: $country})-[r: IS_A]->(s:seller {id: $sellerId, verified: $verified, identityPhoto: $identityPhoto, subscriptionPrice: $subscriptionPrice}) return u, s',
               {
                 userId: uid.uid(40),
                 buyerId: uid.uid(40),
@@ -45,6 +46,8 @@ class AuthService {
                 identityPhoto: userData.data.identityPhoto,
                 verified: false,
                 subscriptionPrice: userData.data.subscriptionPrice,
+                city: userData.data.city,
+                country: userData.data.country,
               },
             ),
           );
@@ -56,8 +59,18 @@ class AuthService {
             }),
           );
 
+          await stripe.customers.create({
+            name: userData.data.name,
+            email: email,
+            address: {
+              city: userData.data.city,
+              country: userData.data.country,
+            },
+            balance: 0,
+          });
+
           const sellerToken = this.createToken(process.env.EMAIL_SECRET, createUserSeller.records.map(record => record.get('u').properties.id)[0]);
-  
+
           this.sendVerificationEmail(email, userData.data.userName, sellerToken.token, 'selling');
           return { data: createUserSeller.records.map(record => record.get('u').properties) };
           break;
@@ -77,6 +90,13 @@ class AuthService {
               },
             ),
           );
+
+          await stripe.customers.create({
+            name: userData.data.name,
+            email: email,
+            balance: 0,
+          });
+
           const buyerToken = this.createToken(process.env.EMAIL_SECRET, createdUserBuyer.records.map(record => record.get('u').properties.id)[0]);
           this.sendVerificationEmail(email, userData.data.userName, buyerToken.token, 'finding');
 
@@ -121,7 +141,7 @@ class AuthService {
       const changedPassword = await changePasswordSession.executeRead(tx =>
         tx.run('match (u {id: $userId}) set u.password = $newPassword return w', {
           userId: userId,
-          newPassword: hashedPassword
+          newPassword: hashedPassword,
         }),
       );
 
@@ -132,7 +152,6 @@ class AuthService {
       changePasswordSession.close();
     }
   }
-
 
   public async login(userData) {
     if (isEmpty(userData)) throw new HttpException(400, 'userData is empty');

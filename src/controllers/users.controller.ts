@@ -52,9 +52,10 @@ class UsersController {
 
   public buyPost = async (req: Request, res: Response, next: NextFunction): Promise<void> => {
     try {
-      const postId = Number(req.params.id);
-      const userData = req.body;
-      const boughtPost = await this.userService.buyPost(postId, userData);
+      const userId = String(req.params.id);
+      const saleData = req.body;
+
+      const boughtPost = await this.userService.buyPosts(userId, saleData);
 
       res.status(200).json({ data: boughtPost });
     } catch (error) {

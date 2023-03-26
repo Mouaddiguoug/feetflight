@@ -9,12 +9,8 @@ import { verify } from 'jsonwebtoken';
 import Stripe from 'stripe';
 
 class UserService {
-  public users = userModel;
-
-  public async findAllUser(): Promise<User[]> {
-    const users: User[] = this.users;
-    return users;
-  }
+  private stripe = new Stripe(process.env.STRIPE_TEST_KEY, { apiVersion: '2022-11-15' });
+  public prices = [];
 
   public async findUserById(userId) {
     const getUserSession = initializeDbConnection().session();
@@ -104,26 +100,67 @@ class UserService {
     }
   }
 
-  public async buyPost(postId, userData): Promise<User[]> {
+  public async buyPosts(userId, saleData) {
+    const checkForSaleSession = initializeDbConnection().session();
+    try {
+      const relationshipAlreadyExists = await saleData.data.posts.map(post => {
+        return checkForSaleSession
+          .executeRead(tx =>
+            tx.run('match (u:user {id: $userId})-[bought:BOUGHT_A]->(p:post {id: $postId}) return bought', {
+              userId: userId,
+              postId: post.id,
+            }),
+          )
+          .then(record => {
+            if (record.records.map(bought => bought.get('bought')).length > 0)
+              return { message: `this post with the id ${post.id} has been already boght`, id: post.id };
+          });
+      });
+
+      const pricesPromises = await saleData.data.posts.map(post => {
+        this.buyPost(post.id, userId);
+        return this.stripe.prices
+          .list({
+            product: post.id,
+          })
+          .then(price => {
+            return { price: price.data[0].id, quantity: 1 };
+          });
+      });
+
+      let prices = await Promise.all(pricesPromises);
+
+      console.log(prices);
+
+      const session = await this.stripe.checkout.sessions.create({
+        success_url: 'https://example.com/success',
+        line_items: prices,
+        mode: 'payment',
+      });
+
+      return { message: 'posts has been successfully bought' };
+    } catch (error) {
+      console.log(error);
+    } finally {
+      checkForSaleSession.close();
+    }
+  }
+
+  public buyPost = async (postId, userId) => {
     const buyPostSession = initializeDbConnection().session();
     try {
       const boughtPost = await buyPostSession.executeWrite(tx =>
-        tx.run('match (u:user {id: $userId}), (p:post {id: $postId}) create (u)-[bought:BOUGHT_A]->(p)', {
-          userId: userData.data.id,
+        tx.run('match (u:user {id: $userId}), (p:post {id: $postId}) create (u)-[bought:BOUGHT_A]->(p) return p', {
+          userId: userId,
           postId: postId,
         }),
       );
-      const stripe = new Stripe(process.env.STRIPE_TEST_KEY, { apiVersion: '2022-11-15' });
-      const boughtPostFromStripe = await stripe.checkout.sessions.create({
-        success_url: "http://localhost:3000/signup",
-        line_items: 
-      })
-
-      return boughtPost.records.map(record => record.get('u').properties)[0];
     } catch (error) {
       console.log(error);
+    } finally {
+      buyPostSession.close();
     }
-  }
+  };
 
   public async desactivateUser(userId: number): Promise<User[]> {
     const desactivateUserSession = initializeDbConnection().session();
