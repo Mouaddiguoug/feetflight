@@ -15,6 +15,7 @@ import { logger, stream } from '@utils/logger';
 import nodemailer from 'nodemailer';
 import hbs from 'nodemailer-express-handlebars';
 import path from 'path';
+import Stripe from 'stripe';
 
 export const transporter = nodemailer.createTransport({
   service: process.env.SERVICE,
@@ -34,7 +35,35 @@ class App {
     this.app = express();
     this.env = NODE_ENV || 'development';
     this.port = PORT || 3000;
+    this.app.post('/webhook', express.raw({type: "application/json"}), async (req, res, next): Promise<void> => {
+      try {
+        const stripe = new Stripe(process.env.STRIPE_TEST_KEY, { apiVersion: '2022-11-15' });
+        let signature = req.headers['stripe-signature'];
+        if (!signature) res.status(201).json({ message: 'signature needed' });
+        let event;
+        try {
+          event = stripe.webhooks.constructEvent(req.body, signature, process.env.WEBHOOK_SIGNATURE);
+        } catch (err) {
+          console.log(err.message);
+        }
 
+        switch (event.type) {
+          case 'payment_intent.succeeded':
+            const paymentIntent = event.data.object;
+            console.log(paymentIntent)
+            console.log(`PaymentIntent for ${paymentIntent.amount} was successful!`);
+            break;
+          case 'payment_method.attached':
+            const paymentMethod = event.data.object;
+            console.log(paymentMethod);
+            break;
+          default:
+            console.log(`Unhandled event type ${event.type}.`);
+        }
+      } catch (error) {
+        console.log(error);
+      }
+    });
     this.initializeMiddlewares();
     this.initializeRoutes(routes);
     this.initializeSwagger();
@@ -53,8 +82,6 @@ class App {
   public getServer() {
     return this.app;
   }
-  
-  
 
   private initializeMiddlewares() {
     this.app.use(morgan(LOG_FORMAT, { stream }));
@@ -65,16 +92,15 @@ class App {
     this.app.use(express.json());
     this.app.use(express.urlencoded({ extended: true }));
     this.app.use(cookieParser());
-    console.log(__dirname);
     transporter.use(
       'compile',
       hbs({
         viewEngine: {
           extname: '.handlebars',
-          layoutsDir: path.resolve(__dirname,'../public/views/'),
-          partialsDir: path.resolve(__dirname,'../public/views/'),
+          layoutsDir: path.resolve(__dirname, '../public/views/'),
+          partialsDir: path.resolve(__dirname, '../public/views/'),
         },
-        viewPath: path.resolve(__dirname,'../public/views/'),
+        viewPath: path.resolve(__dirname, '../public/views/'),
         extName: '.handlebars',
       }),
     );
@@ -85,6 +111,7 @@ class App {
       this.app.use('/', route.router);
     });
   }
+
   private initializeSwagger() {
     const options = {
       swaggerDefinition: {

@@ -28,13 +28,24 @@ class AuthService {
       if (!userData.data.role || !userData.data.name || !userData.data.userName || !userData.data.password) return { message: 'mlissing data' };
       switch (userData.data.role) {
         case RolesEnum.SELLER:
-          if (!userData.data.subscriptionPrice || !userData.data.identityPhoto || !userData.data.identityPhoto || !userData.data.city) return { message: 'data missing' };
+          if (!userData.data.subscriptionPrice  || !userData.data.country || !userData.data.identityPhoto || !userData.data.city) return { message: 'data missing' };
+
+          const seller = await stripe.customers.create({
+            name: userData.data.name,
+            email: email,
+            address: {
+              city: userData.data.city,
+              country: userData.data.country,
+            },
+            balance: 0,
+          });
+          
 
           const createUserSeller = await signupSession.executeWrite(tx =>
             tx.run(
               'create (u:user {id: $userId, name: $name, email: $email, userName: $userName, password: $password, createdAt: $createdAt, avatar: $avatar, confirmed: false, desactivated: false, city: $city, country: $country})-[r: IS_A]->(s:seller {id: $sellerId, verified: $verified, identityPhoto: $identityPhoto, subscriptionPrice: $subscriptionPrice}) return u, s',
               {
-                userId: uid.uid(40),
+                userId: seller.id,
                 buyerId: uid.uid(40),
                 createdAt: moment().format('MMMM DD, YYYY'),
                 email: email,
@@ -59,7 +70,13 @@ class AuthService {
             }),
           );
 
-          await stripe.customers.create({
+          const sellerToken = this.createToken(process.env.EMAIL_SECRET, createUserSeller.records.map(record => record.get('u').properties.id)[0]);
+
+          this.sendVerificationEmail(email, userData.data.userName, sellerToken.token, 'selling');
+          return { data: createUserSeller.records.map(record => record.get('u').properties) };
+          break;
+        case RolesEnum.BUYER:
+          const buyer = await stripe.customers.create({
             name: userData.data.name,
             email: email,
             address: {
@@ -69,17 +86,11 @@ class AuthService {
             balance: 0,
           });
 
-          const sellerToken = this.createToken(process.env.EMAIL_SECRET, createUserSeller.records.map(record => record.get('u').properties.id)[0]);
-
-          this.sendVerificationEmail(email, userData.data.userName, sellerToken.token, 'selling');
-          return { data: createUserSeller.records.map(record => record.get('u').properties) };
-          break;
-        case RolesEnum.BUYER:
           const createdUserBuyer = await signupSession.executeWrite(tx =>
             tx.run(
               'create (u:user {id: $userId, name: $name, email: $email, userName: $userName, password: $password, createdAt: $createdAt, avatar: $avatar, confirmed: false})-[r: IS_A]->(b:buyer {id: $buyerId}) return u',
               {
-                userId: uid.uid(40),
+                userId: buyer.id,
                 buyerId: uid.uid(40),
                 createdAt: moment().format('MMMM DD, YYYY'),
                 email: email,
@@ -90,12 +101,6 @@ class AuthService {
               },
             ),
           );
-
-          await stripe.customers.create({
-            name: userData.data.name,
-            email: email,
-            balance: 0,
-          });
 
           const buyerToken = this.createToken(process.env.EMAIL_SECRET, createdUserBuyer.records.map(record => record.get('u').properties.id)[0]);
           this.sendVerificationEmail(email, userData.data.userName, buyerToken.token, 'finding');

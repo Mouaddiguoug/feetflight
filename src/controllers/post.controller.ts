@@ -1,5 +1,6 @@
 import { NextFunction, Request, Response } from 'express';
 import postService from '@/services/post.service';
+import Stripe from 'stripe';
 
 class postController {
   public postService = new postService();
@@ -24,7 +25,7 @@ class postController {
     } catch (error) {
       next(error);
     }
-  };
+  }
 
   public getPostPictures = async (req: Request, res: Response, next: NextFunction): Promise<void> => {
     try {

@@ -119,9 +119,8 @@ class UserService {
         success_url: 'https://example.com/success',
         line_items: prices,
         mode: 'payment',
+        customer: userId
       });
-
-      console.log(session);
 
       return { message: 'posts has been successfully bought', session };
     } catch (error) {
@@ -142,7 +141,7 @@ class UserService {
 
       if (saleAlreadyExists.records.map(record => record.get('bought')).length > 0) return;
       await buyPostSession.executeWrite(tx =>
-        tx.run('match (u:user {id: $userId}), (p:post {id: $postId}) create (u)-[bought:BOUGHT_A]->(p)', {
+        tx.run('match (u:user {id: $userId}), (s:seller)-[:HAS_A]->(p:post {id: $postId}) create (u)-[bought:BOUGHT_A]->(p) return s', {
           userId: userId,
           postId: postId,
         }),

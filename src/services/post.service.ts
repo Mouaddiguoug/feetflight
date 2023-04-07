@@ -6,6 +6,7 @@ import { stripVTControlCharacters } from 'util';
 import Stripe from 'stripe';
 
 class postService {
+  private stripe = new Stripe(process.env.STRIPE_TEST_KEY, { apiVersion: '2022-11-15' });
   public async getPopularPosts(categoryId) {
     const popularPostsSessio = initializeDbConnection().session({ database: 'neo4j' });
     try {
@@ -17,8 +18,6 @@ class postService {
           },
         ),
       );
-
-      console.log(categoryId);
 
       const posts = popularPosts.records.map(record => record.get('p').properties);
 
