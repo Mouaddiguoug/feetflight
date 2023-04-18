@@ -100,7 +100,7 @@ class UserService {
     }
   }
 
-  public async buyPosts(userId, saleData) {
+  public async buyPosts(userId: string, saleData: any) {
     try {
       const pricesPromises = await saleData.data.posts.map(post => {
         this.buyPost(post.id, userId);
@@ -119,7 +119,7 @@ class UserService {
         success_url: 'https://example.com/success',
         line_items: prices,
         mode: 'payment',
-        customer: userId
+        customer: userId,
       });
 
       return { message: 'posts has been successfully bought', session };
@@ -128,7 +128,7 @@ class UserService {
     }
   }
 
-  public buyPost = async (postId, userId) => {
+  public buyPost = async (postId: string, userId: string) => {
     const buyPostSession = initializeDbConnection().session();
     const checkForExistingRelationship = initializeDbConnection().session();
     try {
@@ -150,6 +150,35 @@ class UserService {
       console.log(error);
     } finally {
       buyPostSession.close();
+    }
+  };
+
+  public subscribe = async (userId: string, subscriptionData: any) => {
+    const subscribeSession = initializeDbConnection().session();
+    const checkForSubscriptionSession = initializeDbConnection().session();
+    try {
+      const alreadySubscribed = await checkForSubscriptionSession.executeRead(tx =>
+        tx.run('match (u:user {id: $userId})-[:IS_A]-(b:buyer)-[subscribed:SUBSCRIBED_TO]->(:seller) return subscribed, b', {
+          userId,
+        }),
+      );
+      if (alreadySubscribed.records.map(record => record.get('subscribed')).length > 0) return { message: 'Already subscribed' };
+      await subscribeSession.executeWrite(tx => {
+        tx.run(
+          'match (u:user {id: $userId})-[:IS_A]-(b:buyer), (s:seller {id: $sellerId}) create (b)-[:SUBSCRIBED_TO {subscriptionPlanTitle: $subscriptionPlanTitle, subscriptionPlanPrice: $subscriptionPlanPrice}]->(s) return s',
+          {
+            userId: userId,
+            sellerId: subscriptionData.data.sellerId,
+            subscriptionPlanTitle: subscriptionData.data.subscriptionPlanTitle,
+            subscriptionPlanPrice: subscriptionData.data.subscriptionPlanPrice,
+          },
+        );
+      });
+      return {message: "subscription added successfully"};
+    } catch (error) {
+      console.log(error);
+    } finally {
+      subscribeSession.close();
     }
   };
 

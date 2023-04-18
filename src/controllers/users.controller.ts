@@ -63,6 +63,19 @@ class UsersController {
     }
   };
 
+  public subscribe = async (req: Request, res: Response, next: NextFunction): Promise<void> => {
+    try {
+      const userId = String(req.params.id);
+      const subscriptionData = req.body;
+
+      const boughtPost = await this.userService.subscribe(userId, subscriptionData);
+
+      res.status(200).json({ data: boughtPost });
+    } catch (error) {
+      next(error);
+    }
+  };
+
   public updateUser = async (req: Request, res: Response, next: NextFunction): Promise<void> => {
     try {
       const userId = Number(req.params.id);

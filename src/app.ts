@@ -35,7 +35,7 @@ class App {
     this.app = express();
     this.env = NODE_ENV || 'development';
     this.port = PORT || 3000;
-    this.app.post('/webhook', express.raw({type: "application/json"}), async (req, res, next): Promise<void> => {
+    this.app.post('/webhook', express.raw({ type: 'application/json' }), async (req, res, next): Promise<void> => {
       try {
         const stripe = new Stripe(process.env.STRIPE_TEST_KEY, { apiVersion: '2022-11-15' });
         let signature = req.headers['stripe-signature'];
@@ -47,10 +47,10 @@ class App {
           console.log(err.message);
         }
 
-        switch (event.type) {
+        switch (event.type) {  
           case 'payment_intent.succeeded':
             const paymentIntent = event.data.object;
-            console.log(paymentIntent)
+            console.log(paymentIntent);
             console.log(`PaymentIntent for ${paymentIntent.amount} was successful!`);
             break;
           case 'payment_method.attached':

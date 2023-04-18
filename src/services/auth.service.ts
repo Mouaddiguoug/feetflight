@@ -10,6 +10,7 @@ import { RolesEnum } from '../enums/RolesEnums';
 import uid from 'uid';
 import moment from 'moment';
 import { transporter } from '@/app';
+import aws from "aws-sdk"
 import Stripe from 'stripe';
 
 class AuthService {
@@ -28,7 +29,8 @@ class AuthService {
       if (!userData.data.role || !userData.data.name || !userData.data.userName || !userData.data.password) return { message: 'mlissing data' };
       switch (userData.data.role) {
         case RolesEnum.SELLER:
-          if (!userData.data.subscriptionPrice  || !userData.data.country || !userData.data.identityPhoto || !userData.data.city) return { message: 'data missing' };
+          if (!userData.data.subscriptionPrice || !userData.data.country || !userData.data.identityPhoto || !userData.data.city)
+            return { message: 'data missing' };
 
           const seller = await stripe.customers.create({
             name: userData.data.name,
@@ -39,7 +41,27 @@ class AuthService {
             },
             balance: 0,
           });
-          
+
+          userData.data.identityPhoto.map((picture: any) => {
+            aws.config.update({
+              accessKeyId: process.env.AWS_ACCESS_KEY_ID,
+              secretAccessKey: process.env.AWS_SECRET_ACCESS_KEY,
+              region: 'us-east-2',
+            });
+            const filecontent = Buffer.from(picture.value, 'binary');
+            const s3 = new aws.S3();
+
+            const params = {
+              Bucket: process.env.AWS_BUCKET_NAME,
+              Key: picture.description,
+              Body: filecontent,
+            };
+
+            s3.upload(params, (err, data) => {
+              if (err) return console.log(err);
+              this.createPictures(picture.description, data.Location, createdCollection.records.map(record => record.get('c').properties.id)[0]);
+            });
+          });
 
           const createUserSeller = await signupSession.executeWrite(tx =>
             tx.run(
@@ -203,7 +225,7 @@ class AuthService {
 
       const refreshToken = this.createRefreshToken(token);
 
-      return { refreshToken };
+      return { refreshToken, data: findUser.records.map(record => record.get('u').properties) };
     } catch (error) {
       console.log(error);
     } finally {
