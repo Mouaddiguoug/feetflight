@@ -28,6 +28,19 @@ class sellerController {
       next(error);
     }
   };
+
+  public uploadIdentityCard = async (req: Request, res: Response, next: NextFunction): Promise<void> => {
+    try {
+      const userId = String(req.params.id);
+      const identityCardData = req.body;
+      
+      const identityCard = await this.sellerService.uploadIdentityCard(identityCardData, userId);
+
+      res.status(200).json({ identityCard });
+    } catch (error) {
+      next(error);
+    }
+  };
 }
 
 export default sellerController;

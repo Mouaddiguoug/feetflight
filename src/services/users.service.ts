@@ -113,6 +113,12 @@ class UserService {
           });
       });
 
+      const sellersPromises = await saleData.data.posts.map(post => {
+        return this.getSellersByPostId(post.id);
+      });
+
+      const sellers = (await Promise.all(sellersPromises));
+
       const prices = await Promise.all(pricesPromises);
 
       const session = await this.stripe.checkout.sessions.create({
@@ -127,6 +133,22 @@ class UserService {
       console.log(error);
     }
   }
+
+  public getSellersByPostId = async (postId: string) => {
+    const getSellersByPostIdSession = initializeDbConnection().session();
+    try {
+      const sellers = await getSellersByPostIdSession.executeWrite(tx =>
+        tx.run('match (p:post {id: $postId})-[:HAS_A]-(s:seller) return s', {
+          postId: postId,
+        }),
+      );
+      return sellers.records.map(record => record.get('s').properties);
+    } catch (error) {
+      console.log(error);
+    } finally {
+      getSellersByPostIdSession.close();
+    }
+  };
 
   public buyPost = async (postId: string, userId: string) => {
     const buyPostSession = initializeDbConnection().session();
@@ -174,7 +196,7 @@ class UserService {
           },
         );
       });
-      return {message: "subscription added successfully"};
+      return { message: 'subscription added successfully' };
     } catch (error) {
       console.log(error);
     } finally {

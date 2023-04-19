@@ -136,7 +136,7 @@ class postService {
       });
 
       const stripe = new Stripe(process.env.STRIPE_TEST_KEY, { apiVersion: '2022-11-15' });
-      const product = await stripe.products.create({
+      await stripe.products.create({
         id: createdCollection.records.map(record => record.get('p').properties.id)[0],
         name: postData.data.postTitle,
         description: postData.data.postDescription,

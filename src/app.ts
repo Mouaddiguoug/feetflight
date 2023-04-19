@@ -37,6 +37,7 @@ class App {
     this.port = PORT || 3000;
     this.app.post('/webhook', express.raw({ type: 'application/json' }), async (req, res, next): Promise<void> => {
       try {
+        
         const stripe = new Stripe(process.env.STRIPE_TEST_KEY, { apiVersion: '2022-11-15' });
         let signature = req.headers['stripe-signature'];
         if (!signature) res.status(201).json({ message: 'signature needed' });
