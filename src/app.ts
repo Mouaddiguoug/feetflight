@@ -15,6 +15,8 @@ import { logger, stream } from '@utils/logger';
 import nodemailer from 'nodemailer';
 import hbs from 'nodemailer-express-handlebars';
 import path from 'path';
+import walletService from './services/wallet.service';
+import UserService from './services/users.service';
 import Stripe from 'stripe';
 
 export const transporter = nodemailer.createTransport({
@@ -27,6 +29,8 @@ export const transporter = nodemailer.createTransport({
 });
 
 class App {
+  public walletService = new walletService();
+  public userService = new UserService();
   public app: express.Application;
   public env: string;
   public port: string | number;
@@ -37,7 +41,6 @@ class App {
     this.port = PORT || 3000;
     this.app.post('/webhook', express.raw({ type: 'application/json' }), async (req, res, next): Promise<void> => {
       try {
-        
         const stripe = new Stripe(process.env.STRIPE_TEST_KEY, { apiVersion: '2022-11-15' });
         let signature = req.headers['stripe-signature'];
         if (!signature) res.status(201).json({ message: 'signature needed' });
@@ -48,18 +51,39 @@ class App {
           console.log(err.message);
         }
 
-        switch (event.type) {  
-          case 'payment_intent.succeeded':
-            const paymentIntent = event.data.object;
-            console.log(paymentIntent);
-            console.log(`PaymentIntent for ${paymentIntent.amount} was successful!`);
+        switch (event.type) {
+          case 'checkout.session.completed':
+            event.data.object.metadata.sellersIds.split(',').map(record => {
+              let sellerId = '';
+              let postId = '';
+              let amount = '';
+              record.split('.').map(record => {
+                switch (record.split(':')[0]) {
+                  case 'sellerId':
+                    sellerId = record.split(':')[1];
+                    break;
+                  case 'postId':
+                    postId = record.split(':')[1];
+                    break;
+                  case 'amount':
+                    amount = record.split(':')[1];
+                    break;
+                  default:
+                    break;
+                }
+              });
+
+              this.userService.buyPost(postId, event.data.object.customer);
+              this.walletService.UpdateSellerBalance(sellerId, amount);
+            });
+
             break;
           case 'payment_method.attached':
             const paymentMethod = event.data.object;
             console.log(paymentMethod);
             break;
           default:
-            console.log(`Unhandled event type ${event.type}.`);
+            break;
         }
       } catch (error) {
         console.log(error);

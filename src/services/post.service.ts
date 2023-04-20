@@ -100,7 +100,7 @@ class postService {
         return { message: `missing data` };
       const createdCollection = await createPostSession.executeWrite(tx =>
         tx.run(
-          'match (u:user {id: $userId})-[IS_A]-(s:seller) create (s)-[h: HAS_A]->(p:post {id: $postId, description: $description, title: $title, price: $price, createdAt: $createdAt, views: 0, likes: 0})-[:HAS_A]->(c:collection {id: $collectionId, preview: $preview}) return c, p',
+          'match (u:user {id: $userId})-[IS_A]-(s:seller) create (s)-[h: HAS_A]->(p:post {id: $postId, description: $description, title: $title, price: $price, createdAt: $createdAt, views: 0, likes: 0})-[:HAS_A]->(c:collection {id: $collectionId, preview: $preview}) return c, p, u',
           {
             userId: userId,
             postId: uid(40),
@@ -139,6 +139,9 @@ class postService {
       await stripe.products.create({
         id: createdCollection.records.map(record => record.get('p').properties.id)[0],
         name: postData.data.postTitle,
+        metadata: {
+          "sellerId": createdCollection.records.map(record => record.get('u').properties.id)[0].toString()
+        },
         description: postData.data.postDescription,
         default_price_data: {
           currency: 'EUR',

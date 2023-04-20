@@ -42,27 +42,6 @@ class AuthService {
             balance: 0,
           });
 
-          userData.data.identityPhoto.map((picture: any) => {
-            aws.config.update({
-              accessKeyId: process.env.AWS_ACCESS_KEY_ID,
-              secretAccessKey: process.env.AWS_SECRET_ACCESS_KEY,
-              region: 'us-east-2',
-            });
-            const filecontent = Buffer.from(picture.value, 'binary');
-            const s3 = new aws.S3();
-
-            const params = {
-              Bucket: process.env.AWS_BUCKET_NAME,
-              Key: picture.description,
-              Body: filecontent,
-            };
-
-            s3.upload(params, (err, data) => {
-              if (err) return console.log(err);
-              this.createPictures(picture.description, data.Location, createdCollection.records.map(record => record.get('c').properties.id)[0]);
-            });
-          });
-
           const createUserSeller = await signupSession.executeWrite(tx =>
             tx.run(
               'create (u:user {id: $userId, name: $name, email: $email, userName: $userName, password: $password, createdAt: $createdAt, avatar: $avatar, confirmed: false, desactivated: false, city: $city, country: $country})-[r: IS_A]->(s:seller {id: $sellerId, verified: $verified, identityPhoto: $identityPhoto, subscriptionPrice: $subscriptionPrice}) return u, s',
@@ -86,7 +65,7 @@ class AuthService {
           );
 
           await createWalletSession.executeWrite(tx =>
-            tx.run('match (s:seller {id: $sellerId}) create (s)-[:HAS_A]->(wallet {id: $walletId, amount: 0})', {
+            tx.run('match (s:seller {id: $sellerId}) create (s)-[:HAS_A]->(:wallet {id: $walletId, amount: 0})', {
               sellerId: createUserSeller.records.map(record => record.get('s').properties.id)[0],
               walletId: uid.uid(40),
             }),

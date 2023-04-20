@@ -103,7 +103,6 @@ class UserService {
   public async buyPosts(userId: string, saleData: any) {
     try {
       const pricesPromises = await saleData.data.posts.map(post => {
-        this.buyPost(post.id, userId);
         return this.stripe.prices
           .list({
             product: post.id,
@@ -113,19 +112,34 @@ class UserService {
           });
       });
 
+      const prices = await Promise.all(pricesPromises);
+
       const sellersPromises = await saleData.data.posts.map(post => {
-        return this.getSellersByPostId(post.id);
+        return this.stripe.products.retrieve(post.id).then(product => {
+          return this.stripe.prices
+            .list({
+              product: post.id,
+            })
+            .then(price => {
+              return { sellerId: product.metadata.sellerId, productId: post.id, amount: price.data[0].unit_amount };
+            });
+        });
       });
 
-      const sellers = (await Promise.all(sellersPromises));
-
-      const prices = await Promise.all(pricesPromises);
+      const sellers = await Promise.all(sellersPromises);
 
       const session = await this.stripe.checkout.sessions.create({
         success_url: 'https://example.com/success',
         line_items: prices,
         mode: 'payment',
         customer: userId,
+        metadata: {
+          sellersIds: sellers
+            .map(record => {
+              return `sellerId:${record.sellerId}.postId:${record.productId}.amount:${record.amount * 0.01}`;
+            })
+            .toString(),
+        },
       });
 
       return { message: 'posts has been successfully bought', session };
@@ -152,18 +166,11 @@ class UserService {
 
   public buyPost = async (postId: string, userId: string) => {
     const buyPostSession = initializeDbConnection().session();
-    const checkForExistingRelationship = initializeDbConnection().session();
-    try {
-      const saleAlreadyExists = await checkForExistingRelationship.executeWrite(tx =>
-        tx.run('match (u:user {id: $userId})-[bought:BOUGHT_A]->(p:post {id: $postId}) return bought', {
-          userId: userId,
-          postId: postId,
-        }),
-      );
 
+    try {
       if (saleAlreadyExists.records.map(record => record.get('bought')).length > 0) return;
       await buyPostSession.executeWrite(tx =>
-        tx.run('match (u:user {id: $userId}), (s:seller)-[:HAS_A]->(p:post {id: $postId}) create (u)-[bought:BOUGHT_A]->(p) return s', {
+        tx.run('match (u:user {id: $userId}), (s:seller)-[:HAS_A]->(p:post {id: $postId}) create (u)-[bought:BOUGHT_A]->(p)', {
           userId: userId,
           postId: postId,
         }),
@@ -201,6 +208,23 @@ class UserService {
       console.log(error);
     } finally {
       subscribeSession.close();
+    }
+  };
+
+  public checkForSale = async (userId, postId) => {
+    const checkForExistingRelationship = initializeDbConnection().session();
+    try {
+      const saleAlreadyExists = await checkForExistingRelationship.executeWrite(tx =>
+        tx.run('match (u:user {id: $userId})-[bought:BOUGHT_A]->(p:post {id: $postId}) return bought', {
+          userId: userId,
+          postId: postId,
+        }),
+      );
+      return saleAlreadyExists.records.map(record => record.get('bought')).length > 0 ? true : false;
+    } catch (error) {
+      console.log(error);
+    } finally {
+      checkForExistingRelationship.close();
     }
   };
 
