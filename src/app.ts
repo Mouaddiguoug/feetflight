@@ -52,30 +52,52 @@ class App {
         }
 
         switch (event.type) {
+          case 'charge.succeeded':
+            console.log(event.data.object);
           case 'checkout.session.completed':
-            event.data.object.metadata.sellersIds.split(',').map(record => {
-              let sellerId = '';
-              let postId = '';
-              let amount = '';
-              record.split('.').map(record => {
-                switch (record.split(':')[0]) {
-                  case 'sellerId':
-                    sellerId = record.split(':')[1];
-                    break;
-                  case 'postId':
-                    postId = record.split(':')[1];
-                    break;
-                  case 'amount':
-                    amount = record.split(':')[1];
-                    break;
-                  default:
-                    break;
-                }
-              });
-
-              this.userService.buyPost(postId, event.data.object.customer);
-              this.walletService.UpdateSellerBalance(sellerId, amount);
-            });
+            switch (event.data.object.mode) {
+              case 'payment':
+                event.data.object.metadata.sellersIds.split(',').map(record => {
+                  let sellerId = '';
+                  let postId = '';
+                  let amount = '';
+                  record.split('.').map(record => {
+                    switch (record.split(':')[0]) {
+                      case 'sellerId':
+                        sellerId = record.split(':')[1];
+                        break;
+                      case 'postId':
+                        postId = record.split(':')[1];
+                        break;
+                      case 'amount':
+                        amount = record.split(':')[1];
+                        break;
+                      default:
+                        break;
+                    }
+                  });
+                  this.userService.checkForSale(event.data.object.customer, postId).then(exists => {
+                    if (exists) return;
+                    this.userService.buyPost(postId, event.data.object.customer);
+                    this.walletService.UpdateBalanceForPayment(sellerId, amount);
+                  });
+                });
+                break;
+              case 'subscription':
+                this.userService.createSubscriptioninDb(
+                  event.data.object.customer,
+                  event.data.object.metadata.sellerId,
+                  event.data.object.metadata.subscriptionPlanTitle,
+                  event.data.object.metadata.subscriptionPlanPrice,
+                );
+                this.walletService.UpdateBalanceForSubscription(
+                  event.data.object.metadata.sellerId,
+                  event.data.object.metadata.subscriptionPlanPrice,
+                );
+                break;
+              default:
+                break;
+            }
 
             break;
           case 'payment_method.attached':

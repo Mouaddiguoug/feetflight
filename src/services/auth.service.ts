@@ -10,7 +10,7 @@ import { RolesEnum } from '../enums/RolesEnums';
 import uid from 'uid';
 import moment from 'moment';
 import { transporter } from '@/app';
-import aws from "aws-sdk"
+import aws from 'aws-sdk';
 import Stripe from 'stripe';
 
 class AuthService {

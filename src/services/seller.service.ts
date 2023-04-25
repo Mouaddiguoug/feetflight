@@ -36,16 +36,31 @@ class sellerService {
     }
   }
 
-  public createSubscribePlan = async (subscriptionPlanPrice: string, subscriptionPlanTitle: string, userId: string) => {
+  public createSubscribePlan = async (subscriptionPlanPrice: number, subscriptionPlanTitle: string, userId: string) => {
     const createSubscribePlansSession = initializeDbConnection().session();
     try {
+      const product = await this.stripe.products.create({
+        name: subscriptionPlanTitle,
+      });
+
+      const price = await this.stripe.prices.create({
+        unit_amount: subscriptionPlanPrice * 100,
+        currency: 'eur',
+        recurring: { interval: 'month' },
+        metadata: {
+          sellerId: userId,
+        },
+        product: product.id,
+      });
+
       const createdPlans = await createSubscribePlansSession.executeWrite(tx =>
         tx.run(
-          'match (user {id: $userId})-[:IS_A]->(s:seller) create (s)-[:HAS_A]->(subscriptionPlan:subscriptionPlan {subscriptionPlanPrice: $subscriptionPlanPrice, subscriptionPlanTitle: $subscriptionPlanTitle}) return subscriptionPlan, s',
+          'match (user {id: $userId})-[:IS_A]->(s:seller) create (s)-[:HAS_A]->(subscriptionPlan:subscriptionPlan {id: $subscriptionPlanId, price: $subscriptionPlanPrice, title: $subscriptionPlanTitle}) return subscriptionPlan',
           {
             subscriptionPlanPrice: subscriptionPlanPrice,
             subscriptionPlanTitle: subscriptionPlanTitle,
             userId: userId,
+            subscriptionPlanId: price.id,
           },
         ),
       );
@@ -60,28 +75,26 @@ class sellerService {
 
   public uploadIdentityCard = async (identityCardData: any, userId: string) => {
     try {
-      console.log(process.env.AWS_ACCESS_KEY_ID);
-      
-      identityCardData.data.identityCard.map(picture => {
+      for (let key in identityCardData) {
         aws.config.update({
           accessKeyId: process.env.AWS_ACCESS_KEY_ID,
           secretAccessKey: process.env.AWS_SECRET_ACCESS_KEY,
           region: 'us-east-2',
         });
-        const filecontent = Buffer.from(picture.value, 'binary');
+        const filecontent = Buffer.from(identityCardData[key][0].buffer, 'binary');
         const s3 = new aws.S3();
 
         const params = {
           Bucket: process.env.AWS_BUCKET_NAME,
-          Key: picture.side,
+          Key: `${identityCardData[key][0].fieldname}identity${userId}.${identityCardData[key][0].mimetype.split('/')[1]}`,
           Body: filecontent,
         };
 
         s3.upload(params, (err, data) => {
           if (err) return console.log(err);
-          this.uploadIdentityCardToDb(data.Location, userId, data.Key);
+          this.uploadIdentityCardToDb(data.Location, userId, identityCardData[key][0].fieldname);
         });
-      });
+      }
     } catch (error) {
       console.log(error);
     }
@@ -91,7 +104,7 @@ class sellerService {
     const uploadIdentityCardSession = initializeDbConnection().session();
     try {
       switch (side) {
-        case 'FRONT_SIDE':
+        case 'frontSide':
           await uploadIdentityCardSession.executeWrite(tx =>
             tx.run('match (user {id: $userId})-[:IS_A]->(s:seller) set s.frontIdentityCard = $frontIdentityCard', {
               userId: userId,
@@ -99,7 +112,7 @@ class sellerService {
             }),
           );
           break;
-        case 'BACK_SIDE':
+        case 'backSide':
           await uploadIdentityCardSession.executeWrite(tx =>
             tx.run('match (user {id: $userId})-[:IS_A]->(s:seller) set s.backtIdentityCard = $backIdentityCard', {
               userId: userId,

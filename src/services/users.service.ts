@@ -1,8 +1,7 @@
 import { hash } from 'bcrypt';
-import { CreateUserDto } from '@dtos/users.dto';
 import { HttpException } from '@exceptions/HttpException';
 import { User } from '@interfaces/users.interface';
-import userModel from '@models/users.model';
+import aws from 'aws-sdk';
 import { isEmpty } from '@utils/util';
 import { initializeDbConnection } from '@/app';
 import { verify } from 'jsonwebtoken';
@@ -54,7 +53,7 @@ class UserService {
   public async emailConfirming(token) {
     const confirmEmailSession = initializeDbConnection().session();
     try {
-      const tokenData = verify(token, process.env.EMAIL_SECRET);
+      const tokenData: any = verify(token, process.env.EMAIL_SECRET);
 
       const checkConfirmation = await confirmEmailSession.executeRead(tx =>
         tx.run('match (u:user {id: $userId}) return u', {
@@ -78,7 +77,7 @@ class UserService {
     }
   }
 
-  public async updateUser(userId, userData): Promise<User[]> {
+  public async updateUser(userId: string, userData: any): Promise<User[]> {
     const updateUserSession = initializeDbConnection().session();
     try {
       const existUser = await this.findUserById(userId);
@@ -103,16 +102,21 @@ class UserService {
   public async buyPosts(userId: string, saleData: any) {
     try {
       const pricesPromises = await saleData.data.posts.map(post => {
-        return this.stripe.prices
-          .list({
-            product: post.id,
-          })
-          .then(price => {
-            return { price: price.data[0].id, quantity: 1 };
-          });
+        return this.checkForSale(userId, post.id).then(exists => {
+          if (exists) return null;
+          return this.stripe.prices
+            .list({
+              product: post.id,
+            })
+            .then(price => {
+              return { price: price.data[0].id, quantity: 1 };
+            });
+        });
       });
 
       const prices = await Promise.all(pricesPromises);
+
+      if (prices.filter(price => price != null).length == 0) return { message: 'all posts selected have already been bought by this user' };
 
       const sellersPromises = await saleData.data.posts.map(post => {
         return this.stripe.products.retrieve(post.id).then(product => {
@@ -130,7 +134,7 @@ class UserService {
 
       const session = await this.stripe.checkout.sessions.create({
         success_url: 'https://example.com/success',
-        line_items: prices,
+        line_items: prices.filter(price => price != null),
         mode: 'payment',
         customer: userId,
         metadata: {
@@ -166,9 +170,7 @@ class UserService {
 
   public buyPost = async (postId: string, userId: string) => {
     const buyPostSession = initializeDbConnection().session();
-
     try {
-      if (saleAlreadyExists.records.map(record => record.get('bought')).length > 0) return;
       await buyPostSession.executeWrite(tx =>
         tx.run('match (u:user {id: $userId}), (s:seller)-[:HAS_A]->(p:post {id: $postId}) create (u)-[bought:BOUGHT_A]->(p)', {
           userId: userId,
@@ -183,27 +185,42 @@ class UserService {
   };
 
   public subscribe = async (userId: string, subscriptionData: any) => {
-    const subscribeSession = initializeDbConnection().session();
-    const checkForSubscriptionSession = initializeDbConnection().session();
     try {
-      const alreadySubscribed = await checkForSubscriptionSession.executeRead(tx =>
-        tx.run('match (u:user {id: $userId})-[:IS_A]-(b:buyer)-[subscribed:SUBSCRIBED_TO]->(:seller) return subscribed, b', {
-          userId,
-        }),
-      );
-      if (alreadySubscribed.records.map(record => record.get('subscribed')).length > 0) return { message: 'Already subscribed' };
+      if (await this.checkForSubscription(userId, subscriptionData.data.sellerId)) return { message: 'Already subscribed' };
+
+      const session = await this.stripe.checkout.sessions.create({
+        success_url: 'https://example.com/success',
+        line_items: [{ price: subscriptionData.data.subscriptionPlanId, quantity: 1 }],
+        mode: 'subscription',
+        customer: userId,
+        metadata: {
+          sellerId: subscriptionData.data.sellerId,
+          subscriptionPlanTitle: subscriptionData.data.subscriptionPlanTitle,
+          subscriptionPlanPrice: subscriptionData.data.subscriptionPlanPrice,
+        },
+      });
+
+      return { message: 'subscription added successfully', session };
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
+  public createSubscriptioninDb = async (userId: string, sellerId: string, subscriptionPlanTitle: string, subscriptionPlanPrice: string) => {
+    const subscribeSession = initializeDbConnection().session();
+    try {
+      if (await this.checkForSubscription(userId, sellerId)) return { message: 'Already subscribed' };
       await subscribeSession.executeWrite(tx => {
         tx.run(
-          'match (u:user {id: $userId})-[:IS_A]-(b:buyer), (s:seller {id: $sellerId}) create (b)-[:SUBSCRIBED_TO {subscriptionPlanTitle: $subscriptionPlanTitle, subscriptionPlanPrice: $subscriptionPlanPrice}]->(s) return s',
+          'match (u:user {id: $userId}), (s:seller {id: $sellerId}) create (u)-[:SUBSCRIBED_TO {subscriptionPlanTitle: $subscriptionPlanTitle, subscriptionPlanPrice: $subscriptionPlanPrice}]->(s) return s',
           {
             userId: userId,
-            sellerId: subscriptionData.data.sellerId,
-            subscriptionPlanTitle: subscriptionData.data.subscriptionPlanTitle,
-            subscriptionPlanPrice: subscriptionData.data.subscriptionPlanPrice,
+            sellerId: sellerId,
+            subscriptionPlanTitle: subscriptionPlanTitle,
+            subscriptionPlanPrice: subscriptionPlanPrice,
           },
         );
       });
-      return { message: 'subscription added successfully' };
     } catch (error) {
       console.log(error);
     } finally {
@@ -220,11 +237,72 @@ class UserService {
           postId: postId,
         }),
       );
+
       return saleAlreadyExists.records.map(record => record.get('bought')).length > 0 ? true : false;
     } catch (error) {
       console.log(error);
     } finally {
       checkForExistingRelationship.close();
+    }
+  };
+
+  public checkForSubscription = async (userId: string, sellerId: string) => {
+    const checkForSubscriptionSession = initializeDbConnection().session();
+    try {
+      const subscriptionAlreadyExist = await checkForSubscriptionSession.executeWrite(tx =>
+        tx.run('match (u:user {id: $userId})-[subscribed:SUBSCRIBED_TO]->(s:seller {id: $sellerId}) return subscribed', {
+          userId: userId,
+          sellerId: sellerId,
+        }),
+      )
+
+      return subscriptionAlreadyExist.records.map(record => record.get('subscribed')).length > 0 ? true : false;
+    } catch (error) {
+      console.log(error);
+    } finally {
+      checkForSubscriptionSession.close();
+    }
+  };
+
+  public uploadAvatar = async (avatarData: any, userId: string) => {
+    try {
+      console.log(avatarData);
+      aws.config.update({
+        accessKeyId: process.env.AWS_ACCESS_KEY_ID,
+        secretAccessKey: process.env.AWS_SECRET_ACCESS_KEY,
+        region: 'us-east-2',
+      });
+      const filecontent = Buffer.from(avatarData.buffer, 'binary');
+      const s3 = new aws.S3();
+
+      const params = {
+        Bucket: process.env.AWS_BUCKET_NAME,
+        Key: `${avatarData.fieldname}avatar${userId}.${avatarData.mimetype.split('/')[1]}`,
+        Body: filecontent,
+      };
+
+      s3.upload(params, (err, data) => {
+        if (err) return console.log(err);
+        this.uploadAvatarToDb(data.Location, userId);
+      });
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
+  public uploadAvatarToDb = async (location: string, userId: string) => {
+    const uploadAvatarToDbSession = initializeDbConnection().session();
+    try {
+      await uploadAvatarToDbSession.executeWrite(tx =>
+        tx.run('match (u:user {id: $userId}) set u.avatar = $avatar', {
+          userId: userId,
+          avatar: location,
+        }),
+      );
+    } catch (error) {
+      console.log(error);
+    } finally {
+      uploadAvatarToDbSession.close();
     }
   };
 

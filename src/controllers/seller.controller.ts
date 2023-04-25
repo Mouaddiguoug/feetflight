@@ -32,7 +32,8 @@ class sellerController {
   public uploadIdentityCard = async (req: Request, res: Response, next: NextFunction): Promise<void> => {
     try {
       const userId = String(req.params.id);
-      const identityCardData = req.body;
+      
+      const identityCardData = req.files;
       
       const identityCard = await this.sellerService.uploadIdentityCard(identityCardData, userId);
 

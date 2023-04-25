@@ -44,7 +44,7 @@ class UsersController {
       const token = String(req.params.token);
       const confirmed = await this.userService.emailConfirming(token);
 
-      res.status(201).json({ data: confirmed });
+      res.status(201).redirect("/");
     } catch (error) {
       next(error);
     }
@@ -94,6 +94,20 @@ class UsersController {
       const desactivatedUser = await this.userService.desactivateUser(userId);
 
       res.status(200).json({ data: desactivatedUser });
+    } catch (error) {
+      next(error);
+    }
+  };
+
+  public uploadAvatar = async (req: Request, res: Response, next: NextFunction): Promise<void> => {
+    try {
+      const userId = String(req.params.id);
+      
+      const avatarData = req.file;
+      
+      const avatar = await this.userService.uploadAvatar(avatarData, userId);
+
+      res.status(200).json({ avatar });
     } catch (error) {
       next(error);
     }

@@ -4,11 +4,11 @@ import walletService from '@/services/wallet.service';
 class WalletController {
   public walletService = new walletService();
 
-  public updateAmount = async (req: Request, res: Response, next: NextFunction): Promise<void> => {
+  public updateBalance = async (req: Request, res: Response, next: NextFunction): Promise<void> => {
     try {
       const sellerId = String(req.params.id);
-      const walletData = req.body;
-      const newAmount = await this.walletService.UpdateAmount(sellerId, walletData);
+      const balanceData = req.body;
+      const newAmount = await this.walletService.UpdateBalance(sellerId, balanceData);
 
       res.status(201).json({ data: newAmount });
     } catch (error) {
@@ -16,10 +16,10 @@ class WalletController {
     }
   };
 
-  public getAmountWallet = async (req: Request, res: Response, next: NextFunction): Promise<void> => {
+  public getBalance = async (req: Request, res: Response, next: NextFunction): Promise<void> => {
     try {
       const userId = String(req.params.id);
-      const amountWallet = await this.walletService.getAmount(userId);
+      const amountWallet = await this.walletService.getBalance(userId);
 
       res.status(201).json({ data: amountWallet });
     } catch (error) {

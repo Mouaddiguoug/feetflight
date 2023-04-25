@@ -13,7 +13,8 @@ class walletRoute implements Routes {
   }
 
   private initializeRoutes() {
-    this.router.post(`${this.path}/:id`, this.walletController.updateAmount);
+    this.router.put(`${this.path}/:id`, this.walletController.updateBalance);
+    this.router.get(`${this.path}/:id`, this.walletController.getBalance);
   }
 }
 
