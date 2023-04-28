@@ -71,6 +71,18 @@ class postController {
       next(error);
     }
   };
+
+  public uploadPostPictures = async (req: Request, res: Response, next: NextFunction): Promise<void> => {
+    try {
+      const pictureFiles = req.files;
+      const collectionId = String(req.params.id);
+      await this.postService.uploadPostPictures(pictureFiles, collectionId);
+
+      res.status(201).json({ messazge: "post pirctures have been uploaded successfully" });
+    } catch (error) {
+      next(error);
+    }
+  };
 }
 
 export default postController;

@@ -105,9 +105,9 @@ class UsersController {
       
       const avatarData = req.file;
       
-      const avatar = await this.userService.uploadAvatar(avatarData, userId);
+      await this.userService.uploadAvatar(avatarData, userId);
 
-      res.status(200).json({ avatar });
+      res.status(201).json({ messazge: "avatar has been uploaded successfully" });
     } catch (error) {
       next(error);
     }

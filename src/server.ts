@@ -6,9 +6,10 @@ import walletRoute from './routes/wallet.route';
 import validateEnv from '@utils/validateEnv';
 import sellerRoute from './routes/seller.route';
 import postRoute from './routes/post.route';
+import AdminRoute from './routes/admin.route';
 
 validateEnv();
 
-const app = new App([new IndexRoute(), new UsersRoute(), new AuthRoute(), new postRoute(), new walletRoute(), new sellerRoute()]);
+const app = new App([new IndexRoute(), new UsersRoute(), new AuthRoute(), new postRoute(), new walletRoute(), new sellerRoute(), new AdminRoute()]);
 
 app.listen();

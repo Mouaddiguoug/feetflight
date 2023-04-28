@@ -1,0 +1,1743 @@
+2023-04-26 11:47:38 error: [POST] /sellers/upload/identitycard/cus_NmLXh0ms2IoGSe >> StatusCode:: 401, Message:: frontSide too large
+2023-04-26 11:48:09 error: [POST] /sellers/upload/identitycard/cus_NmLXh0ms2IoGSe >> StatusCode:: 401, Message:: frontSide,backSide too large
+2023-04-26 11:50:43 error: uncaughtException: Identifier 'filesTooLard' has already been declared
+C:\Users\Devops3\Documents\Projects\feetflight\src\middlewares\fileValidation.middleware.ts:10
+            const filesTooLard = [];
+                  ^
+
+SyntaxError: Identifier 'filesTooLard' has already been declared
+    at wrapSafe (internal/modules/cjs/loader.js:1001:16)
+    at Module._compile (internal/modules/cjs/loader.js:1049:27)
+    at Module.m._compile (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1618:23)
+    at Module._extensions..js (internal/modules/cjs/loader.js:1114:10)
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (internal/modules/cjs/loader.js:950:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:790:12)
+    at Module.require (internal/modules/cjs/loader.js:974:19)
+    at require (internal/modules/cjs/helpers.js:101:18)
+    at Object.<anonymous> (C:\Users\Devops3\Documents\Projects\feetflight\src\routes\users.route.ts:5:1)
+2023-04-26 11:51:24 error: uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/middlewares/fileValidation.middleware.ts[0m:[93m14[0m:[93m50[0m - [91merror[0m[90m TS1005: [0m')' expected.
+
+[7m14[0m         if (fileeData[key][0].mimetype.split("/"){[]} > 2000000) filesTooLard.push(fileeData[key][0].fieldname);
+[7m  [0m [91m                                                 ~[0m
+
+  [96msrc/middlewares/fileValidation.middleware.ts[0m:[93m14[0m:[93m12[0m
+    [7m14[0m         if (fileeData[key][0].mimetype.split("/"){[]} > 2000000) filesTooLard.push(fileeData[key][0].fieldname);
+    [7m  [0m [96m           ~[0m
+    The parser expected to find a ')' to match the '(' token here.
+[96msrc/middlewares/fileValidation.middleware.ts[0m:[93m14[0m:[93m55[0m - [91merror[0m[90m TS1109: [0mExpression expected.
+
+[7m14[0m         if (fileeData[key][0].mimetype.split("/"){[]} > 2000000) filesTooLard.push(fileeData[key][0].fieldname);
+[7m  [0m [91m                                                      ~[0m
+[96msrc/middlewares/fileValidation.middleware.ts[0m:[93m14[0m:[93m64[0m - [91merror[0m[90m TS1005: [0m';' expected.
+
+[7m14[0m         if (fileeData[key][0].mimetype.split("/"){[]} > 2000000) filesTooLard.push(fileeData[key][0].fieldname);
+[7m  [0m [91m                                                               ~[0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/middlewares/fileValidation.middleware.ts[0m:[93m14[0m:[93m50[0m - [91merror[0m[90m TS1005: [0m')' expected.
+
+[7m14[0m         if (fileeData[key][0].mimetype.split("/"){[]} > 2000000) filesTooLard.push(fileeData[key][0].fieldname);
+[7m  [0m [91m                                                 ~[0m
+
+  [96msrc/middlewares/fileValidation.middleware.ts[0m:[93m14[0m:[93m12[0m
+    [7m14[0m         if (fileeData[key][0].mimetype.split("/"){[]} > 2000000) filesTooLard.push(fileeData[key][0].fieldname);
+    [7m  [0m [96m           ~[0m
+    The parser expected to find a ')' to match the '(' token here.
+[96msrc/middlewares/fileValidation.middleware.ts[0m:[93m14[0m:[93m55[0m - [91merror[0m[90m TS1109: [0mExpression expected.
+
+[7m14[0m         if (fileeData[key][0].mimetype.split("/"){[]} > 2000000) filesTooLard.push(fileeData[key][0].fieldname);
+[7m  [0m [91m                                                      ~[0m
+[96msrc/middlewares/fileValidation.middleware.ts[0m:[93m14[0m:[93m64[0m - [91merror[0m[90m TS1005: [0m';' expected.
+
+[7m14[0m         if (fileeData[key][0].mimetype.split("/"){[]} > 2000000) filesTooLard.push(fileeData[key][0].fieldname);
+[7m  [0m [91m                                                               ~[0m
+
+    at createTSError (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:863:19)
+    at C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1379:34
+    at Object.compile (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1458:13)
+    at Module.m._compile (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1617:30)
+    at Module._extensions..js (internal/modules/cjs/loader.js:1114:10)
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (internal/modules/cjs/loader.js:950:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:790:12)
+    at Module.require (internal/modules/cjs/loader.js:974:19)
+2023-04-26 11:52:29 error: uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/middlewares/fileValidation.middleware.ts[0m:[93m16[0m:[93m39[0m - [91merror[0m[90m TS1109: [0mExpression expected.
+
+[7m16[0m       if (filesTooLard.length > 0 ||  ) {
+[7m  [0m [91m                                      ~[0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/middlewares/fileValidation.middleware.ts[0m:[93m16[0m:[93m39[0m - [91merror[0m[90m TS1109: [0mExpression expected.
+
+[7m16[0m       if (filesTooLard.length > 0 ||  ) {
+[7m  [0m [91m                                      ~[0m
+
+    at createTSError (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:863:19)
+    at C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1379:34
+    at Object.compile (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1458:13)
+    at Module.m._compile (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1617:30)
+    at Module._extensions..js (internal/modules/cjs/loader.js:1114:10)
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (internal/modules/cjs/loader.js:950:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:790:12)
+    at Module.require (internal/modules/cjs/loader.js:974:19)
+2023-04-26 11:55:31 error: uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/middlewares/fileValidation.middleware.ts[0m:[93m17[0m:[93m76[0m - [91merror[0m[90m TS1005: [0m':' expected.
+
+[7m17[0m         return next(new HttpException(401, `${filesTooLarge.length > 0 ? ""} too large`));
+[7m  [0m [91m                                                                           ~[0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/middlewares/fileValidation.middleware.ts[0m:[93m17[0m:[93m76[0m - [91merror[0m[90m TS1005: [0m':' expected.
+
+[7m17[0m         return next(new HttpException(401, `${filesTooLarge.length > 0 ? ""} too large`));
+[7m  [0m [91m                                                                           ~[0m
+
+    at createTSError (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:863:19)
+    at C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1379:34
+    at Object.compile (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1458:13)
+    at Module.m._compile (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1617:30)
+    at Module._extensions..js (internal/modules/cjs/loader.js:1114:10)
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (internal/modules/cjs/loader.js:950:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:790:12)
+    at Module.require (internal/modules/cjs/loader.js:974:19)
+2023-04-26 11:55:53 error: uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/middlewares/fileValidation.middleware.ts[0m:[93m17[0m:[93m92[0m - [91merror[0m[90m TS1005: [0m':' expected.
+
+[7m17[0m         return next(new HttpException(401, `${filesTooLarge.length > 0 ? "a file is toolar"} too large`));
+[7m  [0m [91m                                                                                           ~[0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/middlewares/fileValidation.middleware.ts[0m:[93m17[0m:[93m92[0m - [91merror[0m[90m TS1005: [0m':' expected.
+
+[7m17[0m         return next(new HttpException(401, `${filesTooLarge.length > 0 ? "a file is toolar"} too large`));
+[7m  [0m [91m                                                                                           ~[0m
+
+    at createTSError (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:863:19)
+    at C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1379:34
+    at Object.compile (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1458:13)
+    at Module.m._compile (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1617:30)
+    at Module._extensions..js (internal/modules/cjs/loader.js:1114:10)
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (internal/modules/cjs/loader.js:950:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:790:12)
+    at Module.require (internal/modules/cjs/loader.js:974:19)
+2023-04-26 11:55:56 error: uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/middlewares/fileValidation.middleware.ts[0m:[93m17[0m:[93m93[0m - [91merror[0m[90m TS1005: [0m':' expected.
+
+[7m17[0m         return next(new HttpException(401, `${filesTooLarge.length > 0 ? "a file is too lar"} too large`));
+[7m  [0m [91m                                                                                            ~[0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/middlewares/fileValidation.middleware.ts[0m:[93m17[0m:[93m93[0m - [91merror[0m[90m TS1005: [0m':' expected.
+
+[7m17[0m         return next(new HttpException(401, `${filesTooLarge.length > 0 ? "a file is too lar"} too large`));
+[7m  [0m [91m                                                                                            ~[0m
+
+    at createTSError (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:863:19)
+    at C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1379:34
+    at Object.compile (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1458:13)
+    at Module.m._compile (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1617:30)
+    at Module._extensions..js (internal/modules/cjs/loader.js:1114:10)
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (internal/modules/cjs/loader.js:950:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:790:12)
+    at Module.require (internal/modules/cjs/loader.js:974:19)
+2023-04-26 11:55:59 error: uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/middlewares/fileValidation.middleware.ts[0m:[93m17[0m:[93m96[0m - [91merror[0m[90m TS1005: [0m':' expected.
+
+[7m17[0m         return next(new HttpException(401, `${filesTooLarge.length > 0 ? "a file is too large "} too large`));
+[7m  [0m [91m                                                                                               ~[0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/middlewares/fileValidation.middleware.ts[0m:[93m17[0m:[93m96[0m - [91merror[0m[90m TS1005: [0m':' expected.
+
+[7m17[0m         return next(new HttpException(401, `${filesTooLarge.length > 0 ? "a file is too large "} too large`));
+[7m  [0m [91m                                                                                               ~[0m
+
+    at createTSError (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:863:19)
+    at C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1379:34
+    at Object.compile (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1458:13)
+    at Module.m._compile (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1617:30)
+    at Module._extensions..js (internal/modules/cjs/loader.js:1114:10)
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (internal/modules/cjs/loader.js:950:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:790:12)
+    at Module.require (internal/modules/cjs/loader.js:974:19)
+2023-04-26 11:56:09 error: uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/middlewares/fileValidation.middleware.ts[0m:[93m17[0m:[93m96[0m - [91merror[0m[90m TS1005: [0m':' expected.
+
+[7m17[0m         return next(new HttpException(401, `${filesTooLarge.length > 0 ? "a file is too large "} too large`));
+[7m  [0m [91m                                                                                               ~[0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/middlewares/fileValidation.middleware.ts[0m:[93m17[0m:[93m96[0m - [91merror[0m[90m TS1005: [0m':' expected.
+
+[7m17[0m         return next(new HttpException(401, `${filesTooLarge.length > 0 ? "a file is too large "} too large`));
+[7m  [0m [91m                                                                                               ~[0m
+
+    at createTSError (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:863:19)
+    at C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1379:34
+    at Object.compile (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1458:13)
+    at Module.m._compile (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1617:30)
+    at Module._extensions..js (internal/modules/cjs/loader.js:1114:10)
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (internal/modules/cjs/loader.js:950:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:790:12)
+    at Module.require (internal/modules/cjs/loader.js:974:19)
+2023-04-26 11:56:13 error: uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/middlewares/fileValidation.middleware.ts[0m:[93m17[0m:[93m100[0m - [91merror[0m[90m TS1005: [0m':' expected.
+
+[7m17[0m         return next(new HttpException(401, `${filesTooLarge.length > 0 ? "a file is too large maxi"} too large`));
+[7m  [0m [91m                                                                                                   ~[0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/middlewares/fileValidation.middleware.ts[0m:[93m17[0m:[93m100[0m - [91merror[0m[90m TS1005: [0m':' expected.
+
+[7m17[0m         return next(new HttpException(401, `${filesTooLarge.length > 0 ? "a file is too large maxi"} too large`));
+[7m  [0m [91m                                                                                                   ~[0m
+
+    at createTSError (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:863:19)
+    at C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1379:34
+    at Object.compile (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1458:13)
+    at Module.m._compile (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1617:30)
+    at Module._extensions..js (internal/modules/cjs/loader.js:1114:10)
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (internal/modules/cjs/loader.js:950:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:790:12)
+    at Module.require (internal/modules/cjs/loader.js:974:19)
+2023-04-26 11:56:16 error: uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/middlewares/fileValidation.middleware.ts[0m:[93m17[0m:[93m104[0m - [91merror[0m[90m TS1005: [0m':' expected.
+
+[7m17[0m         return next(new HttpException(401, `${filesTooLarge.length > 0 ? "a file is too large maximum "} too large`));
+[7m  [0m [91m                                                                                                       ~[0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/middlewares/fileValidation.middleware.ts[0m:[93m17[0m:[93m104[0m - [91merror[0m[90m TS1005: [0m':' expected.
+
+[7m17[0m         return next(new HttpException(401, `${filesTooLarge.length > 0 ? "a file is too large maximum "} too large`));
+[7m  [0m [91m                                                                                                       ~[0m
+
+    at createTSError (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:863:19)
+    at C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1379:34
+    at Object.compile (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1458:13)
+    at Module.m._compile (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1617:30)
+    at Module._extensions..js (internal/modules/cjs/loader.js:1114:10)
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (internal/modules/cjs/loader.js:950:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:790:12)
+    at Module.require (internal/modules/cjs/loader.js:974:19)
+2023-04-26 11:56:23 error: uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/middlewares/fileValidation.middleware.ts[0m:[93m17[0m:[93m109[0m - [91merror[0m[90m TS1005: [0m':' expected.
+
+[7m17[0m         return next(new HttpException(401, `${filesTooLarge.length > 0 ? "a file is too large maximum is 5m"} too large`));
+[7m  [0m [91m                                                                                                            ~[0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/middlewares/fileValidation.middleware.ts[0m:[93m17[0m:[93m109[0m - [91merror[0m[90m TS1005: [0m':' expected.
+
+[7m17[0m         return next(new HttpException(401, `${filesTooLarge.length > 0 ? "a file is too large maximum is 5m"} too large`));
+[7m  [0m [91m                                                                                                            ~[0m
+
+    at createTSError (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:863:19)
+    at C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1379:34
+    at Object.compile (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1458:13)
+    at Module.m._compile (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1617:30)
+    at Module._extensions..js (internal/modules/cjs/loader.js:1114:10)
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (internal/modules/cjs/loader.js:950:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:790:12)
+    at Module.require (internal/modules/cjs/loader.js:974:19)
+2023-04-26 11:56:27 error: uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/middlewares/fileValidation.middleware.ts[0m:[93m17[0m:[93m110[0m - [91merror[0m[90m TS1005: [0m':' expected.
+
+[7m17[0m         return next(new HttpException(401, `${filesTooLarge.length > 0 ? "a file is too large maximum is 5mb"} too large`));
+[7m  [0m [91m                                                                                                             ~[0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/middlewares/fileValidation.middleware.ts[0m:[93m17[0m:[93m110[0m - [91merror[0m[90m TS1005: [0m':' expected.
+
+[7m17[0m         return next(new HttpException(401, `${filesTooLarge.length > 0 ? "a file is too large maximum is 5mb"} too large`));
+[7m  [0m [91m                                                                                                             ~[0m
+
+    at createTSError (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:863:19)
+    at C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1379:34
+    at Object.compile (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1458:13)
+    at Module.m._compile (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1617:30)
+    at Module._extensions..js (internal/modules/cjs/loader.js:1114:10)
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (internal/modules/cjs/loader.js:950:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:790:12)
+    at Module.require (internal/modules/cjs/loader.js:974:19)
+2023-04-26 11:56:39 error: uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/middlewares/fileValidation.middleware.ts[0m:[93m17[0m:[93m110[0m - [91merror[0m[90m TS1005: [0m':' expected.
+
+[7m17[0m         return next(new HttpException(401, `${filesTooLarge.length > 0 ? "a file is too large maximum is 5mb"}`));
+[7m  [0m [91m                                                                                                             ~[0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/middlewares/fileValidation.middleware.ts[0m:[93m17[0m:[93m110[0m - [91merror[0m[90m TS1005: [0m':' expected.
+
+[7m17[0m         return next(new HttpException(401, `${filesTooLarge.length > 0 ? "a file is too large maximum is 5mb"}`));
+[7m  [0m [91m                                                                                                             ~[0m
+
+    at createTSError (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:863:19)
+    at C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1379:34
+    at Object.compile (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1458:13)
+    at Module.m._compile (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1617:30)
+    at Module._extensions..js (internal/modules/cjs/loader.js:1114:10)
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (internal/modules/cjs/loader.js:950:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:790:12)
+    at Module.require (internal/modules/cjs/loader.js:974:19)
+2023-04-26 11:56:41 error: uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/middlewares/fileValidation.middleware.ts[0m:[93m17[0m:[93m110[0m - [91merror[0m[90m TS1005: [0m':' expected.
+
+[7m17[0m         return next(new HttpException(401, `${filesTooLarge.length > 0 ? "a file is too large maximum is 5mb"} : `));
+[7m  [0m [91m                                                                                                             ~[0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/middlewares/fileValidation.middleware.ts[0m:[93m17[0m:[93m110[0m - [91merror[0m[90m TS1005: [0m':' expected.
+
+[7m17[0m         return next(new HttpException(401, `${filesTooLarge.length > 0 ? "a file is too large maximum is 5mb"} : `));
+[7m  [0m [91m                                                                                                             ~[0m
+
+    at createTSError (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:863:19)
+    at C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1379:34
+    at Object.compile (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1458:13)
+    at Module.m._compile (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1617:30)
+    at Module._extensions..js (internal/modules/cjs/loader.js:1114:10)
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (internal/modules/cjs/loader.js:950:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:790:12)
+    at Module.require (internal/modules/cjs/loader.js:974:19)
+2023-04-26 11:56:48 error: uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/middlewares/fileValidation.middleware.ts[0m:[93m17[0m:[93m111[0m - [91merror[0m[90m TS1005: [0m':' expected.
+
+[7m17[0m         return next(new HttpException(401, `${filesTooLarge.length > 0  ? "a file is too large maximum is 5mb"} : `));
+[7m  [0m [91m                                                                                                              ~[0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/middlewares/fileValidation.middleware.ts[0m:[93m17[0m:[93m111[0m - [91merror[0m[90m TS1005: [0m':' expected.
+
+[7m17[0m         return next(new HttpException(401, `${filesTooLarge.length > 0  ? "a file is too large maximum is 5mb"} : `));
+[7m  [0m [91m                                                                                                              ~[0m
+
+    at createTSError (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:863:19)
+    at C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1379:34
+    at Object.compile (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1458:13)
+    at Module.m._compile (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1617:30)
+    at Module._extensions..js (internal/modules/cjs/loader.js:1114:10)
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (internal/modules/cjs/loader.js:950:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:790:12)
+    at Module.require (internal/modules/cjs/loader.js:974:19)
+2023-04-26 11:56:57 error: uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/middlewares/fileValidation.middleware.ts[0m:[93m17[0m:[93m76[0m - [91merror[0m[90m TS1109: [0mExpression expected.
+
+[7m17[0m         return next(new HttpException(401, `${filesTooLarge.length > 0 &&  ? "a file is too large maximum is 5mb"} : `));
+[7m  [0m [91m                                                                           ~[0m
+[96msrc/middlewares/fileValidation.middleware.ts[0m:[93m17[0m:[93m114[0m - [91merror[0m[90m TS1005: [0m':' expected.
+
+[7m17[0m         return next(new HttpException(401, `${filesTooLarge.length > 0 &&  ? "a file is too large maximum is 5mb"} : `));
+[7m  [0m [91m                                                                                                                 ~[0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/middlewares/fileValidation.middleware.ts[0m:[93m17[0m:[93m76[0m - [91merror[0m[90m TS1109: [0mExpression expected.
+
+[7m17[0m         return next(new HttpException(401, `${filesTooLarge.length > 0 &&  ? "a file is too large maximum is 5mb"} : `));
+[7m  [0m [91m                                                                           ~[0m
+[96msrc/middlewares/fileValidation.middleware.ts[0m:[93m17[0m:[93m114[0m - [91merror[0m[90m TS1005: [0m':' expected.
+
+[7m17[0m         return next(new HttpException(401, `${filesTooLarge.length > 0 &&  ? "a file is too large maximum is 5mb"} : `));
+[7m  [0m [91m                                                                                                                 ~[0m
+
+    at createTSError (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:863:19)
+    at C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1379:34
+    at Object.compile (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1458:13)
+    at Module.m._compile (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1617:30)
+    at Module._extensions..js (internal/modules/cjs/loader.js:1114:10)
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (internal/modules/cjs/loader.js:950:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:790:12)
+    at Module.require (internal/modules/cjs/loader.js:974:19)
+2023-04-26 11:57:04 error: uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/middlewares/fileValidation.middleware.ts[0m:[93m17[0m:[93m140[0m - [91merror[0m[90m TS1005: [0m':' expected.
+
+[7m17[0m         return next(new HttpException(401, `${filesTooLarge.length > 0 && typeDoesntMatch.length > 0 ? "a file is too large maximum is 5mb"} : `));
+[7m  [0m [91m                                                                                                                                           ~[0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/middlewares/fileValidation.middleware.ts[0m:[93m17[0m:[93m140[0m - [91merror[0m[90m TS1005: [0m':' expected.
+
+[7m17[0m         return next(new HttpException(401, `${filesTooLarge.length > 0 && typeDoesntMatch.length > 0 ? "a file is too large maximum is 5mb"} : `));
+[7m  [0m [91m                                                                                                                                           ~[0m
+
+    at createTSError (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:863:19)
+    at C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1379:34
+    at Object.compile (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1458:13)
+    at Module.m._compile (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1617:30)
+    at Module._extensions..js (internal/modules/cjs/loader.js:1114:10)
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (internal/modules/cjs/loader.js:950:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:790:12)
+    at Module.require (internal/modules/cjs/loader.js:974:19)
+2023-04-26 11:57:12 error: uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/middlewares/fileValidation.middleware.ts[0m:[93m17[0m:[93m145[0m - [91merror[0m[90m TS1005: [0m':' expected.
+
+[7m17[0m         return next(new HttpException(401, `${filesTooLarge.length > 0 && typeDoesntMatch.length > 0 ? "a file is too large maximum is 5mb and "} : `));
+[7m  [0m [91m                                                                                                                                                ~[0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/middlewares/fileValidation.middleware.ts[0m:[93m17[0m:[93m145[0m - [91merror[0m[90m TS1005: [0m':' expected.
+
+[7m17[0m         return next(new HttpException(401, `${filesTooLarge.length > 0 && typeDoesntMatch.length > 0 ? "a file is too large maximum is 5mb and "} : `));
+[7m  [0m [91m                                                                                                                                                ~[0m
+
+    at createTSError (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:863:19)
+    at C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1379:34
+    at Object.compile (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1458:13)
+    at Module.m._compile (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1617:30)
+    at Module._extensions..js (internal/modules/cjs/loader.js:1114:10)
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (internal/modules/cjs/loader.js:950:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:790:12)
+    at Module.require (internal/modules/cjs/loader.js:974:19)
+2023-04-26 11:57:20 error: uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/middlewares/fileValidation.middleware.ts[0m:[93m17[0m:[93m166[0m - [91merror[0m[90m TS1005: [0m':' expected.
+
+[7m17[0m         return next(new HttpException(401, `${filesTooLarge.length > 0 && typeDoesntMatch.length > 0 ? "a file is too large maximum is 5mb and a file isn't an image"} : `));
+[7m  [0m [91m                                                                                                                                                                     ~[0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/middlewares/fileValidation.middleware.ts[0m:[93m17[0m:[93m166[0m - [91merror[0m[90m TS1005: [0m':' expected.
+
+[7m17[0m         return next(new HttpException(401, `${filesTooLarge.length > 0 && typeDoesntMatch.length > 0 ? "a file is too large maximum is 5mb and a file isn't an image"} : `));
+[7m  [0m [91m                                                                                                                                                                     ~[0m
+
+    at createTSError (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:863:19)
+    at C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1379:34
+    at Object.compile (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1458:13)
+    at Module.m._compile (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1617:30)
+    at Module._extensions..js (internal/modules/cjs/loader.js:1114:10)
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (internal/modules/cjs/loader.js:950:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:790:12)
+    at Module.require (internal/modules/cjs/loader.js:974:19)
+2023-04-26 11:57:31 error: uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/middlewares/fileValidation.middleware.ts[0m:[93m17[0m:[93m166[0m - [91merror[0m[90m TS1005: [0m':' expected.
+
+[7m17[0m         return next(new HttpException(401, `${filesTooLarge.length > 0 && typeDoesntMatch.length > 0 ? "a file is too large maximum is 5mb and a file isn't an image"} `));
+[7m  [0m [91m                                                                                                                                                                     ~[0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/middlewares/fileValidation.middleware.ts[0m:[93m17[0m:[93m166[0m - [91merror[0m[90m TS1005: [0m':' expected.
+
+[7m17[0m         return next(new HttpException(401, `${filesTooLarge.length > 0 && typeDoesntMatch.length > 0 ? "a file is too large maximum is 5mb and a file isn't an image"} `));
+[7m  [0m [91m                                                                                                                                                                     ~[0m
+
+    at createTSError (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:863:19)
+    at C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1379:34
+    at Object.compile (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1458:13)
+    at Module.m._compile (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1617:30)
+    at Module._extensions..js (internal/modules/cjs/loader.js:1114:10)
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (internal/modules/cjs/loader.js:950:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:790:12)
+    at Module.require (internal/modules/cjs/loader.js:974:19)
+2023-04-26 11:58:04 error: uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/middlewares/fileValidation.middleware.ts[0m:[93m17[0m:[93m166[0m - [91merror[0m[90m TS1005: [0m':' expected.
+
+[7m17[0m         return next(new HttpException(401, `${filesTooLarge.length > 0 && typeDoesntMatch.length > 0 ? "a file is too large maximum is 5mb and a file isn't an image"} : `));
+[7m  [0m [91m                                                                                                                                                                     ~[0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/middlewares/fileValidation.middleware.ts[0m:[93m17[0m:[93m166[0m - [91merror[0m[90m TS1005: [0m':' expected.
+
+[7m17[0m         return next(new HttpException(401, `${filesTooLarge.length > 0 && typeDoesntMatch.length > 0 ? "a file is too large maximum is 5mb and a file isn't an image"} : `));
+[7m  [0m [91m                                                                                                                                                                     ~[0m
+
+    at createTSError (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:863:19)
+    at C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1379:34
+    at Object.compile (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1458:13)
+    at Module.m._compile (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1617:30)
+    at Module._extensions..js (internal/modules/cjs/loader.js:1114:10)
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (internal/modules/cjs/loader.js:950:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:790:12)
+    at Module.require (internal/modules/cjs/loader.js:974:19)
+2023-04-26 11:58:32 error: uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/middlewares/fileValidation.middleware.ts[0m:[93m17[0m:[93m166[0m - [91merror[0m[90m TS1005: [0m':' expected.
+
+[7m17[0m         return next(new HttpException(401, `${filesTooLarge.length > 0 && typeDoesntMatch.length > 0 ? "a file is too large maximum is 5mb and a file isn't an image"} : ""`));
+[7m  [0m [91m                                                                                                                                                                     ~[0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/middlewares/fileValidation.middleware.ts[0m:[93m17[0m:[93m166[0m - [91merror[0m[90m TS1005: [0m':' expected.
+
+[7m17[0m         return next(new HttpException(401, `${filesTooLarge.length > 0 && typeDoesntMatch.length > 0 ? "a file is too large maximum is 5mb and a file isn't an image"} : ""`));
+[7m  [0m [91m                                                                                                                                                                     ~[0m
+
+    at createTSError (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:863:19)
+    at C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1379:34
+    at Object.compile (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1458:13)
+    at Module.m._compile (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1617:30)
+    at Module._extensions..js (internal/modules/cjs/loader.js:1114:10)
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (internal/modules/cjs/loader.js:950:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:790:12)
+    at Module.require (internal/modules/cjs/loader.js:974:19)
+2023-04-26 11:58:36 error: uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/middlewares/fileValidation.middleware.ts[0m:[93m17[0m:[93m166[0m - [91merror[0m[90m TS1005: [0m':' expected.
+
+[7m17[0m         return next(new HttpException(401, `${filesTooLarge.length > 0 && typeDoesntMatch.length > 0 ? "a file is too large maximum is 5mb and a file isn't an image"}`));
+[7m  [0m [91m                                                                                                                                                                     ~[0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/middlewares/fileValidation.middleware.ts[0m:[93m17[0m:[93m166[0m - [91merror[0m[90m TS1005: [0m':' expected.
+
+[7m17[0m         return next(new HttpException(401, `${filesTooLarge.length > 0 && typeDoesntMatch.length > 0 ? "a file is too large maximum is 5mb and a file isn't an image"}`));
+[7m  [0m [91m                                                                                                                                                                     ~[0m
+
+    at createTSError (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:863:19)
+    at C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1379:34
+    at Object.compile (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1458:13)
+    at Module.m._compile (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1617:30)
+    at Module._extensions..js (internal/modules/cjs/loader.js:1114:10)
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (internal/modules/cjs/loader.js:950:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:790:12)
+    at Module.require (internal/modules/cjs/loader.js:974:19)
+2023-04-26 11:58:51 error: uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/middlewares/fileValidation.middleware.ts[0m:[93m17[0m:[93m169[0m - [91merror[0m[90m TS1109: [0mExpression expected.
+
+[7m17[0m         return next(new HttpException(401, `${filesTooLarge.length > 0 && typeDoesntMatch.length > 0 ? "a file is too large maximum is 5mb and a file isn't an image" : }`));
+[7m  [0m [91m                                                                                                                                                                        ~[0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/middlewares/fileValidation.middleware.ts[0m:[93m17[0m:[93m169[0m - [91merror[0m[90m TS1109: [0mExpression expected.
+
+[7m17[0m         return next(new HttpException(401, `${filesTooLarge.length > 0 && typeDoesntMatch.length > 0 ? "a file is too large maximum is 5mb and a file isn't an image" : }`));
+[7m  [0m [91m                                                                                                                                                                        ~[0m
+
+    at createTSError (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:863:19)
+    at C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1379:34
+    at Object.compile (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1458:13)
+    at Module.m._compile (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1617:30)
+    at Module._extensions..js (internal/modules/cjs/loader.js:1114:10)
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (internal/modules/cjs/loader.js:950:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:790:12)
+    at Module.require (internal/modules/cjs/loader.js:974:19)
+2023-04-26 11:59:07 error: uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/middlewares/fileValidation.middleware.ts[0m:[93m17[0m:[93m198[0m - [91merror[0m[90m TS1109: [0mExpression expected.
+
+[7m17[0m         return next(new HttpException(401, `${filesTooLarge.length > 0 && typeDoesntMatch.length > 0 ? "a file is too large maximum is 5mb and a file isn't an image" : typeDoesntMatch.length > 0 ? }`));
+[7m  [0m [91m                                                                                                                                                                                                     ~[0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/middlewares/fileValidation.middleware.ts[0m:[93m17[0m:[93m198[0m - [91merror[0m[90m TS1109: [0mExpression expected.
+
+[7m17[0m         return next(new HttpException(401, `${filesTooLarge.length > 0 && typeDoesntMatch.length > 0 ? "a file is too large maximum is 5mb and a file isn't an image" : typeDoesntMatch.length > 0 ? }`));
+[7m  [0m [91m                                                                                                                                                                                                     ~[0m
+
+    at createTSError (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:863:19)
+    at C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1379:34
+    at Object.compile (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1458:13)
+    at Module.m._compile (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1617:30)
+    at Module._extensions..js (internal/modules/cjs/loader.js:1114:10)
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (internal/modules/cjs/loader.js:950:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:790:12)
+    at Module.require (internal/modules/cjs/loader.js:974:19)
+2023-04-26 11:59:09 error: uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/middlewares/fileValidation.middleware.ts[0m:[93m17[0m:[93m200[0m - [91merror[0m[90m TS1005: [0m':' expected.
+
+[7m17[0m         return next(new HttpException(401, `${filesTooLarge.length > 0 && typeDoesntMatch.length > 0 ? "a file is too large maximum is 5mb and a file isn't an image" : typeDoesntMatch.length > 0 ? ""}`));
+[7m  [0m [91m                                                                                                                                                                                                       ~[0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/middlewares/fileValidation.middleware.ts[0m:[93m17[0m:[93m200[0m - [91merror[0m[90m TS1005: [0m':' expected.
+
+[7m17[0m         return next(new HttpException(401, `${filesTooLarge.length > 0 && typeDoesntMatch.length > 0 ? "a file is too large maximum is 5mb and a file isn't an image" : typeDoesntMatch.length > 0 ? ""}`));
+[7m  [0m [91m                                                                                                                                                                                                       ~[0m
+
+    at createTSError (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:863:19)
+    at C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1379:34
+    at Object.compile (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1458:13)
+    at Module.m._compile (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1617:30)
+    at Module._extensions..js (internal/modules/cjs/loader.js:1114:10)
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (internal/modules/cjs/loader.js:950:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:790:12)
+    at Module.require (internal/modules/cjs/loader.js:974:19)
+2023-04-26 11:59:28 error: uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/middlewares/fileValidation.middleware.ts[0m:[93m17[0m:[93m224[0m - [91merror[0m[90m TS1005: [0m':' expected.
+
+[7m17[0m         return next(new HttpException(401, `${filesTooLarge.length > 0 && typeDoesntMatch.length > 0 ? "a file is too large maximum is 5mb and a file isn't an image" : typeDoesntMatch.length > 0 ? "files needs to be images"}`));
+[7m  [0m [91m                                                                                                                                                                                                                               ~[0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/middlewares/fileValidation.middleware.ts[0m:[93m17[0m:[93m224[0m - [91merror[0m[90m TS1005: [0m':' expected.
+
+[7m17[0m         return next(new HttpException(401, `${filesTooLarge.length > 0 && typeDoesntMatch.length > 0 ? "a file is too large maximum is 5mb and a file isn't an image" : typeDoesntMatch.length > 0 ? "files needs to be images"}`));
+[7m  [0m [91m                                                                                                                                                                                                                               ~[0m
+
+    at createTSError (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:863:19)
+    at C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1379:34
+    at Object.compile (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1458:13)
+    at Module.m._compile (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1617:30)
+    at Module._extensions..js (internal/modules/cjs/loader.js:1114:10)
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (internal/modules/cjs/loader.js:950:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:790:12)
+    at Module.require (internal/modules/cjs/loader.js:974:19)
+2023-04-26 11:59:34 error: uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/middlewares/fileValidation.middleware.ts[0m:[93m17[0m:[93m227[0m - [91merror[0m[90m TS1005: [0m':' expected.
+
+[7m17[0m         return next(new HttpException(401, `${filesTooLarge.length > 0 && typeDoesntMatch.length > 0 ? "a file is too large maximum is 5mb and a file isn't an image" : typeDoesntMatch.length > 0 ? "files can only to be images"}`));
+[7m  [0m [91m                                                                                                                                                                                                                                  ~[0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/middlewares/fileValidation.middleware.ts[0m:[93m17[0m:[93m227[0m - [91merror[0m[90m TS1005: [0m':' expected.
+
+[7m17[0m         return next(new HttpException(401, `${filesTooLarge.length > 0 && typeDoesntMatch.length > 0 ? "a file is too large maximum is 5mb and a file isn't an image" : typeDoesntMatch.length > 0 ? "files can only to be images"}`));
+[7m  [0m [91m                                                                                                                                                                                                                                  ~[0m
+
+    at createTSError (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:863:19)
+    at C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1379:34
+    at Object.compile (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1458:13)
+    at Module.m._compile (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1617:30)
+    at Module._extensions..js (internal/modules/cjs/loader.js:1114:10)
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (internal/modules/cjs/loader.js:950:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:790:12)
+    at Module.require (internal/modules/cjs/loader.js:974:19)
+2023-04-26 11:59:41 error: uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/middlewares/fileValidation.middleware.ts[0m:[93m17[0m:[93m227[0m - [91merror[0m[90m TS1005: [0m':' expected.
+
+[7m17[0m         return next(new HttpException(401, `${filesTooLarge.length > 0 && typeDoesntMatch.length > 0 ? "a file is too large maximum is 5mb and a file isn't an image" : typeDoesntMatch.length > 0 ? "files can only to be images"} : `));
+[7m  [0m [91m                                                                                                                                                                                                                                  ~[0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/middlewares/fileValidation.middleware.ts[0m:[93m17[0m:[93m227[0m - [91merror[0m[90m TS1005: [0m':' expected.
+
+[7m17[0m         return next(new HttpException(401, `${filesTooLarge.length > 0 && typeDoesntMatch.length > 0 ? "a file is too large maximum is 5mb and a file isn't an image" : typeDoesntMatch.length > 0 ? "files can only to be images"} : `));
+[7m  [0m [91m                                                                                                                                                                                                                                  ~[0m
+
+    at createTSError (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:863:19)
+    at C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1379:34
+    at Object.compile (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1458:13)
+    at Module.m._compile (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1617:30)
+    at Module._extensions..js (internal/modules/cjs/loader.js:1114:10)
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (internal/modules/cjs/loader.js:950:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:790:12)
+    at Module.require (internal/modules/cjs/loader.js:974:19)
+2023-04-26 11:59:47 error: uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/middlewares/fileValidation.middleware.ts[0m:[93m17[0m:[93m230[0m - [91merror[0m[90m TS1109: [0mExpression expected.
+
+[7m17[0m         return next(new HttpException(401, `${filesTooLarge.length > 0 && typeDoesntMatch.length > 0 ? "a file is too large maximum is 5mb and a file isn't an image" : typeDoesntMatch.length > 0 ? "files can only to be images" : }`));
+[7m  [0m [91m                                                                                                                                                                                                                                     ~[0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/middlewares/fileValidation.middleware.ts[0m:[93m17[0m:[93m230[0m - [91merror[0m[90m TS1109: [0mExpression expected.
+
+[7m17[0m         return next(new HttpException(401, `${filesTooLarge.length > 0 && typeDoesntMatch.length > 0 ? "a file is too large maximum is 5mb and a file isn't an image" : typeDoesntMatch.length > 0 ? "files can only to be images" : }`));
+[7m  [0m [91m                                                                                                                                                                                                                                     ~[0m
+
+    at createTSError (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:863:19)
+    at C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1379:34
+    at Object.compile (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1458:13)
+    at Module.m._compile (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1617:30)
+    at Module._extensions..js (internal/modules/cjs/loader.js:1114:10)
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (internal/modules/cjs/loader.js:950:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:790:12)
+    at Module.require (internal/modules/cjs/loader.js:974:19)
+2023-04-26 12:00:16 error: uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/middlewares/fileValidation.middleware.ts[0m:[93m17[0m:[93m230[0m - [91merror[0m[90m TS1109: [0mExpression expected.
+
+[7m17[0m         return next(new HttpException(401, `${filesTooLarge.length > 0 && typeDoesntMatch.length > 0 ? "a file is too large maximum is 5mb and a file isn't an image" : typeDoesntMatch.length > 0 ? "files can only to be images" : }`));
+[7m  [0m [91m                                                                                                                                                                                                                                     ~[0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/middlewares/fileValidation.middleware.ts[0m:[93m17[0m:[93m230[0m - [91merror[0m[90m TS1109: [0mExpression expected.
+
+[7m17[0m         return next(new HttpException(401, `${filesTooLarge.length > 0 && typeDoesntMatch.length > 0 ? "a file is too large maximum is 5mb and a file isn't an image" : typeDoesntMatch.length > 0 ? "files can only to be images" : }`));
+[7m  [0m [91m                                                                                                                                                                                                                                     ~[0m
+
+    at createTSError (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:863:19)
+    at C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1379:34
+    at Object.compile (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1458:13)
+    at Module.m._compile (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1617:30)
+    at Module._extensions..js (internal/modules/cjs/loader.js:1114:10)
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (internal/modules/cjs/loader.js:950:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:790:12)
+    at Module.require (internal/modules/cjs/loader.js:974:19)
+2023-04-26 12:01:02 error: [POST] /sellers/upload/identitycard/cus_NmLXh0ms2IoGSe >> StatusCode:: 401, Message:: a file is too large maximum is 5mb and a file isn't an image
+2023-04-26 12:01:44 error: uncaughtException: Octal literals are not allowed in strict mode.
+C:\Users\Devops3\Documents\Projects\feetflight\src\middlewares\fileValidation.middleware.ts:12
+                if (fileeData[key][0].size > 000000)
+                                             ^^^^^^
+
+SyntaxError: Octal literals are not allowed in strict mode.
+    at wrapSafe (internal/modules/cjs/loader.js:1001:16)
+    at Module._compile (internal/modules/cjs/loader.js:1049:27)
+    at Module.m._compile (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1618:23)
+    at Module._extensions..js (internal/modules/cjs/loader.js:1114:10)
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (internal/modules/cjs/loader.js:950:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:790:12)
+    at Module.require (internal/modules/cjs/loader.js:974:19)
+    at require (internal/modules/cjs/helpers.js:101:18)
+    at Object.<anonymous> (C:\Users\Devops3\Documents\Projects\feetflight\src\routes\users.route.ts:5:1)
+2023-04-26 12:02:31 error: [POST] /sellers/upload/identitycard/cus_NmLXh0ms2IoGSe >> StatusCode:: 401, Message:: a file is too large
+2023-04-26 12:03:15 error: [POST] /sellers/upload/identitycard/cus_NmLXh0ms2IoGSe >> StatusCode:: 401, Message:: a file is too large maximum is 5mb and a file isn't an image
+2023-04-26 12:03:46 error: [POST] /sellers/upload/identitycard/cus_NmLXh0ms2IoGSe >> StatusCode:: 401, Message:: a file is too large maximum is 5mb and a file isn't an image
+2023-04-26 12:04:07 error: [POST] /sellers/upload/identitycard/cus_NmLXh0ms2IoGSe >> StatusCode:: 401, Message:: files can only to be images
+2023-04-26 12:04:30 error: [POST] /sellers/upload/identitycard/cus_NmLXh0ms2IoGSe >> StatusCode:: 401, Message:: a file is too large maximum is 5mb and a file isn't an image
+2023-04-26 12:06:35 error: uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/middlewares/fileValidation.middleware.ts[0m:[93m23[0m:[93m113[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m23[0m       if (fileData.mimetype.split("/")[0] != "image") next(new HttpException(401, "files can only to be images" : filesTooLarge.length > 0 && "a file is too large"}`));
+[7m  [0m [91m                                                                                                                ~[0m
+[96msrc/middlewares/fileValidation.middleware.ts[0m:[93m23[0m:[93m164[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m23[0m       if (fileData.mimetype.split("/")[0] != "image") next(new HttpException(401, "files can only to be images" : filesTooLarge.length > 0 && "a file is too large"}`));
+[7m  [0m [91m                                                                                                                                                                   ~[0m
+[96msrc/middlewares/fileValidation.middleware.ts[0m:[93m35[0m:[93m1[0m - [91merror[0m[90m TS1160: [0mUnterminated template literal.
+
+[7m35[0m 
+[7m  [0m [91m[0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/middlewares/fileValidation.middleware.ts[0m:[93m23[0m:[93m113[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m23[0m       if (fileData.mimetype.split("/")[0] != "image") next(new HttpException(401, "files can only to be images" : filesTooLarge.length > 0 && "a file is too large"}`));
+[7m  [0m [91m                                                                                                                ~[0m
+[96msrc/middlewares/fileValidation.middleware.ts[0m:[93m23[0m:[93m164[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m23[0m       if (fileData.mimetype.split("/")[0] != "image") next(new HttpException(401, "files can only to be images" : filesTooLarge.length > 0 && "a file is too large"}`));
+[7m  [0m [91m                                                                                                                                                                   ~[0m
+[96msrc/middlewares/fileValidation.middleware.ts[0m:[93m35[0m:[93m1[0m - [91merror[0m[90m TS1160: [0mUnterminated template literal.
+
+[7m35[0m 
+[7m  [0m [91m[0m
+
+    at createTSError (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:863:19)
+    at C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1379:34
+    at Object.compile (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1458:13)
+    at Module.m._compile (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1617:30)
+    at Module._extensions..js (internal/modules/cjs/loader.js:1114:10)
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (internal/modules/cjs/loader.js:950:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:790:12)
+    at Module.require (internal/modules/cjs/loader.js:974:19)
+2023-04-26 12:07:14 error: [POST] /users/upload/avatar/cus_NmLXh0ms2IoGSe >> StatusCode:: 401, Message:: avatar is too large
+2023-04-26 12:07:35 error: [POST] /users/upload/avatar/cus_NmLXh0ms2IoGSe >> StatusCode:: 401, Message:: avatar is too large
+2023-04-26 12:08:23 error: [POST] /users/upload/avatar/cus_NmLXh0ms2IoGSe >> StatusCode:: 404, Message:: file needed
+2023-04-26 12:08:36 error: [POST] /users/upload/avatar/cus_NmLXh0ms2IoGSe >> StatusCode:: 401, Message:: files can only to be images
+2023-04-26 12:09:20 error: [POST] /users/upload/avatar/cus_NmLXh0ms2IoGSe >> StatusCode:: 401, Message:: avatar is too large
+2023-04-26 12:15:04 error: uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/services/post.service.ts[0m:[93m198[0m:[93m23[0m - [91merror[0m[90m TS1109: [0mExpression expected.
+
+[7m198[0m         Key: fileName+,
+[7m   [0m [91m                      ~[0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/services/post.service.ts[0m:[93m198[0m:[93m23[0m - [91merror[0m[90m TS1109: [0mExpression expected.
+
+[7m198[0m         Key: fileName+,
+[7m   [0m [91m                      ~[0m
+
+    at createTSError (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:863:19)
+    at C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1379:34
+    at Object.compile (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1458:13)
+    at Module.m._compile (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1617:30)
+    at Module._extensions..js (internal/modules/cjs/loader.js:1114:10)
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (internal/modules/cjs/loader.js:950:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:790:12)
+    at Module.require (internal/modules/cjs/loader.js:974:19)
+2023-04-26 12:15:18 error: uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/services/post.service.ts[0m:[93m236[0m:[93m1[0m - [91merror[0m[90m TS1160: [0mUnterminated template literal.
+
+[7m236[0m 
+[7m   [0m [91m[0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/services/post.service.ts[0m:[93m236[0m:[93m1[0m - [91merror[0m[90m TS1160: [0mUnterminated template literal.
+
+[7m236[0m 
+[7m   [0m [91m[0m
+
+    at createTSError (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:863:19)
+    at C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1379:34
+    at Object.compile (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1458:13)
+    at Module.m._compile (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1617:30)
+    at Module._extensions..js (internal/modules/cjs/loader.js:1114:10)
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (internal/modules/cjs/loader.js:950:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:790:12)
+    at Module.require (internal/modules/cjs/loader.js:974:19)
+2023-04-26 12:15:34 error: uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/services/post.service.ts[0m:[93m198[0m:[93m31[0m - [91merror[0m[90m TS1109: [0mExpression expected.
+
+[7m198[0m         Key: `${fileName} + ${}`,
+[7m   [0m [91m                              ~[0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/services/post.service.ts[0m:[93m198[0m:[93m31[0m - [91merror[0m[90m TS1109: [0mExpression expected.
+
+[7m198[0m         Key: `${fileName} + ${}`,
+[7m   [0m [91m                              ~[0m
+
+    at createTSError (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:863:19)
+    at C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1379:34
+    at Object.compile (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1458:13)
+    at Module.m._compile (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1617:30)
+    at Module._extensions..js (internal/modules/cjs/loader.js:1114:10)
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (internal/modules/cjs/loader.js:950:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:790:12)
+    at Module.require (internal/modules/cjs/loader.js:974:19)
+2023-04-26 12:20:57 error: uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/services/post.service.ts[0m:[93m119[0m:[93m7[0m - [91merror[0m[90m TS1003: [0mIdentifier expected.
+
+[7m119[0m       });
+[7m   [0m [91m      ~[0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/services/post.service.ts[0m:[93m119[0m:[93m7[0m - [91merror[0m[90m TS1003: [0mIdentifier expected.
+
+[7m119[0m       });
+[7m   [0m [91m      ~[0m
+
+    at createTSError (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:863:19)
+    at C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1379:34
+    at Object.compile (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1458:13)
+    at Module.m._compile (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1617:30)
+    at Module._extensions..js (internal/modules/cjs/loader.js:1114:10)
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (internal/modules/cjs/loader.js:950:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:790:12)
+    at Module.require (internal/modules/cjs/loader.js:974:19)
+2023-04-26 12:23:19 error: uncaughtException: Unexpected token ';'
+C:\Users\Devops3\Documents\Projects\feetflight\src\services\post.service.ts:120
+            const ;
+                  ^
+
+SyntaxError: Unexpected token ';'
+    at wrapSafe (internal/modules/cjs/loader.js:1001:16)
+    at Module._compile (internal/modules/cjs/loader.js:1049:27)
+    at Module.m._compile (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1618:23)
+    at Module._extensions..js (internal/modules/cjs/loader.js:1114:10)
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (internal/modules/cjs/loader.js:950:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:790:12)
+    at Module.require (internal/modules/cjs/loader.js:974:19)
+    at require (internal/modules/cjs/helpers.js:101:18)
+    at Object.<anonymous> (C:\Users\Devops3\Documents\Projects\feetflight\src\controllers\post.controller.ts:2:1)
+2023-04-26 12:23:56 error: uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/services/post.service.ts[0m:[93m140[0m:[93m32[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m140[0m       return {createdCollection.records.map(record => record.get('p').properties)[0]};
+[7m   [0m [91m                               ~[0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/services/post.service.ts[0m:[93m140[0m:[93m32[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m140[0m       return {createdCollection.records.map(record => record.get('p').properties)[0]};
+[7m   [0m [91m                               ~[0m
+
+    at createTSError (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:863:19)
+    at C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1379:34
+    at Object.compile (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1458:13)
+    at Module.m._compile (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1617:30)
+    at Module._extensions..js (internal/modules/cjs/loader.js:1114:10)
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (internal/modules/cjs/loader.js:950:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:790:12)
+    at Module.require (internal/modules/cjs/loader.js:974:19)
+2023-04-26 12:24:00 error: uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/services/post.service.ts[0m:[93m138[0m:[93m32[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m138[0m       return {createdCollection.records.map(record => record.get('p').properties)[0]};
+[7m   [0m [91m                               ~[0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/services/post.service.ts[0m:[93m138[0m:[93m32[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m138[0m       return {createdCollection.records.map(record => record.get('p').properties)[0]};
+[7m   [0m [91m                               ~[0m
+
+    at createTSError (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:863:19)
+    at C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1379:34
+    at Object.compile (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1458:13)
+    at Module.m._compile (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1617:30)
+    at Module._extensions..js (internal/modules/cjs/loader.js:1114:10)
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (internal/modules/cjs/loader.js:950:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:790:12)
+    at Module.require (internal/modules/cjs/loader.js:974:19)
+2023-04-26 12:24:12 error: uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/services/post.service.ts[0m:[93m138[0m:[93m92[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m138[0m       return {post: createdCollection.records.map(record => record.get('p').properties)[0] collection: };
+[7m   [0m [91m                                                                                           ~~~~~~~~~~[0m
+[96msrc/services/post.service.ts[0m:[93m138[0m:[93m104[0m - [91merror[0m[90m TS1109: [0mExpression expected.
+
+[7m138[0m       return {post: createdCollection.records.map(record => record.get('p').properties)[0] collection: };
+[7m   [0m [91m                                                                                                       ~[0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/services/post.service.ts[0m:[93m138[0m:[93m92[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m138[0m       return {post: createdCollection.records.map(record => record.get('p').properties)[0] collection: };
+[7m   [0m [91m                                                                                           ~~~~~~~~~~[0m
+[96msrc/services/post.service.ts[0m:[93m138[0m:[93m104[0m - [91merror[0m[90m TS1109: [0mExpression expected.
+
+[7m138[0m       return {post: createdCollection.records.map(record => record.get('p').properties)[0] collection: };
+[7m   [0m [91m                                                                                                       ~[0m
+
+    at createTSError (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:863:19)
+    at C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1379:34
+    at Object.compile (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1458:13)
+    at Module.m._compile (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1617:30)
+    at Module._extensions..js (internal/modules/cjs/loader.js:1114:10)
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (internal/modules/cjs/loader.js:950:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:790:12)
+    at Module.require (internal/modules/cjs/loader.js:974:19)
+2023-04-26 12:24:16 error: uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/services/post.service.ts[0m:[93m138[0m:[93m105[0m - [91merror[0m[90m TS1109: [0mExpression expected.
+
+[7m138[0m       return {post: createdCollection.records.map(record => record.get('p').properties)[0], collection: };
+[7m   [0m [91m                                                                                                        ~[0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/services/post.service.ts[0m:[93m138[0m:[93m105[0m - [91merror[0m[90m TS1109: [0mExpression expected.
+
+[7m138[0m       return {post: createdCollection.records.map(record => record.get('p').properties)[0], collection: };
+[7m   [0m [91m                                                                                                        ~[0m
+
+    at createTSError (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:863:19)
+    at C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1379:34
+    at Object.compile (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1458:13)
+    at Module.m._compile (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1617:30)
+    at Module._extensions..js (internal/modules/cjs/loader.js:1114:10)
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (internal/modules/cjs/loader.js:950:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:790:12)
+    at Module.require (internal/modules/cjs/loader.js:974:19)
+2023-04-26 12:28:30 error: uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/controllers/post.controller.ts[0m:[93m79[0m:[93m50[0m - [91merror[0m[90m TS1003: [0mIdentifier expected.
+
+[7m79[0m       const createdPost = await this.postService.(userId, postData);
+[7m  [0m [91m                                                 ~[0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/controllers/post.controller.ts[0m:[93m79[0m:[93m50[0m - [91merror[0m[90m TS1003: [0mIdentifier expected.
+
+[7m79[0m       const createdPost = await this.postService.(userId, postData);
+[7m  [0m [91m                                                 ~[0m
+
+    at createTSError (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:863:19)
+    at C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1379:34
+    at Object.compile (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1458:13)
+    at Module.m._compile (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1617:30)
+    at Module._extensions..js (internal/modules/cjs/loader.js:1114:10)
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (internal/modules/cjs/loader.js:950:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:790:12)
+    at Module.require (internal/modules/cjs/loader.js:974:19)
+2023-04-26 12:29:33 error: uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/services/post.service.ts[0m:[93m164[0m:[93m35[0m - [91merror[0m[90m TS1138: [0mParameter declaration expected.
+
+[7m164[0m   public async uploadPostPictures(, collectionId: string) {
+[7m   [0m [91m                                  ~[0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/services/post.service.ts[0m:[93m164[0m:[93m35[0m - [91merror[0m[90m TS1138: [0mParameter declaration expected.
+
+[7m164[0m   public async uploadPostPictures(, collectionId: string) {
+[7m   [0m [91m                                  ~[0m
+
+    at createTSError (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:863:19)
+    at C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1379:34
+    at Object.compile (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1458:13)
+    at Module.m._compile (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1617:30)
+    at Module._extensions..js (internal/modules/cjs/loader.js:1114:10)
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (internal/modules/cjs/loader.js:950:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:790:12)
+    at Module.require (internal/modules/cjs/loader.js:974:19)
+2023-04-26 12:30:37 error: uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/services/post.service.ts[0m:[93m167[0m:[93m23[0m - [91merror[0m[90m TS1109: [0mExpression expected.
+
+[7m167[0m       for (let key in ) {
+[7m   [0m [91m                      ~[0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/services/post.service.ts[0m:[93m167[0m:[93m23[0m - [91merror[0m[90m TS1109: [0mExpression expected.
+
+[7m167[0m       for (let key in ) {
+[7m   [0m [91m                      ~[0m
+
+    at createTSError (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:863:19)
+    at C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1379:34
+    at Object.compile (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1458:13)
+    at Module.m._compile (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1617:30)
+    at Module._extensions..js (internal/modules/cjs/loader.js:1114:10)
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (internal/modules/cjs/loader.js:950:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:790:12)
+    at Module.require (internal/modules/cjs/loader.js:974:19)
+2023-04-26 12:31:04 error: uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/services/post.service.ts[0m:[93m168[0m:[93m34[0m - [91merror[0m[90m TS1011: [0mAn element access expression should take an argument.
+
+[7m168[0m         console.log(pictureFiles[]);
+[7m   [0m [91m                                 [0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/services/post.service.ts[0m:[93m168[0m:[93m34[0m - [91merror[0m[90m TS1011: [0mAn element access expression should take an argument.
+
+[7m168[0m         console.log(pictureFiles[]);
+[7m   [0m [91m                                 [0m
+
+    at createTSError (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:863:19)
+    at C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1379:34
+    at Object.compile (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1458:13)
+    at Module.m._compile (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1617:30)
+    at Module._extensions..js (internal/modules/cjs/loader.js:1114:10)
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (internal/modules/cjs/loader.js:950:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:790:12)
+    at Module.require (internal/modules/cjs/loader.js:974:19)
+2023-04-26 12:31:35 error: uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/services/post.service.ts[0m:[93m177[0m:[93m54[0m - [91merror[0m[90m TS1003: [0mIdentifier expected.
+
+[7m177[0m         const filecontent = Buffer.from(pictureFiles., 'binary');
+[7m   [0m [91m                                                     ~[0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/services/post.service.ts[0m:[93m177[0m:[93m54[0m - [91merror[0m[90m TS1003: [0mIdentifier expected.
+
+[7m177[0m         const filecontent = Buffer.from(pictureFiles., 'binary');
+[7m   [0m [91m                                                     ~[0m
+
+    at createTSError (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:863:19)
+    at C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1379:34
+    at Object.compile (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1458:13)
+    at Module.m._compile (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1617:30)
+    at Module._extensions..js (internal/modules/cjs/loader.js:1114:10)
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (internal/modules/cjs/loader.js:950:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:790:12)
+    at Module.require (internal/modules/cjs/loader.js:974:19)
+2023-04-26 12:37:36 error: uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/routes/post.route.ts[0m:[93m20[0m:[93m49[0m - [91merror[0m[90m TS1135: [0mArgument expression expected.
+
+[7m20[0m     this.router.post(`${this.path}/upload/:id`, , this.postController.uploadPostPictures);
+[7m  [0m [91m                                                ~[0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/routes/post.route.ts[0m:[93m20[0m:[93m49[0m - [91merror[0m[90m TS1135: [0mArgument expression expected.
+
+[7m20[0m     this.router.post(`${this.path}/upload/:id`, , this.postController.uploadPostPictures);
+[7m  [0m [91m                                                ~[0m
+
+    at createTSError (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:863:19)
+    at C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1379:34
+    at Object.compile (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1458:13)
+    at Module.m._compile (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1617:30)
+    at Module._extensions..js (internal/modules/cjs/loader.js:1114:10)
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (internal/modules/cjs/loader.js:950:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:790:12)
+    at Module.require (internal/modules/cjs/loader.js:974:19)
+2023-04-26 12:38:10 error: [POST] /posts/upload/8e85e99748e668125cfd5549a77ac712ed0fdf40 >> StatusCode:: 500, Message:: Unexpected field
+2023-04-26 12:38:14 error: [POST] /posts/upload/8e85e99748e668125cfd5549a77ac712ed0fdf40 >> StatusCode:: 500, Message:: Unexpected field
+2023-04-26 12:55:55 error: uncaughtException: file is not defined
+ReferenceError: file is not defined
+    at postRoute.initializeRoutes (C:\Users\Devops3\Documents\Projects\feetflight\src\routes\post.route.ts:20:80)
+    at new postRoute (C:\Users\Devops3\Documents\Projects\feetflight\src\routes\post.route.ts:12:10)
+    at Object.<anonymous> (C:\Users\Devops3\Documents\Projects\feetflight\src\server.ts:12:75)
+    at Module._compile (internal/modules/cjs/loader.js:1085:14)
+    at Module.m._compile (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1618:23)
+    at Module._extensions..js (internal/modules/cjs/loader.js:1114:10)
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (internal/modules/cjs/loader.js:950:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:790:12)
+    at Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:75:12)
+2023-04-26 12:55:59 error: uncaughtException: files is not defined
+ReferenceError: files is not defined
+    at postRoute.initializeRoutes (C:\Users\Devops3\Documents\Projects\feetflight\src\routes\post.route.ts:20:80)
+    at new postRoute (C:\Users\Devops3\Documents\Projects\feetflight\src\routes\post.route.ts:12:10)
+    at Object.<anonymous> (C:\Users\Devops3\Documents\Projects\feetflight\src\server.ts:12:75)
+    at Module._compile (internal/modules/cjs/loader.js:1085:14)
+    at Module.m._compile (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1618:23)
+    at Module._extensions..js (internal/modules/cjs/loader.js:1114:10)
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (internal/modules/cjs/loader.js:950:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:790:12)
+    at Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:75:12)
+2023-04-26 12:56:10 error: uncaughtException: filesVa is not defined
+ReferenceError: filesVa is not defined
+    at postRoute.initializeRoutes (C:\Users\Devops3\Documents\Projects\feetflight\src\routes\post.route.ts:20:80)
+    at new postRoute (C:\Users\Devops3\Documents\Projects\feetflight\src\routes\post.route.ts:12:10)
+    at Object.<anonymous> (C:\Users\Devops3\Documents\Projects\feetflight\src\server.ts:12:75)
+    at Module._compile (internal/modules/cjs/loader.js:1085:14)
+    at Module.m._compile (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1618:23)
+    at Module._extensions..js (internal/modules/cjs/loader.js:1114:10)
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (internal/modules/cjs/loader.js:950:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:790:12)
+    at Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:75:12)
+2023-04-26 12:56:12 error: uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/routes/post.route.ts[0m:[93m20[0m:[93m80[0m - [91merror[0m[90m TS1135: [0mArgument expression expected.
+
+[7m20[0m     this.router.post(`${this.path}/upload/:id`, multer().array("postPicture"), , this.postController.uploadPostPictures);
+[7m  [0m [91m                                                                               ~[0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/routes/post.route.ts[0m:[93m20[0m:[93m80[0m - [91merror[0m[90m TS1135: [0mArgument expression expected.
+
+[7m20[0m     this.router.post(`${this.path}/upload/:id`, multer().array("postPicture"), , this.postController.uploadPostPictures);
+[7m  [0m [91m                                                                               ~[0m
+
+    at createTSError (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:863:19)
+    at C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1379:34
+    at Object.compile (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1458:13)
+    at Module.m._compile (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1617:30)
+    at Module._extensions..js (internal/modules/cjs/loader.js:1114:10)
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (internal/modules/cjs/loader.js:950:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:790:12)
+    at Module.require (internal/modules/cjs/loader.js:974:19)
+2023-04-26 12:56:16 error: uncaughtException: file is not defined
+ReferenceError: file is not defined
+    at postRoute.initializeRoutes (C:\Users\Devops3\Documents\Projects\feetflight\src\routes\post.route.ts:20:80)
+    at new postRoute (C:\Users\Devops3\Documents\Projects\feetflight\src\routes\post.route.ts:12:10)
+    at Object.<anonymous> (C:\Users\Devops3\Documents\Projects\feetflight\src\server.ts:12:75)
+    at Module._compile (internal/modules/cjs/loader.js:1085:14)
+    at Module.m._compile (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1618:23)
+    at Module._extensions..js (internal/modules/cjs/loader.js:1114:10)
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (internal/modules/cjs/loader.js:950:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:790:12)
+    at Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:75:12)
+2023-04-26 12:56:20 error: uncaughtException: fileV is not defined
+ReferenceError: fileV is not defined
+    at postRoute.initializeRoutes (C:\Users\Devops3\Documents\Projects\feetflight\src\routes\post.route.ts:20:80)
+    at new postRoute (C:\Users\Devops3\Documents\Projects\feetflight\src\routes\post.route.ts:12:10)
+    at Object.<anonymous> (C:\Users\Devops3\Documents\Projects\feetflight\src\server.ts:12:75)
+    at Module._compile (internal/modules/cjs/loader.js:1085:14)
+    at Module.m._compile (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1618:23)
+    at Module._extensions..js (internal/modules/cjs/loader.js:1114:10)
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (internal/modules/cjs/loader.js:950:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:790:12)
+    at Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:75:12)
+2023-04-26 12:56:29 error: uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/routes/post.route.ts[0m:[93m20[0m:[93m80[0m - [91merror[0m[90m TS1135: [0mArgument expression expected.
+
+[7m20[0m     this.router.post(`${this.path}/upload/:id`, multer().array("postPicture"), , this.postController.uploadPostPictures);
+[7m  [0m [91m                                                                               ~[0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/routes/post.route.ts[0m:[93m20[0m:[93m80[0m - [91merror[0m[90m TS1135: [0mArgument expression expected.
+
+[7m20[0m     this.router.post(`${this.path}/upload/:id`, multer().array("postPicture"), , this.postController.uploadPostPictures);
+[7m  [0m [91m                                                                               ~[0m
+
+    at createTSError (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:863:19)
+    at C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1379:34
+    at Object.compile (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1458:13)
+    at Module.m._compile (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1617:30)
+    at Module._extensions..js (internal/modules/cjs/loader.js:1114:10)
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (internal/modules/cjs/loader.js:950:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:790:12)
+    at Module.require (internal/modules/cjs/loader.js:974:19)
+2023-04-26 12:56:34 error: uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/routes/post.route.ts[0m:[93m21[0m:[93m80[0m - [91merror[0m[90m TS1135: [0mArgument expression expected.
+
+[7m21[0m     this.router.post(`${this.path}/upload/:id`, multer().array("postPicture"), , this.postController.uploadPostPictures);
+[7m  [0m [91m                                                                               ~[0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/routes/post.route.ts[0m:[93m21[0m:[93m80[0m - [91merror[0m[90m TS1135: [0mArgument expression expected.
+
+[7m21[0m     this.router.post(`${this.path}/upload/:id`, multer().array("postPicture"), , this.postController.uploadPostPictures);
+[7m  [0m [91m                                                                               ~[0m
+
+    at createTSError (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:863:19)
+    at C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1379:34
+    at Object.compile (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1458:13)
+    at Module.m._compile (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1617:30)
+    at Module._extensions..js (internal/modules/cjs/loader.js:1114:10)
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (internal/modules/cjs/loader.js:950:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:790:12)
+    at Module.require (internal/modules/cjs/loader.js:974:19)
+2023-04-26 12:56:40 error: uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/routes/post.route.ts[0m:[93m7[0m:[93m1[0m - [91merror[0m[90m TS1005: [0m'=' expected.
+
+[7m7[0m class postRoute implements Routes {
+[7m [0m [91m~~~~~[0m
+[96msrc/routes/post.route.ts[0m:[93m21[0m:[93m80[0m - [91merror[0m[90m TS1135: [0mArgument expression expected.
+
+[7m21[0m     this.router.post(`${this.path}/upload/:id`, multer().array("postPicture"), , this.postController.uploadPostPictures);
+[7m  [0m [91m                                                                               ~[0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/routes/post.route.ts[0m:[93m7[0m:[93m1[0m - [91merror[0m[90m TS1005: [0m'=' expected.
+
+[7m7[0m class postRoute implements Routes {
+[7m [0m [91m~~~~~[0m
+[96msrc/routes/post.route.ts[0m:[93m21[0m:[93m80[0m - [91merror[0m[90m TS1135: [0mArgument expression expected.
+
+[7m21[0m     this.router.post(`${this.path}/upload/:id`, multer().array("postPicture"), , this.postController.uploadPostPictures);
+[7m  [0m [91m                                                                               ~[0m
+
+    at createTSError (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:863:19)
+    at C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1379:34
+    at Object.compile (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1458:13)
+    at Module.m._compile (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1617:30)
+    at Module._extensions..js (internal/modules/cjs/loader.js:1114:10)
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (internal/modules/cjs/loader.js:950:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:790:12)
+    at Module.require (internal/modules/cjs/loader.js:974:19)
+2023-04-26 12:56:44 error: uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/routes/post.route.ts[0m:[93m7[0m:[93m1[0m - [91merror[0m[90m TS1005: [0m'=' expected.
+
+[7m7[0m class postRoute implements Routes {
+[7m [0m [91m~~~~~[0m
+[96msrc/routes/post.route.ts[0m:[93m21[0m:[93m80[0m - [91merror[0m[90m TS1135: [0mArgument expression expected.
+
+[7m21[0m     this.router.post(`${this.path}/upload/:id`, multer().array("postPicture"), , this.postController.uploadPostPictures);
+[7m  [0m [91m                                                                               ~[0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/routes/post.route.ts[0m:[93m7[0m:[93m1[0m - [91merror[0m[90m TS1005: [0m'=' expected.
+
+[7m7[0m class postRoute implements Routes {
+[7m [0m [91m~~~~~[0m
+[96msrc/routes/post.route.ts[0m:[93m21[0m:[93m80[0m - [91merror[0m[90m TS1135: [0mArgument expression expected.
+
+[7m21[0m     this.router.post(`${this.path}/upload/:id`, multer().array("postPicture"), , this.postController.uploadPostPictures);
+[7m  [0m [91m                                                                               ~[0m
+
+    at createTSError (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:863:19)
+    at C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1379:34
+    at Object.compile (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1458:13)
+    at Module.m._compile (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1617:30)
+    at Module._extensions..js (internal/modules/cjs/loader.js:1114:10)
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (internal/modules/cjs/loader.js:950:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:790:12)
+    at Module.require (internal/modules/cjs/loader.js:974:19)
+2023-04-26 12:56:53 error: uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/routes/post.route.ts[0m:[93m7[0m:[93m1[0m - [91merror[0m[90m TS1005: [0m'=' expected.
+
+[7m7[0m class postRoute implements Routes {
+[7m [0m [91m~~~~~[0m
+[96msrc/routes/post.route.ts[0m:[93m21[0m:[93m80[0m - [91merror[0m[90m TS1135: [0mArgument expression expected.
+
+[7m21[0m     this.router.post(`${this.path}/upload/:id`, multer().array("postPicture"), , this.postController.uploadPostPictures);
+[7m  [0m [91m                                                                               ~[0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/routes/post.route.ts[0m:[93m7[0m:[93m1[0m - [91merror[0m[90m TS1005: [0m'=' expected.
+
+[7m7[0m class postRoute implements Routes {
+[7m [0m [91m~~~~~[0m
+[96msrc/routes/post.route.ts[0m:[93m21[0m:[93m80[0m - [91merror[0m[90m TS1135: [0mArgument expression expected.
+
+[7m21[0m     this.router.post(`${this.path}/upload/:id`, multer().array("postPicture"), , this.postController.uploadPostPictures);
+[7m  [0m [91m                                                                               ~[0m
+
+    at createTSError (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:863:19)
+    at C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1379:34
+    at Object.compile (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1458:13)
+    at Module.m._compile (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1617:30)
+    at Module._extensions..js (internal/modules/cjs/loader.js:1114:10)
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (internal/modules/cjs/loader.js:950:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:790:12)
+    at Module.require (internal/modules/cjs/loader.js:974:19)
+2023-04-26 12:57:05 error: uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/routes/post.route.ts[0m:[93m21[0m:[93m80[0m - [91merror[0m[90m TS1135: [0mArgument expression expected.
+
+[7m21[0m     this.router.post(`${this.path}/upload/:id`, multer().array("postPicture"), , this.postController.uploadPostPictures);
+[7m  [0m [91m                                                                               ~[0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/routes/post.route.ts[0m:[93m21[0m:[93m80[0m - [91merror[0m[90m TS1135: [0mArgument expression expected.
+
+[7m21[0m     this.router.post(`${this.path}/upload/:id`, multer().array("postPicture"), , this.postController.uploadPostPictures);
+[7m  [0m [91m                                                                               ~[0m
+
+    at createTSError (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:863:19)
+    at C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1379:34
+    at Object.compile (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1458:13)
+    at Module.m._compile (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1617:30)
+    at Module._extensions..js (internal/modules/cjs/loader.js:1114:10)
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (internal/modules/cjs/loader.js:950:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:790:12)
+    at Module.require (internal/modules/cjs/loader.js:974:19)
+2023-04-26 12:57:14 error: uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/routes/post.route.ts[0m:[93m21[0m:[93m80[0m - [91merror[0m[90m TS1135: [0mArgument expression expected.
+
+[7m21[0m     this.router.post(`${this.path}/upload/:id`, multer().array("postPicture"), , this.postController.uploadPostPictures);
+[7m  [0m [91m                                                                               ~[0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/routes/post.route.ts[0m:[93m21[0m:[93m80[0m - [91merror[0m[90m TS1135: [0mArgument expression expected.
+
+[7m21[0m     this.router.post(`${this.path}/upload/:id`, multer().array("postPicture"), , this.postController.uploadPostPictures);
+[7m  [0m [91m                                                                               ~[0m
+
+    at createTSError (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:863:19)
+    at C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1379:34
+    at Object.compile (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1458:13)
+    at Module.m._compile (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1617:30)
+    at Module._extensions..js (internal/modules/cjs/loader.js:1114:10)
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (internal/modules/cjs/loader.js:950:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:790:12)
+    at Module.require (internal/modules/cjs/loader.js:974:19)
+2023-04-26 12:57:28 error: uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/routes/post.route.ts[0m:[93m21[0m:[93m80[0m - [91merror[0m[90m TS1135: [0mArgument expression expected.
+
+[7m21[0m     this.router.post(`${this.path}/upload/:id`, multer().array("postPicture"), , this.postController.uploadPostPictures);
+[7m  [0m [91m                                                                               ~[0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/routes/post.route.ts[0m:[93m21[0m:[93m80[0m - [91merror[0m[90m TS1135: [0mArgument expression expected.
+
+[7m21[0m     this.router.post(`${this.path}/upload/:id`, multer().array("postPicture"), , this.postController.uploadPostPictures);
+[7m  [0m [91m                                                                               ~[0m
+
+    at createTSError (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:863:19)
+    at C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1379:34
+    at Object.compile (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1458:13)
+    at Module.m._compile (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1617:30)
+    at Module._extensions..js (internal/modules/cjs/loader.js:1114:10)
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (internal/modules/cjs/loader.js:950:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:790:12)
+    at Module.require (internal/modules/cjs/loader.js:974:19)
+2023-04-26 12:58:01 error: [POST] /posts/upload/f4cc28119e216249cd8f671d2b136aa1697a7491 >> StatusCode:: 401, Message:: TypeError: Cannot read property 'size' of undefined
+2023-04-26 12:58:13 error: [POST] /posts/upload/f4cc28119e216249cd8f671d2b136aa1697a7491 >> StatusCode:: 401, Message:: TypeError: Cannot read property 'size' of undefined
+2023-04-26 12:59:03 error: [POST] /posts/upload/f4cc28119e216249cd8f671d2b136aa1697a7491 >> StatusCode:: 401, Message:: TypeError: Cannot read property 'size' of undefined
+2023-04-26 12:59:45 error: [POST] /sellers/upload/identitycard/cus_NmLXh0ms2IoGSe >> StatusCode:: 401, Message:: a file is too large maximum is 5mb and a file isn't an image
+2023-04-26 13:00:13 error: [POST] /posts/upload/f4cc28119e216249cd8f671d2b136aa1697a7491 >> StatusCode:: 401, Message:: TypeError: Cannot read property 'size' of undefined
+2023-04-26 13:03:20 error: [POST] /posts/upload/f4cc28119e216249cd8f671d2b136aa1697a7491 >> StatusCode:: 401, Message:: TypeError: Cannot read property 'size' of undefined
+2023-04-26 13:04:18 error: [POST] /posts/upload/f4cc28119e216249cd8f671d2b136aa1697a7491 >> StatusCode:: 401, Message:: TypeError: Cannot read property 'size' of undefined
+2023-04-26 13:09:05 error: uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/routes/post.route.ts[0m:[93m21[0m:[93m58[0m - [91merror[0m[90m TS1003: [0mIdentifier expected.
+
+[7m21[0m     this.router.post(`${this.path}/upload/:id`, multer()., fileMiddleware, this.postController.uploadPostPictures);
+[7m  [0m [91m                                                         ~[0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/routes/post.route.ts[0m:[93m21[0m:[93m58[0m - [91merror[0m[90m TS1003: [0mIdentifier expected.
+
+[7m21[0m     this.router.post(`${this.path}/upload/:id`, multer()., fileMiddleware, this.postController.uploadPostPictures);
+[7m  [0m [91m                                                         ~[0m
+
+    at createTSError (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:863:19)
+    at C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1379:34
+    at Object.compile (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1458:13)
+    at Module.m._compile (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1617:30)
+    at Module._extensions..js (internal/modules/cjs/loader.js:1114:10)
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (internal/modules/cjs/loader.js:950:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:790:12)
+    at Module.require (internal/modules/cjs/loader.js:974:19)
+2023-04-26 13:09:20 error: [POST] /posts/upload/f4cc28119e216249cd8f671d2b136aa1697a7491 >> StatusCode:: 401, Message:: TypeError: Cannot read property 'size' of undefined
+2023-04-26 13:10:02 error: uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/middlewares/fileValidation.middleware.ts[0m:[93m10[0m:[93m10[0m - [91merror[0m[90m TS1109: [0mExpression expected.
+
+[7m10[0m       if()
+[7m  [0m [91m         ~[0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/middlewares/fileValidation.middleware.ts[0m:[93m10[0m:[93m10[0m - [91merror[0m[90m TS1109: [0mExpression expected.
+
+[7m10[0m       if()
+[7m  [0m [91m         ~[0m
+
+    at createTSError (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:863:19)
+    at C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1379:34
+    at Object.compile (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1458:13)
+    at Module.m._compile (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1617:30)
+    at Module._extensions..js (internal/modules/cjs/loader.js:1114:10)
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (internal/modules/cjs/loader.js:950:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:790:12)
+    at Module.require (internal/modules/cjs/loader.js:974:19)
+2023-04-26 13:10:31 error: uncaughtException: Unexpected token 'const'
+C:\Users\Devops3\Documents\Projects\feetflight\src\middlewares\fileValidation.middleware.ts:10
+                const filesTooLarge = [];
+                ^^^^^
+
+SyntaxError: Unexpected token 'const'
+    at wrapSafe (internal/modules/cjs/loader.js:1001:16)
+    at Module._compile (internal/modules/cjs/loader.js:1049:27)
+    at Module.m._compile (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1618:23)
+    at Module._extensions..js (internal/modules/cjs/loader.js:1114:10)
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (internal/modules/cjs/loader.js:950:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:790:12)
+    at Module.require (internal/modules/cjs/loader.js:974:19)
+    at require (internal/modules/cjs/helpers.js:101:18)
+    at Object.<anonymous> (C:\Users\Devops3\Documents\Projects\feetflight\src\routes\users.route.ts:5:1)
+2023-04-26 13:10:42 error: uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/middlewares/fileValidation.middleware.ts[0m:[93m10[0m:[93m10[0m - [91merror[0m[90m TS1109: [0mExpression expected.
+
+[7m10[0m       if()
+[7m  [0m [91m         ~[0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/middlewares/fileValidation.middleware.ts[0m:[93m10[0m:[93m10[0m - [91merror[0m[90m TS1109: [0mExpression expected.
+
+[7m10[0m       if()
+[7m  [0m [91m         ~[0m
+
+    at createTSError (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:863:19)
+    at C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1379:34
+    at Object.compile (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1458:13)
+    at Module.m._compile (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1617:30)
+    at Module._extensions..js (internal/modules/cjs/loader.js:1114:10)
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (internal/modules/cjs/loader.js:950:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:790:12)
+    at Module.require (internal/modules/cjs/loader.js:974:19)
+2023-04-26 13:10:45 error: uncaughtException: Unexpected token 'const'
+C:\Users\Devops3\Documents\Projects\feetflight\src\middlewares\fileValidation.middleware.ts:10
+                const filesTooLarge = [];
+                ^^^^^
+
+SyntaxError: Unexpected token 'const'
+    at wrapSafe (internal/modules/cjs/loader.js:1001:16)
+    at Module._compile (internal/modules/cjs/loader.js:1049:27)
+    at Module.m._compile (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1618:23)
+    at Module._extensions..js (internal/modules/cjs/loader.js:1114:10)
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (internal/modules/cjs/loader.js:950:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:790:12)
+    at Module.require (internal/modules/cjs/loader.js:974:19)
+    at require (internal/modules/cjs/helpers.js:101:18)
+    at Object.<anonymous> (C:\Users\Devops3\Documents\Projects\feetflight\src\routes\users.route.ts:5:1)
+2023-04-26 13:10:50 error: uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/middlewares/fileValidation.middleware.ts[0m:[93m10[0m:[93m20[0m - [91merror[0m[90m TS1003: [0mIdentifier expected.
+
+[7m10[0m       if(fileeData.)
+[7m  [0m [91m                   ~[0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/middlewares/fileValidation.middleware.ts[0m:[93m10[0m:[93m20[0m - [91merror[0m[90m TS1003: [0mIdentifier expected.
+
+[7m10[0m       if(fileeData.)
+[7m  [0m [91m                   ~[0m
+
+    at createTSError (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:863:19)
+    at C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1379:34
+    at Object.compile (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1458:13)
+    at Module.m._compile (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1617:30)
+    at Module._extensions..js (internal/modules/cjs/loader.js:1114:10)
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (internal/modules/cjs/loader.js:950:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:790:12)
+    at Module.require (internal/modules/cjs/loader.js:974:19)
+2023-04-26 13:11:30 error: uncaughtException: Unexpected token 'const'
+C:\Users\Devops3\Documents\Projects\feetflight\src\middlewares\fileValidation.middleware.ts:10
+                const filesTooLarge = [];
+                ^^^^^
+
+SyntaxError: Unexpected token 'const'
+    at wrapSafe (internal/modules/cjs/loader.js:1001:16)
+    at Module._compile (internal/modules/cjs/loader.js:1049:27)
+    at Module.m._compile (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1618:23)
+    at Module._extensions..js (internal/modules/cjs/loader.js:1114:10)
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (internal/modules/cjs/loader.js:950:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:790:12)
+    at Module.require (internal/modules/cjs/loader.js:974:19)
+    at require (internal/modules/cjs/helpers.js:101:18)
+    at Object.<anonymous> (C:\Users\Devops3\Documents\Projects\feetflight\src\routes\users.route.ts:5:1)
+2023-04-26 13:11:36 error: uncaughtException: Unexpected token 'const'
+C:\Users\Devops3\Documents\Projects\feetflight\src\middlewares\fileValidation.middleware.ts:10
+                const filesTooLarge = [];
+                ^^^^^
+
+SyntaxError: Unexpected token 'const'
+    at wrapSafe (internal/modules/cjs/loader.js:1001:16)
+    at Module._compile (internal/modules/cjs/loader.js:1049:27)
+    at Module.m._compile (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1618:23)
+    at Module._extensions..js (internal/modules/cjs/loader.js:1114:10)
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (internal/modules/cjs/loader.js:950:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:790:12)
+    at Module.require (internal/modules/cjs/loader.js:974:19)
+    at require (internal/modules/cjs/helpers.js:101:18)
+    at Object.<anonymous> (C:\Users\Devops3\Documents\Projects\feetflight\src\routes\users.route.ts:5:1)
+2023-04-26 13:11:41 error: uncaughtException: Unexpected token 'const'
+C:\Users\Devops3\Documents\Projects\feetflight\src\middlewares\fileValidation.middleware.ts:10
+                const filesTooLarge = [];
+                ^^^^^
+
+SyntaxError: Unexpected token 'const'
+    at wrapSafe (internal/modules/cjs/loader.js:1001:16)
+    at Module._compile (internal/modules/cjs/loader.js:1049:27)
+    at Module.m._compile (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1618:23)
+    at Module._extensions..js (internal/modules/cjs/loader.js:1114:10)
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (internal/modules/cjs/loader.js:950:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:790:12)
+    at Module.require (internal/modules/cjs/loader.js:974:19)
+    at require (internal/modules/cjs/helpers.js:101:18)
+    at Object.<anonymous> (C:\Users\Devops3\Documents\Projects\feetflight\src\routes\users.route.ts:5:1)
+2023-04-26 13:14:02 error: [POST] /posts/upload/f4cc28119e216249cd8f671d2b136aa1697a7491 >> StatusCode:: 401, Message:: a file is too large maximum is 5mb and a file isn't an image
+2023-04-26 13:14:17 error: [POST] /sellers/upload/identitycard/cus_NmLXh0ms2IoGSe >> StatusCode:: 401, Message:: TypeError: Cannot read property 'length' of undefined
+2023-04-26 13:18:21 error: [POST] /sellers/upload/identitycard/cus_NmLXh0ms2IoGSe >> StatusCode:: 401, Message:: TypeError: Cannot read property 'frontSide' of undefined
+2023-04-26 13:19:02 error: [POST] /sellers/upload/identitycard/cus_NmLXh0ms2IoGSe >> StatusCode:: 401, Message:: a file is too large maximum is 5mb and a file isn't an image
+2023-04-26 13:19:15 error: [POST] /posts/upload/f4cc28119e216249cd8f671d2b136aa1697a7491 >> StatusCode:: 401, Message:: a file is too large maximum is 5mb and a file isn't an image
+2023-04-26 15:38:42 error: [POST] /posts/upload/f4cc28119e216249cd8f671d2b136aa1697a7491 >> StatusCode:: 401, Message:: a file is too large maximum is 5mb and a file isn't an image
+2023-04-26 16:19:43 error: uncaughtException: adminService is not defined
+ReferenceError: adminService is not defined
+    at new AdminRoute (C:\Users\Devops3\Documents\Projects\feetflight\src\routes\admin.route.ts:10:29)
+    at Object.<anonymous> (C:\Users\Devops3\Documents\Projects\feetflight\src\server.ts:13:130)
+    at Module._compile (internal/modules/cjs/loader.js:1085:14)
+    at Module.m._compile (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1618:23)
+    at Module._extensions..js (internal/modules/cjs/loader.js:1114:10)
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (internal/modules/cjs/loader.js:950:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:790:12)
+    at Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:75:12)
+    at phase4 (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\bin.ts:649:14)
+2023-04-26 16:19:49 error: uncaughtException: Route.get() requires a callback function but got a [object Undefined]
+Error: Route.get() requires a callback function but got a [object Undefined]
+    at Route.<computed> [as get] (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\express\lib\router\route.js:211:15)
+    at Function.proto.<computed> [as get] (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\express\lib\router\index.js:521:19)
+    at AdminRoute.initializeRoutes (C:\Users\Devops3\Documents\Projects\feetflight\src\routes\admin.route.ts:17:17)
+    at new AdminRoute (C:\Users\Devops3\Documents\Projects\feetflight\src\routes\admin.route.ts:13:10)
+    at Object.<anonymous> (C:\Users\Devops3\Documents\Projects\feetflight\src\server.ts:13:130)
+    at Module._compile (internal/modules/cjs/loader.js:1085:14)
+    at Module.m._compile (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1618:23)
+    at Module._extensions..js (internal/modules/cjs/loader.js:1114:10)
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (internal/modules/cjs/loader.js:950:32)
+2023-04-26 16:19:53 error: uncaughtException: Route.get() requires a callback function but got a [object Undefined]
+Error: Route.get() requires a callback function but got a [object Undefined]
+    at Route.<computed> [as get] (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\express\lib\router\route.js:211:15)
+    at Function.proto.<computed> [as get] (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\express\lib\router\index.js:521:19)
+    at AdminRoute.initializeRoutes (C:\Users\Devops3\Documents\Projects\feetflight\src\routes\admin.route.ts:17:17)
+    at new AdminRoute (C:\Users\Devops3\Documents\Projects\feetflight\src\routes\admin.route.ts:13:10)
+    at Object.<anonymous> (C:\Users\Devops3\Documents\Projects\feetflight\src\server.ts:13:130)
+    at Module._compile (internal/modules/cjs/loader.js:1085:14)
+    at Module.m._compile (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1618:23)
+    at Module._extensions..js (internal/modules/cjs/loader.js:1114:10)
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (internal/modules/cjs/loader.js:950:32)
+2023-04-26 16:28:06 error: uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/services/admin.service.ts[0m:[93m18[0m:[93m43[0m - [91merror[0m[90m TS1109: [0mExpression expected.
+
+[7m18[0m       return seller.records.map(record => );
+[7m  [0m [91m                                          ~[0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/services/admin.service.ts[0m:[93m18[0m:[93m43[0m - [91merror[0m[90m TS1109: [0mExpression expected.
+
+[7m18[0m       return seller.records.map(record => );
+[7m  [0m [91m                                          ~[0m
+
+    at createTSError (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:863:19)
+    at C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1379:34
+    at Object.compile (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1458:13)
+    at Module.m._compile (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1617:30)
+    at Module._extensions..js (internal/modules/cjs/loader.js:1114:10)
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (internal/modules/cjs/loader.js:950:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:790:12)
+    at Module.require (internal/modules/cjs/loader.js:974:19)
+2023-04-26 16:28:09 error: uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/services/admin.service.ts[0m:[93m18[0m:[93m50[0m - [91merror[0m[90m TS1003: [0mIdentifier expected.
+
+[7m18[0m       return seller.records.map(record => record.);
+[7m  [0m [91m                                                 ~[0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/services/admin.service.ts[0m:[93m18[0m:[93m50[0m - [91merror[0m[90m TS1003: [0mIdentifier expected.
+
+[7m18[0m       return seller.records.map(record => record.);
+[7m  [0m [91m                                                 ~[0m
+
+    at createTSError (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:863:19)
+    at C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1379:34
+    at Object.compile (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1458:13)
+    at Module.m._compile (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1617:30)
+    at Module._extensions..js (internal/modules/cjs/loader.js:1114:10)
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (internal/modules/cjs/loader.js:950:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:790:12)
+    at Module.require (internal/modules/cjs/loader.js:974:19)
+2023-04-26 16:28:15 error: uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/services/admin.service.ts[0m:[93m18[0m:[93m59[0m - [91merror[0m[90m TS1003: [0mIdentifier expected.
+
+[7m18[0m       return seller.records.map(record => record.get("s").);
+[7m  [0m [91m                                                          ~[0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/services/admin.service.ts[0m:[93m18[0m:[93m59[0m - [91merror[0m[90m TS1003: [0mIdentifier expected.
+
+[7m18[0m       return seller.records.map(record => record.get("s").);
+[7m  [0m [91m                                                          ~[0m
+
+    at createTSError (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:863:19)
+    at C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1379:34
+    at Object.compile (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1458:13)
+    at Module.m._compile (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1617:30)
+    at Module._extensions..js (internal/modules/cjs/loader.js:1114:10)
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (internal/modules/cjs/loader.js:950:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:790:12)
+    at Module.require (internal/modules/cjs/loader.js:974:19)
+2023-04-26 16:28:18 error: uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/services/admin.service.ts[0m:[93m18[0m:[93m59[0m - [91merror[0m[90m TS1003: [0mIdentifier expected.
+
+[7m18[0m       return seller.records.map(record => record.get("s").);
+[7m  [0m [91m                                                          ~[0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/services/admin.service.ts[0m:[93m18[0m:[93m59[0m - [91merror[0m[90m TS1003: [0mIdentifier expected.
+
+[7m18[0m       return seller.records.map(record => record.get("s").);
+[7m  [0m [91m                                                          ~[0m
+
+    at createTSError (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:863:19)
+    at C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1379:34
+    at Object.compile (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1458:13)
+    at Module.m._compile (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1617:30)
+    at Module._extensions..js (internal/modules/cjs/loader.js:1114:10)
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (internal/modules/cjs/loader.js:950:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:790:12)
+    at Module.require (internal/modules/cjs/loader.js:974:19)
+2023-04-26 16:28:22 error: uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/services/admin.service.ts[0m:[93m18[0m:[93m59[0m - [91merror[0m[90m TS1003: [0mIdentifier expected.
+
+[7m18[0m       return seller.records.map(record => record.get("s").);
+[7m  [0m [91m                                                          ~[0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/services/admin.service.ts[0m:[93m18[0m:[93m59[0m - [91merror[0m[90m TS1003: [0mIdentifier expected.
+
+[7m18[0m       return seller.records.map(record => record.get("s").);
+[7m  [0m [91m                                                          ~[0m
+
+    at createTSError (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:863:19)
+    at C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1379:34
+    at Object.compile (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1458:13)
+    at Module.m._compile (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1617:30)
+    at Module._extensions..js (internal/modules/cjs/loader.js:1114:10)
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (internal/modules/cjs/loader.js:950:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:790:12)
+    at Module.require (internal/modules/cjs/loader.js:974:19)
+2023-04-26 16:30:18 error: uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/controllers/admin.controller.ts[0m:[93m21[0m:[93m52[0m - [91merror[0m[90m TS1003: [0mIdentifier expected.
+
+[7m21[0m       const identityCard = await this.adminService.(userid);
+[7m  [0m [91m                                                   ~[0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/controllers/admin.controller.ts[0m:[93m21[0m:[93m52[0m - [91merror[0m[90m TS1003: [0mIdentifier expected.
+
+[7m21[0m       const identityCard = await this.adminService.(userid);
+[7m  [0m [91m                                                   ~[0m
+
+    at createTSError (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:863:19)
+    at C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1379:34
+    at Object.compile (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1458:13)
+    at Module.m._compile (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1617:30)
+    at Module._extensions..js (internal/modules/cjs/loader.js:1114:10)
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (internal/modules/cjs/loader.js:950:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:790:12)
+    at Module.require (internal/modules/cjs/loader.js:974:19)

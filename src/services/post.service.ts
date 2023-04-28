@@ -114,33 +114,12 @@ class postService {
         ),
       );
 
-      postData.data.pictures.map(picture => {
-        aws.config.update({
-          accessKeyId: process.env.AWS_ACCESS_KEY_ID,
-          secretAccessKey: process.env.AWS_SECRET_ACCESS_KEY,
-          region: 'us-east-2',
-        });
-        const filecontent = Buffer.from(picture.value, 'binary');
-        const s3 = new aws.S3();
-
-        const params = {
-          Bucket: process.env.AWS_BUCKET_NAME,
-          Key: picture.description,
-          Body: filecontent,
-        };
-
-        s3.upload(params, (err, data) => {
-          if (err) return console.log(err);
-          this.createPictures(picture.description, data.Location, createdCollection.records.map(record => record.get('c').properties.id)[0]);
-        });
-      });
-
       const stripe = new Stripe(process.env.STRIPE_TEST_KEY, { apiVersion: '2022-11-15' });
       await stripe.products.create({
         id: createdCollection.records.map(record => record.get('p').properties.id)[0],
         name: postData.data.postTitle,
         metadata: {
-          "sellerId": createdCollection.records.map(record => record.get('u').properties.id)[0].toString()
+          sellerId: createdCollection.records.map(record => record.get('u').properties.id)[0].toString(),
         },
         description: postData.data.postDescription,
         default_price_data: {
@@ -156,7 +135,10 @@ class postService {
         }),
       );
 
-      return createdCollection.records.map(record => record.get('p').properties)[0];
+      return {
+        post: createdCollection.records.map(record => record.get('p').properties)[0],
+        collection: createdCollection.records.map(record => record.get('c').properties)[0],
+      };
     } catch (error) {
       console.log(error);
     } finally {
@@ -182,7 +164,40 @@ class postService {
     }
   }
 
-  public async createPictures(pictureDescription, value, collectionId) {
+  public async uploadPostPictures(pictureFiles: any, collectionId: string) {
+    const createPicturesSession = initializeDbConnection().session({ database: 'neo4j' });
+    try {
+      for (let key in pictureFiles) {
+        console.log(pictureFiles[key]);
+        aws.config.update({
+          accessKeyId: process.env.AWS_ACCESS_KEY_ID,
+          secretAccessKey: process.env.AWS_SECRET_ACCESS_KEY,
+          region: 'us-east-2',
+        });
+        const filecontent = Buffer.from(pictureFiles[key].buffer, 'binary');
+        const s3 = new aws.S3();
+
+        const params = {
+          Bucket: process.env.AWS_BUCKET_NAME,
+          Key: `${pictureFiles.fieldname} + ${collectionId}`,
+          Body: filecontent,
+        };
+
+        s3.upload(params, (err, data) => {
+          if (err) return console.log(err);
+          console.log();
+          
+          this.createPictures(pictureFiles[key].fieldname, data.Location, collectionId);
+        });
+      }
+    } catch (error) {
+      console.log(error);
+    } finally {
+      createPicturesSession.close();
+    }
+  }
+
+  public async createPictures(pictureDescription: string, value: string, collectionId: string) {
     const createPicturesSession = initializeDbConnection().session({ database: 'neo4j' });
     try {
       await createPicturesSession.executeWrite(tx =>

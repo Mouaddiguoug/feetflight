@@ -35,9 +35,9 @@ class sellerController {
       
       const identityCardData = req.files;
       
-      const identityCard = await this.sellerService.uploadIdentityCard(identityCardData, userId);
+      await this.sellerService.uploadIdentityCard(identityCardData, userId);
 
-      res.status(200).json({ identityCard });
+      res.status(201).json({ messazge: "identity card haq been uploaded successfully" });
     } catch (error) {
       next(error);
     }
