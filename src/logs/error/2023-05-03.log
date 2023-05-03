@@ -1,0 +1,1800 @@
+2023-05-03 15:56:28 error: uncaughtException: listen EADDRINUSE: address already in use :::3000
+Error: listen EADDRINUSE: address already in use :::3000
+    at Server.setupListenHandle [as _listen2] (net.js:1331:16)
+    at listenInCluster (net.js:1379:12)
+    at Server.listen (net.js:1465:7)
+    at Function.listen (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\express\lib\application.js:635:24)
+    at App.listen (C:\Users\Devops3\Documents\Projects\feetflight\src\app.ts:121:14)
+    at Object.<anonymous> (C:\Users\Devops3\Documents\Projects\feetflight\src\server.ts:15:5)
+    at Module._compile (internal/modules/cjs/loader.js:1085:14)
+    at Module.m._compile (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1618:23)
+    at Module._extensions..js (internal/modules/cjs/loader.js:1114:10)
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1621:12)
+2023-05-03 17:50:24 error: uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/services/post.service.ts[0m:[93m19[0m:[93m65[0m - [91merror[0m[90m TS1005: [0m')' expected.
+
+[7m19[0m       console.log(popularPosts.records.map(record => record.map);
+[7m  [0m [91m                                                                ~[0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/services/post.service.ts[0m:[93m19[0m:[93m65[0m - [91merror[0m[90m TS1005: [0m')' expected.
+
+[7m19[0m       console.log(popularPosts.records.map(record => record.map);
+[7m  [0m [91m                                                                ~[0m
+
+    at createTSError (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:863:19)
+    at C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1379:34
+    at Object.compile (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1458:13)
+    at Module.m._compile (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1617:30)
+    at Module._extensions..js (internal/modules/cjs/loader.js:1114:10)
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (internal/modules/cjs/loader.js:950:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:790:12)
+    at Module.require (internal/modules/cjs/loader.js:974:19)
+2023-05-03 17:50:34 error: uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/services/post.service.ts[0m:[93m19[0m:[93m61[0m - [91merror[0m[90m TS1005: [0m')' expected.
+
+[7m19[0m       console.log(popularPosts.records.map(record => record);
+[7m  [0m [91m                                                            ~[0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/services/post.service.ts[0m:[93m19[0m:[93m61[0m - [91merror[0m[90m TS1005: [0m')' expected.
+
+[7m19[0m       console.log(popularPosts.records.map(record => record);
+[7m  [0m [91m                                                            ~[0m
+
+    at createTSError (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:863:19)
+    at C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1379:34
+    at Object.compile (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1458:13)
+    at Module.m._compile (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1617:30)
+    at Module._extensions..js (internal/modules/cjs/loader.js:1114:10)
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (internal/modules/cjs/loader.js:950:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:790:12)
+    at Module.require (internal/modules/cjs/loader.js:974:19)
+2023-05-03 18:01:50 error: uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/services/post.service.ts[0m:[93m19[0m:[93m58[0m - [91merror[0m[90m TS1005: [0m')' expected.
+
+[7m19[0m       console.log(popularPosts.records.map(record => log);
+[7m  [0m [91m                                                         ~[0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/services/post.service.ts[0m:[93m19[0m:[93m58[0m - [91merror[0m[90m TS1005: [0m')' expected.
+
+[7m19[0m       console.log(popularPosts.records.map(record => log);
+[7m  [0m [91m                                                         ~[0m
+
+    at createTSError (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:863:19)
+    at C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1379:34
+    at Object.compile (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1458:13)
+    at Module.m._compile (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1617:30)
+    at Module._extensions..js (internal/modules/cjs/loader.js:1114:10)
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (internal/modules/cjs/loader.js:950:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:790:12)
+    at Module.require (internal/modules/cjs/loader.js:974:19)
+2023-05-03 18:01:53 error: uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/services/post.service.ts[0m:[93m19[0m:[93m67[0m - [91merror[0m[90m TS1005: [0m')' expected.
+
+[7m19[0m       console.log(popularPosts.records.map(record => console.log();
+[7m  [0m [91m                                                                  ~[0m
+[96msrc/services/post.service.ts[0m:[93m20[0m:[93m7[0m - [91merror[0m[90m TS1128: [0mDeclaration or statement expected.
+
+[7m20[0m       );
+[7m  [0m [91m      ~[0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/services/post.service.ts[0m:[93m19[0m:[93m67[0m - [91merror[0m[90m TS1005: [0m')' expected.
+
+[7m19[0m       console.log(popularPosts.records.map(record => console.log();
+[7m  [0m [91m                                                                  ~[0m
+[96msrc/services/post.service.ts[0m:[93m20[0m:[93m7[0m - [91merror[0m[90m TS1128: [0mDeclaration or statement expected.
+
+[7m20[0m       );
+[7m  [0m [91m      ~[0m
+
+    at createTSError (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:863:19)
+    at C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1379:34
+    at Object.compile (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1458:13)
+    at Module.m._compile (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1617:30)
+    at Module._extensions..js (internal/modules/cjs/loader.js:1114:10)
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (internal/modules/cjs/loader.js:950:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:790:12)
+    at Module.require (internal/modules/cjs/loader.js:974:19)
+2023-05-03 18:01:57 error: uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/services/post.service.ts[0m:[93m19[0m:[93m67[0m - [91merror[0m[90m TS1005: [0m')' expected.
+
+[7m19[0m       console.log(popularPosts.records.map(record => console.log();
+[7m  [0m [91m                                                                  ~[0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/services/post.service.ts[0m:[93m19[0m:[93m67[0m - [91merror[0m[90m TS1005: [0m')' expected.
+
+[7m19[0m       console.log(popularPosts.records.map(record => console.log();
+[7m  [0m [91m                                                                  ~[0m
+
+    at createTSError (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:863:19)
+    at C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1379:34
+    at Object.compile (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1458:13)
+    at Module.m._compile (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1617:30)
+    at Module._extensions..js (internal/modules/cjs/loader.js:1114:10)
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (internal/modules/cjs/loader.js:950:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:790:12)
+    at Module.require (internal/modules/cjs/loader.js:974:19)
+2023-05-03 18:02:01 error: uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/services/post.service.ts[0m:[93m19[0m:[93m58[0m - [91merror[0m[90m TS1005: [0m')' expected.
+
+[7m19[0m       console.log(popularPosts.records.map(record => log);
+[7m  [0m [91m                                                         ~[0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/services/post.service.ts[0m:[93m19[0m:[93m58[0m - [91merror[0m[90m TS1005: [0m')' expected.
+
+[7m19[0m       console.log(popularPosts.records.map(record => log);
+[7m  [0m [91m                                                         ~[0m
+
+    at createTSError (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:863:19)
+    at C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1379:34
+    at Object.compile (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1458:13)
+    at Module.m._compile (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1617:30)
+    at Module._extensions..js (internal/modules/cjs/loader.js:1114:10)
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (internal/modules/cjs/loader.js:950:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:790:12)
+    at Module.require (internal/modules/cjs/loader.js:974:19)
+2023-05-03 18:02:05 error: uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/services/post.service.ts[0m:[93m19[0m:[93m67[0m - [91merror[0m[90m TS1005: [0m')' expected.
+
+[7m19[0m       console.log(popularPosts.records.map(record => console.log();
+[7m  [0m [91m                                                                  ~[0m
+[96msrc/services/post.service.ts[0m:[93m20[0m:[93m7[0m - [91merror[0m[90m TS1128: [0mDeclaration or statement expected.
+
+[7m20[0m       );
+[7m  [0m [91m      ~[0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/services/post.service.ts[0m:[93m19[0m:[93m67[0m - [91merror[0m[90m TS1005: [0m')' expected.
+
+[7m19[0m       console.log(popularPosts.records.map(record => console.log();
+[7m  [0m [91m                                                                  ~[0m
+[96msrc/services/post.service.ts[0m:[93m20[0m:[93m7[0m - [91merror[0m[90m TS1128: [0mDeclaration or statement expected.
+
+[7m20[0m       );
+[7m  [0m [91m      ~[0m
+
+    at createTSError (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:863:19)
+    at C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1379:34
+    at Object.compile (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1458:13)
+    at Module.m._compile (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1617:30)
+    at Module._extensions..js (internal/modules/cjs/loader.js:1114:10)
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (internal/modules/cjs/loader.js:950:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:790:12)
+    at Module.require (internal/modules/cjs/loader.js:974:19)
+2023-05-03 18:20:29 error: uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/services/post.service.ts[0m:[93m19[0m:[93m101[0m - [91merror[0m[90m TS1005: [0m';' expected.
+
+[7m19[0m       console.log(popularPosts.records.map((record: any) => record._fields.map((field: any) => {}))));
+[7m  [0m [91m                                                                                                    ~[0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/services/post.service.ts[0m:[93m19[0m:[93m101[0m - [91merror[0m[90m TS1005: [0m';' expected.
+
+[7m19[0m       console.log(popularPosts.records.map((record: any) => record._fields.map((field: any) => {}))));
+[7m  [0m [91m                                                                                                    ~[0m
+
+    at createTSError (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:863:19)
+    at C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1379:34
+    at Object.compile (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1458:13)
+    at Module.m._compile (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1617:30)
+    at Module._extensions..js (internal/modules/cjs/loader.js:1114:10)
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (internal/modules/cjs/loader.js:950:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:790:12)
+    at Module.require (internal/modules/cjs/loader.js:974:19)
+2023-05-03 18:26:35 error: uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/services/post.service.ts[0m:[93m21[0m:[93m9[0m - [91merror[0m[90m TS1005: [0m')' expected.
+
+[7m21[0m       });)})));
+[7m  [0m [91m        ~[0m
+[96msrc/services/post.service.ts[0m:[93m21[0m:[93m10[0m - [91merror[0m[90m TS1128: [0mDeclaration or statement expected.
+
+[7m21[0m       });)})));
+[7m  [0m [91m         ~[0m
+[96msrc/services/post.service.ts[0m:[93m21[0m:[93m11[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m21[0m       });)})));
+[7m  [0m [91m          ~[0m
+[96msrc/services/post.service.ts[0m:[93m21[0m:[93m12[0m - [91merror[0m[90m TS1472: [0m'catch' or 'finally' expected.
+
+[7m21[0m       });)})));
+[7m  [0m [91m           ~[0m
+[96msrc/services/post.service.ts[0m:[93m21[0m:[93m13[0m - [91merror[0m[90m TS1128: [0mDeclaration or statement expected.
+
+[7m21[0m       });)})));
+[7m  [0m [91m            ~[0m
+[96msrc/services/post.service.ts[0m:[93m21[0m:[93m14[0m - [91merror[0m[90m TS1128: [0mDeclaration or statement expected.
+
+[7m21[0m       });)})));
+[7m  [0m [91m             ~[0m
+[96msrc/services/post.service.ts[0m:[93m24[0m:[93m7[0m - [91merror[0m[90m TS1068: [0mUnexpected token. A constructor, method, accessor, or property was expected.
+
+[7m24[0m     } finally {
+[7m  [0m [91m      ~~~~~~~[0m
+[96msrc/services/post.service.ts[0m:[93m27[0m:[93m3[0m - [91merror[0m[90m TS1128: [0mDeclaration or statement expected.
+
+[7m27[0m   }
+[7m  [0m [91m  ~[0m
+[96msrc/services/post.service.ts[0m:[93m29[0m:[93m3[0m - [91merror[0m[90m TS1128: [0mDeclaration or statement expected.
+
+[7m29[0m   public async getRecentPosts(categoryId) {
+[7m  [0m [91m  ~~~~~~[0m
+[96msrc/services/post.service.ts[0m:[93m29[0m:[93m10[0m - [91merror[0m[90m TS1434: [0mUnexpected keyword or identifier.
+
+[7m29[0m   public async getRecentPosts(categoryId) {
+[7m  [0m [91m         ~~~~~[0m
+[96msrc/services/post.service.ts[0m:[93m29[0m:[93m43[0m - [91merror[0m[90m TS1005: [0m';' expected.
+
+[7m29[0m   public async getRecentPosts(categoryId) {
+[7m  [0m [91m                                          ~[0m
+[96msrc/services/post.service.ts[0m:[93m53[0m:[93m3[0m - [91merror[0m[90m TS1128: [0mDeclaration or statement expected.
+
+[7m53[0m   public async getPostPictures(postId) {
+[7m  [0m [91m  ~~~~~~[0m
+[96msrc/services/post.service.ts[0m:[93m53[0m:[93m10[0m - [91merror[0m[90m TS1434: [0mUnexpected keyword or identifier.
+
+[7m53[0m   public async getPostPictures(postId) {
+[7m  [0m [91m         ~~~~~[0m
+[96msrc/services/post.service.ts[0m:[93m53[0m:[93m40[0m - [91merror[0m[90m TS1005: [0m';' expected.
+
+[7m53[0m   public async getPostPictures(postId) {
+[7m  [0m [91m                                       ~[0m
+[96msrc/services/post.service.ts[0m:[93m69[0m:[93m3[0m - [91merror[0m[90m TS1128: [0mDeclaration or statement expected.
+
+[7m69[0m   public async UpdateViews(postId) {
+[7m  [0m [91m  ~~~~~~[0m
+[96msrc/services/post.service.ts[0m:[93m69[0m:[93m10[0m - [91merror[0m[90m TS1434: [0mUnexpected keyword or identifier.
+
+[7m69[0m   public async UpdateViews(postId) {
+[7m  [0m [91m         ~~~~~[0m
+[96msrc/services/post.service.ts[0m:[93m69[0m:[93m36[0m - [91merror[0m[90m TS1005: [0m';' expected.
+
+[7m69[0m   public async UpdateViews(postId) {
+[7m  [0m [91m                                   ~[0m
+[96msrc/services/post.service.ts[0m:[93m85[0m:[93m3[0m - [91merror[0m[90m TS1128: [0mDeclaration or statement expected.
+
+[7m85[0m   public async createPost(userId: string, postData: any) {
+[7m  [0m [91m  ~~~~~~[0m
+[96msrc/services/post.service.ts[0m:[93m85[0m:[93m10[0m - [91merror[0m[90m TS1434: [0mUnexpected keyword or identifier.
+
+[7m85[0m   public async createPost(userId: string, postData: any) {
+[7m  [0m [91m         ~~~~~[0m
+[96msrc/services/post.service.ts[0m:[93m85[0m:[93m33[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m85[0m   public async createPost(userId: string, postData: any) {
+[7m  [0m [91m                                ~[0m
+[96msrc/services/post.service.ts[0m:[93m85[0m:[93m51[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m85[0m   public async createPost(userId: string, postData: any) {
+[7m  [0m [91m                                                  ~[0m
+[96msrc/services/post.service.ts[0m:[93m85[0m:[93m58[0m - [91merror[0m[90m TS1005: [0m';' expected.
+
+[7m85[0m   public async createPost(userId: string, postData: any) {
+[7m  [0m [91m                                                         ~[0m
+[96msrc/services/post.service.ts[0m:[93m142[0m:[93m3[0m - [91merror[0m[90m TS1128: [0mDeclaration or statement expected.
+
+[7m142[0m   public async likePost(postId) {
+[7m   [0m [91m  ~~~~~~[0m
+[96msrc/services/post.service.ts[0m:[93m142[0m:[93m10[0m - [91merror[0m[90m TS1434: [0mUnexpected keyword or identifier.
+
+[7m142[0m   public async likePost(postId) {
+[7m   [0m [91m         ~~~~~[0m
+[96msrc/services/post.service.ts[0m:[93m142[0m:[93m33[0m - [91merror[0m[90m TS1005: [0m';' expected.
+
+[7m142[0m   public async likePost(postId) {
+[7m   [0m [91m                                ~[0m
+[96msrc/services/post.service.ts[0m:[93m159[0m:[93m3[0m - [91merror[0m[90m TS1128: [0mDeclaration or statement expected.
+
+[7m159[0m   public async uploadPostPictures(pictureFiles: any, collectionId: string) {
+[7m   [0m [91m  ~~~~~~[0m
+[96msrc/services/post.service.ts[0m:[93m159[0m:[93m10[0m - [91merror[0m[90m TS1434: [0mUnexpected keyword or identifier.
+
+[7m159[0m   public async uploadPostPictures(pictureFiles: any, collectionId: string) {
+[7m   [0m [91m         ~~~~~[0m
+[96msrc/services/post.service.ts[0m:[93m159[0m:[93m47[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m159[0m   public async uploadPostPictures(pictureFiles: any, collectionId: string) {
+[7m   [0m [91m                                              ~[0m
+[96msrc/services/post.service.ts[0m:[93m159[0m:[93m66[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m159[0m   public async uploadPostPictures(pictureFiles: any, collectionId: string) {
+[7m   [0m [91m                                                                 ~[0m
+[96msrc/services/post.service.ts[0m:[93m159[0m:[93m76[0m - [91merror[0m[90m TS1005: [0m';' expected.
+
+[7m159[0m   public async uploadPostPictures(pictureFiles: any, collectionId: string) {
+[7m   [0m [91m                                                                           ~[0m
+[96msrc/services/post.service.ts[0m:[93m191[0m:[93m3[0m - [91merror[0m[90m TS1128: [0mDeclaration or statement expected.
+
+[7m191[0m   public async createPictures(pictureDescription: string, value: string, collectionId: string) {
+[7m   [0m [91m  ~~~~~~[0m
+[96msrc/services/post.service.ts[0m:[93m191[0m:[93m10[0m - [91merror[0m[90m TS1434: [0mUnexpected keyword or identifier.
+
+[7m191[0m   public async createPictures(pictureDescription: string, value: string, collectionId: string) {
+[7m   [0m [91m         ~~~~~[0m
+[96msrc/services/post.service.ts[0m:[93m191[0m:[93m49[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m191[0m   public async createPictures(pictureDescription: string, value: string, collectionId: string) {
+[7m   [0m [91m                                                ~[0m
+[96msrc/services/post.service.ts[0m:[93m191[0m:[93m64[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m191[0m   public async createPictures(pictureDescription: string, value: string, collectionId: string) {
+[7m   [0m [91m                                                               ~[0m
+[96msrc/services/post.service.ts[0m:[93m191[0m:[93m86[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m191[0m   public async createPictures(pictureDescription: string, value: string, collectionId: string) {
+[7m   [0m [91m                                                                                     ~[0m
+[96msrc/services/post.service.ts[0m:[93m191[0m:[93m96[0m - [91merror[0m[90m TS1005: [0m';' expected.
+
+[7m191[0m   public async createPictures(pictureDescription: string, value: string, collectionId: string) {
+[7m   [0m [91m                                                                                               ~[0m
+[96msrc/services/post.service.ts[0m:[93m211[0m:[93m1[0m - [91merror[0m[90m TS1128: [0mDeclaration or statement expected.
+
+[7m211[0m }
+[7m   [0m [91m~[0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/services/post.service.ts[0m:[93m21[0m:[93m9[0m - [91merror[0m[90m TS1005: [0m')' expected.
+
+[7m21[0m       });)})));
+[7m  [0m [91m        ~[0m
+[96msrc/services/post.service.ts[0m:[93m21[0m:[93m10[0m - [91merror[0m[90m TS1128: [0mDeclaration or statement expected.
+
+[7m21[0m       });)})));
+[7m  [0m [91m         ~[0m
+[96msrc/services/post.service.ts[0m:[93m21[0m:[93m11[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m21[0m       });)})));
+[7m  [0m [91m          ~[0m
+[96msrc/services/post.service.ts[0m:[93m21[0m:[93m12[0m - [91merror[0m[90m TS1472: [0m'catch' or 'finally' expected.
+
+[7m21[0m       });)})));
+[7m  [0m [91m           ~[0m
+[96msrc/services/post.service.ts[0m:[93m21[0m:[93m13[0m - [91merror[0m[90m TS1128: [0mDeclaration or statement expected.
+
+[7m21[0m       });)})));
+[7m  [0m [91m            ~[0m
+[96msrc/services/post.service.ts[0m:[93m21[0m:[93m14[0m - [91merror[0m[90m TS1128: [0mDeclaration or statement expected.
+
+[7m21[0m       });)})));
+[7m  [0m [91m             ~[0m
+[96msrc/services/post.service.ts[0m:[93m24[0m:[93m7[0m - [91merror[0m[90m TS1068: [0mUnexpected token. A constructor, method, accessor, or property was expected.
+
+[7m24[0m     } finally {
+[7m  [0m [91m      ~~~~~~~[0m
+[96msrc/services/post.service.ts[0m:[93m27[0m:[93m3[0m - [91merror[0m[90m TS1128: [0mDeclaration or statement expected.
+
+[7m27[0m   }
+[7m  [0m [91m  ~[0m
+[96msrc/services/post.service.ts[0m:[93m29[0m:[93m3[0m - [91merror[0m[90m TS1128: [0mDeclaration or statement expected.
+
+[7m29[0m   public async getRecentPosts(categoryId) {
+[7m  [0m [91m  ~~~~~~[0m
+[96msrc/services/post.service.ts[0m:[93m29[0m:[93m10[0m - [91merror[0m[90m TS1434: [0mUnexpected keyword or identifier.
+
+[7m29[0m   public async getRecentPosts(categoryId) {
+[7m  [0m [91m         ~~~~~[0m
+[96msrc/services/post.service.ts[0m:[93m29[0m:[93m43[0m - [91merror[0m[90m TS1005: [0m';' expected.
+
+[7m29[0m   public async getRecentPosts(categoryId) {
+[7m  [0m [91m                                          ~[0m
+[96msrc/services/post.service.ts[0m:[93m53[0m:[93m3[0m - [91merror[0m[90m TS1128: [0mDeclaration or statement expected.
+
+[7m53[0m   public async getPostPictures(postId) {
+[7m  [0m [91m  ~~~~~~[0m
+[96msrc/services/post.service.ts[0m:[93m53[0m:[93m10[0m - [91merror[0m[90m TS1434: [0mUnexpected keyword or identifier.
+
+[7m53[0m   public async getPostPictures(postId) {
+[7m  [0m [91m         ~~~~~[0m
+[96msrc/services/post.service.ts[0m:[93m53[0m:[93m40[0m - [91merror[0m[90m TS1005: [0m';' expected.
+
+[7m53[0m   public async getPostPictures(postId) {
+[7m  [0m [91m                                       ~[0m
+[96msrc/services/post.service.ts[0m:[93m69[0m:[93m3[0m - [91merror[0m[90m TS1128: [0mDeclaration or statement expected.
+
+[7m69[0m   public async UpdateViews(postId) {
+[7m  [0m [91m  ~~~~~~[0m
+[96msrc/services/post.service.ts[0m:[93m69[0m:[93m10[0m - [91merror[0m[90m TS1434: [0mUnexpected keyword or identifier.
+
+[7m69[0m   public async UpdateViews(postId) {
+[7m  [0m [91m         ~~~~~[0m
+[96msrc/services/post.service.ts[0m:[93m69[0m:[93m36[0m - [91merror[0m[90m TS1005: [0m';' expected.
+
+[7m69[0m   public async UpdateViews(postId) {
+[7m  [0m [91m                                   ~[0m
+[96msrc/services/post.service.ts[0m:[93m85[0m:[93m3[0m - [91merror[0m[90m TS1128: [0mDeclaration or statement expected.
+
+[7m85[0m   public async createPost(userId: string, postData: any) {
+[7m  [0m [91m  ~~~~~~[0m
+[96msrc/services/post.service.ts[0m:[93m85[0m:[93m10[0m - [91merror[0m[90m TS1434: [0mUnexpected keyword or identifier.
+
+[7m85[0m   public async createPost(userId: string, postData: any) {
+[7m  [0m [91m         ~~~~~[0m
+[96msrc/services/post.service.ts[0m:[93m85[0m:[93m33[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m85[0m   public async createPost(userId: string, postData: any) {
+[7m  [0m [91m                                ~[0m
+[96msrc/services/post.service.ts[0m:[93m85[0m:[93m51[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m85[0m   public async createPost(userId: string, postData: any) {
+[7m  [0m [91m                                                  ~[0m
+[96msrc/services/post.service.ts[0m:[93m85[0m:[93m58[0m - [91merror[0m[90m TS1005: [0m';' expected.
+
+[7m85[0m   public async createPost(userId: string, postData: any) {
+[7m  [0m [91m                                                         ~[0m
+[96msrc/services/post.service.ts[0m:[93m142[0m:[93m3[0m - [91merror[0m[90m TS1128: [0mDeclaration or statement expected.
+
+[7m142[0m   public async likePost(postId) {
+[7m   [0m [91m  ~~~~~~[0m
+[96msrc/services/post.service.ts[0m:[93m142[0m:[93m10[0m - [91merror[0m[90m TS1434: [0mUnexpected keyword or identifier.
+
+[7m142[0m   public async likePost(postId) {
+[7m   [0m [91m         ~~~~~[0m
+[96msrc/services/post.service.ts[0m:[93m142[0m:[93m33[0m - [91merror[0m[90m TS1005: [0m';' expected.
+
+[7m142[0m   public async likePost(postId) {
+[7m   [0m [91m                                ~[0m
+[96msrc/services/post.service.ts[0m:[93m159[0m:[93m3[0m - [91merror[0m[90m TS1128: [0mDeclaration or statement expected.
+
+[7m159[0m   public async uploadPostPictures(pictureFiles: any, collectionId: string) {
+[7m   [0m [91m  ~~~~~~[0m
+[96msrc/services/post.service.ts[0m:[93m159[0m:[93m10[0m - [91merror[0m[90m TS1434: [0mUnexpected keyword or identifier.
+
+[7m159[0m   public async uploadPostPictures(pictureFiles: any, collectionId: string) {
+[7m   [0m [91m         ~~~~~[0m
+[96msrc/services/post.service.ts[0m:[93m159[0m:[93m47[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m159[0m   public async uploadPostPictures(pictureFiles: any, collectionId: string) {
+[7m   [0m [91m                                              ~[0m
+[96msrc/services/post.service.ts[0m:[93m159[0m:[93m66[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m159[0m   public async uploadPostPictures(pictureFiles: any, collectionId: string) {
+[7m   [0m [91m                                                                 ~[0m
+[96msrc/services/post.service.ts[0m:[93m159[0m:[93m76[0m - [91merror[0m[90m TS1005: [0m';' expected.
+
+[7m159[0m   public async uploadPostPictures(pictureFiles: any, collectionId: string) {
+[7m   [0m [91m                                                                           ~[0m
+[96msrc/services/post.service.ts[0m:[93m191[0m:[93m3[0m - [91merror[0m[90m TS1128: [0mDeclaration or statement expected.
+
+[7m191[0m   public async createPictures(pictureDescription: string, value: string, collectionId: string) {
+[7m   [0m [91m  ~~~~~~[0m
+[96msrc/services/post.service.ts[0m:[93m191[0m:[93m10[0m - [91merror[0m[90m TS1434: [0mUnexpected keyword or identifier.
+
+[7m191[0m   public async createPictures(pictureDescription: string, value: string, collectionId: string) {
+[7m   [0m [91m         ~~~~~[0m
+[96msrc/services/post.service.ts[0m:[93m191[0m:[93m49[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m191[0m   public async createPictures(pictureDescription: string, value: string, collectionId: string) {
+[7m   [0m [91m                                                ~[0m
+[96msrc/services/post.service.ts[0m:[93m191[0m:[93m64[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m191[0m   public async createPictures(pictureDescription: string, value: string, collectionId: string) {
+[7m   [0m [91m                                                               ~[0m
+[96msrc/services/post.service.ts[0m:[93m191[0m:[93m86[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m191[0m   public async createPictures(pictureDescription: string, value: string, collectionId: string) {
+[7m   [0m [91m                                                                                     ~[0m
+[96msrc/services/post.service.ts[0m:[93m191[0m:[93m96[0m - [91merror[0m[90m TS1005: [0m';' expected.
+
+[7m191[0m   public async createPictures(pictureDescription: string, value: string, collectionId: string) {
+[7m   [0m [91m                                                                                               ~[0m
+[96msrc/services/post.service.ts[0m:[93m211[0m:[93m1[0m - [91merror[0m[90m TS1128: [0mDeclaration or statement expected.
+
+[7m211[0m }
+[7m   [0m [91m~[0m
+
+    at createTSError (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:863:19)
+    at C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1379:34
+    at Object.compile (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1458:13)
+    at Module.m._compile (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1617:30)
+    at Module._extensions..js (internal/modules/cjs/loader.js:1114:10)
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (internal/modules/cjs/loader.js:950:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:790:12)
+    at Module.require (internal/modules/cjs/loader.js:974:19)
+2023-05-03 18:26:58 error: uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/services/post.service.ts[0m:[93m19[0m:[93m139[0m - [91merror[0m[90m TS1109: [0mExpression expected.
+
+[7m19[0m       console.log(popularPosts.records.map((record: any) => record._fields.map((field: any) => {console.log(field.forEach((value: any) => ))})));
+[7m  [0m [91m                                                                                                                                          ~[0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/services/post.service.ts[0m:[93m19[0m:[93m139[0m - [91merror[0m[90m TS1109: [0mExpression expected.
+
+[7m19[0m       console.log(popularPosts.records.map((record: any) => record._fields.map((field: any) => {console.log(field.forEach((value: any) => ))})));
+[7m  [0m [91m                                                                                                                                          ~[0m
+
+    at createTSError (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:863:19)
+    at C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1379:34
+    at Object.compile (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1458:13)
+    at Module.m._compile (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1617:30)
+    at Module._extensions..js (internal/modules/cjs/loader.js:1114:10)
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (internal/modules/cjs/loader.js:950:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:790:12)
+    at Module.require (internal/modules/cjs/loader.js:974:19)
+2023-05-03 18:27:05 error: uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/services/post.service.ts[0m:[93m19[0m:[93m139[0m - [91merror[0m[90m TS1005: [0m'{' expected.
+
+[7m19[0m       console.log(popularPosts.records.map((record: any) => record._fields.map((field: any) => {console.log(field.forEach((value: any) => return value.))})));
+[7m  [0m [91m                                                                                                                                          ~~~~~~[0m
+[96msrc/services/post.service.ts[0m:[93m19[0m:[93m152[0m - [91merror[0m[90m TS1003: [0mIdentifier expected.
+
+[7m19[0m       console.log(popularPosts.records.map((record: any) => record._fields.map((field: any) => {console.log(field.forEach((value: any) => return value.))})));
+[7m  [0m [91m                                                                                                                                                       ~[0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/services/post.service.ts[0m:[93m19[0m:[93m139[0m - [91merror[0m[90m TS1005: [0m'{' expected.
+
+[7m19[0m       console.log(popularPosts.records.map((record: any) => record._fields.map((field: any) => {console.log(field.forEach((value: any) => return value.))})));
+[7m  [0m [91m                                                                                                                                          ~~~~~~[0m
+[96msrc/services/post.service.ts[0m:[93m19[0m:[93m152[0m - [91merror[0m[90m TS1003: [0mIdentifier expected.
+
+[7m19[0m       console.log(popularPosts.records.map((record: any) => record._fields.map((field: any) => {console.log(field.forEach((value: any) => return value.))})));
+[7m  [0m [91m                                                                                                                                                       ~[0m
+
+    at createTSError (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:863:19)
+    at C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1379:34
+    at Object.compile (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1458:13)
+    at Module.m._compile (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1617:30)
+    at Module._extensions..js (internal/modules/cjs/loader.js:1114:10)
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (internal/modules/cjs/loader.js:950:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:790:12)
+    at Module.require (internal/modules/cjs/loader.js:974:19)
+2023-05-03 18:27:11 error: uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/services/post.service.ts[0m:[93m19[0m:[93m139[0m - [91merror[0m[90m TS1005: [0m'{' expected.
+
+[7m19[0m       console.log(popularPosts.records.map((record: any) => record._fields.map((field: any) => {console.log(field.forEach((value: any) => return value.properties))})));
+[7m  [0m [91m                                                                                                                                          ~~~~~~[0m
+[96msrc/services/post.service.ts[0m:[93m19[0m:[93m162[0m - [91merror[0m[90m TS1005: [0m';' expected.
+
+[7m19[0m       console.log(popularPosts.records.map((record: any) => record._fields.map((field: any) => {console.log(field.forEach((value: any) => return value.properties))})));
+[7m  [0m [91m                                                                                                                                                                 ~[0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/services/post.service.ts[0m:[93m19[0m:[93m139[0m - [91merror[0m[90m TS1005: [0m'{' expected.
+
+[7m19[0m       console.log(popularPosts.records.map((record: any) => record._fields.map((field: any) => {console.log(field.forEach((value: any) => return value.properties))})));
+[7m  [0m [91m                                                                                                                                          ~~~~~~[0m
+[96msrc/services/post.service.ts[0m:[93m19[0m:[93m162[0m - [91merror[0m[90m TS1005: [0m';' expected.
+
+[7m19[0m       console.log(popularPosts.records.map((record: any) => record._fields.map((field: any) => {console.log(field.forEach((value: any) => return value.properties))})));
+[7m  [0m [91m                                                                                                                                                                 ~[0m
+
+    at createTSError (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:863:19)
+    at C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1379:34
+    at Object.compile (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1458:13)
+    at Module.m._compile (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1617:30)
+    at Module._extensions..js (internal/modules/cjs/loader.js:1114:10)
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (internal/modules/cjs/loader.js:950:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:790:12)
+    at Module.require (internal/modules/cjs/loader.js:974:19)
+2023-05-03 18:30:14 error: uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/services/post.service.ts[0m:[93m22[0m:[93m17[0m - [91merror[0m[90m TS1109: [0mExpression expected.
+
+[7m22[0m             for()
+[7m  [0m [91m                ~[0m
+[96msrc/services/post.service.ts[0m:[93m23[0m:[93m11[0m - [91merror[0m[90m TS1109: [0mExpression expected.
+
+[7m23[0m           }),
+[7m  [0m [91m          ~[0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/services/post.service.ts[0m:[93m22[0m:[93m17[0m - [91merror[0m[90m TS1109: [0mExpression expected.
+
+[7m22[0m             for()
+[7m  [0m [91m                ~[0m
+[96msrc/services/post.service.ts[0m:[93m23[0m:[93m11[0m - [91merror[0m[90m TS1109: [0mExpression expected.
+
+[7m23[0m           }),
+[7m  [0m [91m          ~[0m
+
+    at createTSError (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:863:19)
+    at C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1379:34
+    at Object.compile (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1458:13)
+    at Module.m._compile (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1617:30)
+    at Module._extensions..js (internal/modules/cjs/loader.js:1114:10)
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (internal/modules/cjs/loader.js:950:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:790:12)
+    at Module.require (internal/modules/cjs/loader.js:974:19)
+2023-05-03 18:30:19 error: uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/services/post.service.ts[0m:[93m22[0m:[93m28[0m - [91merror[0m[90m TS1109: [0mExpression expected.
+
+[7m22[0m             for(let key in )
+[7m  [0m [91m                           ~[0m
+[96msrc/services/post.service.ts[0m:[93m23[0m:[93m11[0m - [91merror[0m[90m TS1109: [0mExpression expected.
+
+[7m23[0m           }),
+[7m  [0m [91m          ~[0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/services/post.service.ts[0m:[93m22[0m:[93m28[0m - [91merror[0m[90m TS1109: [0mExpression expected.
+
+[7m22[0m             for(let key in )
+[7m  [0m [91m                           ~[0m
+[96msrc/services/post.service.ts[0m:[93m23[0m:[93m11[0m - [91merror[0m[90m TS1109: [0mExpression expected.
+
+[7m23[0m           }),
+[7m  [0m [91m          ~[0m
+
+    at createTSError (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:863:19)
+    at C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1379:34
+    at Object.compile (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1458:13)
+    at Module.m._compile (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1617:30)
+    at Module._extensions..js (internal/modules/cjs/loader.js:1114:10)
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (internal/modules/cjs/loader.js:950:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:790:12)
+    at Module.require (internal/modules/cjs/loader.js:974:19)
+2023-05-03 18:30:22 error: uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/services/post.service.ts[0m:[93m23[0m:[93m11[0m - [91merror[0m[90m TS1109: [0mExpression expected.
+
+[7m23[0m           }),
+[7m  [0m [91m          ~[0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/services/post.service.ts[0m:[93m23[0m:[93m11[0m - [91merror[0m[90m TS1109: [0mExpression expected.
+
+[7m23[0m           }),
+[7m  [0m [91m          ~[0m
+
+    at createTSError (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:863:19)
+    at C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1379:34
+    at Object.compile (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1458:13)
+    at Module.m._compile (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1617:30)
+    at Module._extensions..js (internal/modules/cjs/loader.js:1114:10)
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (internal/modules/cjs/loader.js:950:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:790:12)
+    at Module.require (internal/modules/cjs/loader.js:974:19)
+2023-05-03 18:30:29 error: uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/services/post.service.ts[0m:[93m23[0m:[93m31[0m - [91merror[0m[90m TS1005: [0m']' expected.
+
+[7m23[0m               return field[key}
+[7m  [0m [91m                              ~[0m
+[96msrc/services/post.service.ts[0m:[93m25[0m:[93m11[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m25[0m           }),
+[7m  [0m [91m          ~[0m
+[96msrc/services/post.service.ts[0m:[93m25[0m:[93m12[0m - [91merror[0m[90m TS1472: [0m'catch' or 'finally' expected.
+
+[7m25[0m           }),
+[7m  [0m [91m           ~[0m
+[96msrc/services/post.service.ts[0m:[93m25[0m:[93m13[0m - [91merror[0m[90m TS1128: [0mDeclaration or statement expected.
+
+[7m25[0m           }),
+[7m  [0m [91m            ~[0m
+[96msrc/services/post.service.ts[0m:[93m26[0m:[93m9[0m - [91merror[0m[90m TS1128: [0mDeclaration or statement expected.
+
+[7m26[0m         ),
+[7m  [0m [91m        ~[0m
+[96msrc/services/post.service.ts[0m:[93m26[0m:[93m10[0m - [91merror[0m[90m TS1128: [0mDeclaration or statement expected.
+
+[7m26[0m         ),
+[7m  [0m [91m         ~[0m
+[96msrc/services/post.service.ts[0m:[93m27[0m:[93m7[0m - [91merror[0m[90m TS1128: [0mDeclaration or statement expected.
+
+[7m27[0m       );
+[7m  [0m [91m      ~[0m
+[96msrc/services/post.service.ts[0m:[93m30[0m:[93m7[0m - [91merror[0m[90m TS1068: [0mUnexpected token. A constructor, method, accessor, or property was expected.
+
+[7m30[0m     } finally {
+[7m  [0m [91m      ~~~~~~~[0m
+[96msrc/services/post.service.ts[0m:[93m33[0m:[93m3[0m - [91merror[0m[90m TS1128: [0mDeclaration or statement expected.
+
+[7m33[0m   }
+[7m  [0m [91m  ~[0m
+[96msrc/services/post.service.ts[0m:[93m35[0m:[93m3[0m - [91merror[0m[90m TS1128: [0mDeclaration or statement expected.
+
+[7m35[0m   public async getRecentPosts(categoryId) {
+[7m  [0m [91m  ~~~~~~[0m
+[96msrc/services/post.service.ts[0m:[93m35[0m:[93m10[0m - [91merror[0m[90m TS1434: [0mUnexpected keyword or identifier.
+
+[7m35[0m   public async getRecentPosts(categoryId) {
+[7m  [0m [91m         ~~~~~[0m
+[96msrc/services/post.service.ts[0m:[93m35[0m:[93m43[0m - [91merror[0m[90m TS1005: [0m';' expected.
+
+[7m35[0m   public async getRecentPosts(categoryId) {
+[7m  [0m [91m                                          ~[0m
+[96msrc/services/post.service.ts[0m:[93m59[0m:[93m3[0m - [91merror[0m[90m TS1128: [0mDeclaration or statement expected.
+
+[7m59[0m   public async getPostPictures(postId) {
+[7m  [0m [91m  ~~~~~~[0m
+[96msrc/services/post.service.ts[0m:[93m59[0m:[93m10[0m - [91merror[0m[90m TS1434: [0mUnexpected keyword or identifier.
+
+[7m59[0m   public async getPostPictures(postId) {
+[7m  [0m [91m         ~~~~~[0m
+[96msrc/services/post.service.ts[0m:[93m59[0m:[93m40[0m - [91merror[0m[90m TS1005: [0m';' expected.
+
+[7m59[0m   public async getPostPictures(postId) {
+[7m  [0m [91m                                       ~[0m
+[96msrc/services/post.service.ts[0m:[93m75[0m:[93m3[0m - [91merror[0m[90m TS1128: [0mDeclaration or statement expected.
+
+[7m75[0m   public async UpdateViews(postId) {
+[7m  [0m [91m  ~~~~~~[0m
+[96msrc/services/post.service.ts[0m:[93m75[0m:[93m10[0m - [91merror[0m[90m TS1434: [0mUnexpected keyword or identifier.
+
+[7m75[0m   public async UpdateViews(postId) {
+[7m  [0m [91m         ~~~~~[0m
+[96msrc/services/post.service.ts[0m:[93m75[0m:[93m36[0m - [91merror[0m[90m TS1005: [0m';' expected.
+
+[7m75[0m   public async UpdateViews(postId) {
+[7m  [0m [91m                                   ~[0m
+[96msrc/services/post.service.ts[0m:[93m91[0m:[93m3[0m - [91merror[0m[90m TS1128: [0mDeclaration or statement expected.
+
+[7m91[0m   public async createPost(userId: string, postData: any) {
+[7m  [0m [91m  ~~~~~~[0m
+[96msrc/services/post.service.ts[0m:[93m91[0m:[93m10[0m - [91merror[0m[90m TS1434: [0mUnexpected keyword or identifier.
+
+[7m91[0m   public async createPost(userId: string, postData: any) {
+[7m  [0m [91m         ~~~~~[0m
+[96msrc/services/post.service.ts[0m:[93m91[0m:[93m33[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m91[0m   public async createPost(userId: string, postData: any) {
+[7m  [0m [91m                                ~[0m
+[96msrc/services/post.service.ts[0m:[93m91[0m:[93m51[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m91[0m   public async createPost(userId: string, postData: any) {
+[7m  [0m [91m                                                  ~[0m
+[96msrc/services/post.service.ts[0m:[93m91[0m:[93m58[0m - [91merror[0m[90m TS1005: [0m';' expected.
+
+[7m91[0m   public async createPost(userId: string, postData: any) {
+[7m  [0m [91m                                                         ~[0m
+[96msrc/services/post.service.ts[0m:[93m148[0m:[93m3[0m - [91merror[0m[90m TS1128: [0mDeclaration or statement expected.
+
+[7m148[0m   public async likePost(postId) {
+[7m   [0m [91m  ~~~~~~[0m
+[96msrc/services/post.service.ts[0m:[93m148[0m:[93m10[0m - [91merror[0m[90m TS1434: [0mUnexpected keyword or identifier.
+
+[7m148[0m   public async likePost(postId) {
+[7m   [0m [91m         ~~~~~[0m
+[96msrc/services/post.service.ts[0m:[93m148[0m:[93m33[0m - [91merror[0m[90m TS1005: [0m';' expected.
+
+[7m148[0m   public async likePost(postId) {
+[7m   [0m [91m                                ~[0m
+[96msrc/services/post.service.ts[0m:[93m165[0m:[93m3[0m - [91merror[0m[90m TS1128: [0mDeclaration or statement expected.
+
+[7m165[0m   public async uploadPostPictures(pictureFiles: any, collectionId: string) {
+[7m   [0m [91m  ~~~~~~[0m
+[96msrc/services/post.service.ts[0m:[93m165[0m:[93m10[0m - [91merror[0m[90m TS1434: [0mUnexpected keyword or identifier.
+
+[7m165[0m   public async uploadPostPictures(pictureFiles: any, collectionId: string) {
+[7m   [0m [91m         ~~~~~[0m
+[96msrc/services/post.service.ts[0m:[93m165[0m:[93m47[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m165[0m   public async uploadPostPictures(pictureFiles: any, collectionId: string) {
+[7m   [0m [91m                                              ~[0m
+[96msrc/services/post.service.ts[0m:[93m165[0m:[93m66[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m165[0m   public async uploadPostPictures(pictureFiles: any, collectionId: string) {
+[7m   [0m [91m                                                                 ~[0m
+[96msrc/services/post.service.ts[0m:[93m165[0m:[93m76[0m - [91merror[0m[90m TS1005: [0m';' expected.
+
+[7m165[0m   public async uploadPostPictures(pictureFiles: any, collectionId: string) {
+[7m   [0m [91m                                                                           ~[0m
+[96msrc/services/post.service.ts[0m:[93m197[0m:[93m3[0m - [91merror[0m[90m TS1128: [0mDeclaration or statement expected.
+
+[7m197[0m   public async createPictures(pictureDescription: string, value: string, collectionId: string) {
+[7m   [0m [91m  ~~~~~~[0m
+[96msrc/services/post.service.ts[0m:[93m197[0m:[93m10[0m - [91merror[0m[90m TS1434: [0mUnexpected keyword or identifier.
+
+[7m197[0m   public async createPictures(pictureDescription: string, value: string, collectionId: string) {
+[7m   [0m [91m         ~~~~~[0m
+[96msrc/services/post.service.ts[0m:[93m197[0m:[93m49[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m197[0m   public async createPictures(pictureDescription: string, value: string, collectionId: string) {
+[7m   [0m [91m                                                ~[0m
+[96msrc/services/post.service.ts[0m:[93m197[0m:[93m64[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m197[0m   public async createPictures(pictureDescription: string, value: string, collectionId: string) {
+[7m   [0m [91m                                                               ~[0m
+[96msrc/services/post.service.ts[0m:[93m197[0m:[93m86[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m197[0m   public async createPictures(pictureDescription: string, value: string, collectionId: string) {
+[7m   [0m [91m                                                                                     ~[0m
+[96msrc/services/post.service.ts[0m:[93m197[0m:[93m96[0m - [91merror[0m[90m TS1005: [0m';' expected.
+
+[7m197[0m   public async createPictures(pictureDescription: string, value: string, collectionId: string) {
+[7m   [0m [91m                                                                                               ~[0m
+[96msrc/services/post.service.ts[0m:[93m217[0m:[93m1[0m - [91merror[0m[90m TS1128: [0mDeclaration or statement expected.
+
+[7m217[0m }
+[7m   [0m [91m~[0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/services/post.service.ts[0m:[93m23[0m:[93m31[0m - [91merror[0m[90m TS1005: [0m']' expected.
+
+[7m23[0m               return field[key}
+[7m  [0m [91m                              ~[0m
+[96msrc/services/post.service.ts[0m:[93m25[0m:[93m11[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m25[0m           }),
+[7m  [0m [91m          ~[0m
+[96msrc/services/post.service.ts[0m:[93m25[0m:[93m12[0m - [91merror[0m[90m TS1472: [0m'catch' or 'finally' expected.
+
+[7m25[0m           }),
+[7m  [0m [91m           ~[0m
+[96msrc/services/post.service.ts[0m:[93m25[0m:[93m13[0m - [91merror[0m[90m TS1128: [0mDeclaration or statement expected.
+
+[7m25[0m           }),
+[7m  [0m [91m            ~[0m
+[96msrc/services/post.service.ts[0m:[93m26[0m:[93m9[0m - [91merror[0m[90m TS1128: [0mDeclaration or statement expected.
+
+[7m26[0m         ),
+[7m  [0m [91m        ~[0m
+[96msrc/services/post.service.ts[0m:[93m26[0m:[93m10[0m - [91merror[0m[90m TS1128: [0mDeclaration or statement expected.
+
+[7m26[0m         ),
+[7m  [0m [91m         ~[0m
+[96msrc/services/post.service.ts[0m:[93m27[0m:[93m7[0m - [91merror[0m[90m TS1128: [0mDeclaration or statement expected.
+
+[7m27[0m       );
+[7m  [0m [91m      ~[0m
+[96msrc/services/post.service.ts[0m:[93m30[0m:[93m7[0m - [91merror[0m[90m TS1068: [0mUnexpected token. A constructor, method, accessor, or property was expected.
+
+[7m30[0m     } finally {
+[7m  [0m [91m      ~~~~~~~[0m
+[96msrc/services/post.service.ts[0m:[93m33[0m:[93m3[0m - [91merror[0m[90m TS1128: [0mDeclaration or statement expected.
+
+[7m33[0m   }
+[7m  [0m [91m  ~[0m
+[96msrc/services/post.service.ts[0m:[93m35[0m:[93m3[0m - [91merror[0m[90m TS1128: [0mDeclaration or statement expected.
+
+[7m35[0m   public async getRecentPosts(categoryId) {
+[7m  [0m [91m  ~~~~~~[0m
+[96msrc/services/post.service.ts[0m:[93m35[0m:[93m10[0m - [91merror[0m[90m TS1434: [0mUnexpected keyword or identifier.
+
+[7m35[0m   public async getRecentPosts(categoryId) {
+[7m  [0m [91m         ~~~~~[0m
+[96msrc/services/post.service.ts[0m:[93m35[0m:[93m43[0m - [91merror[0m[90m TS1005: [0m';' expected.
+
+[7m35[0m   public async getRecentPosts(categoryId) {
+[7m  [0m [91m                                          ~[0m
+[96msrc/services/post.service.ts[0m:[93m59[0m:[93m3[0m - [91merror[0m[90m TS1128: [0mDeclaration or statement expected.
+
+[7m59[0m   public async getPostPictures(postId) {
+[7m  [0m [91m  ~~~~~~[0m
+[96msrc/services/post.service.ts[0m:[93m59[0m:[93m10[0m - [91merror[0m[90m TS1434: [0mUnexpected keyword or identifier.
+
+[7m59[0m   public async getPostPictures(postId) {
+[7m  [0m [91m         ~~~~~[0m
+[96msrc/services/post.service.ts[0m:[93m59[0m:[93m40[0m - [91merror[0m[90m TS1005: [0m';' expected.
+
+[7m59[0m   public async getPostPictures(postId) {
+[7m  [0m [91m                                       ~[0m
+[96msrc/services/post.service.ts[0m:[93m75[0m:[93m3[0m - [91merror[0m[90m TS1128: [0mDeclaration or statement expected.
+
+[7m75[0m   public async UpdateViews(postId) {
+[7m  [0m [91m  ~~~~~~[0m
+[96msrc/services/post.service.ts[0m:[93m75[0m:[93m10[0m - [91merror[0m[90m TS1434: [0mUnexpected keyword or identifier.
+
+[7m75[0m   public async UpdateViews(postId) {
+[7m  [0m [91m         ~~~~~[0m
+[96msrc/services/post.service.ts[0m:[93m75[0m:[93m36[0m - [91merror[0m[90m TS1005: [0m';' expected.
+
+[7m75[0m   public async UpdateViews(postId) {
+[7m  [0m [91m                                   ~[0m
+[96msrc/services/post.service.ts[0m:[93m91[0m:[93m3[0m - [91merror[0m[90m TS1128: [0mDeclaration or statement expected.
+
+[7m91[0m   public async createPost(userId: string, postData: any) {
+[7m  [0m [91m  ~~~~~~[0m
+[96msrc/services/post.service.ts[0m:[93m91[0m:[93m10[0m - [91merror[0m[90m TS1434: [0mUnexpected keyword or identifier.
+
+[7m91[0m   public async createPost(userId: string, postData: any) {
+[7m  [0m [91m         ~~~~~[0m
+[96msrc/services/post.service.ts[0m:[93m91[0m:[93m33[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m91[0m   public async createPost(userId: string, postData: any) {
+[7m  [0m [91m                                ~[0m
+[96msrc/services/post.service.ts[0m:[93m91[0m:[93m51[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m91[0m   public async createPost(userId: string, postData: any) {
+[7m  [0m [91m                                                  ~[0m
+[96msrc/services/post.service.ts[0m:[93m91[0m:[93m58[0m - [91merror[0m[90m TS1005: [0m';' expected.
+
+[7m91[0m   public async createPost(userId: string, postData: any) {
+[7m  [0m [91m                                                         ~[0m
+[96msrc/services/post.service.ts[0m:[93m148[0m:[93m3[0m - [91merror[0m[90m TS1128: [0mDeclaration or statement expected.
+
+[7m148[0m   public async likePost(postId) {
+[7m   [0m [91m  ~~~~~~[0m
+[96msrc/services/post.service.ts[0m:[93m148[0m:[93m10[0m - [91merror[0m[90m TS1434: [0mUnexpected keyword or identifier.
+
+[7m148[0m   public async likePost(postId) {
+[7m   [0m [91m         ~~~~~[0m
+[96msrc/services/post.service.ts[0m:[93m148[0m:[93m33[0m - [91merror[0m[90m TS1005: [0m';' expected.
+
+[7m148[0m   public async likePost(postId) {
+[7m   [0m [91m                                ~[0m
+[96msrc/services/post.service.ts[0m:[93m165[0m:[93m3[0m - [91merror[0m[90m TS1128: [0mDeclaration or statement expected.
+
+[7m165[0m   public async uploadPostPictures(pictureFiles: any, collectionId: string) {
+[7m   [0m [91m  ~~~~~~[0m
+[96msrc/services/post.service.ts[0m:[93m165[0m:[93m10[0m - [91merror[0m[90m TS1434: [0mUnexpected keyword or identifier.
+
+[7m165[0m   public async uploadPostPictures(pictureFiles: any, collectionId: string) {
+[7m   [0m [91m         ~~~~~[0m
+[96msrc/services/post.service.ts[0m:[93m165[0m:[93m47[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m165[0m   public async uploadPostPictures(pictureFiles: any, collectionId: string) {
+[7m   [0m [91m                                              ~[0m
+[96msrc/services/post.service.ts[0m:[93m165[0m:[93m66[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m165[0m   public async uploadPostPictures(pictureFiles: any, collectionId: string) {
+[7m   [0m [91m                                                                 ~[0m
+[96msrc/services/post.service.ts[0m:[93m165[0m:[93m76[0m - [91merror[0m[90m TS1005: [0m';' expected.
+
+[7m165[0m   public async uploadPostPictures(pictureFiles: any, collectionId: string) {
+[7m   [0m [91m                                                                           ~[0m
+[96msrc/services/post.service.ts[0m:[93m197[0m:[93m3[0m - [91merror[0m[90m TS1128: [0mDeclaration or statement expected.
+
+[7m197[0m   public async createPictures(pictureDescription: string, value: string, collectionId: string) {
+[7m   [0m [91m  ~~~~~~[0m
+[96msrc/services/post.service.ts[0m:[93m197[0m:[93m10[0m - [91merror[0m[90m TS1434: [0mUnexpected keyword or identifier.
+
+[7m197[0m   public async createPictures(pictureDescription: string, value: string, collectionId: string) {
+[7m   [0m [91m         ~~~~~[0m
+[96msrc/services/post.service.ts[0m:[93m197[0m:[93m49[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m197[0m   public async createPictures(pictureDescription: string, value: string, collectionId: string) {
+[7m   [0m [91m                                                ~[0m
+[96msrc/services/post.service.ts[0m:[93m197[0m:[93m64[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m197[0m   public async createPictures(pictureDescription: string, value: string, collectionId: string) {
+[7m   [0m [91m                                                               ~[0m
+[96msrc/services/post.service.ts[0m:[93m197[0m:[93m86[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m197[0m   public async createPictures(pictureDescription: string, value: string, collectionId: string) {
+[7m   [0m [91m                                                                                     ~[0m
+[96msrc/services/post.service.ts[0m:[93m197[0m:[93m96[0m - [91merror[0m[90m TS1005: [0m';' expected.
+
+[7m197[0m   public async createPictures(pictureDescription: string, value: string, collectionId: string) {
+[7m   [0m [91m                                                                                               ~[0m
+[96msrc/services/post.service.ts[0m:[93m217[0m:[93m1[0m - [91merror[0m[90m TS1128: [0mDeclaration or statement expected.
+
+[7m217[0m }
+[7m   [0m [91m~[0m
+
+    at createTSError (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:863:19)
+    at C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1379:34
+    at Object.compile (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1458:13)
+    at Module.m._compile (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1617:30)
+    at Module._extensions..js (internal/modules/cjs/loader.js:1114:10)
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (internal/modules/cjs/loader.js:950:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:790:12)
+    at Module.require (internal/modules/cjs/loader.js:974:19)
+2023-05-03 18:32:03 error: uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/services/post.service.ts[0m:[93m23[0m:[93m36[0m - [91merror[0m[90m TS1109: [0mExpression expected.
+
+[7m23[0m               return post['post' = ]
+[7m  [0m [91m                                   ~[0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/services/post.service.ts[0m:[93m23[0m:[93m36[0m - [91merror[0m[90m TS1109: [0mExpression expected.
+
+[7m23[0m               return post['post' = ]
+[7m  [0m [91m                                   ~[0m
+
+    at createTSError (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:863:19)
+    at C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1379:34
+    at Object.compile (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1458:13)
+    at Module.m._compile (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1617:30)
+    at Module._extensions..js (internal/modules/cjs/loader.js:1114:10)
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (internal/modules/cjs/loader.js:950:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:790:12)
+    at Module.require (internal/modules/cjs/loader.js:974:19)
+2023-05-03 18:32:11 error: uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/services/post.service.ts[0m:[93m24[0m:[93m13[0m - [91merror[0m[90m TS1109: [0mExpression expected.
+
+[7m24[0m             }
+[7m  [0m [91m            ~[0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/services/post.service.ts[0m:[93m24[0m:[93m13[0m - [91merror[0m[90m TS1109: [0mExpression expected.
+
+[7m24[0m             }
+[7m  [0m [91m            ~[0m
+
+    at createTSError (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:863:19)
+    at C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1379:34
+    at Object.compile (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1458:13)
+    at Module.m._compile (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1617:30)
+    at Module._extensions..js (internal/modules/cjs/loader.js:1114:10)
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (internal/modules/cjs/loader.js:950:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:790:12)
+    at Module.require (internal/modules/cjs/loader.js:974:19)
+2023-05-03 18:32:15 error: uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/services/post.service.ts[0m:[93m24[0m:[93m13[0m - [91merror[0m[90m TS1003: [0mIdentifier expected.
+
+[7m24[0m             }
+[7m  [0m [91m            ~[0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/services/post.service.ts[0m:[93m24[0m:[93m13[0m - [91merror[0m[90m TS1003: [0mIdentifier expected.
+
+[7m24[0m             }
+[7m  [0m [91m            ~[0m
+
+    at createTSError (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:863:19)
+    at C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1379:34
+    at Object.compile (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1458:13)
+    at Module.m._compile (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1617:30)
+    at Module._extensions..js (internal/modules/cjs/loader.js:1114:10)
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (internal/modules/cjs/loader.js:950:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:790:12)
+    at Module.require (internal/modules/cjs/loader.js:974:19)
+2023-05-03 18:35:30 error: uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/services/post.service.ts[0m:[93m25[0m:[93m69[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m25[0m               field[key].pictures = field[key].pictures.map(picture $).properties;
+[7m  [0m [91m                                                                    ~[0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/services/post.service.ts[0m:[93m25[0m:[93m69[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m25[0m               field[key].pictures = field[key].pictures.map(picture $).properties;
+[7m  [0m [91m                                                                    ~[0m
+
+    at createTSError (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:863:19)
+    at C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1379:34
+    at Object.compile (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1458:13)
+    at Module.m._compile (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1617:30)
+    at Module._extensions..js (internal/modules/cjs/loader.js:1114:10)
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (internal/modules/cjs/loader.js:950:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:790:12)
+    at Module.require (internal/modules/cjs/loader.js:974:19)
+2023-05-03 18:35:32 error: uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/services/post.service.ts[0m:[93m25[0m:[93m69[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m25[0m               field[key].pictures = field[key].pictures.map(picture $).properties;
+[7m  [0m [91m                                                                    ~[0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/services/post.service.ts[0m:[93m25[0m:[93m69[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m25[0m               field[key].pictures = field[key].pictures.map(picture $).properties;
+[7m  [0m [91m                                                                    ~[0m
+
+    at createTSError (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:863:19)
+    at C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1379:34
+    at Object.compile (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1458:13)
+    at Module.m._compile (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1617:30)
+    at Module._extensions..js (internal/modules/cjs/loader.js:1114:10)
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (internal/modules/cjs/loader.js:950:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:790:12)
+    at Module.require (internal/modules/cjs/loader.js:974:19)
+2023-05-03 18:35:35 error: uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/services/post.service.ts[0m:[93m25[0m:[93m72[0m - [91merror[0m[90m TS1109: [0mExpression expected.
+
+[7m25[0m               field[key].pictures = field[key].pictures.map(picture => ).properties;
+[7m  [0m [91m                                                                       ~[0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/services/post.service.ts[0m:[93m25[0m:[93m72[0m - [91merror[0m[90m TS1109: [0mExpression expected.
+
+[7m25[0m               field[key].pictures = field[key].pictures.map(picture => ).properties;
+[7m  [0m [91m                                                                       ~[0m
+
+    at createTSError (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:863:19)
+    at C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1379:34
+    at Object.compile (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1458:13)
+    at Module.m._compile (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1617:30)
+    at Module._extensions..js (internal/modules/cjs/loader.js:1114:10)
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (internal/modules/cjs/loader.js:950:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:790:12)
+    at Module.require (internal/modules/cjs/loader.js:974:19)
+2023-05-03 18:35:40 error: uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/services/post.service.ts[0m:[93m25[0m:[93m74[0m - [91merror[0m[90m TS1109: [0mExpression expected.
+
+[7m25[0m               field[key].pictures = field[key].pictures.map((picture) => ).properties;
+[7m  [0m [91m                                                                         ~[0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/services/post.service.ts[0m:[93m25[0m:[93m74[0m - [91merror[0m[90m TS1109: [0mExpression expected.
+
+[7m25[0m               field[key].pictures = field[key].pictures.map((picture) => ).properties;
+[7m  [0m [91m                                                                         ~[0m
+
+    at createTSError (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:863:19)
+    at C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1379:34
+    at Object.compile (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1458:13)
+    at Module.m._compile (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1617:30)
+    at Module._extensions..js (internal/modules/cjs/loader.js:1114:10)
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (internal/modules/cjs/loader.js:950:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:790:12)
+    at Module.require (internal/modules/cjs/loader.js:974:19)
+2023-05-03 18:35:42 error: uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/services/post.service.ts[0m:[93m25[0m:[93m79[0m - [91merror[0m[90m TS1109: [0mExpression expected.
+
+[7m25[0m               field[key].pictures = field[key].pictures.map((picture: any) => ).properties;
+[7m  [0m [91m                                                                              ~[0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/services/post.service.ts[0m:[93m25[0m:[93m79[0m - [91merror[0m[90m TS1109: [0mExpression expected.
+
+[7m25[0m               field[key].pictures = field[key].pictures.map((picture: any) => ).properties;
+[7m  [0m [91m                                                                              ~[0m
+
+    at createTSError (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:863:19)
+    at C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1379:34
+    at Object.compile (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1458:13)
+    at Module.m._compile (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1617:30)
+    at Module._extensions..js (internal/modules/cjs/loader.js:1114:10)
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (internal/modules/cjs/loader.js:950:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:790:12)
+    at Module.require (internal/modules/cjs/loader.js:974:19)
+2023-05-03 18:35:54 error: uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/services/post.service.ts[0m:[93m25[0m:[93m87[0m - [91merror[0m[90m TS1003: [0mIdentifier expected.
+
+[7m25[0m               field[key].pictures = field[key].pictures.map((picture: any) => picture.).properties;
+[7m  [0m [91m                                                                                      ~[0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/services/post.service.ts[0m:[93m25[0m:[93m87[0m - [91merror[0m[90m TS1003: [0mIdentifier expected.
+
+[7m25[0m               field[key].pictures = field[key].pictures.map((picture: any) => picture.).properties;
+[7m  [0m [91m                                                                                      ~[0m
+
+    at createTSError (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:863:19)
+    at C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1379:34
+    at Object.compile (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1458:13)
+    at Module.m._compile (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1617:30)
+    at Module._extensions..js (internal/modules/cjs/loader.js:1114:10)
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (internal/modules/cjs/loader.js:950:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:790:12)
+    at Module.require (internal/modules/cjs/loader.js:974:19)
+2023-05-03 18:37:55 error: uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/services/post.service.ts[0m:[93m24[0m:[93m37[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m24[0m               console.log(field[key]s);
+[7m  [0m [91m                                    ~[0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/services/post.service.ts[0m:[93m24[0m:[93m37[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m24[0m               console.log(field[key]s);
+[7m  [0m [91m                                    ~[0m
+
+    at createTSError (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:863:19)
+    at C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1379:34
+    at Object.compile (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1458:13)
+    at Module.m._compile (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1617:30)
+    at Module._extensions..js (internal/modules/cjs/loader.js:1114:10)
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (internal/modules/cjs/loader.js:950:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:790:12)
+    at Module.require (internal/modules/cjs/loader.js:974:19)
+2023-05-03 18:44:31 error: uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/services/post.service.ts[0m:[93m23[0m:[93m43[0m - [91merror[0m[90m TS1011: [0mAn element access expression should take an argument.
+
+[7m23[0m               return post['post'] = field[]
+[7m  [0m [91m                                          [0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/services/post.service.ts[0m:[93m23[0m:[93m43[0m - [91merror[0m[90m TS1011: [0mAn element access expression should take an argument.
+
+[7m23[0m               return post['post'] = field[]
+[7m  [0m [91m                                          [0m
+
+    at createTSError (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:863:19)
+    at C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1379:34
+    at Object.compile (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1458:13)
+    at Module.m._compile (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1617:30)
+    at Module._extensions..js (internal/modules/cjs/loader.js:1114:10)
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (internal/modules/cjs/loader.js:950:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:790:12)
+    at Module.require (internal/modules/cjs/loader.js:974:19)
+2023-05-03 18:45:16 error: uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/services/post.service.ts[0m:[93m24[0m:[93m11[0m - [91merror[0m[90m TS1003: [0mIdentifier expected.
+
+[7m24[0m           }),
+[7m  [0m [91m          ~[0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/services/post.service.ts[0m:[93m24[0m:[93m11[0m - [91merror[0m[90m TS1003: [0mIdentifier expected.
+
+[7m24[0m           }),
+[7m  [0m [91m          ~[0m
+
+    at createTSError (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:863:19)
+    at C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1379:34
+    at Object.compile (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1458:13)
+    at Module.m._compile (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1617:30)
+    at Module._extensions..js (internal/modules/cjs/loader.js:1114:10)
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (internal/modules/cjs/loader.js:950:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:790:12)
+    at Module.require (internal/modules/cjs/loader.js:974:19)
+2023-05-03 18:48:05 error: uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/services/post.service.ts[0m:[93m27[0m:[93m8[0m - [91merror[0m[90m TS1005: [0m')' expected.
+
+[7m27[0m       );
+[7m  [0m [91m       ~[0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/services/post.service.ts[0m:[93m27[0m:[93m8[0m - [91merror[0m[90m TS1005: [0m')' expected.
+
+[7m27[0m       );
+[7m  [0m [91m       ~[0m
+
+    at createTSError (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:863:19)
+    at C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1379:34
+    at Object.compile (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1458:13)
+    at Module.m._compile (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1617:30)
+    at Module._extensions..js (internal/modules/cjs/loader.js:1114:10)
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (internal/modules/cjs/loader.js:950:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:790:12)
+    at Module.require (internal/modules/cjs/loader.js:974:19)
+2023-05-03 18:48:12 error: uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/services/post.service.ts[0m:[93m25[0m:[93m8[0m - [91merror[0m[90m TS1005: [0m')' expected.
+
+[7m25[0m       );
+[7m  [0m [91m       ~[0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/services/post.service.ts[0m:[93m25[0m:[93m8[0m - [91merror[0m[90m TS1005: [0m')' expected.
+
+[7m25[0m       );
+[7m  [0m [91m       ~[0m
+
+    at createTSError (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:863:19)
+    at C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1379:34
+    at Object.compile (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1458:13)
+    at Module.m._compile (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1617:30)
+    at Module._extensions..js (internal/modules/cjs/loader.js:1114:10)
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (internal/modules/cjs/loader.js:950:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:790:12)
+    at Module.require (internal/modules/cjs/loader.js:974:19)
+2023-05-03 18:49:03 error: uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/services/post.service.ts[0m:[93m24[0m:[93m73[0m - [91merror[0m[90m TS1003: [0mIdentifier expected.
+
+[7m24[0m             return {post: field.post, user: field.user, pictures: field.}
+[7m  [0m [91m                                                                        ~[0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/services/post.service.ts[0m:[93m24[0m:[93m73[0m - [91merror[0m[90m TS1003: [0mIdentifier expected.
+
+[7m24[0m             return {post: field.post, user: field.user, pictures: field.}
+[7m  [0m [91m                                                                        ~[0m
+
+    at createTSError (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:863:19)
+    at C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1379:34
+    at Object.compile (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1458:13)
+    at Module.m._compile (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1617:30)
+    at Module._extensions..js (internal/modules/cjs/loader.js:1114:10)
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (internal/modules/cjs/loader.js:950:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:790:12)
+    at Module.require (internal/modules/cjs/loader.js:974:19)
+2023-05-03 18:49:17 error: uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/services/post.service.ts[0m:[93m24[0m:[93m104[0m - [91merror[0m[90m TS1109: [0mExpression expected.
+
+[7m24[0m             return {post: field.post, user: field.user, pictures: field.pictures.map((pictures: any) =>}
+[7m  [0m [91m                                                                                                       ~[0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/services/post.service.ts[0m:[93m24[0m:[93m104[0m - [91merror[0m[90m TS1109: [0mExpression expected.
+
+[7m24[0m             return {post: field.post, user: field.user, pictures: field.pictures.map((pictures: any) =>}
+[7m  [0m [91m                                                                                                       ~[0m
+
+    at createTSError (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:863:19)
+    at C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1379:34
+    at Object.compile (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1458:13)
+    at Module.m._compile (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1617:30)
+    at Module._extensions..js (internal/modules/cjs/loader.js:1114:10)
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (internal/modules/cjs/loader.js:950:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:790:12)
+    at Module.require (internal/modules/cjs/loader.js:974:19)
+2023-05-03 18:49:19 error: uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/services/post.service.ts[0m:[93m24[0m:[93m103[0m - [91merror[0m[90m TS1109: [0mExpression expected.
+
+[7m24[0m             return {post: field.post, user: field.user, pictures: field.pictures.map((picture: any) =>}
+[7m  [0m [91m                                                                                                      ~[0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/services/post.service.ts[0m:[93m24[0m:[93m103[0m - [91merror[0m[90m TS1109: [0mExpression expected.
+
+[7m24[0m             return {post: field.post, user: field.user, pictures: field.pictures.map((picture: any) =>}
+[7m  [0m [91m                                                                                                      ~[0m
+
+    at createTSError (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:863:19)
+    at C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1379:34
+    at Object.compile (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1458:13)
+    at Module.m._compile (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1617:30)
+    at Module._extensions..js (internal/modules/cjs/loader.js:1114:10)
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (internal/modules/cjs/loader.js:950:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:790:12)
+    at Module.require (internal/modules/cjs/loader.js:974:19)
+2023-05-03 18:49:24 error: uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/services/post.service.ts[0m:[93m24[0m:[93m106[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m24[0m             return {post: field.post, user: field.user, pictures: field.pictures.map((picture: any) => {}}
+[7m  [0m [91m                                                                                                         ~[0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/services/post.service.ts[0m:[93m24[0m:[93m106[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m24[0m             return {post: field.post, user: field.user, pictures: field.pictures.map((picture: any) => {}}
+[7m  [0m [91m                                                                                                         ~[0m
+
+    at createTSError (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:863:19)
+    at C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1379:34
+    at Object.compile (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1458:13)
+    at Module.m._compile (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1617:30)
+    at Module._extensions..js (internal/modules/cjs/loader.js:1114:10)
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (internal/modules/cjs/loader.js:950:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:790:12)
+    at Module.require (internal/modules/cjs/loader.js:974:19)
+2023-05-03 18:52:37 error: uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/services/post.service.ts[0m:[93m35[0m:[93m7[0m - [91merror[0m[90m TS1109: [0mExpression expected.
+
+[7m35[0m       );
+[7m  [0m [91m      ~[0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/services/post.service.ts[0m:[93m35[0m:[93m7[0m - [91merror[0m[90m TS1109: [0mExpression expected.
+
+[7m35[0m       );
+[7m  [0m [91m      ~[0m
+
+    at createTSError (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:863:19)
+    at C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1379:34
+    at Object.compile (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1458:13)
+    at Module.m._compile (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1617:30)
+    at Module._extensions..js (internal/modules/cjs/loader.js:1114:10)
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (internal/modules/cjs/loader.js:950:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:790:12)
+    at Module.require (internal/modules/cjs/loader.js:974:19)
+2023-05-03 18:52:40 error: uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/services/post.service.ts[0m:[93m35[0m:[93m5[0m - [91merror[0m[90m TS1109: [0mExpression expected.
+
+[7m35[0m     } catch (error) {
+[7m  [0m [91m    ~[0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/services/post.service.ts[0m:[93m35[0m:[93m5[0m - [91merror[0m[90m TS1109: [0mExpression expected.
+
+[7m35[0m     } catch (error) {
+[7m  [0m [91m    ~[0m
+
+    at createTSError (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:863:19)
+    at C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1379:34
+    at Object.compile (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1458:13)
+    at Module.m._compile (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1617:30)
+    at Module._extensions..js (internal/modules/cjs/loader.js:1114:10)
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (internal/modules/cjs/loader.js:950:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:790:12)
+    at Module.require (internal/modules/cjs/loader.js:974:19)
+2023-05-03 18:53:16 error: uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/services/post.service.ts[0m:[93m25[0m:[93m11[0m - [91merror[0m[90m TS1109: [0mExpression expected.
+
+[7m25[0m       for()
+[7m  [0m [91m          ~[0m
+[96msrc/services/post.service.ts[0m:[93m26[0m:[93m5[0m - [91merror[0m[90m TS1109: [0mExpression expected.
+
+[7m26[0m     } catch (error) {
+[7m  [0m [91m    ~[0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/services/post.service.ts[0m:[93m25[0m:[93m11[0m - [91merror[0m[90m TS1109: [0mExpression expected.
+
+[7m25[0m       for()
+[7m  [0m [91m          ~[0m
+[96msrc/services/post.service.ts[0m:[93m26[0m:[93m5[0m - [91merror[0m[90m TS1109: [0mExpression expected.
+
+[7m26[0m     } catch (error) {
+[7m  [0m [91m    ~[0m
+
+    at createTSError (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:863:19)
+    at C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1379:34
+    at Object.compile (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1458:13)
+    at Module.m._compile (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1617:30)
+    at Module._extensions..js (internal/modules/cjs/loader.js:1114:10)
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (internal/modules/cjs/loader.js:950:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:790:12)
+    at Module.require (internal/modules/cjs/loader.js:974:19)
+2023-05-03 18:53:20 error: uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/services/post.service.ts[0m:[93m25[0m:[93m18[0m - [91merror[0m[90m TS1109: [0mExpression expected.
+
+[7m25[0m       for(key in )
+[7m  [0m [91m                 ~[0m
+[96msrc/services/post.service.ts[0m:[93m26[0m:[93m5[0m - [91merror[0m[90m TS1109: [0mExpression expected.
+
+[7m26[0m     } catch (error) {
+[7m  [0m [91m    ~[0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/services/post.service.ts[0m:[93m25[0m:[93m18[0m - [91merror[0m[90m TS1109: [0mExpression expected.
+
+[7m25[0m       for(key in )
+[7m  [0m [91m                 ~[0m
+[96msrc/services/post.service.ts[0m:[93m26[0m:[93m5[0m - [91merror[0m[90m TS1109: [0mExpression expected.
+
+[7m26[0m     } catch (error) {
+[7m  [0m [91m    ~[0m
+
+    at createTSError (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:863:19)
+    at C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1379:34
+    at Object.compile (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1458:13)
+    at Module.m._compile (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1617:30)
+    at Module._extensions..js (internal/modules/cjs/loader.js:1114:10)
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (internal/modules/cjs/loader.js:950:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:790:12)
+    at Module.require (internal/modules/cjs/loader.js:974:19)
+2023-05-03 18:53:25 error: uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/services/post.service.ts[0m:[93m26[0m:[93m5[0m - [91merror[0m[90m TS1109: [0mExpression expected.
+
+[7m26[0m     } catch (error) {
+[7m  [0m [91m    ~[0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/services/post.service.ts[0m:[93m26[0m:[93m5[0m - [91merror[0m[90m TS1109: [0mExpression expected.
+
+[7m26[0m     } catch (error) {
+[7m  [0m [91m    ~[0m
+
+    at createTSError (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:863:19)
+    at C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1379:34
+    at Object.compile (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1458:13)
+    at Module.m._compile (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1617:30)
+    at Module._extensions..js (internal/modules/cjs/loader.js:1114:10)
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (internal/modules/cjs/loader.js:950:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:790:12)
+    at Module.require (internal/modules/cjs/loader.js:974:19)
+2023-05-03 18:56:44 error: uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/services/post.service.ts[0m:[93m29[0m:[93m15[0m - [91merror[0m[90m TS1005: [0m';' expected.
+
+[7m29[0m           user: popularAlbums.user,
+[7m  [0m [91m              ~[0m
+[96msrc/services/post.service.ts[0m:[93m30[0m:[93m19[0m - [91merror[0m[90m TS1005: [0m';' expected.
+
+[7m30[0m           pictures: popularAlbums.pictures.map((picture: any) => {
+[7m  [0m [91m                  ~[0m
+[96msrc/services/post.service.ts[0m:[93m33[0m:[93m9[0m - [91merror[0m[90m TS1109: [0mExpression expected.
+
+[7m33[0m         };
+[7m  [0m [91m        ~[0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/services/post.service.ts[0m:[93m29[0m:[93m15[0m - [91merror[0m[90m TS1005: [0m';' expected.
+
+[7m29[0m           user: popularAlbums.user,
+[7m  [0m [91m              ~[0m
+[96msrc/services/post.service.ts[0m:[93m30[0m:[93m19[0m - [91merror[0m[90m TS1005: [0m';' expected.
+
+[7m30[0m           pictures: popularAlbums.pictures.map((picture: any) => {
+[7m  [0m [91m                  ~[0m
+[96msrc/services/post.service.ts[0m:[93m33[0m:[93m9[0m - [91merror[0m[90m TS1109: [0mExpression expected.
+
+[7m33[0m         };
+[7m  [0m [91m        ~[0m
+
+    at createTSError (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:863:19)
+    at C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1379:34
+    at Object.compile (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1458:13)
+    at Module.m._compile (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1617:30)
+    at Module._extensions..js (internal/modules/cjs/loader.js:1114:10)
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (internal/modules/cjs/loader.js:950:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:790:12)
+    at Module.require (internal/modules/cjs/loader.js:974:19)
+2023-05-03 18:56:49 error: uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/services/post.service.ts[0m:[93m28[0m:[93m15[0m - [91merror[0m[90m TS1005: [0m';' expected.
+
+[7m28[0m           user: popularAlbums.user,
+[7m  [0m [91m              ~[0m
+[96msrc/services/post.service.ts[0m:[93m29[0m:[93m19[0m - [91merror[0m[90m TS1005: [0m';' expected.
+
+[7m29[0m           pictures: popularAlbums.pictures.map((picture: any) => {
+[7m  [0m [91m                  ~[0m
+[96msrc/services/post.service.ts[0m:[93m32[0m:[93m7[0m - [91merror[0m[90m TS1109: [0mExpression expected.
+
+[7m32[0m       }
+[7m  [0m [91m      ~[0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/services/post.service.ts[0m:[93m28[0m:[93m15[0m - [91merror[0m[90m TS1005: [0m';' expected.
+
+[7m28[0m           user: popularAlbums.user,
+[7m  [0m [91m              ~[0m
+[96msrc/services/post.service.ts[0m:[93m29[0m:[93m19[0m - [91merror[0m[90m TS1005: [0m';' expected.
+
+[7m29[0m           pictures: popularAlbums.pictures.map((picture: any) => {
+[7m  [0m [91m                  ~[0m
+[96msrc/services/post.service.ts[0m:[93m32[0m:[93m7[0m - [91merror[0m[90m TS1109: [0mExpression expected.
+
+[7m32[0m       }
+[7m  [0m [91m      ~[0m
+
+    at createTSError (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:863:19)
+    at C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1379:34
+    at Object.compile (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1458:13)
+    at Module.m._compile (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1617:30)
+    at Module._extensions..js (internal/modules/cjs/loader.js:1114:10)
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (internal/modules/cjs/loader.js:950:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:790:12)
+    at Module.require (internal/modules/cjs/loader.js:974:19)
+2023-05-03 18:56:53 error: uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/services/post.service.ts[0m:[93m29[0m:[93m47[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m29[0m           pictures: popularAlbums.pictures.map((picture: any) => {
+[7m  [0m [91m                                              ~[0m
+[96msrc/services/post.service.ts[0m:[93m32[0m:[93m7[0m - [91merror[0m[90m TS1109: [0mExpression expected.
+
+[7m32[0m       }
+[7m  [0m [91m      ~[0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/services/post.service.ts[0m:[93m29[0m:[93m47[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m29[0m           pictures: popularAlbums.pictures.map((picture: any) => {
+[7m  [0m [91m                                              ~[0m
+[96msrc/services/post.service.ts[0m:[93m32[0m:[93m7[0m - [91merror[0m[90m TS1109: [0mExpression expected.
+
+[7m32[0m       }
+[7m  [0m [91m      ~[0m
+
+    at createTSError (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:863:19)
+    at C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1379:34
+    at Object.compile (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1458:13)
+    at Module.m._compile (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1617:30)
+    at Module._extensions..js (internal/modules/cjs/loader.js:1114:10)
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (internal/modules/cjs/loader.js:950:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:790:12)
+    at Module.require (internal/modules/cjs/loader.js:974:19)
+2023-05-03 18:59:25 error: uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/services/post.service.ts[0m:[93m22[0m:[93m27[0m - [91merror[0m[90m TS1109: [0mExpression expected.
+
+[7m22[0m             return {post: }
+[7m  [0m [91m                          ~[0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/services/post.service.ts[0m:[93m22[0m:[93m27[0m - [91merror[0m[90m TS1109: [0mExpression expected.
+
+[7m22[0m             return {post: }
+[7m  [0m [91m                          ~[0m
+
+    at createTSError (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:863:19)
+    at C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1379:34
+    at Object.compile (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1458:13)
+    at Module.m._compile (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1617:30)
+    at Module._extensions..js (internal/modules/cjs/loader.js:1114:10)
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (internal/modules/cjs/loader.js:950:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:790:12)
+    at Module.require (internal/modules/cjs/loader.js:974:19)
+2023-05-03 18:59:44 error: uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/services/post.service.ts[0m:[93m22[0m:[93m66[0m - [91merror[0m[90m TS1109: [0mExpression expected.
+
+[7m22[0m             return {post: field.post, user: field.user, pictres: }
+[7m  [0m [91m                                                                 ~[0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/services/post.service.ts[0m:[93m22[0m:[93m66[0m - [91merror[0m[90m TS1109: [0mExpression expected.
+
+[7m22[0m             return {post: field.post, user: field.user, pictres: }
+[7m  [0m [91m                                                                 ~[0m
+
+    at createTSError (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:863:19)
+    at C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1379:34
+    at Object.compile (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1458:13)
+    at Module.m._compile (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1617:30)
+    at Module._extensions..js (internal/modules/cjs/loader.js:1114:10)
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (internal/modules/cjs/loader.js:950:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:790:12)
+    at Module.require (internal/modules/cjs/loader.js:974:19)
+2023-05-03 18:59:52 error: uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/services/post.service.ts[0m:[93m22[0m:[93m77[0m - [91merror[0m[90m TS1109: [0mExpression expected.
+
+[7m22[0m             return {post: field.post.properties, user: field.user, pictres: }
+[7m  [0m [91m                                                                            ~[0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/services/post.service.ts[0m:[93m22[0m:[93m77[0m - [91merror[0m[90m TS1109: [0mExpression expected.
+
+[7m22[0m             return {post: field.post.properties, user: field.user, pictres: }
+[7m  [0m [91m                                                                            ~[0m
+
+    at createTSError (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:863:19)
+    at C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1379:34
+    at Object.compile (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1458:13)
+    at Module.m._compile (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1617:30)
+    at Module._extensions..js (internal/modules/cjs/loader.js:1114:10)
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (internal/modules/cjs/loader.js:950:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:790:12)
+    at Module.require (internal/modules/cjs/loader.js:974:19)
+2023-05-03 19:00:01 error: uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/services/post.service.ts[0m:[93m22[0m:[93m88[0m - [91merror[0m[90m TS1109: [0mExpression expected.
+
+[7m22[0m             return {post: field.post.properties, user: field.user.properties, pictres: }
+[7m  [0m [91m                                                                                       ~[0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/services/post.service.ts[0m:[93m22[0m:[93m88[0m - [91merror[0m[90m TS1109: [0mExpression expected.
+
+[7m22[0m             return {post: field.post.properties, user: field.user.properties, pictres: }
+[7m  [0m [91m                                                                                       ~[0m
+
+    at createTSError (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:863:19)
+    at C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1379:34
+    at Object.compile (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1458:13)
+    at Module.m._compile (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1617:30)
+    at Module._extensions..js (internal/modules/cjs/loader.js:1114:10)
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (internal/modules/cjs/loader.js:950:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:790:12)
+    at Module.require (internal/modules/cjs/loader.js:974:19)
+2023-05-03 19:00:13 error: uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/services/post.service.ts[0m:[93m22[0m:[93m108[0m - [91merror[0m[90m TS1003: [0mIdentifier expected.
+
+[7m22[0m             return {post: field.post.properties, user: field.user.properties, pictres: this.createPictures.}
+[7m  [0m [91m                                                                                                           ~[0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/services/post.service.ts[0m:[93m22[0m:[93m108[0m - [91merror[0m[90m TS1003: [0mIdentifier expected.
+
+[7m22[0m             return {post: field.post.properties, user: field.user.properties, pictres: this.createPictures.}
+[7m  [0m [91m                                                                                                           ~[0m
+
+    at createTSError (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:863:19)
+    at C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1379:34
+    at Object.compile (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1458:13)
+    at Module.m._compile (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1617:30)
+    at Module._extensions..js (internal/modules/cjs/loader.js:1114:10)
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (internal/modules/cjs/loader.js:950:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:790:12)
+    at Module.require (internal/modules/cjs/loader.js:974:19)
+2023-05-03 19:00:17 error: uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/services/post.service.ts[0m:[93m22[0m:[93m88[0m - [91merror[0m[90m TS1109: [0mExpression expected.
+
+[7m22[0m             return {post: field.post.properties, user: field.user.properties, pictres: }
+[7m  [0m [91m                                                                                       ~[0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/services/post.service.ts[0m:[93m22[0m:[93m88[0m - [91merror[0m[90m TS1109: [0mExpression expected.
+
+[7m22[0m             return {post: field.post.properties, user: field.user.properties, pictres: }
+[7m  [0m [91m                                                                                       ~[0m
+
+    at createTSError (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:863:19)
+    at C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1379:34
+    at Object.compile (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1458:13)
+    at Module.m._compile (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1617:30)
+    at Module._extensions..js (internal/modules/cjs/loader.js:1114:10)
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (internal/modules/cjs/loader.js:950:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:790:12)
+    at Module.require (internal/modules/cjs/loader.js:974:19)
+2023-05-03 19:00:29 error: uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/services/post.service.ts[0m:[93m22[0m:[93m103[0m - [91merror[0m[90m TS1003: [0mIdentifier expected.
+
+[7m22[0m             return {post: field.post.properties, user: field.user.properties, pictres: field.pictures.}
+[7m  [0m [91m                                                                                                      ~[0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/services/post.service.ts[0m:[93m22[0m:[93m103[0m - [91merror[0m[90m TS1003: [0mIdentifier expected.
+
+[7m22[0m             return {post: field.post.properties, user: field.user.properties, pictres: field.pictures.}
+[7m  [0m [91m                                                                                                      ~[0m
+
+    at createTSError (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:863:19)
+    at C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1379:34
+    at Object.compile (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1458:13)
+    at Module.m._compile (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1617:30)
+    at Module._extensions..js (internal/modules/cjs/loader.js:1114:10)
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (internal/modules/cjs/loader.js:950:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:790:12)
+    at Module.require (internal/modules/cjs/loader.js:974:19)
+2023-05-03 19:00:34 error: uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/services/post.service.ts[0m:[93m22[0m:[93m116[0m - [91merror[0m[90m TS1109: [0mExpression expected.
+
+[7m22[0m             return {post: field.post.properties, user: field.user.properties, pictres: field.pictures.map((pict) =>)}
+[7m  [0m [91m                                                                                                                   ~[0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/services/post.service.ts[0m:[93m22[0m:[93m116[0m - [91merror[0m[90m TS1109: [0mExpression expected.
+
+[7m22[0m             return {post: field.post.properties, user: field.user.properties, pictres: field.pictures.map((pict) =>)}
+[7m  [0m [91m                                                                                                                   ~[0m
+
+    at createTSError (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:863:19)
+    at C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1379:34
+    at Object.compile (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1458:13)
+    at Module.m._compile (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1617:30)
+    at Module._extensions..js (internal/modules/cjs/loader.js:1114:10)
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (internal/modules/cjs/loader.js:950:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:790:12)
+    at Module.require (internal/modules/cjs/loader.js:974:19)

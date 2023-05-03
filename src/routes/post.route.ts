@@ -14,7 +14,7 @@ class postRoute implements Routes {
   }
 
   private initializeRoutes() {
-    this.router.get(`${this.path}/popular/:id`, this.postController.getPopularPosts);
+    this.router.get(`${this.path}/popular`, this.postController.getPopularPosts);
     this.router.get(`${this.path}/recent/:id`, this.postController.getRecentPosts);
     this.router.get(`${this.path}/pictures/:id`, this.postController.getPostPictures);
     this.router.post(`${this.path}/:id`, this.postController.createPost);

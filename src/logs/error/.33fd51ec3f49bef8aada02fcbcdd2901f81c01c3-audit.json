@@ -6,14 +6,9 @@
     "auditLog": "C:\\Users\\Devops3\\Documents\\Projects\\feetflight\\src\\logs\\error\\.33fd51ec3f49bef8aada02fcbcdd2901f81c01c3-audit.json",
     "files": [
         {
-            "date": 1682412894137,
-            "name": "C:\\Users\\Devops3\\Documents\\Projects\\feetflight\\src\\logs\\error\\2023-04-25.log",
-            "hash": "b527f373faa64353d0aa871e0208dae5b6b097654f60289022204d34182ae44b"
-        },
-        {
-            "date": 1682501999102,
-            "name": "C:\\Users\\Devops3\\Documents\\Projects\\feetflight\\src\\logs\\error\\2023-04-26.log",
-            "hash": "b2f3fa84fa508631aa13a791127ca5665f7eca9552b87cf4f004c3f099c045e4"
+            "date": 1683122186970,
+            "name": "C:\\Users\\Devops3\\Documents\\Projects\\feetflight\\src\\logs\\error\\2023-05-03.log",
+            "hash": "256ad516180cf2367d9a2d3863d6a029ef3da3811e13bbc775b750bc241cd4b3"
         }
     ],
     "hashType": "sha256"

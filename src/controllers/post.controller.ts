@@ -7,10 +7,9 @@ class postController {
 
   public getPopularPosts = async (req: Request, res: Response, next: NextFunction): Promise<void> => {
     try {
-      const categoryId = String(req.params.id);
-      const popularPosts = await this.postService.getPopularPosts(categoryId);
+      const popularPosts = await this.postService.getPopularPosts();
 
-      res.status(201).json({ data: popularPosts });
+      res.status(201).json({ popularPosts });
     } catch (error) {
       next(error);
     }
