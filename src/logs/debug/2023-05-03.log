@@ -1182,3 +1182,25 @@
 2023-05-03 19:08:40 info: =================================
 2023-05-03 19:08:43 info: [0mGET /posts/popular [32m201[0m 468.584 ms - -[0m
 2023-05-03 19:08:50 info: [0mGET /posts/popular [32m201[0m 456.474 ms - -[0m
+2023-05-03 19:45:52 info: =================================
+2023-05-03 19:45:52 info: ======= ENV: development =======
+2023-05-03 19:45:52 info: 🚀 App listening on the port 3000
+2023-05-03 19:45:52 info: =================================
+2023-05-03 19:48:12 info: =================================
+2023-05-03 19:48:12 info: ======= ENV: development =======
+2023-05-03 19:48:12 info: 🚀 App listening on the port 3000
+2023-05-03 19:48:12 info: =================================
+2023-05-03 19:48:29 info: [0mGET /posts/popular [32m201[0m 476.826 ms - -[0m
+2023-05-03 19:48:55 info: [0mGET /posts/popular [32m201[0m 436.352 ms - -[0m
+2023-05-03 19:49:07 info: [0mGET /posts/popular [32m201[0m 447.372 ms - -[0m
+2023-05-03 19:49:16 info: [0mGET /posts/popular [32m201[0m 468.391 ms - -[0m
+2023-05-03 19:49:22 info: [0mGET /posts/popular [32m201[0m 452.669 ms - -[0m
+2023-05-03 19:50:15 info: [0mGET /posts/popular [32m201[0m 440.194 ms - -[0m
+2023-05-03 19:50:16 info: [0mGET /posts/popular [32m201[0m 413.068 ms - -[0m
+2023-05-03 19:50:21 info: [0mGET /posts/popular [32m201[0m 421.540 ms - -[0m
+2023-05-03 19:50:25 info: [0mGET /posts/popular [32m201[0m 458.339 ms - -[0m
+2023-05-03 19:50:35 info: [0mGET /posts/popular [32m201[0m 448.293 ms - -[0m
+2023-05-03 19:50:36 info: [0mGET /posts/popular [32m201[0m 414.764 ms - -[0m
+2023-05-03 19:50:41 info: [0mGET /posts/popular [32m201[0m 460.066 ms - -[0m
+2023-05-03 19:56:46 info: [0mGET /posts/popular [32m201[0m 466.020 ms - -[0m
+2023-05-03 19:58:46 info: [0mGET /posts/popular [32m201[0m 448.228 ms - -[0m

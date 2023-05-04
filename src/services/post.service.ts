@@ -7,7 +7,7 @@ import Stripe from 'stripe';
 
 class postService {
   private stripe = new Stripe(process.env.STRIPE_TEST_KEY, { apiVersion: '2022-11-15' });
-  public async getPopularPosts() {
+  public async getPopularAlbums() {
     const popularPostsSessio = initializeDbConnection().session({ database: 'neo4j' });
     try {
       const popularPosts = await popularPostsSessio.executeRead(tx =>
@@ -35,10 +35,10 @@ class postService {
     }
   }
 
-  public async getRecentPosts(categoryId) {
-    const recentPostsSession = initializeDbConnection().session({ database: 'neo4j' });
+  public async getAlbumByCategory(categoryId: string) {
+    const getAlbumsByCategorySession = initializeDbConnection().session({ database: 'neo4j' });
     try {
-      const popularPosts = await recentPostsSession.executeRead(tx =>
+      const popularPosts = await getAlbumsByCategorySession.executeRead(tx =>
         tx.run(
           'match (category {id: $categoryId})<-[:OF_A]-(p:post)-[:HAS_A]-(s:seller)-[:IS_A]-(u:user) return u, p order by p.createdAt DESC limit 20',
           {
@@ -52,6 +52,22 @@ class postService {
         return (post['user'] = user);
       });
       return posts;
+    } catch (error) {
+      console.log(error);
+    } finally {
+      getAlbumsByCategorySession.close();
+    }
+  }
+
+  public async getCategories() {
+    const recentPostsSession = initializeDbConnection().session({ database: 'neo4j' });
+    try {
+      const categories = await recentPostsSession.executeRead(tx =>
+        tx.run(
+          'match (category:category) return category',
+        ),
+      );
+      return categories.records.map(record => record.get('category').properties);
     } catch (error) {
       console.log(error);
     } finally {

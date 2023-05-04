@@ -5,9 +5,9 @@ import Stripe from 'stripe';
 class postController {
   public postService = new postService();
 
-  public getPopularPosts = async (req: Request, res: Response, next: NextFunction): Promise<void> => {
+  public getPopularAlbums = async (req: Request, res: Response, next: NextFunction): Promise<void> => {
     try {
-      const popularPosts = await this.postService.getPopularPosts();
+      const popularPosts = await this.postService.getPopularAlbums();
 
       res.status(201).json({ popularPosts });
     } catch (error) {
@@ -15,12 +15,12 @@ class postController {
     }
   };
 
-  public getRecentPosts = async (req: Request, res: Response, next: NextFunction): Promise<void> => {
+  public getAlbumByCategory = async (req: Request, res: Response, next: NextFunction): Promise<void> => {
     try {
       const categoryId = String(req.params.id);
-      const recentPosts = await this.postService.getRecentPosts(categoryId);
+      const AlbumByCategory = await this.postService.getAlbumByCategory(categoryId);
 
-      res.status(201).json({ data: recentPosts });
+      res.status(201).json({ AlbumByCategory });
     } catch (error) {
       next(error);
     }
@@ -32,6 +32,18 @@ class postController {
       const postPictures = await this.postService.getPostPictures(postId);
 
       res.status(201).json({ data: postPictures });
+    } catch (error) {
+      next(error);
+    }
+  };
+
+  public getCategories = async (req: Request, res: Response, next: NextFunction): Promise<void> => {
+    try {
+      const categories = await this.postService.getCategories();
+      console.log(categories);
+      
+
+      res.status(201).json({ categories });
     } catch (error) {
       next(error);
     }

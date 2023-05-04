@@ -1,0 +1,62 @@
+2023-05-04 16:55:30 error: uncaughtException: Route.get() requires a callback function but got a [object Undefined]
+Error: Route.get() requires a callback function but got a [object Undefined]
+    at Route.<computed> [as get] (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\express\lib\router\route.js:211:15)
+    at Function.proto.<computed> [as get] (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\express\lib\router\index.js:521:19)
+    at postRoute.initializeRoutes (C:\Users\Devops3\Documents\Projects\feetflight\src\routes\post.route.ts:18:17)
+    at new postRoute (C:\Users\Devops3\Documents\Projects\feetflight\src\routes\post.route.ts:13:10)
+    at Object.<anonymous> (C:\Users\Devops3\Documents\Projects\feetflight\src\server.ts:13:75)
+    at Module._compile (internal/modules/cjs/loader.js:1085:14)
+    at Module.m._compile (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1618:23)
+    at Module._extensions..js (internal/modules/cjs/loader.js:1114:10)
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (internal/modules/cjs/loader.js:950:32)
+2023-05-04 16:55:34 error: uncaughtException: Route.get() requires a callback function but got a [object Undefined]
+Error: Route.get() requires a callback function but got a [object Undefined]
+    at Route.<computed> [as get] (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\express\lib\router\route.js:211:15)
+    at Function.proto.<computed> [as get] (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\express\lib\router\index.js:521:19)
+    at postRoute.initializeRoutes (C:\Users\Devops3\Documents\Projects\feetflight\src\routes\post.route.ts:18:17)
+    at new postRoute (C:\Users\Devops3\Documents\Projects\feetflight\src\routes\post.route.ts:13:10)
+    at Object.<anonymous> (C:\Users\Devops3\Documents\Projects\feetflight\src\server.ts:13:75)
+    at Module._compile (internal/modules/cjs/loader.js:1085:14)
+    at Module.m._compile (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1618:23)
+    at Module._extensions..js (internal/modules/cjs/loader.js:1114:10)
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (internal/modules/cjs/loader.js:950:32)
+2023-05-04 16:55:37 error: uncaughtException: Route.get() requires a callback function but got a [object Undefined]
+Error: Route.get() requires a callback function but got a [object Undefined]
+    at Route.<computed> [as get] (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\express\lib\router\route.js:211:15)
+    at Function.proto.<computed> [as get] (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\express\lib\router\index.js:521:19)
+    at postRoute.initializeRoutes (C:\Users\Devops3\Documents\Projects\feetflight\src\routes\post.route.ts:18:17)
+    at new postRoute (C:\Users\Devops3\Documents\Projects\feetflight\src\routes\post.route.ts:13:10)
+    at Object.<anonymous> (C:\Users\Devops3\Documents\Projects\feetflight\src\server.ts:13:75)
+    at Module._compile (internal/modules/cjs/loader.js:1085:14)
+    at Module.m._compile (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1618:23)
+    at Module._extensions..js (internal/modules/cjs/loader.js:1114:10)
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (internal/modules/cjs/loader.js:950:32)
+2023-05-04 16:55:58 error: uncaughtException: Route.get() requires a callback function but got a [object Undefined]
+Error: Route.get() requires a callback function but got a [object Undefined]
+    at Route.<computed> [as get] (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\express\lib\router\route.js:211:15)
+    at Function.proto.<computed> [as get] (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\express\lib\router\index.js:521:19)
+    at postRoute.initializeRoutes (C:\Users\Devops3\Documents\Projects\feetflight\src\routes\post.route.ts:18:17)
+    at new postRoute (C:\Users\Devops3\Documents\Projects\feetflight\src\routes\post.route.ts:13:10)
+    at Object.<anonymous> (C:\Users\Devops3\Documents\Projects\feetflight\src\server.ts:13:75)
+    at Module._compile (internal/modules/cjs/loader.js:1085:14)
+    at Module.m._compile (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1618:23)
+    at Module._extensions..js (internal/modules/cjs/loader.js:1114:10)
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (internal/modules/cjs/loader.js:950:32)
+2023-05-04 16:56:36 error: uncaughtException: Route.get() requires a callback function but got a [object Undefined]
+Error: Route.get() requires a callback function but got a [object Undefined]
+    at Route.<computed> [as get] (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\express\lib\router\route.js:211:15)
+    at Function.proto.<computed> [as get] (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\express\lib\router\index.js:521:19)
+    at postRoute.initializeRoutes (C:\Users\Devops3\Documents\Projects\feetflight\src\routes\post.route.ts:17:17)
+    at new postRoute (C:\Users\Devops3\Documents\Projects\feetflight\src\routes\post.route.ts:13:10)
+    at Object.<anonymous> (C:\Users\Devops3\Documents\Projects\feetflight\src\server.ts:13:75)
+    at Module._compile (internal/modules/cjs/loader.js:1085:14)
+    at Module.m._compile (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1618:23)
+    at Module._extensions..js (internal/modules/cjs/loader.js:1114:10)
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (internal/modules/cjs/loader.js:950:32)
+2023-05-04 19:17:30 error: [GET] /posts/category/grtgv841t89rhbtgfrd48hb >> StatusCode:: 500, Message:: AlbumByCategory is not defined
+2023-05-04 19:20:10 error: [GET] /posts/category/grtgv841t89rhbtgfrd48hb >> StatusCode:: 500, Message:: AlbumByCategory is not defined

@@ -89,6 +89,11 @@
             "date": 1683115227578,
             "name": "C:\\Users\\Devops3\\Documents\\Projects\\feetflight\\src\\logs\\debug\\2023-05-03.log",
             "hash": "5293767e21a5785c66c8195acc6f2c1bb3a9161939e8d4ef795ef5e8614f3a61"
+        },
+        {
+            "date": 1683190018006,
+            "name": "C:\\Users\\Devops3\\Documents\\Projects\\feetflight\\src\\logs\\debug\\2023-05-04.log",
+            "hash": "622a2a0387703ad67ce0a63a7198ecad55d101bb7d35f3e3cc90eacb33ee5c8a"
         }
     ],
     "hashType": "sha256"
