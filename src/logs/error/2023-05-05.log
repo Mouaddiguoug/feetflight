@@ -1,0 +1,12 @@
+2023-05-05 10:28:49 error: uncaughtException: listen EADDRINUSE: address already in use :::3000
+Error: listen EADDRINUSE: address already in use :::3000
+    at Server.setupListenHandle [as _listen2] (net.js:1331:16)
+    at listenInCluster (net.js:1379:12)
+    at Server.listen (net.js:1465:7)
+    at Function.listen (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\express\lib\application.js:635:24)
+    at App.listen (C:\Users\Devops3\Documents\Projects\feetflight\src\app.ts:121:14)
+    at Object.<anonymous> (C:\Users\Devops3\Documents\Projects\feetflight\src\server.ts:15:5)
+    at Module._compile (internal/modules/cjs/loader.js:1085:14)
+    at Module.m._compile (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1618:23)
+    at Module._extensions..js (internal/modules/cjs/loader.js:1114:10)
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\Devops3\Documents\Projects\feetflight\node_modules\ts-node\src\index.ts:1621:12)
