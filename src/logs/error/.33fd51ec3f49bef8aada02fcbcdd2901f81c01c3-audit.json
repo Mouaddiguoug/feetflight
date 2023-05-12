@@ -9,6 +9,21 @@
             "date": 1683275328229,
             "name": "C:\\Users\\Devops3\\Documents\\Projects\\feetflight\\src\\logs\\error\\2023-05-05.log",
             "hash": "9ff99262a7103f39de1b9cc2b994a589dc67d15ad92db8f149ad2815c9f53949"
+        },
+        {
+            "date": 1683562218995,
+            "name": "C:\\Users\\Devops3\\Documents\\Projects\\feetflight\\src\\logs\\error\\2023-05-08.log",
+            "hash": "7b6f57db493dae2f6a5a47a394e8a7a593fe41752a62b00b39e17aa18168238a"
+        },
+        {
+            "date": 1683634226637,
+            "name": "C:\\Users\\Devops3\\Documents\\Projects\\feetflight\\src\\logs\\error\\2023-05-09.log",
+            "hash": "649bca8c0ed99ef8641767697161255f13156c162e614c00141889615e364b20"
+        },
+        {
+            "date": 1683706697321,
+            "name": "C:\\Users\\Devops3\\Documents\\Projects\\feetflight\\src\\logs\\error\\2023-05-10.log",
+            "hash": "4a53a95d0f984c4b38dd4176bd2d5cfc2d2988787ddf56c7eba73a974816e371"
         }
     ],
     "hashType": "sha256"

@@ -5,7 +5,7 @@ import multer from 'multer';
 import fileMiddleware from '@/middlewares/fileValidation.middleware';
 
 class postRoute implements Routes {
-  public path = '/posts';
+  public path = '/albums';
   public router = Router();
   public postController = new postController();
 

@@ -62,10 +62,10 @@ class postController {
 
   public likePost = async (req: Request, res: Response, next: NextFunction): Promise<void> => {
     try {
-      const postId = String(req.params.id);
-      const likes = await this.postService.likePost(postId);
+      const albumId = String(req.params.id);
+      const likes = await this.postService.likePost(albumId);
 
-      res.status(201).json({ like: likes });
+      res.status(201).json({ likes });
     } catch (error) {
       next(error);
     }

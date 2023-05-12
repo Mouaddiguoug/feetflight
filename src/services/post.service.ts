@@ -164,12 +164,12 @@ class postService {
     }
   }
 
-  public async likePost(postId) {
+  public async likePost(albumId: string) {
     const likePostSession = initializeDbConnection().session({ database: 'neo4j' });
     try {
       const likes = await likePostSession.executeWrite(tx =>
         tx.run('match (p:post {id: $postId}) set p.likes = p.likes + 1 return p', {
-          postId: postId,
+          postId: albumId,
         }),
       );
 
