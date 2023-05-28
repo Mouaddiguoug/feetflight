@@ -1,0 +1,25 @@
+{
+    "keep": {
+        "days": false,
+        "amount": 30
+    },
+    "auditLog": "C:\\Users\\diguo\\Documents\\feetflight\\feetflight\\src\\logs\\debug\\.3e4936c1035af0d23fb0da35fdbb271a94e36138-audit.json",
+    "files": [
+        {
+            "date": 1684014663149,
+            "name": "C:\\Users\\diguo\\Documents\\feetflight\\feetflight\\src\\logs\\debug\\2023-05-13.log",
+            "hash": "02c9e7b0e597c5b2a82471c60d083908971bbca3b627eda1c61c6a36895c0d5a"
+        },
+        {
+            "date": 1684018807936,
+            "name": "C:\\Users\\diguo\\Documents\\feetflight\\feetflight\\src\\logs\\debug\\2023-05-14.log",
+            "hash": "d11b6431ebcbc8128b40a419005daadf5d22ec195f7b488270a6aab5ad660c5b"
+        },
+        {
+            "date": 1685274757027,
+            "name": "C:\\Users\\diguo\\Documents\\feetflight\\feetflight\\src\\logs\\debug\\2023-05-28.log",
+            "hash": "07e7f5bb7b202687a0c997e0a2b828aa3f7a4c4c94ece27c38931eab4cf65f12"
+        }
+    ],
+    "hashType": "sha256"
+}

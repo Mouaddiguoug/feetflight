@@ -36,22 +36,30 @@ class postService {
   }
 
   public async getAlbumByCategory(categoryId: string) {
+    console.log(categoryId)
     const getAlbumsByCategorySession = initializeDbConnection().session({ database: 'neo4j' });
     try {
-      const popularPosts = await getAlbumsByCategorySession.executeRead(tx =>
+      const AlbumByCategory = await getAlbumsByCategorySession.executeRead(tx =>
         tx.run(
-          'match (category {id: $categoryId})<-[:OF_A]-(p:post)-[:HAS_A]-(s:seller)-[:IS_A]-(u:user) return u, p order by p.createdAt DESC limit 20',
+          'match (picture:picture)<-[:HAS_A]-(:collection)<-[:HAS_A]-(post:post)-[:HAS_A]-(:seller)-[:IS_A]-(user:user) match (post)-[:OF_A]->(category {id: $categoryId}) WITH post, collect(picture) AS pictures, user AS user return post{post, user, pictures} order by post.createdAt DESC limit 20',
           {
             categoryId: categoryId,
           },
         ),
       );
-      const posts = popularPosts.records.map(record => record.get('p').properties);
-      posts.map((post, i) => {
-        const user = popularPosts.records.map(record => record.get('u').properties)[i];
-        return (post['user'] = user);
-      });
-      return posts;
+      console.log(AlbumByCategory.records);
+      return AlbumByCategory.records.map(
+        (record: any) =>
+          record._fields.map((field: any) => {
+            return {
+              albumData: field.post.properties,
+              user: field.user.properties,
+              pictres: field.pictures.map(picture => {
+                return picture.properties;
+              }),
+            };
+          })[0],
+      );
     } catch (error) {
       console.log(error);
     } finally {
@@ -62,11 +70,7 @@ class postService {
   public async getCategories() {
     const recentPostsSession = initializeDbConnection().session({ database: 'neo4j' });
     try {
-      const categories = await recentPostsSession.executeRead(tx =>
-        tx.run(
-          'match (category:category) return category',
-        ),
-      );
+      const categories = await recentPostsSession.executeRead(tx => tx.run('match (category:category) return category'));
       return categories.records.map(record => record.get('category').properties);
     } catch (error) {
       console.log(error);
