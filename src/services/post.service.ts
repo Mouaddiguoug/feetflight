@@ -1,7 +1,10 @@
 import { initializeDbConnection } from '@/app';
 import { uid } from 'uid';
 import aws from 'aws-sdk';
+import path from "path";
 import moment from 'moment';
+import { writeFile } from 'node:fs';
+import { Buffer } from 'node:buffer';
 import { stripVTControlCharacters } from 'util';
 import Stripe from 'stripe';
 
@@ -41,25 +44,27 @@ class postService {
     try {
       const AlbumByCategory = await getAlbumsByCategorySession.executeRead(tx =>
         tx.run(
-          'match (picture:picture)<-[:HAS_A]-(:collection)<-[:HAS_A]-(post:post)-[:HAS_A]-(:seller)-[:IS_A]-(user:user) match (post)-[:OF_A]->(category {id: $categoryId}) WITH post, collect(picture) AS pictures, user AS user return post{post, user, pictures} order by post.createdAt DESC limit 20',
+          'match (category {id: $categoryId})<-[:OF_A]-(post:post)-[:HAS_A]-(:seller)-[:IS_A]-(user:user) WITH post, user AS user return post{post, user} order by post.createdAt DESC ',
           {
             categoryId: categoryId,
           },
         ),
       );
-      console.log(AlbumByCategory.records);
-      return AlbumByCategory.records.map(
+
+      const albumPromise = AlbumByCategory.records.map(
         (record: any) =>
-          record._fields.map((field: any) => {
+          record._fields.map(async (field: any) => {
             return {
               albumData: field.post.properties,
               user: field.user.properties,
-              pictres: field.pictures.map(picture => {
-                return picture.properties;
-              }),
+              pictres: await this.getPostPictures(field.post.properties.id)
             };
           })[0],
       );
+
+      const album = await Promise.all(albumPromise);
+
+      return album;
     } catch (error) {
       console.log(error);
     } finally {
@@ -79,7 +84,7 @@ class postService {
     }
   }
 
-  public async getPostPictures(postId) {
+  public async getPostPictures(postId: string) {
     const getPostPicturesSession = initializeDbConnection().session({ database: 'neo4j' });
     try {
       const pictures = await getPostPicturesSession.executeWrite(tx =>
@@ -87,6 +92,7 @@ class postService {
           postId: postId,
         }),
       );
+
       return pictures.records.map(record => record.get('pct').properties);
     } catch (error) {
       console.log(error);
@@ -95,7 +101,7 @@ class postService {
     }
   }
 
-  public async UpdateViews(postId) {
+  public async UpdateViews(postId: string) {
     const updateViewsSession = initializeDbConnection().session({ database: 'neo4j' });
     try {
       const newViews = await updateViewsSession.executeWrite(tx =>
@@ -117,7 +123,7 @@ class postService {
     try {
       const findUser = await createPostSession.executeRead(tx => tx.run('match (u:user {id: $userId}) return u', { userId: userId }));
       if (findUser.records.length == 0) return { message: `This user doesn't exist` };
-      if (!postData.data.postTitle || !postData.data.postDescription || !postData.data.price || !postData.data.preview || !postData.data.pictures)
+      if (!postData.data.postTitle || !postData.data.postDescription || !postData.data.price)
         return { message: `missing data` };
       const createdCollection = await createPostSession.executeWrite(tx =>
         tx.run(
@@ -187,15 +193,12 @@ class postService {
 
   public async uploadPostPictures(pictureFiles: any, collectionId: string) {
     const createPicturesSession = initializeDbConnection().session({ database: 'neo4j' });
+
     try {
       for (let key in pictureFiles) {
-        aws.config.update({
-          accessKeyId: process.env.AWS_ACCESS_KEY_ID,
-          secretAccessKey: process.env.AWS_SECRET_ACCESS_KEY,
-          region: 'us-east-2',
-        });
-        const filecontent = Buffer.from(pictureFiles[key].buffer, 'binary');
-        const s3 = new aws.S3();
+
+        //const filecontent = Buffer.from(pictureFiles[key].buffer, 'binary');
+        /* const s3 = new aws.S3();
 
         const params = {
           Bucket: process.env.AWS_BUCKET_NAME,
@@ -205,9 +208,13 @@ class postService {
 
         s3.upload(params, (err, data) => {
           if (err) return console.log(err);
-          console.log();
-
           this.createPictures(pictureFiles[key].fieldname, data.Location, collectionId);
+        }); */
+        const filecontent = Buffer.from(pictureFiles[key].buffer, 'binary');
+
+        writeFile(path.join(__dirname, "../../public/files/albums", `${pictureFiles[key].originalname.replace(".", "")}${collectionId}${moment().format("ssMMyyyy")}.${pictureFiles[key].mimetype.split("/")[1]}`), filecontent, (err) => {
+          if (err) return console.log(err);
+          this.createPictures(pictureFiles[key].fieldname, `/public/files/albums/${pictureFiles[key].originalname.replace(".", "")}${collectionId}${moment().format("ssMMyyyy")}.${pictureFiles[key].mimetype.split("/")[1]}`, collectionId);
         });
       }
     } catch (error) {

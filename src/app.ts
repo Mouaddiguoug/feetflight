@@ -139,6 +139,7 @@ class App {
     this.app.use(express.json());
     this.app.use(express.urlencoded({ extended: true }));
     this.app.use(cookieParser());
+    this.app.use("/public", express.static(path.resolve(path.join(__dirname, "../public"))));
     transporter.use(
       'compile',
       hbs({

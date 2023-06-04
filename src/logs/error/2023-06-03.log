@@ -1,0 +1,155 @@
+2023-06-03 17:29:04 error: uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/services/post.service.ts[0m:[93m87[0m:[93m79[0m - [91merror[0m[90m TS1005: [0m')' expected.
+
+[7m87[0m       console.log(pictures.records.map(record => record.get('pct').properties);
+[7m  [0m [91m                                                                              ~[0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/services/post.service.ts[0m:[93m87[0m:[93m79[0m - [91merror[0m[90m TS1005: [0m')' expected.
+
+[7m87[0m       console.log(pictures.records.map(record => record.get('pct').properties);
+[7m  [0m [91m                                                                              ~[0m
+
+    at createTSError (C:\Users\diguo\Documents\feetflight\feetflight\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\diguo\Documents\feetflight\feetflight\node_modules\ts-node\src\index.ts:863:19)
+    at C:\Users\diguo\Documents\feetflight\feetflight\node_modules\ts-node\src\index.ts:1379:34
+    at Object.compile (C:\Users\diguo\Documents\feetflight\feetflight\node_modules\ts-node\src\index.ts:1458:13)
+    at Module.m._compile (C:\Users\diguo\Documents\feetflight\feetflight\node_modules\ts-node\src\index.ts:1617:30)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1159:10)
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\diguo\Documents\feetflight\feetflight\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:981:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:822:12)
+    at Module.require (node:internal/modules/cjs/loader:1005:19)
+2023-06-03 17:57:19 error: [POST] /post/cus_NkTy5P9bfCdDea >> StatusCode:: 400, Message:: Unexpected token ] in JSON at position 221
+2023-06-03 17:57:27 error: [POST] /post/cus_NkTy5P9bfCdDea >> StatusCode:: 400, Message:: Unexpected token } in JSON at position 230
+2023-06-03 18:58:46 error: [POST] /albums/upload/5f6deabea651865dd5ccee0d5eaa7f2473b3d2eb >> StatusCode:: 500, Message:: Unexpected field
+2023-06-03 19:15:07 error: uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/services/post.service.ts[0m:[93m212[0m:[93m132[0m - [91merror[0m[90m TS1005: [0m';' expected.
+
+[7m212[0m           this.createPictures(pictureFiles[key].fieldname, `files/${pictureFiles[key].fieldname}${collectionId}.png`), collectionId);
+[7m   [0m [91m                                                                                                                                   ~[0m
+[96msrc/services/post.service.ts[0m:[93m213[0m:[93m10[0m - [91merror[0m[90m TS1128: [0mDeclaration or statement expected.
+
+[7m213[0m         });
+[7m   [0m [91m         ~[0m
+[96msrc/services/post.service.ts[0m:[93m215[0m:[93m5[0m - [91merror[0m[90m TS1472: [0m'catch' or 'finally' expected.
+
+[7m215[0m     } catch (error) {
+[7m   [0m [91m    ~[0m
+[96msrc/services/post.service.ts[0m:[93m217[0m:[93m7[0m - [91merror[0m[90m TS1068: [0mUnexpected token. A constructor, method, accessor, or property was expected.
+
+[7m217[0m     } finally {
+[7m   [0m [91m      ~~~~~~~[0m
+[96msrc/services/post.service.ts[0m:[93m220[0m:[93m3[0m - [91merror[0m[90m TS1128: [0mDeclaration or statement expected.
+
+[7m220[0m   }
+[7m   [0m [91m  ~[0m
+[96msrc/services/post.service.ts[0m:[93m222[0m:[93m3[0m - [91merror[0m[90m TS1128: [0mDeclaration or statement expected.
+
+[7m222[0m   public async createPictures(pictureDescription: string, value: string, collectionId: string) {
+[7m   [0m [91m  ~~~~~~[0m
+[96msrc/services/post.service.ts[0m:[93m222[0m:[93m10[0m - [91merror[0m[90m TS1434: [0mUnexpected keyword or identifier.
+
+[7m222[0m   public async createPictures(pictureDescription: string, value: string, collectionId: string) {
+[7m   [0m [91m         ~~~~~[0m
+[96msrc/services/post.service.ts[0m:[93m222[0m:[93m49[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m222[0m   public async createPictures(pictureDescription: string, value: string, collectionId: string) {
+[7m   [0m [91m                                                ~[0m
+[96msrc/services/post.service.ts[0m:[93m222[0m:[93m64[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m222[0m   public async createPictures(pictureDescription: string, value: string, collectionId: string) {
+[7m   [0m [91m                                                               ~[0m
+[96msrc/services/post.service.ts[0m:[93m222[0m:[93m86[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m222[0m   public async createPictures(pictureDescription: string, value: string, collectionId: string) {
+[7m   [0m [91m                                                                                     ~[0m
+[96msrc/services/post.service.ts[0m:[93m222[0m:[93m96[0m - [91merror[0m[90m TS1005: [0m';' expected.
+
+[7m222[0m   public async createPictures(pictureDescription: string, value: string, collectionId: string) {
+[7m   [0m [91m                                                                                               ~[0m
+[96msrc/services/post.service.ts[0m:[93m242[0m:[93m1[0m - [91merror[0m[90m TS1128: [0mDeclaration or statement expected.
+
+[7m242[0m }
+[7m   [0m [91m~[0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/services/post.service.ts[0m:[93m212[0m:[93m132[0m - [91merror[0m[90m TS1005: [0m';' expected.
+
+[7m212[0m           this.createPictures(pictureFiles[key].fieldname, `files/${pictureFiles[key].fieldname}${collectionId}.png`), collectionId);
+[7m   [0m [91m                                                                                                                                   ~[0m
+[96msrc/services/post.service.ts[0m:[93m213[0m:[93m10[0m - [91merror[0m[90m TS1128: [0mDeclaration or statement expected.
+
+[7m213[0m         });
+[7m   [0m [91m         ~[0m
+[96msrc/services/post.service.ts[0m:[93m215[0m:[93m5[0m - [91merror[0m[90m TS1472: [0m'catch' or 'finally' expected.
+
+[7m215[0m     } catch (error) {
+[7m   [0m [91m    ~[0m
+[96msrc/services/post.service.ts[0m:[93m217[0m:[93m7[0m - [91merror[0m[90m TS1068: [0mUnexpected token. A constructor, method, accessor, or property was expected.
+
+[7m217[0m     } finally {
+[7m   [0m [91m      ~~~~~~~[0m
+[96msrc/services/post.service.ts[0m:[93m220[0m:[93m3[0m - [91merror[0m[90m TS1128: [0mDeclaration or statement expected.
+
+[7m220[0m   }
+[7m   [0m [91m  ~[0m
+[96msrc/services/post.service.ts[0m:[93m222[0m:[93m3[0m - [91merror[0m[90m TS1128: [0mDeclaration or statement expected.
+
+[7m222[0m   public async createPictures(pictureDescription: string, value: string, collectionId: string) {
+[7m   [0m [91m  ~~~~~~[0m
+[96msrc/services/post.service.ts[0m:[93m222[0m:[93m10[0m - [91merror[0m[90m TS1434: [0mUnexpected keyword or identifier.
+
+[7m222[0m   public async createPictures(pictureDescription: string, value: string, collectionId: string) {
+[7m   [0m [91m         ~~~~~[0m
+[96msrc/services/post.service.ts[0m:[93m222[0m:[93m49[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m222[0m   public async createPictures(pictureDescription: string, value: string, collectionId: string) {
+[7m   [0m [91m                                                ~[0m
+[96msrc/services/post.service.ts[0m:[93m222[0m:[93m64[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m222[0m   public async createPictures(pictureDescription: string, value: string, collectionId: string) {
+[7m   [0m [91m                                                               ~[0m
+[96msrc/services/post.service.ts[0m:[93m222[0m:[93m86[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m222[0m   public async createPictures(pictureDescription: string, value: string, collectionId: string) {
+[7m   [0m [91m                                                                                     ~[0m
+[96msrc/services/post.service.ts[0m:[93m222[0m:[93m96[0m - [91merror[0m[90m TS1005: [0m';' expected.
+
+[7m222[0m   public async createPictures(pictureDescription: string, value: string, collectionId: string) {
+[7m   [0m [91m                                                                                               ~[0m
+[96msrc/services/post.service.ts[0m:[93m242[0m:[93m1[0m - [91merror[0m[90m TS1128: [0mDeclaration or statement expected.
+
+[7m242[0m }
+[7m   [0m [91m~[0m
+
+    at createTSError (C:\Users\diguo\Documents\feetflight\feetflight\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\diguo\Documents\feetflight\feetflight\node_modules\ts-node\src\index.ts:863:19)
+    at C:\Users\diguo\Documents\feetflight\feetflight\node_modules\ts-node\src\index.ts:1379:34
+    at Object.compile (C:\Users\diguo\Documents\feetflight\feetflight\node_modules\ts-node\src\index.ts:1458:13)
+    at Module.m._compile (C:\Users\diguo\Documents\feetflight\feetflight\node_modules\ts-node\src\index.ts:1617:30)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1159:10)
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\diguo\Documents\feetflight\feetflight\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:981:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:822:12)
+    at Module.require (node:internal/modules/cjs/loader:1005:19)
+2023-06-03 19:30:34 error: uncaughtException: Cannot find module '@/services/post.service'
+Require stack:
+- C:\Users\diguo\Documents\feetflight\feetflight\src\controllers\post.controller.ts
+- C:\Users\diguo\Documents\feetflight\feetflight\src\routes\post.route.ts
+- C:\Users\diguo\Documents\feetflight\feetflight\src\server.ts
+Error: Cannot find module '@/services/post.service'
+Require stack:
+- C:\Users\diguo\Documents\feetflight\feetflight\src\controllers\post.controller.ts
+- C:\Users\diguo\Documents\feetflight\feetflight\src\routes\post.route.ts
+- C:\Users\diguo\Documents\feetflight\feetflight\src\server.ts
+    at Function.Module._resolveFilename (node:internal/modules/cjs/loader:933:15)
+    at Function.Module._resolveFilename.sharedData.moduleResolveFilenameHook.installedValue (C:\Users\diguo\Documents\feetflight\feetflight\node_modules\@cspotcode\source-map-support\source-map-support.js:811:30)
+    at Function.Module._resolveFilename (C:\Users\diguo\Documents\feetflight\feetflight\node_modules\tsconfig-paths\src\register.ts:115:36)
+    at Function.Module._load (node:internal/modules/cjs/loader:778:27)
+    at Module.require (node:internal/modules/cjs/loader:1005:19)
+    at require (node:internal/modules/cjs/helpers:102:18)
+    at Object.<anonymous> (C:\Users\diguo\Documents\feetflight\feetflight\src\controllers\post.controller.ts:2:1)
+    at Module._compile (node:internal/modules/cjs/loader:1105:14)
+    at Module.m._compile (C:\Users\diguo\Documents\feetflight\feetflight\node_modules\ts-node\src\index.ts:1618:23)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1159:10)

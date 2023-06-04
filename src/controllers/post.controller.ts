@@ -41,7 +41,7 @@ class postController {
     try {
       const categories = await this.postService.getCategories();
       console.log(categories);
-      
+
 
       res.status(201).json({ categories });
     } catch (error) {
@@ -89,7 +89,7 @@ class postController {
       const collectionId = String(req.params.id);
       await this.postService.uploadPostPictures(pictureFiles, collectionId);
 
-      res.status(201).json({ messazge: "post pirctures have been uploaded successfully" });
+      res.status(201).json({ messazge: "post pictures have been uploaded successfully" });
     } catch (error) {
       next(error);
     }
