@@ -76,6 +76,19 @@ class UsersController {
     }
   };
 
+  public checkForSubscribtion = async (req: Request, res: Response, next: NextFunction): Promise<void> => {
+    try {
+      const userId = String(req.params.id);
+      const subscriptionData = req.body;
+
+      const isSubscribed = await this.userService.checkForSale(userId, subscriptionData);
+
+      res.status(200).json({ data: isSubscribed });
+    } catch (error) {
+      next(error);
+    }
+  };
+
   public updateUser = async (req: Request, res: Response, next: NextFunction): Promise<void> => {
     try {
       const userId = Number(req.params.id);

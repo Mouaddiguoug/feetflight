@@ -1,0 +1,24 @@
+2023-06-06 16:22:38 info: =================================
+2023-06-06 16:22:38 info: ======= ENV: development =======
+2023-06-06 16:22:38 info: 🚀 App listening on the port 4000
+2023-06-06 16:22:38 info: =================================
+2023-06-06 16:23:29 info: [0mGET /albums/categories [32m201[0m 478.003 ms - 64[0m
+2023-06-06 16:23:29 info: [0mGET /albums/popular [32m201[0m 494.827 ms - -[0m
+2023-06-06 16:23:30 info: [0mGET /albums/category/fjdsregknerujngdifjnigi [32m201[0m 782.907 ms - -[0m
+2023-06-06 16:23:30 info: [0mGET /public/files/albums/Picsart_22-03-01_14-57-46-602pngd17e588bd4bc0d7308d8f6ba2f2ac544d1ea907317062023.png [33m404[0m 2.718 ms - 243[0m
+2023-06-06 16:23:31 info: [0mGET /public/files/albums/Picsart_22-03-01_14-57-46-602pnge46dae47e1c4a04c0b00ba5bf00a14b38ed3e9e500062023png [33m404[0m 1.159 ms - 242[0m
+2023-06-06 16:23:46 info: [0mGET /public/files/albums/Picsart_22-03-01_14-57-46-602pngd17e588bd4bc0d7308d8f6ba2f2ac544d1ea907317062023.png [33m404[0m 0.804 ms - 243[0m
+2023-06-06 16:23:53 info: [0mGET /public/files/albums/Picsart_22-03-01_14-57-46-602pngd17e588bd4bc0d7308d8f6ba2f2ac544d1ea907317062023.png [33m404[0m 0.680 ms - 243[0m
+2023-06-06 16:23:53 info: [0mGET /public/files/albums/Picsart_22-03-01_14-57-46-602pnge46dae47e1c4a04c0b00ba5bf00a14b38ed3e9e500062023png [33m404[0m 0.669 ms - 242[0m
+2023-06-06 16:29:55 info: [0mGET /albums/popular [32m201[0m 388.892 ms - -[0m
+2023-06-06 16:29:55 info: [0mGET /albums/categories [32m201[0m 390.783 ms - 64[0m
+2023-06-06 16:29:56 info: [0mGET /albums/category/fjdsregknerujngdifjnigi [32m201[0m 750.228 ms - -[0m
+2023-06-06 16:29:57 info: [0mGET /public/files/albums/Picsart_22-03-01_14-57-46-602pnge46dae47e1c4a04c0b00ba5bf00a14b38ed3e9e500062023png [33m404[0m 0.644 ms - 242[0m
+2023-06-06 16:29:57 info: [0mGET /public/files/albums/Picsart_22-03-01_14-57-46-602pngd17e588bd4bc0d7308d8f6ba2f2ac544d1ea907317062023.png [33m404[0m 0.678 ms - 243[0m
+2023-06-06 16:30:45 info: [0mGET /albums/popular [32m201[0m 366.080 ms - -[0m
+2023-06-06 16:30:45 info: [0mGET /albums/categories [32m201[0m 380.194 ms - 64[0m
+2023-06-06 16:30:46 info: [0mGET /albums/category/fjdsregknerujngdifjnigi [32m201[0m 778.923 ms - -[0m
+2023-06-06 16:30:46 info: [0mGET /public/files/albums/Picsart_22-03-01_14-57-46-602pngd17e588bd4bc0d7308d8f6ba2f2ac544d1ea907317062023.png [33m404[0m 0.860 ms - 243[0m
+2023-06-06 16:30:46 info: [0mGET /public/files/albums/Picsart_22-03-01_14-57-46-602pnge46dae47e1c4a04c0b00ba5bf00a14b38ed3e9e500062023png [33m404[0m 0.643 ms - 242[0m
+2023-06-06 17:26:12 info: [0mGET /public/files/albums/Picsart_22-03-01_14-57-46-602pngd17e588bd4bc0d7308d8f6ba2f2ac544d1ea907317062023.png [33m404[0m 1.679 ms - 243[0m
+2023-06-06 17:26:12 info: [0mGET /public/files/albums/Picsart_22-03-01_14-57-46-602pnge46dae47e1c4a04c0b00ba5bf00a14b38ed3e9e500062023png [33m404[0m 2.165 ms - 242[0m

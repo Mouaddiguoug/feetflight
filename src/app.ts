@@ -57,11 +57,11 @@ class App {
           case 'checkout.session.completed':
             switch (event.data.object.mode) {
               case 'payment':
-                event.data.object.metadata.sellersIds.split(',').map(record => {
+                event.data.object.metadata.sellersIds.split(',').map((record: any) => {
                   let sellerId = '';
                   let postId = '';
                   let amount = '';
-                  record.split('.').map(record => {
+                  record.split('.').map((record: any) => {
                     switch (record.split(':')[0]) {
                       case 'sellerId':
                         sellerId = record.split(':')[1];

@@ -31,7 +31,6 @@ class AuthService {
         case RolesEnum.SELLER:
           if (!userData.data.subscriptionPrice || !userData.data.country || !userData.data.identityPhoto || !userData.data.city)
             return { message: 'data missing' };
-
           const seller = await stripe.customers.create({
             name: userData.data.name,
             email: email,
@@ -167,7 +166,7 @@ class AuthService {
       const email = userData.data.email;
 
       const findUser = await loginSession.executeRead(tx => tx.run('match (u:user {email: $email}) return u', { email: email }));
-      if (findUser.records.length == 0) return { message: `This email ${userData.data.email} doesn't exists` };
+      if (findUser.records.length == 0) return { message: `This email ${userData.data.email} doesn't exist` };
 
       if (!findUser.records.map(record => record.get('u').properties.confirmed)[0])
         return { message: `This email is not confirmed please confirm your email` };
