@@ -166,10 +166,10 @@ class AuthService {
       const email = userData.data.email;
 
       const findUser = await loginSession.executeRead(tx => tx.run('match (u:user {email: $email}) return u', { email: email }));
-      if (findUser.records.length == 0) return { message: `This email ${userData.data.email} doesn't exist` };
+      if (findUser.records.length == 0) return { message: `password or email is incorrect` };
 
-      if (!findUser.records.map(record => record.get('u').properties.confirmed)[0])
-        return { message: `This email is not confirmed please confirm your email` };
+      /* if (!findUser.records.map(record => record.get('u').properties.confirmed)[0])
+        return { message: `This email is not confirmed please confirm your email` }; */
 
       const password = findUser.records.map(record => record.get('u').properties.password)[0];
       const isPasswordMatching = await compare(userData.data.password, password);
@@ -181,7 +181,7 @@ class AuthService {
         findUser.records.map(record => record.get('u').properties.id),
       );
 
-      return { tokenData, data: findUser.records.map(record => record.get('u').properties) };
+      return { tokenData, data: findUser.records.map(record => record.get('u').properties)[0] };
     } catch (error) {
       console.log(error);
     } finally {
