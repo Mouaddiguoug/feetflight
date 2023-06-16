@@ -43,18 +43,16 @@ class AuthService {
 
           const createUserSeller = await signupSession.executeWrite(tx =>
             tx.run(
-              'create (u:user {id: $userId, name: $name, email: $email, userName: $userName, password: $password, createdAt: $createdAt, avatar: $avatar, confirmed: false, desactivated: false, city: $city, country: $country})-[r: IS_A]->(s:seller {id: $sellerId, verified: $verified, identityPhoto: $identityPhoto, subscriptionPrice: $subscriptionPrice}) return u, s',
+              'create (u:user {id: $userId, name: $name, email: $email, userName: $userName, password: $password, createdAt: $createdAt, confirmed: false, desactivated: false, city: $city, country: $country})-[r: IS_A]->(s:seller {id: $sellerId, verified: $verified, subscriptionPrice: $subscriptionPrice}) return u, s',
               {
                 userId: seller.id,
                 buyerId: uid.uid(40),
                 createdAt: moment().format('MMMM DD, YYYY'),
                 email: email,
-                avatar: userData.data.avatar ? userData.data.avatar : '',
                 userName: userData.data.userName,
                 name: userData.data.name,
                 password: hashedPassword,
                 sellerId: uid.uid(40),
-                identityPhoto: userData.data.identityPhoto,
                 verified: false,
                 subscriptionPrice: userData.data.subscriptionPrice,
                 city: userData.data.city,
@@ -88,13 +86,12 @@ class AuthService {
 
           const createdUserBuyer = await signupSession.executeWrite(tx =>
             tx.run(
-              'create (u:user {id: $userId, name: $name, email: $email, userName: $userName, password: $password, createdAt: $createdAt, avatar: $avatar, confirmed: false})-[r: IS_A]->(b:buyer {id: $buyerId}) return u',
+              'create (u:user {id: $userId, name: $name, email: $email, userName: $userName, password: $password, createdAt: $createdAt, confirmed: false})-[r: IS_A]->(b:buyer {id: $buyerId}) return u',
               {
                 userId: buyer.id,
                 buyerId: uid.uid(40),
                 createdAt: moment().format('MMMM DD, YYYY'),
                 email: email,
-                avatar: userData.data.avatar ? userData.data.avatar : '',
                 userName: userData.data.userName,
                 name: userData.data.name,
                 password: hashedPassword,
