@@ -40,8 +40,6 @@ class postController {
   public getCategories = async (req: Request, res: Response, next: NextFunction): Promise<void> => {
     try {
       const categories = await this.postService.getCategories();
-      console.log(categories);
-
 
       res.status(201).json({ categories });
     } catch (error) {

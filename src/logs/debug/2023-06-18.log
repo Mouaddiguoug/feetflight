@@ -1,0 +1,60 @@
+2023-06-18 12:08:52 info: =================================
+2023-06-18 12:08:52 info: ======= ENV: development =======
+2023-06-18 12:08:52 info: 🚀 App listening on the port 4000
+2023-06-18 12:08:52 info: =================================
+2023-06-18 12:30:36 info: [0mPOST /login [32m200[0m 3029.297 ms - 514[0m
+2023-06-18 12:30:37 info: [0mGET /albums/categories [32m201[0m 704.898 ms - 64[0m
+2023-06-18 12:30:38 info: [0mGET /albums/popular [32m201[0m 988.735 ms - -[0m
+2023-06-18 12:30:39 info: [0mGET /albums/category/fjdsregknerujngdifjnigi [32m201[0m 1399.993 ms - -[0m
+2023-06-18 12:30:39 info: [0mGET /public/files/albums/Picsart_22-03-01_14-57-46-602pngd17e588bd4bc0d7308d8f6ba2f2ac544d1ea907317062023.png [33m404[0m 63.851 ms - 243[0m
+2023-06-18 12:30:39 info: [0mGET /public/files/albums/Picsart_22-03-01_14-57-46-602pnge46dae47e1c4a04c0b00ba5bf00a14b38ed3e9e500062023png [33m404[0m 48.139 ms - 242[0m
+2023-06-18 12:30:40 info: [0mGET /public/files/albums/mypicpng9de0ca407278611ad6ee8decd4fd1ea7157b895d35062023.png [32m200[0m 95.198 ms - 606857[0m
+2023-06-18 12:41:39 info: [0mPOST /login [32m200[0m 1826.586 ms - 514[0m
+2023-06-18 12:41:40 info: [0mGET /albums/popular [32m201[0m 821.495 ms - -[0m
+2023-06-18 12:41:40 info: [0mGET /albums/categories [32m201[0m 834.639 ms - 64[0m
+2023-06-18 12:41:42 info: [0mGET /albums/category/fjdsregknerujngdifjnigi [32m201[0m 1806.491 ms - -[0m
+2023-06-18 12:41:43 info: [0mGET /public/files/albums/Picsart_22-03-01_14-57-46-602pngd17e588bd4bc0d7308d8f6ba2f2ac544d1ea907317062023.png [33m404[0m 6.569 ms - 243[0m
+2023-06-18 12:41:43 info: [0mGET /public/files/albums/Picsart_22-03-01_14-57-46-602pnge46dae47e1c4a04c0b00ba5bf00a14b38ed3e9e500062023png [33m404[0m 12.562 ms - 242[0m
+2023-06-18 12:43:14 info: [0mPOST /login [32m200[0m 868.220 ms - 514[0m
+2023-06-18 12:43:16 info: [0mGET /albums/popular [32m201[0m 717.596 ms - -[0m
+2023-06-18 12:43:16 info: [0mGET /albums/categories [32m201[0m 698.586 ms - 64[0m
+2023-06-18 12:43:18 info: [0mGET /albums/category/fjdsregknerujngdifjnigi [32m201[0m 1543.726 ms - -[0m
+2023-06-18 12:43:18 info: [0mGET /public/files/albums/Picsart_22-03-01_14-57-46-602pngd17e588bd4bc0d7308d8f6ba2f2ac544d1ea907317062023.png [33m404[0m 8.980 ms - 243[0m
+2023-06-18 12:43:18 info: [0mGET /public/files/albums/Picsart_22-03-01_14-57-46-602pnge46dae47e1c4a04c0b00ba5bf00a14b38ed3e9e500062023png [33m404[0m 17.596 ms - 242[0m
+2023-06-18 12:45:14 info: [0mGET /public/files/albums/Picsart_22-03-01_14-57-46-602pngd17e588bd4bc0d7308d8f6ba2f2ac544d1ea907317062023.png [33m404[0m 16.203 ms - 243[0m
+2023-06-18 12:45:14 info: [0mGET /public/files/albums/Picsart_22-03-01_14-57-46-602pnge46dae47e1c4a04c0b00ba5bf00a14b38ed3e9e500062023png [33m404[0m 23.208 ms - 242[0m
+2023-06-18 12:48:12 info: [0mPOST /login [32m200[0m 908.711 ms - 514[0m
+2023-06-18 12:48:13 info: [0mGET /albums/categories [32m201[0m 687.202 ms - 64[0m
+2023-06-18 12:48:13 info: [0mGET /albums/popular [32m201[0m 706.477 ms - -[0m
+2023-06-18 12:48:16 info: [0mGET /albums/category/fjdsregknerujngdifjnigi [32m201[0m 2646.654 ms - -[0m
+2023-06-18 12:48:16 info: [0mGET /public/files/albums/Picsart_22-03-01_14-57-46-602pnge46dae47e1c4a04c0b00ba5bf00a14b38ed3e9e500062023png [33m404[0m 9.153 ms - 242[0m
+2023-06-18 12:48:16 info: [0mGET /public/files/albums/Picsart_22-03-01_14-57-46-602pngd17e588bd4bc0d7308d8f6ba2f2ac544d1ea907317062023.png [33m404[0m 19.623 ms - 243[0m
+2023-06-18 12:52:33 info: [0mPOST /login [32m200[0m 922.518 ms - 514[0m
+2023-06-18 12:52:34 info: [0mGET /albums/categories [32m201[0m 1117.071 ms - 64[0m
+2023-06-18 12:52:35 info: [0mGET /albums/popular [32m201[0m 2082.597 ms - -[0m
+2023-06-18 12:52:39 info: [0mGET /albums/category/fjdsregknerujngdifjnigi [32m201[0m 4595.856 ms - -[0m
+2023-06-18 12:52:39 info: [0mGET /public/files/albums/Picsart_22-03-01_14-57-46-602pnge46dae47e1c4a04c0b00ba5bf00a14b38ed3e9e500062023png [33m404[0m 9.811 ms - 242[0m
+2023-06-18 12:52:39 info: [0mGET /public/files/albums/Picsart_22-03-01_14-57-46-602pngd17e588bd4bc0d7308d8f6ba2f2ac544d1ea907317062023.png [33m404[0m 14.902 ms - 243[0m
+2023-06-18 12:53:51 info: [0mGET /albums/popular [32m201[0m 1055.883 ms - -[0m
+2023-06-18 12:53:52 info: [0mGET /albums/categories [32m201[0m 1807.415 ms - 64[0m
+2023-06-18 12:53:57 info: [0mGET /albums/category/fjdsregknerujngdifjnigi [32m201[0m 4215.125 ms - -[0m
+2023-06-18 12:53:57 info: [0mGET /public/files/albums/Picsart_22-03-01_14-57-46-602pngd17e588bd4bc0d7308d8f6ba2f2ac544d1ea907317062023.png [33m404[0m 15.368 ms - 243[0m
+2023-06-18 12:53:57 info: [0mGET /public/files/albums/Picsart_22-03-01_14-57-46-602pnge46dae47e1c4a04c0b00ba5bf00a14b38ed3e9e500062023png [33m404[0m 26.131 ms - 242[0m
+2023-06-18 12:55:18 info: [0mGET /public/files/albums/mypicpngd17e588bd4bc0d7308d8f6ba2f2ac544d1ea907337062023png [33m404[0m 4.276 ms - 218[0m
+2023-06-18 12:55:24 info: [0mGET /public/files/albums/Picsart_22-03-01_14-57-46-602pngd17e588bd4bc0d7308d8f6ba2f2ac544d1ea907317062023.png [33m404[0m 4.157 ms - 243[0m
+2023-06-18 12:55:24 info: [0mGET /public/files/albums/Picsart_22-03-01_14-57-46-602pnge46dae47e1c4a04c0b00ba5bf00a14b38ed3e9e500062023png [33m404[0m 2.230 ms - 242[0m
+2023-06-18 20:31:03 info: =================================
+2023-06-18 20:31:03 info: ======= ENV: development =======
+2023-06-18 20:31:03 info: 🚀 App listening on the port 4000
+2023-06-18 20:31:03 info: =================================
+2023-06-18 20:32:29 info: [0mGET /albums/categories [32m201[0m 994.910 ms - 64[0m
+2023-06-18 20:32:29 info: [0mGET /albums/popular [32m201[0m 719.171 ms - -[0m
+2023-06-18 20:32:30 info: [0mGET /albums/category/fjdsregknerujngdifjnigi [32m201[0m 1519.126 ms - -[0m
+2023-06-18 20:32:31 info: [0mGET /public/files/albums/Picsart_22-03-01_14-57-46-602pngd17e588bd4bc0d7308d8f6ba2f2ac544d1ea907317062023.png [33m404[0m 22.240 ms - 243[0m
+2023-06-18 20:32:31 info: [0mGET /public/files/albums/Picsart_22-03-01_14-57-46-602pnge46dae47e1c4a04c0b00ba5bf00a14b38ed3e9e500062023png [33m404[0m 23.690 ms - 242[0m
+2023-06-18 20:35:40 info: [0mPOST /login [32m200[0m 1247.306 ms - 514[0m
+2023-06-18 20:35:41 info: [0mGET /albums/popular [32m201[0m 728.506 ms - -[0m
+2023-06-18 20:35:41 info: [0mGET /albums/categories [32m201[0m 728.766 ms - 64[0m
+2023-06-18 20:35:43 info: [0mGET /albums/category/fjdsregknerujngdifjnigi [32m201[0m 1509.022 ms - -[0m
+2023-06-18 20:35:43 info: [0mGET /public/files/albums/Picsart_22-03-01_14-57-46-602pnge46dae47e1c4a04c0b00ba5bf00a14b38ed3e9e500062023png [33m404[0m 11.344 ms - 242[0m
+2023-06-18 20:35:43 info: [0mGET /public/files/albums/Picsart_22-03-01_14-57-46-602pngd17e588bd4bc0d7308d8f6ba2f2ac544d1ea907317062023.png [33m404[0m 19.440 ms - 243[0m
