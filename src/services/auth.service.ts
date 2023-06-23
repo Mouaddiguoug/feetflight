@@ -29,8 +29,7 @@ class AuthService {
       if (!userData.data.role || !userData.data.name || !userData.data.userName || !userData.data.password) return { message: 'mlissing data' };
       switch (userData.data.role) {
         case RolesEnum.SELLER:
-          if (!userData.data.subscriptionPrice || !userData.data.country || !userData.data.identityPhoto || !userData.data.city)
-            return { message: 'data missing' };
+          if (!userData.data.country || !userData.data.phone) return { message: 'data missing' };
           const seller = await stripe.customers.create({
             name: userData.data.name,
             email: email,
@@ -43,7 +42,7 @@ class AuthService {
 
           const createUserSeller = await signupSession.executeWrite(tx =>
             tx.run(
-              'create (u:user {id: $userId, name: $name, email: $email, userName: $userName, password: $password, createdAt: $createdAt, confirmed: false, desactivated: false, city: $city, country: $country})-[r: IS_A]->(s:seller {id: $sellerId, verified: $verified, subscriptionPrice: $subscriptionPrice}) return u, s',
+              'create (u:user {id: $userId, name: $name, email: $email, userName: $userName, password: $password, createdAt: $createdAt, confirmed: false, desactivated: false, country: $country, phone: $phone})-[r: IS_A]->(s:seller {id: $sellerId, verified: $verified}) return u, s',
               {
                 userId: seller.id,
                 buyerId: uid.uid(40),
@@ -54,9 +53,8 @@ class AuthService {
                 password: hashedPassword,
                 sellerId: uid.uid(40),
                 verified: false,
-                subscriptionPrice: userData.data.subscriptionPrice,
-                city: userData.data.city,
                 country: userData.data.country,
+                phone: userData.data.phone,
               },
             ),
           );
@@ -190,17 +188,9 @@ class AuthService {
     if (!token) return { message: 'missing token' };
     const refreshSession = initializeDbConnection().session({ database: 'neo4j' });
     try {
-      const secretKey: string = SECRET_KEY;
-      const decoded = verify(token, secretKey);
+      const refreshToken = this.createRefreshToken({ token, refresh: true });
 
-      const id: string = decoded.data[0];
-      const findUser = await refreshSession.executeRead(tx => tx.run('match (u:user {id: $id}) return u', { id: id }));
-
-      if (findUser.records.length == 0) return { message: 'refresh token is invalid' };
-
-      const refreshToken = this.createRefreshToken(token);
-
-      return { refreshToken, data: findUser.records.map(record => record.get('u').properties) };
+      return { refreshToken };
     } catch (error) {
       console.log(error);
     } finally {
@@ -232,6 +222,7 @@ class AuthService {
   public createRefreshToken(data) {
     try {
       const dataStoredInToken = { data };
+
       const secretKey: string = SECRET_KEY;
       const expiresIn: string = '30 days';
 

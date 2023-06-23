@@ -76,6 +76,7 @@ class postService {
     const recentPostsSession = initializeDbConnection().session({ database: 'neo4j' });
     try {
       const categories = await recentPostsSession.executeRead(tx => tx.run('match (category:category) return category'));
+      
       return categories.records.map(record => record.get('category').properties);
     } catch (error) {
       console.log(error);

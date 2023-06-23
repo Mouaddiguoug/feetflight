@@ -11,7 +11,7 @@ class AuthController {
       const userData = req.body;
       const signUpUserData = await this.authService.signup(userData);
 
-      signUpUserData.message ? res.status(201).json(signUpUserData) : res.status(302).json(signUpUserData);
+      res.status(201).json(signUpUserData);
     } catch (error) {
       console.log(error);
     }
@@ -32,7 +32,7 @@ class AuthController {
       const userData = req.body;
       const userId: string = String(req.params.id);
       const chengedData = await this.authService.changePassword(userId, userData);
-      res.status(200).json({data: chengedData});
+      res.status(200).json({ data: chengedData });
     } catch (error) {
       console.log(error);
     }

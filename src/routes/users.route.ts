@@ -3,6 +3,7 @@ import UsersController from '@controllers/users.controller';
 import { Routes } from '@interfaces/routes.interface';
 import multer from 'multer';
 import fileMiddleware from '@/middlewares/fileValidation.middleware';
+import { request } from 'http';
 
 class UsersRoute implements Routes {
   public path = '/users';
@@ -22,7 +23,13 @@ class UsersRoute implements Routes {
     this.router.get(`${this.path}/:email`, this.usersController.changePassword);
     this.router.put(`${this.path}/:id`, this.usersController.updateUser);
     this.router.post(`${this.path}/desactivate/:id`, this.usersController.desactivateUser);
-    this.router.post(`${this.path}/upload/avatar/:id`, multer().single('avatar'), fileMiddleware, this.usersController.uploadAvatar);
+    this.router.post(
+      `${this.path}/upload/avatar/:id`,
+      multer().single('avatar'),
+      req => console.log(req.file),
+      fileMiddleware,
+      this.usersController.uploadAvatar,
+    );
   }
 }
 

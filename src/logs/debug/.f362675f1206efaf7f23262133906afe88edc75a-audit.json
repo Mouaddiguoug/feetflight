@@ -44,6 +44,31 @@
             "date": 1686916529555,
             "name": "C:\\Users\\Devops3\\Documents\\Projects\\feetflight\\feetflight\\src\\logs\\debug\\2023-06-16.log",
             "hash": "ba387b1fa9c32fbd73943d647036b888a89e7535caecafafa14e3e2d27b50104"
+        },
+        {
+            "date": 1687161485417,
+            "name": "C:\\Users\\Devops3\\Documents\\Projects\\feetflight\\feetflight\\src\\logs\\debug\\2023-06-19.log",
+            "hash": "1c0bcdbcfb82e873601465f8c164313fd1f004e0462f3050ec878b56da29790e"
+        },
+        {
+            "date": 1687249517868,
+            "name": "C:\\Users\\Devops3\\Documents\\Projects\\feetflight\\feetflight\\src\\logs\\debug\\2023-06-20.log",
+            "hash": "6d867dd7dec8e853afdcc158497cbff9fbc83183c3eb9546600070df54250430"
+        },
+        {
+            "date": 1687335951728,
+            "name": "C:\\Users\\Devops3\\Documents\\Projects\\feetflight\\feetflight\\src\\logs\\debug\\2023-06-21.log",
+            "hash": "757123fcd000534e95c6a5cd9ceabfa74ba4b42084794b07aaab34498f801438"
+        },
+        {
+            "date": 1687428310329,
+            "name": "C:\\Users\\Devops3\\Documents\\Projects\\feetflight\\feetflight\\src\\logs\\debug\\2023-06-22.log",
+            "hash": "22c2f85932f7824f670461729b6e09c1190e8601d83f7c8e9993e1a27cf7704e"
+        },
+        {
+            "date": 1687506085808,
+            "name": "C:\\Users\\Devops3\\Documents\\Projects\\feetflight\\feetflight\\src\\logs\\debug\\2023-06-23.log",
+            "hash": "5110a8566bcbac0c86c5ec65ab3330593b3f35b7c5e8d654bb044ad56dc88b24"
         }
     ],
     "hashType": "sha256"
