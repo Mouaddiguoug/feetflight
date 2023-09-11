@@ -21,6 +21,7 @@ class AuthService {
     const stripe = new Stripe(process.env.STRIPE_TEST_KEY, { apiVersion: '2022-11-15' });
     const signupSession = initializeDbConnection().session({ database: 'neo4j' });
     const createWalletSession = initializeDbConnection().session({ database: 'neo4j' });
+
     const email = userData.data.email;
     try {
       const findUser = await signupSession.executeRead(tx => tx.run('match (u:user {email: $email}) return u', { email: email }));
@@ -29,29 +30,33 @@ class AuthService {
       if (!userData.data.role || !userData.data.name || !userData.data.userName || !userData.data.password) return { message: 'mlissing data' };
       switch (userData.data.role) {
         case RolesEnum.SELLER:
-          if (!userData.data.country || !userData.data.phone) return { message: 'data missing' };
-          const seller = await stripe.customers.create({
-            name: userData.data.name,
-            email: email,
-            address: {
-              city: userData.data.city,
-              country: userData.data.country,
-            },
-            balance: 0,
+          if (!userData.data.country || !userData.data.phone || userData.data.plans.length == 0) return { message: 'data missing' };
+          const seller = await stripe.accounts.create({
+            email: userData.data.email,
+            default_currency: "EUR",
+            type: 'express', 
+            capabilities: {
+              transfers: {
+                requested: true,
+              },
+              card_payments: {
+                requested: true,
+              }
+            }
           });
 
           const createUserSeller = await signupSession.executeWrite(tx =>
             tx.run(
               'create (u:user {id: $userId, name: $name, email: $email, userName: $userName, password: $password, createdAt: $createdAt, confirmed: false, desactivated: false, country: $country, phone: $phone})-[r: IS_A]->(s:seller {id: $sellerId, verified: $verified}) return u, s',
               {
-                userId: seller.id,
+                userId: uid.uid(40),
                 buyerId: uid.uid(40),
                 createdAt: moment().format('MMMM DD, YYYY'),
                 email: email,
                 userName: userData.data.userName,
                 name: userData.data.name,
                 password: hashedPassword,
-                sellerId: uid.uid(40),
+                sellerId: seller.id,
                 verified: false,
                 country: userData.data.country,
                 phone: userData.data.phone,
@@ -65,6 +70,37 @@ class AuthService {
               walletId: uid.uid(40),
             }),
           );
+
+          userData.data.plans.map(async (plan: any) => {
+            const createPlansSession = initializeDbConnection().session({ database: 'neo4j' });
+            try {
+              const stripeCreatedPlan = await stripe.products.create({
+                name: plan.name,
+              });
+              const stripeCreatedPrice = await stripe.prices.create({
+                currency: "EUR",
+                product: stripeCreatedPlan.id,
+                recurring: {
+                  interval: "month",
+                  interval_count: 1,
+                },
+                unit_amount: plan.price * 100
+              });
+              
+              await createPlansSession.executeWrite(tx =>
+                tx.run('match (s:seller {id: $sellerId}) create (s)-[:HAS_A]->(:plan {id: $planId, name: $name, price: $price})', {
+                  sellerId: createUserSeller.records.map(record => record.get('s').properties.id)[0],
+                  planId: stripeCreatedPrice.id,
+                  name: plan.name,
+                  price: plan.price,
+                }),
+              );
+            } catch (error) {
+              console.log(error);
+            } finally{
+              createPlansSession.close();
+            }
+          });
 
           const sellerToken = this.createToken(process.env.EMAIL_SECRET, createUserSeller.records.map(record => record.get('u').properties.id)[0]);
 
@@ -166,6 +202,8 @@ class AuthService {
       /* if (!findUser.records.map(record => record.get('u').properties.confirmed)[0])
         return { message: `This email is not confirmed please confirm your email` }; */
 
+      console.log(findUser.records.map(record => record.get('u').properties.id));
+
       const password = findUser.records.map(record => record.get('u').properties.password)[0];
       const isPasswordMatching = await compare(userData.data.password, password);
 
@@ -176,7 +214,11 @@ class AuthService {
         findUser.records.map(record => record.get('u').properties.id),
       );
 
-      return { tokenData, data: findUser.records.map(record => record.get('u').properties)[0] };
+      const role = await loginSession.executeRead(tx =>
+        tx.run('match (u:user {id: $id})-[:IS_A]-(r:seller) return r', { id: findUser.records.map(record => record.get('u').properties.id)[0] }),
+      );
+
+      return { tokenData, data: findUser.records.map(record => record.get('u').properties)[0], role: role.records.length == 0 ? 'Buyer' : 'Seller' };
     } catch (error) {
       console.log(error);
     } finally {
@@ -184,7 +226,9 @@ class AuthService {
     }
   }
 
-  public async refreshToken(token) {
+  public async refreshToken(token: string) {
+    console.log('hzllo');
+
     if (!token) return { message: 'missing token' };
     const refreshSession = initializeDbConnection().session({ database: 'neo4j' });
     try {
@@ -207,7 +251,7 @@ class AuthService {
     return findUser;
   }
 
-  public createToken(secret, data) {
+  public createToken(secret: string, data: any) {
     try {
       const dataStoredInToken = { data };
       const secretKey: string = secret;
@@ -225,8 +269,10 @@ class AuthService {
 
       const secretKey: string = SECRET_KEY;
       const expiresIn: string = '30 days';
+      const expiresAt: Date = new Date();
+      expiresAt.setDate(expiresAt.getDate() + 30);
 
-      return { token: sign(dataStoredInToken, secretKey, { expiresIn }) };
+      return { token: sign(dataStoredInToken, secretKey, { expiresIn }), expiresAt };
     } catch (error) {
       console.log(error);
     }

@@ -49,7 +49,7 @@ const fileMiddleware = async (req: RequestWithUser, res: Response, next: NextFun
           );
         }
         next();
-      }
+      } 
     } else if (req.file) {
       const fileData = req.file;
       if (fileData.size > 5000000) return next(new HttpException(401, `${fileData.fieldname} is too large`));

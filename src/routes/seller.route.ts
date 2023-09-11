@@ -16,6 +16,7 @@ class sellerRoute implements Routes {
   private initializeRoutes() {
     this.router.post(`${this.path}/plans/:id`, this.sellerController.createSubscribePlans);
     this.router.get(`${this.path}/plans/:id`, this.sellerController.getSubscriptionPlans);
+    this.router.get(`${this.path}/followers/:id`, this.sellerController.getFollowersCount);
     this.router.post(
       `${this.path}/upload/identitycard/:id`,
       multer().fields([

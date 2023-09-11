@@ -1,0 +1,48 @@
+2023-08-25 11:39:12 info: =================================
+2023-08-25 11:39:12 info: ======= ENV: development =======
+2023-08-25 11:39:12 info: 🚀 App listening on the port 4000
+2023-08-25 11:39:12 info: =================================
+2023-08-25 11:42:50 info: =================================
+2023-08-25 11:42:50 info: ======= ENV: development =======
+2023-08-25 11:42:50 info: 🚀 App listening on the port 4000
+2023-08-25 11:42:50 info: =================================
+2023-08-25 11:44:29 info: [0mPOST /login [32m200[0m 812.877 ms - 44[0m
+2023-08-25 11:44:51 info: [0mPOST /login [32m200[0m 461.393 ms - 44[0m
+2023-08-25 11:48:32 info: [0mPOST /signup [32m201[0m 1523.167 ms - 292[0m
+2023-08-25 11:50:49 info: [0mPOST /login [32m200[0m 696.863 ms - 499[0m
+2023-08-25 11:50:50 error: [GET] /albums/popular >> StatusCode:: 403, Message:: Wrong authentication token
+2023-08-25 11:50:50 info: [0mGET /albums/popular [33m403[0m 478.224 ms - 40[0m
+2023-08-25 11:50:50 info: [0mPOST /refresh [32m200[0m 1.950 ms - 428[0m
+2023-08-25 11:50:50 error: [GET] /albums/categories >> StatusCode:: 403, Message:: Wrong authentication token
+2023-08-25 11:50:50 info: [0mGET /albums/categories [33m403[0m 451.284 ms - 40[0m
+2023-08-25 11:50:50 info: [0mPOST /refresh [32m200[0m 2.040 ms - 428[0m
+2023-08-25 11:50:50 info: [0mGET /albums/categories [32m201[0m 484.695 ms - 109[0m
+2023-08-25 11:50:50 info: [0mGET /albums/popular [32m201[0m 831.299 ms - 19[0m
+2023-08-25 11:50:51 error: [GET] /albums/category/fh5gfg54d6ghb48d6 >> StatusCode:: 403, Message:: Wrong authentication token
+2023-08-25 11:50:51 info: [0mGET /albums/category/fh5gfg54d6ghb48d6 [33m403[0m 419.766 ms - 40[0m
+2023-08-25 11:50:51 info: [0mPOST /refresh [32m200[0m 2.477 ms - 428[0m
+2023-08-25 11:50:51 info: [0mGET /albums/category/fh5gfg54d6ghb48d6 [32m201[0m 551.421 ms - 22[0m
+2023-08-25 11:51:10 error: [GET] /albums/category/sdqf45qfez48fsd5csd5 >> StatusCode:: 403, Message:: Wrong authentication token
+2023-08-25 11:51:10 info: [0mGET /albums/category/sdqf45qfez48fsd5csd5 [33m403[0m 462.914 ms - 40[0m
+2023-08-25 11:51:10 info: [0mPOST /refresh [32m200[0m 2.714 ms - 428[0m
+2023-08-25 11:51:11 info: [0mGET /albums/category/sdqf45qfez48fsd5csd5 [32m201[0m 875.301 ms - 557[0m
+2023-08-25 11:51:11 error: [GET] /albums/category/fh5gfg54d6ghb48d6 >> StatusCode:: 403, Message:: Wrong authentication token
+2023-08-25 11:51:11 info: [0mGET /albums/category/fh5gfg54d6ghb48d6 [33m403[0m 425.278 ms - 40[0m
+2023-08-25 11:51:11 info: [0mPOST /refresh [32m200[0m 1.694 ms - 428[0m
+2023-08-25 11:51:12 info: [0mGET /albums/category/fh5gfg54d6ghb48d6 [32m201[0m 430.238 ms - 22[0m
+2023-08-25 11:53:35 error: [GET] /albums/popular >> StatusCode:: 403, Message:: Wrong authentication token
+2023-08-25 11:53:35 info: [0mGET /albums/popular [33m403[0m 439.954 ms - 40[0m
+2023-08-25 11:53:35 info: [0mPOST /refresh [32m200[0m 2.153 ms - 428[0m
+2023-08-25 11:53:36 error: [GET] /albums/categories >> StatusCode:: 403, Message:: Wrong authentication token
+2023-08-25 11:53:36 info: [0mGET /albums/categories [33m403[0m 417.948 ms - 40[0m
+2023-08-25 11:53:36 info: [0mPOST /refresh [32m200[0m 1.666 ms - 428[0m
+2023-08-25 11:53:36 info: [0mGET /albums/popular [32m201[0m 403.452 ms - 19[0m
+2023-08-25 11:53:36 info: [0mGET /albums/categories [32m201[0m 365.917 ms - 109[0m
+2023-08-25 11:53:36 error: [GET] /albums/category/fh5gfg54d6ghb48d6 >> StatusCode:: 403, Message:: Wrong authentication token
+2023-08-25 11:53:36 info: [0mGET /albums/category/fh5gfg54d6ghb48d6 [33m403[0m 422.599 ms - 40[0m
+2023-08-25 11:53:36 info: [0mPOST /refresh [32m200[0m 1.672 ms - 428[0m
+2023-08-25 11:53:37 info: [0mGET /albums/category/fh5gfg54d6ghb48d6 [32m201[0m 402.129 ms - 22[0m
+2023-08-25 12:33:50 info: =================================
+2023-08-25 12:33:50 info: ======= ENV: development =======
+2023-08-25 12:33:50 info: 🚀 App listening on the port 4000
+2023-08-25 12:33:50 info: =================================

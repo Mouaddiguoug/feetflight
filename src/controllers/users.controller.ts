@@ -76,6 +76,20 @@ class UsersController {
     }
   };
 
+  public cancelSubscription = async (req: Request, res: Response, next: NextFunction): Promise<void> => {
+    
+    try {
+      const userId = String(req.params.id);
+      const sellerId = String(req.params.sellerId);
+
+      const canceledSubscription = await this.userService.cancelSubscription(userId, sellerId);
+
+      res.status(200).json({ canceledSubscription: canceledSubscription });
+    } catch (error) {
+      next(error);
+    }
+  };
+
   public checkForSubscribtion = async (req: Request, res: Response, next: NextFunction): Promise<void> => {
     try {
       const userId = String(req.params.id);

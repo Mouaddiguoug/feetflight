@@ -19,6 +19,7 @@ class UsersRoute implements Routes {
     this.router.get(`${this.path}`, this.usersController.getUsers);
     this.router.post(`${this.path}/buy/:id`, this.usersController.buyPost);
     this.router.post(`${this.path}/subscribe/:id`, this.usersController.subscribe);
+    this.router.post(`${this.path}/unsubscribe/:id/:sellerId`, this.usersController.cancelSubscription);
     this.router.get(`${this.path}/confirmation/:token`, this.usersController.emailConfirming);
     this.router.get(`${this.path}/:email`, this.usersController.changePassword);
     this.router.put(`${this.path}/:id`, this.usersController.updateUser);
@@ -26,7 +27,7 @@ class UsersRoute implements Routes {
     this.router.post(
       `${this.path}/upload/avatar/:id`,
       multer().single('avatar'),
-      req => console.log(req.file),
+      req => console.log(req),
       fileMiddleware,
       this.usersController.uploadAvatar,
     );

@@ -1,10 +1,12 @@
 import { hash } from 'bcrypt';
 import { HttpException } from '@exceptions/HttpException';
 import { User } from '@interfaces/users.interface';
-import aws from 'aws-sdk';
+import { writeFile } from 'node:fs';
+import { Buffer } from 'node:buffer';
 import { isEmpty } from '@utils/util';
 import { initializeDbConnection } from '@/app';
 import { verify } from 'jsonwebtoken';
+import path from 'node:path';
 import Stripe from 'stripe';
 
 class UserService {
@@ -168,9 +170,14 @@ class UserService {
     }
   };
 
-  public buyPost = async (postId: string, userId: string) => {
+  public buyPost = async (postId: string, userId: string, sellerId: string, amount: number) => {
     const buyPostSession = initializeDbConnection().session();
     try {
+      await this.stripe.transfers.create({
+        currency: 'EUR',
+        destination: sellerId,
+        amount: amount,
+      });
       await buyPostSession.executeWrite(tx =>
         tx.run('match (u:user {id: $userId}), (s:seller)-[:HAS_A]->(p:post {id: $postId}) create (u)-[bought:BOUGHT_A]->(p)', {
           userId: userId,
@@ -206,10 +213,11 @@ class UserService {
     }
   };
 
-  public createSubscriptioninDb = async (userId: string, sellerId: string, subscriptionPlanTitle: string, subscriptionPlanPrice: string) => {
+  public createSubscriptioninDb = async (userId: string, sellerId: string, subscriptionPlanTitle: string, subscriptionPlanPrice: number) => {
     const subscribeSession = initializeDbConnection().session();
     try {
       if (await this.checkForSubscription(userId, sellerId)) return { message: 'Already subscribed' };
+
       await subscribeSession.executeWrite(tx => {
         tx.run(
           'match (u:user {id: $userId}), (s:seller {id: $sellerId}) create (u)-[:SUBSCRIBED_TO {subscriptionPlanTitle: $subscriptionPlanTitle, subscriptionPlanPrice: $subscriptionPlanPrice}]->(s) return s',
@@ -228,7 +236,27 @@ class UserService {
     }
   };
 
-  public checkForSale = async (userId, postId) => {
+  public cancelSubscription = async (userId: string, sellerId: string) => {
+
+    const cancelSubscriptionSession = initializeDbConnection().session();
+    try {
+      if (!(await this.checkForSubscription(userId, sellerId))) return { message: 'no subscription' };
+
+      await cancelSubscriptionSession.executeWrite(tx => {
+        tx.run('match (u:user {id: $userId})-[sub:SUBSCRIBED_TO]->(s:seller {id: $sellerId}) detach delete sub', {
+          userId: userId,
+          sellerId: sellerId,
+        });
+      });
+      return {message: 'subscription was canceled successfuly'};
+    } catch (error) {
+      console.log(error);
+    } finally {
+      cancelSubscriptionSession.close();
+    }
+  };
+
+  public checkForSale = async (userId: string, postId: string) => {
     const checkForExistingRelationship = initializeDbConnection().session();
     try {
       const saleAlreadyExists = await checkForExistingRelationship.executeWrite(tx =>
@@ -254,7 +282,7 @@ class UserService {
           userId: userId,
           sellerId: sellerId,
         }),
-      )
+      );
 
       return subscriptionAlreadyExist.records.map(record => record.get('subscribed')).length > 0 ? true : false;
     } catch (error) {
@@ -266,8 +294,7 @@ class UserService {
 
   public uploadAvatar = async (avatarData: any, userId: string) => {
     try {
-      console.log(avatarData);
-      aws.config.update({
+      /* aws.config.update({
         accessKeyId: process.env.AWS_ACCESS_KEY_ID,
         secretAccessKey: process.env.AWS_SECRET_ACCESS_KEY,
         region: 'us-east-2',
@@ -284,7 +311,17 @@ class UserService {
       s3.upload(params, (err, data) => {
         if (err) return console.log(err);
         this.uploadAvatarToDb(data.Location, userId);
-      });
+      }); */
+
+      const filecontent = Buffer.from(avatarData.buffer, 'binary');
+
+      writeFile(
+        path.join(__dirname, '../../public/files/avatars', `${avatarData.originalname.replace('.', '')}.mimetype.split("/")[1]}`),
+        filecontent,
+        err => {
+          if (err) return console.log(err);
+        },
+      );
     } catch (error) {
       console.log(error);
     }

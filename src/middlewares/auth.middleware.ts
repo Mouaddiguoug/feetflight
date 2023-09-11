@@ -18,9 +18,8 @@ const authMiddleware = async (req: RequestWithUser, res: Response, next: NextFun
         return next();
       }
       
-      
       const userId = verificationResponse.id;
-      const foundUser = await authMiddlewareSession.executeRead(tx => tx.run('match (u:user {u:user userId: $userId} return u', {
+      const foundUser = await authMiddlewareSession.executeRead(tx => tx.run('match (u:user {id: $userId}) return u', {
         userId: userId
       }));
 

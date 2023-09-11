@@ -6,69 +6,14 @@
     "auditLog": "C:\\Users\\Devops3\\Documents\\Projects\\feetflight\\feetflight\\src\\logs\\error\\.4d8c7dc24452e76480064c9130a7ec5b1f4a38a8-audit.json",
     "files": [
         {
-            "date": 1685953510184,
-            "name": "C:\\Users\\Devops3\\Documents\\Projects\\feetflight\\feetflight\\src\\logs\\error\\2023-06-05.log",
-            "hash": "dfcf549159fd9605093871c1aec8896c6a48a1ebccda58c872fe6919d325dd72"
+            "date": 1694182938212,
+            "name": "C:\\Users\\Devops3\\Documents\\Projects\\feetflight\\feetflight\\src\\logs\\error\\2023-09-08.log",
+            "hash": "c02dbc160dd5c95344de41ed227fed97599d59826098bfb37c78d2e8147129c0"
         },
         {
-            "date": 1686061349338,
-            "name": "C:\\Users\\Devops3\\Documents\\Projects\\feetflight\\feetflight\\src\\logs\\error\\2023-06-06.log",
-            "hash": "a9771e7922b67cc3902aad8ba3009b9c3e6b89b9af342c7c1800ae02a121afba"
-        },
-        {
-            "date": 1686126679168,
-            "name": "C:\\Users\\Devops3\\Documents\\Projects\\feetflight\\feetflight\\src\\logs\\error\\2023-06-07.log",
-            "hash": "e6970d6901d63cb53d61d5083f426bd4ee29a4fc12126da7df868532cecad7b9"
-        },
-        {
-            "date": 1686241063277,
-            "name": "C:\\Users\\Devops3\\Documents\\Projects\\feetflight\\feetflight\\src\\logs\\error\\2023-06-08.log",
-            "hash": "5d1d530f168bc2a7ab44b507546e0c1f7ae9614baa37dffb2fac63add2a7f411"
-        },
-        {
-            "date": 1686297874664,
-            "name": "C:\\Users\\Devops3\\Documents\\Projects\\feetflight\\feetflight\\src\\logs\\error\\2023-06-09.log",
-            "hash": "a92096919da81a636b562620f4a7c9f506d0e75f83d8b927d83cf7261e529378"
-        },
-        {
-            "date": 1686561373840,
-            "name": "C:\\Users\\Devops3\\Documents\\Projects\\feetflight\\feetflight\\src\\logs\\error\\2023-06-12.log",
-            "hash": "c2eca6802eb98d0aaa00357be2815be6c4197d297248dc20d2c79e5098b9f803"
-        },
-        {
-            "date": 1686645574318,
-            "name": "C:\\Users\\Devops3\\Documents\\Projects\\feetflight\\feetflight\\src\\logs\\error\\2023-06-13.log",
-            "hash": "3569975cb956cec6c55bd1f13e0ccd69ac3cd620b0504a5441f78e0b8bc2f5d5"
-        },
-        {
-            "date": 1686916529563,
-            "name": "C:\\Users\\Devops3\\Documents\\Projects\\feetflight\\feetflight\\src\\logs\\error\\2023-06-16.log",
-            "hash": "0d7ebec9643368fc5a8929a7428da689f32a731f8a448d329c44a039ce92e90a"
-        },
-        {
-            "date": 1687161485424,
-            "name": "C:\\Users\\Devops3\\Documents\\Projects\\feetflight\\feetflight\\src\\logs\\error\\2023-06-19.log",
-            "hash": "a4fff5811a26f84535fa405950ff2b229522d4a66b4059c0579b099b4f4db413"
-        },
-        {
-            "date": 1687249517876,
-            "name": "C:\\Users\\Devops3\\Documents\\Projects\\feetflight\\feetflight\\src\\logs\\error\\2023-06-20.log",
-            "hash": "7980afceeaa7750b44082e1983490f417043333062b5c5a51b18a047b522c6de"
-        },
-        {
-            "date": 1687335951736,
-            "name": "C:\\Users\\Devops3\\Documents\\Projects\\feetflight\\feetflight\\src\\logs\\error\\2023-06-21.log",
-            "hash": "3ca86a1293dd4aa50d1fded3ef0c1ed56ea383b34b27288ac4aa01a54d365491"
-        },
-        {
-            "date": 1687428310338,
-            "name": "C:\\Users\\Devops3\\Documents\\Projects\\feetflight\\feetflight\\src\\logs\\error\\2023-06-22.log",
-            "hash": "908578ae39777b3a39d215a0a1822bf18fc6a1acedd41bbaf0e2299672494462"
-        },
-        {
-            "date": 1687506085816,
-            "name": "C:\\Users\\Devops3\\Documents\\Projects\\feetflight\\feetflight\\src\\logs\\error\\2023-06-23.log",
-            "hash": "7f8a205b057d69a3b38193f39b15f1beb6077fa4fe7284fd06a74bf403f4b85e"
+            "date": 1694419062659,
+            "name": "C:\\Users\\Devops3\\Documents\\Projects\\feetflight\\feetflight\\src\\logs\\error\\2023-09-11.log",
+            "hash": "f596bbb6bbceafe6f831f0704593f7f990333227a0c6cd792ee7b192b4ff7b3f"
         }
     ],
     "hashType": "sha256"

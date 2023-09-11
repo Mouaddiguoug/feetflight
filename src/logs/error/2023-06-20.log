@@ -1,6 +1,0 @@
-2023-06-20 11:15:32 error: [GET] /albums/categories >> StatusCode:: 403, Message:: Wrong authentication token
-2023-06-20 11:15:32 error: [GET] /albums/popular >> StatusCode:: 403, Message:: Wrong authentication token
-2023-06-20 11:15:33 error: [GET] /albums/category/fjdsregknerujngdifjnigi >> StatusCode:: 403, Message:: Wrong authentication token
-2023-06-20 11:16:09 error: [GET] /albums/category/fjdsregknerujngdifjnigi >> StatusCode:: 403, Message:: Wrong authentication token
-2023-06-20 11:16:09 error: [GET] /albums/categories >> StatusCode:: 403, Message:: Wrong authentication token
-2023-06-20 11:16:09 error: [GET] /albums/popular >> StatusCode:: 403, Message:: Wrong authentication token

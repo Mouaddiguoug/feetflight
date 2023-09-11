@@ -60,7 +60,7 @@ class App {
                 event.data.object.metadata.sellersIds.split(',').map((record: any) => {
                   let sellerId = '';
                   let postId = '';
-                  let amount = '';
+                  let amount = 0;
                   record.split('.').map((record: any) => {
                     switch (record.split(':')[0]) {
                       case 'sellerId':
@@ -78,7 +78,7 @@ class App {
                   });
                   this.userService.checkForSale(event.data.object.customer, postId).then(exists => {
                     if (exists) return;
-                    this.userService.buyPost(postId, event.data.object.customer);
+                    this.userService.buyPost(postId, event.data.object.customer, sellerId, amount);
                     this.walletService.UpdateBalanceForPayment(sellerId, amount);
                   });
                 });

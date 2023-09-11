@@ -1,0 +1,154 @@
+2023-06-26 10:13:51 info: =================================
+2023-06-26 10:13:51 info: ======= ENV: development =======
+2023-06-26 10:13:51 info: 🚀 App listening on the port 4000
+2023-06-26 10:13:51 info: =================================
+2023-06-26 10:16:08 info: [0mPOST /signup [32m201[0m 2702.777 ms - 233[0m
+2023-06-26 10:20:00 info: =================================
+2023-06-26 10:20:00 info: ======= ENV: development =======
+2023-06-26 10:20:00 info: 🚀 App listening on the port 4000
+2023-06-26 10:20:00 info: =================================
+2023-06-26 10:20:09 info: =================================
+2023-06-26 10:20:09 info: ======= ENV: development =======
+2023-06-26 10:20:09 info: 🚀 App listening on the port 4000
+2023-06-26 10:20:09 info: =================================
+2023-06-26 10:20:12 info: =================================
+2023-06-26 10:20:12 info: ======= ENV: development =======
+2023-06-26 10:20:12 info: 🚀 App listening on the port 4000
+2023-06-26 10:20:12 info: =================================
+2023-06-26 10:20:34 info: =================================
+2023-06-26 10:20:34 info: ======= ENV: development =======
+2023-06-26 10:20:34 info: 🚀 App listening on the port 4000
+2023-06-26 10:20:34 info: =================================
+2023-06-26 10:20:40 info: =================================
+2023-06-26 10:20:40 info: ======= ENV: development =======
+2023-06-26 10:20:40 info: 🚀 App listening on the port 4000
+2023-06-26 10:20:40 info: =================================
+2023-06-26 10:20:49 info: [0mPOST /signup [32m201[0m 1465.699 ms - 233[0m
+2023-06-26 10:22:46 info: [0mPOST /signup [32m201[0m 1301.429 ms - 230[0m
+2023-06-26 10:23:55 info: [0mPOST /signup [32m201[0m 921.257 ms - 233[0m
+2023-06-26 10:24:59 info: [0mPOST /signup [32m201[0m 942.867 ms - 232[0m
+2023-06-26 10:28:06 info: [0mPOST /signup [32m201[0m 1322.751 ms - 233[0m
+2023-06-26 10:30:09 info: [0mPOST /signup [32m201[0m 394.760 ms - 72[0m
+2023-06-26 10:30:46 info: [0mPOST /signup [32m201[0m 1159.604 ms - 236[0m
+2023-06-26 10:40:06 info: [0mPOST /signup [32m201[0m 1297.679 ms - 232[0m
+2023-06-26 10:42:13 info: [0mPOST /signup [32m201[0m 1146.627 ms - 235[0m
+2023-06-26 10:42:13 error: [POST] /users/upload/avatar/cus_O9TxJ27xZ6gRdw >> StatusCode:: 413, Message:: request entity too large
+2023-06-26 10:42:13 info: [0mPOST /users/upload/avatar/cus_O9TxJ27xZ6gRdw [33m413[0m 82.167 ms - 38[0m
+2023-06-26 10:43:39 info: [0mPOST /signup [32m201[0m 1300.830 ms - 240[0m
+2023-06-26 10:43:44 error: [POST] /users/upload/avatar/cus_O9Tzp530EZNkR6 >> StatusCode:: 413, Message:: request entity too large
+2023-06-26 10:43:44 info: [0mPOST /users/upload/avatar/cus_O9Tzp530EZNkR6 [33m413[0m 65.940 ms - 38[0m
+2023-06-26 10:45:06 info: [0mPOST /signup [32m201[0m 1323.984 ms - 234[0m
+2023-06-26 10:45:11 error: [POST] /users/upload/avatar/cus_O9U07fmneXxKrb >> StatusCode:: 413, Message:: request entity too large
+2023-06-26 10:45:11 info: [0mPOST /users/upload/avatar/cus_O9U07fmneXxKrb [33m413[0m 67.783 ms - 38[0m
+2023-06-26 10:46:42 info: [0mPOST /signup [32m201[0m 1303.112 ms - 232[0m
+2023-06-26 10:46:43 error: [POST] /users/upload/avatar/cus_O9U2FWvcG9BmyD >> StatusCode:: 413, Message:: request entity too large
+2023-06-26 10:46:43 info: [0mPOST /users/upload/avatar/cus_O9U2FWvcG9BmyD [33m413[0m 76.639 ms - 38[0m
+2023-06-26 10:47:30 info: [0mPOST /signup [32m201[0m 914.212 ms - 231[0m
+2023-06-26 10:47:34 error: [POST] /users/upload/avatar/cus_O9U3ZNZrkvTwsM >> StatusCode:: 413, Message:: request entity too large
+2023-06-26 10:47:34 info: [0mPOST /users/upload/avatar/cus_O9U3ZNZrkvTwsM [33m413[0m 64.173 ms - 38[0m
+2023-06-26 10:48:28 info: [0mPOST /signup [32m201[0m 927.140 ms - 230[0m
+2023-06-26 10:49:23 info: [0mPOST /signup [32m201[0m 949.777 ms - 231[0m
+2023-06-26 10:49:27 error: [POST] /users/upload/avatar/cus_O9U5HSirzCKzpA >> StatusCode:: 413, Message:: request entity too large
+2023-06-26 10:49:27 info: [0mPOST /users/upload/avatar/cus_O9U5HSirzCKzpA [33m413[0m 61.647 ms - 38[0m
+2023-06-26 10:52:11 info: =================================
+2023-06-26 10:52:11 info: ======= ENV: development =======
+2023-06-26 10:52:11 info: 🚀 App listening on the port 4000
+2023-06-26 10:52:11 info: =================================
+2023-06-26 10:52:27 info: [0mPOST /users/upload/avatar/cus_O8Rz6pavkTg6Xd [0m-[0m - ms - -[0m
+2023-06-26 10:52:46 info: =================================
+2023-06-26 10:52:46 info: ======= ENV: development =======
+2023-06-26 10:52:46 info: 🚀 App listening on the port 4000
+2023-06-26 10:52:46 info: =================================
+2023-06-26 10:52:50 info: [0mPOST /users/upload/avatar/cus_O8Rz6pavkTg6Xd [0m-[0m - ms - -[0m
+2023-06-26 10:53:00 info: =================================
+2023-06-26 10:53:00 info: ======= ENV: development =======
+2023-06-26 10:53:00 info: 🚀 App listening on the port 4000
+2023-06-26 10:53:00 info: =================================
+2023-06-26 10:53:08 info: =================================
+2023-06-26 10:53:08 info: ======= ENV: development =======
+2023-06-26 10:53:08 info: 🚀 App listening on the port 4000
+2023-06-26 10:53:08 info: =================================
+2023-06-26 10:53:58 info: =================================
+2023-06-26 10:53:58 info: ======= ENV: development =======
+2023-06-26 10:53:58 info: 🚀 App listening on the port 4000
+2023-06-26 10:53:58 info: =================================
+2023-06-26 10:54:32 info: =================================
+2023-06-26 10:54:32 info: ======= ENV: development =======
+2023-06-26 10:54:32 info: 🚀 App listening on the port 4000
+2023-06-26 10:54:32 info: =================================
+2023-06-26 11:00:41 info: [0mPOST /signup [32m201[0m 1403.954 ms - 232[0m
+2023-06-26 11:00:41 error: [POST] /users/upload/avatar/cus_O9UGU1IJAzpIRH >> StatusCode:: 413, Message:: request entity too large
+2023-06-26 11:00:41 info: [0mPOST /users/upload/avatar/cus_O9UGU1IJAzpIRH [33m413[0m 31.475 ms - 38[0m
+2023-06-26 11:02:50 info: [0mPOST /signup [32m201[0m 1283.938 ms - 232[0m
+2023-06-26 19:13:23 info: [0mPOST /signup [32m201[0m 1343.641 ms - 231[0m
+2023-06-26 19:15:36 info: [0mPOST /signup [32m201[0m 1355.510 ms - 240[0m
+2023-06-26 19:17:10 info: [0mPOST /signup [32m201[0m 387.157 ms - 71[0m
+2023-06-26 19:26:30 info: =================================
+2023-06-26 19:26:30 info: ======= ENV: development =======
+2023-06-26 19:26:30 info: 🚀 App listening on the port 4000
+2023-06-26 19:26:30 info: =================================
+2023-06-26 19:26:52 info: =================================
+2023-06-26 19:26:52 info: ======= ENV: development =======
+2023-06-26 19:26:52 info: 🚀 App listening on the port 4000
+2023-06-26 19:26:52 info: =================================
+2023-06-26 19:27:14 info: =================================
+2023-06-26 19:27:14 info: ======= ENV: development =======
+2023-06-26 19:27:14 info: 🚀 App listening on the port 4000
+2023-06-26 19:27:14 info: =================================
+2023-06-26 19:27:27 info: =================================
+2023-06-26 19:27:27 info: ======= ENV: development =======
+2023-06-26 19:27:27 info: 🚀 App listening on the port 4000
+2023-06-26 19:27:27 info: =================================
+2023-06-26 19:27:42 info: =================================
+2023-06-26 19:27:42 info: ======= ENV: development =======
+2023-06-26 19:27:42 info: 🚀 App listening on the port 4000
+2023-06-26 19:27:42 info: =================================
+2023-06-26 19:27:48 info: =================================
+2023-06-26 19:27:48 info: ======= ENV: development =======
+2023-06-26 19:27:48 info: 🚀 App listening on the port 4000
+2023-06-26 19:27:48 info: =================================
+2023-06-26 19:28:18 info: =================================
+2023-06-26 19:28:18 info: ======= ENV: development =======
+2023-06-26 19:28:18 info: 🚀 App listening on the port 4000
+2023-06-26 19:28:18 info: =================================
+2023-06-26 19:28:21 info: =================================
+2023-06-26 19:28:21 info: ======= ENV: development =======
+2023-06-26 19:28:21 info: 🚀 App listening on the port 4000
+2023-06-26 19:28:21 info: =================================
+2023-06-26 19:29:03 info: =================================
+2023-06-26 19:29:03 info: ======= ENV: development =======
+2023-06-26 19:29:03 info: 🚀 App listening on the port 4000
+2023-06-26 19:29:03 info: =================================
+2023-06-26 19:29:26 info: =================================
+2023-06-26 19:29:26 info: ======= ENV: development =======
+2023-06-26 19:29:26 info: 🚀 App listening on the port 4000
+2023-06-26 19:29:26 info: =================================
+2023-06-26 19:29:33 info: =================================
+2023-06-26 19:29:33 info: ======= ENV: development =======
+2023-06-26 19:29:33 info: 🚀 App listening on the port 4000
+2023-06-26 19:29:33 info: =================================
+2023-06-26 19:29:44 info: =================================
+2023-06-26 19:29:44 info: ======= ENV: development =======
+2023-06-26 19:29:44 info: 🚀 App listening on the port 4000
+2023-06-26 19:29:44 info: =================================
+2023-06-26 19:29:57 info: =================================
+2023-06-26 19:29:57 info: ======= ENV: development =======
+2023-06-26 19:29:57 info: 🚀 App listening on the port 4000
+2023-06-26 19:29:57 info: =================================
+2023-06-26 19:30:24 info: =================================
+2023-06-26 19:30:24 info: ======= ENV: development =======
+2023-06-26 19:30:24 info: 🚀 App listening on the port 4000
+2023-06-26 19:30:24 info: =================================
+2023-06-26 19:32:50 info: [0mPOST /signup [32m201[0m 1405.606 ms - 235[0m
+2023-06-26 19:32:59 error: [POST] /users/upload/avatar/cus_O9cW2WpuaoEo71 >> StatusCode:: 413, Message:: request entity too large
+2023-06-26 19:32:59 info: [0mPOST /users/upload/avatar/cus_O9cW2WpuaoEo71 [33m413[0m 75.837 ms - 38[0m
+2023-06-26 19:34:39 info: [0mPOST /signup [32m201[0m 1166.883 ms - 235[0m
+2023-06-26 19:34:50 error: [POST] /users/upload/avatar/cus_O9cYzVobvw0ipm >> StatusCode:: 413, Message:: request entity too large
+2023-06-26 19:34:50 info: [0mPOST /users/upload/avatar/cus_O9cYzVobvw0ipm [33m413[0m 60.913 ms - 38[0m
+2023-06-26 19:34:50 info: [0mPOST /signup [32m201[0m 389.281 ms - 74[0m
+2023-06-26 19:35:39 info: [0mPOST /users/upload/avatar/cus_O8Rz6pavkTg6Xd [0m-[0m - ms - -[0m
+2023-06-26 19:37:24 info: [0mPOST /signup [32m201[0m 1033.849 ms - 235[0m
+2023-06-26 19:38:43 info: [0mPOST /signup [32m201[0m 1122.321 ms - 232[0m
+2023-06-26 19:50:40 info: [0mPOST /signup [32m201[0m 1122.452 ms - 232[0m
+2023-06-26 19:52:01 info: [0mPOST /signup [32m201[0m 1046.344 ms - 233[0m
+2023-06-26 19:53:17 info: [0mPOST /signup [32m201[0m 1111.737 ms - 232[0m

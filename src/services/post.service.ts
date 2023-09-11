@@ -5,7 +5,6 @@ import path from "path";
 import moment from 'moment';
 import { writeFile } from 'node:fs';
 import { Buffer } from 'node:buffer';
-import { stripVTControlCharacters } from 'util';
 import Stripe from 'stripe';
 
 class postService {
@@ -142,8 +141,8 @@ class postService {
         ),
       );
 
-      const stripe = new Stripe(process.env.STRIPE_TEST_KEY, { apiVersion: '2022-11-15' });
-      await stripe.products.create({
+      
+      await this.stripe.products.create({
         id: createdCollection.records.map(record => record.get('p').properties.id)[0],
         name: postData.data.postTitle,
         metadata: {

@@ -73,6 +73,23 @@ class sellerService {
     }
   };
 
+  public getFollowersCount = async (sellerId: string) => {
+    const getFlowwersSession = initializeDbConnection().session();
+    try {
+      const followersCount = await getFlowwersSession.executeWrite(tx =>
+        tx.run('match (u:user)-[s:SUBSCRIBED_TO]->(seller {id: $sellerId}) return count(s) as followersCount', {
+          sellerId: sellerId,
+        }),
+      );
+      
+      return followersCount.records.map(record => record.get("followersCount"))[0].low;
+    } catch (error) {
+      console.log(error);
+    } finally {
+      getFlowwersSession.close();
+    }
+  };
+
   public uploadIdentityCard = async (identityCardData: any, userId: string) => {
     try {
       for (let key in identityCardData) {
@@ -129,6 +146,8 @@ class sellerService {
       uploadIdentityCardSession.close();
     }
   };
+
+  
 }
 
 export default sellerService;

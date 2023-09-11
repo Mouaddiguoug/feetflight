@@ -32,8 +32,6 @@ class walletService {
         }),
       );
 
-      await this.stripe.customers.createBalanceTransaction(updatedAmount.records.map(record => record.get('s').properties.id)[0], { amount: balanceAmount * 100, currency: 'eur' });
-
       return updatedAmount.records.map(record => record.get('w').properties.amount)[0].low;
     } catch (error) {
       console.log(error);
@@ -45,14 +43,16 @@ class walletService {
   public async UpdateBalanceForSubscription(sellerId: string, balanceAmount: any) {
     const updateAmountSession = initializeDbConnection().session();
     try {
+      console.log(sellerId);
       const updatedAmount = await updateAmountSession.executeWrite(tx =>
-        tx.run('match (w:wallet)<-[:HAS_A]-(s:seller {id: $sellerId})-[:IS_A]-(u:user) set w.amount = w.amount + $newAmount return w, u', {
+        tx.run('match (w:wallet)<-[:HAS_A]-(s:seller)-[:IS_A]-(u:user) set w.amount = w.amount + $newAmount return w, u', {
           newAmount: int(balanceAmount),
           sellerId: sellerId,
         }),
       );
 
-      await this.stripe.customers.createBalanceTransaction(updatedAmount.records.map(record => record.get('u').properties.id)[0], { amount: balanceAmount * 100, currency: 'eur' });
+      console.log(updatedAmount.records);
+      
 
       return updatedAmount.records.map(record => record.get('w').properties.amount)[0].low; 
     } catch (error) {

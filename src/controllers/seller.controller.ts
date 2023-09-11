@@ -29,6 +29,18 @@ class sellerController {
     }
   };
 
+  public getFollowersCount = async (req: Request, res: Response, next: NextFunction): Promise<void> => {
+    try {
+      const sellerId = String(req.params.id);
+      
+      const followersCount = await this.sellerService.getFollowersCount(sellerId);
+
+      res.status(201).json({ followers: followersCount });
+    } catch (error) {
+      next(error);
+    }
+  };
+
   public uploadIdentityCard = async (req: Request, res: Response, next: NextFunction): Promise<void> => {
     try {
       const userId = String(req.params.id);
