@@ -33,16 +33,7 @@ class AuthService {
           if (!userData.data.country || !userData.data.phone || userData.data.plans.length == 0) return { message: 'data missing' };
           const seller = await stripe.accounts.create({
             email: userData.data.email,
-            default_currency: "EUR",
-            type: 'express', 
-            capabilities: {
-              transfers: {
-                requested: true,
-              },
-              card_payments: {
-                requested: true,
-              }
-            }
+            type: 'express',
           });
 
           const createUserSeller = await signupSession.executeWrite(tx =>

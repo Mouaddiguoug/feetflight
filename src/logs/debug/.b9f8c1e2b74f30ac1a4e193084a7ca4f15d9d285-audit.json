@@ -1,0 +1,20 @@
+{
+    "keep": {
+        "days": false,
+        "amount": 30
+    },
+    "auditLog": "C:\\Users\\mouad\\Documents\\Projects\\feetflight\\feetflight\\src\\logs\\debug\\.b9f8c1e2b74f30ac1a4e193084a7ca4f15d9d285-audit.json",
+    "files": [
+        {
+            "date": 1695493765078,
+            "name": "C:\\Users\\mouad\\Documents\\Projects\\feetflight\\feetflight\\src\\logs\\debug\\2023-09-23.log",
+            "hash": "f0285a2f08c72784f5cdf7e83c7bfe4aca68dbec40e04271da458945a9ce112f"
+        },
+        {
+            "date": 1695553696276,
+            "name": "C:\\Users\\mouad\\Documents\\Projects\\feetflight\\feetflight\\src\\logs\\debug\\2023-09-24.log",
+            "hash": "0ed93ccf2580ab77a761a6fcf3ef6a8b5b493eacdd81259658899ca45c415ccd"
+        }
+    ],
+    "hashType": "sha256"
+}

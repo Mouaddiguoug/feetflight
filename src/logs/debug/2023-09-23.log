@@ -1,0 +1,144 @@
+2023-09-23 19:29:27 info: =================================
+2023-09-23 19:29:27 info: ======= ENV: development =======
+2023-09-23 19:29:27 info: 🚀 App listening on the port 4000
+2023-09-23 19:29:27 info: =================================
+2023-09-23 19:31:39 info: [0mPOST /signup [32m201[0m 2161.380 ms - -[0m
+2023-09-23 19:32:40 info: =================================
+2023-09-23 19:32:40 info: ======= ENV: development =======
+2023-09-23 19:32:40 info: 🚀 App listening on the port 4000
+2023-09-23 19:32:40 info: =================================
+2023-09-23 19:32:44 info: [0mPOST /signup [32m201[0m 1666.075 ms - -[0m
+2023-09-23 19:33:04 info: =================================
+2023-09-23 19:33:04 info: ======= ENV: development =======
+2023-09-23 19:33:04 info: 🚀 App listening on the port 4000
+2023-09-23 19:33:04 info: =================================
+2023-09-23 19:33:08 info: [0mPOST /signup [32m201[0m 2077.311 ms - -[0m
+2023-09-23 19:33:32 info: =================================
+2023-09-23 19:33:32 info: ======= ENV: development =======
+2023-09-23 19:33:32 info: 🚀 App listening on the port 4000
+2023-09-23 19:33:32 info: =================================
+2023-09-23 19:33:36 info: [0mPOST /signup [32m201[0m 1590.934 ms - -[0m
+2023-09-23 19:39:50 info: =================================
+2023-09-23 19:39:50 info: ======= ENV: development =======
+2023-09-23 19:39:50 info: 🚀 App listening on the port 4000
+2023-09-23 19:39:50 info: =================================
+2023-09-23 19:40:25 info: [0mPOST /signup [32m201[0m 3961.669 ms - 325[0m
+2023-09-23 19:41:27 info: [0mPOST /albums/755b628fa0eb245c2f9d02430eabb2f2f6a091f2 [32m201[0m 1431.233 ms - 2[0m
+2023-09-23 19:42:14 info: =================================
+2023-09-23 19:42:14 info: ======= ENV: development =======
+2023-09-23 19:42:14 info: 🚀 App listening on the port 4000
+2023-09-23 19:42:14 info: =================================
+2023-09-23 19:42:32 info: [0mPOST /albums/755b628fa0eb245c2f9d02430eabb2f2f6a091f2 [32m201[0m 2873.143 ms - 318[0m
+2023-09-23 19:43:24 info: [0mPOST /signup [32m201[0m 3647.827 ms - 325[0m
+2023-09-23 19:43:42 info: [0mPOST /albums/bf5e4ea2d91c8b6ae3ae21ed5285ce10dbb19cd9 [32m201[0m 2109.306 ms - 318[0m
+2023-09-23 19:44:49 info: =================================
+2023-09-23 19:44:49 info: ======= ENV: development =======
+2023-09-23 19:44:49 info: 🚀 App listening on the port 4000
+2023-09-23 19:44:49 info: =================================
+2023-09-23 19:45:08 info: =================================
+2023-09-23 19:45:08 info: ======= ENV: development =======
+2023-09-23 19:45:08 info: 🚀 App listening on the port 4000
+2023-09-23 19:45:08 info: =================================
+2023-09-23 19:45:32 info: [0mPOST /signup [32m201[0m 4640.167 ms - 325[0m
+2023-09-23 19:46:17 info: [0mPOST /albums/e8a994bb89bad49b5488bde517e3a3001ad1397b [32m201[0m 1326.089 ms - 2[0m
+2023-09-23 19:46:42 info: =================================
+2023-09-23 19:46:42 info: ======= ENV: development =======
+2023-09-23 19:46:42 info: 🚀 App listening on the port 4000
+2023-09-23 19:46:42 info: =================================
+2023-09-23 19:46:54 info: =================================
+2023-09-23 19:46:54 info: ======= ENV: development =======
+2023-09-23 19:46:54 info: 🚀 App listening on the port 4000
+2023-09-23 19:46:54 info: =================================
+2023-09-23 19:46:57 info: [0mPOST /albums/e8a994bb89bad49b5488bde517e3a3001ad1397b [32m201[0m 1428.371 ms - 2[0m
+2023-09-23 19:47:27 info: =================================
+2023-09-23 19:47:27 info: ======= ENV: development =======
+2023-09-23 19:47:27 info: 🚀 App listening on the port 4000
+2023-09-23 19:47:27 info: =================================
+2023-09-23 19:47:36 info: [0mPOST /albums/e8a994bb89bad49b5488bde517e3a3001ad1397b [32m201[0m 2713.221 ms - 278[0m
+2023-09-23 19:49:15 info: =================================
+2023-09-23 19:49:15 info: ======= ENV: development =======
+2023-09-23 19:49:15 info: 🚀 App listening on the port 4000
+2023-09-23 19:49:15 info: =================================
+2023-09-23 19:50:53 info: =================================
+2023-09-23 19:50:53 info: ======= ENV: development =======
+2023-09-23 19:50:53 info: 🚀 App listening on the port 4000
+2023-09-23 19:50:53 info: =================================
+2023-09-23 19:51:00 info: [0mPOST /albums/e8a994bb89bad49b5488bde517e3a3001ad1397b [32m201[0m 2742.273 ms - 278[0m
+2023-09-23 19:51:25 info: [0mPOST /signup [32m201[0m 3311.201 ms - 325[0m
+2023-09-23 19:52:52 info: [0mPOST /albums/cf1d8bc1c861178a2fc62eaffaf9f8a921a4abd4 [32m201[0m 2673.439 ms - 278[0m
+2023-09-23 19:59:31 info: [0mGET /albums/upload/8bc1c861178a2fc62eaffaf9f8a921a4abd4d987 [33m404[0m 6.248 ms - 193[0m
+2023-09-23 19:59:36 info: [0mPOST /albums/upload/8bc1c861178a2fc62eaffaf9f8a921a4abd4d987 [32m201[0m 22.529 ms - 60[0m
+2023-09-23 20:00:31 info: [0mPOST /albums/cf1d8bc1c861178a2fc62eaffaf9f8a921a4abd4 [32m201[0m 2388.989 ms - 278[0m
+2023-09-23 20:01:25 info: [0mPOST /albums/upload/8bc1c861178a2fc62eaffaf9f8a921a4abd4d987 [32m201[0m 8.696 ms - 60[0m
+2023-09-23 20:01:35 info: [0mPOST /albums/upload/1c861178a2fc62eaffaf9f8a921a4abd4d987e33 [32m201[0m 4.811 ms - 60[0m
+2023-09-23 20:02:02 info: [0mPOST /albums/cf1d8bc1c861178a2fc62eaffaf9f8a921a4abd4 [32m201[0m 2261.629 ms - 278[0m
+2023-09-23 20:02:23 info: [0mPOST /albums/upload/1178a2fc62eaffaf9f8a921a4abd4d987e338934 [32m201[0m 8.154 ms - 60[0m
+2023-09-23 20:04:05 info: [0mGET /albums/popular [32m201[0m 1009.329 ms - -[0m
+2023-09-23 20:05:06 info: [0mGET /albums/popular [32m201[0m 843.582 ms - -[0m
+2023-09-23 20:05:53 info: [0mGET /albums/popular [32m201[0m 731.106 ms - -[0m
+2023-09-23 20:05:54 info: [0mGET /public/files/albums/WhatsApp%20Image%202023-09-23%20at%201957.21.jpeg8bc1c861178a2fc62eaffaf9f8a921a4abd4d98725092023.jpeg [32m200[0m 7.829 ms - 41707[0m
+2023-09-23 20:05:54 info: [0mGET /public/files/albums/WhatsApp%20Image%202023-09-23%20at%201956.38.jpeg1178a2fc62eaffaf9f8a921a4abd4d987e33893423092023.jpeg [32m200[0m 8.103 ms - 137382[0m
+2023-09-23 20:05:54 info: [0mGET /public/files/albums/WhatsApp%20Image%202023-09-23%20at%201957.21.jpeg1c861178a2fc62eaffaf9f8a921a4abd4d987e3335092023.jpeg [32m200[0m 2.995 ms - 41707[0m
+2023-09-23 20:20:47 info: [0mGET /albums/popular [32m201[0m 897.817 ms - -[0m
+2023-09-23 20:20:59 info: [0mGET /albums/popular [32m201[0m 1015.039 ms - -[0m
+2023-09-23 20:21:19 info: [0mGET /albums/popular [32m201[0m 706.854 ms - -[0m
+2023-09-23 20:23:22 info: [0mGET /albums/popular [32m201[0m 1378.491 ms - -[0m
+2023-09-23 20:23:33 info: [0mGET /albums/popular [32m201[0m 2748.426 ms - -[0m
+2023-09-23 20:23:35 info: [0mGET /public/files/albums/WhatsApp%20Image%202023-09-23%20at%201957.21.jpeg8bc1c861178a2fc62eaffaf9f8a921a4abd4d98725092023.jpeg [32m200[0m 7.120 ms - 41707[0m
+2023-09-23 20:23:35 info: [0mGET /public/files/albums/WhatsApp%20Image%202023-09-23%20at%201956.38.jpeg1178a2fc62eaffaf9f8a921a4abd4d987e33893423092023.jpeg [32m200[0m 7.207 ms - 137382[0m
+2023-09-23 20:23:37 info: [0mGET /public/files/albums/WhatsApp%20Image%202023-09-23%20at%201957.21.jpeg1c861178a2fc62eaffaf9f8a921a4abd4d987e3335092023.jpeg [32m200[0m 7.153 ms - 41707[0m
+2023-09-23 20:24:10 info: [0mGET /albums/popular [32m201[0m 1573.476 ms - -[0m
+2023-09-23 20:24:33 info: [0mGET /albums/popular [32m201[0m 898.708 ms - -[0m
+2023-09-23 20:24:48 info: [0mGET /albums/popular [32m201[0m 1000.701 ms - -[0m
+2023-09-23 20:26:38 info: [0mGET /albums/popular [32m201[0m 1178.789 ms - -[0m
+2023-09-23 20:26:40 info: [0mGET /albums/popular [32m201[0m 1507.152 ms - -[0m
+2023-09-23 20:27:02 info: [0mGET /albums/popular [32m201[0m 1011.880 ms - -[0m
+2023-09-23 20:27:16 info: [0mGET /albums/popular [32m201[0m 867.785 ms - -[0m
+2023-09-23 20:29:36 info: [0mGET /albums/popular [32m201[0m 716.285 ms - -[0m
+2023-09-23 20:31:29 info: [0mGET /albums/popular [32m201[0m 715.551 ms - -[0m
+2023-09-23 20:32:23 info: [0mGET /albums/popular [32m201[0m 850.172 ms - -[0m
+2023-09-23 20:32:43 info: [0mGET /albums/popular [32m201[0m 942.538 ms - -[0m
+2023-09-23 20:40:49 info: [0mGET /albums/popular [32m201[0m 3421.981 ms - -[0m
+2023-09-23 20:42:30 info: [0mGET /albums/popular [32m201[0m 763.051 ms - -[0m
+2023-09-23 20:43:52 info: [0mGET /albums/popular [32m201[0m 2355.757 ms - -[0m
+2023-09-23 20:44:27 info: [0mGET /albums/popular [32m201[0m 1061.062 ms - -[0m
+2023-09-23 20:44:48 info: [0mGET /albums/popular [32m201[0m 968.657 ms - -[0m
+2023-09-23 20:47:07 info: [0mGET /albums/popular [32m201[0m 1892.245 ms - -[0m
+2023-09-23 20:52:21 info: [0mGET /albums/popular [32m201[0m 972.253 ms - -[0m
+2023-09-23 20:55:01 info: [0mGET /albums/popular [32m201[0m 731.080 ms - -[0m
+2023-09-23 20:55:21 info: [0mGET /albums/popular [32m201[0m 904.239 ms - -[0m
+2023-09-23 20:58:10 info: [0mGET /albums/popular [32m201[0m 1125.627 ms - -[0m
+2023-09-23 20:58:42 info: [0mGET /albums/popular [32m201[0m 2830.511 ms - -[0m
+2023-09-23 20:59:11 info: [0mGET /albums/popular [32m201[0m 732.758 ms - -[0m
+2023-09-23 21:01:07 info: [0mGET /albums/popular [32m201[0m 945.278 ms - -[0m
+2023-09-23 21:08:38 info: [0mGET /albums/popular [32m201[0m 893.594 ms - -[0m
+2023-09-23 21:19:22 info: [0mGET /albums/popular [32m201[0m 1009.998 ms - -[0m
+2023-09-23 21:20:31 info: [0mGET /albums/popular [32m201[0m 894.355 ms - -[0m
+2023-09-23 21:23:04 info: [0mGET /albums/popular [32m201[0m 733.982 ms - -[0m
+2023-09-23 21:25:04 info: [0mGET /albums/popular [32m201[0m 916.653 ms - -[0m
+2023-09-23 21:27:46 info: [0mGET /albums/popular [32m201[0m 1054.954 ms - -[0m
+2023-09-23 21:28:17 info: [0mGET /albums/popular [32m201[0m 895.471 ms - -[0m
+2023-09-23 21:30:46 info: [0mGET /albums/popular [32m201[0m 896.527 ms - -[0m
+2023-09-23 21:31:15 info: [0mGET /albums/popular [32m201[0m 895.134 ms - -[0m
+2023-09-23 22:15:42 info: [0mGET /albums/popular [32m201[0m 985.779 ms - -[0m
+2023-09-23 22:15:46 info: [0mGET /albums/popular [32m201[0m 901.336 ms - -[0m
+2023-09-23 22:19:08 info: [0mGET /albums/popular [32m201[0m 872.992 ms - -[0m
+2023-09-23 22:19:11 info: [0mGET /albums/popular [32m201[0m 795.538 ms - -[0m
+2023-09-23 22:19:44 info: [0mGET /albums/popular [32m201[0m 937.775 ms - -[0m
+2023-09-23 22:22:24 info: [0mGET /albums/popular [32m201[0m 846.838 ms - -[0m
+2023-09-23 22:22:25 info: [0mGET /public/files/albums/WhatsApp%20Image%202023-09-23%20at%201957.21.jpeg8bc1c861178a2fc62eaffaf9f8a921a4abd4d98725092023.jpeg [32m200[0m 11.682 ms - 41707[0m
+2023-09-23 22:22:25 info: [0mGET /public/files/albums/WhatsApp%20Image%202023-09-23%20at%201957.21.jpeg1c861178a2fc62eaffaf9f8a921a4abd4d987e3335092023.jpeg [32m200[0m 28.629 ms - 41707[0m
+2023-09-23 22:22:25 info: [0mGET /public/files/albums/WhatsApp%20Image%202023-09-23%20at%201956.38.jpeg1178a2fc62eaffaf9f8a921a4abd4d987e33893423092023.jpeg [32m200[0m 2.695 ms - 137382[0m
+2023-09-23 22:22:53 info: [0mGET /albums/popular [32m201[0m 760.678 ms - -[0m
+2023-09-23 22:22:55 info: [0mGET /public/files/albums/WhatsApp%20Image%202023-09-23%20at%201957.21.jpeg8bc1c861178a2fc62eaffaf9f8a921a4abd4d98725092023.jpeg [32m200[0m 11.515 ms - 41707[0m
+2023-09-23 22:22:55 info: [0mGET /public/files/albums/WhatsApp%20Image%202023-09-23%20at%201957.21.jpeg1c861178a2fc62eaffaf9f8a921a4abd4d987e3335092023.jpeg [32m200[0m 4.328 ms - 41707[0m
+2023-09-23 22:22:55 info: [0mGET /public/files/albums/WhatsApp%20Image%202023-09-23%20at%201956.38.jpeg1178a2fc62eaffaf9f8a921a4abd4d987e33893423092023.jpeg [32m200[0m 12.270 ms - 137382[0m
+2023-09-23 22:24:28 info: [0mPOST /albums/upload/1178a2fc62eaffaf9f8a921a4abd4d987e338934 [32m201[0m 24.574 ms - 60[0m
+2023-09-23 22:24:29 info: [0mPOST /albums/upload/1178a2fc62eaffaf9f8a921a4abd4d987e338934 [32m201[0m 6.104 ms - 60[0m
+2023-09-23 22:24:41 info: [0mGET /albums/popular [32m201[0m 886.349 ms - -[0m
+2023-09-23 22:24:42 info: [0mGET /public/files/albums/WhatsApp%20Image%202023-09-23%20at%201956.38.jpeg1178a2fc62eaffaf9f8a921a4abd4d987e33893429092023.jpeg [32m200[0m 7.386 ms - 137382[0m
+2023-09-23 22:25:01 info: [0mGET /albums/popular [32m201[0m 901.658 ms - -[0m
+2023-09-23 22:25:02 info: [0mGET /public/files/albums/WhatsApp%20Image%202023-09-23%20at%201956.38.jpeg1178a2fc62eaffaf9f8a921a4abd4d987e33893429092023.jpeg [32m200[0m 1.343 ms - 137382[0m
+2023-09-23 22:25:38 info: [0mGET /albums/popular [32m201[0m 804.857 ms - -[0m
+2023-09-23 22:26:41 info: [0mGET /albums/popular [32m201[0m 1046.624 ms - -[0m
+2023-09-23 22:37:42 info: [0mGET /albums/popular [32m201[0m 964.926 ms - -[0m

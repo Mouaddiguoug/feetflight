@@ -38,7 +38,6 @@ class postService {
   }
 
   public async getAlbumByCategory(categoryId: string) {
-    console.log(categoryId)
     const getAlbumsByCategorySession = initializeDbConnection().session({ database: 'neo4j' });
     try {
       const AlbumByCategory = await getAlbumsByCategorySession.executeRead(tx =>
@@ -72,15 +71,43 @@ class postService {
   }
 
   public async getCategories() {
-    const recentPostsSession = initializeDbConnection().session({ database: 'neo4j' });
+    const recentCategoriesSession = initializeDbConnection().session({ database: 'neo4j' });
     try {
-      const categories = await recentPostsSession.executeRead(tx => tx.run('match (category:category) return category'));
+      const categories = await recentCategoriesSession.executeRead(tx => tx.run('match (category:category) return category'));
       
       return categories.records.map(record => record.get('category').properties);
     } catch (error) {
       console.log(error);
     } finally {
-      recentPostsSession.close();
+      recentCategoriesSession.close();
+    }
+  }
+
+  public async getAllAlbums() {
+    const getAllAlbumsSession = initializeDbConnection().session({ database: 'neo4j' });
+    try {
+      const allAlbums = await getAllAlbumsSession.executeRead(tx =>
+        tx.run(
+          'match (picture:picture)<-[:HAS_A]-(:collection)<-[:HAS_A]-(post:post)<-[:HAS_A]-(s:seller)-[:IS_A]-(user:user) WITH post, collect(picture) AS pictures, user AS user return post{post, user, pictures} order by post.views DESC',
+        ),
+      );
+
+      return allAlbums.records.map(
+        (record: any) =>
+          record._fields.map((field: any) => {
+            return {
+              albumData: field.post.properties,
+              user: field.user.properties,
+              pictres: field.pictures.map(picture => {
+                return picture.properties;
+              }),
+            };
+          })[0],
+      );
+    } catch (error) {
+      console.log(error);
+    } finally {
+      getAllAlbumsSession.close();
     }
   }
 
@@ -127,7 +154,7 @@ class postService {
         return { message: `missing data` };
       const createdCollection = await createPostSession.executeWrite(tx =>
         tx.run(
-          'match (u:user {id: $userId})-[IS_A]-(s:seller) create (s)-[h: HAS_A]->(p:post {id: $postId, description: $description, title: $title, price: $price, createdAt: $createdAt, views: 0, likes: 0, plan: $plan})-[:HAS_A]->(c:collection {id: $collectionId}) return c, p, u',
+          'match (u:user {id: $userId})-[IS_A]-(s:seller)-[:HAS_A]-(plan:plan {id: $planId}) create (s)-[h: HAS_A]->(p:post {id: $postId, description: $description, title: $title, price: $price, createdAt: $createdAt, views: 0, likes: 0, categoryId: $categoryId})-[:HAS_A]->(c:collection {id: $collectionId}) create (p)-[:IS_OF]->(plan) return c, p, u',
           {
             userId: userId,
             postId: uid(40),
@@ -136,10 +163,12 @@ class postService {
             description: postData.data.postDescription,
             price: postData.data.price,
             collectionId: uid(40),
-            plan: postData.data.planName,
+            planId: postData.data.planId,
+            categoryId: postData.data.categoryId,
           },
         ),
       );
+      
 
       
       await this.stripe.products.create({

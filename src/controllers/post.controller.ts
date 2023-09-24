@@ -37,6 +37,16 @@ class postController {
     }
   };
 
+  public getAllAlbums = async (req: Request, res: Response, next: NextFunction): Promise<void> => {
+    try {
+      const allAlbums = await this.postService.getAllAlbums();
+
+      res.status(201).json({ allAlbums });
+    } catch (error) {
+      next(error);
+    }
+  };
+
   public getCategories = async (req: Request, res: Response, next: NextFunction): Promise<void> => {
     try {
       const categories = await this.postService.getCategories();
