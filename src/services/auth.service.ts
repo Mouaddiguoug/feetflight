@@ -246,9 +246,10 @@ class AuthService {
     try {
       const dataStoredInToken = { data };
       const secretKey: string = secret;
-      const expiresIn: number = 60 * 60;
+      const expiresIn: string = "10h";
+      const now = Date.now
 
-      return { token: sign(dataStoredInToken, secretKey, { expiresIn }) };
+      return { token: sign(dataStoredInToken, secretKey, { expiresIn }), expiresIn };
     } catch (error) {
       console.log(error);
     }

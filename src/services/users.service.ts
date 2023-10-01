@@ -274,6 +274,23 @@ class UserService {
     }
   };
 
+  public getSellerPlans = async (userId: string) => {
+    const getSellerPlansSession = initializeDbConnection().session();
+    try {
+      const sellerPlan = await getSellerPlansSession.executeWrite(tx =>
+        tx.run('match (u:user {id: $userId})-[:IS_A]-(seller)-[:HAS_A]-(plan:plan) return plan', {
+          userId: userId,
+        }),
+      );
+
+      return sellerPlan.records.map(record => record.get('plan').properties);
+    } catch (error) {
+      console.log(error);
+    } finally {
+      getSellerPlansSession.close();
+    }
+  };
+
   public checkForSubscription = async (userId: string, sellerId: string) => {
     const checkForSubscriptionSession = initializeDbConnection().session();
     try {

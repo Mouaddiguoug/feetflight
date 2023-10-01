@@ -27,6 +27,17 @@ class UsersController {
     }
   };
 
+  public getSellerPlans = async (req: Request, res: Response, next: NextFunction): Promise<void> => {
+    try {
+      const userId = String(req.params.id);
+      const sellerPlans = await this.userService.getSellerPlans(userId);
+
+      res.status(200).json({ data: sellerPlans });
+    } catch (error) {
+      next(error);
+    }
+  };
+
   public changePassword = async (req: Request, res: Response, next: NextFunction): Promise<void> => {
     try {
       const email = String(req.params.email);

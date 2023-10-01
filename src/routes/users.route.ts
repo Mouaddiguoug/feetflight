@@ -22,6 +22,7 @@ class UsersRoute implements Routes {
     this.router.post(`${this.path}/unsubscribe/:id/:sellerId`, this.usersController.cancelSubscription);
     this.router.get(`${this.path}/confirmation/:token`, this.usersController.emailConfirming);
     this.router.get(`${this.path}/:email`, this.usersController.changePassword);
+    this.router.get(`${this.path}/plans/:id`, this.usersController.getSellerPlans);
     this.router.put(`${this.path}/:id`, this.usersController.updateUser);
     this.router.post(`${this.path}/desactivate/:id`, this.usersController.desactivateUser);
     this.router.post(

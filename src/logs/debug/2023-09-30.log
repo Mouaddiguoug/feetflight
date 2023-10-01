@@ -1,0 +1,138 @@
+2023-09-30 13:05:56 info: [0mGET /albums/categories [32m201[0m 1049.647 ms - 184[0m
+2023-09-30 13:05:57 info: [0mGET /albums [32m201[0m 887.043 ms - -[0m
+2023-09-30 13:05:57 info: [0mGET /albums/popular [32m201[0m 848.017 ms - -[0m
+2023-09-30 13:05:58 info: [0mGET /public/files/albums/WhatsApp%20Image%202023-09-23%20at%201956.37.jpeg4f1afcc9e592713c9ee5552d73c5c673bbb47dff25092023.jpeg [32m200[0m 4.760 ms - 64745[0m
+2023-09-30 13:05:58 info: [0mGET /public/files/albums/WhatsApp%20Image%202023-09-23%20at%201956.38.jpegb0f0034f1afcc9e592713c9ee5552d73c5c673bb47092023.jpeg [32m200[0m 6.621 ms - 137382[0m
+2023-09-30 13:05:58 info: [0mGET /public/files/albums/WhatsApp%20Image%202023-09-23%20at%201956.37.jpeg0034f1afcc9e592713c9ee5552d73c5c673bbb4734092023.jpeg [32m200[0m 2.543 ms - 64745[0m
+2023-09-30 13:05:58 info: [0mGET /public/files/albums/WhatsApp%20Image%202023-09-23%20at%201957.21.jpeg5afb0f0034f1afcc9e592713c9ee5552d73c5c6737092023.jpeg [32m200[0m 8.866 ms - 41707[0m
+2023-09-30 13:06:08 info: [0mGET /public/files/albums/WhatsApp%20Image%202023-09-23%20at%201957.21%20(1).jpeg6b65afb0f0034f1afcc9e592713c9ee5552d73c524092023.jpeg [32m200[0m 3.870 ms - 123689[0m
+2023-09-30 13:12:30 info: [0mGET /public/files/albums/WhatsApp%20Image%202023-09-23%20at%201956.37.jpeg4f1afcc9e592713c9ee5552d73c5c673bbb47dff30092023.jpeg [32m200[0m 2.724 ms - 64745[0m
+2023-09-30 13:12:34 info: [0mGET /public/files/albums/WhatsApp%20Image%202023-09-23%20at%201956.37.jpeg4f1afcc9e592713c9ee5552d73c5c673bbb47dff03092023.jpeg [32m200[0m 5.073 ms - 64745[0m
+2023-09-30 13:13:36 info: [0mGET /public/files/albums/WhatsApp%20Image%202023-09-23%20at%201956.37.jpeg4f1afcc9e592713c9ee5552d73c5c673bbb47dff23092023.jpeg [32m200[0m 2.251 ms - 64745[0m
+2023-09-30 13:19:48 info: [0mPOST /albums/upload/4f1afcc9e592713c9ee5552d73c5c673bbb47dff [32m201[0m 24.843 ms - 60[0m
+2023-09-30 13:20:08 info: [0mGET /albums/popular [32m201[0m 1487.931 ms - -[0m
+2023-09-30 13:20:09 info: [0mGET /albums [32m201[0m 2396.327 ms - -[0m
+2023-09-30 13:20:10 info: [0mGET /albums/categories [32m201[0m 3481.850 ms - 184[0m
+2023-09-30 13:20:10 info: [0mGET /public/files/albums/WhatsApp%20Image%202023-09-23%20at%201957.21.jpeg4f1afcc9e592713c9ee5552d73c5c673bbb47dff48092023.jpeg [32m200[0m 3.847 ms - 41707[0m
+2023-09-30 13:22:02 info: [0mGET /albums [32m201[0m 768.024 ms - -[0m
+2023-09-30 13:22:02 info: [0mGET /albums/categories [32m201[0m 917.896 ms - 184[0m
+2023-09-30 13:22:02 info: [0mGET /albums/popular [32m201[0m 772.829 ms - -[0m
+2023-09-30 13:25:46 info: =================================
+2023-09-30 13:25:46 info: ======= ENV: development =======
+2023-09-30 13:25:46 info: 🚀 App listening on the port 4000
+2023-09-30 13:25:46 info: =================================
+2023-09-30 13:28:37 info: =================================
+2023-09-30 13:28:38 info: ======= ENV: development =======
+2023-09-30 13:28:38 info: 🚀 App listening on the port 4000
+2023-09-30 13:28:38 info: =================================
+2023-09-30 13:29:20 info: =================================
+2023-09-30 13:29:20 info: ======= ENV: development =======
+2023-09-30 13:29:20 info: 🚀 App listening on the port 4000
+2023-09-30 13:29:20 info: =================================
+2023-09-30 13:29:32 info: =================================
+2023-09-30 13:29:32 info: ======= ENV: development =======
+2023-09-30 13:29:32 info: 🚀 App listening on the port 4000
+2023-09-30 13:29:32 info: =================================
+2023-09-30 13:30:24 info: =================================
+2023-09-30 13:30:24 info: ======= ENV: development =======
+2023-09-30 13:30:24 info: 🚀 App listening on the port 4000
+2023-09-30 13:30:24 info: =================================
+2023-09-30 13:30:34 info: =================================
+2023-09-30 13:30:34 info: ======= ENV: development =======
+2023-09-30 13:30:34 info: 🚀 App listening on the port 4000
+2023-09-30 13:30:34 info: =================================
+2023-09-30 13:31:32 info: [0mGET /users/2dad18564868cbd395d5342cbd986fbe359d99c8 [32m200[0m 6621.113 ms - 323[0m
+2023-09-30 13:31:53 info: [0mGET /users/plans/2dad18564868cbd395d5342cbd986fbe359d99c8 [32m200[0m 920.340 ms - 223[0m
+2023-09-30 17:09:15 info: [0mGET /albums/categories [32m201[0m 1265.228 ms - 184[0m
+2023-09-30 17:09:15 info: [0mGET /albums/popular [32m201[0m 1501.892 ms - -[0m
+2023-09-30 17:09:15 info: [0mGET /albums [32m201[0m 1607.805 ms - -[0m
+2023-09-30 17:09:16 info: [0mGET /public/files/albums/WhatsApp%20Image%202023-09-23%20at%201957.21.jpeg4f1afcc9e592713c9ee5552d73c5c673bbb47dff48092023.jpeg [32m200[0m 13.503 ms - 41707[0m
+2023-09-30 17:09:17 info: [0mGET /public/files/albums/WhatsApp%20Image%202023-09-23%20at%201956.37.jpeg0034f1afcc9e592713c9ee5552d73c5c673bbb4734092023.jpeg [32m200[0m 2.490 ms - 64745[0m
+2023-09-30 17:09:17 info: [0mGET /public/files/albums/WhatsApp%20Image%202023-09-23%20at%201957.21.jpeg5afb0f0034f1afcc9e592713c9ee5552d73c5c6737092023.jpeg [32m200[0m 1.952 ms - 41707[0m
+2023-09-30 17:09:17 info: [0mGET /public/files/albums/WhatsApp%20Image%202023-09-23%20at%201956.38.jpegb0f0034f1afcc9e592713c9ee5552d73c5c673bb47092023.jpeg [32m200[0m 4.658 ms - 137382[0m
+2023-09-30 17:09:23 info: [0mGET /public/files/albums/WhatsApp%20Image%202023-09-23%20at%201956.37.jpeg4f1afcc9e592713c9ee5552d73c5c673bbb47dff25092023.jpeg [32m200[0m 2.357 ms - 64745[0m
+2023-09-30 17:09:24 info: [0mGET /public/files/albums/WhatsApp%20Image%202023-09-23%20at%201956.37.jpeg4f1afcc9e592713c9ee5552d73c5c673bbb47dff30092023.jpeg [32m200[0m 4.963 ms - 64745[0m
+2023-09-30 17:09:24 info: [0mGET /public/files/albums/WhatsApp%20Image%202023-09-23%20at%201956.37.jpeg4f1afcc9e592713c9ee5552d73c5c673bbb47dff23092023.jpeg [32m200[0m 5.031 ms - 64745[0m
+2023-09-30 17:09:24 info: [0mGET /public/files/albums/WhatsApp%20Image%202023-09-23%20at%201956.37.jpeg4f1afcc9e592713c9ee5552d73c5c673bbb47dff03092023.jpeg [32m200[0m 5.573 ms - 64745[0m
+2023-09-30 17:12:20 info: [0mGET /users/plans/2dad18564868cbd395d5342cbd986fbe359d99c8 [32m200[0m 999.902 ms - 223[0m
+2023-09-30 17:12:23 info: [0mGET /users/plans/2dad18564868cbd395d5342cbd986fbe359d99c8 [32m200[0m 1673.416 ms - 223[0m
+2023-09-30 17:13:53 info: [0mGET /users/plans/2dad18564868cbd395d5342cbd986fbe359d99c8 [32m200[0m 1042.265 ms - 223[0m
+2023-09-30 17:14:28 info: [0mGET /users/plans/2dad18564868cbd395d5342cbd986fbe359d99c8 [32m200[0m 2204.546 ms - 223[0m
+2023-09-30 19:41:36 info: [0mGET /albums/categories [32m201[0m 1728.865 ms - 184[0m
+2023-09-30 19:41:37 info: [0mGET /albums [32m201[0m 1798.944 ms - -[0m
+2023-09-30 19:41:37 info: [0mGET /albums/popular [32m201[0m 2094.475 ms - -[0m
+2023-09-30 19:41:38 info: [0mGET /public/files/albums/WhatsApp%20Image%202023-09-23%20at%201957.21.jpeg4f1afcc9e592713c9ee5552d73c5c673bbb47dff48092023.jpeg [32m200[0m 7.037 ms - 41707[0m
+2023-09-30 19:41:38 info: [0mGET /public/files/albums/WhatsApp%20Image%202023-09-23%20at%201956.37.jpeg0034f1afcc9e592713c9ee5552d73c5c673bbb4734092023.jpeg [32m200[0m 1.837 ms - 64745[0m
+2023-09-30 19:41:38 info: [0mGET /public/files/albums/WhatsApp%20Image%202023-09-23%20at%201957.21.jpeg5afb0f0034f1afcc9e592713c9ee5552d73c5c6737092023.jpeg [32m200[0m 1.868 ms - 41707[0m
+2023-09-30 19:41:38 info: [0mGET /public/files/albums/WhatsApp%20Image%202023-09-23%20at%201956.38.jpegb0f0034f1afcc9e592713c9ee5552d73c5c673bb47092023.jpeg [32m200[0m 2.225 ms - 137382[0m
+2023-09-30 19:54:31 info: [0mGET /users/plans/2dad18564868cbd395d5342cbd986fbe359d99c8 [0m-[0m - ms - -[0m
+2023-09-30 19:54:50 info: [0mGET /albums/categories [32m201[0m 880.436 ms - 184[0m
+2023-09-30 19:54:50 info: [0mGET /albums/popular [32m201[0m 936.920 ms - -[0m
+2023-09-30 19:54:50 info: [0mGET /albums [32m201[0m 977.103 ms - -[0m
+2023-09-30 19:55:00 info: [0mGET /public/files/albums/WhatsApp%20Image%202023-09-23%20at%201956.37.jpeg4f1afcc9e592713c9ee5552d73c5c673bbb47dff30092023.jpeg [32m200[0m 2.000 ms - 64745[0m
+2023-09-30 19:55:00 info: [0mGET /public/files/albums/WhatsApp%20Image%202023-09-23%20at%201956.37.jpeg4f1afcc9e592713c9ee5552d73c5c673bbb47dff03092023.jpeg [32m200[0m 1.981 ms - 64745[0m
+2023-09-30 19:55:28 info: [0mGET /users/plans/2dad18564868cbd395d5342cbd986fbe359d99c8 [32m200[0m 1921.373 ms - 223[0m
+2023-09-30 19:55:45 info: [0mGET /public/files/albums/WhatsApp%20Image%202023-09-23%20at%201956.37.jpeg4f1afcc9e592713c9ee5552d73c5c673bbb47dff25092023.jpeg [32m200[0m 1.975 ms - 64745[0m
+2023-09-30 19:55:45 info: [0mGET /public/files/albums/WhatsApp%20Image%202023-09-23%20at%201956.37.jpeg4f1afcc9e592713c9ee5552d73c5c673bbb47dff23092023.jpeg [32m200[0m 1.154 ms - 64745[0m
+2023-09-30 19:56:06 info: [0mGET /albums/categories [32m201[0m 1579.292 ms - 184[0m
+2023-09-30 19:56:06 info: [0mGET /albums [32m201[0m 1481.552 ms - -[0m
+2023-09-30 19:56:30 info: [0mGET /albums/categories [32m201[0m 2060.870 ms - 184[0m
+2023-09-30 19:56:31 info: [0mGET /albums/popular [32m201[0m 3346.835 ms - -[0m
+2023-09-30 19:56:33 info: [0mGET /albums [32m201[0m 1372.647 ms - -[0m
+2023-09-30 19:57:03 info: [0mGET /users/plans/2dad18564868cbd395d5342cbd986fbe359d99c8 [32m200[0m 771.368 ms - 223[0m
+2023-09-30 20:03:40 info: [0mGET /users/plans/2dad18564868cbd395d5342cbd986fbe359d99c8 [32m200[0m 3111.470 ms - 223[0m
+2023-09-30 20:03:47 info: [0mGET /users/plans/2dad18564868cbd395d5342cbd986fbe359d99c8 [32m200[0m 1782.507 ms - 223[0m
+2023-09-30 20:03:58 info: [0mGET /users/plans/2dad18564868cbd395d5342cbd986fbe359d99c8 [32m200[0m 2637.092 ms - 223[0m
+2023-09-30 20:04:25 info: [0mGET /users/plans/2dad18564868cbd395d5342cbd986fbe359d99c8 [32m200[0m 5804.534 ms - 223[0m
+2023-09-30 20:05:17 info: [0mGET /users/plans/2dad18564868cbd395d5342cbd986fbe359d99c8 [32m200[0m 1014.193 ms - 223[0m
+2023-09-30 20:05:19 info: [0mGET /users/plans/2dad18564868cbd395d5342cbd986fbe359d99c8 [32m200[0m 1658.179 ms - 223[0m
+2023-09-30 20:05:53 info: [0mGET /users/plans/2dad18564868cbd395d5342cbd986fbe359d99c8 [32m200[0m 1452.448 ms - 223[0m
+2023-09-30 20:06:33 info: [0mGET /users/plans/2dad18564868cbd395d5342cbd986fbe359d99c8 [32m200[0m 7474.063 ms - 223[0m
+2023-09-30 20:06:39 info: [0mGET /users/plans/2dad18564868cbd395d5342cbd986fbe359d99c8 [32m200[0m 2675.464 ms - 223[0m
+2023-09-30 20:06:54 info: [0mGET /users/plans/2dad18564868cbd395d5342cbd986fbe359d99c8 [32m200[0m 1148.120 ms - 223[0m
+2023-09-30 20:08:38 info: [0mGET /users/plans/2dad18564868cbd395d5342cbd986fbe359d99c8 [32m200[0m 1207.976 ms - 223[0m
+2023-09-30 20:09:12 info: [0mGET /users/plans/2dad18564868cbd395d5342cbd986fbe359d99c8 [32m200[0m 890.299 ms - 223[0m
+2023-09-30 20:09:44 info: [0mGET /users/plans/2dad18564868cbd395d5342cbd986fbe359d99c8 [32m200[0m 2791.381 ms - 223[0m
+2023-09-30 20:10:00 info: [0mGET /users/plans/2dad18564868cbd395d5342cbd986fbe359d99c8 [32m200[0m 1761.122 ms - 223[0m
+2023-09-30 20:10:31 info: [0mGET /users/plans/2dad18564868cbd395d5342cbd986fbe359d99c8 [32m200[0m 695.547 ms - 223[0m
+2023-09-30 20:10:44 info: [0mGET /users/plans/2dad18564868cbd395d5342cbd986fbe359d99c8 [32m200[0m 2575.233 ms - 223[0m
+2023-09-30 20:11:26 info: [0mGET /users/plans/2dad18564868cbd395d5342cbd986fbe359d99c8 [32m200[0m 1299.407 ms - 223[0m
+2023-09-30 20:11:40 info: [0mGET /users/plans/2dad18564868cbd395d5342cbd986fbe359d99c8 [32m200[0m 1655.738 ms - 223[0m
+2023-09-30 20:12:05 info: [0mGET /users/plans/2dad18564868cbd395d5342cbd986fbe359d99c8 [32m200[0m 886.679 ms - 223[0m
+2023-09-30 20:12:18 info: [0mGET /users/plans/2dad18564868cbd395d5342cbd986fbe359d99c8 [32m200[0m 707.480 ms - 223[0m
+2023-09-30 20:12:31 info: [0mGET /users/plans/2dad18564868cbd395d5342cbd986fbe359d99c8 [32m200[0m 1133.888 ms - 223[0m
+2023-09-30 20:12:34 info: [0mGET /users/plans/2dad18564868cbd395d5342cbd986fbe359d99c8 [32m200[0m 738.904 ms - 223[0m
+2023-09-30 20:13:38 info: [0mGET /users/plans/2dad18564868cbd395d5342cbd986fbe359d99c8 [32m200[0m 2325.691 ms - 223[0m
+2023-09-30 20:14:11 info: [0mGET /users/plans/2dad18564868cbd395d5342cbd986fbe359d99c8 [32m200[0m 3099.799 ms - 223[0m
+2023-09-30 20:14:17 info: [0mGET /users/plans/2dad18564868cbd395d5342cbd986fbe359d99c8 [32m200[0m 2409.426 ms - 223[0m
+2023-09-30 20:14:28 info: [0mGET /users/plans/2dad18564868cbd395d5342cbd986fbe359d99c8 [32m200[0m 2365.042 ms - 223[0m
+2023-09-30 20:14:33 info: [0mGET /users/plans/2dad18564868cbd395d5342cbd986fbe359d99c8 [32m200[0m 1765.688 ms - 223[0m
+2023-09-30 20:14:39 info: [0mGET /users/plans/2dad18564868cbd395d5342cbd986fbe359d99c8 [32m200[0m 1052.500 ms - 223[0m
+2023-09-30 20:14:47 info: [0mGET /users/plans/2dad18564868cbd395d5342cbd986fbe359d99c8 [32m200[0m 1553.785 ms - 223[0m
+2023-09-30 20:14:58 info: [0mGET /users/plans/2dad18564868cbd395d5342cbd986fbe359d99c8 [32m200[0m 1173.397 ms - 223[0m
+2023-09-30 20:15:00 info: [0mGET /users/plans/2dad18564868cbd395d5342cbd986fbe359d99c8 [32m200[0m 11592.000 ms - 223[0m
+2023-09-30 20:15:00 info: [0mGET /users/plans/2dad18564868cbd395d5342cbd986fbe359d99c8 [32m200[0m 1452.705 ms - 223[0m
+2023-09-30 20:15:02 info: [0mGET /users/plans/2dad18564868cbd395d5342cbd986fbe359d99c8 [32m200[0m 959.788 ms - 223[0m
+2023-09-30 20:15:13 info: [0mGET /users/plans/2dad18564868cbd395d5342cbd986fbe359d99c8 [32m200[0m 828.285 ms - 223[0m
+2023-09-30 20:16:22 info: [0mGET /albums [32m201[0m 855.347 ms - -[0m
+2023-09-30 20:16:22 info: [0mGET /albums/popular [32m201[0m 1251.705 ms - -[0m
+2023-09-30 20:16:27 info: [0mGET /albums/categories [32m201[0m 944.267 ms - 184[0m
+2023-09-30 20:17:59 info: [0mGET /users/plans/2dad18564868cbd395d5342cbd986fbe359d99c8 [32m200[0m 1082.768 ms - 223[0m
+2023-09-30 20:18:39 info: [0mGET /users/plans/2dad18564868cbd395d5342cbd986fbe359d99c8 [32m200[0m 1091.543 ms - 223[0m
+2023-09-30 20:21:44 info: [0mGET /users/plans/2dad18564868cbd395d5342cbd986fbe359d99c8 [32m200[0m 4676.912 ms - 223[0m
+2023-09-30 20:22:47 info: [0mGET /users/plans/2dad18564868cbd395d5342cbd986fbe359d99c8 [32m200[0m 742.773 ms - 223[0m
+2023-09-30 20:24:01 info: [0mGET /users/plans/2dad18564868cbd395d5342cbd986fbe359d99c8 [32m200[0m 884.121 ms - 223[0m
+2023-09-30 20:24:11 info: [0mGET /users/plans/2dad18564868cbd395d5342cbd986fbe359d99c8 [32m200[0m 1548.967 ms - 223[0m
+2023-09-30 20:24:57 info: [0mGET /users/plans/2dad18564868cbd395d5342cbd986fbe359d99c8 [32m200[0m 1306.120 ms - 223[0m
+2023-09-30 20:25:16 info: [0mGET /users/plans/2dad18564868cbd395d5342cbd986fbe359d99c8 [32m200[0m 1530.944 ms - 223[0m
+2023-09-30 20:25:21 info: [0mGET /users/plans/2dad18564868cbd395d5342cbd986fbe359d99c8 [32m200[0m 1161.353 ms - 223[0m
+2023-09-30 20:28:09 info: [0mGET /albums/categories [32m201[0m 1243.043 ms - 184[0m
+2023-09-30 20:28:09 info: [0mGET /albums/popular [32m201[0m 1533.066 ms - -[0m
+2023-09-30 20:28:09 info: [0mGET /albums [32m201[0m 2098.425 ms - -[0m
+2023-09-30 20:28:16 info: [0mGET /users/plans/2dad18564868cbd395d5342cbd986fbe359d99c8 [32m200[0m 794.049 ms - 223[0m
+2023-09-30 20:28:30 info: [0mGET /users/plans/2dad18564868cbd395d5342cbd986fbe359d99c8 [32m200[0m 941.700 ms - 223[0m
+2023-09-30 20:32:42 info: [0mGET /users/plans/2dad18564868cbd395d5342cbd986fbe359d99c8 [32m200[0m 804.819 ms - 223[0m
+2023-09-30 20:32:49 info: [0mGET /users/plans/2dad18564868cbd395d5342cbd986fbe359d99c8 [32m200[0m 1036.632 ms - 223[0m
+2023-09-30 20:33:19 info: [0mGET /users/plans/2dad18564868cbd395d5342cbd986fbe359d99c8 [32m200[0m 945.401 ms - 223[0m
+2023-09-30 20:33:26 info: [0mGET /users/plans/2dad18564868cbd395d5342cbd986fbe359d99c8 [32m200[0m 1051.617 ms - 223[0m
+2023-09-30 20:34:41 info: [0mGET /users/plans/2dad18564868cbd395d5342cbd986fbe359d99c8 [32m200[0m 873.549 ms - 223[0m
