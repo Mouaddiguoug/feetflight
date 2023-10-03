@@ -102,10 +102,6 @@ class AuthService {
           const buyer = await stripe.customers.create({
             name: userData.data.name,
             email: email,
-            address: {
-              city: userData.data.city,
-              country: userData.data.country,
-            },
             balance: 0,
           });
 
@@ -190,11 +186,6 @@ class AuthService {
       const findUser = await loginSession.executeRead(tx => tx.run('match (u:user {email: $email}) return u', { email: email }));
       if (findUser.records.length == 0) return { message: `password or email is incorrect` };
 
-      /* if (!findUser.records.map(record => record.get('u').properties.confirmed)[0])
-        return { message: `This email is not confirmed please confirm your email` }; */
-
-      console.log(findUser.records.map(record => record.get('u').properties.id));
-
       const password = findUser.records.map(record => record.get('u').properties.password)[0];
       const isPasswordMatching = await compare(userData.data.password, password);
 
@@ -202,7 +193,7 @@ class AuthService {
 
       const tokenData = this.createToken(
         process.env.SECRET_KEY,
-        findUser.records.map(record => record.get('u').properties.id),
+        findUser.records.map(record => record.get('u').properties.id)[0],
       );
 
       const role = await loginSession.executeRead(tx =>
@@ -217,15 +208,14 @@ class AuthService {
     }
   }
 
-  public async refreshToken(token: string) {
-    console.log('hzllo');
+  public async refreshToken(id: string) {
 
-    if (!token) return { message: 'missing token' };
+    if (!id) return { message: 'missing token' };
     const refreshSession = initializeDbConnection().session({ database: 'neo4j' });
     try {
-      const refreshToken = this.createRefreshToken({ token, refresh: true });
+      const tokenData = this.createRefreshToken(id);
 
-      return { refreshToken };
+      return { tokenData };
     } catch (error) {
       console.log(error);
     } finally {
@@ -244,12 +234,17 @@ class AuthService {
 
   public createToken(secret: string, data: any) {
     try {
-      const dataStoredInToken = { data };
+      const dataStoredInToken = { id: data };
       const secretKey: string = secret;
-      const expiresIn: string = "10h";
-      const now = Date.now
+      const expiresAt: string = '60s';
+      const expiresIn: Date = new Date();
+      console.log(expiresIn);
+      expiresIn.setTime(expiresIn.getTime() + 60000);
 
-      return { token: sign(dataStoredInToken, secretKey, { expiresIn }), expiresIn };
+      console.log(expiresIn);
+      
+
+      return { token: sign(dataStoredInToken, secretKey, { expiresIn: expiresAt }), expiresIn: moment(expiresIn).format("YYYY-MM-DD HH:mm:ss.ms") };
     } catch (error) {
       console.log(error);
     }
@@ -257,14 +252,14 @@ class AuthService {
 
   public createRefreshToken(data) {
     try {
-      const dataStoredInToken = { data };
+      const dataStoredInToken = { id: data, refresh: true };
 
       const secretKey: string = SECRET_KEY;
-      const expiresIn: string = '30 days';
-      const expiresAt: Date = new Date();
-      expiresAt.setDate(expiresAt.getDate() + 30);
+      const expiresAt: string = '60s';
+      const expiresIn: Date = new Date();
+      expiresIn.setTime(expiresIn.getTime() + 60);
 
-      return { token: sign(dataStoredInToken, secretKey, { expiresIn }), expiresAt };
+      return { token: sign(dataStoredInToken, secretKey, { expiresIn: expiresAt }), expiresIn: moment(expiresIn).format("YYYY-MM-DD hh:mm:ss.ms") };
     } catch (error) {
       console.log(error);
     }

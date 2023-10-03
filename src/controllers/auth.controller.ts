@@ -21,7 +21,7 @@ class AuthController {
     try {
       const userData = req.body;
       const loggedInData = await this.authService.login(userData);
-      res.status(200).json(loggedInData);
+      loggedInData.message ? res.status(403).json(loggedInData) : res.status(200).json(loggedInData);
     } catch (error) {
       console.log(error);
     }
@@ -40,8 +40,8 @@ class AuthController {
 
   public generateRefreshToken = async (req: Request, res: Response, next: NextFunction): Promise<void> => {
     try {
-      const token = req.body.data.token;
-      const loggedInData = await this.authService.refreshToken(token);
+      const id = req.body.id;
+      const loggedInData = await this.authService.refreshToken(id);
       res.status(200).json(loggedInData);
     } catch (error) {
       next(error);

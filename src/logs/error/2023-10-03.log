@@ -1,0 +1,117 @@
+2023-10-03 11:22:12 error: [GET] /albums/popular >> StatusCode:: 401, Message:: Wrong authentication token
+2023-10-03 11:28:05 error: [GET] /albums/popular >> StatusCode:: 401, Message:: Wrong authentication token
+2023-10-03 11:28:05 error: [GET] /albums >> StatusCode:: 401, Message:: Wrong authentication token
+2023-10-03 11:28:06 error: [GET] /albums/popular >> StatusCode:: 403, Message:: Wrong authentication token
+2023-10-03 11:28:06 error: [GET] /albums >> StatusCode:: 403, Message:: Wrong authentication token
+2023-10-03 11:33:24 error: [GET] /albums/popular >> StatusCode:: 401, Message:: Wrong authentication token
+2023-10-03 11:33:24 error: [GET] /albums >> StatusCode:: 401, Message:: Wrong authentication token
+2023-10-03 11:37:02 error: [GET] /albums >> StatusCode:: 401, Message:: Wrong authentication token
+2023-10-03 11:37:02 error: [GET] /albums/popular >> StatusCode:: 401, Message:: Wrong authentication token
+2023-10-03 11:49:58 error: [GET] /albums >> StatusCode:: 401, Message:: Wrong authentication token
+2023-10-03 11:49:58 error: [GET] /albums/popular >> StatusCode:: 401, Message:: Wrong authentication token
+2023-10-03 11:56:04 error: [GET] /albums/popular >> StatusCode:: 401, Message:: Wrong authentication token
+2023-10-03 11:56:04 error: [GET] /albums >> StatusCode:: 401, Message:: Wrong authentication token
+2023-10-03 11:56:39 error: [GET] /albums/popular >> StatusCode:: 401, Message:: Wrong authentication token
+2023-10-03 11:56:39 error: [GET] /albums >> StatusCode:: 401, Message:: Wrong authentication token
+2023-10-03 12:01:07 error: [GET] /albums >> StatusCode:: 401, Message:: Wrong authentication token
+2023-10-03 12:01:07 error: [GET] /albums/popular >> StatusCode:: 401, Message:: Wrong authentication token
+2023-10-03 12:01:08 error: [GET] /albums/popular >> StatusCode:: 403, Message:: Wrong authentication token
+2023-10-03 12:01:08 error: [GET] /albums >> StatusCode:: 403, Message:: Wrong authentication token
+2023-10-03 12:02:35 error: [GET] /albums/popular >> StatusCode:: 401, Message:: Wrong authentication token
+2023-10-03 12:02:35 error: [GET] /albums >> StatusCode:: 401, Message:: Wrong authentication token
+2023-10-03 12:02:36 error: [GET] /albums/popular >> StatusCode:: 403, Message:: Wrong authentication token
+2023-10-03 12:02:36 error: [GET] /albums >> StatusCode:: 403, Message:: Wrong authentication token
+2023-10-03 12:07:12 error: [GET] /albums >> StatusCode:: 401, Message:: Wrong authentication token
+2023-10-03 12:07:12 error: [GET] /albums/popular >> StatusCode:: 401, Message:: Wrong authentication token
+2023-10-03 12:07:13 error: [GET] /albums >> StatusCode:: 403, Message:: Wrong authentication token
+2023-10-03 12:07:13 error: [GET] /albums/popular >> StatusCode:: 403, Message:: Wrong authentication token
+2023-10-03 12:07:51 error: [GET] /albums/popular >> StatusCode:: 403, Message:: Wrong authentication token
+2023-10-03 12:07:51 error: [GET] /albums >> StatusCode:: 403, Message:: Wrong authentication token
+2023-10-03 12:14:23 error: [GET] /albums >> StatusCode:: 401, Message:: Wrong authentication token
+2023-10-03 12:14:23 error: [GET] /albums/popular >> StatusCode:: 401, Message:: Wrong authentication token
+2023-10-03 12:14:24 error: [GET] /albums >> StatusCode:: 403, Message:: Wrong authentication token
+2023-10-03 12:14:24 error: [GET] /albums/popular >> StatusCode:: 403, Message:: Wrong authentication token
+2023-10-03 12:17:17 error: [GET] /albums >> StatusCode:: 401, Message:: Wrong authentication token
+2023-10-03 12:17:17 error: [GET] /albums/popular >> StatusCode:: 401, Message:: Wrong authentication token
+2023-10-03 12:17:18 error: [GET] /albums >> StatusCode:: 403, Message:: Wrong authentication token
+2023-10-03 12:17:18 error: [GET] /albums/popular >> StatusCode:: 403, Message:: Wrong authentication token
+2023-10-03 12:17:39 error: [GET] /albums >> StatusCode:: 403, Message:: Wrong authentication token
+2023-10-03 12:17:39 error: [GET] /albums/popular >> StatusCode:: 403, Message:: Wrong authentication token
+2023-10-03 12:18:35 error: [GET] /albums/popular >> StatusCode:: 401, Message:: Wrong authentication token
+2023-10-03 12:18:35 error: [GET] /albums >> StatusCode:: 401, Message:: Wrong authentication token
+2023-10-03 12:18:36 error: [GET] /albums/popular >> StatusCode:: 403, Message:: Wrong authentication token
+2023-10-03 12:18:36 error: [GET] /albums >> StatusCode:: 403, Message:: Wrong authentication token
+2023-10-03 12:32:42 error: [GET] /albums >> StatusCode:: 403, Message:: Wrong authentication token
+2023-10-03 12:32:42 error: [GET] /albums/popular >> StatusCode:: 403, Message:: Wrong authentication token
+2023-10-03 12:34:01 error: [GET] /albums/popular >> StatusCode:: 401, Message:: Wrong authentication token
+2023-10-03 12:34:01 error: [GET] /albums >> StatusCode:: 401, Message:: Wrong authentication token
+2023-10-03 12:34:02 error: [GET] /albums/popular >> StatusCode:: 400, Message:: Wrong authentication token
+2023-10-03 12:34:02 error: [GET] /albums >> StatusCode:: 400, Message:: Wrong authentication token
+2023-10-03 12:45:49 error: [GET] /albums >> StatusCode:: 401, Message:: Wrong authentication token
+2023-10-03 12:45:49 error: [GET] /albums/popular >> StatusCode:: 401, Message:: Wrong authentication token
+2023-10-03 12:46:51 error: [GET] /albums >> StatusCode:: 401, Message:: Wrong authentication token
+2023-10-03 12:46:51 error: [GET] /albums/popular >> StatusCode:: 401, Message:: Wrong authentication token
+2023-10-03 12:47:27 error: [GET] /albums >> StatusCode:: 401, Message:: Wrong authentication token
+2023-10-03 12:47:27 error: [GET] /albums/popular >> StatusCode:: 401, Message:: Wrong authentication token
+2023-10-03 12:48:40 error: [GET] /albums >> StatusCode:: 401, Message:: Wrong authentication token
+2023-10-03 12:48:40 error: [GET] /albums/popular >> StatusCode:: 401, Message:: Wrong authentication token
+2023-10-03 12:49:04 error: [GET] /albums >> StatusCode:: 401, Message:: Wrong authentication token
+2023-10-03 12:49:04 error: [GET] /albums/popular >> StatusCode:: 401, Message:: Wrong authentication token
+2023-10-03 12:50:23 error: [GET] /albums/popular >> StatusCode:: 401, Message:: Wrong authentication token
+2023-10-03 12:50:23 error: [GET] /albums >> StatusCode:: 401, Message:: Wrong authentication token
+2023-10-03 12:54:29 error: [GET] /albums/popular >> StatusCode:: 401, Message:: Wrong authentication token
+2023-10-03 12:54:29 error: [GET] /albums >> StatusCode:: 401, Message:: Wrong authentication token
+2023-10-03 12:58:18 error: [GET] /albums >> StatusCode:: 401, Message:: Wrong authentication token
+2023-10-03 12:58:18 error: [GET] /albums/popular >> StatusCode:: 401, Message:: Wrong authentication token
+2023-10-03 13:00:08 error: [GET] /albums/popular >> StatusCode:: 401, Message:: Wrong authentication token
+2023-10-03 13:00:08 error: [GET] /albums >> StatusCode:: 401, Message:: Wrong authentication token
+2023-10-03 13:00:41 error: [GET] /albums/popular >> StatusCode:: 401, Message:: Wrong authentication token
+2023-10-03 13:00:41 error: [GET] /albums >> StatusCode:: 401, Message:: Wrong authentication token
+2023-10-03 13:01:05 error: [GET] /albums >> StatusCode:: 401, Message:: Wrong authentication token
+2023-10-03 13:01:05 error: [GET] /albums/popular >> StatusCode:: 401, Message:: Wrong authentication token
+2023-10-03 13:05:22 error: [GET] /albums/popular >> StatusCode:: 401, Message:: Wrong authentication token
+2023-10-03 13:05:22 error: [GET] /albums >> StatusCode:: 401, Message:: Wrong authentication token
+2023-10-03 13:06:26 error: [GET] /albums >> StatusCode:: 401, Message:: Wrong authentication token
+2023-10-03 13:06:26 error: [GET] /albums/popular >> StatusCode:: 401, Message:: Wrong authentication token
+2023-10-03 13:09:06 error: [GET] /albums >> StatusCode:: 401, Message:: Wrong authentication token
+2023-10-03 13:09:06 error: [GET] /albums/popular >> StatusCode:: 401, Message:: Wrong authentication token
+2023-10-03 13:09:57 error: [GET] /albums >> StatusCode:: 401, Message:: Wrong authentication token
+2023-10-03 13:09:57 error: [GET] /albums/popular >> StatusCode:: 401, Message:: Wrong authentication token
+2023-10-03 13:11:01 error: [GET] /albums >> StatusCode:: 401, Message:: Wrong authentication token
+2023-10-03 13:11:01 error: [GET] /albums/popular >> StatusCode:: 401, Message:: Wrong authentication token
+2023-10-03 13:11:02 error: [GET] /albums >> StatusCode:: 400, Message:: Wrong authentication token
+2023-10-03 13:11:02 error: [GET] /albums/popular >> StatusCode:: 400, Message:: Wrong authentication token
+2023-10-03 13:12:41 error: [GET] /albums/popular >> StatusCode:: 401, Message:: Wrong authentication token
+2023-10-03 13:12:41 error: [GET] /albums >> StatusCode:: 401, Message:: Wrong authentication token
+2023-10-03 13:12:42 error: [GET] /albums/popular >> StatusCode:: 400, Message:: Wrong authentication token
+2023-10-03 13:12:42 error: [GET] /albums >> StatusCode:: 400, Message:: Wrong authentication token
+2023-10-03 13:14:03 error: [GET] /albums/popular >> StatusCode:: 401, Message:: Wrong authentication token
+2023-10-03 13:14:26 error: [GET] /albums/popular >> StatusCode:: 401, Message:: Wrong authentication token
+2023-10-03 13:15:21 error: uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/services/auth.service.ts[0m:[93m220[0m:[93m51[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m220[0m       const tokenData = this.createRefreshToken(id: );
+[7m   [0m [91m                                                  ~[0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/services/auth.service.ts[0m:[93m220[0m:[93m51[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m220[0m       const tokenData = this.createRefreshToken(id: );
+[7m   [0m [91m                                                  ~[0m
+
+    at createTSError (C:\Users\Devops3\Documents\Projects\feetflight\feetflight\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\Devops3\Documents\Projects\feetflight\feetflight\node_modules\ts-node\src\index.ts:863:19)
+    at C:\Users\Devops3\Documents\Projects\feetflight\feetflight\node_modules\ts-node\src\index.ts:1379:34
+    at Object.compile (C:\Users\Devops3\Documents\Projects\feetflight\feetflight\node_modules\ts-node\src\index.ts:1458:13)
+    at Module.m._compile (C:\Users\Devops3\Documents\Projects\feetflight\feetflight\node_modules\ts-node\src\index.ts:1617:30)
+    at Module._extensions..js (internal/modules/cjs/loader.js:1114:10)
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\Devops3\Documents\Projects\feetflight\feetflight\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (internal/modules/cjs/loader.js:950:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:790:12)
+    at Module.require (internal/modules/cjs/loader.js:974:19)
+2023-10-03 13:15:52 error: [GET] /albums >> StatusCode:: 401, Message:: Wrong authentication token
+2023-10-03 13:15:52 error: [GET] /albums/popular >> StatusCode:: 401, Message:: Wrong authentication token
+2023-10-03 13:17:04 error: [GET] /albums/popular >> StatusCode:: 401, Message:: Wrong authentication token
+2023-10-03 13:17:05 error: [GET] /albums >> StatusCode:: 401, Message:: Wrong authentication token
+2023-10-03 13:47:37 error: [GET] /albums >> StatusCode:: 401, Message:: Wrong authentication token
+2023-10-03 13:47:37 error: [GET] /albums/popular >> StatusCode:: 401, Message:: Wrong authentication token

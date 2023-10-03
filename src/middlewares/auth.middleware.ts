@@ -13,28 +13,25 @@ const authMiddleware = async (req: RequestWithUser, res: Response, next: NextFun
       
       const secretKey: string = SECRET_KEY;
       const verificationResponse = (verify(Authorization, secretKey)) as DataStoredInToken;
-
-      if(verificationResponse.data.refresh){
-        return next();
-      }
       
       const userId = verificationResponse.id;
+      console.log(verificationResponse);
+      
       const foundUser = await authMiddlewareSession.executeRead(tx => tx.run('match (u:user {id: $userId}) return u', {
         userId: userId
       }));
 
-      if (foundUser) {
-        req.data.user = foundUser;
+      if (foundUser.records.length > 0) {
         next();
       } else {
-        next(new HttpException(401, 'Wrong authentication token'));
+        next(new HttpException(400, 'Wrong authentication token'));
       }
     } else {
-      next(new HttpException(404, 'Authentication token missing'));
+      next(new HttpException(400, 'Authentication token missing'));
     }
   } catch (error) {
     console.log(error);
-    next(new HttpException(403, 'Wrong authentication token'));
+    next(new HttpException(401, 'Wrong authentication token'));
   }
 };
 

@@ -1,0 +1,1360 @@
+2023-10-02 10:27:13 error: [POST] /refresh >> StatusCode:: 500, Message:: Cannot read property 'token' of undefined
+2023-10-02 10:27:21 error: [POST] /refresh >> StatusCode:: 500, Message:: Cannot read property 'token' of undefined
+2023-10-02 10:36:40 error: [GET] /albums/popular >> StatusCode:: 404, Message:: Authentication token missing
+2023-10-02 10:49:30 error: uncaughtException: Identifier 'expiresAt' has already been declared
+C:\Users\Devops3\Documents\Projects\feetflight\feetflight\src\services\auth.service.ts:234
+            const expiresAt = new Date();
+                  ^
+
+SyntaxError: Identifier 'expiresAt' has already been declared
+    at wrapSafe (internal/modules/cjs/loader.js:1001:16)
+    at Module._compile (internal/modules/cjs/loader.js:1049:27)
+    at Module.m._compile (C:\Users\Devops3\Documents\Projects\feetflight\feetflight\node_modules\ts-node\src\index.ts:1618:23)
+    at Module._extensions..js (internal/modules/cjs/loader.js:1114:10)
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\Devops3\Documents\Projects\feetflight\feetflight\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (internal/modules/cjs/loader.js:950:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:790:12)
+    at Module.require (internal/modules/cjs/loader.js:974:19)
+    at require (internal/modules/cjs/helpers.js:101:18)
+    at Object.<anonymous> (C:\Users\Devops3\Documents\Projects\feetflight\feetflight\src\controllers\auth.controller.ts:4:1)
+2023-10-02 10:51:44 error: uncaughtException: Identifier 'expiresIn' has already been declared
+C:\Users\Devops3\Documents\Projects\feetflight\feetflight\src\services\auth.service.ts:223
+            const expiresIn = new Date();
+                  ^
+
+SyntaxError: Identifier 'expiresIn' has already been declared
+    at wrapSafe (internal/modules/cjs/loader.js:1001:16)
+    at Module._compile (internal/modules/cjs/loader.js:1049:27)
+    at Module.m._compile (C:\Users\Devops3\Documents\Projects\feetflight\feetflight\node_modules\ts-node\src\index.ts:1618:23)
+    at Module._extensions..js (internal/modules/cjs/loader.js:1114:10)
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\Devops3\Documents\Projects\feetflight\feetflight\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (internal/modules/cjs/loader.js:950:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:790:12)
+    at Module.require (internal/modules/cjs/loader.js:974:19)
+    at require (internal/modules/cjs/helpers.js:101:18)
+    at Object.<anonymous> (C:\Users\Devops3\Documents\Projects\feetflight\feetflight\src\controllers\auth.controller.ts:4:1)
+2023-10-02 10:51:47 error: uncaughtException: Identifier 'expiresIn' has already been declared
+C:\Users\Devops3\Documents\Projects\feetflight\feetflight\src\services\auth.service.ts:222
+            const expiresIn = new Date();
+                  ^
+
+SyntaxError: Identifier 'expiresIn' has already been declared
+    at wrapSafe (internal/modules/cjs/loader.js:1001:16)
+    at Module._compile (internal/modules/cjs/loader.js:1049:27)
+    at Module.m._compile (C:\Users\Devops3\Documents\Projects\feetflight\feetflight\node_modules\ts-node\src\index.ts:1618:23)
+    at Module._extensions..js (internal/modules/cjs/loader.js:1114:10)
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\Devops3\Documents\Projects\feetflight\feetflight\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (internal/modules/cjs/loader.js:950:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:790:12)
+    at Module.require (internal/modules/cjs/loader.js:974:19)
+    at require (internal/modules/cjs/helpers.js:101:18)
+    at Object.<anonymous> (C:\Users\Devops3\Documents\Projects\feetflight\feetflight\src\controllers\auth.controller.ts:4:1)
+2023-10-02 10:54:11 error: uncaughtException: Identifier 'expiresIn' has already been declared
+C:\Users\Devops3\Documents\Projects\feetflight\feetflight\src\services\auth.service.ts:234
+            const expiresIn = new Date();
+                  ^
+
+SyntaxError: Identifier 'expiresIn' has already been declared
+    at wrapSafe (internal/modules/cjs/loader.js:1001:16)
+    at Module._compile (internal/modules/cjs/loader.js:1049:27)
+    at Module.m._compile (C:\Users\Devops3\Documents\Projects\feetflight\feetflight\node_modules\ts-node\src\index.ts:1618:23)
+    at Module._extensions..js (internal/modules/cjs/loader.js:1114:10)
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\Devops3\Documents\Projects\feetflight\feetflight\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (internal/modules/cjs/loader.js:950:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:790:12)
+    at Module.require (internal/modules/cjs/loader.js:974:19)
+    at require (internal/modules/cjs/helpers.js:101:18)
+    at Object.<anonymous> (C:\Users\Devops3\Documents\Projects\feetflight\feetflight\src\controllers\auth.controller.ts:4:1)
+2023-10-02 10:56:17 error: uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/services/auth.service.ts[0m:[93m253[0m:[93m91[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m253[0m       return { token: sign(dataStoredInToken, secretKey, { expiresIn: expiresAt }), moment. };
+[7m   [0m [91m                                                                                          ~[0m
+[96msrc/services/auth.service.ts[0m:[93m253[0m:[93m93[0m - [91merror[0m[90m TS1003: [0mIdentifier expected.
+
+[7m253[0m       return { token: sign(dataStoredInToken, secretKey, { expiresIn: expiresAt }), moment. };
+[7m   [0m [91m                                                                                            ~[0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/services/auth.service.ts[0m:[93m253[0m:[93m91[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m253[0m       return { token: sign(dataStoredInToken, secretKey, { expiresIn: expiresAt }), moment. };
+[7m   [0m [91m                                                                                          ~[0m
+[96msrc/services/auth.service.ts[0m:[93m253[0m:[93m93[0m - [91merror[0m[90m TS1003: [0mIdentifier expected.
+
+[7m253[0m       return { token: sign(dataStoredInToken, secretKey, { expiresIn: expiresAt }), moment. };
+[7m   [0m [91m                                                                                            ~[0m
+
+    at createTSError (C:\Users\Devops3\Documents\Projects\feetflight\feetflight\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\Devops3\Documents\Projects\feetflight\feetflight\node_modules\ts-node\src\index.ts:863:19)
+    at C:\Users\Devops3\Documents\Projects\feetflight\feetflight\node_modules\ts-node\src\index.ts:1379:34
+    at Object.compile (C:\Users\Devops3\Documents\Projects\feetflight\feetflight\node_modules\ts-node\src\index.ts:1458:13)
+    at Module.m._compile (C:\Users\Devops3\Documents\Projects\feetflight\feetflight\node_modules\ts-node\src\index.ts:1617:30)
+    at Module._extensions..js (internal/modules/cjs/loader.js:1114:10)
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\Devops3\Documents\Projects\feetflight\feetflight\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (internal/modules/cjs/loader.js:950:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:790:12)
+    at Module.require (internal/modules/cjs/loader.js:974:19)
+2023-10-02 11:11:07 error: uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/services/auth.service.ts[0m:[93m268[0m:[93m91[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m268[0m       return { token: sign(dataStoredInToken, secretKey, { expiresIn: expiresAt }), moment. };
+[7m   [0m [91m                                                                                          ~[0m
+[96msrc/services/auth.service.ts[0m:[93m268[0m:[93m93[0m - [91merror[0m[90m TS1003: [0mIdentifier expected.
+
+[7m268[0m       return { token: sign(dataStoredInToken, secretKey, { expiresIn: expiresAt }), moment. };
+[7m   [0m [91m                                                                                            ~[0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/services/auth.service.ts[0m:[93m268[0m:[93m91[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m268[0m       return { token: sign(dataStoredInToken, secretKey, { expiresIn: expiresAt }), moment. };
+[7m   [0m [91m                                                                                          ~[0m
+[96msrc/services/auth.service.ts[0m:[93m268[0m:[93m93[0m - [91merror[0m[90m TS1003: [0mIdentifier expected.
+
+[7m268[0m       return { token: sign(dataStoredInToken, secretKey, { expiresIn: expiresAt }), moment. };
+[7m   [0m [91m                                                                                            ~[0m
+
+    at createTSError (C:\Users\Devops3\Documents\Projects\feetflight\feetflight\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\Devops3\Documents\Projects\feetflight\feetflight\node_modules\ts-node\src\index.ts:863:19)
+    at C:\Users\Devops3\Documents\Projects\feetflight\feetflight\node_modules\ts-node\src\index.ts:1379:34
+    at Object.compile (C:\Users\Devops3\Documents\Projects\feetflight\feetflight\node_modules\ts-node\src\index.ts:1458:13)
+    at Module.m._compile (C:\Users\Devops3\Documents\Projects\feetflight\feetflight\node_modules\ts-node\src\index.ts:1617:30)
+    at Module._extensions..js (internal/modules/cjs/loader.js:1114:10)
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\Devops3\Documents\Projects\feetflight\feetflight\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (internal/modules/cjs/loader.js:950:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:790:12)
+    at Module.require (internal/modules/cjs/loader.js:974:19)
+2023-10-02 11:11:11 error: uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/services/auth.service.ts[0m:[93m268[0m:[93m93[0m - [91merror[0m[90m TS1005: [0m'{' expected.
+
+[7m268[0m       return { token: sign(dataStoredInToken, secretKey, { expiresIn: expiresAt }), moment()0. };
+[7m   [0m [91m                                                                                            ~~[0m
+[96msrc/services/auth.service.ts[0m:[93m268[0m:[93m96[0m - [91merror[0m[90m TS1005: [0m':' expected.
+
+[7m268[0m       return { token: sign(dataStoredInToken, secretKey, { expiresIn: expiresAt }), moment()0. };
+[7m   [0m [91m                                                                                               ~[0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/services/auth.service.ts[0m:[93m268[0m:[93m93[0m - [91merror[0m[90m TS1005: [0m'{' expected.
+
+[7m268[0m       return { token: sign(dataStoredInToken, secretKey, { expiresIn: expiresAt }), moment()0. };
+[7m   [0m [91m                                                                                            ~~[0m
+[96msrc/services/auth.service.ts[0m:[93m268[0m:[93m96[0m - [91merror[0m[90m TS1005: [0m':' expected.
+
+[7m268[0m       return { token: sign(dataStoredInToken, secretKey, { expiresIn: expiresAt }), moment()0. };
+[7m   [0m [91m                                                                                               ~[0m
+
+    at createTSError (C:\Users\Devops3\Documents\Projects\feetflight\feetflight\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\Devops3\Documents\Projects\feetflight\feetflight\node_modules\ts-node\src\index.ts:863:19)
+    at C:\Users\Devops3\Documents\Projects\feetflight\feetflight\node_modules\ts-node\src\index.ts:1379:34
+    at Object.compile (C:\Users\Devops3\Documents\Projects\feetflight\feetflight\node_modules\ts-node\src\index.ts:1458:13)
+    at Module.m._compile (C:\Users\Devops3\Documents\Projects\feetflight\feetflight\node_modules\ts-node\src\index.ts:1617:30)
+    at Module._extensions..js (internal/modules/cjs/loader.js:1114:10)
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\Devops3\Documents\Projects\feetflight\feetflight\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (internal/modules/cjs/loader.js:950:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:790:12)
+    at Module.require (internal/modules/cjs/loader.js:974:19)
+2023-10-02 11:11:12 error: uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/services/auth.service.ts[0m:[93m268[0m:[93m93[0m - [91merror[0m[90m TS1005: [0m'{' expected.
+
+[7m268[0m       return { token: sign(dataStoredInToken, secretKey, { expiresIn: expiresAt }), moment(). };
+[7m   [0m [91m                                                                                            ~[0m
+[96msrc/services/auth.service.ts[0m:[93m268[0m:[93m95[0m - [91merror[0m[90m TS1003: [0mIdentifier expected.
+
+[7m268[0m       return { token: sign(dataStoredInToken, secretKey, { expiresIn: expiresAt }), moment(). };
+[7m   [0m [91m                                                                                              ~[0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/services/auth.service.ts[0m:[93m268[0m:[93m93[0m - [91merror[0m[90m TS1005: [0m'{' expected.
+
+[7m268[0m       return { token: sign(dataStoredInToken, secretKey, { expiresIn: expiresAt }), moment(). };
+[7m   [0m [91m                                                                                            ~[0m
+[96msrc/services/auth.service.ts[0m:[93m268[0m:[93m95[0m - [91merror[0m[90m TS1003: [0mIdentifier expected.
+
+[7m268[0m       return { token: sign(dataStoredInToken, secretKey, { expiresIn: expiresAt }), moment(). };
+[7m   [0m [91m                                                                                              ~[0m
+
+    at createTSError (C:\Users\Devops3\Documents\Projects\feetflight\feetflight\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\Devops3\Documents\Projects\feetflight\feetflight\node_modules\ts-node\src\index.ts:863:19)
+    at C:\Users\Devops3\Documents\Projects\feetflight\feetflight\node_modules\ts-node\src\index.ts:1379:34
+    at Object.compile (C:\Users\Devops3\Documents\Projects\feetflight\feetflight\node_modules\ts-node\src\index.ts:1458:13)
+    at Module.m._compile (C:\Users\Devops3\Documents\Projects\feetflight\feetflight\node_modules\ts-node\src\index.ts:1617:30)
+    at Module._extensions..js (internal/modules/cjs/loader.js:1114:10)
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\Devops3\Documents\Projects\feetflight\feetflight\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (internal/modules/cjs/loader.js:950:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:790:12)
+    at Module.require (internal/modules/cjs/loader.js:974:19)
+2023-10-02 11:11:15 error: uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/services/auth.service.ts[0m:[93m268[0m:[93m93[0m - [91merror[0m[90m TS1005: [0m'{' expected.
+
+[7m268[0m       return { token: sign(dataStoredInToken, secretKey, { expiresIn: expiresAt }), moment().fo };
+[7m   [0m [91m                                                                                            ~[0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/services/auth.service.ts[0m:[93m268[0m:[93m93[0m - [91merror[0m[90m TS1005: [0m'{' expected.
+
+[7m268[0m       return { token: sign(dataStoredInToken, secretKey, { expiresIn: expiresAt }), moment().fo };
+[7m   [0m [91m                                                                                            ~[0m
+
+    at createTSError (C:\Users\Devops3\Documents\Projects\feetflight\feetflight\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\Devops3\Documents\Projects\feetflight\feetflight\node_modules\ts-node\src\index.ts:863:19)
+    at C:\Users\Devops3\Documents\Projects\feetflight\feetflight\node_modules\ts-node\src\index.ts:1379:34
+    at Object.compile (C:\Users\Devops3\Documents\Projects\feetflight\feetflight\node_modules\ts-node\src\index.ts:1458:13)
+    at Module.m._compile (C:\Users\Devops3\Documents\Projects\feetflight\feetflight\node_modules\ts-node\src\index.ts:1617:30)
+    at Module._extensions..js (internal/modules/cjs/loader.js:1114:10)
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\Devops3\Documents\Projects\feetflight\feetflight\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (internal/modules/cjs/loader.js:950:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:790:12)
+    at Module.require (internal/modules/cjs/loader.js:974:19)
+2023-10-02 11:11:37 error: uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/services/auth.service.ts[0m:[93m14[0m:[93m1[0m - [91merror[0m[90m TS1109: [0mExpression expected.
+
+[7m14[0m import Stripe from 'stripe';
+[7m  [0m [91m~~~~~~[0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/services/auth.service.ts[0m:[93m14[0m:[93m1[0m - [91merror[0m[90m TS1109: [0mExpression expected.
+
+[7m14[0m import Stripe from 'stripe';
+[7m  [0m [91m~~~~~~[0m
+
+    at createTSError (C:\Users\Devops3\Documents\Projects\feetflight\feetflight\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\Devops3\Documents\Projects\feetflight\feetflight\node_modules\ts-node\src\index.ts:863:19)
+    at C:\Users\Devops3\Documents\Projects\feetflight\feetflight\node_modules\ts-node\src\index.ts:1379:34
+    at Object.compile (C:\Users\Devops3\Documents\Projects\feetflight\feetflight\node_modules\ts-node\src\index.ts:1458:13)
+    at Module.m._compile (C:\Users\Devops3\Documents\Projects\feetflight\feetflight\node_modules\ts-node\src\index.ts:1617:30)
+    at Module._extensions..js (internal/modules/cjs/loader.js:1114:10)
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\Devops3\Documents\Projects\feetflight\feetflight\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (internal/modules/cjs/loader.js:950:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:790:12)
+    at Module.require (internal/modules/cjs/loader.js:974:19)
+2023-10-02 11:12:13 error: uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/services/auth.service.ts[0m:[93m268[0m:[93m93[0m - [91merror[0m[90m TS1005: [0m'{' expected.
+
+[7m268[0m       return { token: sign(dataStoredInToken, secretKey, { expiresIn: expiresAt }), moment(). };
+[7m   [0m [91m                                                                                            ~[0m
+[96msrc/services/auth.service.ts[0m:[93m268[0m:[93m95[0m - [91merror[0m[90m TS1003: [0mIdentifier expected.
+
+[7m268[0m       return { token: sign(dataStoredInToken, secretKey, { expiresIn: expiresAt }), moment(). };
+[7m   [0m [91m                                                                                              ~[0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/services/auth.service.ts[0m:[93m268[0m:[93m93[0m - [91merror[0m[90m TS1005: [0m'{' expected.
+
+[7m268[0m       return { token: sign(dataStoredInToken, secretKey, { expiresIn: expiresAt }), moment(). };
+[7m   [0m [91m                                                                                            ~[0m
+[96msrc/services/auth.service.ts[0m:[93m268[0m:[93m95[0m - [91merror[0m[90m TS1003: [0mIdentifier expected.
+
+[7m268[0m       return { token: sign(dataStoredInToken, secretKey, { expiresIn: expiresAt }), moment(). };
+[7m   [0m [91m                                                                                              ~[0m
+
+    at createTSError (C:\Users\Devops3\Documents\Projects\feetflight\feetflight\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\Devops3\Documents\Projects\feetflight\feetflight\node_modules\ts-node\src\index.ts:863:19)
+    at C:\Users\Devops3\Documents\Projects\feetflight\feetflight\node_modules\ts-node\src\index.ts:1379:34
+    at Object.compile (C:\Users\Devops3\Documents\Projects\feetflight\feetflight\node_modules\ts-node\src\index.ts:1458:13)
+    at Module.m._compile (C:\Users\Devops3\Documents\Projects\feetflight\feetflight\node_modules\ts-node\src\index.ts:1617:30)
+    at Module._extensions..js (internal/modules/cjs/loader.js:1114:10)
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\Devops3\Documents\Projects\feetflight\feetflight\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (internal/modules/cjs/loader.js:950:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:790:12)
+    at Module.require (internal/modules/cjs/loader.js:974:19)
+2023-10-02 11:12:30 error: uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/services/auth.service.ts[0m:[93m268[0m:[93m102[0m - [91merror[0m[90m TS1005: [0m'{' expected.
+
+[7m268[0m       return { token: sign(dataStoredInToken, secretKey, { expiresIn: expiresAt }), moment(expiresIn). };
+[7m   [0m [91m                                                                                                     ~[0m
+[96msrc/services/auth.service.ts[0m:[93m268[0m:[93m104[0m - [91merror[0m[90m TS1003: [0mIdentifier expected.
+
+[7m268[0m       return { token: sign(dataStoredInToken, secretKey, { expiresIn: expiresAt }), moment(expiresIn). };
+[7m   [0m [91m                                                                                                       ~[0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/services/auth.service.ts[0m:[93m268[0m:[93m102[0m - [91merror[0m[90m TS1005: [0m'{' expected.
+
+[7m268[0m       return { token: sign(dataStoredInToken, secretKey, { expiresIn: expiresAt }), moment(expiresIn). };
+[7m   [0m [91m                                                                                                     ~[0m
+[96msrc/services/auth.service.ts[0m:[93m268[0m:[93m104[0m - [91merror[0m[90m TS1003: [0mIdentifier expected.
+
+[7m268[0m       return { token: sign(dataStoredInToken, secretKey, { expiresIn: expiresAt }), moment(expiresIn). };
+[7m   [0m [91m                                                                                                       ~[0m
+
+    at createTSError (C:\Users\Devops3\Documents\Projects\feetflight\feetflight\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\Devops3\Documents\Projects\feetflight\feetflight\node_modules\ts-node\src\index.ts:863:19)
+    at C:\Users\Devops3\Documents\Projects\feetflight\feetflight\node_modules\ts-node\src\index.ts:1379:34
+    at Object.compile (C:\Users\Devops3\Documents\Projects\feetflight\feetflight\node_modules\ts-node\src\index.ts:1458:13)
+    at Module.m._compile (C:\Users\Devops3\Documents\Projects\feetflight\feetflight\node_modules\ts-node\src\index.ts:1617:30)
+    at Module._extensions..js (internal/modules/cjs/loader.js:1114:10)
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\Devops3\Documents\Projects\feetflight\feetflight\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (internal/modules/cjs/loader.js:950:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:790:12)
+    at Module.require (internal/modules/cjs/loader.js:974:19)
+2023-10-02 11:14:31 error: uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/services/auth.service.ts[0m:[93m253[0m:[93m93[0m - [91merror[0m[90m TS1005: [0m'{' expected.
+
+[7m253[0m       return { token: sign(dataStoredInToken, secretKey, { expiresIn: expiresAt }), moment(). };
+[7m   [0m [91m                                                                                            ~[0m
+[96msrc/services/auth.service.ts[0m:[93m253[0m:[93m95[0m - [91merror[0m[90m TS1003: [0mIdentifier expected.
+
+[7m253[0m       return { token: sign(dataStoredInToken, secretKey, { expiresIn: expiresAt }), moment(). };
+[7m   [0m [91m                                                                                              ~[0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/services/auth.service.ts[0m:[93m253[0m:[93m93[0m - [91merror[0m[90m TS1005: [0m'{' expected.
+
+[7m253[0m       return { token: sign(dataStoredInToken, secretKey, { expiresIn: expiresAt }), moment(). };
+[7m   [0m [91m                                                                                            ~[0m
+[96msrc/services/auth.service.ts[0m:[93m253[0m:[93m95[0m - [91merror[0m[90m TS1003: [0mIdentifier expected.
+
+[7m253[0m       return { token: sign(dataStoredInToken, secretKey, { expiresIn: expiresAt }), moment(). };
+[7m   [0m [91m                                                                                              ~[0m
+
+    at createTSError (C:\Users\Devops3\Documents\Projects\feetflight\feetflight\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\Devops3\Documents\Projects\feetflight\feetflight\node_modules\ts-node\src\index.ts:863:19)
+    at C:\Users\Devops3\Documents\Projects\feetflight\feetflight\node_modules\ts-node\src\index.ts:1379:34
+    at Object.compile (C:\Users\Devops3\Documents\Projects\feetflight\feetflight\node_modules\ts-node\src\index.ts:1458:13)
+    at Module.m._compile (C:\Users\Devops3\Documents\Projects\feetflight\feetflight\node_modules\ts-node\src\index.ts:1617:30)
+    at Module._extensions..js (internal/modules/cjs/loader.js:1114:10)
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\Devops3\Documents\Projects\feetflight\feetflight\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (internal/modules/cjs/loader.js:950:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:790:12)
+    at Module.require (internal/modules/cjs/loader.js:974:19)
+2023-10-02 11:14:36 error: uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/services/auth.service.ts[0m:[93m253[0m:[93m93[0m - [91merror[0m[90m TS1005: [0m'{' expected.
+
+[7m253[0m       return { token: sign(dataStoredInToken, secretKey, { expiresIn: expiresAt }), moment().format("") };
+[7m   [0m [91m                                                                                            ~[0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/services/auth.service.ts[0m:[93m253[0m:[93m93[0m - [91merror[0m[90m TS1005: [0m'{' expected.
+
+[7m253[0m       return { token: sign(dataStoredInToken, secretKey, { expiresIn: expiresAt }), moment().format("") };
+[7m   [0m [91m                                                                                            ~[0m
+
+    at createTSError (C:\Users\Devops3\Documents\Projects\feetflight\feetflight\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\Devops3\Documents\Projects\feetflight\feetflight\node_modules\ts-node\src\index.ts:863:19)
+    at C:\Users\Devops3\Documents\Projects\feetflight\feetflight\node_modules\ts-node\src\index.ts:1379:34
+    at Object.compile (C:\Users\Devops3\Documents\Projects\feetflight\feetflight\node_modules\ts-node\src\index.ts:1458:13)
+    at Module.m._compile (C:\Users\Devops3\Documents\Projects\feetflight\feetflight\node_modules\ts-node\src\index.ts:1617:30)
+    at Module._extensions..js (internal/modules/cjs/loader.js:1114:10)
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\Devops3\Documents\Projects\feetflight\feetflight\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (internal/modules/cjs/loader.js:950:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:790:12)
+    at Module.require (internal/modules/cjs/loader.js:974:19)
+2023-10-02 11:14:40 error: uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/services/auth.service.ts[0m:[93m253[0m:[93m93[0m - [91merror[0m[90m TS1005: [0m'{' expected.
+
+[7m253[0m       return { token: sign(dataStoredInToken, secretKey, { expiresIn: expiresAt }), moment().format("") };
+[7m   [0m [91m                                                                                            ~[0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/services/auth.service.ts[0m:[93m253[0m:[93m93[0m - [91merror[0m[90m TS1005: [0m'{' expected.
+
+[7m253[0m       return { token: sign(dataStoredInToken, secretKey, { expiresIn: expiresAt }), moment().format("") };
+[7m   [0m [91m                                                                                            ~[0m
+
+    at createTSError (C:\Users\Devops3\Documents\Projects\feetflight\feetflight\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\Devops3\Documents\Projects\feetflight\feetflight\node_modules\ts-node\src\index.ts:863:19)
+    at C:\Users\Devops3\Documents\Projects\feetflight\feetflight\node_modules\ts-node\src\index.ts:1379:34
+    at Object.compile (C:\Users\Devops3\Documents\Projects\feetflight\feetflight\node_modules\ts-node\src\index.ts:1458:13)
+    at Module.m._compile (C:\Users\Devops3\Documents\Projects\feetflight\feetflight\node_modules\ts-node\src\index.ts:1617:30)
+    at Module._extensions..js (internal/modules/cjs/loader.js:1114:10)
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\Devops3\Documents\Projects\feetflight\feetflight\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (internal/modules/cjs/loader.js:950:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:790:12)
+    at Module.require (internal/modules/cjs/loader.js:974:19)
+2023-10-02 11:14:44 error: uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/services/auth.service.ts[0m:[93m253[0m:[93m102[0m - [91merror[0m[90m TS1005: [0m'{' expected.
+
+[7m253[0m       return { token: sign(dataStoredInToken, secretKey, { expiresIn: expiresAt }), moment(expiresIn).format("") };
+[7m   [0m [91m                                                                                                     ~[0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/services/auth.service.ts[0m:[93m253[0m:[93m102[0m - [91merror[0m[90m TS1005: [0m'{' expected.
+
+[7m253[0m       return { token: sign(dataStoredInToken, secretKey, { expiresIn: expiresAt }), moment(expiresIn).format("") };
+[7m   [0m [91m                                                                                                     ~[0m
+
+    at createTSError (C:\Users\Devops3\Documents\Projects\feetflight\feetflight\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\Devops3\Documents\Projects\feetflight\feetflight\node_modules\ts-node\src\index.ts:863:19)
+    at C:\Users\Devops3\Documents\Projects\feetflight\feetflight\node_modules\ts-node\src\index.ts:1379:34
+    at Object.compile (C:\Users\Devops3\Documents\Projects\feetflight\feetflight\node_modules\ts-node\src\index.ts:1458:13)
+    at Module.m._compile (C:\Users\Devops3\Documents\Projects\feetflight\feetflight\node_modules\ts-node\src\index.ts:1617:30)
+    at Module._extensions..js (internal/modules/cjs/loader.js:1114:10)
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\Devops3\Documents\Projects\feetflight\feetflight\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (internal/modules/cjs/loader.js:950:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:790:12)
+    at Module.require (internal/modules/cjs/loader.js:974:19)
+2023-10-02 11:14:47 error: uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/services/auth.service.ts[0m:[93m247[0m:[93m40[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m247[0m       const dataStoredInToken = { data expiresIn};
+[7m   [0m [91m                                       ~~~~~~~~~[0m
+[96msrc/services/auth.service.ts[0m:[93m253[0m:[93m102[0m - [91merror[0m[90m TS1005: [0m'{' expected.
+
+[7m253[0m       return { token: sign(dataStoredInToken, secretKey, { expiresIn: expiresAt }), moment(expiresIn).format("") };
+[7m   [0m [91m                                                                                                     ~[0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/services/auth.service.ts[0m:[93m247[0m:[93m40[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m247[0m       const dataStoredInToken = { data expiresIn};
+[7m   [0m [91m                                       ~~~~~~~~~[0m
+[96msrc/services/auth.service.ts[0m:[93m253[0m:[93m102[0m - [91merror[0m[90m TS1005: [0m'{' expected.
+
+[7m253[0m       return { token: sign(dataStoredInToken, secretKey, { expiresIn: expiresAt }), moment(expiresIn).format("") };
+[7m   [0m [91m                                                                                                     ~[0m
+
+    at createTSError (C:\Users\Devops3\Documents\Projects\feetflight\feetflight\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\Devops3\Documents\Projects\feetflight\feetflight\node_modules\ts-node\src\index.ts:863:19)
+    at C:\Users\Devops3\Documents\Projects\feetflight\feetflight\node_modules\ts-node\src\index.ts:1379:34
+    at Object.compile (C:\Users\Devops3\Documents\Projects\feetflight\feetflight\node_modules\ts-node\src\index.ts:1458:13)
+    at Module.m._compile (C:\Users\Devops3\Documents\Projects\feetflight\feetflight\node_modules\ts-node\src\index.ts:1617:30)
+    at Module._extensions..js (internal/modules/cjs/loader.js:1114:10)
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\Devops3\Documents\Projects\feetflight\feetflight\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (internal/modules/cjs/loader.js:950:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:790:12)
+    at Module.require (internal/modules/cjs/loader.js:974:19)
+2023-10-02 11:14:49 error: uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/services/auth.service.ts[0m:[93m253[0m:[93m102[0m - [91merror[0m[90m TS1005: [0m'{' expected.
+
+[7m253[0m       return { token: sign(dataStoredInToken, secretKey, { expiresIn: expiresAt }), moment(expiresIn).format("") };
+[7m   [0m [91m                                                                                                     ~[0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/services/auth.service.ts[0m:[93m253[0m:[93m102[0m - [91merror[0m[90m TS1005: [0m'{' expected.
+
+[7m253[0m       return { token: sign(dataStoredInToken, secretKey, { expiresIn: expiresAt }), moment(expiresIn).format("") };
+[7m   [0m [91m                                                                                                     ~[0m
+
+    at createTSError (C:\Users\Devops3\Documents\Projects\feetflight\feetflight\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\Devops3\Documents\Projects\feetflight\feetflight\node_modules\ts-node\src\index.ts:863:19)
+    at C:\Users\Devops3\Documents\Projects\feetflight\feetflight\node_modules\ts-node\src\index.ts:1379:34
+    at Object.compile (C:\Users\Devops3\Documents\Projects\feetflight\feetflight\node_modules\ts-node\src\index.ts:1458:13)
+    at Module.m._compile (C:\Users\Devops3\Documents\Projects\feetflight\feetflight\node_modules\ts-node\src\index.ts:1617:30)
+    at Module._extensions..js (internal/modules/cjs/loader.js:1114:10)
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\Devops3\Documents\Projects\feetflight\feetflight\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (internal/modules/cjs/loader.js:950:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:790:12)
+    at Module.require (internal/modules/cjs/loader.js:974:19)
+2023-10-02 11:15:23 error: uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/services/auth.service.ts[0m:[93m253[0m:[93m93[0m - [91merror[0m[90m TS1005: [0m'{' expected.
+
+[7m253[0m       return { token: sign(dataStoredInToken, secretKey, { expiresIn: expiresAt }), moment().format("") };
+[7m   [0m [91m                                                                                            ~[0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/services/auth.service.ts[0m:[93m253[0m:[93m93[0m - [91merror[0m[90m TS1005: [0m'{' expected.
+
+[7m253[0m       return { token: sign(dataStoredInToken, secretKey, { expiresIn: expiresAt }), moment().format("") };
+[7m   [0m [91m                                                                                            ~[0m
+
+    at createTSError (C:\Users\Devops3\Documents\Projects\feetflight\feetflight\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\Devops3\Documents\Projects\feetflight\feetflight\node_modules\ts-node\src\index.ts:863:19)
+    at C:\Users\Devops3\Documents\Projects\feetflight\feetflight\node_modules\ts-node\src\index.ts:1379:34
+    at Object.compile (C:\Users\Devops3\Documents\Projects\feetflight\feetflight\node_modules\ts-node\src\index.ts:1458:13)
+    at Module.m._compile (C:\Users\Devops3\Documents\Projects\feetflight\feetflight\node_modules\ts-node\src\index.ts:1617:30)
+    at Module._extensions..js (internal/modules/cjs/loader.js:1114:10)
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\Devops3\Documents\Projects\feetflight\feetflight\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (internal/modules/cjs/loader.js:950:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:790:12)
+    at Module.require (internal/modules/cjs/loader.js:974:19)
+2023-10-02 11:15:35 error: uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/services/auth.service.ts[0m:[93m253[0m:[93m94[0m - [91merror[0m[90m TS1005: [0m'{' expected.
+
+[7m253[0m       return { token: sign(dataStoredInToken, secretKey, { expiresIn: expiresAt }),  moment().format("") };
+[7m   [0m [91m                                                                                             ~[0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/services/auth.service.ts[0m:[93m253[0m:[93m94[0m - [91merror[0m[90m TS1005: [0m'{' expected.
+
+[7m253[0m       return { token: sign(dataStoredInToken, secretKey, { expiresIn: expiresAt }),  moment().format("") };
+[7m   [0m [91m                                                                                             ~[0m
+
+    at createTSError (C:\Users\Devops3\Documents\Projects\feetflight\feetflight\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\Devops3\Documents\Projects\feetflight\feetflight\node_modules\ts-node\src\index.ts:863:19)
+    at C:\Users\Devops3\Documents\Projects\feetflight\feetflight\node_modules\ts-node\src\index.ts:1379:34
+    at Object.compile (C:\Users\Devops3\Documents\Projects\feetflight\feetflight\node_modules\ts-node\src\index.ts:1458:13)
+    at Module.m._compile (C:\Users\Devops3\Documents\Projects\feetflight\feetflight\node_modules\ts-node\src\index.ts:1617:30)
+    at Module._extensions..js (internal/modules/cjs/loader.js:1114:10)
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\Devops3\Documents\Projects\feetflight\feetflight\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (internal/modules/cjs/loader.js:950:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:790:12)
+    at Module.require (internal/modules/cjs/loader.js:974:19)
+2023-10-02 11:46:32 error: uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/services/auth.service.ts[0m:[93m191[0m:[93m48[0m - [91merror[0m[90m TS1109: [0mExpression expected.
+
+[7m191[0m       if (findUser.records.length == 0) return throw new HttpException  { message: `password or email is incorrect` };
+[7m   [0m [91m                                               ~~~~~[0m
+[96msrc/services/auth.service.ts[0m:[93m191[0m:[93m73[0m - [91merror[0m[90m TS1005: [0m';' expected.
+
+[7m191[0m       if (findUser.records.length == 0) return throw new HttpException  { message: `password or email is incorrect` };
+[7m   [0m [91m                                                                        ~[0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/services/auth.service.ts[0m:[93m191[0m:[93m48[0m - [91merror[0m[90m TS1109: [0mExpression expected.
+
+[7m191[0m       if (findUser.records.length == 0) return throw new HttpException  { message: `password or email is incorrect` };
+[7m   [0m [91m                                               ~~~~~[0m
+[96msrc/services/auth.service.ts[0m:[93m191[0m:[93m73[0m - [91merror[0m[90m TS1005: [0m';' expected.
+
+[7m191[0m       if (findUser.records.length == 0) return throw new HttpException  { message: `password or email is incorrect` };
+[7m   [0m [91m                                                                        ~[0m
+
+    at createTSError (C:\Users\Devops3\Documents\Projects\feetflight\feetflight\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\Devops3\Documents\Projects\feetflight\feetflight\node_modules\ts-node\src\index.ts:863:19)
+    at C:\Users\Devops3\Documents\Projects\feetflight\feetflight\node_modules\ts-node\src\index.ts:1379:34
+    at Object.compile (C:\Users\Devops3\Documents\Projects\feetflight\feetflight\node_modules\ts-node\src\index.ts:1458:13)
+    at Module.m._compile (C:\Users\Devops3\Documents\Projects\feetflight\feetflight\node_modules\ts-node\src\index.ts:1617:30)
+    at Module._extensions..js (internal/modules/cjs/loader.js:1114:10)
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\Devops3\Documents\Projects\feetflight\feetflight\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (internal/modules/cjs/loader.js:950:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:790:12)
+    at Module.require (internal/modules/cjs/loader.js:974:19)
+2023-10-02 11:46:41 error: uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/services/auth.service.ts[0m:[93m191[0m:[93m48[0m - [91merror[0m[90m TS1109: [0mExpression expected.
+
+[7m191[0m       if (findUser.records.length == 0) return throw new HttpException()  { message: `password or email is incorrect` };
+[7m   [0m [91m                                               ~~~~~[0m
+[96msrc/services/auth.service.ts[0m:[93m191[0m:[93m75[0m - [91merror[0m[90m TS1005: [0m';' expected.
+
+[7m191[0m       if (findUser.records.length == 0) return throw new HttpException()  { message: `password or email is incorrect` };
+[7m   [0m [91m                                                                          ~[0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/services/auth.service.ts[0m:[93m191[0m:[93m48[0m - [91merror[0m[90m TS1109: [0mExpression expected.
+
+[7m191[0m       if (findUser.records.length == 0) return throw new HttpException()  { message: `password or email is incorrect` };
+[7m   [0m [91m                                               ~~~~~[0m
+[96msrc/services/auth.service.ts[0m:[93m191[0m:[93m75[0m - [91merror[0m[90m TS1005: [0m';' expected.
+
+[7m191[0m       if (findUser.records.length == 0) return throw new HttpException()  { message: `password or email is incorrect` };
+[7m   [0m [91m                                                                          ~[0m
+
+    at createTSError (C:\Users\Devops3\Documents\Projects\feetflight\feetflight\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\Devops3\Documents\Projects\feetflight\feetflight\node_modules\ts-node\src\index.ts:863:19)
+    at C:\Users\Devops3\Documents\Projects\feetflight\feetflight\node_modules\ts-node\src\index.ts:1379:34
+    at Object.compile (C:\Users\Devops3\Documents\Projects\feetflight\feetflight\node_modules\ts-node\src\index.ts:1458:13)
+    at Module.m._compile (C:\Users\Devops3\Documents\Projects\feetflight\feetflight\node_modules\ts-node\src\index.ts:1617:30)
+    at Module._extensions..js (internal/modules/cjs/loader.js:1114:10)
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\Devops3\Documents\Projects\feetflight\feetflight\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (internal/modules/cjs/loader.js:950:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:790:12)
+    at Module.require (internal/modules/cjs/loader.js:974:19)
+2023-10-02 11:46:43 error: uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/services/auth.service.ts[0m:[93m191[0m:[93m48[0m - [91merror[0m[90m TS1109: [0mExpression expected.
+
+[7m191[0m       if (findUser.records.length == 0) return throw new HttpException(403)  { message: `password or email is incorrect` };
+[7m   [0m [91m                                               ~~~~~[0m
+[96msrc/services/auth.service.ts[0m:[93m191[0m:[93m78[0m - [91merror[0m[90m TS1005: [0m';' expected.
+
+[7m191[0m       if (findUser.records.length == 0) return throw new HttpException(403)  { message: `password or email is incorrect` };
+[7m   [0m [91m                                                                             ~[0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/services/auth.service.ts[0m:[93m191[0m:[93m48[0m - [91merror[0m[90m TS1109: [0mExpression expected.
+
+[7m191[0m       if (findUser.records.length == 0) return throw new HttpException(403)  { message: `password or email is incorrect` };
+[7m   [0m [91m                                               ~~~~~[0m
+[96msrc/services/auth.service.ts[0m:[93m191[0m:[93m78[0m - [91merror[0m[90m TS1005: [0m';' expected.
+
+[7m191[0m       if (findUser.records.length == 0) return throw new HttpException(403)  { message: `password or email is incorrect` };
+[7m   [0m [91m                                                                             ~[0m
+
+    at createTSError (C:\Users\Devops3\Documents\Projects\feetflight\feetflight\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\Devops3\Documents\Projects\feetflight\feetflight\node_modules\ts-node\src\index.ts:863:19)
+    at C:\Users\Devops3\Documents\Projects\feetflight\feetflight\node_modules\ts-node\src\index.ts:1379:34
+    at Object.compile (C:\Users\Devops3\Documents\Projects\feetflight\feetflight\node_modules\ts-node\src\index.ts:1458:13)
+    at Module.m._compile (C:\Users\Devops3\Documents\Projects\feetflight\feetflight\node_modules\ts-node\src\index.ts:1617:30)
+    at Module._extensions..js (internal/modules/cjs/loader.js:1114:10)
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\Devops3\Documents\Projects\feetflight\feetflight\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (internal/modules/cjs/loader.js:950:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:790:12)
+    at Module.require (internal/modules/cjs/loader.js:974:19)
+2023-10-02 11:46:50 error: uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/services/auth.service.ts[0m:[93m191[0m:[93m48[0m - [91merror[0m[90m TS1109: [0mExpression expected.
+
+[7m191[0m       if (findUser.records.length == 0) return throw new HttpException(403)  { message:  };
+[7m   [0m [91m                                               ~~~~~[0m
+[96msrc/services/auth.service.ts[0m:[93m191[0m:[93m78[0m - [91merror[0m[90m TS1005: [0m';' expected.
+
+[7m191[0m       if (findUser.records.length == 0) return throw new HttpException(403)  { message:  };
+[7m   [0m [91m                                                                             ~[0m
+[96msrc/services/auth.service.ts[0m:[93m191[0m:[93m90[0m - [91merror[0m[90m TS1109: [0mExpression expected.
+
+[7m191[0m       if (findUser.records.length == 0) return throw new HttpException(403)  { message:  };
+[7m   [0m [91m                                                                                         ~[0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/services/auth.service.ts[0m:[93m191[0m:[93m48[0m - [91merror[0m[90m TS1109: [0mExpression expected.
+
+[7m191[0m       if (findUser.records.length == 0) return throw new HttpException(403)  { message:  };
+[7m   [0m [91m                                               ~~~~~[0m
+[96msrc/services/auth.service.ts[0m:[93m191[0m:[93m78[0m - [91merror[0m[90m TS1005: [0m';' expected.
+
+[7m191[0m       if (findUser.records.length == 0) return throw new HttpException(403)  { message:  };
+[7m   [0m [91m                                                                             ~[0m
+[96msrc/services/auth.service.ts[0m:[93m191[0m:[93m90[0m - [91merror[0m[90m TS1109: [0mExpression expected.
+
+[7m191[0m       if (findUser.records.length == 0) return throw new HttpException(403)  { message:  };
+[7m   [0m [91m                                                                                         ~[0m
+
+    at createTSError (C:\Users\Devops3\Documents\Projects\feetflight\feetflight\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\Devops3\Documents\Projects\feetflight\feetflight\node_modules\ts-node\src\index.ts:863:19)
+    at C:\Users\Devops3\Documents\Projects\feetflight\feetflight\node_modules\ts-node\src\index.ts:1379:34
+    at Object.compile (C:\Users\Devops3\Documents\Projects\feetflight\feetflight\node_modules\ts-node\src\index.ts:1458:13)
+    at Module.m._compile (C:\Users\Devops3\Documents\Projects\feetflight\feetflight\node_modules\ts-node\src\index.ts:1617:30)
+    at Module._extensions..js (internal/modules/cjs/loader.js:1114:10)
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\Devops3\Documents\Projects\feetflight\feetflight\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (internal/modules/cjs/loader.js:950:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:790:12)
+    at Module.require (internal/modules/cjs/loader.js:974:19)
+2023-10-02 11:46:55 error: uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/services/auth.service.ts[0m:[93m191[0m:[93m48[0m - [91merror[0m[90m TS1109: [0mExpression expected.
+
+[7m191[0m       if (findUser.records.length == 0) return throw new HttpException(403)
+[7m   [0m [91m                                               ~~~~~[0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/services/auth.service.ts[0m:[93m191[0m:[93m48[0m - [91merror[0m[90m TS1109: [0mExpression expected.
+
+[7m191[0m       if (findUser.records.length == 0) return throw new HttpException(403)
+[7m   [0m [91m                                               ~~~~~[0m
+
+    at createTSError (C:\Users\Devops3\Documents\Projects\feetflight\feetflight\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\Devops3\Documents\Projects\feetflight\feetflight\node_modules\ts-node\src\index.ts:863:19)
+    at C:\Users\Devops3\Documents\Projects\feetflight\feetflight\node_modules\ts-node\src\index.ts:1379:34
+    at Object.compile (C:\Users\Devops3\Documents\Projects\feetflight\feetflight\node_modules\ts-node\src\index.ts:1458:13)
+    at Module.m._compile (C:\Users\Devops3\Documents\Projects\feetflight\feetflight\node_modules\ts-node\src\index.ts:1617:30)
+    at Module._extensions..js (internal/modules/cjs/loader.js:1114:10)
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\Devops3\Documents\Projects\feetflight\feetflight\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (internal/modules/cjs/loader.js:950:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:790:12)
+    at Module.require (internal/modules/cjs/loader.js:974:19)
+2023-10-02 11:46:58 error: uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/services/auth.service.ts[0m:[93m191[0m:[93m48[0m - [91merror[0m[90m TS1109: [0mExpression expected.
+
+[7m191[0m       if (findUser.records.length == 0) return throw new HttpException(403, `password or email is incorrect`)
+[7m   [0m [91m                                               ~~~~~[0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/services/auth.service.ts[0m:[93m191[0m:[93m48[0m - [91merror[0m[90m TS1109: [0mExpression expected.
+
+[7m191[0m       if (findUser.records.length == 0) return throw new HttpException(403, `password or email is incorrect`)
+[7m   [0m [91m                                               ~~~~~[0m
+
+    at createTSError (C:\Users\Devops3\Documents\Projects\feetflight\feetflight\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\Devops3\Documents\Projects\feetflight\feetflight\node_modules\ts-node\src\index.ts:863:19)
+    at C:\Users\Devops3\Documents\Projects\feetflight\feetflight\node_modules\ts-node\src\index.ts:1379:34
+    at Object.compile (C:\Users\Devops3\Documents\Projects\feetflight\feetflight\node_modules\ts-node\src\index.ts:1458:13)
+    at Module.m._compile (C:\Users\Devops3\Documents\Projects\feetflight\feetflight\node_modules\ts-node\src\index.ts:1617:30)
+    at Module._extensions..js (internal/modules/cjs/loader.js:1114:10)
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\Devops3\Documents\Projects\feetflight\feetflight\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (internal/modules/cjs/loader.js:950:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:790:12)
+    at Module.require (internal/modules/cjs/loader.js:974:19)
+2023-10-02 11:47:00 error: uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/services/auth.service.ts[0m:[93m191[0m:[93m48[0m - [91merror[0m[90m TS1109: [0mExpression expected.
+
+[7m191[0m       if (findUser.records.length == 0) return throw new HttpException(403, `password or email is incorrect`);
+[7m   [0m [91m                                               ~~~~~[0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/services/auth.service.ts[0m:[93m191[0m:[93m48[0m - [91merror[0m[90m TS1109: [0mExpression expected.
+
+[7m191[0m       if (findUser.records.length == 0) return throw new HttpException(403, `password or email is incorrect`);
+[7m   [0m [91m                                               ~~~~~[0m
+
+    at createTSError (C:\Users\Devops3\Documents\Projects\feetflight\feetflight\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\Devops3\Documents\Projects\feetflight\feetflight\node_modules\ts-node\src\index.ts:863:19)
+    at C:\Users\Devops3\Documents\Projects\feetflight\feetflight\node_modules\ts-node\src\index.ts:1379:34
+    at Object.compile (C:\Users\Devops3\Documents\Projects\feetflight\feetflight\node_modules\ts-node\src\index.ts:1458:13)
+    at Module.m._compile (C:\Users\Devops3\Documents\Projects\feetflight\feetflight\node_modules\ts-node\src\index.ts:1617:30)
+    at Module._extensions..js (internal/modules/cjs/loader.js:1114:10)
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\Devops3\Documents\Projects\feetflight\feetflight\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (internal/modules/cjs/loader.js:950:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:790:12)
+    at Module.require (internal/modules/cjs/loader.js:974:19)
+2023-10-02 11:50:47 error: uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/services/auth.service.ts[0m:[93m191[0m:[93m48[0m - [91merror[0m[90m TS1109: [0mExpression expected.
+
+[7m191[0m       if (findUser.records.length == 0) return throw new HttpException(403)  { message: `password or email is incorrect` };
+[7m   [0m [91m                                               ~~~~~[0m
+[96msrc/services/auth.service.ts[0m:[93m191[0m:[93m78[0m - [91merror[0m[90m TS1005: [0m';' expected.
+
+[7m191[0m       if (findUser.records.length == 0) return throw new HttpException(403)  { message: `password or email is incorrect` };
+[7m   [0m [91m                                                                             ~[0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/services/auth.service.ts[0m:[93m191[0m:[93m48[0m - [91merror[0m[90m TS1109: [0mExpression expected.
+
+[7m191[0m       if (findUser.records.length == 0) return throw new HttpException(403)  { message: `password or email is incorrect` };
+[7m   [0m [91m                                               ~~~~~[0m
+[96msrc/services/auth.service.ts[0m:[93m191[0m:[93m78[0m - [91merror[0m[90m TS1005: [0m';' expected.
+
+[7m191[0m       if (findUser.records.length == 0) return throw new HttpException(403)  { message: `password or email is incorrect` };
+[7m   [0m [91m                                                                             ~[0m
+
+    at createTSError (C:\Users\Devops3\Documents\Projects\feetflight\feetflight\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\Devops3\Documents\Projects\feetflight\feetflight\node_modules\ts-node\src\index.ts:863:19)
+    at C:\Users\Devops3\Documents\Projects\feetflight\feetflight\node_modules\ts-node\src\index.ts:1379:34
+    at Object.compile (C:\Users\Devops3\Documents\Projects\feetflight\feetflight\node_modules\ts-node\src\index.ts:1458:13)
+    at Module.m._compile (C:\Users\Devops3\Documents\Projects\feetflight\feetflight\node_modules\ts-node\src\index.ts:1617:30)
+    at Module._extensions..js (internal/modules/cjs/loader.js:1114:10)
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\Devops3\Documents\Projects\feetflight\feetflight\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (internal/modules/cjs/loader.js:950:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:790:12)
+    at Module.require (internal/modules/cjs/loader.js:974:19)
+2023-10-02 11:51:57 error: uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/controllers/auth.controller.ts[0m:[93m24[0m:[93m56[0m - [91merror[0m[90m TS1005: [0m':' expected.
+
+[7m24[0m       loggedInData ? res.status(200).json(loggedInData);
+[7m  [0m [91m                                                       ~[0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/controllers/auth.controller.ts[0m:[93m24[0m:[93m56[0m - [91merror[0m[90m TS1005: [0m':' expected.
+
+[7m24[0m       loggedInData ? res.status(200).json(loggedInData);
+[7m  [0m [91m                                                       ~[0m
+
+    at createTSError (C:\Users\Devops3\Documents\Projects\feetflight\feetflight\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\Devops3\Documents\Projects\feetflight\feetflight\node_modules\ts-node\src\index.ts:863:19)
+    at C:\Users\Devops3\Documents\Projects\feetflight\feetflight\node_modules\ts-node\src\index.ts:1379:34
+    at Object.compile (C:\Users\Devops3\Documents\Projects\feetflight\feetflight\node_modules\ts-node\src\index.ts:1458:13)
+    at Module.m._compile (C:\Users\Devops3\Documents\Projects\feetflight\feetflight\node_modules\ts-node\src\index.ts:1617:30)
+    at Module._extensions..js (internal/modules/cjs/loader.js:1114:10)
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\Devops3\Documents\Projects\feetflight\feetflight\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (internal/modules/cjs/loader.js:950:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:790:12)
+    at Module.require (internal/modules/cjs/loader.js:974:19)
+2023-10-02 11:52:01 error: uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/controllers/auth.controller.ts[0m:[93m25[0m:[93m5[0m - [91merror[0m[90m TS1109: [0mExpression expected.
+
+[7m25[0m     } catch (error) {
+[7m  [0m [91m    ~[0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/controllers/auth.controller.ts[0m:[93m25[0m:[93m5[0m - [91merror[0m[90m TS1109: [0mExpression expected.
+
+[7m25[0m     } catch (error) {
+[7m  [0m [91m    ~[0m
+
+    at createTSError (C:\Users\Devops3\Documents\Projects\feetflight\feetflight\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\Devops3\Documents\Projects\feetflight\feetflight\node_modules\ts-node\src\index.ts:863:19)
+    at C:\Users\Devops3\Documents\Projects\feetflight\feetflight\node_modules\ts-node\src\index.ts:1379:34
+    at Object.compile (C:\Users\Devops3\Documents\Projects\feetflight\feetflight\node_modules\ts-node\src\index.ts:1458:13)
+    at Module.m._compile (C:\Users\Devops3\Documents\Projects\feetflight\feetflight\node_modules\ts-node\src\index.ts:1617:30)
+    at Module._extensions..js (internal/modules/cjs/loader.js:1114:10)
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\Devops3\Documents\Projects\feetflight\feetflight\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (internal/modules/cjs/loader.js:950:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:790:12)
+    at Module.require (internal/modules/cjs/loader.js:974:19)
+2023-10-02 11:52:08 error: uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/controllers/auth.controller.ts[0m:[93m25[0m:[93m5[0m - [91merror[0m[90m TS1109: [0mExpression expected.
+
+[7m25[0m     } catch (error) {
+[7m  [0m [91m    ~[0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/controllers/auth.controller.ts[0m:[93m25[0m:[93m5[0m - [91merror[0m[90m TS1109: [0mExpression expected.
+
+[7m25[0m     } catch (error) {
+[7m  [0m [91m    ~[0m
+
+    at createTSError (C:\Users\Devops3\Documents\Projects\feetflight\feetflight\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\Devops3\Documents\Projects\feetflight\feetflight\node_modules\ts-node\src\index.ts:863:19)
+    at C:\Users\Devops3\Documents\Projects\feetflight\feetflight\node_modules\ts-node\src\index.ts:1379:34
+    at Object.compile (C:\Users\Devops3\Documents\Projects\feetflight\feetflight\node_modules\ts-node\src\index.ts:1458:13)
+    at Module.m._compile (C:\Users\Devops3\Documents\Projects\feetflight\feetflight\node_modules\ts-node\src\index.ts:1617:30)
+    at Module._extensions..js (internal/modules/cjs/loader.js:1114:10)
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\Devops3\Documents\Projects\feetflight\feetflight\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (internal/modules/cjs/loader.js:950:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:790:12)
+    at Module.require (internal/modules/cjs/loader.js:974:19)
+2023-10-02 11:52:10 error: uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/controllers/auth.controller.ts[0m:[93m25[0m:[93m5[0m - [91merror[0m[90m TS1109: [0mExpression expected.
+
+[7m25[0m     } catch (error) {
+[7m  [0m [91m    ~[0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/controllers/auth.controller.ts[0m:[93m25[0m:[93m5[0m - [91merror[0m[90m TS1109: [0mExpression expected.
+
+[7m25[0m     } catch (error) {
+[7m  [0m [91m    ~[0m
+
+    at createTSError (C:\Users\Devops3\Documents\Projects\feetflight\feetflight\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\Devops3\Documents\Projects\feetflight\feetflight\node_modules\ts-node\src\index.ts:863:19)
+    at C:\Users\Devops3\Documents\Projects\feetflight\feetflight\node_modules\ts-node\src\index.ts:1379:34
+    at Object.compile (C:\Users\Devops3\Documents\Projects\feetflight\feetflight\node_modules\ts-node\src\index.ts:1458:13)
+    at Module.m._compile (C:\Users\Devops3\Documents\Projects\feetflight\feetflight\node_modules\ts-node\src\index.ts:1617:30)
+    at Module._extensions..js (internal/modules/cjs/loader.js:1114:10)
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\Devops3\Documents\Projects\feetflight\feetflight\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (internal/modules/cjs/loader.js:950:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:790:12)
+    at Module.require (internal/modules/cjs/loader.js:974:19)
+2023-10-02 11:52:13 error: uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/controllers/auth.controller.ts[0m:[93m25[0m:[93m5[0m - [91merror[0m[90m TS1109: [0mExpression expected.
+
+[7m25[0m     } catch (error) {
+[7m  [0m [91m    ~[0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/controllers/auth.controller.ts[0m:[93m25[0m:[93m5[0m - [91merror[0m[90m TS1109: [0mExpression expected.
+
+[7m25[0m     } catch (error) {
+[7m  [0m [91m    ~[0m
+
+    at createTSError (C:\Users\Devops3\Documents\Projects\feetflight\feetflight\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\Devops3\Documents\Projects\feetflight\feetflight\node_modules\ts-node\src\index.ts:863:19)
+    at C:\Users\Devops3\Documents\Projects\feetflight\feetflight\node_modules\ts-node\src\index.ts:1379:34
+    at Object.compile (C:\Users\Devops3\Documents\Projects\feetflight\feetflight\node_modules\ts-node\src\index.ts:1458:13)
+    at Module.m._compile (C:\Users\Devops3\Documents\Projects\feetflight\feetflight\node_modules\ts-node\src\index.ts:1617:30)
+    at Module._extensions..js (internal/modules/cjs/loader.js:1114:10)
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\Devops3\Documents\Projects\feetflight\feetflight\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (internal/modules/cjs/loader.js:950:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:790:12)
+    at Module.require (internal/modules/cjs/loader.js:974:19)
+2023-10-02 11:52:16 error: uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/controllers/auth.controller.ts[0m:[93m24[0m:[93m28[0m - [91merror[0m[90m TS1005: [0m';' expected.
+
+[7m24[0m       loggedInData.message res.status(200).json(loggedInData) :  ?
+[7m  [0m [91m                           ~~~[0m
+[96msrc/controllers/auth.controller.ts[0m:[93m24[0m:[93m63[0m - [91merror[0m[90m TS1005: [0m';' expected.
+
+[7m24[0m       loggedInData.message res.status(200).json(loggedInData) :  ?
+[7m  [0m [91m                                                              ~[0m
+[96msrc/controllers/auth.controller.ts[0m:[93m24[0m:[93m66[0m - [91merror[0m[90m TS1128: [0mDeclaration or statement expected.
+
+[7m24[0m       loggedInData.message res.status(200).json(loggedInData) :  ?
+[7m  [0m [91m                                                                 ~[0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/controllers/auth.controller.ts[0m:[93m24[0m:[93m28[0m - [91merror[0m[90m TS1005: [0m';' expected.
+
+[7m24[0m       loggedInData.message res.status(200).json(loggedInData) :  ?
+[7m  [0m [91m                           ~~~[0m
+[96msrc/controllers/auth.controller.ts[0m:[93m24[0m:[93m63[0m - [91merror[0m[90m TS1005: [0m';' expected.
+
+[7m24[0m       loggedInData.message res.status(200).json(loggedInData) :  ?
+[7m  [0m [91m                                                              ~[0m
+[96msrc/controllers/auth.controller.ts[0m:[93m24[0m:[93m66[0m - [91merror[0m[90m TS1128: [0mDeclaration or statement expected.
+
+[7m24[0m       loggedInData.message res.status(200).json(loggedInData) :  ?
+[7m  [0m [91m                                                                 ~[0m
+
+    at createTSError (C:\Users\Devops3\Documents\Projects\feetflight\feetflight\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\Devops3\Documents\Projects\feetflight\feetflight\node_modules\ts-node\src\index.ts:863:19)
+    at C:\Users\Devops3\Documents\Projects\feetflight\feetflight\node_modules\ts-node\src\index.ts:1379:34
+    at Object.compile (C:\Users\Devops3\Documents\Projects\feetflight\feetflight\node_modules\ts-node\src\index.ts:1458:13)
+    at Module.m._compile (C:\Users\Devops3\Documents\Projects\feetflight\feetflight\node_modules\ts-node\src\index.ts:1617:30)
+    at Module._extensions..js (internal/modules/cjs/loader.js:1114:10)
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\Devops3\Documents\Projects\feetflight\feetflight\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (internal/modules/cjs/loader.js:950:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:790:12)
+    at Module.require (internal/modules/cjs/loader.js:974:19)
+2023-10-02 11:52:18 error: uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/controllers/auth.controller.ts[0m:[93m25[0m:[93m5[0m - [91merror[0m[90m TS1109: [0mExpression expected.
+
+[7m25[0m     } catch (error) {
+[7m  [0m [91m    ~[0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/controllers/auth.controller.ts[0m:[93m25[0m:[93m5[0m - [91merror[0m[90m TS1109: [0mExpression expected.
+
+[7m25[0m     } catch (error) {
+[7m  [0m [91m    ~[0m
+
+    at createTSError (C:\Users\Devops3\Documents\Projects\feetflight\feetflight\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\Devops3\Documents\Projects\feetflight\feetflight\node_modules\ts-node\src\index.ts:863:19)
+    at C:\Users\Devops3\Documents\Projects\feetflight\feetflight\node_modules\ts-node\src\index.ts:1379:34
+    at Object.compile (C:\Users\Devops3\Documents\Projects\feetflight\feetflight\node_modules\ts-node\src\index.ts:1458:13)
+    at Module.m._compile (C:\Users\Devops3\Documents\Projects\feetflight\feetflight\node_modules\ts-node\src\index.ts:1617:30)
+    at Module._extensions..js (internal/modules/cjs/loader.js:1114:10)
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\Devops3\Documents\Projects\feetflight\feetflight\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (internal/modules/cjs/loader.js:950:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:790:12)
+    at Module.require (internal/modules/cjs/loader.js:974:19)
+2023-10-02 11:52:20 error: uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/controllers/auth.controller.ts[0m:[93m25[0m:[93m5[0m - [91merror[0m[90m TS1109: [0mExpression expected.
+
+[7m25[0m     } catch (error) {
+[7m  [0m [91m    ~[0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/controllers/auth.controller.ts[0m:[93m25[0m:[93m5[0m - [91merror[0m[90m TS1109: [0mExpression expected.
+
+[7m25[0m     } catch (error) {
+[7m  [0m [91m    ~[0m
+
+    at createTSError (C:\Users\Devops3\Documents\Projects\feetflight\feetflight\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\Devops3\Documents\Projects\feetflight\feetflight\node_modules\ts-node\src\index.ts:863:19)
+    at C:\Users\Devops3\Documents\Projects\feetflight\feetflight\node_modules\ts-node\src\index.ts:1379:34
+    at Object.compile (C:\Users\Devops3\Documents\Projects\feetflight\feetflight\node_modules\ts-node\src\index.ts:1458:13)
+    at Module.m._compile (C:\Users\Devops3\Documents\Projects\feetflight\feetflight\node_modules\ts-node\src\index.ts:1617:30)
+    at Module._extensions..js (internal/modules/cjs/loader.js:1114:10)
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\Devops3\Documents\Projects\feetflight\feetflight\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (internal/modules/cjs/loader.js:950:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:790:12)
+    at Module.require (internal/modules/cjs/loader.js:974:19)
+2023-10-02 11:52:23 error: uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/controllers/auth.controller.ts[0m:[93m25[0m:[93m5[0m - [91merror[0m[90m TS1109: [0mExpression expected.
+
+[7m25[0m     } catch (error) {
+[7m  [0m [91m    ~[0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/controllers/auth.controller.ts[0m:[93m25[0m:[93m5[0m - [91merror[0m[90m TS1109: [0mExpression expected.
+
+[7m25[0m     } catch (error) {
+[7m  [0m [91m    ~[0m
+
+    at createTSError (C:\Users\Devops3\Documents\Projects\feetflight\feetflight\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\Devops3\Documents\Projects\feetflight\feetflight\node_modules\ts-node\src\index.ts:863:19)
+    at C:\Users\Devops3\Documents\Projects\feetflight\feetflight\node_modules\ts-node\src\index.ts:1379:34
+    at Object.compile (C:\Users\Devops3\Documents\Projects\feetflight\feetflight\node_modules\ts-node\src\index.ts:1458:13)
+    at Module.m._compile (C:\Users\Devops3\Documents\Projects\feetflight\feetflight\node_modules\ts-node\src\index.ts:1617:30)
+    at Module._extensions..js (internal/modules/cjs/loader.js:1114:10)
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\Devops3\Documents\Projects\feetflight\feetflight\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (internal/modules/cjs/loader.js:950:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:790:12)
+    at Module.require (internal/modules/cjs/loader.js:974:19)
+2023-10-02 11:52:24 error: uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/controllers/auth.controller.ts[0m:[93m25[0m:[93m5[0m - [91merror[0m[90m TS1109: [0mExpression expected.
+
+[7m25[0m     } catch (error) {
+[7m  [0m [91m    ~[0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/controllers/auth.controller.ts[0m:[93m25[0m:[93m5[0m - [91merror[0m[90m TS1109: [0mExpression expected.
+
+[7m25[0m     } catch (error) {
+[7m  [0m [91m    ~[0m
+
+    at createTSError (C:\Users\Devops3\Documents\Projects\feetflight\feetflight\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\Devops3\Documents\Projects\feetflight\feetflight\node_modules\ts-node\src\index.ts:863:19)
+    at C:\Users\Devops3\Documents\Projects\feetflight\feetflight\node_modules\ts-node\src\index.ts:1379:34
+    at Object.compile (C:\Users\Devops3\Documents\Projects\feetflight\feetflight\node_modules\ts-node\src\index.ts:1458:13)
+    at Module.m._compile (C:\Users\Devops3\Documents\Projects\feetflight\feetflight\node_modules\ts-node\src\index.ts:1617:30)
+    at Module._extensions..js (internal/modules/cjs/loader.js:1114:10)
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\Devops3\Documents\Projects\feetflight\feetflight\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (internal/modules/cjs/loader.js:950:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:790:12)
+    at Module.require (internal/modules/cjs/loader.js:974:19)
+2023-10-02 11:52:26 error: uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/controllers/auth.controller.ts[0m:[93m25[0m:[93m5[0m - [91merror[0m[90m TS1109: [0mExpression expected.
+
+[7m25[0m     } catch (error) {
+[7m  [0m [91m    ~[0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/controllers/auth.controller.ts[0m:[93m25[0m:[93m5[0m - [91merror[0m[90m TS1109: [0mExpression expected.
+
+[7m25[0m     } catch (error) {
+[7m  [0m [91m    ~[0m
+
+    at createTSError (C:\Users\Devops3\Documents\Projects\feetflight\feetflight\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\Devops3\Documents\Projects\feetflight\feetflight\node_modules\ts-node\src\index.ts:863:19)
+    at C:\Users\Devops3\Documents\Projects\feetflight\feetflight\node_modules\ts-node\src\index.ts:1379:34
+    at Object.compile (C:\Users\Devops3\Documents\Projects\feetflight\feetflight\node_modules\ts-node\src\index.ts:1458:13)
+    at Module.m._compile (C:\Users\Devops3\Documents\Projects\feetflight\feetflight\node_modules\ts-node\src\index.ts:1617:30)
+    at Module._extensions..js (internal/modules/cjs/loader.js:1114:10)
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\Devops3\Documents\Projects\feetflight\feetflight\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (internal/modules/cjs/loader.js:950:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:790:12)
+    at Module.require (internal/modules/cjs/loader.js:974:19)
+2023-10-02 11:52:33 error: uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/controllers/auth.controller.ts[0m:[93m25[0m:[93m5[0m - [91merror[0m[90m TS1005: [0m':' expected.
+
+[7m25[0m     } catch (error) {
+[7m  [0m [91m    ~[0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/controllers/auth.controller.ts[0m:[93m25[0m:[93m5[0m - [91merror[0m[90m TS1005: [0m':' expected.
+
+[7m25[0m     } catch (error) {
+[7m  [0m [91m    ~[0m
+
+    at createTSError (C:\Users\Devops3\Documents\Projects\feetflight\feetflight\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\Devops3\Documents\Projects\feetflight\feetflight\node_modules\ts-node\src\index.ts:863:19)
+    at C:\Users\Devops3\Documents\Projects\feetflight\feetflight\node_modules\ts-node\src\index.ts:1379:34
+    at Object.compile (C:\Users\Devops3\Documents\Projects\feetflight\feetflight\node_modules\ts-node\src\index.ts:1458:13)
+    at Module.m._compile (C:\Users\Devops3\Documents\Projects\feetflight\feetflight\node_modules\ts-node\src\index.ts:1617:30)
+    at Module._extensions..js (internal/modules/cjs/loader.js:1114:10)
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\Devops3\Documents\Projects\feetflight\feetflight\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (internal/modules/cjs/loader.js:950:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:790:12)
+    at Module.require (internal/modules/cjs/loader.js:974:19)
+2023-10-02 11:52:37 error: uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/controllers/auth.controller.ts[0m:[93m25[0m:[93m5[0m - [91merror[0m[90m TS1005: [0m':' expected.
+
+[7m25[0m     } catch (error) {
+[7m  [0m [91m    ~[0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/controllers/auth.controller.ts[0m:[93m25[0m:[93m5[0m - [91merror[0m[90m TS1005: [0m':' expected.
+
+[7m25[0m     } catch (error) {
+[7m  [0m [91m    ~[0m
+
+    at createTSError (C:\Users\Devops3\Documents\Projects\feetflight\feetflight\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\Devops3\Documents\Projects\feetflight\feetflight\node_modules\ts-node\src\index.ts:863:19)
+    at C:\Users\Devops3\Documents\Projects\feetflight\feetflight\node_modules\ts-node\src\index.ts:1379:34
+    at Object.compile (C:\Users\Devops3\Documents\Projects\feetflight\feetflight\node_modules\ts-node\src\index.ts:1458:13)
+    at Module.m._compile (C:\Users\Devops3\Documents\Projects\feetflight\feetflight\node_modules\ts-node\src\index.ts:1617:30)
+    at Module._extensions..js (internal/modules/cjs/loader.js:1114:10)
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\Devops3\Documents\Projects\feetflight\feetflight\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (internal/modules/cjs/loader.js:950:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:790:12)
+    at Module.require (internal/modules/cjs/loader.js:974:19)
+2023-10-02 11:54:18 error: [GET] /albums/popular >> StatusCode:: 403, Message:: Authentication token missing
+2023-10-02 11:55:40 error: [GET] /albums/popular >> StatusCode:: 401, Message:: Wrong authentication token
+2023-10-02 11:56:20 error: [GET] /albums/popular >> StatusCode:: 401, Message:: Wrong authentication token
+2023-10-02 11:57:18 error: uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/middlewares/auth.middleware.ts[0m:[93m21[0m:[93m15[0m - [91merror[0m[90m TS1003: [0mIdentifier expected.
+
+[7m21[0m       console.
+[7m  [0m [91m              [0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/middlewares/auth.middleware.ts[0m:[93m21[0m:[93m15[0m - [91merror[0m[90m TS1003: [0mIdentifier expected.
+
+[7m21[0m       console.
+[7m  [0m [91m              [0m
+
+    at createTSError (C:\Users\Devops3\Documents\Projects\feetflight\feetflight\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\Devops3\Documents\Projects\feetflight\feetflight\node_modules\ts-node\src\index.ts:863:19)
+    at C:\Users\Devops3\Documents\Projects\feetflight\feetflight\node_modules\ts-node\src\index.ts:1379:34
+    at Object.compile (C:\Users\Devops3\Documents\Projects\feetflight\feetflight\node_modules\ts-node\src\index.ts:1458:13)
+    at Module.m._compile (C:\Users\Devops3\Documents\Projects\feetflight\feetflight\node_modules\ts-node\src\index.ts:1617:30)
+    at Module._extensions..js (internal/modules/cjs/loader.js:1114:10)
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\Devops3\Documents\Projects\feetflight\feetflight\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (internal/modules/cjs/loader.js:950:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:790:12)
+    at Module.require (internal/modules/cjs/loader.js:974:19)
+2023-10-02 11:57:23 error: uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/middlewares/auth.middleware.ts[0m:[93m23[0m:[93m7[0m - [91merror[0m[90m TS1135: [0mArgument expression expected.
+
+[7m23[0m       const userId = verificationResponse.id;
+[7m  [0m [91m      ~~~~~[0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/middlewares/auth.middleware.ts[0m:[93m23[0m:[93m7[0m - [91merror[0m[90m TS1135: [0mArgument expression expected.
+
+[7m23[0m       const userId = verificationResponse.id;
+[7m  [0m [91m      ~~~~~[0m
+
+    at createTSError (C:\Users\Devops3\Documents\Projects\feetflight\feetflight\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\Devops3\Documents\Projects\feetflight\feetflight\node_modules\ts-node\src\index.ts:863:19)
+    at C:\Users\Devops3\Documents\Projects\feetflight\feetflight\node_modules\ts-node\src\index.ts:1379:34
+    at Object.compile (C:\Users\Devops3\Documents\Projects\feetflight\feetflight\node_modules\ts-node\src\index.ts:1458:13)
+    at Module.m._compile (C:\Users\Devops3\Documents\Projects\feetflight\feetflight\node_modules\ts-node\src\index.ts:1617:30)
+    at Module._extensions..js (internal/modules/cjs/loader.js:1114:10)
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\Devops3\Documents\Projects\feetflight\feetflight\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (internal/modules/cjs/loader.js:950:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:790:12)
+    at Module.require (internal/modules/cjs/loader.js:974:19)
+2023-10-02 11:57:50 error: [GET] /albums/popular >> StatusCode:: 401, Message:: Wrong authentication token
+2023-10-02 11:58:08 error: [GET] /albums/popular >> StatusCode:: 401, Message:: Wrong authentication token
+2023-10-02 11:59:57 error: [GET] /albums/popular >> StatusCode:: 401, Message:: Wrong authentication token
+2023-10-02 12:02:21 error: [POST] /refresh >> StatusCode:: 500, Message:: Cannot read property 'token' of undefined
+2023-10-02 12:02:57 error: uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/services/auth.service.ts[0m:[93m256[0m:[93m51[0m - [91merror[0m[90m TS1109: [0mExpression expected.
+
+[7m256[0m       const dataStoredInToken = { data, refresh:  };
+[7m   [0m [91m                                                  ~[0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/services/auth.service.ts[0m:[93m256[0m:[93m51[0m - [91merror[0m[90m TS1109: [0mExpression expected.
+
+[7m256[0m       const dataStoredInToken = { data, refresh:  };
+[7m   [0m [91m                                                  ~[0m
+
+    at createTSError (C:\Users\Devops3\Documents\Projects\feetflight\feetflight\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\Devops3\Documents\Projects\feetflight\feetflight\node_modules\ts-node\src\index.ts:863:19)
+    at C:\Users\Devops3\Documents\Projects\feetflight\feetflight\node_modules\ts-node\src\index.ts:1379:34
+    at Object.compile (C:\Users\Devops3\Documents\Projects\feetflight\feetflight\node_modules\ts-node\src\index.ts:1458:13)
+    at Module.m._compile (C:\Users\Devops3\Documents\Projects\feetflight\feetflight\node_modules\ts-node\src\index.ts:1617:30)
+    at Module._extensions..js (internal/modules/cjs/loader.js:1114:10)
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\Devops3\Documents\Projects\feetflight\feetflight\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (internal/modules/cjs/loader.js:950:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:790:12)
+    at Module.require (internal/modules/cjs/loader.js:974:19)
+2023-10-02 12:03:00 error: uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/services/auth.service.ts[0m:[93m256[0m:[93m51[0m - [91merror[0m[90m TS1109: [0mExpression expected.
+
+[7m256[0m       const dataStoredInToken = { data, refresh:  };
+[7m   [0m [91m                                                  ~[0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/services/auth.service.ts[0m:[93m256[0m:[93m51[0m - [91merror[0m[90m TS1109: [0mExpression expected.
+
+[7m256[0m       const dataStoredInToken = { data, refresh:  };
+[7m   [0m [91m                                                  ~[0m
+
+    at createTSError (C:\Users\Devops3\Documents\Projects\feetflight\feetflight\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\Devops3\Documents\Projects\feetflight\feetflight\node_modules\ts-node\src\index.ts:863:19)
+    at C:\Users\Devops3\Documents\Projects\feetflight\feetflight\node_modules\ts-node\src\index.ts:1379:34
+    at Object.compile (C:\Users\Devops3\Documents\Projects\feetflight\feetflight\node_modules\ts-node\src\index.ts:1458:13)
+    at Module.m._compile (C:\Users\Devops3\Documents\Projects\feetflight\feetflight\node_modules\ts-node\src\index.ts:1617:30)
+    at Module._extensions..js (internal/modules/cjs/loader.js:1114:10)
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\Devops3\Documents\Projects\feetflight\feetflight\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (internal/modules/cjs/loader.js:950:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:790:12)
+    at Module.require (internal/modules/cjs/loader.js:974:19)
+2023-10-02 12:03:07 error: [POST] /refresh >> StatusCode:: 500, Message:: Cannot read property 'token' of undefined
+2023-10-02 12:03:20 error: [GET] /albums/popular >> StatusCode:: 403, Message:: Authentication token missing
+2023-10-02 12:03:24 error: [GET] /albums/popular >> StatusCode:: 401, Message:: Wrong authentication token
+2023-10-02 12:04:15 error: [GET] /albums/popular >> StatusCode:: 401, Message:: Wrong authentication token
+2023-10-02 12:04:54 error: [GET] /albums/popular >> StatusCode:: 401, Message:: Wrong authentication token
+2023-10-02 12:05:24 error: uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/middlewares/auth.middleware.ts[0m:[93m28[0m:[93m29[0m - [91merror[0m[90m TS1003: [0mIdentifier expected.
+
+[7m28[0m       if (foundUser.records.) {
+[7m  [0m [91m                            ~[0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/middlewares/auth.middleware.ts[0m:[93m28[0m:[93m29[0m - [91merror[0m[90m TS1003: [0mIdentifier expected.
+
+[7m28[0m       if (foundUser.records.) {
+[7m  [0m [91m                            ~[0m
+
+    at createTSError (C:\Users\Devops3\Documents\Projects\feetflight\feetflight\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\Devops3\Documents\Projects\feetflight\feetflight\node_modules\ts-node\src\index.ts:863:19)
+    at C:\Users\Devops3\Documents\Projects\feetflight\feetflight\node_modules\ts-node\src\index.ts:1379:34
+    at Object.compile (C:\Users\Devops3\Documents\Projects\feetflight\feetflight\node_modules\ts-node\src\index.ts:1458:13)
+    at Module.m._compile (C:\Users\Devops3\Documents\Projects\feetflight\feetflight\node_modules\ts-node\src\index.ts:1617:30)
+    at Module._extensions..js (internal/modules/cjs/loader.js:1114:10)
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\Devops3\Documents\Projects\feetflight\feetflight\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (internal/modules/cjs/loader.js:950:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:790:12)
+    at Module.require (internal/modules/cjs/loader.js:974:19)
+2023-10-02 12:05:56 error: [POST] /refresh >> StatusCode:: 500, Message:: Cannot read property 'token' of undefined
+2023-10-02 12:44:17 error: [GET] /albums/popular >> StatusCode:: 403, Message:: Authentication token missing
+2023-10-02 12:44:17 error: [GET] /albums >> StatusCode:: 403, Message:: Authentication token missing
+2023-10-02 12:46:14 error: [GET] /albums/popular >> StatusCode:: 403, Message:: Authentication token missing
+2023-10-02 12:46:14 error: [GET] /albums >> StatusCode:: 403, Message:: Authentication token missing
+2023-10-02 13:02:17 error: [GET] /albums >> StatusCode:: 401, Message:: Wrong authentication token
+2023-10-02 13:02:17 error: [GET] /albums/popular >> StatusCode:: 401, Message:: Wrong authentication token
+2023-10-02 13:06:59 error: [GET] /albums >> StatusCode:: 401, Message:: Wrong authentication token
+2023-10-02 13:06:59 error: [GET] /albums/popular >> StatusCode:: 401, Message:: Wrong authentication token
+2023-10-02 13:10:18 error: [GET] /albums >> StatusCode:: 401, Message:: Wrong authentication token
+2023-10-02 13:10:18 error: [GET] /albums/popular >> StatusCode:: 401, Message:: Wrong authentication token
+2023-10-02 15:40:51 error: [GET] /albums/popular >> StatusCode:: 403, Message:: Authentication token missing
+2023-10-02 15:40:51 error: [GET] /albums >> StatusCode:: 403, Message:: Authentication token missing
+2023-10-02 16:06:41 error: [GET] /albums/popular >> StatusCode:: 403, Message:: Authentication token missing
+2023-10-02 16:06:41 error: [GET] /albums >> StatusCode:: 403, Message:: Authentication token missing
+2023-10-02 17:59:17 error: uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/services/auth.service.ts[0m:[93m247[0m:[93m48[0m - [91merror[0m[90m TS1003: [0mIdentifier expected.
+
+[7m247[0m       expiresIn.setDate(expiresIn.getSeconds().);
+[7m   [0m [91m                                               ~[0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/services/auth.service.ts[0m:[93m247[0m:[93m48[0m - [91merror[0m[90m TS1003: [0mIdentifier expected.
+
+[7m247[0m       expiresIn.setDate(expiresIn.getSeconds().);
+[7m   [0m [91m                                               ~[0m
+
+    at createTSError (C:\Users\Devops3\Documents\Projects\feetflight\feetflight\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\Devops3\Documents\Projects\feetflight\feetflight\node_modules\ts-node\src\index.ts:863:19)
+    at C:\Users\Devops3\Documents\Projects\feetflight\feetflight\node_modules\ts-node\src\index.ts:1379:34
+    at Object.compile (C:\Users\Devops3\Documents\Projects\feetflight\feetflight\node_modules\ts-node\src\index.ts:1458:13)
+    at Module.m._compile (C:\Users\Devops3\Documents\Projects\feetflight\feetflight\node_modules\ts-node\src\index.ts:1617:30)
+    at Module._extensions..js (internal/modules/cjs/loader.js:1114:10)
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\Devops3\Documents\Projects\feetflight\feetflight\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (internal/modules/cjs/loader.js:950:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:790:12)
+    at Module.require (internal/modules/cjs/loader.js:974:19)
+2023-10-02 17:59:29 error: uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/services/auth.service.ts[0m:[93m247[0m:[93m50[0m - [91merror[0m[90m TS1109: [0mExpression expected.
+
+[7m247[0m       expiresIn.setDate(expiresIn.getSeconds() + );
+[7m   [0m [91m                                                 ~[0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/services/auth.service.ts[0m:[93m247[0m:[93m50[0m - [91merror[0m[90m TS1109: [0mExpression expected.
+
+[7m247[0m       expiresIn.setDate(expiresIn.getSeconds() + );
+[7m   [0m [91m                                                 ~[0m
+
+    at createTSError (C:\Users\Devops3\Documents\Projects\feetflight\feetflight\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\Devops3\Documents\Projects\feetflight\feetflight\node_modules\ts-node\src\index.ts:863:19)
+    at C:\Users\Devops3\Documents\Projects\feetflight\feetflight\node_modules\ts-node\src\index.ts:1379:34
+    at Object.compile (C:\Users\Devops3\Documents\Projects\feetflight\feetflight\node_modules\ts-node\src\index.ts:1458:13)
+    at Module.m._compile (C:\Users\Devops3\Documents\Projects\feetflight\feetflight\node_modules\ts-node\src\index.ts:1617:30)
+    at Module._extensions..js (internal/modules/cjs/loader.js:1114:10)
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\Devops3\Documents\Projects\feetflight\feetflight\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (internal/modules/cjs/loader.js:950:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:790:12)
+    at Module.require (internal/modules/cjs/loader.js:974:19)
+2023-10-02 17:59:42 error: uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/services/auth.service.ts[0m:[93m247[0m:[93m55[0m - [91merror[0m[90m TS1003: [0mIdentifier expected.
+
+[7m247[0m       expiresIn.setDate(expiresIn.getSeconds() + Date.);
+[7m   [0m [91m                                                      ~[0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/services/auth.service.ts[0m:[93m247[0m:[93m55[0m - [91merror[0m[90m TS1003: [0mIdentifier expected.
+
+[7m247[0m       expiresIn.setDate(expiresIn.getSeconds() + Date.);
+[7m   [0m [91m                                                      ~[0m
+
+    at createTSError (C:\Users\Devops3\Documents\Projects\feetflight\feetflight\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\Devops3\Documents\Projects\feetflight\feetflight\node_modules\ts-node\src\index.ts:863:19)
+    at C:\Users\Devops3\Documents\Projects\feetflight\feetflight\node_modules\ts-node\src\index.ts:1379:34
+    at Object.compile (C:\Users\Devops3\Documents\Projects\feetflight\feetflight\node_modules\ts-node\src\index.ts:1458:13)
+    at Module.m._compile (C:\Users\Devops3\Documents\Projects\feetflight\feetflight\node_modules\ts-node\src\index.ts:1617:30)
+    at Module._extensions..js (internal/modules/cjs/loader.js:1114:10)
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\Devops3\Documents\Projects\feetflight\feetflight\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (internal/modules/cjs/loader.js:950:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:790:12)
+    at Module.require (internal/modules/cjs/loader.js:974:19)
+2023-10-02 18:00:06 error: uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/services/auth.service.ts[0m:[93m247[0m:[93m57[0m - [91merror[0m[90m TS1003: [0mIdentifier expected.
+
+[7m247[0m       expiresIn.setDate(expiresIn.getSeconds() + Date().);
+[7m   [0m [91m                                                        ~[0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/services/auth.service.ts[0m:[93m247[0m:[93m57[0m - [91merror[0m[90m TS1003: [0mIdentifier expected.
+
+[7m247[0m       expiresIn.setDate(expiresIn.getSeconds() + Date().);
+[7m   [0m [91m                                                        ~[0m
+
+    at createTSError (C:\Users\Devops3\Documents\Projects\feetflight\feetflight\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\Devops3\Documents\Projects\feetflight\feetflight\node_modules\ts-node\src\index.ts:863:19)
+    at C:\Users\Devops3\Documents\Projects\feetflight\feetflight\node_modules\ts-node\src\index.ts:1379:34
+    at Object.compile (C:\Users\Devops3\Documents\Projects\feetflight\feetflight\node_modules\ts-node\src\index.ts:1458:13)
+    at Module.m._compile (C:\Users\Devops3\Documents\Projects\feetflight\feetflight\node_modules\ts-node\src\index.ts:1617:30)
+    at Module._extensions..js (internal/modules/cjs/loader.js:1114:10)
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\Devops3\Documents\Projects\feetflight\feetflight\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (internal/modules/cjs/loader.js:950:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:790:12)
+    at Module.require (internal/modules/cjs/loader.js:974:19)
+2023-10-02 18:00:09 error: uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/services/auth.service.ts[0m:[93m247[0m:[93m50[0m - [91merror[0m[90m TS1109: [0mExpression expected.
+
+[7m247[0m       expiresIn.setDate(expiresIn.getSeconds() + );
+[7m   [0m [91m                                                 ~[0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/services/auth.service.ts[0m:[93m247[0m:[93m50[0m - [91merror[0m[90m TS1109: [0mExpression expected.
+
+[7m247[0m       expiresIn.setDate(expiresIn.getSeconds() + );
+[7m   [0m [91m                                                 ~[0m
+
+    at createTSError (C:\Users\Devops3\Documents\Projects\feetflight\feetflight\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\Devops3\Documents\Projects\feetflight\feetflight\node_modules\ts-node\src\index.ts:863:19)
+    at C:\Users\Devops3\Documents\Projects\feetflight\feetflight\node_modules\ts-node\src\index.ts:1379:34
+    at Object.compile (C:\Users\Devops3\Documents\Projects\feetflight\feetflight\node_modules\ts-node\src\index.ts:1458:13)
+    at Module.m._compile (C:\Users\Devops3\Documents\Projects\feetflight\feetflight\node_modules\ts-node\src\index.ts:1617:30)
+    at Module._extensions..js (internal/modules/cjs/loader.js:1114:10)
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\Devops3\Documents\Projects\feetflight\feetflight\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (internal/modules/cjs/loader.js:950:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:790:12)
+    at Module.require (internal/modules/cjs/loader.js:974:19)
+2023-10-02 18:00:12 error: uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/services/auth.service.ts[0m:[93m247[0m:[93m43[0m - [91merror[0m[90m TS1109: [0mExpression expected.
+
+[7m247[0m       expiresIn.setDate(expiresIn.get() + );
+[7m   [0m [91m                                          ~[0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/services/auth.service.ts[0m:[93m247[0m:[93m43[0m - [91merror[0m[90m TS1109: [0mExpression expected.
+
+[7m247[0m       expiresIn.setDate(expiresIn.get() + );
+[7m   [0m [91m                                          ~[0m
+
+    at createTSError (C:\Users\Devops3\Documents\Projects\feetflight\feetflight\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\Devops3\Documents\Projects\feetflight\feetflight\node_modules\ts-node\src\index.ts:863:19)
+    at C:\Users\Devops3\Documents\Projects\feetflight\feetflight\node_modules\ts-node\src\index.ts:1379:34
+    at Object.compile (C:\Users\Devops3\Documents\Projects\feetflight\feetflight\node_modules\ts-node\src\index.ts:1458:13)
+    at Module.m._compile (C:\Users\Devops3\Documents\Projects\feetflight\feetflight\node_modules\ts-node\src\index.ts:1617:30)
+    at Module._extensions..js (internal/modules/cjs/loader.js:1114:10)
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\Devops3\Documents\Projects\feetflight\feetflight\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (internal/modules/cjs/loader.js:950:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:790:12)
+    at Module.require (internal/modules/cjs/loader.js:974:19)
+2023-10-02 18:00:17 error: uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/services/auth.service.ts[0m:[93m247[0m:[93m48[0m - [91merror[0m[90m TS1109: [0mExpression expected.
+
+[7m247[0m       expiresIn.setDate(expiresIn.getHours() + );
+[7m   [0m [91m                                               ~[0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/services/auth.service.ts[0m:[93m247[0m:[93m48[0m - [91merror[0m[90m TS1109: [0mExpression expected.
+
+[7m247[0m       expiresIn.setDate(expiresIn.getHours() + );
+[7m   [0m [91m                                               ~[0m
+
+    at createTSError (C:\Users\Devops3\Documents\Projects\feetflight\feetflight\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\Devops3\Documents\Projects\feetflight\feetflight\node_modules\ts-node\src\index.ts:863:19)
+    at C:\Users\Devops3\Documents\Projects\feetflight\feetflight\node_modules\ts-node\src\index.ts:1379:34
+    at Object.compile (C:\Users\Devops3\Documents\Projects\feetflight\feetflight\node_modules\ts-node\src\index.ts:1458:13)
+    at Module.m._compile (C:\Users\Devops3\Documents\Projects\feetflight\feetflight\node_modules\ts-node\src\index.ts:1617:30)
+    at Module._extensions..js (internal/modules/cjs/loader.js:1114:10)
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\Devops3\Documents\Projects\feetflight\feetflight\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (internal/modules/cjs/loader.js:950:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:790:12)
+    at Module.require (internal/modules/cjs/loader.js:974:19)
+2023-10-02 18:02:47 error: [GET] /albums/popular >> StatusCode:: 401, Message:: Wrong authentication token
+2023-10-02 18:04:31 error: [GET] /albums/popular >> StatusCode:: 401, Message:: Wrong authentication token
+2023-10-02 18:11:52 error: [GET] /albums/popular >> StatusCode:: 401, Message:: Wrong authentication token
+2023-10-02 18:11:52 error: [GET] /albums >> StatusCode:: 401, Message:: Wrong authentication token
+2023-10-02 18:12:36 error: [GET] /albums >> StatusCode:: 401, Message:: Wrong authentication token
+2023-10-02 18:12:36 error: [GET] /albums/popular >> StatusCode:: 401, Message:: Wrong authentication token
+2023-10-02 18:16:11 error: [GET] /albums >> StatusCode:: 401, Message:: Wrong authentication token
+2023-10-02 18:16:11 error: [GET] /albums/popular >> StatusCode:: 401, Message:: Wrong authentication token
+2023-10-02 18:21:34 error: [GET] /albums >> StatusCode:: 401, Message:: Wrong authentication token
+2023-10-02 18:21:34 error: [GET] /albums/popular >> StatusCode:: 401, Message:: Wrong authentication token
+2023-10-02 18:22:14 error: [GET] /albums/popular >> StatusCode:: 401, Message:: Wrong authentication token
+2023-10-02 18:22:14 error: [GET] /albums >> StatusCode:: 401, Message:: Wrong authentication token
+2023-10-02 18:23:31 error: [GET] /albums >> StatusCode:: 401, Message:: Wrong authentication token
+2023-10-02 18:23:31 error: [GET] /albums/popular >> StatusCode:: 401, Message:: Wrong authentication token
+2023-10-02 18:32:13 error: [GET] /albums/popular >> StatusCode:: 401, Message:: Wrong authentication token
+2023-10-02 18:32:13 error: [GET] /albums >> StatusCode:: 401, Message:: Wrong authentication token
+2023-10-02 18:46:12 error: uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/routes/auth.route.ts[0m:[93m20[0m:[93m45[0m - [91merror[0m[90m TS1135: [0mArgument expression expected.
+
+[7m20[0m     this.router.post(`${this.path}refresh`, , this.authController.generateRefreshToken);
+[7m  [0m [91m                                            ~[0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/routes/auth.route.ts[0m:[93m20[0m:[93m45[0m - [91merror[0m[90m TS1135: [0mArgument expression expected.
+
+[7m20[0m     this.router.post(`${this.path}refresh`, , this.authController.generateRefreshToken);
+[7m  [0m [91m                                            ~[0m
+
+    at createTSError (C:\Users\Devops3\Documents\Projects\feetflight\feetflight\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\Devops3\Documents\Projects\feetflight\feetflight\node_modules\ts-node\src\index.ts:863:19)
+    at C:\Users\Devops3\Documents\Projects\feetflight\feetflight\node_modules\ts-node\src\index.ts:1379:34
+    at Object.compile (C:\Users\Devops3\Documents\Projects\feetflight\feetflight\node_modules\ts-node\src\index.ts:1458:13)
+    at Module.m._compile (C:\Users\Devops3\Documents\Projects\feetflight\feetflight\node_modules\ts-node\src\index.ts:1617:30)
+    at Module._extensions..js (internal/modules/cjs/loader.js:1114:10)
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\Devops3\Documents\Projects\feetflight\feetflight\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (internal/modules/cjs/loader.js:950:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:790:12)
+    at Module.require (internal/modules/cjs/loader.js:974:19)
+2023-10-02 18:46:38 error: [POST] /refresh >> StatusCode:: 403, Message:: Authentication token missing
+2023-10-02 18:46:40 error: [POST] /refresh >> StatusCode:: 403, Message:: Authentication token missing
+2023-10-02 19:00:27 error: [GET] /albums >> StatusCode:: 401, Message:: Wrong authentication token
+2023-10-02 19:00:27 error: [GET] /albums/popular >> StatusCode:: 401, Message:: Wrong authentication token
+2023-10-02 19:04:57 error: [GET] /albums/popular >> StatusCode:: 401, Message:: Wrong authentication token
+2023-10-02 19:04:57 error: [GET] /albums >> StatusCode:: 401, Message:: Wrong authentication token
+2023-10-02 19:08:28 error: [GET] /albums/popular >> StatusCode:: 401, Message:: Wrong authentication token
+2023-10-02 19:08:28 error: [GET] /albums >> StatusCode:: 401, Message:: Wrong authentication token
+2023-10-02 19:12:37 error: [GET] /albums >> StatusCode:: 401, Message:: Wrong authentication token
+2023-10-02 19:12:37 error: [GET] /albums/popular >> StatusCode:: 401, Message:: Wrong authentication token
+2023-10-02 19:14:48 error: [GET] /albums >> StatusCode:: 401, Message:: Wrong authentication token
+2023-10-02 19:14:48 error: [GET] /albums/popular >> StatusCode:: 401, Message:: Wrong authentication token
+2023-10-02 19:31:32 error: [GET] /albums/popular >> StatusCode:: 401, Message:: Wrong authentication token
+2023-10-02 19:31:32 error: [GET] /albums >> StatusCode:: 401, Message:: Wrong authentication token
+2023-10-02 19:40:55 error: [GET] /albums/popular >> StatusCode:: 401, Message:: Wrong authentication token
+2023-10-02 19:40:55 error: [GET] /albums >> StatusCode:: 401, Message:: Wrong authentication token
+2023-10-02 19:50:42 error: [GET] /albums >> StatusCode:: 401, Message:: Wrong authentication token
+2023-10-02 19:50:43 error: [GET] /albums/popular >> StatusCode:: 401, Message:: Wrong authentication token
+2023-10-02 19:51:12 error: [GET] /albums/popular >> StatusCode:: 401, Message:: Wrong authentication token
+2023-10-02 19:51:12 error: [GET] /albums >> StatusCode:: 401, Message:: Wrong authentication token
+2023-10-02 19:52:11 error: [GET] /albums >> StatusCode:: 401, Message:: Wrong authentication token
+2023-10-02 19:52:11 error: [GET] /albums/popular >> StatusCode:: 401, Message:: Wrong authentication token

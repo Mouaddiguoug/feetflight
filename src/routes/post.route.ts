@@ -15,8 +15,8 @@ class postRoute implements Routes {
   }
 
   private initializeRoutes() {
-    this.router.get(`${this.path}`, this.postController.getAllAlbums);
-    this.router.get(`${this.path}/popular`, this.postController.getPopularAlbums);
+    this.router.get(`${this.path}`, authMiddleware, this.postController.getAllAlbums);
+    this.router.get(`${this.path}/popular`, authMiddleware, this.postController.getPopularAlbums);
     this.router.get(`${this.path}/category/:id`, authMiddleware, this.postController.getAlbumByCategory);
     this.router.get(`${this.path}/pictures/:id`, authMiddleware, this.postController.getPostPictures);
     this.router.get(`${this.path}/categories`, this.postController.getCategories);
