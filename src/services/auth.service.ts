@@ -38,7 +38,7 @@ class AuthService {
 
           const createUserSeller = await signupSession.executeWrite(tx =>
             tx.run(
-              'create (u:user {id: $userId, name: $name, email: $email, userName: $userName, password: $password, createdAt: $createdAt, confirmed: false, desactivated: false, country: $country, phone: $phone})-[r: IS_A]->(s:seller {id: $sellerId, verified: $verified}) return u, s',
+              'create (u:user {id: $userId, name: $name, email: $email, userName: $userName, password: $password, createdAt: $createdAt, confirmed: false, desactivated: false, phone: $phone})-[r: IS_A]->(s:seller {id: $sellerId, verified: $verified}) return u, s',
               {
                 userId: uid.uid(40),
                 buyerId: uid.uid(40),
@@ -49,7 +49,6 @@ class AuthService {
                 password: hashedPassword,
                 sellerId: seller.id,
                 verified: false,
-                country: userData.data.country,
                 phone: userData.data.phone,
               },
             ),

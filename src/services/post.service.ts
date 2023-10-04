@@ -225,20 +225,6 @@ class postService {
 
     try {
       for (let key in pictureFiles) {
-
-        //const filecontent = Buffer.from(pictureFiles[key].buffer, 'binary');
-        /* const s3 = new aws.S3();
-
-        const params = {
-          Bucket: process.env.AWS_BUCKET_NAME,
-          Key: `${pictureFiles.fieldname} + ${collectionId}`,
-          Body: filecontent,
-        };
-
-        s3.upload(params, (err, data) => {
-          if (err) return console.log(err);
-          this.createPictures(pictureFiles[key].fieldname, data.Location, collectionId);
-        }); */
         const filecontent = Buffer.from(pictureFiles[key].buffer, 'binary');
 
         writeFile(path.join(__dirname, "../../public/files/albums", `${pictureFiles[key].originalname.replace(".", "")}${collectionId}${moment().format("ssMMyyyy")}.${pictureFiles[key].mimetype.split("/")[1]}`), filecontent, (err) => {
