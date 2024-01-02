@@ -1,10 +1,17 @@
-"use strict";
+/**
+ * @method isEmpty
+ * @param {String | Number | Object} value
+ * @returns {Boolean} true & false
+ * @description this value is Empty Check
+ */ "use strict";
 Object.defineProperty(exports, "__esModule", {
     value: true
 });
 Object.defineProperty(exports, "isEmpty", {
     enumerable: true,
-    get: ()=>isEmpty
+    get: function() {
+        return isEmpty;
+    }
 });
 const isEmpty = (value)=>{
     if (value === null) {

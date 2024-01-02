@@ -2,10 +2,10 @@
 Object.defineProperty(exports, "__esModule", {
     value: true
 });
-const _supertest = _interopRequireDefault(require("supertest"));
-const _app = _interopRequireDefault(require("../app"));
-const _authRoute = _interopRequireDefault(require("../routes/auth.route"));
-function _interopRequireDefault(obj) {
+const _supertest = /*#__PURE__*/ _interop_require_default(require("supertest"));
+const _app = /*#__PURE__*/ _interop_require_default(require("../app"));
+const _authroute = /*#__PURE__*/ _interop_require_default(require("../routes/auth.route"));
+function _interop_require_default(obj) {
     return obj && obj.__esModule ? obj : {
         default: obj
     };
@@ -20,7 +20,7 @@ describe('Testing Auth', ()=>{
                 email: 'example@email.com',
                 password: 'password'
             };
-            const authRoute = new _authRoute.default();
+            const authRoute = new _authroute.default();
             const app = new _app.default([
                 authRoute
             ]);
@@ -33,13 +33,23 @@ describe('Testing Auth', ()=>{
                 email: 'example1@email.com',
                 password: 'password'
             };
-            const authRoute = new _authRoute.default();
+            const authRoute = new _authroute.default();
             const app = new _app.default([
                 authRoute
             ]);
             return (0, _supertest.default)(app.getServer()).post('/login').send(userData).expect('Set-Cookie', /^Authorization=.+/);
         });
     });
+// error: StatusCode : 404, Message : Authentication token missing
+// describe('[POST] /logout', () => {
+//   it('logout Set-Cookie Authorization=; Max-age=0', () => {
+//     const authRoute = new AuthRoute();
+//     const app = new App([authRoute]);
+//     return request(app.getServer())
+//       .post('/logout')
+//       .expect('Set-Cookie', /^Authorization=\;/);
+//   });
+// });
 });
 
 //# sourceMappingURL=auth.test.js.map

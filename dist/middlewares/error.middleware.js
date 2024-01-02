@@ -4,7 +4,9 @@ Object.defineProperty(exports, "__esModule", {
 });
 Object.defineProperty(exports, "default", {
     enumerable: true,
-    get: ()=>_default
+    get: function() {
+        return _default;
+    }
 });
 const _logger = require("../utils/logger");
 const errorMiddleware = (error, req, res, next)=>{

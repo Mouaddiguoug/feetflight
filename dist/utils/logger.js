@@ -9,30 +9,40 @@ function _export(target, all) {
     });
 }
 _export(exports, {
-    logger: ()=>logger,
-    stream: ()=>stream
+    logger: function() {
+        return logger;
+    },
+    stream: function() {
+        return stream;
+    }
 });
 const _fs = require("fs");
 const _path = require("path");
-const _winston = _interopRequireDefault(require("winston"));
-const _winstonDailyRotateFile = _interopRequireDefault(require("winston-daily-rotate-file"));
+const _winston = /*#__PURE__*/ _interop_require_default(require("winston"));
+const _winstondailyrotatefile = /*#__PURE__*/ _interop_require_default(require("winston-daily-rotate-file"));
 const _config = require("../config");
-function _interopRequireDefault(obj) {
+function _interop_require_default(obj) {
     return obj && obj.__esModule ? obj : {
         default: obj
     };
 }
+// logs dir
 const logDir = (0, _path.join)(__dirname, _config.LOG_DIR);
 if (!(0, _fs.existsSync)(logDir)) {
     (0, _fs.mkdirSync)(logDir);
 }
-const logFormat = _winston.default.format.printf(({ timestamp , level , message  })=>`${timestamp} ${level}: ${message}`);
-const logger = _winston.default.createLogger({
+// Define log format
+const logFormat = _winston.default.format.printf(({ timestamp, level, message })=>`${timestamp} ${level}: ${message}`);
+/*
+ * Log Level
+ * error: 0, warn: 1, info: 2, http: 3, verbose: 4, debug: 5, silly: 6
+ */ const logger = _winston.default.createLogger({
     format: _winston.default.format.combine(_winston.default.format.timestamp({
         format: 'YYYY-MM-DD HH:mm:ss'
     }), logFormat),
     transports: [
-        new _winstonDailyRotateFile.default({
+        // debug log setting
+        new _winstondailyrotatefile.default({
             level: 'debug',
             datePattern: 'YYYY-MM-DD',
             dirname: logDir + '/debug',
@@ -41,7 +51,8 @@ const logger = _winston.default.createLogger({
             json: false,
             zippedArchive: true
         }),
-        new _winstonDailyRotateFile.default({
+        // error log setting
+        new _winstondailyrotatefile.default({
             level: 'error',
             datePattern: 'YYYY-MM-DD',
             dirname: logDir + '/error',

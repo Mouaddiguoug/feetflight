@@ -4,17 +4,32 @@ Object.defineProperty(exports, "__esModule", {
 });
 Object.defineProperty(exports, "default", {
     enumerable: true,
-    get: ()=>_default
+    get: function() {
+        return _default;
+    }
 });
+function _define_property(obj, key, value) {
+    if (key in obj) {
+        Object.defineProperty(obj, key, {
+            value: value,
+            enumerable: true,
+            configurable: true,
+            writable: true
+        });
+    } else {
+        obj[key] = value;
+    }
+    return obj;
+}
 let IndexController = class IndexController {
     constructor(){
-        this.index = (req, res, next)=>{
+        _define_property(this, "index", (req, res, next)=>{
             try {
                 res.sendStatus(200);
             } catch (error) {
                 next(error);
             }
-        };
+        });
     }
 };
 const _default = IndexController;

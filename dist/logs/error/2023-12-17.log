@@ -1,0 +1,21 @@
+2023-12-17 12:34:24 error: [GET] /users/cus_PBbQBKCT5KXiiH >> StatusCode:: 401, Message:: missing token
+2023-12-17 12:52:32 error: [GET] /users/cus_PBbQBKCT5KXiiH >> StatusCode:: 401, Message:: missing token
+2023-12-17 12:59:52 error: [GET] /users/8c0301acd2507f0955d9b3a0d5167fc1aabe43ac >> StatusCode:: 401, Message:: missing token
+2023-12-17 12:59:53 error: [GET] /users/8c0301acd2507f0955d9b3a0d5167fc1aabe43ac >> StatusCode:: 400, Message:: Wrong authentication token
+2023-12-17 13:01:45 error: [GET] /users/8c0301acd2507f0955d9b3a0d5167fc1aabe43ac >> StatusCode:: 401, Message:: missing token
+2023-12-17 13:01:47 error: [GET] /users/8c0301acd2507f0955d9b3a0d5167fc1aabe43ac >> StatusCode:: 400, Message:: Wrong authentication token
+2023-12-17 13:22:35 error: [GET] /users/cus_PBbQBKCT5KXiiH >> StatusCode:: 401, Message:: missing token
+2023-12-17 13:23:56 error: [POST] /users/buy/cus_PBbQBKCT5KXiiH >> StatusCode:: 401, Message:: missing token
+2023-12-17 13:31:29 error: [GET] /users/plans/e1d640e916c8628de70bf8ec0bd97461577cc85a >> StatusCode:: 401, Message:: missing token
+2023-12-17 13:42:50 error: [GET] /users/cus_PBbQBKCT5KXiiH >> StatusCode:: 401, Message:: missing token
+2023-12-17 13:44:23 error: [GET] /wallet/cus_PBbQBKCT5KXiiH >> StatusCode:: 401, Message:: missing token
+2023-12-17 14:05:12 error: [GET] /users/cus_PBbQBKCT5KXiiH >> StatusCode:: 401, Message:: missing token
+2023-12-17 14:06:38 error: [GET] /users/cus_PBbQBKCT5KXiiH >> StatusCode:: 401, Message:: missing token
+2023-12-17 14:14:19 error: [POST] /users/upload/avatar/e1d640e916c8628de70bf8ec0bd97461577cc85a >> StatusCode:: 401, Message:: missing token
+2023-12-17 14:15:19 error: [PUT] /users/e1d640e916c8628de70bf8ec0bd97461577cc85a >> StatusCode:: 401, Message:: missing token
+2023-12-17 14:19:04 error: [GET] /users/plans/e1d640e916c8628de70bf8ec0bd97461577cc85a >> StatusCode:: 401, Message:: missing token
+2023-12-17 14:19:04 error: [GET] /albums/all-categories >> StatusCode:: 401, Message:: missing token
+2023-12-17 14:19:04 error: [GET] /albums/e1d640e916c8628de70bf8ec0bd97461577cc85a >> StatusCode:: 401, Message:: missing token
+2023-12-17 15:48:44 error: [GET] /wallet/e1d640e916c8628de70bf8ec0bd97461577cc85a >> StatusCode:: 401, Message:: missing token
+2023-12-17 16:14:06 error: [GET] /users/e1d640e916c8628de70bf8ec0bd97461577cc85a >> StatusCode:: 401, Message:: missing token
+2023-12-17 16:17:59 error: [GET] /users/cus_PBbQBKCT5KXiiH >> StatusCode:: 401, Message:: missing token

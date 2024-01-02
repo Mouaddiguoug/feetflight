@@ -4,26 +4,45 @@ Object.defineProperty(exports, "__esModule", {
 });
 Object.defineProperty(exports, "default", {
     enumerable: true,
-    get: ()=>_default
+    get: function() {
+        return _default;
+    }
 });
 const _bcrypt = require("bcrypt");
 const _jsonwebtoken = require("jsonwebtoken");
 const _config = require("../config");
-const _httpException = require("../exceptions/HttpException");
-const _usersModel = _interopRequireDefault(require("../models/users.model"));
+const _HttpException = require("../exceptions/HttpException");
+const _usersmodel = /*#__PURE__*/ _interop_require_default(require("../models/users.model"));
 const _util = require("../utils/util");
 const _app = require("../app");
-const _rolesEnums = require("../enums/RolesEnums");
-const _uid = _interopRequireDefault(require("uid"));
-const _moment = _interopRequireDefault(require("moment"));
-function _interopRequireDefault(obj) {
+const _RolesEnums = require("../enums/RolesEnums");
+const _uid = /*#__PURE__*/ _interop_require_default(require("uid"));
+const _moment = /*#__PURE__*/ _interop_require_default(require("moment"));
+const _stripe = /*#__PURE__*/ _interop_require_default(require("stripe"));
+function _define_property(obj, key, value) {
+    if (key in obj) {
+        Object.defineProperty(obj, key, {
+            value: value,
+            enumerable: true,
+            configurable: true,
+            writable: true
+        });
+    } else {
+        obj[key] = value;
+    }
+    return obj;
+}
+function _interop_require_default(obj) {
     return obj && obj.__esModule ? obj : {
         default: obj
     };
 }
 let AuthService = class AuthService {
     async signup(userData) {
-        if ((0, _util.isEmpty)(userData)) throw new _httpException.HttpException(400, 'userData is empty');
+        if ((0, _util.isEmpty)(userData)) throw new _HttpException.HttpException(400, 'userData is empty');
+        const stripe = new _stripe.default(process.env.STRIPE_TEST_KEY, {
+            apiVersion: '2022-11-15'
+        });
         const signupSession = (0, _app.initializeDbConnection)().session({
             database: 'neo4j'
         });
@@ -43,41 +62,87 @@ let AuthService = class AuthService {
                 message: 'mlissing data'
             };
             switch(userData.data.role){
-                case _rolesEnums.RolesEnum.SELLER:
-                    if (!userData.data.subscriptionPrice || !userData.data.identityPhoto) return {
+                case _RolesEnums.RolesEnum.SELLER:
+                    if (!userData.data.phone || userData.data.plans.length == 0) return {
                         message: 'data missing'
                     };
-                    const createUserSeller = await signupSession.executeWrite((tx)=>tx.run('create (u:user {id: $userId, name: $name, email: $email, userName: $userName, password: $password, createdAt: $createdAt, avatar: $avatar, confirmed: false, desactivated: false})-[r: IS_A]->(s:seller {id: $sellerId, verified: $verified, identityPhoto: $identityPhoto, subscriptionPrice: $subscriptionPrice}) return u, s', {
-                            userId: _uid.default.uid(40),
+                    const sellerCustomer = await stripe.customers.create({
+                        name: userData.data.name,
+                        email: email,
+                        balance: 0
+                    });
+                    const seller = await stripe.accounts.create({
+                        email: userData.data.email,
+                        type: 'express'
+                    });
+                    const createUserSeller = await signupSession.executeWrite((tx)=>tx.run('create (u:user {id: $userId, name: $name, email: $email, userName: $userName, avatar: "", password: $password, createdAt: $createdAt, confirmed: false, verified: false, desactivated: false, phone: $phone, followers: $followers, followings: $followings})-[r: IS_A]->(s:seller {id: $sellerId, verified: $verified}) create (d:deviceToken {token: $token})<-[:logged_in_with]-(u) return u, s', {
+                            userId: sellerCustomer.id,
+                            followers: 0,
+                            followings: 0,
                             buyerId: _uid.default.uid(40),
+                            token: userData.data.deviceToken,
                             createdAt: (0, _moment.default)().format('MMMM DD, YYYY'),
                             email: email,
-                            avatar: userData.data.avatar ? userData.data.avatar : '',
                             userName: userData.data.userName,
                             name: userData.data.name,
                             password: hashedPassword,
-                            sellerId: _uid.default.uid(40),
-                            identityPhoto: userData.data.identityPhoto,
+                            sellerId: seller.id,
                             verified: false,
-                            subscriptionPrice: userData.data.subscriptionPrice
+                            phone: userData.data.phone
                         }));
-                    await createWalletSession.executeWrite((tx)=>tx.run('match (s:seller {id: $sellerId}) create (s)-[:HAS_A]->(wallet {id: $walletId, amount: 0})', {
+                    await createWalletSession.executeWrite((tx)=>tx.run('match (s:seller {id: $sellerId}) create (s)-[:HAS_A]->(:wallet {id: $walletId, amount: 0.0})', {
                             sellerId: createUserSeller.records.map((record)=>record.get('s').properties.id)[0],
                             walletId: _uid.default.uid(40)
                         }));
+                    userData.data.plans.map(async (plan)=>{
+                        const createPlansSession = (0, _app.initializeDbConnection)().session({
+                            database: 'neo4j'
+                        });
+                        try {
+                            const stripeCreatedPlan = await stripe.products.create({
+                                name: plan.name
+                            });
+                            const stripeCreatedPrice = await stripe.prices.create({
+                                currency: "EUR",
+                                product: stripeCreatedPlan.id,
+                                recurring: {
+                                    interval: "month",
+                                    interval_count: 1
+                                },
+                                unit_amount: plan.price * 100
+                            });
+                            await createPlansSession.executeWrite((tx)=>tx.run('match (s:seller {id: $sellerId}) create (s)-[:HAS_A]->(:plan {id: $planId, name: $name, price: $price})', {
+                                    sellerId: createUserSeller.records.map((record)=>record.get('s').properties.id)[0],
+                                    planId: stripeCreatedPrice.id,
+                                    name: plan.name,
+                                    price: plan.price
+                                }));
+                        } catch (error) {
+                            console.log(error);
+                        } finally{
+                            createPlansSession.close();
+                        }
+                    });
                     const sellerToken = this.createToken(process.env.EMAIL_SECRET, createUserSeller.records.map((record)=>record.get('u').properties.id)[0]);
                     this.sendVerificationEmail(email, userData.data.userName, sellerToken.token, 'selling');
                     return {
-                        data: createUserSeller.records.map((record)=>record.get('u').properties)
+                        tokenData: sellerToken,
+                        data: createUserSeller.records.map((record)=>record.get('u').properties)[0],
+                        role: _RolesEnums.RolesEnum.SELLER
                     };
                     break;
-                case _rolesEnums.RolesEnum.BUYER:
-                    const createdUserBuyer = await signupSession.executeWrite((tx)=>tx.run('create (u:user {id: $userId, name: $name, email: $email, userName: $userName, password: $password, createdAt: $createdAt, avatar: $avatar, confirmed: false})-[r: IS_A]->(b:buyer {id: $buyerId}) return u', {
-                            userId: _uid.default.uid(40),
+                case _RolesEnums.RolesEnum.BUYER:
+                    const buyer = await stripe.customers.create({
+                        name: userData.data.name,
+                        email: email,
+                        balance: 0
+                    });
+                    const createdUserBuyer = await signupSession.executeWrite((tx)=>tx.run('create (u:user {id: $userId, avatar: "", name: $name, email: $email, userName: $userName, password: $password, createdAt: $createdAt, confirmed: false})-[r: IS_A]->(b:buyer {id: $buyerId}) create (d:deviceToken {token: $token})<-[:logged_in_with]-(u) return u', {
+                            userId: buyer.id,
                             buyerId: _uid.default.uid(40),
+                            token: userData.data.deviceToken,
                             createdAt: (0, _moment.default)().format('MMMM DD, YYYY'),
                             email: email,
-                            avatar: userData.data.avatar ? userData.data.avatar : '',
                             userName: userData.data.userName,
                             name: userData.data.name,
                             password: hashedPassword
@@ -85,7 +150,9 @@ let AuthService = class AuthService {
                     const buyerToken = this.createToken(process.env.EMAIL_SECRET, createdUserBuyer.records.map((record)=>record.get('u').properties.id)[0]);
                     this.sendVerificationEmail(email, userData.data.userName, buyerToken.token, 'finding');
                     return {
-                        data: createdUserBuyer.records.map((record)=>record.get('u').properties)[0]
+                        tokenData: buyerToken,
+                        data: createdUserBuyer.records.map((record)=>record.get('u').properties)[0],
+                        role: _RolesEnums.RolesEnum.BUYER
                     };
                     break;
             }
@@ -117,12 +184,24 @@ let AuthService = class AuthService {
             console.log(error);
         }
     }
-    async changePassword(userId, userData) {
+    async changePassword(email, userData) {
+        const checkUserSession = (0, _app.initializeDbConnection)().session();
         const changePasswordSession = (0, _app.initializeDbConnection)().session();
         try {
-            const hashedPassword = await (0, _bcrypt.hash)(userData.data.password, 10);
-            const changedPassword = await changePasswordSession.executeRead((tx)=>tx.run('match (u {id: $userId}) set u.password = $newPassword return w', {
-                    userId: userId,
+            const findUser = await checkUserSession.executeRead((tx)=>tx.run('match (u:user {email: $email}) return u', {
+                    email: email
+                }));
+            if (findUser.records.length == 0) return {
+                message: `old password is incorrect`
+            };
+            const password = findUser.records.map((record)=>record.get('u').properties.password)[0];
+            const isPasswordMatching = await (0, _bcrypt.compare)(userData.data.oldPassword, password);
+            if (!isPasswordMatching) return {
+                message: 'old password is incorrect'
+            };
+            const hashedPassword = await (0, _bcrypt.hash)(userData.data.newPassword, 10);
+            const changedPassword = await changePasswordSession.executeWrite((tx)=>tx.run('match (u {email: $email}) set u.password = $newPassword return u', {
+                    email: email,
                     newPassword: hashedPassword
                 }));
             return changedPassword.records.map((record)=>record.get('u').properties)[0];
@@ -133,7 +212,7 @@ let AuthService = class AuthService {
         }
     }
     async login(userData) {
-        if ((0, _util.isEmpty)(userData)) throw new _httpException.HttpException(400, 'userData is empty');
+        if ((0, _util.isEmpty)(userData)) throw new _HttpException.HttpException(400, 'userData is empty');
         const loginSession = (0, _app.initializeDbConnection)().session({
             database: 'neo4j'
         });
@@ -143,20 +222,27 @@ let AuthService = class AuthService {
                     email: email
                 }));
             if (findUser.records.length == 0) return {
-                message: `This email ${userData.data.email} doesn't exists`
-            };
-            if (!findUser.records.map((record)=>record.get('u').properties.confirmed)[0]) return {
-                message: `This email is not confirmed please confirm your email`
+                message: `password or email is incorrect`
             };
             const password = findUser.records.map((record)=>record.get('u').properties.password)[0];
             const isPasswordMatching = await (0, _bcrypt.compare)(userData.data.password, password);
+            const userId = findUser.records.map((record)=>record.get('u').properties.id)[0];
+            const deviceToken = userData.data.deviceToken;
             if (!isPasswordMatching) return {
                 message: 'password or email is incorrect'
             };
-            const tokenData = this.createToken(process.env.SECRET_KEY, findUser.records.map((record)=>record.get('u').properties.id));
+            const tokenData = this.createToken(process.env.SECRET_KEY, userId);
+            const role = await loginSession.executeRead((tx)=>tx.run('match (u:user {id: $id})-[:IS_A]-(r:seller) return r', {
+                    id: userId
+                }));
+            await loginSession.executeWrite((tx)=>tx.run('match (u:user {id: $id})-[:logged_in_with]->(d:deviceToken) set d.token = $token', {
+                    id: userId,
+                    token: deviceToken
+                }));
             return {
                 tokenData,
-                data: findUser.records.map((record)=>record.get('u').properties)
+                data: findUser.records.map((record)=>record.get('u').properties)[0],
+                role: role.records.length == 0 ? 'Buyer' : 'Seller'
             };
         } catch (error) {
             console.log(error);
@@ -164,26 +250,17 @@ let AuthService = class AuthService {
             loginSession.close();
         }
     }
-    async refreshToken(token) {
-        if (!token) return {
+    async refreshToken(id) {
+        if (!id) return {
             message: 'missing token'
         };
         const refreshSession = (0, _app.initializeDbConnection)().session({
             database: 'neo4j'
         });
         try {
-            const secretKey = _config.SECRET_KEY;
-            const decoded = (0, _jsonwebtoken.verify)(token, secretKey);
-            const id = decoded.data[0];
-            const findUser = await refreshSession.executeRead((tx)=>tx.run('match (u:user {id: $id}) return u', {
-                    id: id
-                }));
-            if (findUser.records.length == 0) return {
-                message: 'refresh token is invalid'
-            };
-            const refreshToken = this.createRefreshToken(token);
+            const tokenData = this.createRefreshToken(id);
             return {
-                refreshToken
+                tokenData
             };
         } catch (error) {
             console.log(error);
@@ -192,22 +269,27 @@ let AuthService = class AuthService {
         }
     }
     async logout(userData) {
-        if ((0, _util.isEmpty)(userData)) throw new _httpException.HttpException(400, 'userData is empty');
+        if ((0, _util.isEmpty)(userData)) throw new _HttpException.HttpException(400, 'userData is empty');
         const findUser = this.users.find((user)=>user.email === userData.email && user.password === userData.password);
-        if (!findUser) throw new _httpException.HttpException(409, "User doesn't exist");
+        if (!findUser) throw new _HttpException.HttpException(409, "User doesn't exist");
         return findUser;
     }
     createToken(secret, data) {
         try {
             const dataStoredInToken = {
-                data
+                id: data
             };
             const secretKey = secret;
-            const expiresIn = 60 * 60;
+            const expiresAt = '60s';
+            const expiresIn = new Date();
+            console.log(expiresIn);
+            expiresIn.setTime(expiresIn.getTime() + 60000);
+            console.log(expiresIn);
             return {
                 token: (0, _jsonwebtoken.sign)(dataStoredInToken, secretKey, {
-                    expiresIn
-                })
+                    expiresIn: expiresAt
+                }),
+                expiresIn: (0, _moment.default)(expiresIn).format("YYYY-MM-DD HH:mm:ss.ms")
             };
         } catch (error) {
             console.log(error);
@@ -216,14 +298,18 @@ let AuthService = class AuthService {
     createRefreshToken(data) {
         try {
             const dataStoredInToken = {
-                data
+                id: data,
+                refresh: true
             };
             const secretKey = _config.SECRET_KEY;
-            const expiresIn = '30 days';
+            const expiresAt = '60s';
+            const expiresIn = new Date();
+            expiresIn.setTime(expiresIn.getTime() + 60);
             return {
                 token: (0, _jsonwebtoken.sign)(dataStoredInToken, secretKey, {
-                    expiresIn
-                })
+                    expiresIn: expiresAt
+                }),
+                expiresIn: (0, _moment.default)(expiresIn).format("YYYY-MM-DD hh:mm:ss.ms")
             };
         } catch (error) {
             console.log(error);
@@ -233,7 +319,7 @@ let AuthService = class AuthService {
         return `Authorization=${tokenData.token}; HttpOnly; Max-Age=${tokenData.expiresIn};`;
     }
     constructor(){
-        this.users = _usersModel.default;
+        _define_property(this, "users", _usersmodel.default);
     }
 };
 const _default = AuthService;

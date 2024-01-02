@@ -2,10 +2,10 @@
 Object.defineProperty(exports, "__esModule", {
     value: true
 });
-const _supertest = _interopRequireDefault(require("supertest"));
-const _app = _interopRequireDefault(require("../app"));
-const _indexRoute = _interopRequireDefault(require("../routes/index.route"));
-function _interopRequireDefault(obj) {
+const _supertest = /*#__PURE__*/ _interop_require_default(require("supertest"));
+const _app = /*#__PURE__*/ _interop_require_default(require("../app"));
+const _indexroute = /*#__PURE__*/ _interop_require_default(require("../routes/index.route"));
+function _interop_require_default(obj) {
     return obj && obj.__esModule ? obj : {
         default: obj
     };
@@ -16,7 +16,7 @@ afterAll(async ()=>{
 describe('Testing Index', ()=>{
     describe('[GET] /', ()=>{
         it('response statusCode 200', ()=>{
-            const indexRoute = new _indexRoute.default();
+            const indexRoute = new _indexroute.default();
             const app = new _app.default([
                 indexRoute
             ]);

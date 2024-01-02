@@ -2,11 +2,11 @@
 Object.defineProperty(exports, "__esModule", {
     value: true
 });
-const _supertest = _interopRequireDefault(require("supertest"));
-const _app = _interopRequireDefault(require("../app"));
-const _usersModel = _interopRequireDefault(require("../models/users.model"));
-const _usersRoute = _interopRequireDefault(require("../routes/users.route"));
-function _interopRequireDefault(obj) {
+const _supertest = /*#__PURE__*/ _interop_require_default(require("supertest"));
+const _app = /*#__PURE__*/ _interop_require_default(require("../app"));
+const _usersmodel = /*#__PURE__*/ _interop_require_default(require("../models/users.model"));
+const _usersroute = /*#__PURE__*/ _interop_require_default(require("../routes/users.route"));
+function _interop_require_default(obj) {
     return obj && obj.__esModule ? obj : {
         default: obj
     };
@@ -17,8 +17,8 @@ afterAll(async ()=>{
 describe('Testing Users', ()=>{
     describe('[GET] /users', ()=>{
         it('response statusCode 200 / findAll', ()=>{
-            const findUser = _usersModel.default;
-            const usersRoute = new _usersRoute.default();
+            const findUser = _usersmodel.default;
+            const usersRoute = new _usersroute.default();
             const app = new _app.default([
                 usersRoute
             ]);
@@ -31,8 +31,8 @@ describe('Testing Users', ()=>{
     describe('[GET] /users/:id', ()=>{
         it('response statusCode 200 / findOne', ()=>{
             const userId = 1;
-            const findUser = _usersModel.default.find((user)=>user.id === userId);
-            const usersRoute = new _usersRoute.default();
+            const findUser = _usersmodel.default.find((user)=>user.id === userId);
+            const usersRoute = new _usersroute.default();
             const app = new _app.default([
                 usersRoute
             ]);
@@ -48,7 +48,7 @@ describe('Testing Users', ()=>{
                 email: 'example@email.com',
                 password: 'password'
             };
-            const usersRoute = new _usersRoute.default();
+            const usersRoute = new _usersroute.default();
             const app = new _app.default([
                 usersRoute
             ]);
@@ -62,7 +62,7 @@ describe('Testing Users', ()=>{
                 email: 'example@email.com',
                 password: 'password'
             };
-            const usersRoute = new _usersRoute.default();
+            const usersRoute = new _usersroute.default();
             const app = new _app.default([
                 usersRoute
             ]);
@@ -72,8 +72,8 @@ describe('Testing Users', ()=>{
     describe('[DELETE] /users/:id', ()=>{
         it('response statusCode 200 / deleted', ()=>{
             const userId = 1;
-            const deleteUser = _usersModel.default.filter((user)=>user.id !== userId);
-            const usersRoute = new _usersRoute.default();
+            const deleteUser = _usersmodel.default.filter((user)=>user.id !== userId);
+            const usersRoute = new _usersroute.default();
             const app = new _app.default([
                 usersRoute
             ]);

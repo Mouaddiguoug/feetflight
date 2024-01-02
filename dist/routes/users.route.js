@@ -4,32 +4,54 @@ Object.defineProperty(exports, "__esModule", {
 });
 Object.defineProperty(exports, "default", {
     enumerable: true,
-    get: ()=>_default
+    get: function() {
+        return _default;
+    }
 });
 const _express = require("express");
-const _usersController = _interopRequireDefault(require("../controllers/users.controller"));
-const _usersDto = require("../dtos/users.dto");
-const _validationMiddleware = _interopRequireDefault(require("../middlewares/validation.middleware"));
-function _interopRequireDefault(obj) {
+const _userscontroller = /*#__PURE__*/ _interop_require_default(require("../controllers/users.controller"));
+const _multer = /*#__PURE__*/ _interop_require_default(require("multer"));
+const _fileValidationmiddleware = /*#__PURE__*/ _interop_require_default(require("../middlewares/fileValidation.middleware"));
+const _authmiddleware = /*#__PURE__*/ _interop_require_default(require("../middlewares/auth.middleware"));
+function _define_property(obj, key, value) {
+    if (key in obj) {
+        Object.defineProperty(obj, key, {
+            value: value,
+            enumerable: true,
+            configurable: true,
+            writable: true
+        });
+    } else {
+        obj[key] = value;
+    }
+    return obj;
+}
+function _interop_require_default(obj) {
     return obj && obj.__esModule ? obj : {
         default: obj
     };
 }
 let UsersRoute = class UsersRoute {
     initializeRoutes() {
-        this.router.get(`${this.path}/:id`, this.usersController.getUserById);
-        this.router.get(`${this.path}`, this.usersController.getUsers);
-        this.router.get(`${this.path}/buy/:id`, this.usersController.buyPost);
+        this.router.get(`${this.path}/:id`, _authmiddleware.default, this.usersController.getUserById);
+        this.router.get(`${this.path}`, _authmiddleware.default, this.usersController.getUsers);
+        this.router.post(`${this.path}/buy/:id`, _authmiddleware.default, this.usersController.buyPost);
+        this.router.post(`${this.path}/subscribe/:id`, _authmiddleware.default, this.usersController.subscribe);
+        this.router.post(`${this.path}/unsubscribe/:id/:sellerId`, _authmiddleware.default, this.usersController.cancelSubscription);
         this.router.get(`${this.path}/confirmation/:token`, this.usersController.emailConfirming);
-        this.router.get(`${this.path}/:email`, this.usersController.changePassword);
-        this.router.post(`${this.path}`, (0, _validationMiddleware.default)(_usersDto.CreateUserDto, 'body'), this.usersController.createUser);
-        this.router.put(`${this.path}/:id`, this.usersController.updateUser);
+        this.router.get(`${this.path}/:email`, _authmiddleware.default, this.usersController.changePassword);
+        this.router.get(`${this.path}/plans/:id`, _authmiddleware.default, this.usersController.getSellerPlans);
+        this.router.get(`${this.path}/ai/generatePictures`, this.usersController.generateAiPictures);
+        this.router.put(`${this.path}/:id`, _authmiddleware.default, this.usersController.updateUser);
+        this.router.get(`${this.path}/verify/checkForSale/:userId/:postId/:plan`, this.usersController.checkForSale);
+        this.router.post(`${this.path}/devices/token/:id`, _authmiddleware.default, this.usersController.uploadDeviceToken);
         this.router.post(`${this.path}/desactivate/:id`, this.usersController.desactivateUser);
+        this.router.post(`${this.path}/upload/avatar/:id`, _authmiddleware.default, (0, _multer.default)().single('avatar'), _fileValidationmiddleware.default, this.usersController.uploadAvatar);
     }
     constructor(){
-        this.path = '/users';
-        this.router = (0, _express.Router)();
-        this.usersController = new _usersController.default();
+        _define_property(this, "path", '/users');
+        _define_property(this, "router", (0, _express.Router)());
+        _define_property(this, "usersController", new _userscontroller.default());
         this.initializeRoutes();
     }
 };

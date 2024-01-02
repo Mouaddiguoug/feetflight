@@ -9,19 +9,33 @@ function _export(target, all) {
     });
 }
 _export(exports, {
-    CREDENTIALS: ()=>CREDENTIALS,
-    NODE_ENV: ()=>NODE_ENV,
-    PORT: ()=>PORT,
-    SECRET_KEY: ()=>SECRET_KEY,
-    LOG_FORMAT: ()=>LOG_FORMAT,
-    LOG_DIR: ()=>LOG_DIR,
-    ORIGIN: ()=>ORIGIN
+    CREDENTIALS: function() {
+        return CREDENTIALS;
+    },
+    NODE_ENV: function() {
+        return NODE_ENV;
+    },
+    PORT: function() {
+        return PORT;
+    },
+    SECRET_KEY: function() {
+        return SECRET_KEY;
+    },
+    LOG_FORMAT: function() {
+        return LOG_FORMAT;
+    },
+    LOG_DIR: function() {
+        return LOG_DIR;
+    },
+    ORIGIN: function() {
+        return ORIGIN;
+    }
 });
 const _dotenv = require("dotenv");
 (0, _dotenv.config)({
     path: `.env.${process.env.NODE_ENV || 'development'}.local`
 });
 const CREDENTIALS = process.env.CREDENTIALS === 'true';
-const { NODE_ENV , PORT , SECRET_KEY , LOG_FORMAT , LOG_DIR , ORIGIN  } = process.env;
+const { NODE_ENV, PORT, SECRET_KEY, LOG_FORMAT, LOG_DIR, ORIGIN } = process.env;
 
 //# sourceMappingURL=index.js.map

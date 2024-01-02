@@ -1,0 +1,640 @@
+2023-07-10 10:20:00 info: =================================
+2023-07-10 10:20:00 info: ======= ENV: development =======
+2023-07-10 10:20:00 info: 🚀 App listening on the port 4000
+2023-07-10 10:20:00 info: =================================
+2023-07-10 12:47:35 error: [GET] /albums/popular >> StatusCode:: 403, Message:: Wrong authentication token
+2023-07-10 12:47:35 info: [0mGET /albums/popular [33m403[0m 91.851 ms - 40[0m
+2023-07-10 12:47:35 error: [GET] /albums/categories >> StatusCode:: 403, Message:: Wrong authentication token
+2023-07-10 12:47:35 info: [0mGET /albums/categories [33m403[0m 5.943 ms - 40[0m
+2023-07-10 12:52:20 info: [0mPOST /login [32m200[0m 744.262 ms - 44[0m
+2023-07-10 12:55:54 info: [0mPOST /login [32m200[0m 542.249 ms - 417[0m
+2023-07-10 12:55:55 error: [GET] /albums/popular >> StatusCode:: 403, Message:: Wrong authentication token
+2023-07-10 12:55:55 info: [0mGET /albums/popular [33m403[0m 5.202 ms - 40[0m
+2023-07-10 12:55:55 error: [GET] /albums/categories >> StatusCode:: 403, Message:: Wrong authentication token
+2023-07-10 12:55:55 info: [0mGET /albums/categories [33m403[0m 3.984 ms - 40[0m
+2023-07-10 12:57:12 info: [0mPOST /login [32m200[0m 482.385 ms - 417[0m
+2023-07-10 12:57:13 error: [GET] /albums/popular >> StatusCode:: 403, Message:: Wrong authentication token
+2023-07-10 12:57:13 info: [0mGET /albums/popular [33m403[0m 5.419 ms - 40[0m
+2023-07-10 12:57:13 error: [GET] /albums/categories >> StatusCode:: 403, Message:: Wrong authentication token
+2023-07-10 12:57:13 info: [0mGET /albums/categories [33m403[0m 4.158 ms - 40[0m
+2023-07-10 13:08:00 info: =================================
+2023-07-10 13:08:00 info: ======= ENV: development =======
+2023-07-10 13:08:00 info: 🚀 App listening on the port 4000
+2023-07-10 13:08:00 info: =================================
+2023-07-10 13:08:35 info: [0mPOST /login [32m200[0m 544.015 ms - 417[0m
+2023-07-10 13:08:36 error: [GET] /albums/popular >> StatusCode:: 403, Message:: Wrong authentication token
+2023-07-10 13:08:36 info: [0mGET /albums/popular [33m403[0m 8.477 ms - 40[0m
+2023-07-10 13:08:36 error: [GET] /albums/categories >> StatusCode:: 403, Message:: Wrong authentication token
+2023-07-10 13:08:36 info: [0mGET /albums/categories [33m403[0m 4.057 ms - 40[0m
+2023-07-10 17:16:34 info: [0mPOST /login [32m200[0m 616.684 ms - 417[0m
+2023-07-10 17:16:34 error: [GET] /albums/popular >> StatusCode:: 403, Message:: Wrong authentication token
+2023-07-10 17:16:34 info: [0mGET /albums/popular [33m403[0m 9.909 ms - 40[0m
+2023-07-10 17:16:34 error: [GET] /albums/categories >> StatusCode:: 403, Message:: Wrong authentication token
+2023-07-10 17:16:34 info: [0mGET /albums/categories [33m403[0m 4.126 ms - 40[0m
+2023-07-10 17:19:10 error: [GET] /albums/popular >> StatusCode:: 403, Message:: Wrong authentication token
+2023-07-10 17:19:10 info: [0mGET /albums/popular [33m403[0m 4.337 ms - 40[0m
+2023-07-10 17:19:10 error: [GET] /albums/categories >> StatusCode:: 403, Message:: Wrong authentication token
+2023-07-10 17:19:10 info: [0mGET /albums/categories [33m403[0m 4.638 ms - 40[0m
+2023-07-10 17:19:13 error: [GET] /albums/popular >> StatusCode:: 403, Message:: Wrong authentication token
+2023-07-10 17:19:13 info: [0mGET /albums/popular [33m403[0m 7.367 ms - 40[0m
+2023-07-10 17:19:13 error: [GET] /albums/categories >> StatusCode:: 403, Message:: Wrong authentication token
+2023-07-10 17:19:13 info: [0mGET /albums/categories [33m403[0m 3.604 ms - 40[0m
+2023-07-10 17:19:15 error: [GET] /albums/popular >> StatusCode:: 403, Message:: Wrong authentication token
+2023-07-10 17:19:15 info: [0mGET /albums/popular [33m403[0m 5.225 ms - 40[0m
+2023-07-10 17:19:15 error: [GET] /albums/categories >> StatusCode:: 403, Message:: Wrong authentication token
+2023-07-10 17:19:15 info: [0mGET /albums/categories [33m403[0m 3.794 ms - 40[0m
+2023-07-10 17:19:25 error: [GET] /albums/popular >> StatusCode:: 403, Message:: Wrong authentication token
+2023-07-10 17:19:25 info: [0mGET /albums/popular [33m403[0m 3.791 ms - 40[0m
+2023-07-10 17:19:25 error: [GET] /albums/categories >> StatusCode:: 403, Message:: Wrong authentication token
+2023-07-10 17:19:25 info: [0mGET /albums/categories [33m403[0m 3.642 ms - 40[0m
+2023-07-10 17:19:50 error: [GET] /albums/categories >> StatusCode:: 403, Message:: Wrong authentication token
+2023-07-10 17:19:50 info: [0mGET /albums/categories [33m403[0m 4.858 ms - 40[0m
+2023-07-10 17:19:50 error: [GET] /albums/popular >> StatusCode:: 403, Message:: Wrong authentication token
+2023-07-10 17:19:50 info: [0mGET /albums/popular [33m403[0m 4.173 ms - 40[0m
+2023-07-10 17:19:52 error: [GET] /albums/popular >> StatusCode:: 403, Message:: Wrong authentication token
+2023-07-10 17:19:52 info: [0mGET /albums/popular [33m403[0m 3.983 ms - 40[0m
+2023-07-10 17:19:52 error: [GET] /albums/categories >> StatusCode:: 403, Message:: Wrong authentication token
+2023-07-10 17:19:52 info: [0mGET /albums/categories [33m403[0m 3.892 ms - 40[0m
+2023-07-10 17:19:53 error: [GET] /albums/popular >> StatusCode:: 403, Message:: Wrong authentication token
+2023-07-10 17:19:53 info: [0mGET /albums/popular [33m403[0m 4.255 ms - 40[0m
+2023-07-10 17:19:53 error: [GET] /albums/categories >> StatusCode:: 403, Message:: Wrong authentication token
+2023-07-10 17:19:53 info: [0mGET /albums/categories [33m403[0m 3.959 ms - 40[0m
+2023-07-10 17:20:00 error: [GET] /albums/categories >> StatusCode:: 403, Message:: Wrong authentication token
+2023-07-10 17:20:00 info: [0mGET /albums/categories [33m403[0m 4.540 ms - 40[0m
+2023-07-10 17:20:00 error: [GET] /albums/popular >> StatusCode:: 403, Message:: Wrong authentication token
+2023-07-10 17:20:00 info: [0mGET /albums/popular [33m403[0m 4.375 ms - 40[0m
+2023-07-10 17:20:16 error: [GET] /albums/categories >> StatusCode:: 403, Message:: Wrong authentication token
+2023-07-10 17:20:16 info: [0mGET /albums/categories [33m403[0m 4.645 ms - 40[0m
+2023-07-10 17:20:16 error: [GET] /albums/popular >> StatusCode:: 403, Message:: Wrong authentication token
+2023-07-10 17:20:16 info: [0mGET /albums/popular [33m403[0m 3.374 ms - 40[0m
+2023-07-10 17:20:22 error: [GET] /albums/categories >> StatusCode:: 403, Message:: Wrong authentication token
+2023-07-10 17:20:22 info: [0mGET /albums/categories [33m403[0m 4.343 ms - 40[0m
+2023-07-10 17:20:22 error: [GET] /albums/popular >> StatusCode:: 403, Message:: Wrong authentication token
+2023-07-10 17:20:22 info: [0mGET /albums/popular [33m403[0m 3.710 ms - 40[0m
+2023-07-10 17:20:24 error: [GET] /albums/popular >> StatusCode:: 403, Message:: Wrong authentication token
+2023-07-10 17:20:24 info: [0mGET /albums/popular [33m403[0m 4.322 ms - 40[0m
+2023-07-10 17:20:24 error: [GET] /albums/categories >> StatusCode:: 403, Message:: Wrong authentication token
+2023-07-10 17:20:24 info: [0mGET /albums/categories [33m403[0m 15.665 ms - 40[0m
+2023-07-10 17:20:29 error: [GET] /albums/categories >> StatusCode:: 403, Message:: Wrong authentication token
+2023-07-10 17:20:29 info: [0mGET /albums/categories [33m403[0m 4.128 ms - 40[0m
+2023-07-10 17:20:29 error: [GET] /albums/popular >> StatusCode:: 403, Message:: Wrong authentication token
+2023-07-10 17:20:29 info: [0mGET /albums/popular [33m403[0m 4.227 ms - 40[0m
+2023-07-10 17:20:31 error: [GET] /albums/popular >> StatusCode:: 403, Message:: Wrong authentication token
+2023-07-10 17:20:31 info: [0mGET /albums/popular [33m403[0m 4.218 ms - 40[0m
+2023-07-10 17:20:31 error: [GET] /albums/categories >> StatusCode:: 403, Message:: Wrong authentication token
+2023-07-10 17:20:31 info: [0mGET /albums/categories [33m403[0m 5.384 ms - 40[0m
+2023-07-10 17:20:33 error: [GET] /albums/popular >> StatusCode:: 403, Message:: Wrong authentication token
+2023-07-10 17:20:33 info: [0mGET /albums/popular [33m403[0m 4.080 ms - 40[0m
+2023-07-10 17:20:33 error: [GET] /albums/categories >> StatusCode:: 403, Message:: Wrong authentication token
+2023-07-10 17:20:33 info: [0mGET /albums/categories [33m403[0m 26.050 ms - 40[0m
+2023-07-10 17:20:49 error: [GET] /albums/categories >> StatusCode:: 403, Message:: Wrong authentication token
+2023-07-10 17:20:49 info: [0mGET /albums/categories [33m403[0m 4.055 ms - 40[0m
+2023-07-10 17:20:49 error: [GET] /albums/popular >> StatusCode:: 403, Message:: Wrong authentication token
+2023-07-10 17:20:49 info: [0mGET /albums/popular [33m403[0m 3.409 ms - 40[0m
+2023-07-10 17:20:50 error: [GET] /albums/popular >> StatusCode:: 403, Message:: Wrong authentication token
+2023-07-10 17:20:50 info: [0mGET /albums/popular [33m403[0m 4.950 ms - 40[0m
+2023-07-10 17:20:50 error: [GET] /albums/categories >> StatusCode:: 403, Message:: Wrong authentication token
+2023-07-10 17:20:50 info: [0mGET /albums/categories [33m403[0m 3.413 ms - 40[0m
+2023-07-10 17:21:00 error: [GET] /albums/popular >> StatusCode:: 403, Message:: Wrong authentication token
+2023-07-10 17:21:00 info: [0mGET /albums/popular [33m403[0m 3.732 ms - 40[0m
+2023-07-10 17:21:00 error: [GET] /albums/categories >> StatusCode:: 403, Message:: Wrong authentication token
+2023-07-10 17:21:00 info: [0mGET /albums/categories [33m403[0m 4.752 ms - 40[0m
+2023-07-10 17:21:04 error: [GET] /albums/popular >> StatusCode:: 403, Message:: Wrong authentication token
+2023-07-10 17:21:04 info: [0mGET /albums/popular [33m403[0m 3.458 ms - 40[0m
+2023-07-10 17:21:04 error: [GET] /albums/categories >> StatusCode:: 403, Message:: Wrong authentication token
+2023-07-10 17:21:04 info: [0mGET /albums/categories [33m403[0m 3.884 ms - 40[0m
+2023-07-10 17:23:26 info: [0mPOST /login [32m200[0m 491.730 ms - 417[0m
+2023-07-10 17:23:27 error: [GET] /albums/popular >> StatusCode:: 403, Message:: Wrong authentication token
+2023-07-10 17:23:27 info: [0mGET /albums/popular [33m403[0m 4.165 ms - 40[0m
+2023-07-10 17:23:27 error: [GET] /albums/categories >> StatusCode:: 403, Message:: Wrong authentication token
+2023-07-10 17:23:27 info: [0mGET /albums/categories [33m403[0m 3.433 ms - 40[0m
+2023-07-10 17:23:43 error: [GET] /albums/categories >> StatusCode:: 403, Message:: Wrong authentication token
+2023-07-10 17:23:43 info: [0mGET /albums/categories [33m403[0m 3.850 ms - 40[0m
+2023-07-10 17:23:43 error: [GET] /albums/popular >> StatusCode:: 403, Message:: Wrong authentication token
+2023-07-10 17:23:43 info: [0mGET /albums/popular [33m403[0m 4.413 ms - 40[0m
+2023-07-10 17:25:10 info: [0mPOST /login [32m200[0m 456.037 ms - 417[0m
+2023-07-10 17:25:10 error: [GET] /albums/popular >> StatusCode:: 403, Message:: Wrong authentication token
+2023-07-10 17:25:10 info: [0mGET /albums/popular [33m403[0m 4.802 ms - 40[0m
+2023-07-10 17:25:10 error: [GET] /albums/categories >> StatusCode:: 403, Message:: Wrong authentication token
+2023-07-10 17:25:10 info: [0mGET /albums/categories [33m403[0m 4.348 ms - 40[0m
+2023-07-10 17:25:43 error: [GET] /albums/popular >> StatusCode:: 403, Message:: Wrong authentication token
+2023-07-10 17:25:43 info: [0mGET /albums/popular [33m403[0m 3.869 ms - 40[0m
+2023-07-10 17:25:43 error: [GET] /albums/categories >> StatusCode:: 403, Message:: Wrong authentication token
+2023-07-10 17:25:43 info: [0mGET /albums/categories [33m403[0m 3.218 ms - 40[0m
+2023-07-10 17:44:30 error: [GET] /albums/popular >> StatusCode:: 403, Message:: Wrong authentication token
+2023-07-10 17:44:30 info: [0mGET /albums/popular [33m403[0m 5.155 ms - 40[0m
+2023-07-10 17:44:30 error: [GET] /albums/categories >> StatusCode:: 403, Message:: Wrong authentication token
+2023-07-10 17:44:30 info: [0mGET /albums/categories [33m403[0m 4.164 ms - 40[0m
+2023-07-10 17:46:01 info: [0mPOST /login [32m200[0m 438.944 ms - 417[0m
+2023-07-10 17:46:01 error: [GET] /albums/popular >> StatusCode:: 403, Message:: Wrong authentication token
+2023-07-10 17:46:01 info: [0mGET /albums/popular [33m403[0m 443.949 ms - 40[0m
+2023-07-10 17:46:01 error: [GET] /albums/categories >> StatusCode:: 403, Message:: Wrong authentication token
+2023-07-10 17:46:01 info: [0mGET /albums/categories [33m403[0m 448.321 ms - 40[0m
+2023-07-10 17:46:02 info: [0mPOST /refresh [32m200[0m 2.091 ms - 428[0m
+2023-07-10 17:46:02 info: [0mPOST /refresh [32m200[0m 2.346 ms - 428[0m
+2023-07-10 17:46:02 info: [0mGET /albums/categories [32m201[0m 504.874 ms - 17[0m
+2023-07-10 17:46:03 info: [0mGET /albums/popular [32m201[0m 891.865 ms - 19[0m
+2023-07-10 17:48:49 error: [GET] /albums/popular >> StatusCode:: 403, Message:: Wrong authentication token
+2023-07-10 17:48:49 info: [0mGET /albums/popular [33m403[0m 4.199 ms - 40[0m
+2023-07-10 17:48:49 error: [GET] /albums/categories >> StatusCode:: 403, Message:: Wrong authentication token
+2023-07-10 17:48:49 info: [0mGET /albums/categories [33m403[0m 4.691 ms - 40[0m
+2023-07-10 17:49:58 info: [0mPOST /login [32m200[0m 481.288 ms - 417[0m
+2023-07-10 17:49:59 error: [GET] /albums/categories >> StatusCode:: 403, Message:: Wrong authentication token
+2023-07-10 17:49:59 info: [0mGET /albums/categories [33m403[0m 434.694 ms - 40[0m
+2023-07-10 17:49:59 error: [GET] /albums/popular >> StatusCode:: 403, Message:: Wrong authentication token
+2023-07-10 17:49:59 info: [0mGET /albums/popular [33m403[0m 447.966 ms - 40[0m
+2023-07-10 17:49:59 info: [0mPOST /refresh [32m200[0m 1.942 ms - 428[0m
+2023-07-10 17:49:59 info: [0mPOST /refresh [32m200[0m 1.266 ms - 428[0m
+2023-07-10 17:49:59 info: [0mGET /albums/popular [32m201[0m 379.907 ms - 19[0m
+2023-07-10 17:49:59 info: [0mGET /albums/categories [32m201[0m 387.351 ms - 17[0m
+2023-07-10 18:01:26 info: [0mPOST /login [32m200[0m 553.656 ms - 417[0m
+2023-07-10 18:01:27 error: [GET] /albums/popular >> StatusCode:: 403, Message:: Wrong authentication token
+2023-07-10 18:01:27 info: [0mGET /albums/popular [33m403[0m 388.778 ms - 40[0m
+2023-07-10 18:01:27 error: [GET] /albums/categories >> StatusCode:: 403, Message:: Wrong authentication token
+2023-07-10 18:01:27 info: [0mGET /albums/categories [33m403[0m 393.898 ms - 40[0m
+2023-07-10 18:01:27 info: [0mPOST /refresh [32m200[0m 1.280 ms - 428[0m
+2023-07-10 18:01:27 info: [0mPOST /refresh [32m200[0m 1.436 ms - 428[0m
+2023-07-10 18:01:27 info: [0mGET /albums/popular [32m201[0m 370.491 ms - 19[0m
+2023-07-10 18:01:27 info: [0mGET /albums/categories [32m201[0m 387.635 ms - 17[0m
+2023-07-10 18:07:07 error: [GET] /albums/popular >> StatusCode:: 403, Message:: Wrong authentication token
+2023-07-10 18:07:07 info: [0mGET /albums/popular [33m403[0m 4.906 ms - 40[0m
+2023-07-10 18:07:07 error: [GET] /albums/categories >> StatusCode:: 403, Message:: Wrong authentication token
+2023-07-10 18:07:07 info: [0mGET /albums/categories [33m403[0m 3.879 ms - 40[0m
+2023-07-10 18:07:32 error: [GET] /albums/categories >> StatusCode:: 403, Message:: Wrong authentication token
+2023-07-10 18:07:32 info: [0mGET /albums/categories [33m403[0m 5.737 ms - 40[0m
+2023-07-10 18:07:32 error: [GET] /albums/popular >> StatusCode:: 403, Message:: Wrong authentication token
+2023-07-10 18:07:32 info: [0mGET /albums/popular [33m403[0m 4.002 ms - 40[0m
+2023-07-10 18:07:35 error: [GET] /albums/popular >> StatusCode:: 403, Message:: Wrong authentication token
+2023-07-10 18:07:35 info: [0mGET /albums/popular [33m403[0m 4.789 ms - 40[0m
+2023-07-10 18:07:35 error: [GET] /albums/categories >> StatusCode:: 403, Message:: Wrong authentication token
+2023-07-10 18:07:35 info: [0mGET /albums/categories [33m403[0m 3.030 ms - 40[0m
+2023-07-10 18:07:37 error: [GET] /albums/popular >> StatusCode:: 403, Message:: Wrong authentication token
+2023-07-10 18:07:37 info: [0mGET /albums/popular [33m403[0m 4.859 ms - 40[0m
+2023-07-10 18:07:37 error: [GET] /albums/categories >> StatusCode:: 403, Message:: Wrong authentication token
+2023-07-10 18:07:37 info: [0mGET /albums/categories [33m403[0m 4.519 ms - 40[0m
+2023-07-10 18:08:43 info: [0mPOST /login [32m200[0m 486.188 ms - 417[0m
+2023-07-10 18:08:44 error: [GET] /albums/categories >> StatusCode:: 403, Message:: Wrong authentication token
+2023-07-10 18:08:44 info: [0mGET /albums/categories [33m403[0m 404.660 ms - 40[0m
+2023-07-10 18:08:44 error: [GET] /albums/popular >> StatusCode:: 403, Message:: Wrong authentication token
+2023-07-10 18:08:44 info: [0mGET /albums/popular [33m403[0m 415.198 ms - 40[0m
+2023-07-10 18:08:44 info: [0mPOST /refresh [32m200[0m 1.441 ms - 428[0m
+2023-07-10 18:08:44 info: [0mPOST /refresh [32m200[0m 1.122 ms - 428[0m
+2023-07-10 18:08:44 info: [0mGET /albums/categories [32m201[0m 436.387 ms - 17[0m
+2023-07-10 18:08:45 info: [0mGET /albums/popular [32m201[0m 618.274 ms - 19[0m
+2023-07-10 18:10:28 error: [GET] /albums/popular >> StatusCode:: 403, Message:: Wrong authentication token
+2023-07-10 18:10:28 info: [0mGET /albums/popular [33m403[0m 3.826 ms - 40[0m
+2023-07-10 18:10:28 error: [GET] /albums/categories >> StatusCode:: 403, Message:: Wrong authentication token
+2023-07-10 18:10:28 info: [0mGET /albums/categories [33m403[0m 5.438 ms - 40[0m
+2023-07-10 18:11:25 info: [0mPOST /login [32m200[0m 469.004 ms - 417[0m
+2023-07-10 18:11:26 error: [GET] /albums/categories >> StatusCode:: 403, Message:: Wrong authentication token
+2023-07-10 18:11:26 info: [0mGET /albums/categories [33m403[0m 388.616 ms - 40[0m
+2023-07-10 18:11:26 error: [GET] /albums/popular >> StatusCode:: 403, Message:: Wrong authentication token
+2023-07-10 18:11:26 info: [0mGET /albums/popular [33m403[0m 432.077 ms - 40[0m
+2023-07-10 18:11:26 info: [0mPOST /refresh [32m200[0m 2.087 ms - 428[0m
+2023-07-10 18:11:26 info: [0mPOST /refresh [32m200[0m 1.332 ms - 428[0m
+2023-07-10 18:11:27 info: [0mGET /albums/categories [32m201[0m 383.787 ms - 118[0m
+2023-07-10 18:11:27 info: [0mGET /albums/popular [32m201[0m 515.043 ms - 19[0m
+2023-07-10 18:11:27 error: [GET] /albums/category/dtrry894t8ghbr(eyh4 >> StatusCode:: 403, Message:: Wrong authentication token
+2023-07-10 18:11:27 info: [0mGET /albums/category/dtrry894t8ghbr(eyh4 [33m403[0m 396.787 ms - 40[0m
+2023-07-10 18:11:27 info: [0mPOST /refresh [32m200[0m 1.458 ms - 428[0m
+2023-07-10 18:11:28 info: [0mGET /albums/category/dtrry894t8ghbr(eyh4 [32m201[0m 532.871 ms - 22[0m
+2023-07-10 18:12:06 error: [POST] /post/cus_NkTy5P9bfCdDea >> StatusCode:: 400, Message:: Unexpected token } in JSON at position 211
+2023-07-10 18:12:06 info: [0mPOST /post/cus_NkTy5P9bfCdDea [33m400[0m 44.253 ms - 56[0m
+2023-07-10 18:12:17 error: [POST] /post/cus_NkTy5P9bfCdDea >> StatusCode:: 400, Message:: Unexpected token } in JSON at position 211
+2023-07-10 18:12:17 info: [0mPOST /post/cus_NkTy5P9bfCdDea [33m400[0m 1.621 ms - 56[0m
+2023-07-10 18:12:22 info: [0mPOST /post/cus_NkTy5P9bfCdDea [33m404[0m 2.006 ms - 163[0m
+2023-07-10 18:12:59 info: [0mPOST /album/cus_NkTy5P9bfCdDea [33m404[0m 0.731 ms - 164[0m
+2023-07-10 18:13:50 info: [0mPOST /album/cus_NkTy5P9bfCdDea [33m404[0m 0.496 ms - 164[0m
+2023-07-10 18:13:52 info: [0mPOST /album/cus_NkTy5P9bfCdDea [33m404[0m 0.725 ms - 164[0m
+2023-07-10 18:14:50 error: [POST] /albums/cus_NkTy5P9bfCdDea >> StatusCode:: 404, Message:: Authentication token missing
+2023-07-10 18:14:50 info: [0mPOST /albums/cus_NkTy5P9bfCdDea [33m404[0m 1.785 ms - 42[0m
+2023-07-10 18:15:26 error: [POST] /albums/cus_NkTy5P9bfCdDea >> StatusCode:: 404, Message:: Authentication token missing
+2023-07-10 18:15:26 info: [0mPOST /albums/cus_NkTy5P9bfCdDea [33m404[0m 1.653 ms - 42[0m
+2023-07-10 18:16:13 info: =================================
+2023-07-10 18:16:13 info: ======= ENV: development =======
+2023-07-10 18:16:13 info: 🚀 App listening on the port 4000
+2023-07-10 18:16:13 info: =================================
+2023-07-10 18:16:17 info: [0mPOST /albums/cus_NkTy5P9bfCdDea [32m201[0m 592.481 ms - 46[0m
+2023-07-10 18:18:11 info: [0mPOST /signup [32m201[0m 440.939 ms - 63[0m
+2023-07-10 18:18:23 info: [0mPOST /signup [32m201[0m 482.666 ms - 26[0m
+2023-07-10 18:19:18 info: [0mPOST /signup [32m201[0m 1578.906 ms - 297[0m
+2023-07-10 18:20:37 info: [0mPOST /albums/cus_OEqUngrJNCjCge [32m201[0m 749.835 ms - 2[0m
+2023-07-10 18:21:15 info: [0mPOST /albums/cus_OEqUngrJNCjCge [32m201[0m 691.974 ms - 2[0m
+2023-07-10 18:22:43 info: [0mPOST /albums/cus_OEqUngrJNCjCge [32m201[0m 1524.149 ms - 291[0m
+2023-07-10 18:22:59 error: [GET] /albums/popular >> StatusCode:: 403, Message:: Wrong authentication token
+2023-07-10 18:22:59 info: [0mGET /albums/popular [33m403[0m 7.783 ms - 40[0m
+2023-07-10 18:22:59 error: [GET] /albums/categories >> StatusCode:: 403, Message:: Wrong authentication token
+2023-07-10 18:22:59 info: [0mGET /albums/categories [33m403[0m 4.278 ms - 40[0m
+2023-07-10 18:24:14 info: [0mPOST /login [32m200[0m 458.049 ms - 417[0m
+2023-07-10 18:24:15 error: [GET] /albums/popular >> StatusCode:: 403, Message:: Wrong authentication token
+2023-07-10 18:24:15 info: [0mGET /albums/popular [33m403[0m 403.239 ms - 40[0m
+2023-07-10 18:24:15 error: [GET] /albums/categories >> StatusCode:: 403, Message:: Wrong authentication token
+2023-07-10 18:24:15 info: [0mGET /albums/categories [33m403[0m 433.427 ms - 40[0m
+2023-07-10 18:24:16 info: [0mPOST /refresh [32m200[0m 2.135 ms - 428[0m
+2023-07-10 18:24:16 info: [0mPOST /refresh [32m200[0m 1.654 ms - 428[0m
+2023-07-10 18:24:16 info: [0mGET /albums/popular [32m201[0m 445.777 ms - 19[0m
+2023-07-10 18:24:16 info: [0mGET /albums/categories [32m201[0m 440.352 ms - 118[0m
+2023-07-10 18:24:17 error: [GET] /albums/category/dtrry894t8ghbr(eyh4 >> StatusCode:: 403, Message:: Wrong authentication token
+2023-07-10 18:24:17 info: [0mGET /albums/category/dtrry894t8ghbr(eyh4 [33m403[0m 391.749 ms - 40[0m
+2023-07-10 18:24:17 info: [0mPOST /refresh [32m200[0m 2.063 ms - 428[0m
+2023-07-10 18:24:17 info: [0mGET /albums/category/dtrry894t8ghbr(eyh4 [32m201[0m 537.637 ms - 22[0m
+2023-07-10 18:24:34 info: [0mPOST /albums/cus_OEqUngrJNCjCge [32m201[0m 1505.695 ms - 291[0m
+2023-07-10 18:24:48 error: [GET] /albums/popular >> StatusCode:: 403, Message:: Wrong authentication token
+2023-07-10 18:24:48 info: [0mGET /albums/popular [33m403[0m 3.728 ms - 40[0m
+2023-07-10 18:24:48 error: [GET] /albums/categories >> StatusCode:: 403, Message:: Wrong authentication token
+2023-07-10 18:24:48 info: [0mGET /albums/categories [33m403[0m 3.774 ms - 40[0m
+2023-07-10 18:26:20 info: [0mPOST /login [32m200[0m 459.988 ms - 417[0m
+2023-07-10 18:26:21 error: [GET] /albums/categories >> StatusCode:: 403, Message:: Wrong authentication token
+2023-07-10 18:26:21 info: [0mGET /albums/categories [33m403[0m 382.176 ms - 40[0m
+2023-07-10 18:26:21 error: [GET] /albums/popular >> StatusCode:: 403, Message:: Wrong authentication token
+2023-07-10 18:26:21 info: [0mGET /albums/popular [33m403[0m 402.338 ms - 40[0m
+2023-07-10 18:26:21 info: [0mPOST /refresh [32m200[0m 2.560 ms - 428[0m
+2023-07-10 18:26:21 info: [0mPOST /refresh [32m200[0m 1.474 ms - 428[0m
+2023-07-10 18:26:22 info: [0mGET /albums/categories [32m201[0m 373.433 ms - 118[0m
+2023-07-10 18:26:22 info: [0mGET /albums/popular [32m201[0m 374.127 ms - 19[0m
+2023-07-10 18:26:22 error: [GET] /albums/category/dtrry894t8ghbr(eyh4 >> StatusCode:: 403, Message:: Wrong authentication token
+2023-07-10 18:26:22 info: [0mGET /albums/category/dtrry894t8ghbr(eyh4 [33m403[0m 385.262 ms - 40[0m
+2023-07-10 18:26:22 info: [0mPOST /refresh [32m200[0m 1.519 ms - 428[0m
+2023-07-10 18:26:23 info: [0mGET /albums/category/dtrry894t8ghbr(eyh4 [32m201[0m 383.886 ms - 22[0m
+2023-07-10 18:26:49 error: [GET] /albums/popular >> StatusCode:: 403, Message:: Wrong authentication token
+2023-07-10 18:26:49 info: [0mGET /albums/popular [33m403[0m 384.968 ms - 40[0m
+2023-07-10 18:26:49 info: [0mPOST /refresh [32m200[0m 1.424 ms - 428[0m
+2023-07-10 18:26:49 error: [GET] /albums/categories >> StatusCode:: 403, Message:: Wrong authentication token
+2023-07-10 18:26:49 info: [0mGET /albums/categories [33m403[0m 372.740 ms - 40[0m
+2023-07-10 18:26:49 info: [0mPOST /refresh [32m200[0m 1.173 ms - 428[0m
+2023-07-10 18:26:49 info: [0mGET /albums/categories [32m201[0m 371.133 ms - 118[0m
+2023-07-10 18:26:49 info: [0mGET /albums/popular [32m201[0m 422.097 ms - 19[0m
+2023-07-10 18:26:50 error: [GET] /albums/category/dtrry894t8ghbr(eyh4 >> StatusCode:: 403, Message:: Wrong authentication token
+2023-07-10 18:26:50 info: [0mGET /albums/category/dtrry894t8ghbr(eyh4 [33m403[0m 381.398 ms - 40[0m
+2023-07-10 18:26:50 info: [0mPOST /refresh [32m200[0m 1.392 ms - 428[0m
+2023-07-10 18:26:50 info: [0mGET /albums/category/dtrry894t8ghbr(eyh4 [32m201[0m 386.462 ms - 22[0m
+2023-07-10 18:27:06 error: [GET] /albums/popular >> StatusCode:: 403, Message:: Wrong authentication token
+2023-07-10 18:27:06 info: [0mGET /albums/popular [33m403[0m 431.256 ms - 40[0m
+2023-07-10 18:27:06 error: [GET] /albums/categories >> StatusCode:: 403, Message:: Wrong authentication token
+2023-07-10 18:27:06 info: [0mGET /albums/categories [33m403[0m 385.460 ms - 40[0m
+2023-07-10 18:27:06 info: [0mPOST /refresh [32m200[0m 1.686 ms - 428[0m
+2023-07-10 18:27:06 info: [0mPOST /refresh [32m200[0m 1.074 ms - 428[0m
+2023-07-10 18:27:06 info: [0mGET /albums/categories [32m201[0m 360.136 ms - 118[0m
+2023-07-10 18:27:06 info: [0mGET /albums/popular [32m201[0m 403.216 ms - 19[0m
+2023-07-10 18:27:07 error: [GET] /albums/category/dtrry894t8ghbr(eyh4 >> StatusCode:: 403, Message:: Wrong authentication token
+2023-07-10 18:27:07 info: [0mGET /albums/category/dtrry894t8ghbr(eyh4 [33m403[0m 404.120 ms - 40[0m
+2023-07-10 18:27:07 info: [0mPOST /refresh [32m200[0m 1.387 ms - 428[0m
+2023-07-10 18:27:07 info: [0mGET /albums/category/dtrry894t8ghbr(eyh4 [32m201[0m 422.804 ms - 22[0m
+2023-07-10 18:28:29 info: [0mPOST /albums/cus_OEqUngrJNCjCge [32m201[0m 1244.653 ms - 291[0m
+2023-07-10 18:28:44 error: [GET] /albums/popular >> StatusCode:: 403, Message:: Wrong authentication token
+2023-07-10 18:28:44 info: [0mGET /albums/popular [33m403[0m 382.167 ms - 40[0m
+2023-07-10 18:28:44 error: [GET] /albums/categories >> StatusCode:: 403, Message:: Wrong authentication token
+2023-07-10 18:28:44 info: [0mGET /albums/categories [33m403[0m 407.048 ms - 40[0m
+2023-07-10 18:28:44 info: [0mPOST /refresh [32m200[0m 1.152 ms - 428[0m
+2023-07-10 18:28:44 info: [0mPOST /refresh [32m200[0m 1.398 ms - 428[0m
+2023-07-10 18:28:44 info: [0mGET /albums/popular [32m201[0m 359.966 ms - 19[0m
+2023-07-10 18:28:44 info: [0mGET /albums/categories [32m201[0m 364.443 ms - 118[0m
+2023-07-10 18:28:45 error: [GET] /albums/category/dtrry894t8ghbr(eyh4 >> StatusCode:: 403, Message:: Wrong authentication token
+2023-07-10 18:28:45 info: [0mGET /albums/category/dtrry894t8ghbr(eyh4 [33m403[0m 417.643 ms - 40[0m
+2023-07-10 18:28:45 info: [0mPOST /refresh [32m200[0m 1.528 ms - 428[0m
+2023-07-10 18:28:46 info: [0mGET /albums/category/dtrry894t8ghbr(eyh4 [32m201[0m 824.899 ms - 553[0m
+2023-07-10 18:33:10 info: =================================
+2023-07-10 18:33:10 info: ======= ENV: development =======
+2023-07-10 18:33:10 info: 🚀 App listening on the port 4000
+2023-07-10 18:33:10 info: =================================
+2023-07-10 18:33:26 info: [0mGET /albums/upload/00c8123a1a84a4d2fcf8fc91c0151aca7b6abafb [33m404[0m 5.406 ms - 193[0m
+2023-07-10 18:33:41 info: [0mPOST /albums/upload/00c8123a1a84a4d2fcf8fc91c0151aca7b6abafb [32m201[0m 23.669 ms - 60[0m
+2023-07-10 18:33:47 info: [0mPOST /albums/upload/00c8123a1a84a4d2fcf8fc91c0151aca7b6abafb [32m201[0m 4.320 ms - 60[0m
+2023-07-10 18:42:52 error: [GET] /albums/popular >> StatusCode:: 403, Message:: Wrong authentication token
+2023-07-10 18:42:52 info: [0mGET /albums/popular [33m403[0m 424.526 ms - 40[0m
+2023-07-10 18:42:52 error: [GET] /albums/categories >> StatusCode:: 403, Message:: Wrong authentication token
+2023-07-10 18:42:52 info: [0mGET /albums/categories [33m403[0m 387.139 ms - 40[0m
+2023-07-10 18:42:52 info: [0mPOST /refresh [32m200[0m 14.197 ms - 428[0m
+2023-07-10 18:42:52 info: [0mPOST /refresh [32m200[0m 1.707 ms - 428[0m
+2023-07-10 18:42:52 info: [0mGET /albums/popular [32m201[0m 372.443 ms - 19[0m
+2023-07-10 18:42:52 info: [0mGET /albums/categories [32m201[0m 398.770 ms - 118[0m
+2023-07-10 18:42:53 error: [GET] /albums/category/dtrry894t8ghbr(eyh4 >> StatusCode:: 403, Message:: Wrong authentication token
+2023-07-10 18:42:53 info: [0mGET /albums/category/dtrry894t8ghbr(eyh4 [33m403[0m 456.948 ms - 40[0m
+2023-07-10 18:42:53 info: [0mPOST /refresh [32m200[0m 1.712 ms - 428[0m
+2023-07-10 18:42:54 info: [0mGET /albums/category/dtrry894t8ghbr(eyh4 [32m201[0m 873.383 ms - 553[0m
+2023-07-10 18:43:16 info: [0mPOST /albums/upload/00c8123a1a84a4d2fcf8fc91c0151aca7b6abafb [32m201[0m 3.942 ms - 60[0m
+2023-07-10 18:43:18 info: [0mPOST /albums/upload/00c8123a1a84a4d2fcf8fc91c0151aca7b6abafb [32m201[0m 3.370 ms - 60[0m
+2023-07-10 18:43:33 error: [GET] /albums/popular >> StatusCode:: 403, Message:: Wrong authentication token
+2023-07-10 18:43:33 info: [0mGET /albums/popular [33m403[0m 416.555 ms - 40[0m
+2023-07-10 18:43:33 info: [0mPOST /refresh [32m200[0m 2.162 ms - 428[0m
+2023-07-10 18:43:33 error: [GET] /albums/categories >> StatusCode:: 403, Message:: Wrong authentication token
+2023-07-10 18:43:33 info: [0mGET /albums/categories [33m403[0m 443.950 ms - 40[0m
+2023-07-10 18:43:34 info: [0mPOST /refresh [32m200[0m 1.849 ms - 428[0m
+2023-07-10 18:43:34 info: [0mGET /albums/popular [32m201[0m 424.387 ms - 19[0m
+2023-07-10 18:43:34 info: [0mGET /albums/categories [32m201[0m 371.916 ms - 118[0m
+2023-07-10 18:43:35 error: [GET] /albums/category/dtrry894t8ghbr(eyh4 >> StatusCode:: 403, Message:: Wrong authentication token
+2023-07-10 18:43:35 info: [0mGET /albums/category/dtrry894t8ghbr(eyh4 [33m403[0m 391.701 ms - 40[0m
+2023-07-10 18:43:35 info: [0mPOST /refresh [32m200[0m 2.440 ms - 428[0m
+2023-07-10 18:43:35 info: [0mGET /albums/category/dtrry894t8ghbr(eyh4 [32m201[0m 789.357 ms - 553[0m
+2023-07-10 18:45:20 error: [GET] /albums/popular >> StatusCode:: 403, Message:: Wrong authentication token
+2023-07-10 18:45:20 info: [0mGET /albums/popular [33m403[0m 390.595 ms - 40[0m
+2023-07-10 18:45:20 error: [GET] /albums/categories >> StatusCode:: 403, Message:: Wrong authentication token
+2023-07-10 18:45:20 info: [0mGET /albums/categories [33m403[0m 403.620 ms - 40[0m
+2023-07-10 18:45:20 info: [0mPOST /refresh [32m200[0m 1.849 ms - 428[0m
+2023-07-10 18:45:20 info: [0mPOST /refresh [32m200[0m 2.559 ms - 428[0m
+2023-07-10 18:45:20 info: [0mGET /albums/categories [32m201[0m 362.317 ms - 118[0m
+2023-07-10 18:45:20 info: [0mGET /albums/popular [32m201[0m 379.713 ms - 19[0m
+2023-07-10 18:45:21 error: [GET] /albums/category/dtrry894t8ghbr(eyh4 >> StatusCode:: 403, Message:: Wrong authentication token
+2023-07-10 18:45:21 info: [0mGET /albums/category/dtrry894t8ghbr(eyh4 [33m403[0m 439.730 ms - 40[0m
+2023-07-10 18:45:21 info: [0mPOST /refresh [32m200[0m 1.527 ms - 428[0m
+2023-07-10 18:45:22 info: [0mGET /albums/category/dtrry894t8ghbr(eyh4 [32m201[0m 821.135 ms - 553[0m
+2023-07-10 18:46:06 error: [GET] /albums/popular >> StatusCode:: 403, Message:: Wrong authentication token
+2023-07-10 18:46:06 info: [0mGET /albums/popular [33m403[0m 381.765 ms - 40[0m
+2023-07-10 18:46:06 info: [0mPOST /refresh [32m200[0m 1.783 ms - 428[0m
+2023-07-10 18:46:06 error: [GET] /albums/categories >> StatusCode:: 403, Message:: Wrong authentication token
+2023-07-10 18:46:06 info: [0mGET /albums/categories [33m403[0m 419.387 ms - 40[0m
+2023-07-10 18:46:06 info: [0mPOST /refresh [32m200[0m 1.465 ms - 428[0m
+2023-07-10 18:46:06 info: [0mGET /albums/popular [32m201[0m 401.022 ms - 19[0m
+2023-07-10 18:46:06 info: [0mGET /albums/categories [32m201[0m 386.831 ms - 118[0m
+2023-07-10 18:46:07 error: [GET] /albums/category/dtrry894t8ghbr(eyh4 >> StatusCode:: 403, Message:: Wrong authentication token
+2023-07-10 18:46:07 info: [0mGET /albums/category/dtrry894t8ghbr(eyh4 [33m403[0m 407.795 ms - 40[0m
+2023-07-10 18:46:07 info: [0mPOST /refresh [32m200[0m 1.804 ms - 428[0m
+2023-07-10 18:46:08 info: [0mGET /albums/category/dtrry894t8ghbr(eyh4 [32m201[0m 770.755 ms - 553[0m
+2023-07-10 18:50:15 error: [GET] /albums/category/dtrry894t8ghbr(eyh4 >> StatusCode:: 403, Message:: Wrong authentication token
+2023-07-10 18:50:15 info: [0mGET /albums/category/dtrry894t8ghbr(eyh4 [33m403[0m 379.089 ms - 40[0m
+2023-07-10 18:50:15 error: [GET] /albums/categories >> StatusCode:: 403, Message:: Wrong authentication token
+2023-07-10 18:50:15 info: [0mGET /albums/categories [33m403[0m 399.645 ms - 40[0m
+2023-07-10 18:50:15 error: [GET] /albums/popular >> StatusCode:: 403, Message:: Wrong authentication token
+2023-07-10 18:50:15 info: [0mGET /albums/popular [33m403[0m 414.164 ms - 40[0m
+2023-07-10 18:50:15 info: [0mPOST /refresh [32m200[0m 1.392 ms - 428[0m
+2023-07-10 18:50:15 info: [0mPOST /refresh [32m200[0m 1.406 ms - 428[0m
+2023-07-10 18:50:15 info: [0mPOST /refresh [32m200[0m 1.255 ms - 428[0m
+2023-07-10 18:50:16 info: [0mGET /albums/popular [32m201[0m 355.386 ms - 19[0m
+2023-07-10 18:50:16 info: [0mGET /albums/categories [32m201[0m 424.757 ms - 118[0m
+2023-07-10 18:50:16 info: [0mGET /albums/category/dtrry894t8ghbr(eyh4 [32m201[0m 736.043 ms - 553[0m
+2023-07-10 18:50:58 info: [0mPOST /albums/upload/00c8123a1a84a4d2fcf8fc91c0151aca7b6abafb [32m201[0m 5.098 ms - 60[0m
+2023-07-10 18:50:59 info: [0mPOST /albums/upload/00c8123a1a84a4d2fcf8fc91c0151aca7b6abafb [32m201[0m 3.930 ms - 60[0m
+2023-07-10 18:53:08 info: [0mPOST /albums/upload/300c8123a1a84a4d2fcf8fc91c0151aca7b6abaf [32m201[0m 3.320 ms - 60[0m
+2023-07-10 18:53:10 info: [0mPOST /albums/upload/300c8123a1a84a4d2fcf8fc91c0151aca7b6abaf [32m201[0m 4.127 ms - 60[0m
+2023-07-10 18:53:11 info: [0mPOST /albums/upload/300c8123a1a84a4d2fcf8fc91c0151aca7b6abaf [32m201[0m 3.290 ms - 60[0m
+2023-07-10 18:53:51 info: [0mPOST /albums/upload/0c8123a1a84a4d2fcf8fc91c0151aca7b6abafbe [32m201[0m 3.967 ms - 60[0m
+2023-07-10 18:53:52 info: [0mPOST /albums/upload/0c8123a1a84a4d2fcf8fc91c0151aca7b6abafbe [32m201[0m 4.115 ms - 60[0m
+2023-07-10 18:53:54 info: [0mPOST /albums/upload/0c8123a1a84a4d2fcf8fc91c0151aca7b6abafbe [32m201[0m 4.131 ms - 60[0m
+2023-07-10 18:54:31 error: [GET] /albums/popular >> StatusCode:: 403, Message:: Wrong authentication token
+2023-07-10 18:54:31 info: [0mGET /albums/popular [33m403[0m 414.441 ms - 40[0m
+2023-07-10 18:54:31 error: [GET] /albums/categories >> StatusCode:: 403, Message:: Wrong authentication token
+2023-07-10 18:54:31 info: [0mGET /albums/categories [33m403[0m 372.639 ms - 40[0m
+2023-07-10 18:54:31 info: [0mPOST /refresh [32m200[0m 1.761 ms - 428[0m
+2023-07-10 18:54:31 info: [0mPOST /refresh [32m200[0m 0.932 ms - 428[0m
+2023-07-10 18:54:32 info: [0mGET /albums/categories [32m201[0m 407.743 ms - 118[0m
+2023-07-10 18:54:32 info: [0mGET /albums/popular [32m201[0m 570.767 ms - -[0m
+2023-07-10 18:54:33 error: [GET] /albums/category/dtrry894t8ghbr(eyh4 >> StatusCode:: 403, Message:: Wrong authentication token
+2023-07-10 18:54:33 info: [0mGET /albums/category/dtrry894t8ghbr(eyh4 [33m403[0m 385.938 ms - 40[0m
+2023-07-10 18:54:33 info: [0mPOST /refresh [32m200[0m 1.478 ms - 428[0m
+2023-07-10 18:54:34 info: [0mGET /albums/category/dtrry894t8ghbr(eyh4 [32m201[0m 927.080 ms - -[0m
+2023-07-10 18:54:34 info: [0mGET /public/files/albums/ic_launcherpng0c8123a1a84a4d2fcf8fc91c0151aca7b6abafbe51072023.png [32m200[0m 2.347 ms - 26256[0m
+2023-07-10 18:54:52 error: [GET] /albums/category/rtg5t1trgeyh4 >> StatusCode:: 403, Message:: Wrong authentication token
+2023-07-10 18:54:52 info: [0mGET /albums/category/rtg5t1trgeyh4 [33m403[0m 399.425 ms - 40[0m
+2023-07-10 18:54:52 info: [0mPOST /refresh [32m200[0m 1.315 ms - 428[0m
+2023-07-10 18:54:53 info: [0mGET /albums/category/rtg5t1trgeyh4 [32m201[0m 420.584 ms - 22[0m
+2023-07-10 18:54:56 error: [GET] /albums/category/dtrry894t8ghbr(eyh4 >> StatusCode:: 403, Message:: Wrong authentication token
+2023-07-10 18:54:56 info: [0mGET /albums/category/dtrry894t8ghbr(eyh4 [33m403[0m 411.022 ms - 40[0m
+2023-07-10 18:54:56 info: [0mPOST /refresh [32m200[0m 1.426 ms - 428[0m
+2023-07-10 18:54:57 info: [0mGET /albums/category/dtrry894t8ghbr(eyh4 [32m201[0m 784.368 ms - -[0m
+2023-07-10 18:56:07 error: [GET] /albums/popular >> StatusCode:: 403, Message:: Wrong authentication token
+2023-07-10 18:56:07 info: [0mGET /albums/popular [33m403[0m 407.027 ms - 40[0m
+2023-07-10 18:56:07 error: [GET] /albums/categories >> StatusCode:: 403, Message:: Wrong authentication token
+2023-07-10 18:56:07 info: [0mGET /albums/categories [33m403[0m 380.647 ms - 40[0m
+2023-07-10 18:56:07 info: [0mPOST /refresh [32m200[0m 1.671 ms - 428[0m
+2023-07-10 18:56:07 info: [0mPOST /refresh [32m200[0m 1.134 ms - 428[0m
+2023-07-10 18:56:07 info: [0mGET /albums/popular [32m201[0m 372.600 ms - -[0m
+2023-07-10 18:56:07 info: [0mGET /albums/categories [32m201[0m 404.160 ms - 118[0m
+2023-07-10 18:56:08 error: [GET] /albums/category/dtrry894t8ghbr(eyh4 >> StatusCode:: 403, Message:: Wrong authentication token
+2023-07-10 18:56:08 info: [0mGET /albums/category/dtrry894t8ghbr(eyh4 [33m403[0m 387.952 ms - 40[0m
+2023-07-10 18:56:09 info: [0mPOST /refresh [32m200[0m 1.558 ms - 428[0m
+2023-07-10 18:56:09 info: [0mGET /albums/category/dtrry894t8ghbr(eyh4 [32m201[0m 805.549 ms - -[0m
+2023-07-10 19:02:51 info: =================================
+2023-07-10 19:02:51 info: ======= ENV: development =======
+2023-07-10 19:02:51 info: 🚀 App listening on the port 4000
+2023-07-10 19:02:51 info: =================================
+2023-07-10 19:02:59 info: =================================
+2023-07-10 19:02:59 info: ======= ENV: development =======
+2023-07-10 19:02:59 info: 🚀 App listening on the port 4000
+2023-07-10 19:02:59 info: =================================
+2023-07-10 19:03:03 info: =================================
+2023-07-10 19:03:03 info: ======= ENV: development =======
+2023-07-10 19:03:03 info: 🚀 App listening on the port 4000
+2023-07-10 19:03:03 info: =================================
+2023-07-10 19:03:06 info: =================================
+2023-07-10 19:03:06 info: ======= ENV: development =======
+2023-07-10 19:03:06 info: 🚀 App listening on the port 4000
+2023-07-10 19:03:06 info: =================================
+2023-07-10 19:03:24 info: =================================
+2023-07-10 19:03:24 info: ======= ENV: development =======
+2023-07-10 19:03:24 info: 🚀 App listening on the port 4000
+2023-07-10 19:03:24 info: =================================
+2023-07-10 19:03:40 info: =================================
+2023-07-10 19:03:40 info: ======= ENV: development =======
+2023-07-10 19:03:40 info: 🚀 App listening on the port 4000
+2023-07-10 19:03:40 info: =================================
+2023-07-10 19:03:49 info: =================================
+2023-07-10 19:03:49 info: ======= ENV: development =======
+2023-07-10 19:03:49 info: 🚀 App listening on the port 4000
+2023-07-10 19:03:49 info: =================================
+2023-07-10 19:03:53 info: =================================
+2023-07-10 19:03:53 info: ======= ENV: development =======
+2023-07-10 19:03:53 info: 🚀 App listening on the port 4000
+2023-07-10 19:03:53 info: =================================
+2023-07-10 19:03:56 info: =================================
+2023-07-10 19:03:56 info: ======= ENV: development =======
+2023-07-10 19:03:56 info: 🚀 App listening on the port 4000
+2023-07-10 19:03:56 info: =================================
+2023-07-10 19:04:03 info: =================================
+2023-07-10 19:04:03 info: ======= ENV: development =======
+2023-07-10 19:04:03 info: 🚀 App listening on the port 4000
+2023-07-10 19:04:03 info: =================================
+2023-07-10 19:04:26 info: =================================
+2023-07-10 19:04:26 info: ======= ENV: development =======
+2023-07-10 19:04:26 info: 🚀 App listening on the port 4000
+2023-07-10 19:04:26 info: =================================
+2023-07-10 19:04:30 info: =================================
+2023-07-10 19:04:30 info: ======= ENV: development =======
+2023-07-10 19:04:30 info: 🚀 App listening on the port 4000
+2023-07-10 19:04:30 info: =================================
+2023-07-10 19:04:35 info: =================================
+2023-07-10 19:04:35 info: ======= ENV: development =======
+2023-07-10 19:04:35 info: 🚀 App listening on the port 4000
+2023-07-10 19:04:35 info: =================================
+2023-07-10 19:06:52 info: =================================
+2023-07-10 19:06:52 info: ======= ENV: development =======
+2023-07-10 19:06:52 info: 🚀 App listening on the port 4000
+2023-07-10 19:06:52 info: =================================
+2023-07-10 19:06:56 info: =================================
+2023-07-10 19:06:56 info: ======= ENV: development =======
+2023-07-10 19:06:56 info: 🚀 App listening on the port 4000
+2023-07-10 19:06:56 info: =================================
+2023-07-10 19:07:04 info: =================================
+2023-07-10 19:07:04 info: ======= ENV: development =======
+2023-07-10 19:07:04 info: 🚀 App listening on the port 4000
+2023-07-10 19:07:04 info: =================================
+2023-07-10 19:07:07 info: =================================
+2023-07-10 19:07:07 info: ======= ENV: development =======
+2023-07-10 19:07:07 info: 🚀 App listening on the port 4000
+2023-07-10 19:07:07 info: =================================
+2023-07-10 19:07:10 info: =================================
+2023-07-10 19:07:10 info: ======= ENV: development =======
+2023-07-10 19:07:10 info: 🚀 App listening on the port 4000
+2023-07-10 19:07:10 info: =================================
+2023-07-10 19:07:28 info: =================================
+2023-07-10 19:07:28 info: ======= ENV: development =======
+2023-07-10 19:07:28 info: 🚀 App listening on the port 4000
+2023-07-10 19:07:28 info: =================================
+2023-07-10 19:07:31 info: =================================
+2023-07-10 19:07:31 info: ======= ENV: development =======
+2023-07-10 19:07:31 info: 🚀 App listening on the port 4000
+2023-07-10 19:07:31 info: =================================
+2023-07-10 19:07:41 info: =================================
+2023-07-10 19:07:41 info: ======= ENV: development =======
+2023-07-10 19:07:41 info: 🚀 App listening on the port 4000
+2023-07-10 19:07:41 info: =================================
+2023-07-10 19:07:51 info: =================================
+2023-07-10 19:07:51 info: ======= ENV: development =======
+2023-07-10 19:07:51 info: 🚀 App listening on the port 4000
+2023-07-10 19:07:51 info: =================================
+2023-07-10 19:07:57 info: =================================
+2023-07-10 19:07:57 info: ======= ENV: development =======
+2023-07-10 19:07:57 info: 🚀 App listening on the port 4000
+2023-07-10 19:07:57 info: =================================
+2023-07-10 19:08:25 info: =================================
+2023-07-10 19:08:25 info: ======= ENV: development =======
+2023-07-10 19:08:25 info: 🚀 App listening on the port 4000
+2023-07-10 19:08:25 info: =================================
+2023-07-10 19:08:29 info: =================================
+2023-07-10 19:08:29 info: ======= ENV: development =======
+2023-07-10 19:08:29 info: 🚀 App listening on the port 4000
+2023-07-10 19:08:29 info: =================================
+2023-07-10 19:08:34 info: =================================
+2023-07-10 19:08:34 info: ======= ENV: development =======
+2023-07-10 19:08:34 info: 🚀 App listening on the port 4000
+2023-07-10 19:08:34 info: =================================
+2023-07-10 19:08:50 info: =================================
+2023-07-10 19:08:50 info: ======= ENV: development =======
+2023-07-10 19:08:50 info: 🚀 App listening on the port 4000
+2023-07-10 19:08:50 info: =================================
+2023-07-10 19:08:56 info: =================================
+2023-07-10 19:08:56 info: ======= ENV: development =======
+2023-07-10 19:08:56 info: 🚀 App listening on the port 4000
+2023-07-10 19:08:56 info: =================================
+2023-07-10 19:09:03 info: =================================
+2023-07-10 19:09:03 info: ======= ENV: development =======
+2023-07-10 19:09:03 info: 🚀 App listening on the port 4000
+2023-07-10 19:09:03 info: =================================
+2023-07-10 19:09:49 info: =================================
+2023-07-10 19:09:49 info: ======= ENV: development =======
+2023-07-10 19:09:49 info: 🚀 App listening on the port 4000
+2023-07-10 19:09:49 info: =================================
+2023-07-10 19:10:00 info: =================================
+2023-07-10 19:10:00 info: ======= ENV: development =======
+2023-07-10 19:10:00 info: 🚀 App listening on the port 4000
+2023-07-10 19:10:00 info: =================================
+2023-07-10 19:10:09 info: =================================
+2023-07-10 19:10:09 info: ======= ENV: development =======
+2023-07-10 19:10:09 info: 🚀 App listening on the port 4000
+2023-07-10 19:10:09 info: =================================
+2023-07-10 19:10:33 info: =================================
+2023-07-10 19:10:33 info: ======= ENV: development =======
+2023-07-10 19:10:33 info: 🚀 App listening on the port 4000
+2023-07-10 19:10:33 info: =================================
+2023-07-10 19:12:20 info: [0mPOST /login [32m200[0m 33.212 ms - -[0m
+2023-07-10 19:12:39 info: [0mPOST /login [32m200[0m 5.215 ms - -[0m
+2023-07-10 19:13:20 info: [0mPOST /login [32m200[0m 3.442 ms - -[0m
+2023-07-10 19:14:48 info: [0mPOST /login [32m200[0m 843.508 ms - 432[0m
+2023-07-10 19:14:49 error: [GET] /albums/popular >> StatusCode:: 403, Message:: Wrong authentication token
+2023-07-10 19:14:49 info: [0mGET /albums/popular [33m403[0m 416.286 ms - 40[0m
+2023-07-10 19:14:49 error: [GET] /albums/categories >> StatusCode:: 403, Message:: Wrong authentication token
+2023-07-10 19:14:49 info: [0mGET /albums/categories [33m403[0m 414.035 ms - 40[0m
+2023-07-10 19:14:49 info: [0mPOST /refresh [32m200[0m 2.116 ms - 428[0m
+2023-07-10 19:14:49 info: [0mPOST /refresh [32m200[0m 1.840 ms - 428[0m
+2023-07-10 19:14:49 info: [0mGET /albums/categories [32m201[0m 363.656 ms - 118[0m
+2023-07-10 19:14:49 info: [0mGET /albums/popular [32m201[0m 384.158 ms - -[0m
+2023-07-10 19:14:50 error: [GET] /albums/category/dtrry894t8ghbr(eyh4 >> StatusCode:: 403, Message:: Wrong authentication token
+2023-07-10 19:14:50 info: [0mGET /albums/category/dtrry894t8ghbr(eyh4 [33m403[0m 373.750 ms - 40[0m
+2023-07-10 19:14:50 info: [0mPOST /refresh [32m200[0m 1.368 ms - 428[0m
+2023-07-10 19:14:50 info: [0mGET /albums/category/dtrry894t8ghbr(eyh4 [32m201[0m 763.709 ms - -[0m
+2023-07-10 19:21:46 info: =================================
+2023-07-10 19:21:46 info: ======= ENV: development =======
+2023-07-10 19:21:46 info: 🚀 App listening on the port 4000
+2023-07-10 19:21:46 info: =================================
+2023-07-10 19:22:39 info: [0mPOST /login [32m200[0m 531.054 ms - 44[0m
+2023-07-10 19:22:52 info: [0mPOST /login [32m200[0m 580.936 ms - 432[0m
+2023-07-10 19:22:53 error: [GET] /albums/categories >> StatusCode:: 403, Message:: Wrong authentication token
+2023-07-10 19:22:53 info: [0mGET /albums/categories [33m403[0m 373.589 ms - 40[0m
+2023-07-10 19:22:53 info: [0mPOST /refresh [32m200[0m 2.142 ms - 428[0m
+2023-07-10 19:22:53 error: [GET] /albums/popular >> StatusCode:: 403, Message:: Wrong authentication token
+2023-07-10 19:22:53 info: [0mGET /albums/popular [33m403[0m 421.614 ms - 40[0m
+2023-07-10 19:22:53 info: [0mPOST /refresh [32m200[0m 1.994 ms - 428[0m
+2023-07-10 19:22:53 info: [0mGET /albums/categories [32m201[0m 372.562 ms - 118[0m
+2023-07-10 19:22:53 info: [0mGET /albums/popular [32m201[0m 373.826 ms - -[0m
+2023-07-10 19:22:54 error: [GET] /albums/category/dtrry894t8ghbr(eyh4 >> StatusCode:: 403, Message:: Wrong authentication token
+2023-07-10 19:22:54 info: [0mGET /albums/category/dtrry894t8ghbr(eyh4 [33m403[0m 362.462 ms - 40[0m
+2023-07-10 19:22:54 info: [0mPOST /refresh [32m200[0m 1.565 ms - 428[0m
+2023-07-10 19:22:55 info: [0mGET /albums/category/dtrry894t8ghbr(eyh4 [32m201[0m 985.179 ms - -[0m
+2023-07-10 19:23:54 info: =================================
+2023-07-10 19:23:54 info: ======= ENV: development =======
+2023-07-10 19:23:54 info: 🚀 App listening on the port 4000
+2023-07-10 19:23:54 info: =================================
+2023-07-10 19:23:59 info: =================================
+2023-07-10 19:23:59 info: ======= ENV: development =======
+2023-07-10 19:23:59 info: 🚀 App listening on the port 4000
+2023-07-10 19:23:59 info: =================================
+2023-07-10 19:24:09 error: [GET] /albums/popular >> StatusCode:: 403, Message:: Wrong authentication token
+2023-07-10 19:24:09 info: [0mGET /albums/popular [33m403[0m 15.680 ms - 40[0m
+2023-07-10 19:24:09 error: [GET] /albums/categories >> StatusCode:: 403, Message:: Wrong authentication token
+2023-07-10 19:24:09 info: [0mGET /albums/categories [33m403[0m 5.165 ms - 40[0m
+2023-07-10 19:24:48 info: [0mPOST /login [32m200[0m 628.219 ms - 432[0m
+2023-07-10 19:24:49 error: [GET] /albums/popular >> StatusCode:: 403, Message:: Wrong authentication token
+2023-07-10 19:24:49 info: [0mGET /albums/popular [33m403[0m 370.544 ms - 40[0m
+2023-07-10 19:24:49 error: [GET] /albums/categories >> StatusCode:: 403, Message:: Wrong authentication token
+2023-07-10 19:24:49 info: [0mGET /albums/categories [33m403[0m 372.129 ms - 40[0m
+2023-07-10 19:24:49 info: [0mPOST /refresh [32m200[0m 2.324 ms - 428[0m
+2023-07-10 19:24:49 info: [0mPOST /refresh [32m200[0m 1.608 ms - 428[0m
+2023-07-10 19:24:49 info: [0mGET /albums/categories [32m201[0m 365.239 ms - 118[0m
+2023-07-10 19:24:49 info: [0mGET /albums/popular [32m201[0m 404.665 ms - -[0m
+2023-07-10 19:24:50 error: [GET] /albums/category/dtrry894t8ghbr(eyh4 >> StatusCode:: 403, Message:: Wrong authentication token
+2023-07-10 19:24:50 info: [0mGET /albums/category/dtrry894t8ghbr(eyh4 [33m403[0m 418.865 ms - 40[0m
+2023-07-10 19:24:50 info: [0mPOST /refresh [32m200[0m 3.073 ms - 428[0m
+2023-07-10 19:24:51 info: [0mGET /albums/category/dtrry894t8ghbr(eyh4 [32m201[0m 798.514 ms - -[0m
+2023-07-10 19:25:44 info: =================================
+2023-07-10 19:25:44 info: ======= ENV: development =======
+2023-07-10 19:25:44 info: 🚀 App listening on the port 4000
+2023-07-10 19:25:44 info: =================================
+2023-07-10 19:25:54 error: [GET] /albums/popular >> StatusCode:: 403, Message:: Wrong authentication token
+2023-07-10 19:25:54 info: [0mGET /albums/popular [33m403[0m 14.382 ms - 40[0m
+2023-07-10 19:25:54 error: [GET] /albums/categories >> StatusCode:: 403, Message:: Wrong authentication token
+2023-07-10 19:25:54 info: [0mGET /albums/categories [33m403[0m 6.013 ms - 40[0m
+2023-07-10 19:26:26 info: [0mPOST /login [32m200[0m 620.609 ms - 432[0m
+2023-07-10 19:26:27 error: [GET] /albums/popular >> StatusCode:: 403, Message:: Wrong authentication token
+2023-07-10 19:26:27 info: [0mGET /albums/popular [33m403[0m 417.517 ms - 40[0m
+2023-07-10 19:26:27 error: [GET] /albums/categories >> StatusCode:: 403, Message:: Wrong authentication token
+2023-07-10 19:26:27 info: [0mGET /albums/categories [33m403[0m 416.274 ms - 40[0m
+2023-07-10 19:26:27 info: [0mPOST /refresh [32m200[0m 3.601 ms - 428[0m
+2023-07-10 19:26:27 info: [0mPOST /refresh [32m200[0m 1.465 ms - 428[0m
+2023-07-10 19:26:28 info: [0mGET /albums/categories [32m201[0m 414.166 ms - 118[0m
+2023-07-10 19:26:28 info: [0mGET /albums/popular [32m201[0m 432.844 ms - -[0m
+2023-07-10 19:26:28 error: [GET] /albums/category/dtrry894t8ghbr(eyh4 >> StatusCode:: 403, Message:: Wrong authentication token
+2023-07-10 19:26:28 info: [0mGET /albums/category/dtrry894t8ghbr(eyh4 [33m403[0m 434.816 ms - 40[0m
+2023-07-10 19:26:29 info: [0mPOST /refresh [32m200[0m 1.394 ms - 428[0m
+2023-07-10 19:26:29 info: [0mGET /albums/category/dtrry894t8ghbr(eyh4 [32m201[0m 813.243 ms - -[0m
+2023-07-10 19:27:17 info: =================================
+2023-07-10 19:27:17 info: ======= ENV: development =======
+2023-07-10 19:27:17 info: 🚀 App listening on the port 4000
+2023-07-10 19:27:17 info: =================================
+2023-07-10 19:33:44 error: [GET] /albums/popular >> StatusCode:: 403, Message:: Wrong authentication token
+2023-07-10 19:33:44 info: [0mGET /albums/popular [33m403[0m 13.789 ms - 40[0m
+2023-07-10 19:33:44 error: [GET] /albums/categories >> StatusCode:: 403, Message:: Wrong authentication token
+2023-07-10 19:33:44 info: [0mGET /albums/categories [33m403[0m 5.632 ms - 40[0m
+2023-07-10 19:34:47 info: [0mPOST /login [32m200[0m 537.173 ms - 44[0m
+2023-07-10 19:35:02 info: [0mPOST /login [32m200[0m 601.357 ms - 432[0m
+2023-07-10 19:35:04 error: [GET] /albums/categories >> StatusCode:: 403, Message:: Wrong authentication token
+2023-07-10 19:35:04 info: [0mGET /albums/categories [33m403[0m 438.236 ms - 40[0m
+2023-07-10 19:35:04 error: [GET] /albums/popular >> StatusCode:: 403, Message:: Wrong authentication token
+2023-07-10 19:35:04 info: [0mGET /albums/popular [33m403[0m 449.463 ms - 40[0m
+2023-07-10 19:35:04 info: [0mPOST /refresh [32m200[0m 2.208 ms - 428[0m
+2023-07-10 19:35:04 info: [0mPOST /refresh [32m200[0m 1.508 ms - 428[0m
+2023-07-10 19:35:04 info: [0mGET /albums/categories [32m201[0m 378.895 ms - 118[0m
+2023-07-10 19:35:04 info: [0mGET /albums/popular [32m201[0m 385.557 ms - -[0m
+2023-07-10 19:35:05 error: [GET] /albums/category/dtrry894t8ghbr(eyh4 >> StatusCode:: 403, Message:: Wrong authentication token
+2023-07-10 19:35:05 info: [0mGET /albums/category/dtrry894t8ghbr(eyh4 [33m403[0m 393.920 ms - 40[0m
+2023-07-10 19:35:05 info: [0mPOST /refresh [32m200[0m 1.555 ms - 428[0m
+2023-07-10 19:35:06 info: [0mGET /albums/category/dtrry894t8ghbr(eyh4 [32m201[0m 712.606 ms - -[0m
+2023-07-10 19:35:11 info: [0mGET /public/files/albums/ic_launcherpng300c8123a1a84a4d2fcf8fc91c0151aca7b6abaf11072023.png [32m200[0m 2.571 ms - 26256[0m

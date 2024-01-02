@@ -4,57 +4,71 @@ Object.defineProperty(exports, "__esModule", {
 });
 Object.defineProperty(exports, "default", {
     enumerable: true,
-    get: ()=>_default
+    get: function() {
+        return _default;
+    }
 });
-const _authService = _interopRequireDefault(require("../services/auth.service"));
-function _interopRequireDefault(obj) {
+const _authservice = /*#__PURE__*/ _interop_require_default(require("../services/auth.service"));
+function _define_property(obj, key, value) {
+    if (key in obj) {
+        Object.defineProperty(obj, key, {
+            value: value,
+            enumerable: true,
+            configurable: true,
+            writable: true
+        });
+    } else {
+        obj[key] = value;
+    }
+    return obj;
+}
+function _interop_require_default(obj) {
     return obj && obj.__esModule ? obj : {
         default: obj
     };
 }
 let AuthController = class AuthController {
     constructor(){
-        this.authService = new _authService.default();
-        this.signUp = async (req, res, next)=>{
+        _define_property(this, "authService", new _authservice.default());
+        _define_property(this, "signUp", async (req, res, next)=>{
             try {
                 const userData = req.body;
                 const signUpUserData = await this.authService.signup(userData);
-                signUpUserData.message ? res.status(201).json(signUpUserData) : res.status(302).json(signUpUserData);
+                signUpUserData.message ? res.status(400).json(signUpUserData) : res.status(201).json(signUpUserData);
             } catch (error) {
                 console.log(error);
             }
-        };
-        this.logIn = async (req, res, next)=>{
+        });
+        _define_property(this, "logIn", async (req, res, next)=>{
             try {
                 const userData = req.body;
                 const loggedInData = await this.authService.login(userData);
-                res.status(200).json(loggedInData);
+                loggedInData.message ? res.status(403).json(loggedInData) : res.status(200).json(loggedInData);
             } catch (error) {
                 console.log(error);
             }
-        };
-        this.changePassword = async (req, res, next)=>{
+        });
+        _define_property(this, "changePassword", async (req, res, next)=>{
             try {
                 const userData = req.body;
-                const userId = String(req.params.id);
-                const chengedData = await this.authService.changePassword(userId, userData);
-                res.status(200).json({
-                    data: chengedData
-                });
+                const email = String(req.params.email);
+                const chengedData = await this.authService.changePassword(email, userData);
+                console.log(chengedData.message);
+                res.status(200).json(chengedData);
             } catch (error) {
                 console.log(error);
             }
-        };
-        this.generateRefreshToken = async (req, res, next)=>{
+        });
+        _define_property(this, "generateRefreshToken", async (req, res, next)=>{
             try {
-                const token = req.body.data.token;
-                const loggedInData = await this.authService.refreshToken(token);
+                const id = req.body.id;
+                const loggedInData = await this.authService.refreshToken(id);
                 res.status(200).json(loggedInData);
             } catch (error) {
                 next(error);
             }
-        };
-        this.logOut = async (req, res, next)=>{
+        });
+        _define_property(this, "logOut", async (req, res, next)=>{
             try {
                 const userData = req.user;
                 const logOutUserData = await this.authService.logout(userData);
@@ -68,7 +82,7 @@ let AuthController = class AuthController {
             } catch (error) {
                 next(error);
             }
-        };
+        });
     }
 };
 const _default = AuthController;

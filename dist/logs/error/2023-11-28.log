@@ -1,0 +1,7 @@
+2023-11-28 13:36:01 error: [GET] /users/e1d640e916c8628de70bf8ec0bd97461577cc85a >> StatusCode:: 401, Message:: Wrong authentication token
+2023-11-28 14:18:42 error: [GET] /albums >> StatusCode:: 401, Message:: Wrong authentication token
+2023-11-28 14:18:42 error: [GET] /albums/popular >> StatusCode:: 401, Message:: Wrong authentication token
+2023-11-28 14:24:13 error: [GET] /albums >> StatusCode:: 401, Message:: Wrong authentication token
+2023-11-28 14:24:13 error: [GET] /albums/popular >> StatusCode:: 401, Message:: Wrong authentication token
+2023-11-28 14:29:50 error: [GET] /albums/popular >> StatusCode:: 401, Message:: Wrong authentication token
+2023-11-28 14:29:50 error: [GET] /albums >> StatusCode:: 401, Message:: Wrong authentication token

@@ -1,0 +1,1177 @@
+2023-05-04 10:47:07 info: =================================
+2023-05-04 10:47:07 info: ======= ENV: development =======
+2023-05-04 10:47:07 info: 🚀 App listening on the port 3000
+2023-05-04 10:47:07 info: =================================
+2023-05-04 10:47:22 info: [0mGET /posts/categories [32m201[0m 644.906 ms - 11[0m
+2023-05-04 10:52:38 info: [0mGET /posts/categories [32m201[0m 461.791 ms - 11[0m
+2023-05-04 10:53:09 info: =================================
+2023-05-04 10:53:09 info: ======= ENV: development =======
+2023-05-04 10:53:09 info: 🚀 App listening on the port 3000
+2023-05-04 10:53:09 info: =================================
+2023-05-04 10:53:57 info: =================================
+2023-05-04 10:53:57 info: ======= ENV: development =======
+2023-05-04 10:53:57 info: 🚀 App listening on the port 3000
+2023-05-04 10:53:57 info: =================================
+2023-05-04 10:54:03 info: [0mGET /posts/categories [32m201[0m 482.731 ms - 11[0m
+2023-05-04 10:54:20 info: =================================
+2023-05-04 10:54:20 info: ======= ENV: development =======
+2023-05-04 10:54:20 info: 🚀 App listening on the port 3000
+2023-05-04 10:54:20 info: =================================
+2023-05-04 10:54:21 info: [0mGET /posts/categories [32m201[0m 459.071 ms - 11[0m
+2023-05-04 10:54:22 info: [0mGET /posts/categories [32m201[0m 392.526 ms - 11[0m
+2023-05-04 10:54:51 info: =================================
+2023-05-04 10:54:51 info: ======= ENV: development =======
+2023-05-04 10:54:51 info: 🚀 App listening on the port 3000
+2023-05-04 10:54:51 info: =================================
+2023-05-04 10:54:54 info: =================================
+2023-05-04 10:54:54 info: ======= ENV: development =======
+2023-05-04 10:54:54 info: 🚀 App listening on the port 3000
+2023-05-04 10:54:54 info: =================================
+2023-05-04 10:54:56 info: [0mGET /posts/categories [32m201[0m 411.880 ms - 11[0m
+2023-05-04 10:55:16 info: =================================
+2023-05-04 10:55:16 info: ======= ENV: development =======
+2023-05-04 10:55:16 info: 🚀 App listening on the port 3000
+2023-05-04 10:55:16 info: =================================
+2023-05-04 10:55:18 info: [0mGET /posts/categories [32m201[0m 440.207 ms - 108[0m
+2023-05-04 10:58:30 info: [0mGET /posts/popular [32m201[0m 616.640 ms - -[0m
+2023-05-04 16:06:18 info: =================================
+2023-05-04 16:06:19 info: ======= ENV: development =======
+2023-05-04 16:06:19 info: 🚀 App listening on the port 3000
+2023-05-04 16:06:19 info: =================================
+2023-05-04 16:10:12 info: [0mGET /posts/categories [32m201[0m 885.605 ms - 108[0m
+2023-05-04 16:10:12 info: [0mGET /posts/popular [32m201[0m 1486.112 ms - -[0m
+2023-05-04 16:10:37 info: [0mGET /posts/categories [32m201[0m 492.438 ms - 108[0m
+2023-05-04 16:10:39 info: [0mGET /posts/categories [32m201[0m 600.770 ms - 108[0m
+2023-05-04 16:10:42 info: [0mGET /posts/categories [32m201[0m 490.698 ms - 108[0m
+2023-05-04 16:11:48 info: [0mGET /posts/categories [32m201[0m 531.477 ms - 108[0m
+2023-05-04 16:12:01 info: [0mGET /posts/categories [32m201[0m 618.083 ms - 108[0m
+2023-05-04 16:12:12 info: [0mGET /posts/popular [32m201[0m 602.326 ms - -[0m
+2023-05-04 16:12:13 info: [0mGET /posts/categories [32m201[0m 500.036 ms - 108[0m
+2023-05-04 16:12:13 info: [0mGET /posts/popular [32m201[0m 536.185 ms - -[0m
+2023-05-04 16:12:20 info: [0mGET /posts/popular [32m201[0m 657.622 ms - -[0m
+2023-05-04 16:12:25 info: [0mGET /posts/popular [32m201[0m 569.245 ms - -[0m
+2023-05-04 16:12:55 info: [0mGET /posts/categories [32m201[0m 530.201 ms - 108[0m
+2023-05-04 16:12:56 info: [0mGET /posts/categories [32m201[0m 494.588 ms - 108[0m
+2023-05-04 16:12:59 info: [0mGET /posts/categories [32m201[0m 499.509 ms - 108[0m
+2023-05-04 16:13:00 info: [0mGET /posts/categories [32m201[0m 578.172 ms - 108[0m
+2023-05-04 16:13:02 info: [0mGET /posts/categories [32m201[0m 522.878 ms - 108[0m
+2023-05-04 16:13:17 info: [0mGET /posts/categories [32m201[0m 585.100 ms - 108[0m
+2023-05-04 16:13:18 info: [0mGET /posts/categories [32m201[0m 517.791 ms - 108[0m
+2023-05-04 16:13:21 info: [0mGET /posts/categories [32m201[0m 595.683 ms - 108[0m
+2023-05-04 16:13:24 info: [0mGET /posts/categories [32m201[0m 535.748 ms - 108[0m
+2023-05-04 16:13:27 info: [0mGET /posts/categories [32m201[0m 530.847 ms - 108[0m
+2023-05-04 16:13:37 info: [0mGET /posts/categories [32m201[0m 512.910 ms - 108[0m
+2023-05-04 16:13:38 info: [0mGET /posts/categories [32m201[0m 615.062 ms - 108[0m
+2023-05-04 16:13:43 info: [0mGET /posts/categories [32m201[0m 493.595 ms - 108[0m
+2023-05-04 16:13:45 info: [0mGET /posts/categories [32m201[0m 477.032 ms - 108[0m
+2023-05-04 16:13:47 info: [0mGET /posts/categories [32m201[0m 486.343 ms - 108[0m
+2023-05-04 16:13:51 info: [0mGET /posts/categories [32m201[0m 546.313 ms - 108[0m
+2023-05-04 16:13:54 info: [0mGET /posts/categories [32m201[0m 494.287 ms - 108[0m
+2023-05-04 16:14:29 info: [0mGET /posts/categories [32m201[0m 552.947 ms - 108[0m
+2023-05-04 16:14:29 info: [0mGET /posts/categories [32m201[0m 550.244 ms - 108[0m
+2023-05-04 16:14:49 info: [0mGET /posts/categories [32m201[0m 561.699 ms - 108[0m
+2023-05-04 16:14:56 info: [0mGET /posts/categories [32m201[0m 519.236 ms - 108[0m
+2023-05-04 16:15:00 info: [0mGET /posts/categories [32m201[0m 537.112 ms - 108[0m
+2023-05-04 16:15:04 info: [0mGET /posts/categories [32m201[0m 472.551 ms - 108[0m
+2023-05-04 16:15:11 info: [0mGET /posts/popular [32m201[0m 636.817 ms - -[0m
+2023-05-04 16:15:11 info: [0mGET /posts/categories [32m201[0m 561.684 ms - 108[0m
+2023-05-04 16:15:18 info: [0mGET /posts/categories [32m201[0m 480.670 ms - 108[0m
+2023-05-04 16:16:06 info: [0mGET /posts/popular [32m201[0m 607.316 ms - -[0m
+2023-05-04 16:19:16 info: [0mGET /posts/categories [32m201[0m 572.330 ms - 108[0m
+2023-05-04 16:19:21 info: [0mGET /posts/categories [32m201[0m 585.543 ms - 108[0m
+2023-05-04 16:19:23 info: [0mGET /posts/categories [32m201[0m 539.389 ms - 108[0m
+2023-05-04 16:19:42 info: =================================
+2023-05-04 16:19:42 info: ======= ENV: development =======
+2023-05-04 16:19:42 info: 🚀 App listening on the port 3000
+2023-05-04 16:19:42 info: =================================
+2023-05-04 16:19:47 info: [0mGET /posts/categories [32m201[0m 629.981 ms - 114[0m
+2023-05-04 16:19:57 info: [0mGET /posts/categories [32m201[0m 570.398 ms - 114[0m
+2023-05-04 16:21:03 info: [0mGET /posts/popular [32m201[0m 641.460 ms - -[0m
+2023-05-04 16:21:03 info: [0mGET /posts/categories [32m201[0m 517.223 ms - 114[0m
+2023-05-04 16:22:04 info: [0mGET /posts/categories [32m201[0m 565.605 ms - 114[0m
+2023-05-04 16:22:04 info: [0mGET /posts/popular [32m201[0m 979.663 ms - -[0m
+2023-05-04 16:22:16 info: [0mGET /posts/categories [32m201[0m 580.113 ms - 114[0m
+2023-05-04 16:22:27 info: [0mGET /posts/categories [32m201[0m 550.443 ms - 114[0m
+2023-05-04 16:22:43 info: [0mGET /posts/categories [32m201[0m 597.771 ms - 114[0m
+2023-05-04 16:22:52 info: [0mGET /posts/categories [32m201[0m 479.378 ms - 114[0m
+2023-05-04 16:23:16 info: [0mGET /posts/popular [32m201[0m 678.644 ms - -[0m
+2023-05-04 16:23:22 info: [0mGET /posts/popular [32m201[0m 617.657 ms - -[0m
+2023-05-04 16:23:24 info: [0mGET /posts/popular [32m201[0m 556.953 ms - -[0m
+2023-05-04 16:23:31 info: [0mGET /posts/categories [32m201[0m 517.446 ms - 114[0m
+2023-05-04 16:23:34 info: [0mGET /posts/categories [32m201[0m 595.847 ms - 114[0m
+2023-05-04 16:24:02 info: [0mGET /posts/categories [32m201[0m 513.248 ms - 114[0m
+2023-05-04 16:24:02 info: [0mGET /posts/popular [32m201[0m 654.539 ms - -[0m
+2023-05-04 16:25:15 info: [0mGET /posts/popular [32m201[0m 616.884 ms - -[0m
+2023-05-04 16:25:18 info: [0mGET /posts/popular [32m201[0m 625.425 ms - -[0m
+2023-05-04 16:25:26 info: [0mGET /posts/popular [32m201[0m 577.693 ms - -[0m
+2023-05-04 16:25:29 info: [0mGET /posts/popular [32m201[0m 578.878 ms - -[0m
+2023-05-04 16:26:44 info: [0mGET /posts/popular [32m201[0m 560.337 ms - -[0m
+2023-05-04 16:26:52 info: [0mGET /posts/popular [32m201[0m 629.415 ms - -[0m
+2023-05-04 16:26:59 info: [0mGET /posts/popular [32m201[0m 564.293 ms - -[0m
+2023-05-04 16:27:00 info: [0mGET /posts/popular [32m201[0m 588.944 ms - -[0m
+2023-05-04 16:28:52 info: [0mGET /posts/categories [32m201[0m 543.722 ms - 114[0m
+2023-05-04 16:28:58 info: [0mGET /posts/categories [32m201[0m 486.464 ms - 114[0m
+2023-05-04 16:29:09 info: [0mGET /posts/categories [32m201[0m 496.105 ms - 114[0m
+2023-05-04 16:30:25 info: [0mGET /posts/categories [32m201[0m 628.144 ms - 114[0m
+2023-05-04 16:30:40 info: [0mGET /posts/popular [32m201[0m 602.472 ms - -[0m
+2023-05-04 16:30:42 info: [0mGET /posts/popular [32m201[0m 535.813 ms - -[0m
+2023-05-04 16:30:45 info: [0mGET /posts/popular [32m201[0m 607.067 ms - -[0m
+2023-05-04 16:30:48 info: [0mGET /posts/popular [32m201[0m 609.251 ms - -[0m
+2023-05-04 16:30:55 info: [0mGET /posts/popular [32m201[0m 560.426 ms - -[0m
+2023-05-04 16:30:57 info: [0mGET /posts/popular [32m201[0m 550.031 ms - -[0m
+2023-05-04 16:31:13 info: [0mGET /posts/categories [32m201[0m 566.419 ms - 114[0m
+2023-05-04 16:33:47 info: [0mGET /posts/popular [32m201[0m 564.359 ms - -[0m
+2023-05-04 16:33:48 info: [0mGET /posts/categories [32m201[0m 819.230 ms - 114[0m
+2023-05-04 16:34:15 info: [0mGET /posts/categories [32m201[0m 530.055 ms - 114[0m
+2023-05-04 16:34:17 info: [0mGET /posts/categories [32m201[0m 460.535 ms - 114[0m
+2023-05-04 16:34:17 info: [0mGET /posts/popular [32m201[0m 548.832 ms - -[0m
+2023-05-04 16:34:21 info: [0mGET /posts/categories [32m201[0m 565.801 ms - 114[0m
+2023-05-04 16:34:24 info: [0mGET /posts/categories [32m201[0m 501.418 ms - 114[0m
+2023-05-04 16:34:30 info: [0mGET /posts/categories [32m201[0m 505.092 ms - 114[0m
+2023-05-04 16:34:41 info: [0mGET /posts/categories [32m201[0m 537.023 ms - 114[0m
+2023-05-04 16:35:05 info: [0mGET /posts/categories [32m201[0m 523.565 ms - 114[0m
+2023-05-04 16:35:08 info: [0mGET /posts/categories [32m201[0m 578.282 ms - 114[0m
+2023-05-04 16:35:13 info: [0mGET /posts/categories [32m201[0m 520.659 ms - 114[0m
+2023-05-04 16:35:15 info: [0mGET /posts/categories [32m201[0m 507.385 ms - 114[0m
+2023-05-04 16:35:32 info: [0mGET /posts/categories [32m201[0m 594.681 ms - 114[0m
+2023-05-04 16:35:33 info: [0mGET /posts/categories [32m201[0m 521.356 ms - 114[0m
+2023-05-04 16:35:34 info: [0mGET /posts/categories [32m201[0m 588.004 ms - 114[0m
+2023-05-04 16:35:35 info: [0mGET /posts/categories [32m201[0m 494.146 ms - 114[0m
+2023-05-04 16:35:39 info: [0mGET /posts/categories [32m201[0m 544.109 ms - 114[0m
+2023-05-04 16:35:51 info: [0mGET /posts/categories [32m201[0m 536.604 ms - 114[0m
+2023-05-04 16:35:53 info: [0mGET /posts/categories [32m201[0m 503.231 ms - 114[0m
+2023-05-04 16:36:09 info: [0mGET /posts/categories [32m201[0m 479.462 ms - 114[0m
+2023-05-04 16:36:09 info: [0mGET /posts/categories [32m201[0m 445.207 ms - 114[0m
+2023-05-04 16:36:23 info: [0mGET /posts/categories [32m201[0m 532.264 ms - 114[0m
+2023-05-04 16:36:27 info: [0mGET /posts/categories [32m201[0m 587.832 ms - 114[0m
+2023-05-04 16:36:40 info: [0mGET /posts/categories [32m201[0m 558.238 ms - 114[0m
+2023-05-04 16:36:43 info: [0mGET /posts/categories [32m201[0m 517.441 ms - 114[0m
+2023-05-04 16:36:45 info: [0mGET /posts/categories [32m201[0m 466.336 ms - 114[0m
+2023-05-04 16:36:53 info: [0mGET /posts/categories [32m201[0m 499.635 ms - 114[0m
+2023-05-04 16:36:55 info: [0mGET /posts/popular [32m201[0m 491.224 ms - -[0m
+2023-05-04 16:36:55 info: [0mGET /posts/categories [32m201[0m 542.513 ms - 114[0m
+2023-05-04 16:36:59 info: [0mGET /posts/categories [32m201[0m 492.359 ms - 114[0m
+2023-05-04 16:37:05 info: [0mGET /posts/categories [32m201[0m 588.156 ms - 114[0m
+2023-05-04 16:37:19 info: [0mGET /posts/categories [32m201[0m 518.789 ms - 114[0m
+2023-05-04 16:37:43 info: [0mGET /posts/categories [32m201[0m 571.138 ms - 114[0m
+2023-05-04 16:37:54 info: [0mGET /posts/categories [32m201[0m 582.573 ms - 114[0m
+2023-05-04 16:37:55 info: [0mGET /posts/categories [32m201[0m 549.195 ms - 114[0m
+2023-05-04 16:38:05 info: [0mGET /posts/categories [32m201[0m 569.490 ms - 114[0m
+2023-05-04 16:38:11 info: [0mGET /posts/categories [32m201[0m 498.181 ms - 114[0m
+2023-05-04 16:38:25 info: [0mGET /posts/categories [32m201[0m 523.906 ms - 114[0m
+2023-05-04 16:38:26 info: [0mGET /posts/categories [32m201[0m 506.651 ms - 114[0m
+2023-05-04 16:38:29 info: [0mGET /posts/categories [32m201[0m 554.518 ms - 114[0m
+2023-05-04 16:38:46 info: [0mGET /posts/categories [32m201[0m 854.237 ms - 114[0m
+2023-05-04 16:39:03 info: [0mGET /posts/categories [32m201[0m 550.386 ms - 114[0m
+2023-05-04 16:39:05 info: [0mGET /posts/categories [32m201[0m 561.514 ms - 114[0m
+2023-05-04 16:39:11 info: [0mGET /posts/categories [32m201[0m 528.117 ms - 114[0m
+2023-05-04 16:39:29 info: [0mGET /posts/categories [32m201[0m 583.972 ms - 114[0m
+2023-05-04 16:39:46 info: [0mGET /posts/categories [32m201[0m 498.431 ms - 114[0m
+2023-05-04 16:39:49 info: [0mGET /posts/categories [32m201[0m 542.237 ms - 114[0m
+2023-05-04 16:39:57 info: [0mGET /posts/categories [32m201[0m 546.638 ms - 114[0m
+2023-05-04 16:40:04 info: [0mGET /posts/popular [32m201[0m 556.580 ms - -[0m
+2023-05-04 16:40:18 info: [0mGET /posts/categories [32m201[0m 552.375 ms - 114[0m
+2023-05-04 16:40:21 info: [0mGET /posts/categories [32m201[0m 472.459 ms - 114[0m
+2023-05-04 16:40:45 info: [0mGET /posts/popular [32m201[0m 539.793 ms - -[0m
+2023-05-04 16:41:06 info: [0mGET /posts/categories [32m201[0m 546.856 ms - 114[0m
+2023-05-04 16:41:21 info: [0mGET /posts/categories [32m201[0m 553.003 ms - 114[0m
+2023-05-04 16:41:21 info: [0mGET /posts/popular [32m201[0m 633.167 ms - -[0m
+2023-05-04 16:41:35 info: [0mGET /posts/categories [32m201[0m 602.313 ms - 114[0m
+2023-05-04 16:42:13 info: [0mGET /posts/popular [0m-[0m - ms - -[0m
+2023-05-04 16:42:16 info: [0mGET /posts/popular [32m201[0m 574.006 ms - -[0m
+2023-05-04 16:42:16 info: [0mGET /posts/categories [32m201[0m 534.502 ms - 114[0m
+2023-05-04 16:42:21 info: [0mGET /posts/popular [32m201[0m 604.139 ms - -[0m
+2023-05-04 16:42:28 info: [0mGET /posts/popular [32m201[0m 552.124 ms - -[0m
+2023-05-04 16:43:07 info: [0mGET /posts/popular [32m201[0m 566.240 ms - -[0m
+2023-05-04 16:43:10 info: [0mGET /posts/popular [32m201[0m 528.954 ms - -[0m
+2023-05-04 16:43:22 info: [0mGET /posts/popular [32m201[0m 624.388 ms - -[0m
+2023-05-04 16:44:23 info: [0mGET /posts/categories [32m201[0m 720.808 ms - 114[0m
+2023-05-04 16:44:28 info: [0mGET /posts/popular [32m201[0m 559.648 ms - -[0m
+2023-05-04 16:44:32 info: [0mGET /posts/popular [32m201[0m 591.610 ms - -[0m
+2023-05-04 16:44:36 info: [0mGET /posts/popular [32m201[0m 495.843 ms - -[0m
+2023-05-04 16:44:49 info: [0mGET /posts/categories [32m201[0m 493.773 ms - 114[0m
+2023-05-04 16:44:55 info: [0mGET /posts/popular [32m201[0m 509.353 ms - -[0m
+2023-05-04 16:44:58 info: [0mGET /posts/popular [32m201[0m 497.076 ms - -[0m
+2023-05-04 16:45:35 info: [0mGET /posts/popular [32m201[0m 569.448 ms - -[0m
+2023-05-04 16:45:35 info: [0mGET /posts/categories [32m201[0m 538.092 ms - 114[0m
+2023-05-04 16:53:20 info: [0mGET /posts/categories [32m201[0m 590.877 ms - 114[0m
+2023-05-04 16:53:31 info: [0mGET /posts/categories [32m201[0m 478.612 ms - 114[0m
+2023-05-04 16:54:05 info: [0mGET /posts/categories [32m201[0m 472.919 ms - 114[0m
+2023-05-04 16:54:07 info: [0mGET /posts/categories [32m201[0m 560.588 ms - 114[0m
+2023-05-04 16:54:07 info: [0mGET /posts/popular [32m201[0m 612.167 ms - -[0m
+2023-05-04 16:54:09 info: [0mGET /posts/categories [32m201[0m 513.723 ms - 114[0m
+2023-05-04 16:54:11 info: [0mGET /posts/categories [32m201[0m 478.803 ms - 114[0m
+2023-05-04 16:54:47 info: [0mGET /posts/categories [32m201[0m 484.824 ms - 114[0m
+2023-05-04 16:54:50 info: [0mGET /posts/categories [32m201[0m 565.381 ms - 114[0m
+2023-05-04 16:56:04 info: =================================
+2023-05-04 16:56:04 info: ======= ENV: development =======
+2023-05-04 16:56:04 info: 🚀 App listening on the port 3000
+2023-05-04 16:56:04 info: =================================
+2023-05-04 16:56:47 info: =================================
+2023-05-04 16:56:47 info: ======= ENV: development =======
+2023-05-04 16:56:47 info: 🚀 App listening on the port 3000
+2023-05-04 16:56:47 info: =================================
+2023-05-04 16:56:50 info: =================================
+2023-05-04 16:56:50 info: ======= ENV: development =======
+2023-05-04 16:56:50 info: 🚀 App listening on the port 3000
+2023-05-04 16:56:50 info: =================================
+2023-05-04 16:56:56 info: =================================
+2023-05-04 16:56:56 info: ======= ENV: development =======
+2023-05-04 16:56:56 info: 🚀 App listening on the port 3000
+2023-05-04 16:56:56 info: =================================
+2023-05-04 16:57:07 info: =================================
+2023-05-04 16:57:07 info: ======= ENV: development =======
+2023-05-04 16:57:07 info: 🚀 App listening on the port 3000
+2023-05-04 16:57:07 info: =================================
+2023-05-04 16:57:10 info: =================================
+2023-05-04 16:57:10 info: ======= ENV: development =======
+2023-05-04 16:57:10 info: 🚀 App listening on the port 3000
+2023-05-04 16:57:10 info: =================================
+2023-05-04 16:57:16 info: =================================
+2023-05-04 16:57:16 info: ======= ENV: development =======
+2023-05-04 16:57:16 info: 🚀 App listening on the port 3000
+2023-05-04 16:57:16 info: =================================
+2023-05-04 16:57:33 info: =================================
+2023-05-04 16:57:33 info: ======= ENV: development =======
+2023-05-04 16:57:33 info: 🚀 App listening on the port 3000
+2023-05-04 16:57:33 info: =================================
+2023-05-04 16:57:35 info: =================================
+2023-05-04 16:57:35 info: ======= ENV: development =======
+2023-05-04 16:57:35 info: 🚀 App listening on the port 3000
+2023-05-04 16:57:35 info: =================================
+2023-05-04 16:57:49 info: =================================
+2023-05-04 16:57:49 info: ======= ENV: development =======
+2023-05-04 16:57:49 info: 🚀 App listening on the port 3000
+2023-05-04 16:57:49 info: =================================
+2023-05-04 16:57:55 info: =================================
+2023-05-04 16:57:55 info: ======= ENV: development =======
+2023-05-04 16:57:55 info: 🚀 App listening on the port 3000
+2023-05-04 16:57:55 info: =================================
+2023-05-04 16:58:08 info: =================================
+2023-05-04 16:58:08 info: ======= ENV: development =======
+2023-05-04 16:58:08 info: 🚀 App listening on the port 3000
+2023-05-04 16:58:08 info: =================================
+2023-05-04 16:58:14 info: =================================
+2023-05-04 16:58:14 info: ======= ENV: development =======
+2023-05-04 16:58:14 info: 🚀 App listening on the port 3000
+2023-05-04 16:58:14 info: =================================
+2023-05-04 16:58:25 info: =================================
+2023-05-04 16:58:25 info: ======= ENV: development =======
+2023-05-04 16:58:25 info: 🚀 App listening on the port 3000
+2023-05-04 16:58:25 info: =================================
+2023-05-04 16:58:33 info: =================================
+2023-05-04 16:58:33 info: ======= ENV: development =======
+2023-05-04 16:58:33 info: 🚀 App listening on the port 3000
+2023-05-04 16:58:33 info: =================================
+2023-05-04 16:58:36 info: =================================
+2023-05-04 16:58:36 info: ======= ENV: development =======
+2023-05-04 16:58:36 info: 🚀 App listening on the port 3000
+2023-05-04 16:58:36 info: =================================
+2023-05-04 16:58:42 info: =================================
+2023-05-04 16:58:42 info: ======= ENV: development =======
+2023-05-04 16:58:42 info: 🚀 App listening on the port 3000
+2023-05-04 16:58:42 info: =================================
+2023-05-04 16:58:46 info: =================================
+2023-05-04 16:58:46 info: ======= ENV: development =======
+2023-05-04 16:58:46 info: 🚀 App listening on the port 3000
+2023-05-04 16:58:46 info: =================================
+2023-05-04 16:58:49 info: =================================
+2023-05-04 16:58:49 info: ======= ENV: development =======
+2023-05-04 16:58:49 info: 🚀 App listening on the port 3000
+2023-05-04 16:58:49 info: =================================
+2023-05-04 16:58:53 info: =================================
+2023-05-04 16:58:53 info: ======= ENV: development =======
+2023-05-04 16:58:53 info: 🚀 App listening on the port 3000
+2023-05-04 16:58:53 info: =================================
+2023-05-04 16:59:35 info: =================================
+2023-05-04 16:59:35 info: ======= ENV: development =======
+2023-05-04 16:59:35 info: 🚀 App listening on the port 3000
+2023-05-04 16:59:35 info: =================================
+2023-05-04 17:05:18 info: [0mGET /posts/popular [32m201[0m 636.322 ms - -[0m
+2023-05-04 17:06:00 info: [0mGET /posts/popular [32m201[0m 581.973 ms - -[0m
+2023-05-04 17:06:23 info: [0mGET /posts/popular [32m201[0m 628.918 ms - -[0m
+2023-05-04 17:06:23 info: [0mGET /posts/popular [32m201[0m 569.063 ms - -[0m
+2023-05-04 17:07:38 info: [0mGET /posts/popular [32m201[0m 622.626 ms - -[0m
+2023-05-04 17:07:38 info: [0mGET /posts/categories [32m201[0m 695.749 ms - 11[0m
+2023-05-04 17:09:07 info: [0mGET /posts/popular [32m201[0m 675.830 ms - -[0m
+2023-05-04 17:10:18 info: [0mGET /posts/popular [32m201[0m 507.542 ms - -[0m
+2023-05-04 17:10:18 info: [0mGET /posts/popular [32m201[0m 631.218 ms - -[0m
+2023-05-04 17:10:18 info: [0mGET /posts/popular [32m201[0m 539.859 ms - -[0m
+2023-05-04 17:10:18 info: [0mGET /posts/popular [32m201[0m 496.238 ms - -[0m
+2023-05-04 17:10:18 info: [0mGET /posts/popular [32m201[0m 546.812 ms - -[0m
+2023-05-04 17:10:18 info: [0mGET /posts/popular [32m201[0m 499.434 ms - -[0m
+2023-05-04 17:10:18 info: [0mGET /posts/popular [32m201[0m 505.915 ms - -[0m
+2023-05-04 17:10:19 info: [0mGET /posts/popular [32m201[0m 559.117 ms - -[0m
+2023-05-04 17:10:19 info: [0mGET /posts/popular [32m201[0m 560.630 ms - -[0m
+2023-05-04 17:10:19 info: [0mGET /posts/popular [32m201[0m 578.651 ms - -[0m
+2023-05-04 17:10:19 info: [0mGET /posts/popular [32m201[0m 573.599 ms - -[0m
+2023-05-04 17:10:19 info: [0mGET /posts/popular [32m201[0m 492.454 ms - -[0m
+2023-05-04 17:10:19 info: [0mGET /posts/popular [32m201[0m 647.690 ms - -[0m
+2023-05-04 17:10:19 info: [0mGET /posts/popular [32m201[0m 553.752 ms - -[0m
+2023-05-04 17:10:19 info: [0mGET /posts/popular [32m201[0m 480.586 ms - -[0m
+2023-05-04 17:10:20 info: [0mGET /posts/popular [32m201[0m 535.238 ms - -[0m
+2023-05-04 17:10:20 info: [0mGET /posts/popular [32m201[0m 539.654 ms - -[0m
+2023-05-04 17:10:20 info: [0mGET /posts/popular [32m201[0m 547.843 ms - -[0m
+2023-05-04 17:10:20 info: [0mGET /posts/popular [32m201[0m 516.724 ms - -[0m
+2023-05-04 17:10:20 info: [0mGET /posts/popular [32m201[0m 516.835 ms - -[0m
+2023-05-04 17:10:20 info: [0mGET /posts/popular [32m201[0m 538.974 ms - -[0m
+2023-05-04 17:10:20 info: [0mGET /posts/popular [32m201[0m 550.171 ms - -[0m
+2023-05-04 17:10:20 info: [0mGET /posts/popular [32m201[0m 529.634 ms - -[0m
+2023-05-04 17:10:20 info: [0mGET /posts/popular [32m201[0m 566.484 ms - -[0m
+2023-05-04 17:10:21 info: [0mGET /posts/popular [32m201[0m 836.463 ms - -[0m
+2023-05-04 17:10:21 info: [0mGET /posts/popular [32m201[0m 545.524 ms - -[0m
+2023-05-04 17:10:21 info: [0mGET /posts/popular [32m201[0m 540.966 ms - -[0m
+2023-05-04 17:10:21 info: [0mGET /posts/popular [32m201[0m 571.013 ms - -[0m
+2023-05-04 17:10:21 info: [0mGET /posts/popular [32m201[0m 562.870 ms - -[0m
+2023-05-04 17:10:21 info: [0mGET /posts/popular [32m201[0m 501.811 ms - -[0m
+2023-05-04 17:10:21 info: [0mGET /posts/popular [32m201[0m 469.205 ms - -[0m
+2023-05-04 17:10:21 info: [0mGET /posts/popular [32m201[0m 489.976 ms - -[0m
+2023-05-04 17:10:22 info: [0mGET /posts/popular [32m201[0m 500.269 ms - -[0m
+2023-05-04 17:10:22 info: [0mGET /posts/popular [32m201[0m 545.693 ms - -[0m
+2023-05-04 17:10:22 info: [0mGET /posts/popular [32m201[0m 532.331 ms - -[0m
+2023-05-04 17:10:22 info: [0mGET /posts/popular [32m201[0m 530.232 ms - -[0m
+2023-05-04 17:10:22 info: [0mGET /posts/popular [32m201[0m 517.975 ms - -[0m
+2023-05-04 17:10:22 info: [0mGET /posts/popular [32m201[0m 539.434 ms - -[0m
+2023-05-04 17:10:22 info: [0mGET /posts/popular [32m201[0m 563.340 ms - -[0m
+2023-05-04 17:10:23 info: [0mGET /posts/popular [32m201[0m 553.967 ms - -[0m
+2023-05-04 17:10:23 info: [0mGET /posts/popular [32m201[0m 565.334 ms - -[0m
+2023-05-04 17:10:23 info: [0mGET /posts/popular [32m201[0m 555.545 ms - -[0m
+2023-05-04 17:10:23 info: [0mGET /posts/popular [32m201[0m 606.538 ms - -[0m
+2023-05-04 17:10:23 info: [0mGET /posts/popular [32m201[0m 552.950 ms - -[0m
+2023-05-04 17:10:23 info: [0mGET /posts/popular [32m201[0m 547.460 ms - -[0m
+2023-05-04 17:10:23 info: [0mGET /posts/popular [32m201[0m 583.366 ms - -[0m
+2023-05-04 17:10:23 info: [0mGET /posts/popular [32m201[0m 571.549 ms - -[0m
+2023-05-04 17:10:23 info: [0mGET /posts/popular [32m201[0m 546.903 ms - -[0m
+2023-05-04 17:10:24 info: [0mGET /posts/popular [32m201[0m 499.577 ms - -[0m
+2023-05-04 17:10:24 info: [0mGET /posts/popular [32m201[0m 532.538 ms - -[0m
+2023-05-04 17:10:24 info: [0mGET /posts/popular [32m201[0m 522.259 ms - -[0m
+2023-05-04 17:10:24 info: [0mGET /posts/popular [32m201[0m 598.553 ms - -[0m
+2023-05-04 17:13:20 info: [0mGET /posts/popular [32m201[0m 615.253 ms - -[0m
+2023-05-04 17:13:20 info: [0mGET /posts/popular [32m201[0m 519.617 ms - -[0m
+2023-05-04 17:13:20 info: [0mGET /posts/popular [32m201[0m 549.987 ms - -[0m
+2023-05-04 17:13:20 info: [0mGET /posts/popular [32m201[0m 549.162 ms - -[0m
+2023-05-04 17:13:20 info: [0mGET /posts/popular [32m201[0m 471.888 ms - -[0m
+2023-05-04 17:13:21 info: [0mGET /posts/popular [32m201[0m 530.571 ms - -[0m
+2023-05-04 17:13:21 info: [0mGET /posts/popular [32m201[0m 613.916 ms - -[0m
+2023-05-04 17:13:21 info: [0mGET /posts/popular [32m201[0m 525.648 ms - -[0m
+2023-05-04 17:13:21 info: [0mGET /posts/popular [32m201[0m 530.696 ms - -[0m
+2023-05-04 17:13:21 info: [0mGET /posts/popular [32m201[0m 562.180 ms - -[0m
+2023-05-04 17:13:22 info: [0mGET /posts/popular [32m201[0m 572.058 ms - -[0m
+2023-05-04 17:13:22 info: [0mGET /posts/popular [32m201[0m 520.708 ms - -[0m
+2023-05-04 17:13:22 info: [0mGET /posts/popular [32m201[0m 541.472 ms - -[0m
+2023-05-04 17:13:22 info: [0mGET /posts/popular [32m201[0m 1055.460 ms - -[0m
+2023-05-04 17:13:22 info: [0mGET /posts/popular [32m201[0m 514.010 ms - -[0m
+2023-05-04 17:13:22 info: [0mGET /posts/popular [32m201[0m 506.874 ms - -[0m
+2023-05-04 17:13:22 info: [0mGET /posts/popular [32m201[0m 533.475 ms - -[0m
+2023-05-04 17:13:22 info: [0mGET /posts/popular [32m201[0m 545.359 ms - -[0m
+2023-05-04 17:13:23 info: [0mGET /posts/popular [32m201[0m 543.894 ms - -[0m
+2023-05-04 17:13:23 info: [0mGET /posts/popular [32m201[0m 500.639 ms - -[0m
+2023-05-04 17:13:23 info: [0mGET /posts/popular [32m201[0m 592.886 ms - -[0m
+2023-05-04 17:13:23 info: [0mGET /posts/popular [32m201[0m 533.215 ms - -[0m
+2023-05-04 17:13:23 info: [0mGET /posts/popular [32m201[0m 490.158 ms - -[0m
+2023-05-04 17:13:23 info: [0mGET /posts/popular [32m201[0m 483.879 ms - -[0m
+2023-05-04 17:13:24 info: [0mGET /posts/popular [32m201[0m 536.783 ms - -[0m
+2023-05-04 17:13:24 info: [0mGET /posts/popular [32m201[0m 524.959 ms - -[0m
+2023-05-04 17:13:24 info: [0mGET /posts/popular [32m201[0m 540.822 ms - -[0m
+2023-05-04 17:13:24 info: [0mGET /posts/popular [32m201[0m 473.332 ms - -[0m
+2023-05-04 17:13:24 info: [0mGET /posts/popular [32m201[0m 498.405 ms - -[0m
+2023-05-04 17:13:24 info: [0mGET /posts/popular [32m201[0m 530.485 ms - -[0m
+2023-05-04 17:13:24 info: [0mGET /posts/popular [32m201[0m 575.155 ms - -[0m
+2023-05-04 17:13:24 info: [0mGET /posts/popular [32m201[0m 527.479 ms - -[0m
+2023-05-04 17:13:24 info: [0mGET /posts/popular [32m201[0m 484.084 ms - -[0m
+2023-05-04 17:13:24 info: [0mGET /posts/popular [32m201[0m 600.222 ms - -[0m
+2023-05-04 17:13:25 info: [0mGET /posts/popular [32m201[0m 534.083 ms - -[0m
+2023-05-04 17:13:25 info: [0mGET /posts/popular [32m201[0m 635.306 ms - -[0m
+2023-05-04 17:13:25 info: [0mGET /posts/popular [32m201[0m 551.816 ms - -[0m
+2023-05-04 17:13:25 info: [0mGET /posts/popular [32m201[0m 668.310 ms - -[0m
+2023-05-04 17:13:25 info: [0mGET /posts/popular [32m201[0m 565.641 ms - -[0m
+2023-05-04 17:13:25 info: [0mGET /posts/popular [32m201[0m 524.702 ms - -[0m
+2023-05-04 17:13:26 info: [0mGET /posts/popular [32m201[0m 524.692 ms - -[0m
+2023-05-04 17:13:26 info: [0mGET /posts/popular [32m201[0m 497.655 ms - -[0m
+2023-05-04 17:13:26 info: [0mGET /posts/popular [32m201[0m 560.681 ms - -[0m
+2023-05-04 17:13:26 info: [0mGET /posts/popular [32m201[0m 564.423 ms - -[0m
+2023-05-04 17:13:27 info: [0mGET /posts/popular [32m201[0m 543.856 ms - -[0m
+2023-05-04 17:13:27 info: [0mGET /posts/popular [32m201[0m 524.586 ms - -[0m
+2023-05-04 17:13:27 info: [0mGET /posts/popular [32m201[0m 512.216 ms - -[0m
+2023-05-04 17:13:27 info: [0mGET /posts/popular [32m201[0m 482.022 ms - -[0m
+2023-05-04 17:13:27 info: [0mGET /posts/popular [32m201[0m 530.489 ms - -[0m
+2023-05-04 17:13:27 info: [0mGET /posts/popular [32m201[0m 535.449 ms - -[0m
+2023-05-04 17:13:27 info: [0mGET /posts/popular [32m201[0m 541.010 ms - -[0m
+2023-05-04 17:13:27 info: [0mGET /posts/popular [32m201[0m 618.075 ms - -[0m
+2023-05-04 17:13:59 info: [0mGET /posts/popular [32m201[0m 629.940 ms - -[0m
+2023-05-04 17:13:59 info: [0mGET /posts/popular [32m201[0m 606.032 ms - -[0m
+2023-05-04 17:13:59 info: [0mGET /posts/popular [32m201[0m 554.760 ms - -[0m
+2023-05-04 17:13:59 info: [0mGET /posts/popular [32m201[0m 678.079 ms - -[0m
+2023-05-04 17:13:59 info: [0mGET /posts/popular [32m201[0m 850.758 ms - -[0m
+2023-05-04 17:13:59 info: [0mGET /posts/popular [32m201[0m 509.764 ms - -[0m
+2023-05-04 17:13:59 info: [0mGET /posts/popular [32m201[0m 548.463 ms - -[0m
+2023-05-04 17:13:59 info: [0mGET /posts/popular [32m201[0m 559.972 ms - -[0m
+2023-05-04 17:14:00 info: [0mGET /posts/popular [32m201[0m 523.530 ms - -[0m
+2023-05-04 17:14:00 info: [0mGET /posts/popular [32m201[0m 536.281 ms - -[0m
+2023-05-04 17:14:00 info: [0mGET /posts/popular [32m201[0m 503.261 ms - -[0m
+2023-05-04 17:14:00 info: [0mGET /posts/popular [32m201[0m 572.956 ms - -[0m
+2023-05-04 17:14:00 info: [0mGET /posts/popular [32m201[0m 531.688 ms - -[0m
+2023-05-04 17:14:00 info: [0mGET /posts/popular [32m201[0m 602.488 ms - -[0m
+2023-05-04 17:14:01 info: [0mGET /posts/popular [32m201[0m 525.679 ms - -[0m
+2023-05-04 17:14:01 info: [0mGET /posts/popular [32m201[0m 567.408 ms - -[0m
+2023-05-04 17:14:01 info: [0mGET /posts/popular [32m201[0m 554.809 ms - -[0m
+2023-05-04 17:14:01 info: [0mGET /posts/popular [32m201[0m 578.215 ms - -[0m
+2023-05-04 17:14:01 info: [0mGET /posts/popular [32m201[0m 505.458 ms - -[0m
+2023-05-04 17:14:01 info: [0mGET /posts/popular [32m201[0m 543.355 ms - -[0m
+2023-05-04 17:14:01 info: [0mGET /posts/popular [32m201[0m 533.564 ms - -[0m
+2023-05-04 17:14:01 info: [0mGET /posts/popular [32m201[0m 556.977 ms - -[0m
+2023-05-04 17:14:01 info: [0mGET /posts/popular [32m201[0m 593.333 ms - -[0m
+2023-05-04 17:14:02 info: [0mGET /posts/popular [32m201[0m 494.478 ms - -[0m
+2023-05-04 17:14:02 info: [0mGET /posts/popular [32m201[0m 486.830 ms - -[0m
+2023-05-04 17:14:02 info: [0mGET /posts/popular [32m201[0m 508.088 ms - -[0m
+2023-05-04 17:14:02 info: [0mGET /posts/popular [32m201[0m 513.367 ms - -[0m
+2023-05-04 17:14:02 info: [0mGET /posts/popular [32m201[0m 587.387 ms - -[0m
+2023-05-04 17:14:02 info: [0mGET /posts/popular [32m201[0m 502.454 ms - -[0m
+2023-05-04 17:14:02 info: [0mGET /posts/popular [32m201[0m 554.310 ms - -[0m
+2023-05-04 17:14:02 info: [0mGET /posts/popular [32m201[0m 498.335 ms - -[0m
+2023-05-04 17:14:02 info: [0mGET /posts/popular [32m201[0m 511.765 ms - -[0m
+2023-05-04 17:14:02 info: [0mGET /posts/popular [32m201[0m 527.593 ms - -[0m
+2023-05-04 17:14:03 info: [0mGET /posts/popular [32m201[0m 513.782 ms - -[0m
+2023-05-04 17:14:03 info: [0mGET /posts/popular [32m201[0m 521.673 ms - -[0m
+2023-05-04 17:14:03 info: [0mGET /posts/popular [32m201[0m 513.904 ms - -[0m
+2023-05-04 17:14:03 info: [0mGET /posts/popular [32m201[0m 538.078 ms - -[0m
+2023-05-04 17:14:03 info: [0mGET /posts/popular [32m201[0m 579.732 ms - -[0m
+2023-05-04 17:14:04 info: [0mGET /posts/popular [32m201[0m 600.947 ms - -[0m
+2023-05-04 17:14:04 info: [0mGET /posts/popular [32m201[0m 567.263 ms - -[0m
+2023-05-04 17:14:04 info: [0mGET /posts/popular [32m201[0m 546.177 ms - -[0m
+2023-05-04 17:14:04 info: [0mGET /posts/popular [32m201[0m 575.305 ms - -[0m
+2023-05-04 17:14:04 info: [0mGET /posts/popular [32m201[0m 859.935 ms - -[0m
+2023-05-04 17:14:04 info: [0mGET /posts/popular [32m201[0m 588.104 ms - -[0m
+2023-05-04 17:14:04 info: [0mGET /posts/popular [32m201[0m 564.500 ms - -[0m
+2023-05-04 17:14:04 info: [0mGET /posts/popular [32m201[0m 547.874 ms - -[0m
+2023-05-04 17:14:04 info: [0mGET /posts/popular [32m201[0m 612.526 ms - -[0m
+2023-05-04 17:14:05 info: [0mGET /posts/popular [32m201[0m 663.717 ms - -[0m
+2023-05-04 17:14:05 info: [0mGET /posts/popular [32m201[0m 548.601 ms - -[0m
+2023-05-04 17:14:05 info: [0mGET /posts/popular [32m201[0m 581.106 ms - -[0m
+2023-05-04 17:14:05 info: [0mGET /posts/popular [32m201[0m 519.636 ms - -[0m
+2023-05-04 17:14:05 info: [0mGET /posts/popular [32m201[0m 534.995 ms - -[0m
+2023-05-04 17:14:09 info: [0mGET /posts/categories [32m201[0m 474.097 ms - 11[0m
+2023-05-04 17:14:09 info: [0mGET /posts/popular [32m201[0m 567.370 ms - -[0m
+2023-05-04 17:14:18 info: [0mGET /posts/categories [32m201[0m 399.924 ms - 11[0m
+2023-05-04 17:14:18 info: [0mGET /posts/popular [32m201[0m 471.289 ms - -[0m
+2023-05-04 17:14:45 info: [0mGET /posts/categories [32m201[0m 538.998 ms - 11[0m
+2023-05-04 17:14:45 info: [0mGET /posts/popular [32m201[0m 540.862 ms - -[0m
+2023-05-04 17:15:16 info: [0mGET /posts/popular [32m201[0m 548.598 ms - -[0m
+2023-05-04 17:15:19 info: [0mGET /posts/popular [32m201[0m 763.768 ms - -[0m
+2023-05-04 17:15:22 info: [0mGET /posts/popular [32m201[0m 621.460 ms - -[0m
+2023-05-04 17:15:31 info: [0mGET /posts/popular [32m201[0m 514.752 ms - -[0m
+2023-05-04 17:15:35 info: [0mGET /posts/popular [32m201[0m 574.466 ms - -[0m
+2023-05-04 17:15:47 info: [0mGET /posts/popular [32m201[0m 598.561 ms - -[0m
+2023-05-04 17:16:26 info: [0mGET /posts/popular [32m201[0m 611.537 ms - -[0m
+2023-05-04 17:16:33 info: [0mGET /posts/categories [32m201[0m 531.680 ms - 11[0m
+2023-05-04 17:16:34 info: [0mGET /posts/categories [32m201[0m 555.002 ms - 11[0m
+2023-05-04 17:16:34 info: [0mGET /posts/popular [32m201[0m 571.827 ms - -[0m
+2023-05-04 17:16:42 info: [0mGET /posts/categories [32m201[0m 541.808 ms - 11[0m
+2023-05-04 17:17:41 info: [0mGET /posts/popular [32m201[0m 601.062 ms - -[0m
+2023-05-04 17:17:42 info: [0mGET /posts/categories [32m201[0m 1609.203 ms - 11[0m
+2023-05-04 17:17:43 info: [0mGET /posts/categories [32m201[0m 529.719 ms - 11[0m
+2023-05-04 17:17:43 info: [0mGET /posts/popular [32m201[0m 545.139 ms - -[0m
+2023-05-04 17:18:09 info: [0mGET /posts/categories [32m201[0m 526.237 ms - 11[0m
+2023-05-04 17:18:38 info: [0mGET /posts/categories [32m201[0m 571.918 ms - 11[0m
+2023-05-04 17:18:38 info: [0mGET /posts/popular [32m201[0m 570.509 ms - -[0m
+2023-05-04 17:19:41 info: [0mGET /posts/categories [32m201[0m 554.311 ms - 11[0m
+2023-05-04 17:19:43 info: [0mGET /posts/categories [32m201[0m 513.497 ms - 11[0m
+2023-05-04 17:20:17 info: [0mGET /posts/categories [32m201[0m 519.029 ms - 11[0m
+2023-05-04 17:21:04 info: [0mGET /posts/popular [32m201[0m 556.643 ms - -[0m
+2023-05-04 17:21:05 info: [0mGET /posts/categories [32m201[0m 551.318 ms - 11[0m
+2023-05-04 17:21:05 info: [0mGET /posts/popular [32m201[0m 518.389 ms - -[0m
+2023-05-04 17:21:10 info: [0mGET /posts/popular [32m201[0m 545.225 ms - -[0m
+2023-05-04 17:23:40 info: [0mGET /posts/categories [32m201[0m 537.964 ms - 11[0m
+2023-05-04 17:23:40 info: [0mGET /posts/popular [32m201[0m 646.436 ms - -[0m
+2023-05-04 17:23:44 info: [0mGET /posts/categories [32m201[0m 594.570 ms - 11[0m
+2023-05-04 17:23:44 info: [0mGET /posts/popular [32m201[0m 655.464 ms - -[0m
+2023-05-04 17:23:47 info: [0mGET /posts/categories [32m201[0m 564.573 ms - 11[0m
+2023-05-04 17:23:47 info: [0mGET /posts/popular [32m201[0m 620.648 ms - -[0m
+2023-05-04 17:23:53 info: [0mGET /posts/categories [32m201[0m 496.947 ms - 11[0m
+2023-05-04 17:23:53 info: [0mGET /posts/popular [32m201[0m 564.376 ms - -[0m
+2023-05-04 17:23:57 info: [0mGET /posts/categories [32m201[0m 500.078 ms - 11[0m
+2023-05-04 17:23:57 info: [0mGET /posts/popular [32m201[0m 574.719 ms - -[0m
+2023-05-04 17:24:00 info: [0mGET /posts/popular [32m201[0m 529.008 ms - -[0m
+2023-05-04 17:24:00 info: [0mGET /posts/categories [32m201[0m 555.276 ms - 11[0m
+2023-05-04 17:24:05 info: [0mGET /posts/popular [32m201[0m 531.521 ms - -[0m
+2023-05-04 17:24:05 info: [0mGET /posts/categories [32m201[0m 560.464 ms - 11[0m
+2023-05-04 17:24:13 info: [0mGET /posts/categories [32m201[0m 518.319 ms - 11[0m
+2023-05-04 17:24:13 info: [0mGET /posts/popular [32m201[0m 531.801 ms - -[0m
+2023-05-04 17:24:33 info: [0mGET /posts/categories [32m201[0m 434.133 ms - 11[0m
+2023-05-04 17:24:33 info: [0mGET /posts/popular [32m201[0m 499.372 ms - -[0m
+2023-05-04 17:24:39 info: [0mGET /posts/categories [32m201[0m 533.865 ms - 11[0m
+2023-05-04 17:24:39 info: [0mGET /posts/popular [32m201[0m 562.245 ms - -[0m
+2023-05-04 17:24:45 info: [0mGET /posts/popular [32m201[0m 614.757 ms - -[0m
+2023-05-04 17:24:45 info: [0mGET /posts/categories [32m201[0m 615.594 ms - 11[0m
+2023-05-04 17:24:51 info: [0mGET /posts/popular [32m201[0m 555.539 ms - -[0m
+2023-05-04 17:24:51 info: [0mGET /posts/categories [32m201[0m 567.091 ms - 11[0m
+2023-05-04 17:25:04 info: [0mGET /posts/categories [32m201[0m 476.439 ms - 11[0m
+2023-05-04 17:25:04 info: [0mGET /posts/popular [32m201[0m 524.810 ms - -[0m
+2023-05-04 17:25:06 info: [0mGET /posts/popular [32m201[0m 532.841 ms - -[0m
+2023-05-04 17:25:06 info: [0mGET /posts/categories [32m201[0m 534.971 ms - 11[0m
+2023-05-04 17:25:06 info: [0mGET /posts/categories [32m201[0m 473.036 ms - 11[0m
+2023-05-04 17:25:06 info: [0mGET /posts/popular [32m201[0m 535.435 ms - -[0m
+2023-05-04 17:25:12 info: [0mGET /posts/categories [32m201[0m 527.919 ms - 11[0m
+2023-05-04 17:25:12 info: [0mGET /posts/popular [32m201[0m 567.541 ms - -[0m
+2023-05-04 17:25:30 info: [0mGET /posts/categories [32m201[0m 591.377 ms - 11[0m
+2023-05-04 17:25:30 info: [0mGET /posts/popular [32m201[0m 656.771 ms - -[0m
+2023-05-04 17:25:35 info: [0mGET /posts/categories [32m201[0m 530.227 ms - 11[0m
+2023-05-04 17:25:35 info: [0mGET /posts/popular [32m201[0m 580.585 ms - -[0m
+2023-05-04 17:25:44 info: [0mGET /posts/categories [32m201[0m 514.821 ms - 11[0m
+2023-05-04 17:25:44 info: [0mGET /posts/popular [32m201[0m 531.815 ms - -[0m
+2023-05-04 17:25:53 info: [0mGET /posts/categories [32m201[0m 434.596 ms - 11[0m
+2023-05-04 17:25:53 info: [0mGET /posts/popular [32m201[0m 469.620 ms - -[0m
+2023-05-04 17:25:59 info: [0mGET /posts/categories [32m201[0m 420.203 ms - 11[0m
+2023-05-04 17:25:59 info: [0mGET /posts/popular [32m201[0m 488.652 ms - -[0m
+2023-05-04 17:26:03 info: [0mGET /posts/categories [32m201[0m 415.118 ms - 11[0m
+2023-05-04 17:26:03 info: [0mGET /posts/popular [32m201[0m 500.985 ms - -[0m
+2023-05-04 17:26:07 info: [0mGET /posts/categories [32m201[0m 494.469 ms - 11[0m
+2023-05-04 17:26:07 info: [0mGET /posts/popular [32m201[0m 504.299 ms - -[0m
+2023-05-04 17:26:13 info: [0mGET /posts/categories [32m201[0m 403.683 ms - 11[0m
+2023-05-04 17:26:13 info: [0mGET /posts/popular [32m201[0m 440.473 ms - -[0m
+2023-05-04 17:26:30 info: [0mGET /posts/categories [32m201[0m 406.705 ms - 11[0m
+2023-05-04 17:26:39 info: [0mGET /posts/categories [32m201[0m 423.216 ms - 11[0m
+2023-05-04 17:26:54 info: [0mGET /posts/categories [32m201[0m 423.508 ms - 11[0m
+2023-05-04 17:26:54 info: [0mGET /posts/categories [32m201[0m 398.005 ms - 11[0m
+2023-05-04 17:27:14 info: [0mGET /posts/categories [32m201[0m 443.149 ms - 11[0m
+2023-05-04 17:27:15 info: [0mGET /posts/popular [32m201[0m 474.038 ms - -[0m
+2023-05-04 17:27:15 info: [0mGET /posts/popular [32m201[0m 436.318 ms - -[0m
+2023-05-04 17:32:43 info: [0mGET /posts/categories [32m201[0m 384.268 ms - 11[0m
+2023-05-04 17:32:43 info: [0mGET /posts/popular [32m201[0m 454.146 ms - -[0m
+2023-05-04 17:32:43 info: [0mGET /posts/popular [32m201[0m 435.597 ms - -[0m
+2023-05-04 17:33:11 info: [0mGET /posts/categories [32m201[0m 550.722 ms - 11[0m
+2023-05-04 17:33:11 info: [0mGET /posts/popular [32m201[0m 613.402 ms - -[0m
+2023-05-04 17:33:19 info: [0mGET /posts/popular [32m201[0m 532.230 ms - -[0m
+2023-05-04 17:33:20 info: [0mGET /posts/popular [32m201[0m 554.710 ms - -[0m
+2023-05-04 17:33:25 info: [0mGET /posts/popular [32m201[0m 602.640 ms - -[0m
+2023-05-04 17:34:30 info: [0mGET /posts/categories [32m201[0m 588.080 ms - 11[0m
+2023-05-04 17:34:42 info: [0mGET /posts/categories [32m201[0m 549.824 ms - 11[0m
+2023-05-04 17:34:47 info: [0mGET /posts/categories [32m201[0m 510.404 ms - 11[0m
+2023-05-04 17:35:29 info: [0mGET /posts/categories [32m201[0m 859.660 ms - 11[0m
+2023-05-04 17:35:29 info: [0mGET /posts/popular [32m201[0m 951.555 ms - -[0m
+2023-05-04 17:35:31 info: [0mGET /posts/categories [32m201[0m 524.669 ms - 11[0m
+2023-05-04 17:35:31 info: [0mGET /posts/popular [32m201[0m 648.851 ms - -[0m
+2023-05-04 17:35:38 info: [0mGET /posts/categories [32m201[0m 517.642 ms - 11[0m
+2023-05-04 17:35:38 info: [0mGET /posts/popular [32m201[0m 571.837 ms - -[0m
+2023-05-04 17:35:38 info: [0mGET /posts/categories [32m201[0m 507.851 ms - 11[0m
+2023-05-04 17:35:38 info: [0mGET /posts/popular [32m201[0m 617.156 ms - -[0m
+2023-05-04 17:35:46 info: [0mGET /posts/popular [32m201[0m 648.597 ms - -[0m
+2023-05-04 17:35:51 info: [0mGET /posts/categories [32m201[0m 545.389 ms - 11[0m
+2023-05-04 17:35:56 info: [0mGET /posts/categories [32m201[0m 506.112 ms - 11[0m
+2023-05-04 17:35:56 info: [0mGET /posts/popular [32m201[0m 560.276 ms - -[0m
+2023-05-04 17:35:57 info: [0mGET /posts/categories [32m201[0m 481.082 ms - 11[0m
+2023-05-04 17:35:57 info: [0mGET /posts/popular [32m201[0m 542.940 ms - -[0m
+2023-05-04 17:36:03 info: [0mGET /posts/categories [32m201[0m 477.387 ms - 11[0m
+2023-05-04 17:36:03 info: [0mGET /posts/popular [32m201[0m 552.698 ms - -[0m
+2023-05-04 17:36:24 info: [0mGET /posts/categories [32m201[0m 499.275 ms - 11[0m
+2023-05-04 17:36:24 info: [0mGET /posts/popular [32m201[0m 607.443 ms - -[0m
+2023-05-04 17:36:26 info: [0mGET /posts/categories [32m201[0m 590.834 ms - 11[0m
+2023-05-04 17:36:26 info: [0mGET /posts/popular [32m201[0m 630.003 ms - -[0m
+2023-05-04 17:36:33 info: [0mGET /posts/categories [32m201[0m 542.043 ms - 11[0m
+2023-05-04 17:36:33 info: [0mGET /posts/popular [32m201[0m 564.391 ms - -[0m
+2023-05-04 17:36:36 info: [0mGET /posts/categories [32m201[0m 510.293 ms - 11[0m
+2023-05-04 17:36:36 info: [0mGET /posts/popular [32m201[0m 667.653 ms - -[0m
+2023-05-04 17:36:48 info: [0mGET /posts/categories [32m201[0m 545.557 ms - 11[0m
+2023-05-04 17:36:57 info: [0mGET /posts/categories [32m201[0m 522.526 ms - 11[0m
+2023-05-04 17:37:01 info: [0mGET /posts/categories [32m201[0m 508.553 ms - 11[0m
+2023-05-04 17:37:01 info: [0mGET /posts/popular [32m201[0m 573.147 ms - -[0m
+2023-05-04 17:37:10 info: [0mGET /posts/categories [32m201[0m 556.767 ms - 11[0m
+2023-05-04 17:37:10 info: [0mGET /posts/popular [32m201[0m 573.043 ms - -[0m
+2023-05-04 17:37:32 info: [0mGET /posts/categories [32m201[0m 486.802 ms - 11[0m
+2023-05-04 17:37:32 info: [0mGET /posts/popular [32m201[0m 548.371 ms - -[0m
+2023-05-04 17:37:43 info: [0mGET /posts/categories [32m201[0m 575.531 ms - 11[0m
+2023-05-04 17:37:43 info: [0mGET /posts/popular [32m201[0m 615.038 ms - -[0m
+2023-05-04 17:37:52 info: [0mGET /posts/popular [32m201[0m 476.051 ms - -[0m
+2023-05-04 17:37:52 info: [0mGET /posts/categories [32m201[0m 495.030 ms - 11[0m
+2023-05-04 17:38:01 info: [0mGET /posts/categories [32m201[0m 505.034 ms - 11[0m
+2023-05-04 17:38:01 info: [0mGET /posts/popular [32m201[0m 597.061 ms - -[0m
+2023-05-04 17:38:08 info: [0mGET /posts/categories [32m201[0m 560.370 ms - 11[0m
+2023-05-04 17:38:09 info: [0mGET /posts/popular [32m201[0m 577.292 ms - -[0m
+2023-05-04 17:38:31 info: [0mGET /posts/categories [32m201[0m 495.625 ms - 11[0m
+2023-05-04 17:38:32 info: [0mGET /posts/popular [32m201[0m 569.009 ms - -[0m
+2023-05-04 17:39:05 info: [0mGET /posts/popular [32m201[0m 641.700 ms - -[0m
+2023-05-04 17:39:10 info: [0mGET /posts/popular [32m201[0m 594.871 ms - -[0m
+2023-05-04 17:39:11 info: [0mGET /posts/categories [32m201[0m 494.074 ms - 11[0m
+2023-05-04 17:39:11 info: [0mGET /posts/popular [32m201[0m 572.331 ms - -[0m
+2023-05-04 17:39:13 info: [0mGET /posts/popular [32m201[0m 626.986 ms - -[0m
+2023-05-04 17:39:19 info: [0mGET /posts/popular [32m201[0m 618.278 ms - -[0m
+2023-05-04 17:39:37 info: [0mGET /posts/categories [32m201[0m 455.243 ms - 11[0m
+2023-05-04 17:39:37 info: [0mGET /posts/popular [32m201[0m 518.304 ms - -[0m
+2023-05-04 17:39:46 info: [0mGET /posts/categories [32m201[0m 518.008 ms - 11[0m
+2023-05-04 17:39:46 info: [0mGET /posts/popular [32m201[0m 521.233 ms - -[0m
+2023-05-04 17:42:45 info: [0mGET /posts/categories [32m201[0m 592.163 ms - 11[0m
+2023-05-04 17:42:45 info: [0mGET /posts/popular [32m201[0m 634.640 ms - -[0m
+2023-05-04 17:42:48 info: [0mGET /posts/categories [32m201[0m 521.987 ms - 11[0m
+2023-05-04 17:42:48 info: [0mGET /posts/popular [32m201[0m 522.133 ms - -[0m
+2023-05-04 17:43:05 info: [0mGET /posts/categories [32m201[0m 504.053 ms - 11[0m
+2023-05-04 17:43:05 info: [0mGET /posts/popular [32m201[0m 549.113 ms - -[0m
+2023-05-04 17:43:08 info: [0mGET /posts/popular [32m201[0m 509.235 ms - -[0m
+2023-05-04 17:43:08 info: [0mGET /posts/categories [32m201[0m 511.511 ms - 11[0m
+2023-05-04 17:43:09 info: [0mGET /posts/categories [32m201[0m 505.885 ms - 11[0m
+2023-05-04 17:43:09 info: [0mGET /posts/popular [32m201[0m 570.665 ms - -[0m
+2023-05-04 17:43:13 info: [0mGET /posts/popular [32m201[0m 509.281 ms - -[0m
+2023-05-04 17:43:13 info: [0mGET /posts/categories [32m201[0m 522.782 ms - 11[0m
+2023-05-04 17:43:18 info: [0mGET /posts/categories [32m201[0m 526.163 ms - 11[0m
+2023-05-04 17:43:18 info: [0mGET /posts/popular [32m201[0m 543.551 ms - -[0m
+2023-05-04 17:43:55 info: [0mGET /posts/popular [32m201[0m 538.425 ms - -[0m
+2023-05-04 17:43:55 info: [0mGET /posts/categories [32m201[0m 567.484 ms - 11[0m
+2023-05-04 17:44:03 info: [0mGET /posts/categories [32m201[0m 564.902 ms - 11[0m
+2023-05-04 17:44:03 info: [0mGET /posts/popular [32m201[0m 583.437 ms - -[0m
+2023-05-04 17:44:08 info: [0mGET /posts/popular [32m201[0m 597.743 ms - -[0m
+2023-05-04 17:44:08 info: [0mGET /posts/categories [32m201[0m 612.809 ms - 11[0m
+2023-05-04 17:44:10 info: [0mGET /posts/categories [32m201[0m 570.070 ms - 11[0m
+2023-05-04 17:44:10 info: [0mGET /posts/popular [32m201[0m 586.351 ms - -[0m
+2023-05-04 17:44:15 info: [0mGET /posts/categories [32m201[0m 584.524 ms - 11[0m
+2023-05-04 17:44:15 info: [0mGET /posts/popular [32m201[0m 595.577 ms - -[0m
+2023-05-04 17:44:19 info: [0mGET /posts/categories [32m201[0m 539.025 ms - 11[0m
+2023-05-04 17:44:19 info: [0mGET /posts/popular [32m201[0m 682.364 ms - -[0m
+2023-05-04 17:52:06 info: [0mGET /posts/categories [32m201[0m 410.880 ms - 11[0m
+2023-05-04 17:52:06 info: [0mGET /posts/popular [32m201[0m 473.978 ms - -[0m
+2023-05-04 17:52:14 info: [0mGET /posts/categories [32m201[0m 390.547 ms - 11[0m
+2023-05-04 17:52:14 info: [0mGET /posts/popular [32m201[0m 464.458 ms - -[0m
+2023-05-04 17:52:50 info: [0mGET /posts/popular [32m201[0m 413.209 ms - -[0m
+2023-05-04 17:52:50 info: [0mGET /posts/popular [32m201[0m 403.710 ms - -[0m
+2023-05-04 17:52:56 info: [0mGET /posts/popular [32m201[0m 403.118 ms - -[0m
+2023-05-04 17:54:15 info: [0mGET /posts/categories [32m201[0m 380.481 ms - 11[0m
+2023-05-04 17:54:16 info: [0mGET /posts/popular [32m201[0m 446.125 ms - -[0m
+2023-05-04 17:54:16 info: [0mGET /posts/categories [32m201[0m 401.348 ms - 11[0m
+2023-05-04 17:54:17 info: [0mGET /posts/popular [32m201[0m 435.815 ms - -[0m
+2023-05-04 17:54:19 info: [0mGET /posts/categories [32m201[0m 375.314 ms - 11[0m
+2023-05-04 17:54:19 info: [0mGET /posts/popular [32m201[0m 419.579 ms - -[0m
+2023-05-04 17:56:23 info: [0mGET /posts/popular [32m201[0m 417.606 ms - -[0m
+2023-05-04 17:56:23 info: [0mGET /posts/categories [32m201[0m 373.811 ms - 11[0m
+2023-05-04 17:57:01 info: [0mGET /posts/categories [32m201[0m 443.730 ms - 11[0m
+2023-05-04 17:57:05 info: [0mGET /posts/categories [32m201[0m 377.113 ms - 11[0m
+2023-05-04 17:57:05 info: [0mGET /posts/categories [32m201[0m 401.654 ms - 11[0m
+2023-05-04 17:57:11 info: [0mGET /posts/popular [32m201[0m 438.170 ms - -[0m
+2023-05-04 17:57:11 info: [0mGET /posts/categories [32m201[0m 397.177 ms - 11[0m
+2023-05-04 17:57:33 info: [0mGET /posts/categories [32m201[0m 382.816 ms - 11[0m
+2023-05-04 17:57:34 info: [0mGET /posts/categories [32m201[0m 391.331 ms - 11[0m
+2023-05-04 17:57:35 info: [0mGET /posts/categories [32m201[0m 405.118 ms - 11[0m
+2023-05-04 17:57:35 info: [0mGET /posts/popular [32m201[0m 451.165 ms - -[0m
+2023-05-04 17:57:38 info: [0mGET /posts/categories [32m201[0m 417.606 ms - 11[0m
+2023-05-04 17:58:09 info: [0mGET /posts/categories [32m201[0m 376.951 ms - 11[0m
+2023-05-04 17:58:09 info: [0mGET /posts/popular [32m201[0m 440.510 ms - -[0m
+2023-05-04 17:58:11 info: [0mGET /posts/categories [32m201[0m 382.954 ms - 11[0m
+2023-05-04 17:58:11 info: [0mGET /posts/popular [32m201[0m 464.235 ms - -[0m
+2023-05-04 17:58:17 info: [0mGET /posts/categories [32m201[0m 362.717 ms - 11[0m
+2023-05-04 17:58:17 info: [0mGET /posts/popular [32m201[0m 448.088 ms - -[0m
+2023-05-04 17:58:19 info: [0mGET /posts/categories [32m201[0m 378.604 ms - 11[0m
+2023-05-04 17:58:19 info: [0mGET /posts/popular [32m201[0m 441.695 ms - -[0m
+2023-05-04 17:59:01 info: [0mGET /posts/popular [32m201[0m 416.454 ms - -[0m
+2023-05-04 17:59:01 info: [0mGET /posts/categories [32m201[0m 417.209 ms - 11[0m
+2023-05-04 17:59:10 info: [0mGET /posts/categories [32m201[0m 381.965 ms - 11[0m
+2023-05-04 17:59:10 info: [0mGET /posts/popular [32m201[0m 452.309 ms - -[0m
+2023-05-04 17:59:15 info: [0mGET /posts/categories [32m201[0m 351.615 ms - 11[0m
+2023-05-04 17:59:15 info: [0mGET /posts/popular [32m201[0m 420.468 ms - -[0m
+2023-05-04 17:59:37 info: [0mGET /posts/categories [32m201[0m 380.863 ms - 11[0m
+2023-05-04 17:59:37 info: [0mGET /posts/popular [32m201[0m 435.459 ms - -[0m
+2023-05-04 17:59:50 info: [0mGET /posts/categories [32m201[0m 388.270 ms - 11[0m
+2023-05-04 17:59:57 info: [0mGET /posts/categories [32m201[0m 367.193 ms - 11[0m
+2023-05-04 17:59:57 info: [0mGET /posts/popular [32m201[0m 437.870 ms - -[0m
+2023-05-04 18:00:22 info: [0mGET /posts/popular [32m201[0m 1915.043 ms - -[0m
+2023-05-04 18:00:22 info: [0mGET /posts/categories [32m201[0m 2094.628 ms - 11[0m
+2023-05-04 18:00:23 info: [0mGET /posts/categories [32m201[0m 626.511 ms - 11[0m
+2023-05-04 18:00:23 info: [0mGET /posts/popular [32m201[0m 778.838 ms - -[0m
+2023-05-04 18:00:29 info: [0mGET /posts/categories [32m201[0m 741.994 ms - 11[0m
+2023-05-04 18:00:29 info: [0mGET /posts/popular [32m201[0m 966.613 ms - -[0m
+2023-05-04 18:00:35 info: [0mGET /posts/popular [32m201[0m 907.190 ms - -[0m
+2023-05-04 18:00:36 info: [0mGET /posts/categories [32m201[0m 2545.269 ms - 11[0m
+2023-05-04 18:00:38 info: [0mGET /posts/categories [32m201[0m 1525.959 ms - 11[0m
+2023-05-04 18:00:38 info: [0mGET /posts/popular [32m201[0m 1698.618 ms - -[0m
+2023-05-04 18:01:10 info: [0mGET /posts/categories [32m201[0m 408.231 ms - 11[0m
+2023-05-04 18:01:58 info: =================================
+2023-05-04 18:01:58 info: ======= ENV: development =======
+2023-05-04 18:01:58 info: 🚀 App listening on the port 3000
+2023-05-04 18:01:58 info: =================================
+2023-05-04 18:02:17 info: [0mGET /posts/popular [32m201[0m 717.367 ms - -[0m
+2023-05-04 18:02:17 info: [0mGET /posts/categories [32m201[0m 1045.356 ms - 11[0m
+2023-05-04 18:02:22 info: [0mGET /posts/categories [32m201[0m 404.739 ms - 11[0m
+2023-05-04 18:02:30 info: =================================
+2023-05-04 18:02:30 info: ======= ENV: development =======
+2023-05-04 18:02:30 info: 🚀 App listening on the port 3000
+2023-05-04 18:02:30 info: =================================
+2023-05-04 18:02:36 info: =================================
+2023-05-04 18:02:36 info: ======= ENV: development =======
+2023-05-04 18:02:36 info: 🚀 App listening on the port 3000
+2023-05-04 18:02:36 info: =================================
+2023-05-04 18:02:36 info: [0mGET /posts/categories [32m201[0m 415.392 ms - 114[0m
+2023-05-04 18:02:43 info: [0mGET /posts/categories [32m201[0m 373.505 ms - 114[0m
+2023-05-04 18:02:43 info: [0mGET /posts/popular [32m201[0m 450.805 ms - -[0m
+2023-05-04 18:03:02 info: [0mGET /posts/categories [32m201[0m 372.528 ms - 114[0m
+2023-05-04 18:03:28 info: [0mGET /posts/categories [32m201[0m 417.324 ms - 114[0m
+2023-05-04 18:03:31 info: [0mGET /posts/categories [32m201[0m 371.483 ms - 114[0m
+2023-05-04 18:03:31 info: [0mGET /posts/popular [32m201[0m 453.483 ms - -[0m
+2023-05-04 18:03:36 info: [0mGET /posts/categories [32m201[0m 380.866 ms - 114[0m
+2023-05-04 18:03:57 info: [0mGET /posts/categories [32m201[0m 373.492 ms - 114[0m
+2023-05-04 18:03:58 info: [0mGET /posts/popular [32m201[0m 464.644 ms - -[0m
+2023-05-04 18:04:02 info: [0mGET /posts/categories [32m201[0m 426.990 ms - 114[0m
+2023-05-04 18:04:02 info: [0mGET /posts/popular [32m201[0m 504.399 ms - -[0m
+2023-05-04 18:04:33 info: [0mGET /posts/categories [32m201[0m 408.418 ms - 114[0m
+2023-05-04 18:04:33 info: [0mGET /posts/popular [32m201[0m 432.885 ms - -[0m
+2023-05-04 18:04:40 info: [0mGET /posts/categories [32m201[0m 372.471 ms - 114[0m
+2023-05-04 18:04:40 info: [0mGET /posts/popular [32m201[0m 413.958 ms - -[0m
+2023-05-04 18:04:46 info: [0mGET /posts/categories [32m201[0m 392.001 ms - 114[0m
+2023-05-04 18:04:46 info: [0mGET /posts/popular [32m201[0m 458.518 ms - -[0m
+2023-05-04 18:04:49 info: [0mGET /posts/categories [32m201[0m 374.070 ms - 114[0m
+2023-05-04 18:04:49 info: [0mGET /posts/popular [32m201[0m 421.505 ms - -[0m
+2023-05-04 18:04:57 info: [0mGET /posts/categories [32m201[0m 394.612 ms - 114[0m
+2023-05-04 18:04:57 info: [0mGET /posts/popular [32m201[0m 434.279 ms - -[0m
+2023-05-04 18:05:02 info: [0mGET /posts/popular [32m201[0m 422.805 ms - -[0m
+2023-05-04 18:05:02 info: [0mGET /posts/categories [32m201[0m 419.522 ms - 114[0m
+2023-05-04 18:05:16 info: [0mGET /posts/categories [32m201[0m 370.938 ms - 114[0m
+2023-05-04 18:05:16 info: [0mGET /posts/popular [32m201[0m 427.041 ms - -[0m
+2023-05-04 18:05:24 info: [0mGET /posts/categories [32m201[0m 391.194 ms - 114[0m
+2023-05-04 18:05:25 info: [0mGET /posts/popular [32m201[0m 801.537 ms - -[0m
+2023-05-04 18:05:27 info: [0mGET /posts/popular [32m201[0m 395.364 ms - -[0m
+2023-05-04 18:05:27 info: [0mGET /posts/categories [32m201[0m 386.749 ms - 114[0m
+2023-05-04 18:05:47 info: [0mGET /posts/categories [32m201[0m 398.025 ms - 114[0m
+2023-05-04 18:05:47 info: [0mGET /posts/popular [32m201[0m 444.334 ms - -[0m
+2023-05-04 18:06:00 info: [0mGET /posts/categories [32m201[0m 402.157 ms - 114[0m
+2023-05-04 18:14:02 info: [0mGET /posts/popular [32m201[0m 453.945 ms - -[0m
+2023-05-04 18:14:14 info: [0mGET /posts/popular [32m201[0m 446.790 ms - -[0m
+2023-05-04 18:23:22 info: [0mGET /posts/popular [32m201[0m 427.890 ms - -[0m
+2023-05-04 18:23:22 info: [0mGET /posts/categories [32m201[0m 387.133 ms - 114[0m
+2023-05-04 18:23:29 info: [0mGET /posts/popular [32m201[0m 427.774 ms - -[0m
+2023-05-04 18:23:29 info: [0mGET /posts/categories [32m201[0m 348.421 ms - 114[0m
+2023-05-04 18:26:48 info: [0mGET /posts/categories [32m201[0m 399.609 ms - 114[0m
+2023-05-04 18:26:48 info: [0mGET /posts/popular [32m201[0m 454.488 ms - -[0m
+2023-05-04 18:26:52 info: [0mGET /posts/popular [32m201[0m 406.414 ms - -[0m
+2023-05-04 18:26:52 info: [0mGET /posts/categories [32m201[0m 400.368 ms - 114[0m
+2023-05-04 18:26:58 info: [0mGET /posts/categories [32m201[0m 393.830 ms - 114[0m
+2023-05-04 18:26:58 info: [0mGET /posts/popular [32m201[0m 436.327 ms - -[0m
+2023-05-04 18:27:05 info: [0mGET /posts/categories [32m201[0m 382.663 ms - 114[0m
+2023-05-04 18:27:05 info: [0mGET /posts/popular [32m201[0m 423.909 ms - -[0m
+2023-05-04 18:27:09 info: [0mGET /posts/categories [32m201[0m 395.030 ms - 114[0m
+2023-05-04 18:27:09 info: [0mGET /posts/popular [32m201[0m 411.580 ms - -[0m
+2023-05-04 18:27:16 info: [0mGET /posts/categories [32m201[0m 370.845 ms - 114[0m
+2023-05-04 18:27:16 info: [0mGET /posts/popular [32m201[0m 452.591 ms - -[0m
+2023-05-04 18:27:35 info: [0mGET /posts/categories [32m201[0m 365.928 ms - 114[0m
+2023-05-04 18:27:35 info: [0mGET /posts/popular [32m201[0m 431.884 ms - -[0m
+2023-05-04 18:27:43 info: [0mGET /posts/categories [32m201[0m 367.926 ms - 114[0m
+2023-05-04 18:27:43 info: [0mGET /posts/popular [32m201[0m 410.748 ms - -[0m
+2023-05-04 18:27:44 info: [0mGET /posts/categories [32m201[0m 382.738 ms - 114[0m
+2023-05-04 18:27:44 info: [0mGET /posts/popular [32m201[0m 463.243 ms - -[0m
+2023-05-04 18:28:17 info: =================================
+2023-05-04 18:28:17 info: ======= ENV: development =======
+2023-05-04 18:28:17 info: 🚀 App listening on the port 3000
+2023-05-04 18:28:17 info: =================================
+2023-05-04 18:28:36 info: =================================
+2023-05-04 18:28:36 info: ======= ENV: development =======
+2023-05-04 18:28:36 info: 🚀 App listening on the port 3000
+2023-05-04 18:28:36 info: =================================
+2023-05-04 18:28:55 info: [0mGET /posts/categories [32m201[0m 408.162 ms - 114[0m
+2023-05-04 18:28:55 info: [0mGET /posts/popular [32m201[0m 451.224 ms - -[0m
+2023-05-04 18:28:56 info: [0mGET /posts/popular [32m201[0m 428.283 ms - -[0m
+2023-05-04 18:28:56 info: [0mGET /posts/categories [32m201[0m 435.816 ms - 114[0m
+2023-05-04 18:28:57 info: [0mGET /posts/categories [32m201[0m 387.477 ms - 114[0m
+2023-05-04 18:28:57 info: [0mGET /posts/popular [32m201[0m 424.154 ms - -[0m
+2023-05-04 18:29:17 info: [0mGET /posts/categories [32m201[0m 371.828 ms - 114[0m
+2023-05-04 18:29:18 info: [0mGET /posts/popular [32m201[0m 420.799 ms - -[0m
+2023-05-04 18:29:24 info: [0mGET /posts/categories [32m201[0m 373.370 ms - 114[0m
+2023-05-04 18:29:24 info: [0mGET /posts/popular [32m201[0m 442.683 ms - -[0m
+2023-05-04 18:29:28 info: [0mGET /posts/categories [32m201[0m 372.240 ms - 114[0m
+2023-05-04 18:29:28 info: [0mGET /posts/popular [32m201[0m 420.234 ms - -[0m
+2023-05-04 18:32:26 info: [0mGET /posts/categories [32m201[0m 401.200 ms - 114[0m
+2023-05-04 18:32:26 info: [0mGET /posts/popular [32m201[0m 489.840 ms - -[0m
+2023-05-04 18:32:32 info: [0mGET /posts/popular [32m201[0m 431.368 ms - -[0m
+2023-05-04 18:32:32 info: [0mGET /posts/categories [32m201[0m 376.154 ms - 114[0m
+2023-05-04 18:33:41 info: [0mGET /posts/categories [32m201[0m 376.060 ms - 114[0m
+2023-05-04 18:33:41 info: [0mGET /posts/popular [32m201[0m 417.578 ms - -[0m
+2023-05-04 18:33:43 info: [0mGET /posts/categories [32m201[0m 361.270 ms - 114[0m
+2023-05-04 18:33:43 info: [0mGET /posts/popular [32m201[0m 418.625 ms - -[0m
+2023-05-04 18:33:46 info: [0mGET /posts/categories [32m201[0m 393.240 ms - 114[0m
+2023-05-04 18:33:46 info: [0mGET /posts/popular [32m201[0m 470.622 ms - -[0m
+2023-05-04 18:33:51 info: [0mGET /posts/categories [32m201[0m 367.656 ms - 114[0m
+2023-05-04 18:33:51 info: [0mGET /posts/popular [32m201[0m 420.612 ms - -[0m
+2023-05-04 18:34:02 info: [0mGET /posts/popular [32m201[0m 433.062 ms - -[0m
+2023-05-04 18:34:02 info: [0mGET /posts/categories [32m201[0m 390.338 ms - 114[0m
+2023-05-04 18:35:06 info: [0mGET /posts/popular [32m201[0m 437.551 ms - -[0m
+2023-05-04 18:35:08 info: [0mGET /posts/categories [32m201[0m 386.226 ms - 114[0m
+2023-05-04 18:35:08 info: [0mGET /posts/popular [32m201[0m 425.083 ms - -[0m
+2023-05-04 18:35:10 info: [0mGET /posts/popular [32m201[0m 457.076 ms - -[0m
+2023-05-04 18:35:47 info: [0mGET /posts/categories [32m201[0m 370.950 ms - 114[0m
+2023-05-04 18:35:47 info: [0mGET /posts/popular [32m201[0m 449.620 ms - -[0m
+2023-05-04 18:35:53 info: [0mGET /posts/categories [32m201[0m 380.233 ms - 114[0m
+2023-05-04 18:35:53 info: [0mGET /posts/popular [32m201[0m 419.095 ms - -[0m
+2023-05-04 18:35:57 info: [0mGET /posts/categories [32m201[0m 395.631 ms - 114[0m
+2023-05-04 18:35:57 info: [0mGET /posts/popular [32m201[0m 428.518 ms - -[0m
+2023-05-04 18:36:04 info: [0mGET /posts/popular [32m201[0m 404.267 ms - -[0m
+2023-05-04 18:36:19 info: [0mGET /posts/popular [32m201[0m 452.217 ms - -[0m
+2023-05-04 18:36:22 info: [0mGET /posts/popular [32m201[0m 444.335 ms - -[0m
+2023-05-04 18:36:28 info: [0mGET /posts/popular [32m201[0m 418.036 ms - -[0m
+2023-05-04 18:37:22 info: [0mGET /posts/popular [32m201[0m 437.901 ms - -[0m
+2023-05-04 18:37:30 info: [0mGET /posts/categories [32m201[0m 380.952 ms - 114[0m
+2023-05-04 18:37:30 info: [0mGET /posts/popular [32m201[0m 436.157 ms - -[0m
+2023-05-04 18:37:40 info: [0mGET /posts/popular [32m201[0m 435.801 ms - -[0m
+2023-05-04 18:37:41 info: [0mGET /posts/popular [32m201[0m 422.746 ms - -[0m
+2023-05-04 18:47:43 info: [0mGET /posts/categorydgfbbtrhegbtrgre419ger [33m404[0m 1.885 ms - 175[0m
+2023-05-04 18:47:43 info: [0mGET /posts/categorygrtgv841t89rhbtgfrd48hb [33m404[0m 0.736 ms - 176[0m
+2023-05-04 18:47:43 info: [0mGET /posts/categorydgfbbtrhegbtrgre419ger [33m404[0m 0.480 ms - 175[0m
+2023-05-04 18:47:44 info: [0mGET /posts/categorygrtgv841t89rhbtgfrd48hb [33m404[0m 0.465 ms - 176[0m
+2023-05-04 18:47:44 info: [0mGET /posts/categories [32m201[0m 425.462 ms - 114[0m
+2023-05-04 18:47:44 info: [0mGET /posts/popular [32m201[0m 497.688 ms - -[0m
+2023-05-04 18:47:44 info: [0mGET /posts/categorydgfbbtrhegbtrgre419ger [33m404[0m 0.496 ms - 175[0m
+2023-05-04 18:47:44 info: [0mGET /posts/categorygrtgv841t89rhbtgfrd48hb [33m404[0m 0.493 ms - 176[0m
+2023-05-04 18:48:16 info: [0mGET /posts/categories [32m201[0m 395.541 ms - 114[0m
+2023-05-04 18:48:16 info: [0mGET /posts/popular [32m201[0m 429.226 ms - -[0m
+2023-05-04 18:48:24 info: [0mGET /posts/categorygrtgv841t89rhbtgfrd48hb [33m404[0m 0.464 ms - 176[0m
+2023-05-04 18:48:24 info: [0mGET /posts/categorydgfbbtrhegbtrgre419ger [33m404[0m 0.533 ms - 175[0m
+2023-05-04 18:48:24 info: [0mGET /posts/categorydgfbbtrhegbtrgre419ger [33m404[0m 0.536 ms - 175[0m
+2023-05-04 18:48:24 info: [0mGET /posts/categorygrtgv841t89rhbtgfrd48hb [33m404[0m 0.540 ms - 176[0m
+2023-05-04 18:48:32 info: [0mGET /posts/popular [32m201[0m 410.753 ms - -[0m
+2023-05-04 18:48:32 info: [0mGET /posts/categories [32m201[0m 392.684 ms - 114[0m
+2023-05-04 18:48:33 info: [0mGET /posts/categorydgfbbtrhegbtrgre419ger [33m404[0m 0.536 ms - 175[0m
+2023-05-04 18:48:33 info: [0mGET /posts/categorygrtgv841t89rhbtgfrd48hb [33m404[0m 0.657 ms - 176[0m
+2023-05-04 18:48:59 info: [0mGET /posts/categorygrtgv841t89rhbtgfrd48hb [33m404[0m 0.474 ms - 176[0m
+2023-05-04 18:48:59 info: [0mGET /posts/categorydgfbbtrhegbtrgre419ger [33m404[0m 0.332 ms - 175[0m
+2023-05-04 18:49:47 info: [0mGET /posts/popular [32m201[0m 446.670 ms - -[0m
+2023-05-04 18:49:47 info: [0mGET /posts/categories [32m201[0m 372.504 ms - 114[0m
+2023-05-04 18:50:04 info: [0mGET /posts/categories [32m201[0m 382.089 ms - 114[0m
+2023-05-04 18:50:04 info: [0mGET /posts/popular [32m201[0m 431.310 ms - -[0m
+2023-05-04 18:50:07 info: [0mGET /posts/categorydgfbbtrhegbtrgre419ger [33m404[0m 0.476 ms - 175[0m
+2023-05-04 18:50:07 info: [0mGET /posts/categorygrtgv841t89rhbtgfrd48hb [33m404[0m 0.489 ms - 176[0m
+2023-05-04 18:50:42 info: [0mGET /posts/categories [32m201[0m 409.590 ms - 114[0m
+2023-05-04 18:50:42 info: [0mGET /posts/popular [32m201[0m 453.991 ms - -[0m
+2023-05-04 18:51:02 info: [0mGET /posts/popular [32m201[0m 1164.184 ms - -[0m
+2023-05-04 18:51:02 info: [0mGET /posts/categories [32m201[0m 1090.495 ms - 114[0m
+2023-05-04 18:51:03 info: [0mGET /posts/categorydgfbbtrhegbtrgre419ger [33m404[0m 0.704 ms - 175[0m
+2023-05-04 18:51:03 info: [0mGET /posts/categorygrtgv841t89rhbtgfrd48hb [33m404[0m 0.636 ms - 176[0m
+2023-05-04 18:51:23 info: [0mGET /posts/categories [32m201[0m 402.471 ms - 114[0m
+2023-05-04 18:51:23 info: [0mGET /posts/popular [32m201[0m 431.622 ms - -[0m
+2023-05-04 18:51:23 info: [0mGET /posts/categorydgfbbtrhegbtrgre419ger [33m404[0m 0.468 ms - 175[0m
+2023-05-04 18:51:23 info: [0mGET /posts/categorygrtgv841t89rhbtgfrd48hb [33m404[0m 0.444 ms - 176[0m
+2023-05-04 18:51:29 info: [0mGET /posts/categories [32m201[0m 375.247 ms - 114[0m
+2023-05-04 18:51:29 info: [0mGET /posts/popular [32m201[0m 477.129 ms - -[0m
+2023-05-04 18:51:30 info: [0mGET /posts/categorydgfbbtrhegbtrgre419ger [33m404[0m 0.434 ms - 175[0m
+2023-05-04 18:51:30 info: [0mGET /posts/categorygrtgv841t89rhbtgfrd48hb [33m404[0m 0.443 ms - 176[0m
+2023-05-04 18:51:34 info: [0mGET /posts/categories [32m201[0m 399.337 ms - 114[0m
+2023-05-04 18:51:34 info: [0mGET /posts/popular [32m201[0m 420.940 ms - -[0m
+2023-05-04 18:51:35 info: [0mGET /posts/categorydgfbbtrhegbtrgre419ger [33m404[0m 0.547 ms - 175[0m
+2023-05-04 18:51:35 info: [0mGET /posts/categorygrtgv841t89rhbtgfrd48hb [33m404[0m 0.523 ms - 176[0m
+2023-05-04 18:51:39 info: [0mGET /posts/categories [32m201[0m 379.381 ms - 114[0m
+2023-05-04 18:51:39 info: [0mGET /posts/popular [32m201[0m 421.281 ms - -[0m
+2023-05-04 18:51:39 info: [0mGET /posts/categorydgfbbtrhegbtrgre419ger [33m404[0m 0.493 ms - 175[0m
+2023-05-04 18:51:39 info: [0mGET /posts/categorygrtgv841t89rhbtgfrd48hb [33m404[0m 0.438 ms - 176[0m
+2023-05-04 18:52:33 info: [0mGET /posts/categorygrtgv841t89rhbtgfrd48hb [33m404[0m 0.497 ms - 176[0m
+2023-05-04 18:52:33 info: [0mGET /posts/categorydgfbbtrhegbtrgre419ger [33m404[0m 0.335 ms - 175[0m
+2023-05-04 18:52:33 info: [0mGET /posts/categorydgfbbtrhegbtrgre419ger [33m404[0m 0.396 ms - 175[0m
+2023-05-04 18:52:33 info: [0mGET /posts/categorygrtgv841t89rhbtgfrd48hb [33m404[0m 0.364 ms - 176[0m
+2023-05-04 18:52:33 info: [0mGET /posts/categories [32m201[0m 367.567 ms - 114[0m
+2023-05-04 18:52:33 info: [0mGET /posts/popular [32m201[0m 464.045 ms - -[0m
+2023-05-04 18:52:33 info: [0mGET /posts/categorydgfbbtrhegbtrgre419ger [33m404[0m 0.629 ms - 175[0m
+2023-05-04 18:52:33 info: [0mGET /posts/categorygrtgv841t89rhbtgfrd48hb [33m404[0m 0.423 ms - 176[0m
+2023-05-04 18:52:40 info: [0mGET /posts/popular [32m201[0m 451.657 ms - -[0m
+2023-05-04 18:52:40 info: [0mGET /posts/categories [32m201[0m 383.574 ms - 114[0m
+2023-05-04 18:52:41 info: [0mGET /posts/categorydgfbbtrhegbtrgre419ger [33m404[0m 0.445 ms - 175[0m
+2023-05-04 18:52:41 info: [0mGET /posts/categorygrtgv841t89rhbtgfrd48hb [33m404[0m 0.591 ms - 176[0m
+2023-05-04 18:53:00 info: [0mGET /posts/categories [32m201[0m 349.881 ms - 114[0m
+2023-05-04 18:53:00 info: [0mGET /posts/popular [32m201[0m 443.278 ms - -[0m
+2023-05-04 18:53:00 info: [0mGET /posts/categorydgfbbtrhegbtrgre419ger [33m404[0m 0.407 ms - 175[0m
+2023-05-04 18:53:00 info: [0mGET /posts/categorygrtgv841t89rhbtgfrd48hb [33m404[0m 0.305 ms - 176[0m
+2023-05-04 18:54:14 info: [0mGET /posts/categorydgfbbtrhegbtrgre419ger [33m404[0m 0.444 ms - 175[0m
+2023-05-04 18:54:14 info: [0mGET /posts/categorygrtgv841t89rhbtgfrd48hb [33m404[0m 0.408 ms - 176[0m
+2023-05-04 18:54:27 info: [0mGET /posts/popular [32m201[0m 430.487 ms - -[0m
+2023-05-04 18:54:27 info: [0mGET /posts/categories [32m201[0m 366.178 ms - 114[0m
+2023-05-04 18:54:28 info: [0mGET /posts/categorydgfbbtrhegbtrgre419ger [33m404[0m 0.420 ms - 175[0m
+2023-05-04 18:54:28 info: [0mGET /posts/categorygrtgv841t89rhbtgfrd48hb [33m404[0m 0.381 ms - 176[0m
+2023-05-04 18:55:29 info: [0mGET /posts/popular [32m201[0m 438.792 ms - -[0m
+2023-05-04 18:55:29 info: [0mGET /posts/categories [32m201[0m 364.346 ms - 114[0m
+2023-05-04 18:55:29 info: [0mGET /posts/categorydgfbbtrhegbtrgre419ger [33m404[0m 0.561 ms - 175[0m
+2023-05-04 18:55:29 info: [0mGET /posts/categorygrtgv841t89rhbtgfrd48hb [33m404[0m 0.586 ms - 176[0m
+2023-05-04 18:55:29 info: [0mGET /posts/categorydgfbbtrhegbtrgre419ger [33m404[0m 0.802 ms - 175[0m
+2023-05-04 18:55:29 info: [0mGET /posts/categorygrtgv841t89rhbtgfrd48hb [33m404[0m 0.296 ms - 176[0m
+2023-05-04 18:55:48 info: [0mGET /posts/categorydgfbbtrhegbtrgre419ger [33m404[0m 0.436 ms - 175[0m
+2023-05-04 18:55:48 info: [0mGET /posts/categorygrtgv841t89rhbtgfrd48hb [33m404[0m 0.351 ms - 176[0m
+2023-05-04 18:55:49 info: [0mGET /posts/categories [32m201[0m 695.518 ms - 114[0m
+2023-05-04 18:55:49 info: [0mGET /posts/categorydgfbbtrhegbtrgre419ger [33m404[0m 0.446 ms - 175[0m
+2023-05-04 18:55:49 info: [0mGET /posts/categorygrtgv841t89rhbtgfrd48hb [33m404[0m 0.394 ms - 176[0m
+2023-05-04 18:57:14 info: [0mGET /posts/categorydgfbbtrhegbtrgre419ger [33m404[0m 0.538 ms - 175[0m
+2023-05-04 18:57:14 info: [0mGET /posts/categorygrtgv841t89rhbtgfrd48hb [33m404[0m 0.396 ms - 176[0m
+2023-05-04 18:57:18 info: [0mGET /posts/categorydgfbbtrhegbtrgre419ger [33m404[0m 0.418 ms - 175[0m
+2023-05-04 18:57:18 info: [0mGET /posts/categorygrtgv841t89rhbtgfrd48hb [33m404[0m 0.583 ms - 176[0m
+2023-05-04 18:57:18 info: [0mGET /posts/categories [32m201[0m 392.402 ms - 114[0m
+2023-05-04 18:57:18 info: [0mGET /posts/popular [32m201[0m 443.935 ms - -[0m
+2023-05-04 18:57:18 info: [0mGET /posts/categorydgfbbtrhegbtrgre419ger [33m404[0m 0.393 ms - 175[0m
+2023-05-04 18:57:18 info: [0mGET /posts/categorygrtgv841t89rhbtgfrd48hb [33m404[0m 0.422 ms - 176[0m
+2023-05-04 18:57:31 info: [0mGET /posts/categories [32m201[0m 397.357 ms - 114[0m
+2023-05-04 18:57:31 info: [0mGET /posts/popular [32m201[0m 482.525 ms - -[0m
+2023-05-04 18:57:31 info: [0mGET /posts/categorydgfbbtrhegbtrgre419ger [33m404[0m 0.559 ms - 175[0m
+2023-05-04 18:57:31 info: [0mGET /posts/categorygrtgv841t89rhbtgfrd48hb [33m404[0m 0.521 ms - 176[0m
+2023-05-04 18:57:50 info: [0mGET /posts/categorygrtgv841t89rhbtgfrd48hb [33m404[0m 0.441 ms - 176[0m
+2023-05-04 18:57:50 info: [0mGET /posts/categorydgfbbtrhegbtrgre419ger [33m404[0m 0.438 ms - 175[0m
+2023-05-04 18:57:50 info: [0mGET /posts/categories [32m201[0m 468.091 ms - 114[0m
+2023-05-04 18:57:50 info: [0mGET /posts/categorydgfbbtrhegbtrgre419ger [33m404[0m 0.389 ms - 175[0m
+2023-05-04 18:57:50 info: [0mGET /posts/categorygrtgv841t89rhbtgfrd48hb [33m404[0m 0.341 ms - 176[0m
+2023-05-04 18:58:08 info: [0mGET /posts/categorydgfbbtrhegbtrgre419ger [33m404[0m 0.372 ms - 175[0m
+2023-05-04 18:58:08 info: [0mGET /posts/categorydgfbbtrhegbtrgre419ger [33m404[0m 0.534 ms - 175[0m
+2023-05-04 18:58:08 info: [0mGET /posts/categorygrtgv841t89rhbtgfrd48hb [33m404[0m 0.261 ms - 176[0m
+2023-05-04 18:58:08 info: [0mGET /posts/categorygrtgv841t89rhbtgfrd48hb [33m404[0m 0.358 ms - 176[0m
+2023-05-04 18:58:10 info: [0mGET /posts/categorydgfbbtrhegbtrgre419ger [33m404[0m 0.416 ms - 175[0m
+2023-05-04 18:58:10 info: [0mGET /posts/categorygrtgv841t89rhbtgfrd48hb [33m404[0m 0.393 ms - 176[0m
+2023-05-04 18:58:11 info: [0mGET /posts/categorydgfbbtrhegbtrgre419ger [33m404[0m 0.407 ms - 175[0m
+2023-05-04 18:58:11 info: [0mGET /posts/categorygrtgv841t89rhbtgfrd48hb [33m404[0m 0.277 ms - 176[0m
+2023-05-04 18:58:11 info: [0mGET /posts/categories [32m201[0m 401.782 ms - 114[0m
+2023-05-04 18:58:11 info: [0mGET /posts/popular [32m201[0m 482.434 ms - -[0m
+2023-05-04 18:58:12 info: [0mGET /posts/categorydgfbbtrhegbtrgre419ger [33m404[0m 0.420 ms - 175[0m
+2023-05-04 18:58:12 info: [0mGET /posts/categorygrtgv841t89rhbtgfrd48hb [33m404[0m 0.411 ms - 176[0m
+2023-05-04 18:59:06 info: [0mGET /posts/categorygrtgv841t89rhbtgfrd48hb [33m404[0m 0.441 ms - 176[0m
+2023-05-04 18:59:06 info: [0mGET /posts/categorydgfbbtrhegbtrgre419ger [33m404[0m 0.438 ms - 175[0m
+2023-05-04 18:59:30 info: [0mGET /posts/popular [32m201[0m 411.111 ms - -[0m
+2023-05-04 18:59:30 info: [0mGET /posts/categories [32m201[0m 362.501 ms - 114[0m
+2023-05-04 18:59:31 info: [0mGET /posts/categorydgfbbtrhegbtrgre419ger [33m404[0m 0.441 ms - 175[0m
+2023-05-04 18:59:31 info: [0mGET /posts/categorygrtgv841t89rhbtgfrd48hb [33m404[0m 1.180 ms - 176[0m
+2023-05-04 19:00:23 info: [0mGET /posts/categories [32m201[0m 367.514 ms - 114[0m
+2023-05-04 19:00:23 info: [0mGET /posts/popular [32m201[0m 452.799 ms - -[0m
+2023-05-04 19:00:23 info: [0mGET /posts/categorydgfbbtrhegbtrgre419ger [33m404[0m 1.128 ms - 175[0m
+2023-05-04 19:00:23 info: [0mGET /posts/categorygrtgv841t89rhbtgfrd48hb [33m404[0m 0.389 ms - 176[0m
+2023-05-04 19:01:36 info: [0mGET /posts/categories [32m201[0m 376.648 ms - 114[0m
+2023-05-04 19:01:36 info: [0mGET /posts/categorydgfbbtrhegbtrgre419ger [33m404[0m 0.425 ms - 175[0m
+2023-05-04 19:01:36 info: [0mGET /posts/categorygrtgv841t89rhbtgfrd48hb [33m404[0m 0.419 ms - 176[0m
+2023-05-04 19:01:38 info: [0mGET /posts/categories [32m201[0m 418.065 ms - 114[0m
+2023-05-04 19:01:38 info: [0mGET /posts/categorydgfbbtrhegbtrgre419ger [33m404[0m 0.429 ms - 175[0m
+2023-05-04 19:01:38 info: [0mGET /posts/categorygrtgv841t89rhbtgfrd48hb [33m404[0m 0.474 ms - 176[0m
+2023-05-04 19:01:55 info: [0mGET /posts/popular [32m201[0m 432.447 ms - -[0m
+2023-05-04 19:01:55 info: [0mGET /posts/categories [32m201[0m 364.237 ms - 114[0m
+2023-05-04 19:02:06 info: [0mGET /posts/categorydgfbbtrhegbtrgre419ger [33m404[0m 0.384 ms - 175[0m
+2023-05-04 19:02:06 info: [0mGET /posts/categorygrtgv841t89rhbtgfrd48hb [33m404[0m 0.249 ms - 176[0m
+2023-05-04 19:02:24 info: [0mGET /posts/categorydgfbbtrhegbtrgre419ger [33m404[0m 0.398 ms - 175[0m
+2023-05-04 19:02:24 info: [0mGET /posts/categorygrtgv841t89rhbtgfrd48hb [33m404[0m 0.354 ms - 176[0m
+2023-05-04 19:02:25 info: [0mGET /posts/categorydgfbbtrhegbtrgre419ger [33m404[0m 0.453 ms - 175[0m
+2023-05-04 19:02:25 info: [0mGET /posts/categorydgfbbtrhegbtrgre419ger [33m404[0m 0.434 ms - 175[0m
+2023-05-04 19:02:25 info: [0mGET /posts/categorygrtgv841t89rhbtgfrd48hb [33m404[0m 1.218 ms - 176[0m
+2023-05-04 19:02:25 info: [0mGET /posts/categorygrtgv841t89rhbtgfrd48hb [33m404[0m 0.295 ms - 176[0m
+2023-05-04 19:02:34 info: [0mGET /posts/categorydgfbbtrhegbtrgre419ger [33m404[0m 0.365 ms - 175[0m
+2023-05-04 19:02:34 info: [0mGET /posts/categorygrtgv841t89rhbtgfrd48hb [33m404[0m 0.426 ms - 176[0m
+2023-05-04 19:02:34 info: [0mGET /posts/categorydgfbbtrhegbtrgre419ger [33m404[0m 1.119 ms - 175[0m
+2023-05-04 19:02:34 info: [0mGET /posts/categorygrtgv841t89rhbtgfrd48hb [33m404[0m 0.381 ms - 176[0m
+2023-05-04 19:02:35 info: [0mGET /posts/popular [32m201[0m 429.008 ms - -[0m
+2023-05-04 19:02:35 info: [0mGET /posts/categories [32m201[0m 441.311 ms - 114[0m
+2023-05-04 19:02:35 info: [0mGET /posts/categorydgfbbtrhegbtrgre419ger [33m404[0m 0.517 ms - 175[0m
+2023-05-04 19:02:35 info: [0mGET /posts/categorygrtgv841t89rhbtgfrd48hb [33m404[0m 0.432 ms - 176[0m
+2023-05-04 19:02:44 info: [0mGET /posts/categorydgfbbtrhegbtrgre419ger [33m404[0m 0.430 ms - 175[0m
+2023-05-04 19:02:44 info: [0mGET /posts/categorygrtgv841t89rhbtgfrd48hb [33m404[0m 0.414 ms - 176[0m
+2023-05-04 19:02:54 info: [0mGET /posts/popular [32m201[0m 437.582 ms - -[0m
+2023-05-04 19:02:54 info: [0mGET /posts/categories [32m201[0m 399.750 ms - 114[0m
+2023-05-04 19:02:55 info: [0mGET /posts/categorydgfbbtrhegbtrgre419ger [33m404[0m 0.608 ms - 175[0m
+2023-05-04 19:02:55 info: [0mGET /posts/categorygrtgv841t89rhbtgfrd48hb [33m404[0m 0.446 ms - 176[0m
+2023-05-04 19:03:46 info: [0mGET /posts/categorydgfbbtrhegbtrgre419ger [33m404[0m 1.077 ms - 175[0m
+2023-05-04 19:03:46 info: [0mGET /posts/categorygrtgv841t89rhbtgfrd48hb [33m404[0m 0.377 ms - 176[0m
+2023-05-04 19:03:47 info: [0mGET /posts/categorydgfbbtrhegbtrgre419ger [33m404[0m 0.430 ms - 175[0m
+2023-05-04 19:03:47 info: [0mGET /posts/categorygrtgv841t89rhbtgfrd48hb [33m404[0m 0.407 ms - 176[0m
+2023-05-04 19:04:01 info: [0mGET /posts/categorydgfbbtrhegbtrgre419ger [33m404[0m 0.474 ms - 175[0m
+2023-05-04 19:04:01 info: [0mGET /posts/categorygrtgv841t89rhbtgfrd48hb [33m404[0m 0.467 ms - 176[0m
+2023-05-04 19:04:20 info: [0mGET /posts/categories [32m201[0m 426.585 ms - 114[0m
+2023-05-04 19:04:20 info: [0mGET /posts/popular [32m201[0m 525.807 ms - -[0m
+2023-05-04 19:04:20 info: [0mGET /posts/categorygrtgv841t89rhbtgfrd48hb [33m404[0m 0.795 ms - 176[0m
+2023-05-04 19:04:20 info: [0mGET /posts/categorydgfbbtrhegbtrgre419ger [33m404[0m 0.545 ms - 175[0m
+2023-05-04 19:04:40 info: [0mGET /posts/categorydgfbbtrhegbtrgre419ger [33m404[0m 0.430 ms - 175[0m
+2023-05-04 19:04:40 info: [0mGET /posts/categorygrtgv841t89rhbtgfrd48hb [33m404[0m 0.366 ms - 176[0m
+2023-05-04 19:05:16 info: [0mGET /posts/categorydgfbbtrhegbtrgre419ger [33m404[0m 0.391 ms - 175[0m
+2023-05-04 19:05:16 info: [0mGET /posts/categorygrtgv841t89rhbtgfrd48hb [33m404[0m 0.394 ms - 176[0m
+2023-05-04 19:05:19 info: [0mGET /posts/categorydgfbbtrhegbtrgre419ger [33m404[0m 0.426 ms - 175[0m
+2023-05-04 19:05:19 info: [0mGET /posts/categorygrtgv841t89rhbtgfrd48hb [33m404[0m 0.451 ms - 176[0m
+2023-05-04 19:05:20 info: [0mGET /posts/categories [32m201[0m 373.074 ms - 114[0m
+2023-05-04 19:05:20 info: [0mGET /posts/categorydgfbbtrhegbtrgre419ger [33m404[0m 0.310 ms - 175[0m
+2023-05-04 19:05:20 info: [0mGET /posts/popular [32m201[0m 438.184 ms - -[0m
+2023-05-04 19:05:20 info: [0mGET /posts/categorygrtgv841t89rhbtgfrd48hb [33m404[0m 0.283 ms - 176[0m
+2023-05-04 19:05:20 info: [0mGET /posts/categories [32m201[0m 377.678 ms - 114[0m
+2023-05-04 19:05:20 info: [0mGET /posts/categorydgfbbtrhegbtrgre419ger [33m404[0m 0.380 ms - 175[0m
+2023-05-04 19:05:20 info: [0mGET /posts/categorygrtgv841t89rhbtgfrd48hb [33m404[0m 0.403 ms - 176[0m
+2023-05-04 19:05:23 info: [0mGET /posts/categories [32m201[0m 377.697 ms - 114[0m
+2023-05-04 19:05:23 info: [0mGET /posts/categorydgfbbtrhegbtrgre419ger [33m404[0m 0.391 ms - 175[0m
+2023-05-04 19:05:23 info: [0mGET /posts/categorygrtgv841t89rhbtgfrd48hb [33m404[0m 0.384 ms - 176[0m
+2023-05-04 19:05:31 info: [0mGET /posts/popular [32m201[0m 443.036 ms - -[0m
+2023-05-04 19:05:31 info: [0mGET /posts/categories [32m201[0m 381.696 ms - 114[0m
+2023-05-04 19:05:31 info: [0mGET /posts/categorydgfbbtrhegbtrgre419ger [33m404[0m 0.404 ms - 175[0m
+2023-05-04 19:05:31 info: [0mGET /posts/categorygrtgv841t89rhbtgfrd48hb [33m404[0m 0.495 ms - 176[0m
+2023-05-04 19:05:53 info: [0mGET /posts/categories [32m201[0m 352.963 ms - 114[0m
+2023-05-04 19:05:53 info: [0mGET /posts/categorydgfbbtrhegbtrgre419ger [33m404[0m 0.423 ms - 175[0m
+2023-05-04 19:05:53 info: [0mGET /posts/categorygrtgv841t89rhbtgfrd48hb [33m404[0m 0.381 ms - 176[0m
+2023-05-04 19:06:51 info: [0mGET /posts/categories [32m201[0m 393.192 ms - 114[0m
+2023-05-04 19:06:51 info: [0mGET /posts/categorydgfbbtrhegbtrgre419ger [33m404[0m 0.420 ms - 175[0m
+2023-05-04 19:06:51 info: [0mGET /posts/categorygrtgv841t89rhbtgfrd48hb [33m404[0m 0.407 ms - 176[0m
+2023-05-04 19:06:51 info: [0mGET /posts/categories [32m201[0m 352.074 ms - 114[0m
+2023-05-04 19:06:51 info: [0mGET /posts/categorydgfbbtrhegbtrgre419ger [33m404[0m 0.400 ms - 175[0m
+2023-05-04 19:06:51 info: [0mGET /posts/categorygrtgv841t89rhbtgfrd48hb [33m404[0m 0.384 ms - 176[0m
+2023-05-04 19:06:51 info: [0mGET /posts/categories [32m201[0m 366.641 ms - 114[0m
+2023-05-04 19:06:52 info: [0mGET /posts/categorydgfbbtrhegbtrgre419ger [33m404[0m 0.393 ms - 175[0m
+2023-05-04 19:06:52 info: [0mGET /posts/categorygrtgv841t89rhbtgfrd48hb [33m404[0m 0.388 ms - 176[0m
+2023-05-04 19:06:52 info: [0mGET /posts/categories [32m201[0m 374.047 ms - 114[0m
+2023-05-04 19:06:52 info: [0mGET /posts/categorydgfbbtrhegbtrgre419ger [33m404[0m 0.418 ms - 175[0m
+2023-05-04 19:06:52 info: [0mGET /posts/categorygrtgv841t89rhbtgfrd48hb [33m404[0m 0.415 ms - 176[0m
+2023-05-04 19:06:53 info: [0mGET /posts/categories [32m201[0m 370.266 ms - 114[0m
+2023-05-04 19:06:53 info: [0mGET /posts/categorydgfbbtrhegbtrgre419ger [33m404[0m 0.407 ms - 175[0m
+2023-05-04 19:06:53 info: [0mGET /posts/categorygrtgv841t89rhbtgfrd48hb [33m404[0m 0.346 ms - 176[0m
+2023-05-04 19:06:53 info: [0mGET /posts/categories [0m-[0m - ms - -[0m
+2023-05-04 19:06:57 info: [0mGET /posts/popular [32m201[0m 419.870 ms - -[0m
+2023-05-04 19:06:57 info: [0mGET /posts/categories [32m201[0m 389.254 ms - 114[0m
+2023-05-04 19:06:57 info: [0mGET /posts/categorydgfbbtrhegbtrgre419ger [33m404[0m 0.385 ms - 175[0m
+2023-05-04 19:06:58 info: [0mGET /posts/categorygrtgv841t89rhbtgfrd48hb [33m404[0m 0.616 ms - 176[0m
+2023-05-04 19:06:58 info: [0mGET /posts/categories [32m201[0m 366.646 ms - 114[0m
+2023-05-04 19:06:58 info: [0mGET /posts/categorydgfbbtrhegbtrgre419ger [33m404[0m 0.697 ms - 175[0m
+2023-05-04 19:06:58 info: [0mGET /posts/categorygrtgv841t89rhbtgfrd48hb [33m404[0m 1.230 ms - 176[0m
+2023-05-04 19:06:58 info: [0mGET /posts/categories [32m201[0m 402.142 ms - 114[0m
+2023-05-04 19:06:58 info: [0mGET /posts/categorydgfbbtrhegbtrgre419ger [33m404[0m 0.384 ms - 175[0m
+2023-05-04 19:06:59 info: [0mGET /posts/categorygrtgv841t89rhbtgfrd48hb [33m404[0m 1.097 ms - 176[0m
+2023-05-04 19:06:59 info: [0mGET /posts/categories [32m201[0m 358.549 ms - 114[0m
+2023-05-04 19:06:59 info: [0mGET /posts/categorydgfbbtrhegbtrgre419ger [33m404[0m 0.392 ms - 175[0m
+2023-05-04 19:06:59 info: [0mGET /posts/categorygrtgv841t89rhbtgfrd48hb [33m404[0m 0.366 ms - 176[0m
+2023-05-04 19:06:59 info: [0mGET /posts/categories [32m201[0m 381.055 ms - 114[0m
+2023-05-04 19:07:00 info: [0mGET /posts/categorydgfbbtrhegbtrgre419ger [33m404[0m 1.096 ms - 175[0m
+2023-05-04 19:07:00 info: [0mGET /posts/categorygrtgv841t89rhbtgfrd48hb [33m404[0m 0.521 ms - 176[0m
+2023-05-04 19:07:00 info: [0mGET /posts/categories [32m201[0m 366.903 ms - 114[0m
+2023-05-04 19:07:00 info: [0mGET /posts/categorydgfbbtrhegbtrgre419ger [33m404[0m 0.382 ms - 175[0m
+2023-05-04 19:07:00 info: [0mGET /posts/categorygrtgv841t89rhbtgfrd48hb [33m404[0m 0.368 ms - 176[0m
+2023-05-04 19:07:00 info: [0mGET /posts/categories [32m201[0m 362.972 ms - 114[0m
+2023-05-04 19:07:01 info: [0mGET /posts/categorydgfbbtrhegbtrgre419ger [33m404[0m 0.360 ms - 175[0m
+2023-05-04 19:07:01 info: [0mGET /posts/categorygrtgv841t89rhbtgfrd48hb [33m404[0m 0.377 ms - 176[0m
+2023-05-04 19:07:01 info: [0mGET /posts/categories [32m201[0m 383.891 ms - 114[0m
+2023-05-04 19:07:01 info: [0mGET /posts/categorydgfbbtrhegbtrgre419ger [33m404[0m 0.413 ms - 175[0m
+2023-05-04 19:07:01 info: [0mGET /posts/categorygrtgv841t89rhbtgfrd48hb [33m404[0m 0.371 ms - 176[0m
+2023-05-04 19:07:02 info: [0mGET /posts/categories [32m201[0m 372.268 ms - 114[0m
+2023-05-04 19:07:02 info: [0mGET /posts/categorydgfbbtrhegbtrgre419ger [33m404[0m 0.409 ms - 175[0m
+2023-05-04 19:07:02 info: [0mGET /posts/categorygrtgv841t89rhbtgfrd48hb [33m404[0m 1.283 ms - 176[0m
+2023-05-04 19:07:02 info: [0mGET /posts/categories [32m201[0m 372.597 ms - 114[0m
+2023-05-04 19:07:02 info: [0mGET /posts/categorydgfbbtrhegbtrgre419ger [33m404[0m 0.528 ms - 175[0m
+2023-05-04 19:07:02 info: [0mGET /posts/categorygrtgv841t89rhbtgfrd48hb [33m404[0m 0.419 ms - 176[0m
+2023-05-04 19:07:02 info: [0mGET /posts/categories [32m201[0m 380.681 ms - 114[0m
+2023-05-04 19:07:03 info: [0mGET /posts/categorydgfbbtrhegbtrgre419ger [33m404[0m 0.397 ms - 175[0m
+2023-05-04 19:07:03 info: [0mGET /posts/categorygrtgv841t89rhbtgfrd48hb [33m404[0m 0.355 ms - 176[0m
+2023-05-04 19:07:03 info: [0mGET /posts/categories [32m201[0m 378.771 ms - 114[0m
+2023-05-04 19:07:03 info: [0mGET /posts/categorydgfbbtrhegbtrgre419ger [33m404[0m 0.358 ms - 175[0m
+2023-05-04 19:07:03 info: [0mGET /posts/categorygrtgv841t89rhbtgfrd48hb [33m404[0m 0.393 ms - 176[0m
+2023-05-04 19:07:04 info: [0mGET /posts/categories [32m201[0m 383.892 ms - 114[0m
+2023-05-04 19:07:04 info: [0mGET /posts/categorydgfbbtrhegbtrgre419ger [33m404[0m 0.457 ms - 175[0m
+2023-05-04 19:07:04 info: [0mGET /posts/categorygrtgv841t89rhbtgfrd48hb [33m404[0m 0.356 ms - 176[0m
+2023-05-04 19:07:04 info: [0mGET /posts/categories [32m201[0m 352.265 ms - 114[0m
+2023-05-04 19:07:04 info: [0mGET /posts/categorydgfbbtrhegbtrgre419ger [33m404[0m 0.380 ms - 175[0m
+2023-05-04 19:07:04 info: [0mGET /posts/categorygrtgv841t89rhbtgfrd48hb [33m404[0m 0.368 ms - 176[0m
+2023-05-04 19:10:39 info: [0mGET /posts/categories [32m201[0m 364.373 ms - 114[0m
+2023-05-04 19:10:39 info: [0mGET /posts/popular [32m201[0m 488.066 ms - -[0m
+2023-05-04 19:10:58 info: [0mGET /posts/categories [32m201[0m 384.004 ms - 114[0m
+2023-05-04 19:11:00 info: [0mGET /posts/popular [32m201[0m 1698.475 ms - -[0m
+2023-05-04 19:11:09 info: [0mGET /posts/categorydgfbbtrhegbtrgre419ger [33m404[0m 0.745 ms - 175[0m
+2023-05-04 19:11:09 info: [0mGET /posts/categorygrtgv841t89rhbtgfrd48hb [33m404[0m 0.262 ms - 176[0m
+2023-05-04 19:11:19 info: [0mGET /posts/popular [32m201[0m 426.036 ms - -[0m
+2023-05-04 19:11:19 info: [0mGET /posts/categories [32m201[0m 378.770 ms - 114[0m
+2023-05-04 19:11:20 info: [0mGET /posts/categorydgfbbtrhegbtrgre419ger [33m404[0m 0.599 ms - 175[0m
+2023-05-04 19:11:20 info: [0mGET /posts/categorygrtgv841t89rhbtgfrd48hb [33m404[0m 0.258 ms - 176[0m
+2023-05-04 19:11:38 info: [0mGET /posts/popular [32m201[0m 411.381 ms - -[0m
+2023-05-04 19:11:38 info: [0mGET /posts/categories [32m201[0m 389.662 ms - 114[0m
+2023-05-04 19:11:59 info: [0mGET /posts/categories [32m201[0m 408.960 ms - 114[0m
+2023-05-04 19:11:59 info: [0mGET /posts/popular [32m201[0m 443.080 ms - -[0m
+2023-05-04 19:12:01 info: [0mGET /posts/categories [32m201[0m 400.866 ms - 114[0m
+2023-05-04 19:12:01 info: [0mGET /posts/popular [32m201[0m 417.329 ms - -[0m
+2023-05-04 19:12:05 info: [0mGET /posts/categories [32m201[0m 406.470 ms - 114[0m
+2023-05-04 19:12:05 info: [0mGET /posts/popular [32m201[0m 433.828 ms - -[0m
+2023-05-04 19:12:13 info: [0mGET /posts/popular [32m201[0m 423.042 ms - -[0m
+2023-05-04 19:12:13 info: [0mGET /posts/categories [32m201[0m 377.308 ms - 114[0m
+2023-05-04 19:12:23 info: [0mGET /posts/categorygrtgv841t89rhbtgfrd48hb [33m404[0m 0.652 ms - 176[0m
+2023-05-04 19:12:38 info: [0mGET /posts/categories [32m201[0m 389.582 ms - 114[0m
+2023-05-04 19:12:38 info: [0mGET /posts/popular [32m201[0m 428.457 ms - -[0m
+2023-05-04 19:12:47 info: [0mGET /posts/categories [32m201[0m 401.445 ms - 114[0m
+2023-05-04 19:12:47 info: [0mGET /posts/popular [32m201[0m 432.442 ms - -[0m
+2023-05-04 19:12:59 info: [0mGET /posts/popular [32m201[0m 456.304 ms - -[0m
+2023-05-04 19:13:00 info: [0mGET /posts/categories [32m201[0m 374.409 ms - 114[0m
+2023-05-04 19:13:01 info: [0mGET /posts/popular [32m201[0m 394.887 ms - -[0m
+2023-05-04 19:13:01 info: [0mGET /posts/categories [32m201[0m 393.332 ms - 114[0m
+2023-05-04 19:13:11 info: [0mGET /posts/categories [32m201[0m 380.119 ms - 114[0m
+2023-05-04 19:13:11 info: [0mGET /posts/popular [32m201[0m 440.773 ms - -[0m
+2023-05-04 19:13:13 info: [0mGET /posts/categories [32m201[0m 373.055 ms - 114[0m
+2023-05-04 19:13:13 info: [0mGET /posts/popular [32m201[0m 446.029 ms - -[0m
+2023-05-04 19:13:15 info: [0mGET /posts/categories [32m201[0m 388.751 ms - 114[0m
+2023-05-04 19:13:15 info: [0mGET /posts/popular [32m201[0m 421.843 ms - -[0m
+2023-05-04 19:13:17 info: [0mGET /posts/categories [32m201[0m 362.277 ms - 114[0m
+2023-05-04 19:13:17 info: [0mGET /posts/popular [32m201[0m 420.039 ms - -[0m
+2023-05-04 19:13:20 info: [0mGET /posts/categorygrtgv841t89rhbtgfrd48hb [33m404[0m 0.401 ms - 176[0m
+2023-05-04 19:13:22 info: [0mGET /posts/categorygrtgv841t89rhbtgfrd48hb [33m404[0m 0.407 ms - 176[0m
+2023-05-04 19:13:23 info: [0mGET /posts/categorygrtgv841t89rhbtgfrd48hb [33m404[0m 0.504 ms - 176[0m
+2023-05-04 19:13:30 info: [0mGET /posts/popular [32m201[0m 456.192 ms - -[0m
+2023-05-04 19:13:30 info: [0mGET /posts/categories [32m201[0m 380.023 ms - 114[0m
+2023-05-04 19:13:35 info: [0mGET /posts/categorygrtgv841t89rhbtgfrd48hb [33m404[0m 0.392 ms - 176[0m
+2023-05-04 19:13:35 info: [0mGET /posts/categorygrtgv841t89rhbtgfrd48hb [33m404[0m 0.426 ms - 176[0m
+2023-05-04 19:13:36 info: [0mGET /posts/categorygrtgv841t89rhbtgfrd48hb [33m404[0m 0.412 ms - 176[0m
+2023-05-04 19:13:37 info: [0mGET /posts/categorygrtgv841t89rhbtgfrd48hb [33m404[0m 0.382 ms - 176[0m
+2023-05-04 19:13:37 info: [0mGET /posts/categorygrtgv841t89rhbtgfrd48hb [33m404[0m 0.403 ms - 176[0m
+2023-05-04 19:13:38 info: [0mGET /posts/categorygrtgv841t89rhbtgfrd48hb [33m404[0m 0.632 ms - 176[0m
+2023-05-04 19:13:39 info: [0mGET /posts/categorygrtgv841t89rhbtgfrd48hb [33m404[0m 0.402 ms - 176[0m
+2023-05-04 19:13:39 info: [0mGET /posts/categorygrtgv841t89rhbtgfrd48hb [33m404[0m 0.408 ms - 176[0m
+2023-05-04 19:13:40 info: [0mGET /posts/categorygrtgv841t89rhbtgfrd48hb [33m404[0m 0.401 ms - 176[0m
+2023-05-04 19:13:40 info: [0mGET /posts/categorygrtgv841t89rhbtgfrd48hb [33m404[0m 0.454 ms - 176[0m
+2023-05-04 19:14:09 info: [0mGET /posts/categories [32m201[0m 374.644 ms - 114[0m
+2023-05-04 19:14:09 info: [0mGET /posts/popular [32m201[0m 473.716 ms - -[0m
+2023-05-04 19:14:14 info: [0mGET /posts/categories [32m201[0m 404.512 ms - 114[0m
+2023-05-04 19:14:14 info: [0mGET /posts/popular [32m201[0m 414.340 ms - -[0m
+2023-05-04 19:14:20 info: [0mGET /posts/categories [32m201[0m 358.625 ms - 114[0m
+2023-05-04 19:14:20 info: [0mGET /posts/popular [32m201[0m 453.337 ms - -[0m
+2023-05-04 19:14:22 info: [0mGET /posts/categorygrtgv841t89rhbtgfrd48hb [33m404[0m 0.429 ms - 176[0m
+2023-05-04 19:14:23 info: [0mGET /posts/categorygrtgv841t89rhbtgfrd48hb [33m404[0m 0.392 ms - 176[0m
+2023-05-04 19:14:24 info: [0mGET /posts/categorygrtgv841t89rhbtgfrd48hb [33m404[0m 0.382 ms - 176[0m
+2023-05-04 19:15:17 info: [0mGET /posts/categories [32m201[0m 379.259 ms - 114[0m
+2023-05-04 19:15:17 info: [0mGET /posts/popular [32m201[0m 441.188 ms - -[0m
+2023-05-04 19:15:19 info: [0mGET /posts/categories [32m201[0m 366.733 ms - 114[0m
+2023-05-04 19:15:19 info: [0mGET /posts/popular [32m201[0m 401.486 ms - -[0m
+2023-05-04 19:15:23 info: [0mGET /posts/categorygrtgv841t89rhbtgfrd48hb [33m404[0m 0.402 ms - 176[0m
+2023-05-04 19:15:23 info: [0mGET /posts/categorygrtgv841t89rhbtgfrd48hb [33m404[0m 0.434 ms - 176[0m
+2023-05-04 19:15:34 info: [0mGET /posts/categories [32m201[0m 374.068 ms - 114[0m
+2023-05-04 19:15:34 info: [0mGET /posts/popular [32m201[0m 418.557 ms - -[0m
+2023-05-04 19:16:05 info: [0mGET /posts/categories [32m201[0m 377.483 ms - 114[0m
+2023-05-04 19:16:05 info: [0mGET /posts/popular [32m201[0m 429.572 ms - -[0m
+2023-05-04 19:16:13 info: [0mGET /posts/categories [32m201[0m 376.644 ms - 114[0m
+2023-05-04 19:16:13 info: [0mGET /posts/popular [32m201[0m 399.979 ms - -[0m
+2023-05-04 19:16:16 info: [0mGET /posts/category/grtgv841t89rhbtgfrd48hb [32m201[0m 414.641 ms - 11[0m
+2023-05-04 19:16:25 info: [0mGET /posts/categories [32m201[0m 376.238 ms - 114[0m
+2023-05-04 19:16:25 info: [0mGET /posts/popular [32m201[0m 432.922 ms - -[0m
+2023-05-04 19:16:28 info: [0mGET /posts/category/grtgv841t89rhbtgfrd48hb [32m201[0m 383.384 ms - 11[0m
+2023-05-04 19:16:35 info: [0mGET /posts/categories [32m201[0m 409.357 ms - 114[0m
+2023-05-04 19:16:35 info: [0mGET /posts/popular [32m201[0m 397.227 ms - -[0m
+2023-05-04 19:16:52 info: [0mGET /posts/categories [32m201[0m 380.703 ms - 114[0m
+2023-05-04 19:16:52 info: [0mGET /posts/popular [32m201[0m 441.121 ms - -[0m
+2023-05-04 19:17:07 info: =================================
+2023-05-04 19:17:07 info: ======= ENV: development =======
+2023-05-04 19:17:07 info: 🚀 App listening on the port 3000
+2023-05-04 19:17:07 info: =================================
+2023-05-04 19:17:12 info: =================================
+2023-05-04 19:17:12 info: ======= ENV: development =======
+2023-05-04 19:17:12 info: 🚀 App listening on the port 3000
+2023-05-04 19:17:12 info: =================================
+2023-05-04 19:17:17 info: =================================
+2023-05-04 19:17:17 info: ======= ENV: development =======
+2023-05-04 19:17:17 info: 🚀 App listening on the port 3000
+2023-05-04 19:17:17 info: =================================
+2023-05-04 19:17:30 error: [GET] /posts/category/grtgv841t89rhbtgfrd48hb >> StatusCode:: 500, Message:: AlbumByCategory is not defined
+2023-05-04 19:17:30 info: [0mGET /posts/category/grtgv841t89rhbtgfrd48hb [31m500[0m 419.964 ms - 44[0m
+2023-05-04 19:19:30 info: [0mGET /posts/categories [32m201[0m 395.394 ms - 114[0m
+2023-05-04 19:19:30 info: [0mGET /posts/popular [32m201[0m 458.670 ms - -[0m
+2023-05-04 19:19:34 info: [0mGET /posts/categories [32m201[0m 363.004 ms - 114[0m
+2023-05-04 19:19:34 info: [0mGET /posts/popular [32m201[0m 427.966 ms - -[0m
+2023-05-04 19:19:36 info: [0mGET /posts/categories [32m201[0m 397.652 ms - 114[0m
+2023-05-04 19:19:36 info: [0mGET /posts/popular [32m201[0m 463.105 ms - -[0m
+2023-05-04 19:20:06 info: [0mGET /posts/categories [32m201[0m 380.709 ms - 114[0m
+2023-05-04 19:20:06 info: [0mGET /posts/popular [32m201[0m 467.337 ms - -[0m
+2023-05-04 19:20:10 error: [GET] /posts/category/grtgv841t89rhbtgfrd48hb >> StatusCode:: 500, Message:: AlbumByCategory is not defined
+2023-05-04 19:20:10 info: [0mGET /posts/category/grtgv841t89rhbtgfrd48hb [31m500[0m 361.679 ms - 44[0m
+2023-05-04 19:20:56 info: =================================
+2023-05-04 19:20:56 info: ======= ENV: development =======
+2023-05-04 19:20:56 info: 🚀 App listening on the port 3000
+2023-05-04 19:20:56 info: =================================
+2023-05-04 19:21:01 info: [0mGET /posts/categories [32m201[0m 414.192 ms - 114[0m
+2023-05-04 19:21:01 info: [0mGET /posts/popular [32m201[0m 444.770 ms - -[0m
+2023-05-04 19:21:03 info: [0mGET /posts/category/grtgv841t89rhbtgfrd48hb [32m201[0m 380.654 ms - 22[0m
+2023-05-04 19:21:08 info: [0mGET /posts/category/dgfbbtrhegbtrgre419ger [32m201[0m 380.591 ms - 22[0m
+2023-05-04 19:21:10 info: [0mGET /posts/category/grtgv841t89rhbtgfrd48hb [32m201[0m 407.983 ms - 22[0m
+2023-05-04 19:22:41 info: [0mGET /posts/category/grtgv841t89rhbtgfrd48hb [32m201[0m 392.455 ms - 22[0m
+2023-05-04 19:22:50 info: [0mGET /posts/popular [32m201[0m 427.761 ms - -[0m
+2023-05-04 19:22:51 info: [0mGET /posts/categories [32m201[0m 667.731 ms - 114[0m
+2023-05-04 19:24:12 info: [0mGET /posts/categories [32m201[0m 371.091 ms - 114[0m
+2023-05-04 19:24:12 info: [0mGET /posts/popular [32m201[0m 431.147 ms - -[0m
+2023-05-04 19:24:14 info: [0mGET /posts/categories [32m201[0m 388.909 ms - 114[0m
+2023-05-04 19:24:14 info: [0mGET /posts/popular [32m201[0m 441.623 ms - -[0m
+2023-05-04 19:24:16 info: [0mGET /posts/categories [32m201[0m 385.248 ms - 114[0m
+2023-05-04 19:24:16 info: [0mGET /posts/popular [32m201[0m 417.977 ms - -[0m
+2023-05-04 19:24:18 info: [0mGET /posts/categories [32m201[0m 405.651 ms - 114[0m
+2023-05-04 19:24:18 info: [0mGET /posts/popular [32m201[0m 445.286 ms - -[0m
+2023-05-04 19:24:22 info: [0mGET /posts/categories [32m201[0m 345.889 ms - 114[0m
+2023-05-04 19:24:22 info: [0mGET /posts/popular [32m201[0m 432.542 ms - -[0m
+2023-05-04 19:24:24 info: [0mGET /posts/category/grtgv841t89rhbtgfrd48hb [32m201[0m 428.256 ms - 22[0m

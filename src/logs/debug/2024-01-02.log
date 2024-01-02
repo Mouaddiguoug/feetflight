@@ -145,3 +145,15 @@
 2024-01-02 16:31:12 info: [0mGET /public/files/albums/postPictureffe7acebe0fd2c1bb9e191df6d10863a0675575746122023.octet-stream [33m404[0m 0.988 ms - 231[0m
 2024-01-02 16:31:12 info: [0mGET /public/files/albums/postPictureab1ea683903e4ee8f09207748b58848b796d30b002122023.octet-stream [33m404[0m 1.083 ms - 231[0m
 2024-01-02 16:31:13 info: [0mGET /public/files/albums/postPictureb25e375f3a97b3467961505186a4241e2a6bbefb22122023.jpeg [33m404[0m 2.448 ms - 223[0m
+2024-01-02 18:36:32 info: =================================
+2024-01-02 18:36:32 info: ======= ENV: development =======
+2024-01-02 18:36:32 info: 🚀 App listening on the port 8000
+2024-01-02 18:36:32 info: =================================
+2024-01-02 18:37:04 info: =================================
+2024-01-02 18:37:04 info: ======= ENV: development =======
+2024-01-02 18:37:04 info: 🚀 App listening on the port 8000
+2024-01-02 18:37:04 info: =================================
+2024-01-02 18:38:23 info: =================================
+2024-01-02 18:38:23 info: ======= ENV: development =======
+2024-01-02 18:38:23 info: 🚀 App listening on the port 8000
+2024-01-02 18:38:23 info: =================================

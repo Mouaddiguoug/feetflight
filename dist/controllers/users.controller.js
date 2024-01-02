@@ -4,18 +4,33 @@ Object.defineProperty(exports, "__esModule", {
 });
 Object.defineProperty(exports, "default", {
     enumerable: true,
-    get: ()=>_default
+    get: function() {
+        return _default;
+    }
 });
-const _usersService = _interopRequireDefault(require("../services/users.service"));
-function _interopRequireDefault(obj) {
+const _usersservice = /*#__PURE__*/ _interop_require_default(require("../services/users.service"));
+function _define_property(obj, key, value) {
+    if (key in obj) {
+        Object.defineProperty(obj, key, {
+            value: value,
+            enumerable: true,
+            configurable: true,
+            writable: true
+        });
+    } else {
+        obj[key] = value;
+    }
+    return obj;
+}
+function _interop_require_default(obj) {
     return obj && obj.__esModule ? obj : {
         default: obj
     };
 }
 let UsersController = class UsersController {
     constructor(){
-        this.userService = new _usersService.default();
-        this.getUsers = async (req, res, next)=>{
+        _define_property(this, "userService", new _usersservice.default());
+        _define_property(this, "getUsers", async (req, res, next)=>{
             try {
                 const findAllUsersData = await this.userService.findAllUser();
                 res.status(200).json({
@@ -25,19 +40,51 @@ let UsersController = class UsersController {
             } catch (error) {
                 next(error);
             }
-        };
-        this.getUserById = async (req, res, next)=>{
+        });
+        _define_property(this, "getUserById", async (req, res, next)=>{
             try {
                 const userId = String(req.params.id);
                 const findOneUserData = await this.userService.findUserById(userId);
+                res.status(200).json(findOneUserData);
+            } catch (error) {
+                next(error);
+            }
+        });
+        _define_property(this, "generateAiPictures", async (req, res, next)=>{
+            try {
+                const color = req.body.color;
+                const category = req.body.category;
+                const generatedPictures = await this.userService.generateAiPictures(color, category);
+                res.status(200).json(generatedPictures);
+            } catch (error) {
+                next(error);
+            }
+        });
+        _define_property(this, "checkForSale", async (req, res, next)=>{
+            try {
+                const postId = String(req.params.postId);
+                const userId = String(req.params.userId);
+                const plan = String(req.params.plan);
+                const checkedFOrSale = await this.userService.checkForSale(userId, postId);
+                const checkForSubscription = await this.userService.checkForSubscriptionbyUserId(userId, postId, plan);
+                console.log(checkForSubscription);
+                res.status(200).json(checkedFOrSale || checkForSubscription);
+            } catch (error) {
+                next(error);
+            }
+        });
+        _define_property(this, "getSellerPlans", async (req, res, next)=>{
+            try {
+                const userId = String(req.params.id);
+                const sellerPlans = await this.userService.getSellerPlans(userId);
                 res.status(200).json({
-                    data: findOneUserData
+                    data: sellerPlans
                 });
             } catch (error) {
                 next(error);
             }
-        };
-        this.changePassword = async (req, res, next)=>{
+        });
+        _define_property(this, "changePassword", async (req, res, next)=>{
             try {
                 const email = String(req.params.email);
                 const userData = req.body;
@@ -49,33 +96,65 @@ let UsersController = class UsersController {
             } catch (error) {
                 next(error);
             }
-        };
-        this.emailConfirming = async (req, res, next)=>{
+        });
+        _define_property(this, "emailConfirming", async (req, res, next)=>{
             try {
                 const token = String(req.params.token);
                 const confirmed = await this.userService.emailConfirming(token);
-                res.status(201).json({
-                    data: confirmed
-                });
+                res.status(201).redirect("/");
             } catch (error) {
                 next(error);
             }
-        };
-        this.buyPost = async (req, res, next)=>{
+        });
+        _define_property(this, "buyPost", async (req, res, next)=>{
             try {
-                const postId = Number(req.params.id);
-                const userData = req.body;
-                const boughtPost = await this.userService.buyPost(postId, userData);
+                const userId = String(req.params.id);
+                const saleData = req.body;
+                const boughtPost = await this.userService.buyPosts(userId, saleData);
                 res.status(200).json({
-                    data: boughtPost
+                    url: boughtPost
                 });
             } catch (error) {
                 next(error);
             }
-        };
-        this.updateUser = async (req, res, next)=>{
+        });
+        _define_property(this, "subscribe", async (req, res, next)=>{
             try {
-                const userId = Number(req.params.id);
+                const userId = String(req.params.id);
+                const subscriptionData = req.body;
+                const subscribeSssion = await this.userService.subscribe(userId, subscriptionData);
+                res.status(200).json(subscribeSssion);
+            } catch (error) {
+                next(error);
+            }
+        });
+        _define_property(this, "cancelSubscription", async (req, res, next)=>{
+            try {
+                const userId = String(req.params.id);
+                const sellerId = String(req.params.sellerId);
+                const canceledSubscription = await this.userService.cancelSubscription(userId, sellerId);
+                res.status(200).json({
+                    canceledSubscription: canceledSubscription
+                });
+            } catch (error) {
+                next(error);
+            }
+        });
+        _define_property(this, "checkForSubscribtion", async (req, res, next)=>{
+            try {
+                const userId = String(req.params.id);
+                const postId = req.body.data.postId;
+                const isSubscribed = await this.userService.checkForSubscription(userId, postId);
+                res.status(200).json({
+                    data: isSubscribed
+                });
+            } catch (error) {
+                next(error);
+            }
+        });
+        _define_property(this, "updateUser", async (req, res, next)=>{
+            try {
+                const userId = String(req.params.id);
                 const userData = req.body;
                 const updateUserData = await this.userService.updateUser(userId, userData);
                 res.status(200).json({
@@ -85,8 +164,20 @@ let UsersController = class UsersController {
             } catch (error) {
                 next(error);
             }
-        };
-        this.desactivateUser = async (req, res, next)=>{
+        });
+        _define_property(this, "uploadDeviceToken", async (req, res, next)=>{
+            try {
+                const userId = String(req.params.id);
+                const token = req.body.token;
+                await this.userService.uploadDeviceToken(userId, token);
+                res.status(200).json({
+                    message: 'token uploaded succcessfully'
+                });
+            } catch (error) {
+                next(error);
+            }
+        });
+        _define_property(this, "desactivateUser", async (req, res, next)=>{
             try {
                 const userId = Number(req.params.id);
                 const desactivatedUser = await this.userService.desactivateUser(userId);
@@ -96,7 +187,19 @@ let UsersController = class UsersController {
             } catch (error) {
                 next(error);
             }
-        };
+        });
+        _define_property(this, "uploadAvatar", async (req, res, next)=>{
+            try {
+                const userId = String(req.params.id);
+                const avatarData = req.file;
+                await this.userService.uploadAvatar(avatarData, userId);
+                res.status(201).json({
+                    messazge: "avatar has been uploaded successfully"
+                });
+            } catch (error) {
+                next(error);
+            }
+        });
     }
 };
 const _default = UsersController;

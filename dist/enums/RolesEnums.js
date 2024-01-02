@@ -4,7 +4,9 @@ Object.defineProperty(exports, "__esModule", {
 });
 Object.defineProperty(exports, "RolesEnum", {
     enumerable: true,
-    get: ()=>RolesEnum
+    get: function() {
+        return RolesEnum;
+    }
 });
 const RolesEnum = {
     BUYER: "Buyer",
