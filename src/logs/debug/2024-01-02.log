@@ -157,3 +157,120 @@
 2024-01-02 18:38:23 info: ======= ENV: development =======
 2024-01-02 18:38:23 info: 🚀 App listening on the port 8000
 2024-01-02 18:38:23 info: =================================
+2024-01-02 18:41:17 info: [0mPOST /login [32m200[0m 2194.341 ms - 628[0m
+2024-01-02 18:41:20 info: [0mGET /albums/random/0/cus_PBbQBKCT5KXiiH [32m201[0m 1867.011 ms - -[0m
+2024-01-02 18:41:20 info: [0mGET /albums/all-categories [32m201[0m 1859.532 ms - 114[0m
+2024-01-02 18:41:21 info: [0mGET /users/plans/cus_PBbQBKCT5KXiiH [32m200[0m 2740.326 ms - 214[0m
+2024-01-02 18:41:21 info: [0mGET /albums/cus_PBbQBKCT5KXiiH [32m201[0m 3167.188 ms - -[0m
+2024-01-02 18:41:22 info: [0mGET /albums/popular/cus_PBbQBKCT5KXiiH [32m201[0m 3818.041 ms - -[0m
+2024-01-02 18:41:45 info: [0mGET /users/plans/cus_PBbQBKCT5KXiiH [32m200[0m 1462.110 ms - 214[0m
+2024-01-02 18:44:18 info: =================================
+2024-01-02 18:44:18 info: ======= ENV: development =======
+2024-01-02 18:44:18 info: 🚀 App listening on the port 8000
+2024-01-02 18:44:18 info: =================================
+2024-01-02 18:45:01 error: [GET] /users/plans/cus_PBbQBKCT5KXiiH >> StatusCode:: 401, Message:: missing token
+2024-01-02 18:45:01 info: [0mGET /users/plans/cus_PBbQBKCT5KXiiH [33m401[0m 22.518 ms - 27[0m
+2024-01-02 18:45:01 info: [0mPOST /refresh [32m200[0m 24.195 ms - 247[0m
+2024-01-02 18:45:03 info: [0mGET /users/plans/cus_PBbQBKCT5KXiiH [32m200[0m 1584.005 ms - 214[0m
+2024-01-02 18:45:28 info: =================================
+2024-01-02 18:45:28 info: ======= ENV: development =======
+2024-01-02 18:45:28 info: 🚀 App listening on the port 8000
+2024-01-02 18:45:28 info: =================================
+2024-01-02 18:45:41 error: [POST] /albums/cus_PBbQBKCT5KXiiH >> StatusCode:: 401, Message:: this user is not verified yet
+2024-01-02 18:45:41 info: [0mPOST /albums/cus_PBbQBKCT5KXiiH [33m401[0m 1621.481 ms - 43[0m
+2024-01-02 18:45:41 info: [0mPOST /refresh [32m200[0m 4.828 ms - 248[0m
+2024-01-02 18:45:43 error: [POST] /albums/cus_PBbQBKCT5KXiiH >> StatusCode:: 401, Message:: this user is not verified yet
+2024-01-02 18:45:43 info: [0mPOST /albums/cus_PBbQBKCT5KXiiH [33m401[0m 1436.822 ms - 43[0m
+2024-01-02 18:45:43 info: [0mPOST /refresh [32m200[0m 4.753 ms - 248[0m
+2024-01-02 18:45:45 error: [POST] /albums/cus_PBbQBKCT5KXiiH >> StatusCode:: 401, Message:: this user is not verified yet
+2024-01-02 18:45:45 info: [0mPOST /albums/cus_PBbQBKCT5KXiiH [33m401[0m 1543.531 ms - 43[0m
+2024-01-02 18:45:45 info: [0mPOST /refresh [32m200[0m 2.545 ms - 248[0m
+2024-01-02 18:45:47 error: [POST] /albums/cus_PBbQBKCT5KXiiH >> StatusCode:: 401, Message:: this user is not verified yet
+2024-01-02 18:45:47 info: [0mPOST /albums/cus_PBbQBKCT5KXiiH [33m401[0m 1618.040 ms - 43[0m
+2024-01-02 18:45:47 info: [0mPOST /refresh [32m200[0m 1.498 ms - 248[0m
+2024-01-02 18:45:49 error: [POST] /albums/cus_PBbQBKCT5KXiiH >> StatusCode:: 401, Message:: this user is not verified yet
+2024-01-02 18:45:49 info: [0mPOST /albums/cus_PBbQBKCT5KXiiH [33m401[0m 1556.226 ms - 43[0m
+2024-01-02 18:45:49 info: [0mPOST /refresh [32m200[0m 16.695 ms - 248[0m
+2024-01-02 18:45:51 error: [POST] /albums/cus_PBbQBKCT5KXiiH >> StatusCode:: 401, Message:: this user is not verified yet
+2024-01-02 18:45:51 info: [0mPOST /albums/cus_PBbQBKCT5KXiiH [33m401[0m 1547.758 ms - 43[0m
+2024-01-02 18:45:51 info: [0mPOST /refresh [32m200[0m 1.971 ms - 248[0m
+2024-01-02 18:45:53 error: [POST] /albums/cus_PBbQBKCT5KXiiH >> StatusCode:: 401, Message:: this user is not verified yet
+2024-01-02 18:45:53 info: [0mPOST /albums/cus_PBbQBKCT5KXiiH [33m401[0m 1367.745 ms - 43[0m
+2024-01-02 18:45:53 info: [0mPOST /refresh [32m200[0m 1.645 ms - 248[0m
+2024-01-02 18:45:55 error: [POST] /albums/cus_PBbQBKCT5KXiiH >> StatusCode:: 401, Message:: this user is not verified yet
+2024-01-02 18:45:55 info: [0mPOST /albums/cus_PBbQBKCT5KXiiH [33m401[0m 1564.129 ms - 43[0m
+2024-01-02 18:45:55 info: [0mPOST /refresh [32m200[0m 1.250 ms - 248[0m
+2024-01-02 18:45:57 error: [POST] /albums/cus_PBbQBKCT5KXiiH >> StatusCode:: 401, Message:: this user is not verified yet
+2024-01-02 18:45:57 info: [0mPOST /albums/cus_PBbQBKCT5KXiiH [33m401[0m 1386.282 ms - 43[0m
+2024-01-02 18:45:57 info: [0mPOST /refresh [32m200[0m 1.845 ms - 248[0m
+2024-01-02 18:45:59 error: [POST] /albums/cus_PBbQBKCT5KXiiH >> StatusCode:: 401, Message:: this user is not verified yet
+2024-01-02 18:45:59 info: [0mPOST /albums/cus_PBbQBKCT5KXiiH [33m401[0m 1631.622 ms - 43[0m
+2024-01-02 18:45:59 info: [0mPOST /refresh [32m200[0m 6.925 ms - 248[0m
+2024-01-02 18:46:01 error: [POST] /albums/cus_PBbQBKCT5KXiiH >> StatusCode:: 401, Message:: this user is not verified yet
+2024-01-02 18:46:01 info: [0mPOST /albums/cus_PBbQBKCT5KXiiH [33m401[0m 1335.983 ms - 43[0m
+2024-01-02 18:46:01 info: [0mPOST /refresh [32m200[0m 10.651 ms - 247[0m
+2024-01-02 18:46:03 error: [POST] /albums/cus_PBbQBKCT5KXiiH >> StatusCode:: 401, Message:: this user is not verified yet
+2024-01-02 18:46:03 info: [0mPOST /albums/cus_PBbQBKCT5KXiiH [33m401[0m 1386.243 ms - 43[0m
+2024-01-02 18:46:03 info: [0mPOST /refresh [32m200[0m 1.351 ms - 247[0m
+2024-01-02 18:46:05 error: [POST] /albums/cus_PBbQBKCT5KXiiH >> StatusCode:: 401, Message:: this user is not verified yet
+2024-01-02 18:46:05 info: [0mPOST /albums/cus_PBbQBKCT5KXiiH [33m401[0m 1561.126 ms - 43[0m
+2024-01-02 18:46:05 info: [0mPOST /refresh [32m200[0m 2.627 ms - 247[0m
+2024-01-02 18:46:07 error: [POST] /albums/cus_PBbQBKCT5KXiiH >> StatusCode:: 401, Message:: this user is not verified yet
+2024-01-02 18:46:07 info: [0mPOST /albums/cus_PBbQBKCT5KXiiH [33m401[0m 1626.062 ms - 43[0m
+2024-01-02 18:46:07 info: [0mPOST /refresh [32m200[0m 1.641 ms - 247[0m
+2024-01-02 18:46:09 error: [POST] /albums/cus_PBbQBKCT5KXiiH >> StatusCode:: 401, Message:: this user is not verified yet
+2024-01-02 18:46:09 info: [0mPOST /albums/cus_PBbQBKCT5KXiiH [33m401[0m 1538.030 ms - 43[0m
+2024-01-02 18:46:09 info: [0mPOST /refresh [32m200[0m 1.439 ms - 247[0m
+2024-01-02 18:46:11 error: [POST] /albums/cus_PBbQBKCT5KXiiH >> StatusCode:: 401, Message:: this user is not verified yet
+2024-01-02 18:46:11 info: [0mPOST /albums/cus_PBbQBKCT5KXiiH [33m401[0m 1626.097 ms - 43[0m
+2024-01-02 18:46:12 info: [0mPOST /refresh [32m200[0m 1.313 ms - 248[0m
+2024-01-02 18:46:13 error: [POST] /albums/cus_PBbQBKCT5KXiiH >> StatusCode:: 401, Message:: this user is not verified yet
+2024-01-02 18:46:13 info: [0mPOST /albums/cus_PBbQBKCT5KXiiH [33m401[0m 1458.033 ms - 43[0m
+2024-01-02 18:46:14 info: [0mPOST /refresh [32m200[0m 1.672 ms - 248[0m
+2024-01-02 18:46:16 error: [POST] /albums/cus_PBbQBKCT5KXiiH >> StatusCode:: 401, Message:: this user is not verified yet
+2024-01-02 18:46:16 info: [0mPOST /albums/cus_PBbQBKCT5KXiiH [33m401[0m 1425.641 ms - 43[0m
+2024-01-02 18:46:16 info: [0mPOST /refresh [32m200[0m 1.243 ms - 248[0m
+2024-01-02 18:46:19 info: =================================
+2024-01-02 18:46:19 info: ======= ENV: development =======
+2024-01-02 18:46:19 info: 🚀 App listening on the port 8000
+2024-01-02 18:46:19 info: =================================
+2024-01-02 18:46:53 info: [0mPOST /login [33m403[0m 929.194 ms - 44[0m
+2024-01-02 18:47:03 info: [0mPOST /login [32m200[0m 1549.591 ms - 627[0m
+2024-01-02 18:47:06 info: [0mGET /albums/all-categories [32m201[0m 1694.147 ms - 114[0m
+2024-01-02 18:47:06 info: [0mGET /albums/random/0/cus_PBbQBKCT5KXiiH [32m201[0m 1757.242 ms - -[0m
+2024-01-02 18:47:06 info: [0mGET /users/plans/cus_PBbQBKCT5KXiiH [32m200[0m 1704.275 ms - 214[0m
+2024-01-02 18:47:06 info: [0mGET /albums/popular/cus_PBbQBKCT5KXiiH [32m201[0m 1994.125 ms - -[0m
+2024-01-02 18:47:07 info: [0mGET /albums/cus_PBbQBKCT5KXiiH [32m201[0m 2567.526 ms - -[0m
+2024-01-02 18:47:27 info: [0mGET /users/plans/cus_PBbQBKCT5KXiiH [32m200[0m 1511.842 ms - 214[0m
+2024-01-02 18:47:30 error: [POST] /albums/cus_PBbQBKCT5KXiiH >> StatusCode:: 400, Message:: this user is not verified yet
+2024-01-02 18:47:30 info: [0mPOST /albums/cus_PBbQBKCT5KXiiH [33m400[0m 1464.813 ms - 43[0m
+2024-01-02 18:48:06 info: =================================
+2024-01-02 18:48:06 info: ======= ENV: development =======
+2024-01-02 18:48:06 info: 🚀 App listening on the port 8000
+2024-01-02 18:48:06 info: =================================
+2024-01-02 18:48:12 error: [POST] /albums/cus_PBbQBKCT5KXiiH >> StatusCode:: 401, Message:: missing token
+2024-01-02 18:48:12 info: [0mPOST /albums/cus_PBbQBKCT5KXiiH [33m401[0m 31.566 ms - 27[0m
+2024-01-02 18:48:12 info: [0mPOST /refresh [32m200[0m 4.872 ms - 248[0m
+2024-01-02 18:48:14 error: [POST] /albums/cus_PBbQBKCT5KXiiH >> StatusCode:: 400, Message:: this user is not verified yet
+2024-01-02 18:48:14 info: [0mPOST /albums/cus_PBbQBKCT5KXiiH [33m400[0m 1703.707 ms - 43[0m
+2024-01-02 18:48:33 info: =================================
+2024-01-02 18:48:33 info: ======= ENV: development =======
+2024-01-02 18:48:33 info: 🚀 App listening on the port 8000
+2024-01-02 18:48:33 info: =================================
+2024-01-02 18:48:37 error: [POST] /albums/cus_PBbQBKCT5KXiiH >> StatusCode:: 400, Message:: this user is not verified yet
+2024-01-02 18:48:37 info: [0mPOST /albums/cus_PBbQBKCT5KXiiH [33m400[0m 1752.418 ms - 43[0m
+2024-01-02 18:49:13 info: =================================
+2024-01-02 18:49:13 info: ======= ENV: development =======
+2024-01-02 18:49:13 info: 🚀 App listening on the port 8000
+2024-01-02 18:49:13 info: =================================
+2024-01-02 18:49:17 error: [POST] /albums/cus_PBbQBKCT5KXiiH >> StatusCode:: 401, Message:: missing token
+2024-01-02 18:49:17 info: [0mPOST /albums/cus_PBbQBKCT5KXiiH [33m401[0m 39.167 ms - 27[0m
+2024-01-02 18:49:18 info: [0mPOST /refresh [32m200[0m 6.370 ms - 248[0m
+2024-01-02 18:49:20 error: [POST] /albums/cus_PBbQBKCT5KXiiH >> StatusCode:: 400, Message:: this user is not verified yet
+2024-01-02 18:49:20 info: [0mPOST /albums/cus_PBbQBKCT5KXiiH [33m400[0m 1621.049 ms - 43[0m
+2024-01-02 18:49:30 info: =================================
+2024-01-02 18:49:30 info: ======= ENV: development =======
+2024-01-02 18:49:30 info: 🚀 App listening on the port 8000
+2024-01-02 18:49:30 info: =================================
+2024-01-02 18:49:36 error: [POST] /albums/cus_PBbQBKCT5KXiiH >> StatusCode:: 400, Message:: this user is not verified yet
+2024-01-02 18:49:36 info: [0mPOST /albums/cus_PBbQBKCT5KXiiH [33m400[0m 1707.198 ms - 43[0m
