@@ -7,9 +7,10 @@ import validateEnv from '@utils/validateEnv';
 import sellerRoute from './routes/seller.route';
 import postRoute from './routes/post.route';
 import AdminRoute from './routes/admin.route';
+import NotificationsRoute from './routes/notifications.route';
 
 validateEnv();
 
-const app = new App([new IndexRoute(), new UsersRoute(), new AuthRoute(), new postRoute(), new walletRoute(), new sellerRoute(), new AdminRoute()]);
+const app = new App([new IndexRoute(), new UsersRoute(), new AuthRoute(), new NotificationsRoute, new postRoute(), new walletRoute(), new sellerRoute(), new AdminRoute()]);
 
 app.listen();

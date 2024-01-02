@@ -6,15 +6,24 @@ import moment from 'moment';
 import { writeFile } from 'node:fs';
 import { Buffer } from 'node:buffer';
 import Stripe from 'stripe';
+import NotificationService from './notification.service';
+import { String } from 'aws-sdk/clients/codebuild';
 
 class postService {
   private stripe = new Stripe(process.env.STRIPE_TEST_KEY, { apiVersion: '2022-11-15' });
-  public async getPopularAlbums() {
+  private notificationsService = new NotificationService();
+
+  public async getPopularAlbums(userId: String) {
     const popularPostsSessio = initializeDbConnection().session({ database: 'neo4j' });
     try {
+      console.log(userId);
+      
       const popularPosts = await popularPostsSessio.executeRead(tx =>
         tx.run(
-          'match (picture:picture)<-[:HAS_A]-(:collection)<-[:HAS_A]-(post:post)<-[:HAS_A]-(s:seller)-[:IS_A]-(user:user) WITH post, collect(picture) AS pictures, user AS user return post{post, user, pictures} order by post.views DESC limit 20',
+          'match (picture:picture)<-[:HAS_A]-(:collection)<-[:HAS_A]-(post:post)<-[:HAS_A]-(s:seller)-[:IS_A]-(user:user) where user.id <> $userId WITH post, collect(picture) AS pictures, user AS user return post{post, user, pictures} order by post.views DESC limit 20',
+          {
+            userId: userId
+          }
         ),
       );
 
@@ -34,6 +43,38 @@ class postService {
       console.log(error);
     } finally {
       popularPostsSessio.close();
+    }
+  }
+
+  public async getRandomAlbums(page: Number, userId: String) {
+    const subscribedPostsSession = initializeDbConnection().session({ database: 'neo4j' });
+    try {
+      const popularPosts = await subscribedPostsSession.executeRead(tx =>
+        tx.run(
+          'match (picture:picture)<-[:HAS_A]-(:collection)<-[:HAS_A]-(post:post)<-[:HAS_A]-(s:seller)-[:IS_A]-(user:user) where user.id <> $userId WITH post, collect(picture) AS pictures, user AS user return post{post, user, pictures} order by post.likes DESC skip toInteger($skip) limit 20',
+          {
+            skip: Number(`${page}0`),
+            userId: userId
+          }
+        ),
+      );
+
+      return popularPosts.records.map(
+        (record: any) =>
+          record._fields.map((field: any) => {
+            return {
+              albumData: field.post.properties,
+              user: field.user.properties,
+              pictres: field.pictures.map(picture => {
+                return picture.properties;
+              }),
+            };
+          })[0],
+      );
+    } catch (error) {
+      console.log(error);
+    } finally {
+      subscribedPostsSession.close();
     }
   }
 
@@ -83,12 +124,61 @@ class postService {
     }
   }
 
-  public async getAllAlbums() {
+  public async getAlbumPlan(albumId: String) {
+    const getPostPlanSession = initializeDbConnection().session({ database: 'neo4j' });
+    try {
+      const plan = await getPostPlanSession.executeRead(tx => tx.run('match (plan:plan)<-[IS_OF]-(p:post {id: $albumId}) return plan', {
+        albumId: albumId
+      }));
+      
+      return plan.records.map(record => record.get('plan').properties)[0];
+    } catch (error) {
+      console.log(error);
+    } finally {
+      getPostPlanSession.close();
+    }
+  }
+
+  public async getAllAlbums(userId: String) {
     const getAllAlbumsSession = initializeDbConnection().session({ database: 'neo4j' });
     try {
       const allAlbums = await getAllAlbumsSession.executeRead(tx =>
         tx.run(
-          'match (picture:picture)<-[:HAS_A]-(:collection)<-[:HAS_A]-(post:post)<-[:HAS_A]-(s:seller)-[:IS_A]-(user:user) WITH post, collect(picture) AS pictures, user AS user return post{post, user, pictures} order by post.views DESC',
+          'match (picture:picture)<-[:HAS_A]-(:collection)<-[:HAS_A]-(post:post)<-[:HAS_A]-(s:seller)-[:IS_A]-(user:user) where user.id <> $userId WITH post, collect(picture) AS pictures, user AS user return post{post, user, pictures} order by post.views DESC',
+          {
+            userId: userId
+          }
+        ),
+      );
+
+      return allAlbums.records.map(
+        (record: any) =>
+          record._fields.map((field: any) => {
+            return {
+              albumData: field.post.properties,
+              user: field.user.properties,
+              pictres: field.pictures.map(picture => {
+                return picture.properties;
+              }),
+            };
+          })[0],
+      );
+    } catch (error) {
+      console.log(error);
+    } finally {
+      getAllAlbumsSession.close();
+    }
+  }
+
+  public async getSellerAlbums(userId: String) {
+    const getAllAlbumsSession = initializeDbConnection().session({ database: 'neo4j' });
+    try {
+      const allAlbums = await getAllAlbumsSession.executeRead(tx =>
+        tx.run(
+          'match (picture:picture)<-[:HAS_A]-(:collection)<-[:HAS_A]-(post:post)<-[:HAS_A]-(s:seller)-[:IS_A]-(user:user) where user.id = $userId WITH post, collect(picture) AS pictures, user as user return post{post, user, pictures} order by post.views DESC',
+          {
+            userId: userId
+          }
         ),
       );
 
@@ -154,7 +244,7 @@ class postService {
         return { message: `missing data` };
       const createdCollection = await createPostSession.executeWrite(tx =>
         tx.run(
-          'match (u:user {id: $userId})-[IS_A]-(s:seller)-[:HAS_A]-(plan:plan {id: $planId}) create (s)-[h: HAS_A]->(p:post {id: $postId, description: $description, title: $title, price: $price, createdAt: $createdAt, views: 0, likes: 0, categoryId: $categoryId})-[:HAS_A]->(c:collection {id: $collectionId}) create (p)-[:IS_OF]->(plan) return c, p, u',
+          'match (u:user {id: $userId})-[IS_A]-(s:seller)-[:HAS_A]-(plan:plan {id: $planId}) create (s)-[h: HAS_A]->(p:post {id: $postId, description: $description, title: $title, price: $price, createdAt: $createdAt, views: 0, likes: 0, categoryId: $categoryId})-[:HAS_A]->(c:collection {id: $collectionId}) create (p)-[:IS_OF]->(plan) return c, p, u, s',
           {
             userId: userId,
             postId: uid(40),
@@ -169,13 +259,11 @@ class postService {
         ),
       );
       
-
-      
       await this.stripe.products.create({
         id: createdCollection.records.map(record => record.get('p').properties.id)[0],
         name: postData.data.postTitle,
         metadata: {
-          sellerId: createdCollection.records.map(record => record.get('u').properties.id)[0].toString(),
+          sellerId: createdCollection.records.map(record => record.get('s').properties.id)[0].toString(),
         },
         description: postData.data.postDescription,
         default_price_data: {
@@ -203,16 +291,22 @@ class postService {
     }
   }
 
-  public async likePost(albumId: string) {
+  public async likePost(albumId: string, userId: string) {
     const likePostSession = initializeDbConnection().session({ database: 'neo4j' });
     try {
-      const likes = await likePostSession.executeWrite(tx =>
-        tx.run('match (p:post {id: $postId}) set p.likes = p.likes + 1 return p', {
+      const data = await likePostSession.executeWrite(tx =>
+        tx.run('match (p:post {id: $postId})<-[:HAS_A]-(seller:seller), (user:user {id: $userId}) create (user)-[:liked]->(p) set p.likes = p.likes + 1 return seller, user', {
           postId: albumId,
+          userId: userId
         }),
       );
+      
+      const sellerId = data.records.map(record => record.get("seller").properties.id)[0];
+      const name = data.records.map(record => record.get("user").properties.name)[0];
+      const title = "Like";
+      const body = `${name} just liked your post`;
 
-      return likes.records.map(record => record.get('p').properties.likes.low)[0];
+      this.notificationsService.pushSellerNotificatons(sellerId, title, body);
     } catch (error) {
       console.log(error);
     } finally {
@@ -226,10 +320,10 @@ class postService {
     try {
       for (let key in pictureFiles) {
         const filecontent = Buffer.from(pictureFiles[key].buffer, 'binary');
-
-        writeFile(path.join(__dirname, "../../public/files/albums", `${pictureFiles[key].originalname.replace(".", "")}${collectionId}${moment().format("ssMMyyyy")}.${pictureFiles[key].mimetype.split("/")[1]}`), filecontent, (err) => {
+        
+        writeFile(path.join(__dirname, "../../public/files/albums", `${pictureFiles[key].fieldname.replace(".", "")}${collectionId}${moment().format("ssMMyyyy")}.${pictureFiles[key].mimetype.split("/")[1]}`), filecontent, async (err) => {
           if (err) return console.log(err);
-          this.createPictures(pictureFiles[key].fieldname, `/public/files/albums/${pictureFiles[key].originalname.replace(".", "")}${collectionId}${moment().format("ssMMyyyy")}.${pictureFiles[key].mimetype.split("/")[1]}`, collectionId);
+          await this.createPictures(pictureFiles[key].fieldname, `/public/files/albums/${pictureFiles[key].fieldname.replace(".", "")}${collectionId}${moment().format("ssMMyyyy")}.${pictureFiles[key].mimetype.split("/")[1]}`, collectionId);
         });
       }
     } catch (error) {

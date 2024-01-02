@@ -6,17 +6,16 @@ import { DataStoredInToken, RequestWithUser } from '@interfaces/auth.interface';
 import { initializeDbConnection } from '@/app';
 
 const authMiddleware = async (req: RequestWithUser, res: Response, next: NextFunction) => {
-  try {
-    const Authorization = req.cookies['Authorization'] || (req.header('Authorization') ? req.header('Authorization').split('Bearer ')[1] : null);
-    const authMiddlewareSession = initializeDbConnection().session();
-    if (Authorization) {
-      
+  const Authorization = req.cookies['Authorization'] || (req.header('Authorization') ? req.header('Authorization').split('Bearer ')[1] : null);
+  const authMiddlewareSession = initializeDbConnection().session();
+  if (Authorization) {
+    try {
       const secretKey: string = SECRET_KEY;
       const verificationResponse = (verify(Authorization, secretKey)) as DataStoredInToken;
-      
+
       const userId = verificationResponse.id;
       console.log(verificationResponse);
-      
+
       const foundUser = await authMiddlewareSession.executeRead(tx => tx.run('match (u:user {id: $userId}) return u', {
         userId: userId
       }));
@@ -26,12 +25,12 @@ const authMiddleware = async (req: RequestWithUser, res: Response, next: NextFun
       } else {
         next(new HttpException(400, 'Wrong authentication token'));
       }
-    } else {
-      next(new HttpException(400, 'Authentication token missing'));
+    } catch (error) {
+      console.log(error);
+      next(new HttpException(401, 'missing token'));
     }
-  } catch (error) {
-    console.log(error);
-    next(new HttpException(401, 'Wrong authentication token'));
+  } else {
+    next(new HttpException(400, 'Authentication token missing'));
   }
 };
 

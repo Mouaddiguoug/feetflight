@@ -21,7 +21,36 @@ class UsersController {
       const userId = String(req.params.id);
       const findOneUserData = await this.userService.findUserById(userId);
 
-      res.status(200).json({ data: findOneUserData });
+      res.status(200).json(findOneUserData);
+    } catch (error) {
+      next(error);
+    }
+  };
+
+  public generateAiPictures = async (req: Request, res: Response, next: NextFunction): Promise<void> => {
+    try {
+      const color = req.body.color;
+      const category = req.body.category;
+
+      const generatedPictures = await this.userService.generateAiPictures(color, category);
+      
+
+      res.status(200).json(generatedPictures);
+    } catch (error) {
+      next(error);
+    }
+  };
+
+  public checkForSale = async (req: Request, res: Response, next: NextFunction): Promise<void> => {
+    try {
+      const postId = String(req.params.postId);
+      const userId = String(req.params.userId);
+      const plan = String(req.params.plan);
+      const checkedFOrSale = await this.userService.checkForSale(userId, postId);
+      const checkForSubscription = await this.userService.checkForSubscriptionbyUserId(userId, postId, plan);
+
+      console.log(checkForSubscription);
+      res.status(200).json(checkedFOrSale || checkForSubscription);
     } catch (error) {
       next(error);
     }
@@ -68,7 +97,7 @@ class UsersController {
 
       const boughtPost = await this.userService.buyPosts(userId, saleData);
 
-      res.status(200).json({ data: boughtPost });
+      res.status(200).json({ url: boughtPost });
     } catch (error) {
       next(error);
     }
@@ -79,16 +108,16 @@ class UsersController {
       const userId = String(req.params.id);
       const subscriptionData = req.body;
 
-      const boughtPost = await this.userService.subscribe(userId, subscriptionData);
+      const subscribeSssion = await this.userService.subscribe(userId, subscriptionData);
 
-      res.status(200).json({ data: boughtPost });
+      res.status(200).json(subscribeSssion);
     } catch (error) {
       next(error);
     }
   };
 
   public cancelSubscription = async (req: Request, res: Response, next: NextFunction): Promise<void> => {
-    
+
     try {
       const userId = String(req.params.id);
       const sellerId = String(req.params.sellerId);
@@ -104,9 +133,9 @@ class UsersController {
   public checkForSubscribtion = async (req: Request, res: Response, next: NextFunction): Promise<void> => {
     try {
       const userId = String(req.params.id);
-      const subscriptionData = req.body;
+      const postId = req.body.data.postId;
 
-      const isSubscribed = await this.userService.checkForSale(userId, subscriptionData);
+      const isSubscribed = await this.userService.checkForSubscription(userId, postId);
 
       res.status(200).json({ data: isSubscribed });
     } catch (error) {
@@ -116,11 +145,24 @@ class UsersController {
 
   public updateUser = async (req: Request, res: Response, next: NextFunction): Promise<void> => {
     try {
-      const userId = Number(req.params.id);
+      const userId = String(req.params.id);
+
       const userData: CreateUserDto = req.body;
       const updateUserData: User[] = await this.userService.updateUser(userId, userData);
 
       res.status(200).json({ data: updateUserData, message: 'updated' });
+    } catch (error) {
+      next(error);
+    }
+  };
+
+  public uploadDeviceToken = async (req: Request, res: Response, next: NextFunction): Promise<void> => {
+    try {
+      const userId = String(req.params.id);
+      const token = req.body.token;
+      await this.userService.uploadDeviceToken(userId, token);
+
+      res.status(200).json({ message: 'token uploaded succcessfully' });
     } catch (error) {
       next(error);
     }
@@ -140,9 +182,9 @@ class UsersController {
   public uploadAvatar = async (req: Request, res: Response, next: NextFunction): Promise<void> => {
     try {
       const userId = String(req.params.id);
-      
+
       const avatarData = req.file;
-      
+
       await this.userService.uploadAvatar(avatarData, userId);
 
       res.status(201).json({ messazge: "avatar has been uploaded successfully" });

@@ -4,6 +4,7 @@ import { Routes } from '@interfaces/routes.interface';
 import multer from 'multer';
 import fileMiddleware from '@/middlewares/fileValidation.middleware';
 import { request } from 'http';
+import authMiddleware from '@/middlewares/auth.middleware';
 
 class UsersRoute implements Routes {
   public path = '/users';
@@ -15,21 +16,25 @@ class UsersRoute implements Routes {
   }
 
   private initializeRoutes() {
-    this.router.get(`${this.path}/:id`, this.usersController.getUserById);
-    this.router.get(`${this.path}`, this.usersController.getUsers);
-    this.router.post(`${this.path}/buy/:id`, this.usersController.buyPost);
-    this.router.post(`${this.path}/subscribe/:id`, this.usersController.subscribe);
-    this.router.post(`${this.path}/unsubscribe/:id/:sellerId`, this.usersController.cancelSubscription);
+    this.router.get(`${this.path}/:id`,authMiddleware , this.usersController.getUserById);
+    this.router.get(`${this.path}`, authMiddleware, this.usersController.getUsers);
+    this.router.post(`${this.path}/buy/:id`, authMiddleware, this.usersController.buyPost);
+    this.router.post(`${this.path}/subscribe/:id`, authMiddleware, this.usersController.subscribe);
+    this.router.post(`${this.path}/unsubscribe/:id/:sellerId`, authMiddleware, this.usersController.cancelSubscription);
     this.router.get(`${this.path}/confirmation/:token`, this.usersController.emailConfirming);
-    this.router.get(`${this.path}/:email`, this.usersController.changePassword);
-    this.router.get(`${this.path}/plans/:id`, this.usersController.getSellerPlans);
-    this.router.put(`${this.path}/:id`, this.usersController.updateUser);
+    this.router.get(`${this.path}/:email`, authMiddleware, this.usersController.changePassword);
+    this.router.get(`${this.path}/plans/:id`,authMiddleware, this.usersController.getSellerPlans);
+    this.router.get(`${this.path}/ai/generatePictures`, this.usersController.generateAiPictures);
+    this.router.put(`${this.path}/:id`, authMiddleware, this.usersController.updateUser);
+    this.router.get(`${this.path}/verify/checkForSale/:userId/:postId/:plan`, this.usersController.checkForSale);
+    this.router.post(`${this.path}/devices/token/:id`, authMiddleware, this.usersController.uploadDeviceToken);
     this.router.post(`${this.path}/desactivate/:id`, this.usersController.desactivateUser);
     this.router.post(
       `${this.path}/upload/avatar/:id`,
+      authMiddleware,
       multer().single('avatar'),
-      req => console.log(req),
       fileMiddleware,
+      
       this.usersController.uploadAvatar,
     );
   }

@@ -1,0 +1,742 @@
+2023-12-10 12:08:32 info: =================================
+2023-12-10 12:08:32 info: ======= ENV: development =======
+2023-12-10 12:08:32 info: 🚀 App listening on the port 8000
+2023-12-10 12:08:32 info: =================================
+2023-12-10 12:13:58 info: =================================
+2023-12-10 12:13:58 info: ======= ENV: development =======
+2023-12-10 12:13:58 info: 🚀 App listening on the port 8000
+2023-12-10 12:13:58 info: =================================
+2023-12-10 12:17:03 info: =================================
+2023-12-10 12:17:03 info: ======= ENV: development =======
+2023-12-10 12:17:03 info: 🚀 App listening on the port 8000
+2023-12-10 12:17:03 info: =================================
+2023-12-10 12:19:11 error: [GET] /users/62cc6c536ffc0d571c6ac50c04fcccf2baabf068 >> StatusCode:: 401, Message:: Wrong authentication token
+2023-12-10 12:19:11 info: [0mGET /users/62cc6c536ffc0d571c6ac50c04fcccf2baabf068 [33m401[0m 36.787 ms - 40[0m
+2023-12-10 12:19:11 info: [0mPOST /refresh [32m200[0m 41.357 ms - 277[0m
+2023-12-10 12:19:13 info: [0mGET /users/62cc6c536ffc0d571c6ac50c04fcccf2baabf068 [32m200[0m 1464.410 ms - 327[0m
+2023-12-10 12:19:16 info: [0mGET /users/plans/62cc6c536ffc0d571c6ac50c04fcccf2baabf068 [32m200[0m 724.034 ms - 151[0m
+2023-12-10 12:19:16 info: [0mGET /albums/categories [32m201[0m 725.354 ms - 114[0m
+2023-12-10 12:19:17 info: [0mGET /albums/popular [32m201[0m 1618.341 ms - -[0m
+2023-12-10 12:19:17 info: [0mGET /albums [32m201[0m 1609.762 ms - -[0m
+2023-12-10 12:19:18 info: [0mGET /public/files/albums/postPicture-1d039e14-9252-47d6-8d39-92f625d46f435867363189936475864jpg'0776d4b031071bc78bf6dc9f52192f93a957ba5247122023.jpeg [32m200[0m 7.271 ms - 63869[0m
+2023-12-10 12:19:18 info: [0mGET /public/files/albums/postPicture-37072eed-ffa4-4732-901f-69ff0ebf31964283235459063127545jpg'7f004a7b30776d4b031071bc78bf6dc9f52192f919122023.jpeg [32m200[0m 8.856 ms - 64166[0m
+2023-12-10 12:19:18 info: [0mGET /public/files/albums/postPicture-68a722d5-48db-4c56-9094-875d4930d6a96403750345436467466jpg'd8afa6550240c203bb59a5ce94ef6847d3fa453f30122023.png [32m200[0m 2.930 ms - 63629[0m
+2023-12-10 12:19:18 info: [0mGET /public/files/albums/postPicture-37072eed-ffa4-4732-901f-69ff0ebf31964283235459063127545jpg'4a7b30776d4b031071bc78bf6dc9f52192f93a9527122023.jpeg [32m200[0m 4.303 ms - 64166[0m
+2023-12-10 12:19:19 info: [0mGET /public/files/albums/postPicture-67cacd40-f40d-4408-b887-a888d25b2ab6327830558753184262jpg'9b12bf526f886bf9c48e7074b216f58f32573b0349122023.jpeg [32m200[0m 2.456 ms - 63629[0m
+2023-12-10 12:19:19 info: [0mGET /public/files/albums/postPicture-27d6b646-950f-4783-a244-a5d24771130b8314993466251131527jpg'f526f886bf9c48e7074b216f58f32573b03d539914122023.jpeg [32m200[0m 2.307 ms - 64254[0m
+2023-12-10 12:19:19 info: [0mGET /public/files/albums/postPicture-27d6b646-950f-4783-a244-a5d24771130b8314993466251131527jpg'956db2cb830fcd753b660667ff950cd132a6867812122023.jpeg [32m200[0m 3.358 ms - 64254[0m
+2023-12-10 12:19:19 info: [0mGET /public/files/albums/postPicture-f5b606e7-ea02-4b6d-abff-29e591ecedaa8594422175717132219jpg'b2cb830fcd753b660667ff950cd132a686781f6d46122023.jpeg [32m200[0m 3.804 ms - 63414[0m
+2023-12-10 12:19:20 info: [0mGET /public/files/albums/postPictureac4e6f51f29d58f04d4b8c223edaec3174c9ab6716122023.png [33m404[0m 3.206 ms - 222[0m
+2023-12-10 12:19:20 info: [0mGET /public/files/albums/postPicture-f5b606e7-ea02-4b6d-abff-29e591ecedaa8594422175717132219jpg'8cbf7d8afa6550240c203bb59a5ce94ef6847d3f05122023.jpeg [32m200[0m 2.789 ms - 63414[0m
+2023-12-10 12:19:21 info: [0mGET /public/files/albums/postPictured274b9a2a09e590a5f6d2661d9b879f0280663bc02122023.jpeg [33m404[0m 3.626 ms - 223[0m
+2023-12-10 12:19:21 info: [0mGET /public/files/albums/postPicture375f3a97b3467961505186a4241e2a6bbefb451952122023.jpeg [33m404[0m 4.629 ms - 223[0m
+2023-12-10 12:19:22 info: [0mGET /public/files/albums/postPictureb25e375f3a97b3467961505186a4241e2a6bbefb22122023.jpeg [33m404[0m 1.457 ms - 223[0m
+2023-12-10 12:19:23 info: [0mGET /public/files/albums/postPicture90dd6f0ab25e375f3a97b3467961505186a4241e55122023.png [33m404[0m 1.494 ms - 222[0m
+2023-12-10 12:19:23 info: [0mGET /public/files/albums/postPicture6f0ab25e375f3a97b3467961505186a4241e2a6b46122023.octet-stream [33m404[0m 0.978 ms - 231[0m
+2023-12-10 12:19:24 info: [0mGET /public/files/albums/postPicture96bf7dff70c791a395340c0292a9f6fd29340b0625122023.png [33m404[0m 1.325 ms - 222[0m
+2023-12-10 12:19:24 info: [0mGET /public/files/albums/postPicture656a08b0890e3b556c9baf2a64cee181b632223f46122023.png [33m404[0m 0.910 ms - 222[0m
+2023-12-10 12:19:24 info: [0mGET /public/files/albums/postPicture505cfe5bd9b6bef9ae840078e4734144b5d9dd6e43122023.png [33m404[0m 1.786 ms - 222[0m
+2023-12-10 12:19:24 info: [0mGET /public/files/albums/postPicturee360b2c019f60ad69535be615770bb1aab06112750122023.png [33m404[0m 1.048 ms - 222[0m
+2023-12-10 12:19:25 info: [0mGET /public/files/albums/postPicture9b11505cfe5bd9b6bef9ae840078e4734144b5d914122023.png [33m404[0m 0.938 ms - 222[0m
+2023-12-10 12:19:25 info: [0mGET /public/files/albums/postPictureefbe481a61acdf3cafa2071b05e82f15a9cf2ebd02122023.png [33m404[0m 2.369 ms - 222[0m
+2023-12-10 12:19:25 info: [0mGET /public/files/albums/postPicturef50e15909b11505cfe5bd9b6bef9ae840078e47327122023.png [33m404[0m 0.992 ms - 222[0m
+2023-12-10 12:19:26 info: [0mGET /public/files/albums/postPicturef6f50e15909b11505cfe5bd9b6bef9ae840078e432122023.png [33m404[0m 1.127 ms - 222[0m
+2023-12-10 12:19:26 info: [0mGET /public/files/albums/postPicture5d2f8cd3f6f50e15909b11505cfe5bd9b6bef9ae42122023.png [33m404[0m 1.041 ms - 222[0m
+2023-12-10 12:19:26 info: [0mGET /public/files/albums/postPicture3d30f9e2249b636e6a6d423149a491b02cfb8e3927122023.png [33m404[0m 1.065 ms - 222[0m
+2023-12-10 12:19:26 info: [0mGET /public/files/albums/postPicture87395b6b96208af9e910167fbea922bf9dc2427537122023.png [33m404[0m 1.067 ms - 222[0m
+2023-12-10 12:19:26 info: [0mGET /public/files/albums/postPictureffe7acebe0fd2c1bb9e191df6d10863a0675575746122023.octet-stream [33m404[0m 1.012 ms - 231[0m
+2023-12-10 12:19:26 info: [0mGET /public/files/albums/postPicture43c377472363dbdd37af8a523e7b124a80f6a91b41122023.png [33m404[0m 1.913 ms - 222[0m
+2023-12-10 12:19:26 info: [0mGET /public/files/albums/postPictureea2cd61a368c8e214914d067fa55bccc2895295714122023.png [33m404[0m 3.484 ms - 222[0m
+2023-12-10 12:19:26 info: [0mGET /public/files/albums/postPicturee9d11ef13cf36c49bb0e8f4436d4a5003ca20cae33122023.png [33m404[0m 2.531 ms - 222[0m
+2023-12-10 12:19:26 info: [0mGET /public/files/albums/postPicture5f539a43c377472363dbdd37af8a523e7b124a8022122023.png [33m404[0m 3.044 ms - 222[0m
+2023-12-10 12:19:26 info: [0mGET /public/files/albums/postPictureebe0fd2c1bb9e191df6d10863a06755757a97f6c11122023.octet-stream [33m404[0m 0.937 ms - 231[0m
+2023-12-10 12:19:26 info: [0mGET /public/files/albums/postPicture0fd2c1bb9e191df6d10863a06755757a97f6c1bf31122023.octet-stream [33m404[0m 3.036 ms - 231[0m
+2023-12-10 12:19:26 info: [0mGET /public/files/albums/postPicture2c1bb9e191df6d10863a06755757a97f6c1bf0ba11122023.octet-stream [33m404[0m 3.456 ms - 231[0m
+2023-12-10 12:19:27 info: [0mGET /public/files/albums/postPictureab1ea683903e4ee8f09207748b58848b796d30b002122023.octet-stream [33m404[0m 1.093 ms - 231[0m
+2023-12-10 12:19:27 info: [0mGET /public/files/albums/postPicture7b7c61ab9d61f5d12c3b0122cc6fec73eb64fc6247122023.png [33m404[0m 0.988 ms - 222[0m
+2023-12-10 12:19:27 info: [0mGET /public/files/albums/postPicture83903e4ee8f09207748b58848b796d30b097255201122023.png [33m404[0m 0.902 ms - 222[0m
+2023-12-10 12:19:27 info: [0mGET /public/files/albums/postPicturebc134f12720fc7feb9b82da20c66021635b3d5ec16122023.octet-stream [33m404[0m 0.993 ms - 231[0m
+2023-12-10 12:19:27 info: [0mGET /public/files/albums/postPictureea683903e4ee8f09207748b58848b796d30b097221122023.octet-stream [33m404[0m 2.246 ms - 231[0m
+2023-12-10 12:19:28 info: [0mGET /public/files/albums/postPicture1485a05ad584f8f22313961672bb1e9e845c6aa205122023.octet-stream [33m404[0m 1.736 ms - 231[0m
+2023-12-10 12:19:28 info: [0mGET /public/files/albums/postPicturef5c92c6de44a35f4990bbbe2ecafce86cd5320d926122023.octet-stream [33m404[0m 2.208 ms - 231[0m
+2023-12-10 12:24:44 error: [GET] /users/62cc6c536ffc0d571c6ac50c04fcccf2baabf068 >> StatusCode:: 401, Message:: Wrong authentication token
+2023-12-10 12:24:44 info: [0mGET /users/62cc6c536ffc0d571c6ac50c04fcccf2baabf068 [33m401[0m 7.029 ms - 40[0m
+2023-12-10 12:24:45 info: [0mPOST /refresh [32m200[0m 4.174 ms - 277[0m
+2023-12-10 12:24:48 info: [0mGET /users/62cc6c536ffc0d571c6ac50c04fcccf2baabf068 [32m200[0m 2288.712 ms - 327[0m
+2023-12-10 12:24:52 info: [0mGET /albums/categories [32m201[0m 1295.501 ms - 114[0m
+2023-12-10 12:24:53 info: [0mGET /albums/popular [32m201[0m 3512.534 ms - -[0m
+2023-12-10 12:24:55 info: [0mGET /albums [32m201[0m 5457.835 ms - -[0m
+2023-12-10 12:24:56 info: [0mGET /users/plans/62cc6c536ffc0d571c6ac50c04fcccf2baabf068 [32m200[0m 1148.123 ms - 151[0m
+2023-12-10 12:24:58 info: [0mGET /public/files/albums/postPictureac4e6f51f29d58f04d4b8c223edaec3174c9ab6716122023.png [33m404[0m 1.660 ms - 222[0m
+2023-12-10 12:24:58 info: [0mGET /public/files/albums/postPicture375f3a97b3467961505186a4241e2a6bbefb451952122023.jpeg [33m404[0m 2.130 ms - 223[0m
+2023-12-10 12:24:58 info: [0mGET /public/files/albums/postPictureb25e375f3a97b3467961505186a4241e2a6bbefb22122023.jpeg [33m404[0m 4.101 ms - 223[0m
+2023-12-10 12:24:58 info: [0mGET /public/files/albums/postPicture96bf7dff70c791a395340c0292a9f6fd29340b0625122023.png [33m404[0m 5.631 ms - 222[0m
+2023-12-10 12:24:58 info: [0mGET /public/files/albums/postPicture656a08b0890e3b556c9baf2a64cee181b632223f46122023.png [33m404[0m 7.104 ms - 222[0m
+2023-12-10 12:24:58 info: [0mGET /public/files/albums/postPicturee360b2c019f60ad69535be615770bb1aab06112750122023.png [33m404[0m 7.599 ms - 222[0m
+2023-12-10 12:24:58 info: [0mGET /public/files/albums/postPicture6f0ab25e375f3a97b3467961505186a4241e2a6b46122023.octet-stream [33m404[0m 5.827 ms - 231[0m
+2023-12-10 12:24:58 info: [0mGET /public/files/albums/postPictureefbe481a61acdf3cafa2071b05e82f15a9cf2ebd02122023.png [33m404[0m 2.060 ms - 222[0m
+2023-12-10 12:24:58 info: [0mGET /public/files/albums/postPictured274b9a2a09e590a5f6d2661d9b879f0280663bc02122023.jpeg [33m404[0m 1.080 ms - 223[0m
+2023-12-10 12:24:58 info: [0mGET /public/files/albums/postPicture90dd6f0ab25e375f3a97b3467961505186a4241e55122023.png [33m404[0m 0.917 ms - 222[0m
+2023-12-10 12:24:59 info: [0mGET /public/files/albums/postPicture505cfe5bd9b6bef9ae840078e4734144b5d9dd6e43122023.png [33m404[0m 1.395 ms - 222[0m
+2023-12-10 12:24:59 info: [0mGET /public/files/albums/postPicture9b11505cfe5bd9b6bef9ae840078e4734144b5d914122023.png [33m404[0m 2.665 ms - 222[0m
+2023-12-10 12:24:59 info: [0mGET /public/files/albums/postPicturef50e15909b11505cfe5bd9b6bef9ae840078e47327122023.png [33m404[0m 1.045 ms - 222[0m
+2023-12-10 12:24:59 info: [0mGET /public/files/albums/postPicturef6f50e15909b11505cfe5bd9b6bef9ae840078e432122023.png [33m404[0m 0.960 ms - 222[0m
+2023-12-10 12:24:59 info: [0mGET /public/files/albums/postPicture7b7c61ab9d61f5d12c3b0122cc6fec73eb64fc6247122023.png [33m404[0m 1.149 ms - 222[0m
+2023-12-10 12:24:59 info: [0mGET /public/files/albums/postPicture87395b6b96208af9e910167fbea922bf9dc2427537122023.png [33m404[0m 0.972 ms - 222[0m
+2023-12-10 12:24:59 info: [0mGET /public/files/albums/postPicture3d30f9e2249b636e6a6d423149a491b02cfb8e3927122023.png [33m404[0m 0.923 ms - 222[0m
+2023-12-10 12:24:59 info: [0mGET /public/files/albums/postPictureea2cd61a368c8e214914d067fa55bccc2895295714122023.png [33m404[0m 0.974 ms - 222[0m
+2023-12-10 12:24:59 info: [0mGET /public/files/albums/postPicture5d2f8cd3f6f50e15909b11505cfe5bd9b6bef9ae42122023.png [33m404[0m 2.151 ms - 222[0m
+2023-12-10 12:24:59 info: [0mGET /public/files/albums/postPicture43c377472363dbdd37af8a523e7b124a80f6a91b41122023.png [33m404[0m 0.874 ms - 222[0m
+2023-12-10 12:24:59 info: [0mGET /public/files/albums/postPicture5f539a43c377472363dbdd37af8a523e7b124a8022122023.png [33m404[0m 1.010 ms - 222[0m
+2023-12-10 12:25:00 info: [0mGET /public/files/albums/postPictureffe7acebe0fd2c1bb9e191df6d10863a0675575746122023.octet-stream [33m404[0m 1.089 ms - 231[0m
+2023-12-10 12:25:00 info: [0mGET /public/files/albums/postPicturee9d11ef13cf36c49bb0e8f4436d4a5003ca20cae33122023.png [33m404[0m 0.964 ms - 222[0m
+2023-12-10 12:25:00 info: [0mGET /public/files/albums/postPictureebe0fd2c1bb9e191df6d10863a06755757a97f6c11122023.octet-stream [33m404[0m 1.092 ms - 231[0m
+2023-12-10 12:25:00 info: [0mGET /public/files/albums/postPicture2c1bb9e191df6d10863a06755757a97f6c1bf0ba11122023.octet-stream [33m404[0m 2.151 ms - 231[0m
+2023-12-10 12:25:00 info: [0mGET /public/files/albums/postPicture0fd2c1bb9e191df6d10863a06755757a97f6c1bf31122023.octet-stream [33m404[0m 1.698 ms - 231[0m
+2023-12-10 12:25:00 info: [0mGET /public/files/albums/postPicture1485a05ad584f8f22313961672bb1e9e845c6aa205122023.octet-stream [33m404[0m 0.879 ms - 231[0m
+2023-12-10 12:25:00 info: [0mGET /public/files/albums/postPictureab1ea683903e4ee8f09207748b58848b796d30b002122023.octet-stream [33m404[0m 1.077 ms - 231[0m
+2023-12-10 12:25:01 info: [0mGET /public/files/albums/postPicturebc134f12720fc7feb9b82da20c66021635b3d5ec16122023.octet-stream [33m404[0m 1.221 ms - 231[0m
+2023-12-10 12:25:01 info: [0mGET /public/files/albums/postPicture5a05ad584f8f22313961672bb1e9e845c6aa291024122023.octet-stream [33m404[0m 0.971 ms - 231[0m
+2023-12-10 12:25:01 info: [0mGET /public/files/albums/postPictureea683903e4ee8f09207748b58848b796d30b097221122023.octet-stream [33m404[0m 2.910 ms - 231[0m
+2023-12-10 12:25:01 info: [0mGET /public/files/albums/postPicturef5c92c6de44a35f4990bbbe2ecafce86cd5320d926122023.octet-stream [33m404[0m 1.458 ms - 231[0m
+2023-12-10 12:25:01 info: [0mGET /public/files/albums/postPicture83903e4ee8f09207748b58848b796d30b097255201122023.png [33m404[0m 1.241 ms - 222[0m
+2023-12-10 12:45:30 error: [GET] /users/62cc6c536ffc0d571c6ac50c04fcccf2baabf068 >> StatusCode:: 401, Message:: Wrong authentication token
+2023-12-10 12:45:30 info: [0mGET /users/62cc6c536ffc0d571c6ac50c04fcccf2baabf068 [33m401[0m 5.170 ms - 40[0m
+2023-12-10 12:45:31 info: [0mPOST /refresh [32m200[0m 3.689 ms - 277[0m
+2023-12-10 12:45:36 info: [0mGET /users/62cc6c536ffc0d571c6ac50c04fcccf2baabf068 [32m200[0m 4307.907 ms - 327[0m
+2023-12-10 12:45:39 info: [0mGET /albums/categories [32m201[0m 1456.015 ms - 114[0m
+2023-12-10 12:45:40 info: [0mGET /albums/popular [32m201[0m 2603.088 ms - -[0m
+2023-12-10 12:45:42 info: [0mGET /albums [32m201[0m 3415.539 ms - -[0m
+2023-12-10 12:45:44 info: [0mGET /users/plans/62cc6c536ffc0d571c6ac50c04fcccf2baabf068 [32m200[0m 5353.408 ms - 151[0m
+2023-12-10 12:45:44 info: [0mGET /public/files/albums/postPictureb25e375f3a97b3467961505186a4241e2a6bbefb22122023.jpeg [33m404[0m 1.175 ms - 223[0m
+2023-12-10 12:45:44 info: [0mGET /public/files/albums/postPicture375f3a97b3467961505186a4241e2a6bbefb451952122023.jpeg [33m404[0m 1.847 ms - 223[0m
+2023-12-10 12:45:44 info: [0mGET /public/files/albums/postPicture6f0ab25e375f3a97b3467961505186a4241e2a6b46122023.octet-stream [33m404[0m 2.291 ms - 231[0m
+2023-12-10 12:45:44 info: [0mGET /public/files/albums/postPicturee360b2c019f60ad69535be615770bb1aab06112750122023.png [33m404[0m 4.293 ms - 222[0m
+2023-12-10 12:45:44 info: [0mGET /public/files/albums/postPicture656a08b0890e3b556c9baf2a64cee181b632223f46122023.png [33m404[0m 4.856 ms - 222[0m
+2023-12-10 12:45:44 info: [0mGET /public/files/albums/postPictured274b9a2a09e590a5f6d2661d9b879f0280663bc02122023.jpeg [33m404[0m 4.798 ms - 223[0m
+2023-12-10 12:45:44 info: [0mGET /public/files/albums/postPicture90dd6f0ab25e375f3a97b3467961505186a4241e55122023.png [33m404[0m 4.978 ms - 222[0m
+2023-12-10 12:45:45 info: [0mGET /public/files/albums/postPictureac4e6f51f29d58f04d4b8c223edaec3174c9ab6716122023.png [33m404[0m 0.934 ms - 222[0m
+2023-12-10 12:45:45 info: [0mGET /public/files/albums/postPicture505cfe5bd9b6bef9ae840078e4734144b5d9dd6e43122023.png [33m404[0m 1.171 ms - 222[0m
+2023-12-10 12:45:45 info: [0mGET /public/files/albums/postPictureefbe481a61acdf3cafa2071b05e82f15a9cf2ebd02122023.png [33m404[0m 1.807 ms - 222[0m
+2023-12-10 12:45:45 info: [0mGET /public/files/albums/postPicturef50e15909b11505cfe5bd9b6bef9ae840078e47327122023.png [33m404[0m 1.533 ms - 222[0m
+2023-12-10 12:45:45 info: [0mGET /public/files/albums/postPicture9b11505cfe5bd9b6bef9ae840078e4734144b5d914122023.png [33m404[0m 2.291 ms - 222[0m
+2023-12-10 12:45:45 info: [0mGET /public/files/albums/postPicturef6f50e15909b11505cfe5bd9b6bef9ae840078e432122023.png [33m404[0m 0.841 ms - 222[0m
+2023-12-10 12:45:45 info: [0mGET /public/files/albums/postPicture5d2f8cd3f6f50e15909b11505cfe5bd9b6bef9ae42122023.png [33m404[0m 0.668 ms - 222[0m
+2023-12-10 12:45:45 info: [0mGET /public/files/albums/postPicture3d30f9e2249b636e6a6d423149a491b02cfb8e3927122023.png [33m404[0m 1.555 ms - 222[0m
+2023-12-10 12:45:45 info: [0mGET /public/files/albums/postPicture7b7c61ab9d61f5d12c3b0122cc6fec73eb64fc6247122023.png [33m404[0m 0.943 ms - 222[0m
+2023-12-10 12:45:45 info: [0mGET /public/files/albums/postPicture87395b6b96208af9e910167fbea922bf9dc2427537122023.png [33m404[0m 0.876 ms - 222[0m
+2023-12-10 12:45:46 info: [0mGET /public/files/albums/postPicture5f539a43c377472363dbdd37af8a523e7b124a8022122023.png [33m404[0m 2.182 ms - 222[0m
+2023-12-10 12:45:46 info: [0mGET /public/files/albums/postPicture43c377472363dbdd37af8a523e7b124a80f6a91b41122023.png [33m404[0m 3.009 ms - 222[0m
+2023-12-10 12:45:46 info: [0mGET /public/files/albums/postPicturee9d11ef13cf36c49bb0e8f4436d4a5003ca20cae33122023.png [33m404[0m 3.368 ms - 222[0m
+2023-12-10 12:45:46 info: [0mGET /public/files/albums/postPictureffe7acebe0fd2c1bb9e191df6d10863a0675575746122023.octet-stream [33m404[0m 3.431 ms - 231[0m
+2023-12-10 12:45:46 info: [0mGET /public/files/albums/postPicture2c1bb9e191df6d10863a06755757a97f6c1bf0ba11122023.octet-stream [33m404[0m 2.506 ms - 231[0m
+2023-12-10 12:45:46 info: [0mGET /public/files/albums/postPicture5a05ad584f8f22313961672bb1e9e845c6aa291024122023.octet-stream [33m404[0m 3.068 ms - 231[0m
+2023-12-10 12:45:46 info: [0mGET /public/files/albums/postPicture1485a05ad584f8f22313961672bb1e9e845c6aa205122023.octet-stream [33m404[0m 0.933 ms - 231[0m
+2023-12-10 12:45:46 info: [0mGET /public/files/albums/postPictureea2cd61a368c8e214914d067fa55bccc2895295714122023.png [33m404[0m 0.888 ms - 222[0m
+2023-12-10 12:45:47 info: [0mGET /public/files/albums/postPicture0fd2c1bb9e191df6d10863a06755757a97f6c1bf31122023.octet-stream [33m404[0m 0.818 ms - 231[0m
+2023-12-10 12:45:47 info: [0mGET /public/files/albums/postPictureebe0fd2c1bb9e191df6d10863a06755757a97f6c11122023.octet-stream [33m404[0m 1.186 ms - 231[0m
+2023-12-10 12:45:47 info: [0mGET /public/files/albums/postPicturef5c92c6de44a35f4990bbbe2ecafce86cd5320d926122023.octet-stream [33m404[0m 1.017 ms - 231[0m
+2023-12-10 12:45:47 info: [0mGET /public/files/albums/postPicturebc134f12720fc7feb9b82da20c66021635b3d5ec16122023.octet-stream [33m404[0m 0.971 ms - 231[0m
+2023-12-10 12:45:48 info: [0mGET /public/files/albums/postPicture83903e4ee8f09207748b58848b796d30b097255201122023.png [33m404[0m 0.720 ms - 222[0m
+2023-12-10 12:45:49 info: [0mGET /public/files/albums/postPictureea683903e4ee8f09207748b58848b796d30b097221122023.octet-stream [33m404[0m 1.070 ms - 231[0m
+2023-12-10 12:53:18 info: [0mPOST /change-password/hassna@gmail.com [33m404[0m 1.008 ms - 172[0m
+2023-12-10 12:54:15 info: =================================
+2023-12-10 12:54:15 info: ======= ENV: development =======
+2023-12-10 12:54:15 info: 🚀 App listening on the port 8000
+2023-12-10 12:54:15 info: =================================
+2023-12-10 12:54:25 info: =================================
+2023-12-10 12:54:25 info: ======= ENV: development =======
+2023-12-10 12:54:25 info: 🚀 App listening on the port 8000
+2023-12-10 12:54:25 info: =================================
+2023-12-10 12:54:41 info: [0mPOST /change-password/hassna@gmail.com [33m404[0m 35.135 ms - 172[0m
+2023-12-10 12:55:32 error: [POST] /changPassword/hassna@gmail.com >> StatusCode:: 400, Message:: Authentication token missing
+2023-12-10 12:55:32 info: [0mPOST /changPassword/hassna@gmail.com [33m400[0m 12.174 ms - 42[0m
+2023-12-10 12:55:53 error: [GET] /users/62cc6c536ffc0d571c6ac50c04fcccf2baabf068 >> StatusCode:: 401, Message:: Wrong authentication token
+2023-12-10 12:55:53 info: [0mGET /users/62cc6c536ffc0d571c6ac50c04fcccf2baabf068 [33m401[0m 18.444 ms - 40[0m
+2023-12-10 12:55:53 info: [0mPOST /refresh [32m200[0m 2.861 ms - 277[0m
+2023-12-10 12:55:55 info: [0mGET /users/62cc6c536ffc0d571c6ac50c04fcccf2baabf068 [32m200[0m 1469.805 ms - 327[0m
+2023-12-10 12:55:59 info: [0mGET /albums/categories [32m201[0m 723.307 ms - 114[0m
+2023-12-10 12:55:59 info: [0mGET /users/plans/62cc6c536ffc0d571c6ac50c04fcccf2baabf068 [32m200[0m 1696.854 ms - 151[0m
+2023-12-10 12:56:00 info: [0mGET /albums/popular [32m201[0m 2756.061 ms - -[0m
+2023-12-10 12:56:00 info: [0mGET /albums [32m201[0m 2907.589 ms - -[0m
+2023-12-10 12:56:02 info: [0mGET /public/files/albums/postPicture90dd6f0ab25e375f3a97b3467961505186a4241e55122023.png [33m404[0m 4.306 ms - 222[0m
+2023-12-10 12:56:02 info: [0mGET /public/files/albums/postPictureac4e6f51f29d58f04d4b8c223edaec3174c9ab6716122023.png [33m404[0m 4.267 ms - 222[0m
+2023-12-10 12:56:03 info: [0mGET /public/files/albums/postPicturee360b2c019f60ad69535be615770bb1aab06112750122023.png [33m404[0m 0.763 ms - 222[0m
+2023-12-10 12:56:03 info: [0mGET /public/files/albums/postPictureb25e375f3a97b3467961505186a4241e2a6bbefb22122023.jpeg [33m404[0m 0.826 ms - 223[0m
+2023-12-10 12:56:03 info: [0mGET /public/files/albums/postPicture505cfe5bd9b6bef9ae840078e4734144b5d9dd6e43122023.png [33m404[0m 0.613 ms - 222[0m
+2023-12-10 12:56:03 info: [0mGET /public/files/albums/postPicture9b11505cfe5bd9b6bef9ae840078e4734144b5d914122023.png [33m404[0m 0.938 ms - 222[0m
+2023-12-10 12:56:03 info: [0mGET /public/files/albums/postPicturef50e15909b11505cfe5bd9b6bef9ae840078e47327122023.png [33m404[0m 0.687 ms - 222[0m
+2023-12-10 12:56:03 info: [0mGET /public/files/albums/postPicturef6f50e15909b11505cfe5bd9b6bef9ae840078e432122023.png [33m404[0m 0.968 ms - 222[0m
+2023-12-10 12:56:03 info: [0mGET /public/files/albums/postPicture5d2f8cd3f6f50e15909b11505cfe5bd9b6bef9ae42122023.png [33m404[0m 0.762 ms - 222[0m
+2023-12-10 12:56:03 info: [0mGET /public/files/albums/postPicture3d30f9e2249b636e6a6d423149a491b02cfb8e3927122023.png [33m404[0m 0.716 ms - 222[0m
+2023-12-10 12:56:03 info: [0mGET /public/files/albums/postPicture87395b6b96208af9e910167fbea922bf9dc2427537122023.png [33m404[0m 0.978 ms - 222[0m
+2023-12-10 12:56:03 info: [0mGET /public/files/albums/postPicture7b7c61ab9d61f5d12c3b0122cc6fec73eb64fc6247122023.png [33m404[0m 0.929 ms - 222[0m
+2023-12-10 12:56:04 info: [0mGET /public/files/albums/postPicture96bf7dff70c791a395340c0292a9f6fd29340b0625122023.png [33m404[0m 1.295 ms - 222[0m
+2023-12-10 12:56:04 info: [0mGET /public/files/albums/postPicture43c377472363dbdd37af8a523e7b124a80f6a91b41122023.png [33m404[0m 1.575 ms - 222[0m
+2023-12-10 12:56:04 info: [0mGET /public/files/albums/postPicture5f539a43c377472363dbdd37af8a523e7b124a8022122023.png [33m404[0m 1.363 ms - 222[0m
+2023-12-10 12:56:04 info: [0mGET /public/files/albums/postPictureea2cd61a368c8e214914d067fa55bccc2895295714122023.png [33m404[0m 0.508 ms - 222[0m
+2023-12-10 12:56:04 info: [0mGET /public/files/albums/postPicturee9d11ef13cf36c49bb0e8f4436d4a5003ca20cae33122023.png [33m404[0m 0.964 ms - 222[0m
+2023-12-10 12:56:04 info: [0mGET /public/files/albums/postPictureffe7acebe0fd2c1bb9e191df6d10863a0675575746122023.octet-stream [33m404[0m 0.690 ms - 231[0m
+2023-12-10 12:56:04 info: [0mGET /public/files/albums/postPicture0fd2c1bb9e191df6d10863a06755757a97f6c1bf31122023.octet-stream [33m404[0m 1.448 ms - 231[0m
+2023-12-10 12:56:04 info: [0mGET /public/files/albums/postPictureebe0fd2c1bb9e191df6d10863a06755757a97f6c11122023.octet-stream [33m404[0m 0.721 ms - 231[0m
+2023-12-10 12:56:04 info: [0mGET /public/files/albums/postPicture1485a05ad584f8f22313961672bb1e9e845c6aa205122023.octet-stream [33m404[0m 0.975 ms - 231[0m
+2023-12-10 12:56:04 info: [0mGET /public/files/albums/postPicture2c1bb9e191df6d10863a06755757a97f6c1bf0ba11122023.octet-stream [33m404[0m 1.489 ms - 231[0m
+2023-12-10 12:56:04 info: [0mGET /public/files/albums/postPicturebc134f12720fc7feb9b82da20c66021635b3d5ec16122023.octet-stream [33m404[0m 0.691 ms - 231[0m
+2023-12-10 12:56:04 info: [0mGET /public/files/albums/postPicturef5c92c6de44a35f4990bbbe2ecafce86cd5320d926122023.octet-stream [33m404[0m 0.551 ms - 231[0m
+2023-12-10 12:56:04 info: [0mGET /public/files/albums/postPictureab1ea683903e4ee8f09207748b58848b796d30b002122023.octet-stream [33m404[0m 1.774 ms - 231[0m
+2023-12-10 12:56:04 info: [0mGET /public/files/albums/postPicture83903e4ee8f09207748b58848b796d30b097255201122023.png [33m404[0m 2.012 ms - 222[0m
+2023-12-10 12:56:04 info: [0mGET /public/files/albums/postPictureea683903e4ee8f09207748b58848b796d30b097221122023.octet-stream [33m404[0m 2.379 ms - 231[0m
+2023-12-10 12:56:05 info: [0mGET /public/files/albums/postPicture5a05ad584f8f22313961672bb1e9e845c6aa291024122023.octet-stream [33m404[0m 0.685 ms - 231[0m
+2023-12-10 12:59:24 error: [POST] /changPassword/hassna@gmail.com >> StatusCode:: 400, Message:: Authentication token missing
+2023-12-10 12:59:24 info: [0mPOST /changPassword/hassna@gmail.com [33m400[0m 1.910 ms - 42[0m
+2023-12-10 13:00:20 error: [POST] /changPassword/hassna@gmail.com >> StatusCode:: 400, Message:: Authentication token missing
+2023-12-10 13:00:20 info: [0mPOST /changPassword/hassna@gmail.com [33m400[0m 1.623 ms - 42[0m
+2023-12-10 13:01:58 info: =================================
+2023-12-10 13:01:58 info: ======= ENV: development =======
+2023-12-10 13:01:58 info: 🚀 App listening on the port 8000
+2023-12-10 13:01:58 info: =================================
+2023-12-10 13:02:00 error: [POST] /changPassword/hassna@gmail.com >> StatusCode:: 400, Message:: Authentication token missing
+2023-12-10 13:02:00 info: [0mPOST /changPassword/hassna@gmail.com [33m400[0m 33.572 ms - 42[0m
+2023-12-10 13:02:32 error: [POST] /changPassword/hassna@gmail.com >> StatusCode:: 400, Message:: Authentication token missing
+2023-12-10 13:02:32 info: [0mPOST /changPassword/hassna@gmail.com [33m400[0m 4.015 ms - 42[0m
+2023-12-10 13:04:00 error: [POST] /changPassword/hassna@gmail.com >> StatusCode:: 400, Message:: Authentication token missing
+2023-12-10 13:04:00 info: [0mPOST /changPassword/hassna@gmail.com [33m400[0m 2.280 ms - 42[0m
+2023-12-10 13:08:59 error: [POST] /changPassword/hassna@gmail.com >> StatusCode:: 400, Message:: Authentication token missing
+2023-12-10 13:08:59 info: [0mPOST /changPassword/hassna@gmail.com [33m400[0m 3.365 ms - 42[0m
+2023-12-10 13:10:52 info: =================================
+2023-12-10 13:10:52 info: ======= ENV: development =======
+2023-12-10 13:10:52 info: 🚀 App listening on the port 8000
+2023-12-10 13:10:52 info: =================================
+2023-12-10 13:11:05 info: =================================
+2023-12-10 13:11:05 info: ======= ENV: development =======
+2023-12-10 13:11:05 info: 🚀 App listening on the port 8000
+2023-12-10 13:11:05 info: =================================
+2023-12-10 13:11:35 info: =================================
+2023-12-10 13:11:35 info: ======= ENV: development =======
+2023-12-10 13:11:35 info: 🚀 App listening on the port 8000
+2023-12-10 13:11:35 info: =================================
+2023-12-10 13:11:44 error: [PUT] /users/62cc6c536ffc0d571c6ac50c04fcccf2baabf068 >> StatusCode:: 400, Message:: Authentication token missing
+2023-12-10 13:11:44 info: [0mPUT /users/62cc6c536ffc0d571c6ac50c04fcccf2baabf068 [33m400[0m 43.916 ms - 42[0m
+2023-12-10 13:14:57 error: [POST] /changPassword/hassna@gmail.com >> StatusCode:: 400, Message:: Authentication token missing
+2023-12-10 13:14:57 info: [0mPOST /changPassword/hassna@gmail.com [33m400[0m 7.857 ms - 42[0m
+2023-12-10 13:17:20 error: [GET] /users/62cc6c536ffc0d571c6ac50c04fcccf2baabf068 >> StatusCode:: 401, Message:: Wrong authentication token
+2023-12-10 13:17:20 info: [0mGET /users/62cc6c536ffc0d571c6ac50c04fcccf2baabf068 [33m401[0m 17.239 ms - 40[0m
+2023-12-10 13:17:21 info: [0mPOST /refresh [32m200[0m 5.804 ms - 277[0m
+2023-12-10 13:17:23 info: [0mGET /users/62cc6c536ffc0d571c6ac50c04fcccf2baabf068 [32m200[0m 1598.959 ms - 327[0m
+2023-12-10 13:17:25 info: [0mGET /albums/categories [32m201[0m 724.639 ms - 114[0m
+2023-12-10 13:17:26 info: [0mGET /users/plans/62cc6c536ffc0d571c6ac50c04fcccf2baabf068 [32m200[0m 1526.203 ms - 151[0m
+2023-12-10 13:17:26 info: [0mGET /albums/popular [32m201[0m 1702.991 ms - -[0m
+2023-12-10 13:17:26 info: [0mGET /albums [32m201[0m 1710.418 ms - -[0m
+2023-12-10 13:17:29 info: [0mGET /public/files/albums/postPictured274b9a2a09e590a5f6d2661d9b879f0280663bc02122023.jpeg [33m404[0m 6.796 ms - 223[0m
+2023-12-10 13:17:29 info: [0mGET /public/files/albums/postPicture375f3a97b3467961505186a4241e2a6bbefb451952122023.jpeg [33m404[0m 1.555 ms - 223[0m
+2023-12-10 13:17:29 info: [0mGET /public/files/albums/postPictureb25e375f3a97b3467961505186a4241e2a6bbefb22122023.jpeg [33m404[0m 5.692 ms - 223[0m
+2023-12-10 13:17:29 info: [0mGET /public/files/albums/postPicture96bf7dff70c791a395340c0292a9f6fd29340b0625122023.png [33m404[0m 6.345 ms - 222[0m
+2023-12-10 13:17:29 info: [0mGET /public/files/albums/postPicture6f0ab25e375f3a97b3467961505186a4241e2a6b46122023.octet-stream [33m404[0m 6.663 ms - 231[0m
+2023-12-10 13:17:29 info: [0mGET /public/files/albums/postPicture90dd6f0ab25e375f3a97b3467961505186a4241e55122023.png [33m404[0m 7.643 ms - 222[0m
+2023-12-10 13:17:29 info: [0mGET /public/files/albums/postPicture656a08b0890e3b556c9baf2a64cee181b632223f46122023.png [33m404[0m 8.434 ms - 222[0m
+2023-12-10 13:17:29 info: [0mGET /public/files/albums/postPicturee360b2c019f60ad69535be615770bb1aab06112750122023.png [33m404[0m 1.423 ms - 222[0m
+2023-12-10 13:17:29 info: [0mGET /public/files/albums/postPictureefbe481a61acdf3cafa2071b05e82f15a9cf2ebd02122023.png [33m404[0m 1.439 ms - 222[0m
+2023-12-10 13:17:30 info: [0mGET /public/files/albums/postPicture505cfe5bd9b6bef9ae840078e4734144b5d9dd6e43122023.png [33m404[0m 1.665 ms - 222[0m
+2023-12-10 13:17:30 info: [0mGET /public/files/albums/postPicture9b11505cfe5bd9b6bef9ae840078e4734144b5d914122023.png [33m404[0m 2.815 ms - 222[0m
+2023-12-10 13:17:30 info: [0mGET /public/files/albums/postPictureea2cd61a368c8e214914d067fa55bccc2895295714122023.png [33m404[0m 7.400 ms - 222[0m
+2023-12-10 13:17:30 info: [0mGET /public/files/albums/postPicture5d2f8cd3f6f50e15909b11505cfe5bd9b6bef9ae42122023.png [33m404[0m 7.970 ms - 222[0m
+2023-12-10 13:17:30 info: [0mGET /public/files/albums/postPicture3d30f9e2249b636e6a6d423149a491b02cfb8e3927122023.png [33m404[0m 7.982 ms - 222[0m
+2023-12-10 13:17:30 info: [0mGET /public/files/albums/postPicture87395b6b96208af9e910167fbea922bf9dc2427537122023.png [33m404[0m 8.033 ms - 222[0m
+2023-12-10 13:17:30 info: [0mGET /public/files/albums/postPicture7b7c61ab9d61f5d12c3b0122cc6fec73eb64fc6247122023.png [33m404[0m 8.181 ms - 222[0m
+2023-12-10 13:17:30 info: [0mGET /public/files/albums/postPicturef6f50e15909b11505cfe5bd9b6bef9ae840078e432122023.png [33m404[0m 8.482 ms - 222[0m
+2023-12-10 13:17:30 info: [0mGET /public/files/albums/postPicturef50e15909b11505cfe5bd9b6bef9ae840078e47327122023.png [33m404[0m 8.311 ms - 222[0m
+2023-12-10 13:17:30 info: [0mGET /public/files/albums/postPictureac4e6f51f29d58f04d4b8c223edaec3174c9ab6716122023.png [33m404[0m 0.918 ms - 222[0m
+2023-12-10 13:17:31 info: [0mGET /public/files/albums/postPicture43c377472363dbdd37af8a523e7b124a80f6a91b41122023.png [33m404[0m 1.127 ms - 222[0m
+2023-12-10 13:17:31 info: [0mGET /public/files/albums/postPictureffe7acebe0fd2c1bb9e191df6d10863a0675575746122023.octet-stream [33m404[0m 1.079 ms - 231[0m
+2023-12-10 13:17:31 info: [0mGET /public/files/albums/postPicturee9d11ef13cf36c49bb0e8f4436d4a5003ca20cae33122023.png [33m404[0m 3.407 ms - 222[0m
+2023-12-10 13:17:31 info: [0mGET /public/files/albums/postPictureebe0fd2c1bb9e191df6d10863a06755757a97f6c11122023.octet-stream [33m404[0m 2.300 ms - 231[0m
+2023-12-10 13:17:31 info: [0mGET /public/files/albums/postPicture5a05ad584f8f22313961672bb1e9e845c6aa291024122023.octet-stream [33m404[0m 1.847 ms - 231[0m
+2023-12-10 13:17:31 info: [0mGET /public/files/albums/postPicture2c1bb9e191df6d10863a06755757a97f6c1bf0ba11122023.octet-stream [33m404[0m 2.330 ms - 231[0m
+2023-12-10 13:17:31 info: [0mGET /public/files/albums/postPicture1485a05ad584f8f22313961672bb1e9e845c6aa205122023.octet-stream [33m404[0m 2.734 ms - 231[0m
+2023-12-10 13:17:31 info: [0mGET /public/files/albums/postPicturef5c92c6de44a35f4990bbbe2ecafce86cd5320d926122023.octet-stream [33m404[0m 1.101 ms - 231[0m
+2023-12-10 13:17:31 info: [0mGET /public/files/albums/postPicturebc134f12720fc7feb9b82da20c66021635b3d5ec16122023.octet-stream [33m404[0m 2.802 ms - 231[0m
+2023-12-10 13:17:31 info: [0mGET /public/files/albums/postPicture0fd2c1bb9e191df6d10863a06755757a97f6c1bf31122023.octet-stream [33m404[0m 0.902 ms - 231[0m
+2023-12-10 13:17:32 info: [0mGET /public/files/albums/postPictureab1ea683903e4ee8f09207748b58848b796d30b002122023.octet-stream [33m404[0m 0.962 ms - 231[0m
+2023-12-10 13:17:32 info: [0mGET /public/files/albums/postPictureea683903e4ee8f09207748b58848b796d30b097221122023.octet-stream [33m404[0m 1.970 ms - 231[0m
+2023-12-10 13:17:32 info: [0mGET /public/files/albums/postPicture83903e4ee8f09207748b58848b796d30b097255201122023.png [33m404[0m 2.253 ms - 222[0m
+2023-12-10 13:22:36 info: [0mGET /public/files/albums/postPictureebe0fd2c1bb9e191df6d10863a06755757a97f6c11122023.octet-stream [33m404[0m 5.153 ms - 231[0m
+2023-12-10 13:22:36 info: [0mGET /public/files/albums/postPicture5a05ad584f8f22313961672bb1e9e845c6aa291024122023.octet-stream [33m404[0m 6.854 ms - 231[0m
+2023-12-10 13:22:36 info: [0mGET /public/files/albums/postPicture1485a05ad584f8f22313961672bb1e9e845c6aa205122023.octet-stream [33m404[0m 7.349 ms - 231[0m
+2023-12-10 13:22:36 info: [0mGET /public/files/albums/postPicture375f3a97b3467961505186a4241e2a6bbefb451952122023.jpeg [33m404[0m 4.739 ms - 223[0m
+2023-12-10 13:22:36 info: [0mGET /public/files/albums/postPictured274b9a2a09e590a5f6d2661d9b879f0280663bc02122023.jpeg [33m404[0m 5.156 ms - 223[0m
+2023-12-10 13:22:36 info: [0mGET /public/files/albums/postPictureffe7acebe0fd2c1bb9e191df6d10863a0675575746122023.octet-stream [33m404[0m 5.596 ms - 231[0m
+2023-12-10 13:22:36 info: [0mGET /public/files/albums/postPicturee360b2c019f60ad69535be615770bb1aab06112750122023.png [33m404[0m 1.716 ms - 222[0m
+2023-12-10 13:22:36 info: [0mGET /public/files/albums/postPicturee9d11ef13cf36c49bb0e8f4436d4a5003ca20cae33122023.png [33m404[0m 2.209 ms - 222[0m
+2023-12-10 13:22:36 info: [0mGET /public/files/albums/postPicture0fd2c1bb9e191df6d10863a06755757a97f6c1bf31122023.octet-stream [33m404[0m 3.201 ms - 231[0m
+2023-12-10 13:22:36 info: [0mGET /public/files/albums/postPicture5f539a43c377472363dbdd37af8a523e7b124a8022122023.png [33m404[0m 4.512 ms - 222[0m
+2023-12-10 13:22:37 info: [0mGET /public/files/albums/postPicture505cfe5bd9b6bef9ae840078e4734144b5d9dd6e43122023.png [33m404[0m 1.326 ms - 222[0m
+2023-12-10 13:22:37 info: [0mGET /public/files/albums/postPictureac4e6f51f29d58f04d4b8c223edaec3174c9ab6716122023.png [33m404[0m 1.169 ms - 222[0m
+2023-12-10 13:22:37 info: [0mGET /public/files/albums/postPicture656a08b0890e3b556c9baf2a64cee181b632223f46122023.png [33m404[0m 1.256 ms - 222[0m
+2023-12-10 13:22:37 info: [0mGET /public/files/albums/postPicture7b7c61ab9d61f5d12c3b0122cc6fec73eb64fc6247122023.png [33m404[0m 1.740 ms - 222[0m
+2023-12-10 13:22:37 info: [0mGET /public/files/albums/postPictureea683903e4ee8f09207748b58848b796d30b097221122023.octet-stream [33m404[0m 4.191 ms - 231[0m
+2023-12-10 13:22:37 info: [0mGET /public/files/albums/postPicture5d2f8cd3f6f50e15909b11505cfe5bd9b6bef9ae42122023.png [33m404[0m 4.574 ms - 222[0m
+2023-12-10 13:22:37 info: [0mGET /public/files/albums/postPictureefbe481a61acdf3cafa2071b05e82f15a9cf2ebd02122023.png [33m404[0m 5.989 ms - 222[0m
+2023-12-10 13:22:37 info: [0mGET /public/files/albums/postPicturef6f50e15909b11505cfe5bd9b6bef9ae840078e432122023.png [33m404[0m 6.523 ms - 222[0m
+2023-12-10 13:22:37 info: [0mGET /public/files/albums/postPicture2c1bb9e191df6d10863a06755757a97f6c1bf0ba11122023.octet-stream [33m404[0m 7.518 ms - 231[0m
+2023-12-10 13:22:37 info: [0mGET /public/files/albums/postPictureab1ea683903e4ee8f09207748b58848b796d30b002122023.octet-stream [33m404[0m 8.011 ms - 231[0m
+2023-12-10 13:22:38 info: [0mGET /public/files/albums/postPicture43c377472363dbdd37af8a523e7b124a80f6a91b41122023.png [33m404[0m 0.922 ms - 222[0m
+2023-12-10 13:22:38 info: [0mGET /public/files/albums/postPicturef5c92c6de44a35f4990bbbe2ecafce86cd5320d926122023.octet-stream [33m404[0m 2.180 ms - 231[0m
+2023-12-10 13:22:38 info: [0mGET /public/files/albums/postPicturef50e15909b11505cfe5bd9b6bef9ae840078e47327122023.png [33m404[0m 2.504 ms - 222[0m
+2023-12-10 13:22:38 info: [0mGET /public/files/albums/postPicture6f0ab25e375f3a97b3467961505186a4241e2a6b46122023.octet-stream [33m404[0m 3.115 ms - 231[0m
+2023-12-10 13:22:38 info: [0mGET /public/files/albums/postPicture9b11505cfe5bd9b6bef9ae840078e4734144b5d914122023.png [33m404[0m 1.570 ms - 222[0m
+2023-12-10 13:22:38 info: [0mGET /public/files/albums/postPictureb25e375f3a97b3467961505186a4241e2a6bbefb22122023.jpeg [33m404[0m 2.189 ms - 223[0m
+2023-12-10 13:22:38 info: [0mGET /public/files/albums/postPicture87395b6b96208af9e910167fbea922bf9dc2427537122023.png [33m404[0m 1.047 ms - 222[0m
+2023-12-10 13:22:38 info: [0mGET /public/files/albums/postPicture90dd6f0ab25e375f3a97b3467961505186a4241e55122023.png [33m404[0m 1.835 ms - 222[0m
+2023-12-10 13:22:38 info: [0mGET /public/files/albums/postPicturebc134f12720fc7feb9b82da20c66021635b3d5ec16122023.octet-stream [33m404[0m 2.582 ms - 231[0m
+2023-12-10 13:22:38 info: [0mGET /public/files/albums/postPicture96bf7dff70c791a395340c0292a9f6fd29340b0625122023.png [33m404[0m 1.069 ms - 222[0m
+2023-12-10 13:22:38 info: [0mGET /public/files/albums/postPictureea2cd61a368c8e214914d067fa55bccc2895295714122023.png [33m404[0m 0.879 ms - 222[0m
+2023-12-10 13:22:38 info: [0mGET /public/files/albums/postPicture3d30f9e2249b636e6a6d423149a491b02cfb8e3927122023.png [33m404[0m 0.889 ms - 222[0m
+2023-12-10 13:22:38 info: [0mGET /public/files/albums/postPicture83903e4ee8f09207748b58848b796d30b097255201122023.png [33m404[0m 1.038 ms - 222[0m
+2023-12-10 13:26:29 info: =================================
+2023-12-10 13:26:29 info: ======= ENV: development =======
+2023-12-10 13:26:29 info: 🚀 App listening on the port 8000
+2023-12-10 13:26:29 info: =================================
+2023-12-10 13:26:31 info: [0mGET /public/files/albums/postPicture6f0ab25e375f3a97b3467961505186a4241e2a6b46122023.octet-stream [33m404[0m 11.354 ms - 231[0m
+2023-12-10 13:26:31 info: [0mGET /public/files/albums/postPicture375f3a97b3467961505186a4241e2a6bbefb451952122023.jpeg [33m404[0m 13.364 ms - 223[0m
+2023-12-10 13:26:31 info: [0mGET /public/files/albums/postPicture656a08b0890e3b556c9baf2a64cee181b632223f46122023.png [33m404[0m 4.627 ms - 222[0m
+2023-12-10 13:26:31 info: [0mGET /public/files/albums/postPicturee360b2c019f60ad69535be615770bb1aab06112750122023.png [33m404[0m 5.258 ms - 222[0m
+2023-12-10 13:26:31 info: [0mGET /public/files/albums/postPictureefbe481a61acdf3cafa2071b05e82f15a9cf2ebd02122023.png [33m404[0m 5.778 ms - 222[0m
+2023-12-10 13:26:31 info: [0mGET /public/files/albums/postPictured274b9a2a09e590a5f6d2661d9b879f0280663bc02122023.jpeg [33m404[0m 7.002 ms - 223[0m
+2023-12-10 13:26:32 info: [0mGET /public/files/albums/postPicture505cfe5bd9b6bef9ae840078e4734144b5d9dd6e43122023.png [33m404[0m 0.924 ms - 222[0m
+2023-12-10 13:26:32 info: [0mGET /public/files/albums/postPicture9b11505cfe5bd9b6bef9ae840078e4734144b5d914122023.png [33m404[0m 1.052 ms - 222[0m
+2023-12-10 13:26:32 info: [0mGET /public/files/albums/postPicturef50e15909b11505cfe5bd9b6bef9ae840078e47327122023.png [33m404[0m 1.913 ms - 222[0m
+2023-12-10 13:26:32 info: [0mGET /public/files/albums/postPicturef6f50e15909b11505cfe5bd9b6bef9ae840078e432122023.png [33m404[0m 1.630 ms - 222[0m
+2023-12-10 13:26:32 info: [0mGET /public/files/albums/postPicture3d30f9e2249b636e6a6d423149a491b02cfb8e3927122023.png [33m404[0m 2.961 ms - 222[0m
+2023-12-10 13:26:32 info: [0mGET /public/files/albums/postPicture5d2f8cd3f6f50e15909b11505cfe5bd9b6bef9ae42122023.png [33m404[0m 3.495 ms - 222[0m
+2023-12-10 13:26:32 info: [0mGET /public/files/albums/postPicture7b7c61ab9d61f5d12c3b0122cc6fec73eb64fc6247122023.png [33m404[0m 1.657 ms - 222[0m
+2023-12-10 13:26:32 info: [0mGET /public/files/albums/postPicture87395b6b96208af9e910167fbea922bf9dc2427537122023.png [33m404[0m 1.245 ms - 222[0m
+2023-12-10 13:26:32 info: [0mGET /public/files/albums/postPictureea2cd61a368c8e214914d067fa55bccc2895295714122023.png [33m404[0m 1.859 ms - 222[0m
+2023-12-10 13:26:32 info: [0mGET /public/files/albums/postPicture43c377472363dbdd37af8a523e7b124a80f6a91b41122023.png [33m404[0m 0.937 ms - 222[0m
+2023-12-10 13:26:33 info: [0mGET /public/files/albums/postPicture5f539a43c377472363dbdd37af8a523e7b124a8022122023.png [33m404[0m 1.776 ms - 222[0m
+2023-12-10 13:26:33 info: [0mGET /public/files/albums/postPictureac4e6f51f29d58f04d4b8c223edaec3174c9ab6716122023.png [33m404[0m 2.468 ms - 222[0m
+2023-12-10 13:26:33 info: [0mGET /public/files/albums/postPictureb25e375f3a97b3467961505186a4241e2a6bbefb22122023.jpeg [33m404[0m 3.350 ms - 223[0m
+2023-12-10 13:26:33 info: [0mGET /public/files/albums/postPicture90dd6f0ab25e375f3a97b3467961505186a4241e55122023.png [33m404[0m 3.983 ms - 222[0m
+2023-12-10 13:26:33 info: [0mGET /public/files/albums/postPicturee9d11ef13cf36c49bb0e8f4436d4a5003ca20cae33122023.png [33m404[0m 3.932 ms - 222[0m
+2023-12-10 13:26:33 info: [0mGET /public/files/albums/postPicture96bf7dff70c791a395340c0292a9f6fd29340b0625122023.png [33m404[0m 1.035 ms - 222[0m
+2023-12-10 13:26:33 info: [0mGET /public/files/albums/postPictureffe7acebe0fd2c1bb9e191df6d10863a0675575746122023.octet-stream [33m404[0m 1.026 ms - 231[0m
+2023-12-10 13:26:33 info: [0mGET /public/files/albums/postPictureebe0fd2c1bb9e191df6d10863a06755757a97f6c11122023.octet-stream [33m404[0m 2.304 ms - 231[0m
+2023-12-10 13:26:33 info: [0mGET /public/files/albums/postPicture0fd2c1bb9e191df6d10863a06755757a97f6c1bf31122023.octet-stream [33m404[0m 2.722 ms - 231[0m
+2023-12-10 13:26:33 info: [0mGET /public/files/albums/postPicture2c1bb9e191df6d10863a06755757a97f6c1bf0ba11122023.octet-stream [33m404[0m 3.319 ms - 231[0m
+2023-12-10 13:26:33 info: [0mGET /public/files/albums/postPicture5a05ad584f8f22313961672bb1e9e845c6aa291024122023.octet-stream [33m404[0m 0.989 ms - 231[0m
+2023-12-10 13:26:34 info: [0mGET /public/files/albums/postPicturebc134f12720fc7feb9b82da20c66021635b3d5ec16122023.octet-stream [33m404[0m 1.591 ms - 231[0m
+2023-12-10 13:26:34 info: [0mGET /public/files/albums/postPicturef5c92c6de44a35f4990bbbe2ecafce86cd5320d926122023.octet-stream [33m404[0m 1.966 ms - 231[0m
+2023-12-10 13:26:34 info: [0mGET /public/files/albums/postPictureab1ea683903e4ee8f09207748b58848b796d30b002122023.octet-stream [33m404[0m 0.960 ms - 231[0m
+2023-12-10 13:26:34 info: [0mGET /public/files/albums/postPictureea683903e4ee8f09207748b58848b796d30b097221122023.octet-stream [33m404[0m 1.789 ms - 231[0m
+2023-12-10 13:26:34 info: [0mGET /public/files/albums/postPicture83903e4ee8f09207748b58848b796d30b097255201122023.png [33m404[0m 2.269 ms - 222[0m
+2023-12-10 13:26:34 info: [0mGET /public/files/albums/postPicture1485a05ad584f8f22313961672bb1e9e845c6aa205122023.octet-stream [33m404[0m 0.770 ms - 231[0m
+2023-12-10 13:26:53 error: [GET] /users/62cc6c536ffc0d571c6ac50c04fcccf2baabf068 >> StatusCode:: 401, Message:: Wrong authentication token
+2023-12-10 13:26:53 info: [0mGET /users/62cc6c536ffc0d571c6ac50c04fcccf2baabf068 [33m401[0m 30.902 ms - 40[0m
+2023-12-10 13:26:54 info: [0mPOST /refresh [32m200[0m 27.066 ms - 277[0m
+2023-12-10 13:26:56 info: [0mGET /users/62cc6c536ffc0d571c6ac50c04fcccf2baabf068 [32m200[0m 1285.982 ms - 327[0m
+2023-12-10 13:26:59 info: [0mGET /albums/categories [32m201[0m 813.663 ms - 114[0m
+2023-12-10 13:26:59 info: [0mGET /users/plans/62cc6c536ffc0d571c6ac50c04fcccf2baabf068 [32m200[0m 1440.386 ms - 151[0m
+2023-12-10 13:26:59 info: [0mGET /albums/popular [32m201[0m 1629.581 ms - -[0m
+2023-12-10 13:26:59 info: [0mGET /albums [32m201[0m 1693.415 ms - -[0m
+2023-12-10 13:28:17 error: [GET] /users/62cc6c536ffc0d571c6ac50c04fcccf2baabf068 >> StatusCode:: 401, Message:: Wrong authentication token
+2023-12-10 13:28:17 info: [0mGET /users/62cc6c536ffc0d571c6ac50c04fcccf2baabf068 [33m401[0m 4.953 ms - 40[0m
+2023-12-10 13:28:18 info: [0mPOST /refresh [32m200[0m 4.082 ms - 277[0m
+2023-12-10 13:28:21 info: [0mGET /users/62cc6c536ffc0d571c6ac50c04fcccf2baabf068 [32m200[0m 2983.903 ms - 327[0m
+2023-12-10 13:28:25 info: [0mGET /albums/categories [32m201[0m 996.109 ms - 114[0m
+2023-12-10 13:28:26 info: [0mGET /users/plans/62cc6c536ffc0d571c6ac50c04fcccf2baabf068 [32m200[0m 2365.053 ms - 151[0m
+2023-12-10 13:28:26 info: [0mGET /albums/popular [32m201[0m 2723.048 ms - -[0m
+2023-12-10 13:28:27 info: [0mGET /albums [32m201[0m 3654.268 ms - -[0m
+2023-12-10 13:44:35 error: [GET] /users/62cc6c536ffc0d571c6ac50c04fcccf2baabf068 >> StatusCode:: 401, Message:: Wrong authentication token
+2023-12-10 13:44:35 info: [0mGET /users/62cc6c536ffc0d571c6ac50c04fcccf2baabf068 [33m401[0m 4.539 ms - 40[0m
+2023-12-10 13:44:35 info: [0mPOST /refresh [32m200[0m 2.144 ms - 277[0m
+2023-12-10 13:44:37 info: [0mGET /users/62cc6c536ffc0d571c6ac50c04fcccf2baabf068 [32m200[0m 1457.267 ms - 327[0m
+2023-12-10 13:44:39 info: [0mGET /albums/categories [32m201[0m 660.662 ms - 114[0m
+2023-12-10 13:44:40 info: [0mGET /users/plans/62cc6c536ffc0d571c6ac50c04fcccf2baabf068 [32m200[0m 1451.055 ms - 151[0m
+2023-12-10 13:44:40 info: [0mGET /albums [32m201[0m 1540.691 ms - -[0m
+2023-12-10 13:44:40 info: [0mGET /albums/popular [32m201[0m 1542.363 ms - -[0m
+2023-12-10 13:44:43 info: [0mGET /public/files/albums/postPictureac4e6f51f29d58f04d4b8c223edaec3174c9ab6716122023.png [33m404[0m 1.673 ms - 222[0m
+2023-12-10 13:44:43 info: [0mGET /public/files/albums/postPictured274b9a2a09e590a5f6d2661d9b879f0280663bc02122023.jpeg [33m404[0m 0.801 ms - 223[0m
+2023-12-10 13:44:43 info: [0mGET /public/files/albums/postPictureb25e375f3a97b3467961505186a4241e2a6bbefb22122023.jpeg [33m404[0m 4.277 ms - 223[0m
+2023-12-10 13:44:43 info: [0mGET /public/files/albums/postPicture90dd6f0ab25e375f3a97b3467961505186a4241e55122023.png [33m404[0m 4.576 ms - 222[0m
+2023-12-10 13:44:43 info: [0mGET /public/files/albums/postPicture656a08b0890e3b556c9baf2a64cee181b632223f46122023.png [33m404[0m 4.843 ms - 222[0m
+2023-12-10 13:44:43 info: [0mGET /public/files/albums/postPicture375f3a97b3467961505186a4241e2a6bbefb451952122023.jpeg [33m404[0m 5.043 ms - 223[0m
+2023-12-10 13:44:43 info: [0mGET /public/files/albums/postPicture96bf7dff70c791a395340c0292a9f6fd29340b0625122023.png [33m404[0m 4.388 ms - 222[0m
+2023-12-10 13:44:43 info: [0mGET /public/files/albums/postPictureefbe481a61acdf3cafa2071b05e82f15a9cf2ebd02122023.png [33m404[0m 0.711 ms - 222[0m
+2023-12-10 13:44:43 info: [0mGET /public/files/albums/postPicturee360b2c019f60ad69535be615770bb1aab06112750122023.png [33m404[0m 0.667 ms - 222[0m
+2023-12-10 13:44:43 info: [0mGET /public/files/albums/postPicture6f0ab25e375f3a97b3467961505186a4241e2a6b46122023.octet-stream [33m404[0m 0.958 ms - 231[0m
+2023-12-10 13:44:43 info: [0mGET /public/files/albums/postPicture505cfe5bd9b6bef9ae840078e4734144b5d9dd6e43122023.png [33m404[0m 1.935 ms - 222[0m
+2023-12-10 13:44:43 info: [0mGET /public/files/albums/postPicture9b11505cfe5bd9b6bef9ae840078e4734144b5d914122023.png [33m404[0m 0.993 ms - 222[0m
+2023-12-10 13:44:44 info: [0mGET /public/files/albums/postPicturef50e15909b11505cfe5bd9b6bef9ae840078e47327122023.png [33m404[0m 0.755 ms - 222[0m
+2023-12-10 13:44:44 info: [0mGET /public/files/albums/postPicturef6f50e15909b11505cfe5bd9b6bef9ae840078e432122023.png [33m404[0m 0.674 ms - 222[0m
+2023-12-10 13:44:44 info: [0mGET /public/files/albums/postPicture5d2f8cd3f6f50e15909b11505cfe5bd9b6bef9ae42122023.png [33m404[0m 1.232 ms - 222[0m
+2023-12-10 13:44:44 info: [0mGET /public/files/albums/postPicture43c377472363dbdd37af8a523e7b124a80f6a91b41122023.png [33m404[0m 2.763 ms - 222[0m
+2023-12-10 13:44:44 info: [0mGET /public/files/albums/postPicture87395b6b96208af9e910167fbea922bf9dc2427537122023.png [33m404[0m 3.295 ms - 222[0m
+2023-12-10 13:44:44 info: [0mGET /public/files/albums/postPicture7b7c61ab9d61f5d12c3b0122cc6fec73eb64fc6247122023.png [33m404[0m 3.756 ms - 222[0m
+2023-12-10 13:44:44 info: [0mGET /public/files/albums/postPicture3d30f9e2249b636e6a6d423149a491b02cfb8e3927122023.png [33m404[0m 3.687 ms - 222[0m
+2023-12-10 13:44:44 info: [0mGET /public/files/albums/postPictureea2cd61a368c8e214914d067fa55bccc2895295714122023.png [33m404[0m 4.094 ms - 222[0m
+2023-12-10 13:44:44 info: [0mGET /public/files/albums/postPicture5f539a43c377472363dbdd37af8a523e7b124a8022122023.png [33m404[0m 0.784 ms - 222[0m
+2023-12-10 13:44:44 info: [0mGET /public/files/albums/postPicturee9d11ef13cf36c49bb0e8f4436d4a5003ca20cae33122023.png [33m404[0m 0.533 ms - 222[0m
+2023-12-10 13:44:44 info: [0mGET /public/files/albums/postPictureffe7acebe0fd2c1bb9e191df6d10863a0675575746122023.octet-stream [33m404[0m 0.687 ms - 231[0m
+2023-12-10 13:44:44 info: [0mGET /public/files/albums/postPictureebe0fd2c1bb9e191df6d10863a06755757a97f6c11122023.octet-stream [33m404[0m 0.787 ms - 231[0m
+2023-12-10 13:44:45 info: [0mGET /public/files/albums/postPicture0fd2c1bb9e191df6d10863a06755757a97f6c1bf31122023.octet-stream [33m404[0m 0.758 ms - 231[0m
+2023-12-10 13:44:45 info: [0mGET /public/files/albums/postPicture5a05ad584f8f22313961672bb1e9e845c6aa291024122023.octet-stream [33m404[0m 1.895 ms - 231[0m
+2023-12-10 13:44:45 info: [0mGET /public/files/albums/postPicture2c1bb9e191df6d10863a06755757a97f6c1bf0ba11122023.octet-stream [33m404[0m 2.207 ms - 231[0m
+2023-12-10 13:44:45 info: [0mGET /public/files/albums/postPicturef5c92c6de44a35f4990bbbe2ecafce86cd5320d926122023.octet-stream [33m404[0m 2.651 ms - 231[0m
+2023-12-10 13:44:45 info: [0mGET /public/files/albums/postPicture1485a05ad584f8f22313961672bb1e9e845c6aa205122023.octet-stream [33m404[0m 3.145 ms - 231[0m
+2023-12-10 13:44:45 info: [0mGET /public/files/albums/postPicturebc134f12720fc7feb9b82da20c66021635b3d5ec16122023.octet-stream [33m404[0m 3.613 ms - 231[0m
+2023-12-10 13:44:45 info: [0mGET /public/files/albums/postPictureab1ea683903e4ee8f09207748b58848b796d30b002122023.octet-stream [33m404[0m 1.607 ms - 231[0m
+2023-12-10 13:44:45 info: [0mGET /public/files/albums/postPicture83903e4ee8f09207748b58848b796d30b097255201122023.png [33m404[0m 1.466 ms - 222[0m
+2023-12-10 13:44:45 info: [0mGET /public/files/albums/postPictureea683903e4ee8f09207748b58848b796d30b097221122023.octet-stream [33m404[0m 1.746 ms - 231[0m
+2023-12-10 13:46:13 error: [GET] /users/62cc6c536ffc0d571c6ac50c04fcccf2baabf068 >> StatusCode:: 401, Message:: Wrong authentication token
+2023-12-10 13:46:13 info: [0mGET /users/62cc6c536ffc0d571c6ac50c04fcccf2baabf068 [33m401[0m 3.525 ms - 40[0m
+2023-12-10 13:46:14 info: [0mPOST /refresh [32m200[0m 2.222 ms - 277[0m
+2023-12-10 13:46:16 info: [0mGET /users/62cc6c536ffc0d571c6ac50c04fcccf2baabf068 [32m200[0m 1580.781 ms - 327[0m
+2023-12-10 13:46:18 info: [0mGET /albums/categories [32m201[0m 1063.631 ms - 114[0m
+2023-12-10 13:46:19 info: [0mGET /albums [32m201[0m 2196.336 ms - -[0m
+2023-12-10 13:46:20 info: [0mGET /users/plans/62cc6c536ffc0d571c6ac50c04fcccf2baabf068 [32m200[0m 2268.921 ms - 151[0m
+2023-12-10 13:46:20 info: [0mGET /albums/popular [32m201[0m 2591.885 ms - -[0m
+2023-12-10 13:46:22 info: [0mGET /public/files/albums/postPictureac4e6f51f29d58f04d4b8c223edaec3174c9ab6716122023.png [33m404[0m 1.039 ms - 222[0m
+2023-12-10 13:46:22 info: [0mGET /public/files/albums/postPicture6f0ab25e375f3a97b3467961505186a4241e2a6b46122023.octet-stream [33m404[0m 6.033 ms - 231[0m
+2023-12-10 13:46:22 info: [0mGET /public/files/albums/postPictureb25e375f3a97b3467961505186a4241e2a6bbefb22122023.jpeg [33m404[0m 6.316 ms - 223[0m
+2023-12-10 13:46:22 info: [0mGET /public/files/albums/postPictured274b9a2a09e590a5f6d2661d9b879f0280663bc02122023.jpeg [33m404[0m 6.430 ms - 223[0m
+2023-12-10 13:46:22 info: [0mGET /public/files/albums/postPicture96bf7dff70c791a395340c0292a9f6fd29340b0625122023.png [33m404[0m 6.223 ms - 222[0m
+2023-12-10 13:46:22 info: [0mGET /public/files/albums/postPicture90dd6f0ab25e375f3a97b3467961505186a4241e55122023.png [33m404[0m 6.588 ms - 222[0m
+2023-12-10 13:46:22 info: [0mGET /public/files/albums/postPictureefbe481a61acdf3cafa2071b05e82f15a9cf2ebd02122023.png [33m404[0m 6.683 ms - 222[0m
+2023-12-10 13:46:22 info: [0mGET /public/files/albums/postPicturee360b2c019f60ad69535be615770bb1aab06112750122023.png [33m404[0m 7.050 ms - 222[0m
+2023-12-10 13:46:22 info: [0mGET /public/files/albums/postPicture656a08b0890e3b556c9baf2a64cee181b632223f46122023.png [33m404[0m 7.549 ms - 222[0m
+2023-12-10 13:46:22 info: [0mGET /public/files/albums/postPicture375f3a97b3467961505186a4241e2a6bbefb451952122023.jpeg [33m404[0m 7.264 ms - 223[0m
+2023-12-10 13:46:22 info: [0mGET /public/files/albums/postPicture505cfe5bd9b6bef9ae840078e4734144b5d9dd6e43122023.png [33m404[0m 0.628 ms - 222[0m
+2023-12-10 13:46:23 info: [0mGET /public/files/albums/postPicturef50e15909b11505cfe5bd9b6bef9ae840078e47327122023.png [33m404[0m 0.797 ms - 222[0m
+2023-12-10 13:46:23 info: [0mGET /public/files/albums/postPicture9b11505cfe5bd9b6bef9ae840078e4734144b5d914122023.png [33m404[0m 3.577 ms - 222[0m
+2023-12-10 13:46:23 info: [0mGET /public/files/albums/postPicture87395b6b96208af9e910167fbea922bf9dc2427537122023.png [33m404[0m 3.751 ms - 222[0m
+2023-12-10 13:46:23 info: [0mGET /public/files/albums/postPicture3d30f9e2249b636e6a6d423149a491b02cfb8e3927122023.png [33m404[0m 3.786 ms - 222[0m
+2023-12-10 13:46:23 info: [0mGET /public/files/albums/postPicturef6f50e15909b11505cfe5bd9b6bef9ae840078e432122023.png [33m404[0m 3.891 ms - 222[0m
+2023-12-10 13:46:23 info: [0mGET /public/files/albums/postPicture7b7c61ab9d61f5d12c3b0122cc6fec73eb64fc6247122023.png [33m404[0m 5.394 ms - 222[0m
+2023-12-10 13:46:23 info: [0mGET /public/files/albums/postPicture5d2f8cd3f6f50e15909b11505cfe5bd9b6bef9ae42122023.png [33m404[0m 5.201 ms - 222[0m
+2023-12-10 13:46:23 info: [0mGET /public/files/albums/postPicture43c377472363dbdd37af8a523e7b124a80f6a91b41122023.png [33m404[0m 3.230 ms - 222[0m
+2023-12-10 13:46:23 info: [0mGET /public/files/albums/postPictureea2cd61a368c8e214914d067fa55bccc2895295714122023.png [33m404[0m 3.539 ms - 222[0m
+2023-12-10 13:46:23 info: [0mGET /public/files/albums/postPicture5f539a43c377472363dbdd37af8a523e7b124a8022122023.png [33m404[0m 0.768 ms - 222[0m
+2023-12-10 13:46:23 info: [0mGET /public/files/albums/postPicturee9d11ef13cf36c49bb0e8f4436d4a5003ca20cae33122023.png [33m404[0m 0.736 ms - 222[0m
+2023-12-10 13:46:24 info: [0mGET /public/files/albums/postPictureffe7acebe0fd2c1bb9e191df6d10863a0675575746122023.octet-stream [33m404[0m 1.165 ms - 231[0m
+2023-12-10 13:46:24 info: [0mGET /public/files/albums/postPictureebe0fd2c1bb9e191df6d10863a06755757a97f6c11122023.octet-stream [33m404[0m 1.837 ms - 231[0m
+2023-12-10 13:46:24 info: [0mGET /public/files/albums/postPicturef5c92c6de44a35f4990bbbe2ecafce86cd5320d926122023.octet-stream [33m404[0m 2.572 ms - 231[0m
+2023-12-10 13:46:24 info: [0mGET /public/files/albums/postPicture0fd2c1bb9e191df6d10863a06755757a97f6c1bf31122023.octet-stream [33m404[0m 2.800 ms - 231[0m
+2023-12-10 13:46:24 info: [0mGET /public/files/albums/postPicture2c1bb9e191df6d10863a06755757a97f6c1bf0ba11122023.octet-stream [33m404[0m 3.057 ms - 231[0m
+2023-12-10 13:46:24 info: [0mGET /public/files/albums/postPicture1485a05ad584f8f22313961672bb1e9e845c6aa205122023.octet-stream [33m404[0m 3.019 ms - 231[0m
+2023-12-10 13:46:24 info: [0mGET /public/files/albums/postPicture5a05ad584f8f22313961672bb1e9e845c6aa291024122023.octet-stream [33m404[0m 3.336 ms - 231[0m
+2023-12-10 13:46:24 info: [0mGET /public/files/albums/postPictureab1ea683903e4ee8f09207748b58848b796d30b002122023.octet-stream [33m404[0m 0.733 ms - 231[0m
+2023-12-10 13:46:24 info: [0mGET /public/files/albums/postPicturebc134f12720fc7feb9b82da20c66021635b3d5ec16122023.octet-stream [33m404[0m 0.572 ms - 231[0m
+2023-12-10 13:46:24 info: [0mGET /public/files/albums/postPictureea683903e4ee8f09207748b58848b796d30b097221122023.octet-stream [33m404[0m 0.742 ms - 231[0m
+2023-12-10 13:46:24 info: [0mGET /public/files/albums/postPicture83903e4ee8f09207748b58848b796d30b097255201122023.png [33m404[0m 1.955 ms - 222[0m
+2023-12-10 13:46:29 info: [0mGET /public/files/albums/postPicture375f3a97b3467961505186a4241e2a6bbefb451952122023.jpeg [33m404[0m 0.556 ms - 223[0m
+2023-12-10 13:46:30 info: [0mGET /public/files/albums/postPictured274b9a2a09e590a5f6d2661d9b879f0280663bc02122023.jpeg [33m404[0m 4.518 ms - 223[0m
+2023-12-10 13:46:30 info: [0mGET /public/files/albums/postPicture96bf7dff70c791a395340c0292a9f6fd29340b0625122023.png [33m404[0m 4.789 ms - 222[0m
+2023-12-10 13:46:30 info: [0mGET /public/files/albums/postPicture6f0ab25e375f3a97b3467961505186a4241e2a6b46122023.octet-stream [33m404[0m 5.151 ms - 231[0m
+2023-12-10 13:46:30 info: [0mGET /public/files/albums/postPictureb25e375f3a97b3467961505186a4241e2a6bbefb22122023.jpeg [33m404[0m 5.532 ms - 223[0m
+2023-12-10 13:46:30 info: [0mGET /public/files/albums/postPicturee360b2c019f60ad69535be615770bb1aab06112750122023.png [33m404[0m 5.854 ms - 222[0m
+2023-12-10 13:46:30 info: [0mGET /public/files/albums/postPictureefbe481a61acdf3cafa2071b05e82f15a9cf2ebd02122023.png [33m404[0m 6.585 ms - 222[0m
+2023-12-10 13:46:30 info: [0mGET /public/files/albums/postPicture90dd6f0ab25e375f3a97b3467961505186a4241e55122023.png [33m404[0m 7.244 ms - 222[0m
+2023-12-10 13:46:30 info: [0mGET /public/files/albums/postPictureac4e6f51f29d58f04d4b8c223edaec3174c9ab6716122023.png [33m404[0m 7.937 ms - 222[0m
+2023-12-10 13:46:30 info: [0mGET /public/files/albums/postPicture656a08b0890e3b556c9baf2a64cee181b632223f46122023.png [33m404[0m 8.578 ms - 222[0m
+2023-12-10 13:46:30 info: [0mGET /public/files/albums/postPicture505cfe5bd9b6bef9ae840078e4734144b5d9dd6e43122023.png [33m404[0m 0.646 ms - 222[0m
+2023-12-10 13:46:30 info: [0mGET /public/files/albums/postPicture9b11505cfe5bd9b6bef9ae840078e4734144b5d914122023.png [33m404[0m 0.789 ms - 222[0m
+2023-12-10 13:46:31 info: [0mGET /public/files/albums/postPicturef6f50e15909b11505cfe5bd9b6bef9ae840078e432122023.png [33m404[0m 2.143 ms - 222[0m
+2023-12-10 13:46:31 info: [0mGET /public/files/albums/postPicturef50e15909b11505cfe5bd9b6bef9ae840078e47327122023.png [33m404[0m 2.653 ms - 222[0m
+2023-12-10 13:46:31 info: [0mGET /public/files/albums/postPicture87395b6b96208af9e910167fbea922bf9dc2427537122023.png [33m404[0m 2.998 ms - 222[0m
+2023-12-10 13:46:31 info: [0mGET /public/files/albums/postPicture5d2f8cd3f6f50e15909b11505cfe5bd9b6bef9ae42122023.png [33m404[0m 3.371 ms - 222[0m
+2023-12-10 13:46:31 info: [0mGET /public/files/albums/postPicture7b7c61ab9d61f5d12c3b0122cc6fec73eb64fc6247122023.png [33m404[0m 3.739 ms - 222[0m
+2023-12-10 13:46:31 info: [0mGET /public/files/albums/postPicture3d30f9e2249b636e6a6d423149a491b02cfb8e3927122023.png [33m404[0m 3.863 ms - 222[0m
+2023-12-10 13:46:31 info: [0mGET /public/files/albums/postPicture5f539a43c377472363dbdd37af8a523e7b124a8022122023.png [33m404[0m 3.044 ms - 222[0m
+2023-12-10 13:46:31 info: [0mGET /public/files/albums/postPictureea2cd61a368c8e214914d067fa55bccc2895295714122023.png [33m404[0m 2.199 ms - 222[0m
+2023-12-10 13:46:31 info: [0mGET /public/files/albums/postPicture43c377472363dbdd37af8a523e7b124a80f6a91b41122023.png [33m404[0m 3.697 ms - 222[0m
+2023-12-10 13:46:31 info: [0mGET /public/files/albums/postPicturee9d11ef13cf36c49bb0e8f4436d4a5003ca20cae33122023.png [33m404[0m 0.726 ms - 222[0m
+2023-12-10 13:46:31 info: [0mGET /public/files/albums/postPictureffe7acebe0fd2c1bb9e191df6d10863a0675575746122023.octet-stream [33m404[0m 0.774 ms - 231[0m
+2023-12-10 13:46:32 info: [0mGET /public/files/albums/postPicture0fd2c1bb9e191df6d10863a06755757a97f6c1bf31122023.octet-stream [33m404[0m 1.644 ms - 231[0m
+2023-12-10 13:46:32 info: [0mGET /public/files/albums/postPicture2c1bb9e191df6d10863a06755757a97f6c1bf0ba11122023.octet-stream [33m404[0m 1.044 ms - 231[0m
+2023-12-10 13:46:32 info: [0mGET /public/files/albums/postPicture5a05ad584f8f22313961672bb1e9e845c6aa291024122023.octet-stream [33m404[0m 2.128 ms - 231[0m
+2023-12-10 13:46:32 info: [0mGET /public/files/albums/postPicture1485a05ad584f8f22313961672bb1e9e845c6aa205122023.octet-stream [33m404[0m 2.596 ms - 231[0m
+2023-12-10 13:46:32 info: [0mGET /public/files/albums/postPictureebe0fd2c1bb9e191df6d10863a06755757a97f6c11122023.octet-stream [33m404[0m 2.936 ms - 231[0m
+2023-12-10 13:46:32 info: [0mGET /public/files/albums/postPicturebc134f12720fc7feb9b82da20c66021635b3d5ec16122023.octet-stream [33m404[0m 3.370 ms - 231[0m
+2023-12-10 13:46:32 info: [0mGET /public/files/albums/postPictureea683903e4ee8f09207748b58848b796d30b097221122023.octet-stream [33m404[0m 0.842 ms - 231[0m
+2023-12-10 13:46:32 info: [0mGET /public/files/albums/postPictureab1ea683903e4ee8f09207748b58848b796d30b002122023.octet-stream [33m404[0m 1.387 ms - 231[0m
+2023-12-10 13:46:32 info: [0mGET /public/files/albums/postPicturef5c92c6de44a35f4990bbbe2ecafce86cd5320d926122023.octet-stream [33m404[0m 5.040 ms - 231[0m
+2023-12-10 13:46:32 info: [0mGET /public/files/albums/postPicture83903e4ee8f09207748b58848b796d30b097255201122023.png [33m404[0m 0.755 ms - 222[0m
+2023-12-10 13:46:44 info: [0mGET /users/62cc6c536ffc0d571c6ac50c04fcccf2baabf068 [32m200[0m 1303.043 ms - 327[0m
+2023-12-10 13:46:47 info: [0mGET /albums/categories [32m201[0m 904.291 ms - 114[0m
+2023-12-10 13:46:47 info: [0mGET /users/plans/62cc6c536ffc0d571c6ac50c04fcccf2baabf068 [32m200[0m 1564.169 ms - 151[0m
+2023-12-10 13:46:48 info: [0mGET /albums/popular [32m201[0m 1708.922 ms - -[0m
+2023-12-10 13:46:48 info: [0mGET /albums [32m201[0m 2275.394 ms - -[0m
+2023-12-10 13:47:00 info: [0mPUT /users/62cc6c536ffc0d571c6ac50c04fcccf2baabf068 [32m200[0m 2426.870 ms - 362[0m
+2023-12-10 13:49:54 error: [POST] /changePassword/hassna@gmail.com >> StatusCode:: 401, Message:: Wrong authentication token
+2023-12-10 13:49:54 info: [0mPOST /changePassword/hassna@gmail.com [33m401[0m 4.357 ms - 40[0m
+2023-12-10 13:49:55 info: [0mPOST /refresh [32m200[0m 1.726 ms - 277[0m
+2023-12-10 13:50:37 info: [0mPOST /changePassword/hassna@gmail.com [33m400[0m 1423.421 ms - 35[0m
+2023-12-10 13:51:10 info: =================================
+2023-12-10 13:51:10 info: ======= ENV: development =======
+2023-12-10 13:51:10 info: 🚀 App listening on the port 8000
+2023-12-10 13:51:10 info: =================================
+2023-12-10 13:54:59 info: =================================
+2023-12-10 13:54:59 info: ======= ENV: development =======
+2023-12-10 13:54:59 info: 🚀 App listening on the port 8000
+2023-12-10 13:54:59 info: =================================
+2023-12-10 13:55:57 info: [0mPOST /login [32m200[0m 2156.010 ms - 714[0m
+2023-12-10 13:55:59 info: [0mGET /public/files/avatars/avatare1d640e916c8628de70bf8ec0bd97461577cc85a.jpeg [32m200[0m 22.491 ms - 64167[0m
+2023-12-10 13:56:00 info: [0mGET /albums/categories [32m201[0m 1203.573 ms - 114[0m
+2023-12-10 13:56:01 info: [0mGET /users/plans/e1d640e916c8628de70bf8ec0bd97461577cc85a [32m200[0m 2426.124 ms - 223[0m
+2023-12-10 13:56:01 info: [0mGET /albums/popular [32m201[0m 2668.915 ms - -[0m
+2023-12-10 13:56:03 info: [0mGET /albums [32m201[0m 4376.316 ms - -[0m
+2023-12-10 13:57:16 error: [POST] /changePassword/SaraAloui@gmail.com >> StatusCode:: 401, Message:: Wrong authentication token
+2023-12-10 13:57:16 info: [0mPOST /changePassword/SaraAloui@gmail.com [33m401[0m 9.270 ms - 40[0m
+2023-12-10 13:57:17 info: [0mPOST /refresh [32m200[0m 2.099 ms - 277[0m
+2023-12-10 13:57:18 info: [0mPOST /changePassword/SaraAloui@gmail.com [32m200[0m 1494.447 ms - 48[0m
+2023-12-10 13:59:09 info: =================================
+2023-12-10 13:59:09 info: ======= ENV: development =======
+2023-12-10 13:59:09 info: 🚀 App listening on the port 8000
+2023-12-10 13:59:09 info: =================================
+2023-12-10 13:59:11 error: [POST] /changePassword/SaraAloui@gmail.com >> StatusCode:: 401, Message:: Wrong authentication token
+2023-12-10 13:59:11 info: [0mPOST /changePassword/SaraAloui@gmail.com [33m401[0m 40.537 ms - 40[0m
+2023-12-10 13:59:11 info: [0mPOST /refresh [32m200[0m 10.165 ms - 277[0m
+2023-12-10 13:59:13 info: [0mPOST /changePassword/SaraAloui@gmail.com [32m200[0m 1487.402 ms - 39[0m
+2023-12-10 14:00:58 error: [POST] /changePassword/SaraAloui@gmail.com >> StatusCode:: 401, Message:: Wrong authentication token
+2023-12-10 14:00:58 info: [0mPOST /changePassword/SaraAloui@gmail.com [33m401[0m 4.987 ms - 40[0m
+2023-12-10 14:00:58 info: [0mPOST /refresh [32m200[0m 2.711 ms - 276[0m
+2023-12-10 14:01:00 info: [0mPOST /changePassword/SaraAloui@gmail.com [32m200[0m 1515.399 ms - 39[0m
+2023-12-10 14:01:14 info: [0mPOST /changePassword/SaraAloui@gmail.com [32m200[0m 1529.292 ms - 39[0m
+2023-12-10 14:01:37 info: [0mPOST /changePassword/SaraAloui@gmail.com [32m200[0m 2141.325 ms - 39[0m
+2023-12-10 14:02:14 info: =================================
+2023-12-10 14:02:14 info: ======= ENV: development =======
+2023-12-10 14:02:14 info: 🚀 App listening on the port 8000
+2023-12-10 14:02:14 info: =================================
+2023-12-10 14:02:18 error: [POST] /changePassword/SaraAloui@gmail.com >> StatusCode:: 401, Message:: Wrong authentication token
+2023-12-10 14:02:18 info: [0mPOST /changePassword/SaraAloui@gmail.com [33m401[0m 36.862 ms - 40[0m
+2023-12-10 14:02:18 info: [0mPOST /refresh [32m200[0m 4.043 ms - 276[0m
+2023-12-10 14:02:35 info: =================================
+2023-12-10 14:02:35 info: ======= ENV: development =======
+2023-12-10 14:02:35 info: 🚀 App listening on the port 8000
+2023-12-10 14:02:35 info: =================================
+2023-12-10 14:03:26 info: [0mPOST /login [32m200[0m 1529.334 ms - 713[0m
+2023-12-10 14:03:28 info: [0mGET /albums/categories [32m201[0m 877.040 ms - 114[0m
+2023-12-10 14:03:29 info: [0mGET /albums/popular [32m201[0m 1626.630 ms - -[0m
+2023-12-10 14:03:30 info: [0mGET /users/plans/e1d640e916c8628de70bf8ec0bd97461577cc85a [32m200[0m 2510.551 ms - 223[0m
+2023-12-10 14:03:30 info: [0mGET /albums [32m201[0m 2506.519 ms - -[0m
+2023-12-10 14:04:07 info: [0mPOST /changePassword/SaraAloui@gmail.com [32m200[0m 2024.703 ms - 433[0m
+2023-12-10 14:04:26 info: [0mGET /public/files/albums/postPictureac4e6f51f29d58f04d4b8c223edaec3174c9ab6716122023.png [33m404[0m 3.536 ms - 222[0m
+2023-12-10 14:04:26 info: [0mGET /public/files/albums/postPictureb25e375f3a97b3467961505186a4241e2a6bbefb22122023.jpeg [33m404[0m 3.859 ms - 223[0m
+2023-12-10 14:04:26 info: [0mGET /public/files/albums/postPicture96bf7dff70c791a395340c0292a9f6fd29340b0625122023.png [33m404[0m 3.934 ms - 222[0m
+2023-12-10 14:04:26 info: [0mGET /public/files/albums/postPictureefbe481a61acdf3cafa2071b05e82f15a9cf2ebd02122023.png [33m404[0m 3.980 ms - 222[0m
+2023-12-10 14:04:26 info: [0mGET /public/files/albums/postPictured274b9a2a09e590a5f6d2661d9b879f0280663bc02122023.jpeg [33m404[0m 4.097 ms - 223[0m
+2023-12-10 14:04:26 info: [0mGET /public/files/albums/postPicture6f0ab25e375f3a97b3467961505186a4241e2a6b46122023.octet-stream [33m404[0m 1.918 ms - 231[0m
+2023-12-10 14:04:26 info: [0mGET /public/files/albums/postPicture656a08b0890e3b556c9baf2a64cee181b632223f46122023.png [33m404[0m 2.336 ms - 222[0m
+2023-12-10 14:04:26 info: [0mGET /public/files/albums/postPicture375f3a97b3467961505186a4241e2a6bbefb451952122023.jpeg [33m404[0m 0.738 ms - 223[0m
+2023-12-10 14:04:26 info: [0mGET /public/files/albums/postPicturee360b2c019f60ad69535be615770bb1aab06112750122023.png [33m404[0m 0.887 ms - 222[0m
+2023-12-10 14:04:27 info: [0mGET /public/files/albums/postPicture505cfe5bd9b6bef9ae840078e4734144b5d9dd6e43122023.png [33m404[0m 0.584 ms - 222[0m
+2023-12-10 14:04:27 info: [0mGET /public/files/albums/postPicturef50e15909b11505cfe5bd9b6bef9ae840078e47327122023.png [33m404[0m 0.600 ms - 222[0m
+2023-12-10 14:04:27 info: [0mGET /public/files/albums/postPicture9b11505cfe5bd9b6bef9ae840078e4734144b5d914122023.png [33m404[0m 2.414 ms - 222[0m
+2023-12-10 14:04:27 info: [0mGET /public/files/albums/postPicturef6f50e15909b11505cfe5bd9b6bef9ae840078e432122023.png [33m404[0m 4.706 ms - 222[0m
+2023-12-10 14:04:27 info: [0mGET /public/files/albums/postPicture7b7c61ab9d61f5d12c3b0122cc6fec73eb64fc6247122023.png [33m404[0m 3.778 ms - 222[0m
+2023-12-10 14:04:27 info: [0mGET /public/files/albums/postPicture5d2f8cd3f6f50e15909b11505cfe5bd9b6bef9ae42122023.png [33m404[0m 3.826 ms - 222[0m
+2023-12-10 14:04:27 info: [0mGET /public/files/albums/postPicture3d30f9e2249b636e6a6d423149a491b02cfb8e3927122023.png [33m404[0m 3.941 ms - 222[0m
+2023-12-10 14:04:27 info: [0mGET /public/files/albums/postPicture87395b6b96208af9e910167fbea922bf9dc2427537122023.png [33m404[0m 0.614 ms - 222[0m
+2023-12-10 14:04:27 info: [0mGET /public/files/albums/postPictureea2cd61a368c8e214914d067fa55bccc2895295714122023.png [33m404[0m 0.637 ms - 222[0m
+2023-12-10 14:04:27 info: [0mGET /public/files/albums/postPicture90dd6f0ab25e375f3a97b3467961505186a4241e55122023.png [33m404[0m 0.618 ms - 222[0m
+2023-12-10 14:04:27 info: [0mGET /public/files/albums/postPicture43c377472363dbdd37af8a523e7b124a80f6a91b41122023.png [33m404[0m 0.594 ms - 222[0m
+2023-12-10 14:04:27 info: [0mGET /public/files/albums/postPicture5f539a43c377472363dbdd37af8a523e7b124a8022122023.png [33m404[0m 0.538 ms - 222[0m
+2023-12-10 14:04:27 info: [0mGET /public/files/albums/postPicturee9d11ef13cf36c49bb0e8f4436d4a5003ca20cae33122023.png [33m404[0m 0.613 ms - 222[0m
+2023-12-10 14:04:27 info: [0mGET /public/files/albums/postPicture0fd2c1bb9e191df6d10863a06755757a97f6c1bf31122023.octet-stream [33m404[0m 0.684 ms - 231[0m
+2023-12-10 14:04:27 info: [0mGET /public/files/albums/postPictureebe0fd2c1bb9e191df6d10863a06755757a97f6c11122023.octet-stream [33m404[0m 0.586 ms - 231[0m
+2023-12-10 14:04:28 info: [0mGET /public/files/albums/postPicture5a05ad584f8f22313961672bb1e9e845c6aa291024122023.octet-stream [33m404[0m 0.592 ms - 231[0m
+2023-12-10 14:04:28 info: [0mGET /public/files/albums/postPicture1485a05ad584f8f22313961672bb1e9e845c6aa205122023.octet-stream [33m404[0m 0.462 ms - 231[0m
+2023-12-10 14:04:28 info: [0mGET /public/files/albums/postPictureffe7acebe0fd2c1bb9e191df6d10863a0675575746122023.octet-stream [33m404[0m 1.808 ms - 231[0m
+2023-12-10 14:04:28 info: [0mGET /public/files/albums/postPictureab1ea683903e4ee8f09207748b58848b796d30b002122023.octet-stream [33m404[0m 2.351 ms - 231[0m
+2023-12-10 14:04:28 info: [0mGET /public/files/albums/postPicture2c1bb9e191df6d10863a06755757a97f6c1bf0ba11122023.octet-stream [33m404[0m 2.805 ms - 231[0m
+2023-12-10 14:04:28 info: [0mGET /public/files/albums/postPicturebc134f12720fc7feb9b82da20c66021635b3d5ec16122023.octet-stream [33m404[0m 3.018 ms - 231[0m
+2023-12-10 14:04:28 info: [0mGET /public/files/albums/postPicturef5c92c6de44a35f4990bbbe2ecafce86cd5320d926122023.octet-stream [33m404[0m 3.925 ms - 231[0m
+2023-12-10 14:04:28 info: [0mGET /public/files/albums/postPicture83903e4ee8f09207748b58848b796d30b097255201122023.png [33m404[0m 0.505 ms - 222[0m
+2023-12-10 14:04:28 info: [0mGET /public/files/albums/postPictureea683903e4ee8f09207748b58848b796d30b097221122023.octet-stream [33m404[0m 0.564 ms - 231[0m
+2023-12-10 14:04:44 info: [0mPOST /login [33m403[0m 701.028 ms - 44[0m
+2023-12-10 14:04:51 info: [0mPOST /login [33m403[0m 681.610 ms - 44[0m
+2023-12-10 14:05:03 info: [0mPOST /login [32m200[0m 1329.104 ms - 712[0m
+2023-12-10 14:05:05 info: [0mGET /albums/categories [32m201[0m 790.108 ms - 114[0m
+2023-12-10 14:05:05 info: [0mGET /albums/popular [32m201[0m 1511.895 ms - -[0m
+2023-12-10 14:05:06 info: [0mGET /albums [32m201[0m 1681.490 ms - -[0m
+2023-12-10 14:05:06 info: [0mGET /users/plans/e1d640e916c8628de70bf8ec0bd97461577cc85a [32m200[0m 1840.304 ms - 223[0m
+2023-12-10 14:08:21 error: [POST] /changePassword/SaraAloui@gmail.com >> StatusCode:: 401, Message:: Wrong authentication token
+2023-12-10 14:08:21 info: [0mPOST /changePassword/SaraAloui@gmail.com [33m401[0m 7.384 ms - 40[0m
+2023-12-10 14:08:21 info: [0mPOST /refresh [32m200[0m 2.017 ms - 276[0m
+2023-12-10 14:08:23 info: [0mPOST /changePassword/SaraAloui@gmail.com [32m200[0m 1780.635 ms - 433[0m
+2023-12-10 14:13:59 error: [PUT] /users/e1d640e916c8628de70bf8ec0bd97461577cc85a >> StatusCode:: 401, Message:: Wrong authentication token
+2023-12-10 14:13:59 info: [0mPUT /users/e1d640e916c8628de70bf8ec0bd97461577cc85a [33m401[0m 13.310 ms - 40[0m
+2023-12-10 14:14:00 info: [0mPOST /refresh [32m200[0m 1.825 ms - 276[0m
+2023-12-10 14:14:02 info: [0mPUT /users/e1d640e916c8628de70bf8ec0bd97461577cc85a [32m200[0m 1789.571 ms - 463[0m
+2023-12-10 14:14:22 info: [0mPUT /users/e1d640e916c8628de70bf8ec0bd97461577cc85a [32m200[0m 1766.647 ms - 460[0m
+2023-12-10 14:15:35 error: [PUT] /users/e1d640e916c8628de70bf8ec0bd97461577cc85a >> StatusCode:: 401, Message:: Wrong authentication token
+2023-12-10 14:15:35 info: [0mPUT /users/e1d640e916c8628de70bf8ec0bd97461577cc85a [33m401[0m 4.893 ms - 40[0m
+2023-12-10 14:15:35 info: [0mPOST /refresh [32m200[0m 1.778 ms - 277[0m
+2023-12-10 14:15:37 info: [0mPUT /users/e1d640e916c8628de70bf8ec0bd97461577cc85a [32m200[0m 1957.619 ms - 463[0m
+2023-12-10 14:17:15 error: [POST] /changePassword/SaraAloui@gmail.com >> StatusCode:: 401, Message:: Wrong authentication token
+2023-12-10 14:17:15 info: [0mPOST /changePassword/SaraAloui@gmail.com [33m401[0m 6.275 ms - 40[0m
+2023-12-10 14:17:15 info: [0mPOST /refresh [32m200[0m 2.166 ms - 277[0m
+2023-12-10 14:17:17 info: [0mPOST /changePassword/SaraAloui@gmail.com [32m200[0m 1394.876 ms - 39[0m
+2023-12-10 14:17:30 info: [0mPOST /changePassword/SaraAloui@gmail.com [32m200[0m 2265.104 ms - 434[0m
+2023-12-10 14:17:55 info: [0mPOST /changePassword/SaraAloui@gmail.com [32m200[0m 2328.456 ms - 434[0m
+2023-12-10 14:18:10 info: [0mPOST /changePassword/SaraAloui@gmail.com [32m200[0m 2023.496 ms - 434[0m
+2023-12-10 14:18:15 error: [POST] /changePassword/SaraAloui@gmail.com >> StatusCode:: 401, Message:: Wrong authentication token
+2023-12-10 14:18:15 info: [0mPOST /changePassword/SaraAloui@gmail.com [33m401[0m 5.596 ms - 40[0m
+2023-12-10 14:18:15 info: [0mPOST /refresh [32m200[0m 3.039 ms - 277[0m
+2023-12-10 14:18:18 info: [0mPOST /changePassword/SaraAloui@gmail.com [32m200[0m 1963.005 ms - 434[0m
+2023-12-10 14:18:29 info: [0mPOST /changePassword/SaraAloui@gmail.com [32m200[0m 1849.350 ms - 434[0m
+2023-12-10 14:18:43 info: [0mPOST /changePassword/SaraAloui@gmail.com [32m200[0m 1876.261 ms - 434[0m
+2023-12-10 14:18:53 info: [0mPOST /changePassword/SaraAloui@gmail.com [32m200[0m 2205.787 ms - 434[0m
+2023-12-10 14:19:02 info: [0mPOST /changePassword/SaraAloui@gmail.com [32m200[0m 1984.121 ms - 434[0m
+2023-12-10 14:19:24 error: [POST] /changePassword/SaraAloui@gmail.com >> StatusCode:: 401, Message:: Wrong authentication token
+2023-12-10 14:19:24 info: [0mPOST /changePassword/SaraAloui@gmail.com [33m401[0m 5.570 ms - 40[0m
+2023-12-10 14:19:25 info: [0mPOST /refresh [32m200[0m 2.685 ms - 277[0m
+2023-12-10 14:19:28 info: [0mPOST /changePassword/SaraAloui@gmail.com [32m200[0m 3434.993 ms - 434[0m
+2023-12-10 14:19:37 info: [0mPOST /changePassword/SaraAloui@gmail.com [32m200[0m 2045.840 ms - 434[0m
+2023-12-10 14:19:46 info: [0mPOST /changePassword/SaraAloui@gmail.com [32m200[0m 2274.054 ms - 434[0m
+2023-12-10 14:19:52 info: [0mPOST /changePassword/SaraAloui@gmail.com [32m200[0m 1865.004 ms - 434[0m
+2023-12-10 14:20:02 info: [0mPOST /changePassword/SaraAloui@gmail.com [32m200[0m 1941.915 ms - 434[0m
+2023-12-10 14:20:11 info: [0mPOST /changePassword/SaraAloui@gmail.com [32m200[0m 1864.132 ms - 434[0m
+2023-12-10 14:20:55 error: [PUT] /users/e1d640e916c8628de70bf8ec0bd97461577cc85a >> StatusCode:: 401, Message:: Wrong authentication token
+2023-12-10 14:20:55 info: [0mPUT /users/e1d640e916c8628de70bf8ec0bd97461577cc85a [33m401[0m 4.519 ms - 40[0m
+2023-12-10 14:20:55 info: [0mPOST /refresh [32m200[0m 2.035 ms - 277[0m
+2023-12-10 14:20:58 info: [0mPUT /users/e1d640e916c8628de70bf8ec0bd97461577cc85a [32m200[0m 2177.307 ms - 464[0m
+2023-12-10 14:21:33 info: [0mPOST /users/upload/avatar/e1d640e916c8628de70bf8ec0bd97461577cc85a [32m201[0m 1055.493 ms - 52[0m
+2023-12-10 14:22:00 error: [POST] /users/upload/avatar/e1d640e916c8628de70bf8ec0bd97461577cc85a >> StatusCode:: 401, Message:: Wrong authentication token
+2023-12-10 14:22:00 info: [0mPOST /users/upload/avatar/e1d640e916c8628de70bf8ec0bd97461577cc85a [33m401[0m 591.925 ms - 40[0m
+2023-12-10 14:22:00 info: [0mPOST /refresh [32m200[0m 2.049 ms - 276[0m
+2023-12-10 14:22:34 info: [0mPUT /users/e1d640e916c8628de70bf8ec0bd97461577cc85a [32m200[0m 1892.617 ms - 466[0m
+2023-12-10 14:22:49 info: [0mPUT /users/e1d640e916c8628de70bf8ec0bd97461577cc85a [32m200[0m 1791.271 ms - 459[0m
+2023-12-10 14:23:21 error: [GET] /users/e1d640e916c8628de70bf8ec0bd97461577cc85a >> StatusCode:: 401, Message:: Wrong authentication token
+2023-12-10 14:23:21 info: [0mGET /users/e1d640e916c8628de70bf8ec0bd97461577cc85a [33m401[0m 6.080 ms - 40[0m
+2023-12-10 14:23:21 info: [0mPOST /refresh [32m200[0m 4.302 ms - 277[0m
+2023-12-10 14:23:23 info: [0mGET /users/e1d640e916c8628de70bf8ec0bd97461577cc85a [32m200[0m 1503.672 ms - 430[0m
+2023-12-10 14:23:26 info: [0mGET /albums/categories [32m201[0m 726.661 ms - 114[0m
+2023-12-10 14:23:27 info: [0mGET /users/plans/e1d640e916c8628de70bf8ec0bd97461577cc85a [32m200[0m 1542.389 ms - 223[0m
+2023-12-10 14:23:27 info: [0mGET /albums [32m201[0m 1702.820 ms - -[0m
+2023-12-10 14:23:27 info: [0mGET /albums/popular [32m201[0m 1933.394 ms - -[0m
+2023-12-10 14:23:29 info: [0mGET /public/files/albums/postPictureac4e6f51f29d58f04d4b8c223edaec3174c9ab6716122023.png [33m404[0m 1.790 ms - 222[0m
+2023-12-10 14:23:30 info: [0mGET /public/files/albums/postPicture375f3a97b3467961505186a4241e2a6bbefb451952122023.jpeg [33m404[0m 1.621 ms - 223[0m
+2023-12-10 14:23:30 info: [0mGET /public/files/albums/postPictured274b9a2a09e590a5f6d2661d9b879f0280663bc02122023.jpeg [33m404[0m 2.469 ms - 223[0m
+2023-12-10 14:23:30 info: [0mGET /public/files/albums/postPictureb25e375f3a97b3467961505186a4241e2a6bbefb22122023.jpeg [33m404[0m 2.985 ms - 223[0m
+2023-12-10 14:23:30 info: [0mGET /public/files/albums/postPicture6f0ab25e375f3a97b3467961505186a4241e2a6b46122023.octet-stream [33m404[0m 0.807 ms - 231[0m
+2023-12-10 14:23:30 info: [0mGET /public/files/albums/postPictureefbe481a61acdf3cafa2071b05e82f15a9cf2ebd02122023.png [33m404[0m 0.875 ms - 222[0m
+2023-12-10 14:23:30 info: [0mGET /public/files/albums/postPicture90dd6f0ab25e375f3a97b3467961505186a4241e55122023.png [33m404[0m 2.026 ms - 222[0m
+2023-12-10 14:23:30 info: [0mGET /public/files/albums/postPicture656a08b0890e3b556c9baf2a64cee181b632223f46122023.png [33m404[0m 2.402 ms - 222[0m
+2023-12-10 14:23:30 info: [0mGET /public/files/albums/postPicture96bf7dff70c791a395340c0292a9f6fd29340b0625122023.png [33m404[0m 3.174 ms - 222[0m
+2023-12-10 14:23:30 info: [0mGET /public/files/albums/postPicturee360b2c019f60ad69535be615770bb1aab06112750122023.png [33m404[0m 3.358 ms - 222[0m
+2023-12-10 14:23:30 info: [0mGET /public/files/albums/postPicture505cfe5bd9b6bef9ae840078e4734144b5d9dd6e43122023.png [33m404[0m 1.332 ms - 222[0m
+2023-12-10 14:23:30 info: [0mGET /public/files/albums/postPicture9b11505cfe5bd9b6bef9ae840078e4734144b5d914122023.png [33m404[0m 1.860 ms - 222[0m
+2023-12-10 14:23:30 info: [0mGET /public/files/albums/postPicturef50e15909b11505cfe5bd9b6bef9ae840078e47327122023.png [33m404[0m 0.606 ms - 222[0m
+2023-12-10 14:23:30 info: [0mGET /public/files/albums/postPicturef6f50e15909b11505cfe5bd9b6bef9ae840078e432122023.png [33m404[0m 1.024 ms - 222[0m
+2023-12-10 14:23:30 info: [0mGET /public/files/albums/postPicture5d2f8cd3f6f50e15909b11505cfe5bd9b6bef9ae42122023.png [33m404[0m 0.950 ms - 222[0m
+2023-12-10 14:23:30 info: [0mGET /public/files/albums/postPicture3d30f9e2249b636e6a6d423149a491b02cfb8e3927122023.png [33m404[0m 2.215 ms - 222[0m
+2023-12-10 14:23:30 info: [0mGET /public/files/albums/postPicture7b7c61ab9d61f5d12c3b0122cc6fec73eb64fc6247122023.png [33m404[0m 1.768 ms - 222[0m
+2023-12-10 14:23:31 info: [0mGET /public/files/albums/postPicture87395b6b96208af9e910167fbea922bf9dc2427537122023.png [33m404[0m 1.302 ms - 222[0m
+2023-12-10 14:23:31 info: [0mGET /public/files/albums/postPictureea2cd61a368c8e214914d067fa55bccc2895295714122023.png [33m404[0m 2.248 ms - 222[0m
+2023-12-10 14:23:31 info: [0mGET /public/files/albums/postPicture43c377472363dbdd37af8a523e7b124a80f6a91b41122023.png [33m404[0m 0.809 ms - 222[0m
+2023-12-10 14:23:31 info: [0mGET /public/files/albums/postPicture5f539a43c377472363dbdd37af8a523e7b124a8022122023.png [33m404[0m 1.236 ms - 222[0m
+2023-12-10 14:23:31 info: [0mGET /public/files/albums/postPicturee9d11ef13cf36c49bb0e8f4436d4a5003ca20cae33122023.png [33m404[0m 1.909 ms - 222[0m
+2023-12-10 14:23:31 info: [0mGET /public/files/albums/postPictureffe7acebe0fd2c1bb9e191df6d10863a0675575746122023.octet-stream [33m404[0m 2.078 ms - 231[0m
+2023-12-10 14:23:31 info: [0mGET /public/files/albums/postPictureebe0fd2c1bb9e191df6d10863a06755757a97f6c11122023.octet-stream [33m404[0m 0.602 ms - 231[0m
+2023-12-10 14:23:31 info: [0mGET /public/files/albums/postPicture0fd2c1bb9e191df6d10863a06755757a97f6c1bf31122023.octet-stream [33m404[0m 0.741 ms - 231[0m
+2023-12-10 14:23:31 info: [0mGET /public/files/albums/postPicture1485a05ad584f8f22313961672bb1e9e845c6aa205122023.octet-stream [33m404[0m 1.828 ms - 231[0m
+2023-12-10 14:23:31 info: [0mGET /public/files/albums/postPicture2c1bb9e191df6d10863a06755757a97f6c1bf0ba11122023.octet-stream [33m404[0m 2.414 ms - 231[0m
+2023-12-10 14:23:31 info: [0mGET /public/files/albums/postPicture5a05ad584f8f22313961672bb1e9e845c6aa291024122023.octet-stream [33m404[0m 3.486 ms - 231[0m
+2023-12-10 14:23:31 info: [0mGET /public/files/albums/postPicturebc134f12720fc7feb9b82da20c66021635b3d5ec16122023.octet-stream [33m404[0m 0.723 ms - 231[0m
+2023-12-10 14:23:31 info: [0mGET /public/files/albums/postPicturef5c92c6de44a35f4990bbbe2ecafce86cd5320d926122023.octet-stream [33m404[0m 0.844 ms - 231[0m
+2023-12-10 14:23:32 info: [0mGET /public/files/albums/postPictureea683903e4ee8f09207748b58848b796d30b097221122023.octet-stream [33m404[0m 1.226 ms - 231[0m
+2023-12-10 14:23:32 info: [0mGET /public/files/albums/postPictureab1ea683903e4ee8f09207748b58848b796d30b002122023.octet-stream [33m404[0m 1.980 ms - 231[0m
+2023-12-10 14:23:32 info: [0mGET /public/files/albums/postPicture83903e4ee8f09207748b58848b796d30b097255201122023.png [33m404[0m 0.935 ms - 222[0m
+2023-12-10 14:55:12 error: [POST] /changePassword/SaraAloui@gmail.com >> StatusCode:: 401, Message:: Wrong authentication token
+2023-12-10 14:55:12 info: [0mPOST /changePassword/SaraAloui@gmail.com [33m401[0m 5.208 ms - 40[0m
+2023-12-10 14:55:12 info: [0mPOST /refresh [32m200[0m 1.644 ms - 277[0m
+2023-12-10 14:55:14 info: [0mPOST /changePassword/SaraAloui@gmail.com [32m200[0m 1375.866 ms - 39[0m
+2023-12-10 14:55:26 info: [0mPOST /changePassword/SaraAloui@gmail.com [32m200[0m 3846.545 ms - 430[0m
+2023-12-10 15:02:55 error: [POST] /changePassword/SaraAloui@gmail.com >> StatusCode:: 401, Message:: Wrong authentication token
+2023-12-10 15:02:55 info: [0mPOST /changePassword/SaraAloui@gmail.com [33m401[0m 5.708 ms - 40[0m
+2023-12-10 15:02:55 info: [0mPOST /refresh [32m200[0m 1.491 ms - 276[0m
+2023-12-10 15:02:58 info: [0mPOST /changePassword/SaraAloui@gmail.com [32m200[0m 2192.003 ms - 430[0m
+2023-12-10 15:03:23 info: [0mPUT /users/e1d640e916c8628de70bf8ec0bd97461577cc85a [32m200[0m 1849.672 ms - 462[0m
+2023-12-10 15:03:54 info: [0mPUT /users/e1d640e916c8628de70bf8ec0bd97461577cc85a [32m200[0m 1755.953 ms - 463[0m
+2023-12-10 15:04:24 error: [PUT] /users/e1d640e916c8628de70bf8ec0bd97461577cc85a >> StatusCode:: 401, Message:: Wrong authentication token
+2023-12-10 15:04:24 info: [0mPUT /users/e1d640e916c8628de70bf8ec0bd97461577cc85a [33m401[0m 72.314 ms - 40[0m
+2023-12-10 15:04:24 info: [0mPOST /refresh [32m200[0m 4.545 ms - 276[0m
+2023-12-10 15:04:26 info: [0mPUT /users/e1d640e916c8628de70bf8ec0bd97461577cc85a [32m200[0m 1625.601 ms - 466[0m
+2023-12-10 15:07:20 error: [POST] /changePassword/SaraAloui@gmail.com >> StatusCode:: 401, Message:: Wrong authentication token
+2023-12-10 15:07:20 info: [0mPOST /changePassword/SaraAloui@gmail.com [33m401[0m 4.154 ms - 40[0m
+2023-12-10 15:07:21 info: [0mPOST /refresh [32m200[0m 35.381 ms - 276[0m
+2023-12-10 15:07:25 info: [0mPOST /changePassword/SaraAloui@gmail.com [32m200[0m 3939.479 ms - 437[0m
+2023-12-10 16:04:49 error: [GET] /users/e1d640e916c8628de70bf8ec0bd97461577cc85a >> StatusCode:: 401, Message:: Wrong authentication token
+2023-12-10 16:04:49 info: [0mGET /users/e1d640e916c8628de70bf8ec0bd97461577cc85a [33m401[0m 10.476 ms - 40[0m
+2023-12-10 16:04:49 info: [0mPOST /refresh [32m200[0m 3.480 ms - 276[0m
+2023-12-10 16:04:51 info: [0mGET /users/e1d640e916c8628de70bf8ec0bd97461577cc85a [32m200[0m 1377.618 ms - 437[0m
+2023-12-10 16:04:54 info: [0mGET /albums/categories [32m201[0m 704.104 ms - 114[0m
+2023-12-10 16:04:55 info: [0mGET /albums [32m201[0m 1508.612 ms - -[0m
+2023-12-10 16:04:55 info: [0mGET /users/plans/e1d640e916c8628de70bf8ec0bd97461577cc85a [32m200[0m 1429.236 ms - 223[0m
+2023-12-10 16:04:55 info: [0mGET /albums/popular [32m201[0m 1541.200 ms - -[0m
+2023-12-10 16:04:58 info: [0mGET /public/files/albums/postPictureac4e6f51f29d58f04d4b8c223edaec3174c9ab6716122023.png [33m404[0m 7.292 ms - 222[0m
+2023-12-10 16:04:58 info: [0mGET /public/files/albums/postPictured274b9a2a09e590a5f6d2661d9b879f0280663bc02122023.jpeg [33m404[0m 0.864 ms - 223[0m
+2023-12-10 16:04:58 info: [0mGET /public/files/albums/postPicture375f3a97b3467961505186a4241e2a6bbefb451952122023.jpeg [33m404[0m 1.048 ms - 223[0m
+2023-12-10 16:04:58 info: [0mGET /public/files/albums/postPicture6f0ab25e375f3a97b3467961505186a4241e2a6b46122023.octet-stream [33m404[0m 0.718 ms - 231[0m
+2023-12-10 16:04:58 info: [0mGET /public/files/albums/postPicture90dd6f0ab25e375f3a97b3467961505186a4241e55122023.png [33m404[0m 1.430 ms - 222[0m
+2023-12-10 16:04:58 info: [0mGET /public/files/albums/postPictureb25e375f3a97b3467961505186a4241e2a6bbefb22122023.jpeg [33m404[0m 3.243 ms - 223[0m
+2023-12-10 16:04:58 info: [0mGET /public/files/albums/postPicture656a08b0890e3b556c9baf2a64cee181b632223f46122023.png [33m404[0m 0.939 ms - 222[0m
+2023-12-10 16:04:58 info: [0mGET /public/files/albums/postPicture96bf7dff70c791a395340c0292a9f6fd29340b0625122023.png [33m404[0m 1.132 ms - 222[0m
+2023-12-10 16:04:58 info: [0mGET /public/files/albums/postPicturee360b2c019f60ad69535be615770bb1aab06112750122023.png [33m404[0m 1.769 ms - 222[0m
+2023-12-10 16:04:58 info: [0mGET /public/files/albums/postPictureefbe481a61acdf3cafa2071b05e82f15a9cf2ebd02122023.png [33m404[0m 0.719 ms - 222[0m
+2023-12-10 16:04:59 info: [0mGET /public/files/albums/postPicture505cfe5bd9b6bef9ae840078e4734144b5d9dd6e43122023.png [33m404[0m 0.687 ms - 222[0m
+2023-12-10 16:04:59 info: [0mGET /public/files/albums/postPicture9b11505cfe5bd9b6bef9ae840078e4734144b5d914122023.png [33m404[0m 1.200 ms - 222[0m
+2023-12-10 16:04:59 info: [0mGET /public/files/albums/postPicturef50e15909b11505cfe5bd9b6bef9ae840078e47327122023.png [33m404[0m 1.657 ms - 222[0m
+2023-12-10 16:04:59 info: [0mGET /public/files/albums/postPicture5d2f8cd3f6f50e15909b11505cfe5bd9b6bef9ae42122023.png [33m404[0m 3.154 ms - 222[0m
+2023-12-10 16:04:59 info: [0mGET /public/files/albums/postPicturef6f50e15909b11505cfe5bd9b6bef9ae840078e432122023.png [33m404[0m 3.872 ms - 222[0m
+2023-12-10 16:04:59 info: [0mGET /public/files/albums/postPicture3d30f9e2249b636e6a6d423149a491b02cfb8e3927122023.png [33m404[0m 4.558 ms - 222[0m
+2023-12-10 16:04:59 info: [0mGET /public/files/albums/postPictureea2cd61a368c8e214914d067fa55bccc2895295714122023.png [33m404[0m 0.835 ms - 222[0m
+2023-12-10 16:04:59 info: [0mGET /public/files/albums/postPicture7b7c61ab9d61f5d12c3b0122cc6fec73eb64fc6247122023.png [33m404[0m 2.140 ms - 222[0m
+2023-12-10 16:04:59 info: [0mGET /public/files/albums/postPicture87395b6b96208af9e910167fbea922bf9dc2427537122023.png [33m404[0m 3.474 ms - 222[0m
+2023-12-10 16:04:59 info: [0mGET /public/files/albums/postPicture43c377472363dbdd37af8a523e7b124a80f6a91b41122023.png [33m404[0m 0.638 ms - 222[0m
+2023-12-10 16:04:59 info: [0mGET /public/files/albums/postPicture5f539a43c377472363dbdd37af8a523e7b124a8022122023.png [33m404[0m 0.904 ms - 222[0m
+2023-12-10 16:05:00 info: [0mGET /public/files/albums/postPicturee9d11ef13cf36c49bb0e8f4436d4a5003ca20cae33122023.png [33m404[0m 0.747 ms - 222[0m
+2023-12-10 16:05:00 info: [0mGET /public/files/albums/postPictureffe7acebe0fd2c1bb9e191df6d10863a0675575746122023.octet-stream [33m404[0m 2.269 ms - 231[0m
+2023-12-10 16:05:00 info: [0mGET /public/files/albums/postPictureebe0fd2c1bb9e191df6d10863a06755757a97f6c11122023.octet-stream [33m404[0m 0.990 ms - 231[0m
+2023-12-10 16:05:00 info: [0mGET /public/files/albums/postPicture2c1bb9e191df6d10863a06755757a97f6c1bf0ba11122023.octet-stream [33m404[0m 0.724 ms - 231[0m
+2023-12-10 16:05:00 info: [0mGET /public/files/albums/postPicture0fd2c1bb9e191df6d10863a06755757a97f6c1bf31122023.octet-stream [33m404[0m 0.784 ms - 231[0m
+2023-12-10 16:05:00 info: [0mGET /public/files/albums/postPicture1485a05ad584f8f22313961672bb1e9e845c6aa205122023.octet-stream [33m404[0m 0.732 ms - 231[0m
+2023-12-10 16:05:00 info: [0mGET /public/files/albums/postPicturebc134f12720fc7feb9b82da20c66021635b3d5ec16122023.octet-stream [33m404[0m 0.780 ms - 231[0m
+2023-12-10 16:05:00 info: [0mGET /public/files/albums/postPicture5a05ad584f8f22313961672bb1e9e845c6aa291024122023.octet-stream [33m404[0m 0.730 ms - 231[0m
+2023-12-10 16:05:00 info: [0mGET /public/files/albums/postPictureea683903e4ee8f09207748b58848b796d30b097221122023.octet-stream [33m404[0m 1.065 ms - 231[0m
+2023-12-10 16:05:00 info: [0mGET /public/files/albums/postPicture83903e4ee8f09207748b58848b796d30b097255201122023.png [33m404[0m 0.840 ms - 222[0m
+2023-12-10 16:05:01 info: [0mGET /public/files/albums/postPictureab1ea683903e4ee8f09207748b58848b796d30b002122023.octet-stream [33m404[0m 1.266 ms - 231[0m
+2023-12-10 16:05:01 info: [0mGET /public/files/albums/postPicturef5c92c6de44a35f4990bbbe2ecafce86cd5320d926122023.octet-stream [33m404[0m 1.975 ms - 231[0m
+2023-12-10 16:05:29 info: [0mGET /public/files/albums/postPictureb25e375f3a97b3467961505186a4241e2a6bbefb22122023.jpeg [33m404[0m 1.081 ms - 223[0m
+2023-12-10 16:05:30 info: [0mGET /public/files/albums/postPicture375f3a97b3467961505186a4241e2a6bbefb451952122023.jpeg [33m404[0m 4.688 ms - 223[0m
+2023-12-10 16:05:30 info: [0mGET /public/files/albums/postPicturee360b2c019f60ad69535be615770bb1aab06112750122023.png [33m404[0m 4.412 ms - 222[0m
+2023-12-10 16:05:30 info: [0mGET /public/files/albums/postPicture96bf7dff70c791a395340c0292a9f6fd29340b0625122023.png [33m404[0m 4.746 ms - 222[0m
+2023-12-10 16:05:30 info: [0mGET /public/files/albums/postPictured274b9a2a09e590a5f6d2661d9b879f0280663bc02122023.jpeg [33m404[0m 6.142 ms - 223[0m
+2023-12-10 16:05:30 info: [0mGET /public/files/albums/postPictureefbe481a61acdf3cafa2071b05e82f15a9cf2ebd02122023.png [33m404[0m 6.663 ms - 222[0m
+2023-12-10 16:05:30 info: [0mGET /public/files/albums/postPictureac4e6f51f29d58f04d4b8c223edaec3174c9ab6716122023.png [33m404[0m 7.726 ms - 222[0m
+2023-12-10 16:05:30 info: [0mGET /public/files/albums/postPicture90dd6f0ab25e375f3a97b3467961505186a4241e55122023.png [33m404[0m 8.331 ms - 222[0m
+2023-12-10 16:05:30 info: [0mGET /public/files/albums/postPicture6f0ab25e375f3a97b3467961505186a4241e2a6b46122023.octet-stream [33m404[0m 9.156 ms - 231[0m
+2023-12-10 16:05:30 info: [0mGET /public/files/albums/postPicture656a08b0890e3b556c9baf2a64cee181b632223f46122023.png [33m404[0m 7.319 ms - 222[0m
+2023-12-10 16:05:30 info: [0mGET /public/files/albums/postPicture505cfe5bd9b6bef9ae840078e4734144b5d9dd6e43122023.png [33m404[0m 0.845 ms - 222[0m
+2023-12-10 16:05:31 info: [0mGET /public/files/albums/postPicture9b11505cfe5bd9b6bef9ae840078e4734144b5d914122023.png [33m404[0m 0.883 ms - 222[0m
+2023-12-10 16:05:31 info: [0mGET /public/files/albums/postPicturef6f50e15909b11505cfe5bd9b6bef9ae840078e432122023.png [33m404[0m 1.242 ms - 222[0m
+2023-12-10 16:05:31 info: [0mGET /public/files/albums/postPicture5d2f8cd3f6f50e15909b11505cfe5bd9b6bef9ae42122023.png [33m404[0m 1.589 ms - 222[0m
+2023-12-10 16:05:31 info: [0mGET /public/files/albums/postPicture87395b6b96208af9e910167fbea922bf9dc2427537122023.png [33m404[0m 0.857 ms - 222[0m
+2023-12-10 16:05:31 info: [0mGET /public/files/albums/postPicturef50e15909b11505cfe5bd9b6bef9ae840078e47327122023.png [33m404[0m 0.735 ms - 222[0m
+2023-12-10 16:05:31 info: [0mGET /public/files/albums/postPicture3d30f9e2249b636e6a6d423149a491b02cfb8e3927122023.png [33m404[0m 0.727 ms - 222[0m
+2023-12-10 16:05:31 info: [0mGET /public/files/albums/postPictureea2cd61a368c8e214914d067fa55bccc2895295714122023.png [33m404[0m 0.676 ms - 222[0m
+2023-12-10 16:05:31 info: [0mGET /public/files/albums/postPicture5f539a43c377472363dbdd37af8a523e7b124a8022122023.png [33m404[0m 0.904 ms - 222[0m
+2023-12-10 16:05:31 info: [0mGET /public/files/albums/postPicture43c377472363dbdd37af8a523e7b124a80f6a91b41122023.png [33m404[0m 0.845 ms - 222[0m
+2023-12-10 16:05:32 info: [0mGET /public/files/albums/postPicture7b7c61ab9d61f5d12c3b0122cc6fec73eb64fc6247122023.png [33m404[0m 0.977 ms - 222[0m
+2023-12-10 16:05:32 info: [0mGET /public/files/albums/postPictureffe7acebe0fd2c1bb9e191df6d10863a0675575746122023.octet-stream [33m404[0m 0.879 ms - 231[0m
+2023-12-10 16:05:32 info: [0mGET /public/files/albums/postPicture0fd2c1bb9e191df6d10863a06755757a97f6c1bf31122023.octet-stream [33m404[0m 0.830 ms - 231[0m
+2023-12-10 16:05:32 info: [0mGET /public/files/albums/postPicture2c1bb9e191df6d10863a06755757a97f6c1bf0ba11122023.octet-stream [33m404[0m 1.427 ms - 231[0m
+2023-12-10 16:05:32 info: [0mGET /public/files/albums/postPicturee9d11ef13cf36c49bb0e8f4436d4a5003ca20cae33122023.png [33m404[0m 2.075 ms - 222[0m
+2023-12-10 16:05:32 info: [0mGET /public/files/albums/postPicture1485a05ad584f8f22313961672bb1e9e845c6aa205122023.octet-stream [33m404[0m 2.875 ms - 231[0m
+2023-12-10 16:05:32 info: [0mGET /public/files/albums/postPictureebe0fd2c1bb9e191df6d10863a06755757a97f6c11122023.octet-stream [33m404[0m 0.817 ms - 231[0m
+2023-12-10 16:05:32 info: [0mGET /public/files/albums/postPicture5a05ad584f8f22313961672bb1e9e845c6aa291024122023.octet-stream [33m404[0m 0.821 ms - 231[0m
+2023-12-10 16:05:32 info: [0mGET /public/files/albums/postPicturebc134f12720fc7feb9b82da20c66021635b3d5ec16122023.octet-stream [33m404[0m 0.791 ms - 231[0m
+2023-12-10 16:05:33 info: [0mGET /public/files/albums/postPictureea683903e4ee8f09207748b58848b796d30b097221122023.octet-stream [33m404[0m 0.560 ms - 231[0m
+2023-12-10 16:05:33 info: [0mGET /public/files/albums/postPicturef5c92c6de44a35f4990bbbe2ecafce86cd5320d926122023.octet-stream [33m404[0m 0.730 ms - 231[0m
+2023-12-10 16:05:33 info: [0mGET /public/files/albums/postPicture83903e4ee8f09207748b58848b796d30b097255201122023.png [33m404[0m 0.790 ms - 222[0m
+2023-12-10 16:05:34 info: [0mGET /public/files/albums/postPictureab1ea683903e4ee8f09207748b58848b796d30b002122023.octet-stream [33m404[0m 0.897 ms - 231[0m

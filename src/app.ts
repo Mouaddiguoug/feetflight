@@ -5,6 +5,7 @@ import express from 'express';
 import helmet from 'helmet';
 import neo4j from 'neo4j-driver';
 import hpp from 'hpp';
+import admin from "firebase-admin";
 import morgan from 'morgan';
 import swaggerJSDoc from 'swagger-jsdoc';
 import swaggerUi from 'swagger-ui-express';
@@ -18,6 +19,7 @@ import path from 'path';
 import walletService from './services/wallet.service';
 import UserService from './services/users.service';
 import Stripe from 'stripe';
+import NotificationService from './services/notification.service';
 
 export const transporter = nodemailer.createTransport({
   service: process.env.SERVICE,
@@ -31,6 +33,7 @@ export const transporter = nodemailer.createTransport({
 class App {
   public walletService = new walletService();
   public userService = new UserService();
+  public notificationService = new NotificationService();
   public app: express.Application;
   public env: string;
   public port: string | number;
@@ -76,11 +79,16 @@ class App {
                         break;
                     }
                   });
-                  this.userService.checkForSale(event.data.object.customer, postId).then(exists => {
+                  this.userService.checkForSale(event.data.object.customer, postId).then(async exists => {
                     if (exists) return;
-                    this.userService.buyPost(postId, event.data.object.customer, sellerId, amount);
-                    this.walletService.UpdateBalanceForPayment(sellerId, amount);
+                    await this.userService.buyPost(postId, event.data.object.customer, sellerId, amount);
+                    await this.walletService.UpdateBalanceForPayment(sellerId, amount);
+                    const title = "Album Sold"
+                    const body = `congratulations, a customer just bought an album.`
+                    await this.notificationService.pushSellerNotificatons(sellerId, title, body)
+                   
                   });
+
                 });
                 break;
               case 'subscription':
@@ -94,6 +102,10 @@ class App {
                   event.data.object.metadata.sellerId,
                   event.data.object.metadata.subscriptionPlanPrice,
                 );
+                const title = "Subscription"
+                const body = `congratulations, a customer just subscribed to the plan ${event.data.object.metadata.subscriptionPlanTitle}`
+
+                this.notificationService.pushSellerNotificatons(event.data.object.metadata.sellerId, title, body)
                 break;
               default:
                 break;
@@ -115,6 +127,10 @@ class App {
     this.initializeRoutes(routes);
     this.initializeSwagger();
     this.initializeErrorHandling();
+    admin.initializeApp({
+      credential: admin.credential.cert(path.join(__dirname, "./config/push_notification_key.json")),
+      projectId: process.env.projectId
+    })
   }
 
   public listen() {

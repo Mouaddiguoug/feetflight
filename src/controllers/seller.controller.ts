@@ -49,7 +49,7 @@ class sellerController {
       
       await this.sellerService.uploadIdentityCard(identityCardData, userId);
 
-      res.status(201).json({ messazge: "identity card haq been uploaded successfully" });
+      res.status(201).json({ message: "identity card haq been uploaded successfully", status: 200 });
     } catch (error) {
       next(error);
     }

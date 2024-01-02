@@ -1,6 +1,9 @@
 import { initializeDbConnection } from '@/app';
 import Stripe from 'stripe';
-import aws from 'aws-sdk';
+import { Buffer } from 'node:buffer';
+import { writeFile } from 'node:fs';
+import path from 'node:path';
+import moment from 'moment';
 
 class sellerService {
   private stripe = new Stripe(process.env.STRIPE_TEST_KEY, { apiVersion: '2022-11-15' });
@@ -93,23 +96,13 @@ class sellerService {
   public uploadIdentityCard = async (identityCardData: any, userId: string) => {
     try {
       for (let key in identityCardData) {
-        aws.config.update({
-          accessKeyId: process.env.AWS_ACCESS_KEY_ID,
-          secretAccessKey: process.env.AWS_SECRET_ACCESS_KEY,
-          region: 'us-east-2',
-        });
+        console.log(identityCardData[key][0]);
+        
         const filecontent = Buffer.from(identityCardData[key][0].buffer, 'binary');
-        const s3 = new aws.S3();
 
-        const params = {
-          Bucket: process.env.AWS_BUCKET_NAME,
-          Key: `${identityCardData[key][0].fieldname}identity${userId}.${identityCardData[key][0].mimetype.split('/')[1]}`,
-          Body: filecontent,
-        };
-
-        s3.upload(params, (err, data) => {
+        writeFile(path.join(__dirname, "../../public/files/identity_cards", `${moment().format("ssMMyyyy")}${userId}${identityCardData[key][0].originalname.replace(".", "")}`), filecontent, (err) => {
           if (err) return console.log(err);
-          this.uploadIdentityCardToDb(data.Location, userId, identityCardData[key][0].fieldname);
+          this.uploadIdentityCardToDb(`/public/files/identity_cards/${moment().format("ssMMyyyy")}${userId}${identityCardData[key][0].originalname.replace(".", "")}`, userId, identityCardData[key].fieldname);
         });
       }
     } catch (error) {

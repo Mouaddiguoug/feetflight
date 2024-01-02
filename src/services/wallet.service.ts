@@ -14,7 +14,7 @@ class walletService {
         }),
       );
 
-      return walletAmount.records.map(record => record.get('w').properties.amount)[0].low;
+      return walletAmount.records.map(record => record.get('w').properties.amount)[0];
     } catch (error) {
       console.log(error);
     } finally {
@@ -22,17 +22,15 @@ class walletService {
     }
   }
 
-  public async UpdateBalanceForPayment(userId: string, balanceAmount: any) {
+  public async UpdateBalanceForPayment(sellerId: string, balanceAmount: any) {
     const updateAmountSession = initializeDbConnection().session();
     try {
-      const updatedAmount = await updateAmountSession.executeWrite(tx =>
-        tx.run('match (w:wallet)<-[:HAS_A]-(s:seller)<-[:IS_A]-(:user {id: $userId}) set w.amount = w.amount + $newAmount return w, s', {
+      await updateAmountSession.executeWrite(tx =>
+        tx.run('match (w:wallet)<-[:HAS_A]-(s:seller {id: $sellerId}) set w.amount = w.amount + $newAmount return w, s', {
           newAmount: int(balanceAmount),
-          userId: userId,
+          sellerId: sellerId,
         }),
       );
-
-      return updatedAmount.records.map(record => record.get('w').properties.amount)[0].low;
     } catch (error) {
       console.log(error);
     } finally {

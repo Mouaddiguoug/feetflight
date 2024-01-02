@@ -30,7 +30,14 @@ class AuthService {
       if (!userData.data.role || !userData.data.name || !userData.data.userName || !userData.data.password) return { message: 'mlissing data' };
       switch (userData.data.role) {
         case RolesEnum.SELLER:
-          if (!userData.data.country || !userData.data.phone || userData.data.plans.length == 0) return { message: 'data missing' };
+          if (!userData.data.phone || userData.data.plans.length == 0) return { message: 'data missing' };
+
+          const sellerCustomer = await stripe.customers.create({
+            name: userData.data.name,
+            email: email,
+            balance: 0,
+          });
+
           const seller = await stripe.accounts.create({
             email: userData.data.email,
             type: 'express',
@@ -38,10 +45,13 @@ class AuthService {
 
           const createUserSeller = await signupSession.executeWrite(tx =>
             tx.run(
-              'create (u:user {id: $userId, name: $name, email: $email, userName: $userName, password: $password, createdAt: $createdAt, confirmed: false, desactivated: false, phone: $phone})-[r: IS_A]->(s:seller {id: $sellerId, verified: $verified}) return u, s',
+              'create (u:user {id: $userId, name: $name, email: $email, userName: $userName, avatar: "", password: $password, createdAt: $createdAt, confirmed: false, verified: false, desactivated: false, phone: $phone, followers: $followers, followings: $followings})-[r: IS_A]->(s:seller {id: $sellerId, verified: $verified}) create (d:deviceToken {token: $token})<-[:logged_in_with]-(u) return u, s',
               {
-                userId: uid.uid(40),
+                userId: sellerCustomer.id,
+                followers: 0,
+                followings: 0,
                 buyerId: uid.uid(40),
+                token: userData.data.deviceToken,
                 createdAt: moment().format('MMMM DD, YYYY'),
                 email: email,
                 userName: userData.data.userName,
@@ -55,7 +65,7 @@ class AuthService {
           );
 
           await createWalletSession.executeWrite(tx =>
-            tx.run('match (s:seller {id: $sellerId}) create (s)-[:HAS_A]->(:wallet {id: $walletId, amount: 0})', {
+            tx.run('match (s:seller {id: $sellerId}) create (s)-[:HAS_A]->(:wallet {id: $walletId, amount: 0.0})', {
               sellerId: createUserSeller.records.map(record => record.get('s').properties.id)[0],
               walletId: uid.uid(40),
             }),
@@ -76,7 +86,7 @@ class AuthService {
                 },
                 unit_amount: plan.price * 100
               });
-              
+
               await createPlansSession.executeWrite(tx =>
                 tx.run('match (s:seller {id: $sellerId}) create (s)-[:HAS_A]->(:plan {id: $planId, name: $name, price: $price})', {
                   sellerId: createUserSeller.records.map(record => record.get('s').properties.id)[0],
@@ -87,7 +97,7 @@ class AuthService {
               );
             } catch (error) {
               console.log(error);
-            } finally{
+            } finally {
               createPlansSession.close();
             }
           });
@@ -95,7 +105,7 @@ class AuthService {
           const sellerToken = this.createToken(process.env.EMAIL_SECRET, createUserSeller.records.map(record => record.get('u').properties.id)[0]);
 
           this.sendVerificationEmail(email, userData.data.userName, sellerToken.token, 'selling');
-          return { data: createUserSeller.records.map(record => record.get('u').properties) };
+          return { tokenData: sellerToken, data: createUserSeller.records.map(record => record.get('u').properties)[0], role: RolesEnum.SELLER };
           break;
         case RolesEnum.BUYER:
           const buyer = await stripe.customers.create({
@@ -106,10 +116,11 @@ class AuthService {
 
           const createdUserBuyer = await signupSession.executeWrite(tx =>
             tx.run(
-              'create (u:user {id: $userId, name: $name, email: $email, userName: $userName, password: $password, createdAt: $createdAt, confirmed: false})-[r: IS_A]->(b:buyer {id: $buyerId}) return u',
+              'create (u:user {id: $userId, avatar: "", name: $name, email: $email, userName: $userName, password: $password, createdAt: $createdAt, confirmed: false})-[r: IS_A]->(b:buyer {id: $buyerId}) create (d:deviceToken {token: $token})<-[:logged_in_with]-(u) return u',
               {
                 userId: buyer.id,
                 buyerId: uid.uid(40),
+                token: userData.data.deviceToken,
                 createdAt: moment().format('MMMM DD, YYYY'),
                 email: email,
                 userName: userData.data.userName,
@@ -122,7 +133,7 @@ class AuthService {
           const buyerToken = this.createToken(process.env.EMAIL_SECRET, createdUserBuyer.records.map(record => record.get('u').properties.id)[0]);
           this.sendVerificationEmail(email, userData.data.userName, buyerToken.token, 'finding');
 
-          return { data: createdUserBuyer.records.map(record => record.get('u').properties)[0] };
+          return { tokenData: buyerToken, data: createdUserBuyer.records.map(record => record.get('u').properties)[0], role: RolesEnum.BUYER };
           break;
       }
     } catch (error) {
@@ -156,13 +167,21 @@ class AuthService {
     }
   }
 
-  public async changePassword(userId, userData) {
+  public async changePassword(email: String, userData: any) {
+    const checkUserSession = initializeDbConnection().session();
     const changePasswordSession = initializeDbConnection().session();
     try {
-      const hashedPassword = await hash(userData.data.password, 10);
-      const changedPassword = await changePasswordSession.executeRead(tx =>
-        tx.run('match (u {id: $userId}) set u.password = $newPassword return w', {
-          userId: userId,
+
+      const findUser = await checkUserSession.executeRead(tx => tx.run('match (u:user {email: $email}) return u', { email: email }));
+      if (findUser.records.length == 0) return { message: `old password is incorrect` };
+
+      const password = findUser.records.map(record => record.get('u').properties.password)[0];
+      const isPasswordMatching = await compare(userData.data.oldPassword, password);
+      if (!isPasswordMatching) return { message: 'old password is incorrect' };
+      const hashedPassword = await hash(userData.data.newPassword, 10);
+      const changedPassword = await changePasswordSession.executeWrite(tx =>
+        tx.run('match (u {email: $email}) set u.password = $newPassword return u', {
+          email: email,
           newPassword: hashedPassword,
         }),
       );
@@ -187,16 +206,22 @@ class AuthService {
 
       const password = findUser.records.map(record => record.get('u').properties.password)[0];
       const isPasswordMatching = await compare(userData.data.password, password);
+      const userId = findUser.records.map(record => record.get('u').properties.id)[0];
+      const deviceToken = userData.data.deviceToken;
 
       if (!isPasswordMatching) return { message: 'password or email is incorrect' };
 
       const tokenData = this.createToken(
         process.env.SECRET_KEY,
-        findUser.records.map(record => record.get('u').properties.id)[0],
+        userId,
       );
 
       const role = await loginSession.executeRead(tx =>
-        tx.run('match (u:user {id: $id})-[:IS_A]-(r:seller) return r', { id: findUser.records.map(record => record.get('u').properties.id)[0] }),
+        tx.run('match (u:user {id: $id})-[:IS_A]-(r:seller) return r', { id: userId }),
+      );
+      
+      await loginSession.executeWrite(tx =>
+        tx.run('match (u:user {id: $id})-[:logged_in_with]->(d:deviceToken) set d.token = $token', { id: userId, token: deviceToken }),
       );
 
       return { tokenData, data: findUser.records.map(record => record.get('u').properties)[0], role: role.records.length == 0 ? 'Buyer' : 'Seller' };
@@ -205,7 +230,8 @@ class AuthService {
     } finally {
       loginSession.close();
     }
-  }
+  }  
+  
 
   public async refreshToken(id: string) {
 
@@ -241,7 +267,7 @@ class AuthService {
       expiresIn.setTime(expiresIn.getTime() + 60000);
 
       console.log(expiresIn);
-      
+
 
       return { token: sign(dataStoredInToken, secretKey, { expiresIn: expiresAt }), expiresIn: moment(expiresIn).format("YYYY-MM-DD HH:mm:ss.ms") };
     } catch (error) {

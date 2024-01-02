@@ -8,6 +8,7 @@ import { initializeDbConnection } from '@/app';
 import { verify } from 'jsonwebtoken';
 import path from 'node:path';
 import Stripe from 'stripe';
+import OpenAi from 'openai';
 
 class UserService {
   private stripe = new Stripe(process.env.STRIPE_TEST_KEY, { apiVersion: '2022-11-15' });
@@ -22,9 +23,31 @@ class UserService {
         }),
       );
 
-      if (!result.records.map(record => record.get('u').properties)) throw new HttpException(409, "User doesn't exist");
+      if (result.records.length == 0) throw new HttpException(409, "User doesn't exist");
 
       return result.records.map(record => record.get('u').properties)[0];
+    } catch (error) {
+      console.log(error);
+    } finally {
+      getUserSession.close();
+    }
+  }
+
+  public async generateAiPictures(color: String, category: String) {
+    const getUserSession = initializeDbConnection().session();
+    try {
+
+      const openai = new OpenAi({
+        apiKey: process.env.OPENAI_API_KEY,
+      });
+
+      const result = await openai.images.generate({
+        prompt: `attractive feet with ${color} nailpolish and ${category}`,
+        n: 5,
+        size: "256x256",
+      })
+      
+      return result.data
     } catch (error) {
       console.log(error);
     } finally {
@@ -85,11 +108,10 @@ class UserService {
       const existUser = await this.findUserById(userId);
 
       const updatedUser = await updateUserSession.executeWrite(tx =>
-        tx.run('match (u:user {id: $userId}) set u.name = $name, u.avatar = $avatar, u.username = $username,  return u', {
+        tx.run('match (u:user {id: $userId}) set u.name = $name, u.userName = $userName return u', {
           userId: userId,
           name: userData.data.name ? userData.data.name : existUser.name,
           userName: userData.data.userName ? userData.data.userName : existUser.userName,
-          avatar: userData.data.avatar ? userData.data.avatar : existUser.avatar,
         }),
       );
 
@@ -148,7 +170,7 @@ class UserService {
         },
       });
 
-      return { message: 'posts has been successfully bought', session };
+      return session.url;
     } catch (error) {
       console.log(error);
     }
@@ -173,13 +195,8 @@ class UserService {
   public buyPost = async (postId: string, userId: string, sellerId: string, amount: number) => {
     const buyPostSession = initializeDbConnection().session();
     try {
-      await this.stripe.transfers.create({
-        currency: 'EUR',
-        destination: sellerId,
-        amount: amount,
-      });
       await buyPostSession.executeWrite(tx =>
-        tx.run('match (u:user {id: $userId}), (s:seller)-[:HAS_A]->(p:post {id: $postId}) create (u)-[bought:BOUGHT_A]->(p)', {
+        tx.run('match (u:user {id: $userId}), (p:post {id: $postId}) create (u)-[bought:BOUGHT_A]->(p) return bought', {
           userId: userId,
           postId: postId,
         }),
@@ -192,22 +209,35 @@ class UserService {
   };
 
   public subscribe = async (userId: string, subscriptionData: any) => {
+
+    const getSellerIdSession = initializeDbConnection().session();
+
     try {
-      if (await this.checkForSubscription(userId, subscriptionData.data.sellerId)) return { message: 'Already subscribed' };
+
+      const seller = await getSellerIdSession.executeWrite(tx =>
+        tx.run('match (user {id: $userId})-[:IS_A]-(s:seller) return s', {
+          userId: subscriptionData.data.sellerId,
+        }),
+      );
+
+      const sellerId = seller.records.map(record => record.get("s").properties.id)[0];
+
+      if (await this.checkForSubscription(userId, sellerId)) return { message: 'Already subscribed' };
 
       const session = await this.stripe.checkout.sessions.create({
         success_url: 'https://example.com/success',
         line_items: [{ price: subscriptionData.data.subscriptionPlanId, quantity: 1 }],
         mode: 'subscription',
+        currency: "EUR",
         customer: userId,
         metadata: {
-          sellerId: subscriptionData.data.sellerId,
+          sellerId: sellerId,
           subscriptionPlanTitle: subscriptionData.data.subscriptionPlanTitle,
           subscriptionPlanPrice: subscriptionData.data.subscriptionPlanPrice,
         },
       });
 
-      return { message: 'subscription added successfully', session };
+      return session;
     } catch (error) {
       console.log(error);
     }
@@ -220,7 +250,7 @@ class UserService {
 
       await subscribeSession.executeWrite(tx => {
         tx.run(
-          'match (u:user {id: $userId}), (s:seller {id: $sellerId}) create (u)-[:SUBSCRIBED_TO {subscriptionPlanTitle: $subscriptionPlanTitle, subscriptionPlanPrice: $subscriptionPlanPrice}]->(s) return s',
+          'match (u:user {id: $userId}), (s:seller {id: $sellerId})<-[:IS_A]-(user:user) create (u)-[:SUBSCRIBED_TO {subscriptionPlanTitle: $subscriptionPlanTitle, subscriptionPlanPrice: $subscriptionPlanPrice}]->(s) set user.followers = user.followers + 1 set u.followings = u.followings + 1 return s',
           {
             userId: userId,
             sellerId: sellerId,
@@ -229,6 +259,7 @@ class UserService {
           },
         );
       });
+      
     } catch (error) {
       console.log(error);
     } finally {
@@ -265,6 +296,7 @@ class UserService {
           postId: postId,
         }),
       );
+      
 
       return saleAlreadyExists.records.map(record => record.get('bought')).length > 0 ? true : false;
     } catch (error) {
@@ -301,6 +333,27 @@ class UserService {
         }),
       );
 
+      return subscriptionAlreadyExist.records.map(record => record.get('subscribed')).length > 0 ? true : false;;
+    } catch (error) {
+      console.log(error);
+    } finally {
+      checkForSubscriptionSession.close();
+    }
+  };
+
+  public checkForSubscriptionbyUserId = async (userId: string, postId: string, plan: string) => {
+    const checkForSubscriptionSession = initializeDbConnection().session();
+    try {
+      
+      const subscriptionAlreadyExist = await checkForSubscriptionSession.executeWrite(tx =>
+        tx.run('match (u:user {id: $userId})-[subscribed:SUBSCRIBED_TO {subscriptionPlanTitle: $plan}]->(s:seller)-[:HAS_A]->(p:post {id: $postId}) return subscribed', {
+          userId: userId,
+          postId: postId,
+          plan: plan
+        }),
+      );
+      
+
       return subscriptionAlreadyExist.records.map(record => record.get('subscribed')).length > 0 ? true : false;
     } catch (error) {
       console.log(error);
@@ -308,6 +361,7 @@ class UserService {
       checkForSubscriptionSession.close();
     }
   };
+
 
   public uploadAvatar = async (avatarData: any, userId: string) => {
     try {
@@ -332,11 +386,15 @@ class UserService {
 
       const filecontent = Buffer.from(avatarData.buffer, 'binary');
 
+      console.log(filecontent);
+      
+
       writeFile(
-        path.join(__dirname, '../../public/files/avatars', `${avatarData.originalname.replace('.', '')}.mimetype.split("/")[1]}`),
+        path.join(__dirname, '../../public/files/avatars', `avatar${userId}.${avatarData.mimetype.split("/")[1]}`),
         filecontent,
-        err => {
+        async err => {
           if (err) return console.log(err);
+          await this.uploadAvatarToDb(`/public/files/avatars/avatar${userId}.${avatarData.mimetype.split("/")[1]}`, userId);
         },
       );
     } catch (error) {
@@ -357,6 +415,22 @@ class UserService {
       console.log(error);
     } finally {
       uploadAvatarToDbSession.close();
+    }
+  };
+
+  public async uploadDeviceToken(userId: string, token: string): Promise<void>  {
+    const uploadDeviceTokenSession = initializeDbConnection().session();
+    try {
+      await uploadDeviceTokenSession.executeWrite(tx =>
+        tx.run('match (u:user {id: $userId}) create (u)-[:GOT_DEVICE]->(:device {token: $token})', {
+          userId: userId,
+          token: token,
+        }),
+      );
+    } catch (error) {
+      console.log(error);
+    } finally {
+      uploadDeviceTokenSession.close();
     }
   };
 

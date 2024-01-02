@@ -1,15 +1,28 @@
 import { NextFunction, Request, Response } from 'express';
 import postService from '@/services/post.service';
-import Stripe from 'stripe';
 
 class postController {
   public postService = new postService();
 
   public getPopularAlbums = async (req: Request, res: Response, next: NextFunction): Promise<void> => {
     try {
-      const popularPosts = await this.postService.getPopularAlbums();
+      const userId = String(req.params.id);
+      const popularPosts = await this.postService.getPopularAlbums(userId);
 
       res.status(201).json({ popularPosts });
+    } catch (error) {
+      next(error);
+    }
+  };
+
+  public getRandomAlbums = async (req: Request, res: Response, next: NextFunction): Promise<void> => {
+    try {
+      const page = Number(req.params.page);
+      const userId = String(req.params.id);
+      
+      const randomAlbums = await this.postService.getRandomAlbums(page, userId);
+
+      res.status(201).json( randomAlbums );
     } catch (error) {
       next(error);
     }
@@ -39,9 +52,24 @@ class postController {
 
   public getAllAlbums = async (req: Request, res: Response, next: NextFunction): Promise<void> => {
     try {
-      const allAlbums = await this.postService.getAllAlbums();
+      const userId = String(req.params.userId);
+      const allAlbums = await this.postService.getAllAlbums(userId);
+      
 
       res.status(201).json({ allAlbums });
+    } catch (error) {
+      next(error);
+    }
+  };
+
+  public getSellerAlbum = async (req: Request, res: Response, next: NextFunction): Promise<void> => {
+    try {
+      const userId = String(req.params.id);
+      console.log(userId);
+      
+      const sellerAlbums = await this.postService.getSellerAlbums(userId);
+      
+      res.status(201).json(sellerAlbums);
     } catch (error) {
       next(error);
     }
@@ -74,9 +102,21 @@ class postController {
   public likePost = async (req: Request, res: Response, next: NextFunction): Promise<void> => {
     try {
       const albumId = String(req.params.id);
-      const likes = await this.postService.likePost(albumId);
+      const userId = req.body.userId;
+      await this.postService.likePost(albumId, userId);
 
-      res.status(201).json({ likes });
+      res.status(201).json({ message: "post liked successfully" });
+    } catch (error) {
+      next(error);
+    }
+  };
+
+  public getAlbumPlan = async (req: Request, res: Response, next: NextFunction): Promise<void> => {
+    try {
+      const albumId = String(req.params.id);
+      let plan = await this.postService.getAlbumPlan(albumId);
+
+      res.status(200).json(plan);
     } catch (error) {
       next(error);
     }
@@ -93,6 +133,7 @@ class postController {
       next(error);
     }
   };
+  
 
   public uploadPostPictures = async (req: Request, res: Response, next: NextFunction): Promise<void> => {
     try {
@@ -100,7 +141,7 @@ class postController {
       const collectionId = String(req.params.id);
       await this.postService.uploadPostPictures(pictureFiles, collectionId);
 
-      res.status(201).json({ messazge: "post pictures have been uploaded successfully" });
+      res.status(201).json({ message: "post pictures have been uploaded successfully" });
     } catch (error) {
       next(error);
     }

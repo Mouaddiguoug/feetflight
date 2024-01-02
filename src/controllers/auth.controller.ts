@@ -30,9 +30,11 @@ class AuthController {
   public changePassword = async (req: Request, res: Response, next: NextFunction): Promise<void> => {
     try {
       const userData = req.body;
-      const userId: string = String(req.params.id);
-      const chengedData = await this.authService.changePassword(userId, userData);
-      res.status(200).json({ data: chengedData });
+      const email: string = String(req.params.email);
+      const chengedData = await this.authService.changePassword(email, userData);
+      console.log(chengedData.message);
+      
+      res.status(200).json(chengedData);
     } catch (error) {
       console.log(error);
     }

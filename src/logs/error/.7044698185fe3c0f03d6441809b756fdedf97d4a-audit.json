@@ -6,34 +6,154 @@
     "auditLog": "C:\\Users\\mouad\\Documents\\Projects\\feetflight\\feetflight\\src\\logs\\error\\.7044698185fe3c0f03d6441809b756fdedf97d4a-audit.json",
     "files": [
         {
-            "date": 1695493765082,
-            "name": "C:\\Users\\mouad\\Documents\\Projects\\feetflight\\feetflight\\src\\logs\\error\\2023-09-23.log",
-            "hash": "b75207e3c32c531f46917f34b5946c6d16123a99cf38dba38468480b8aaf9afd"
+            "date": 1701024905015,
+            "name": "C:\\Users\\mouad\\Documents\\Projects\\feetflight\\feetflight\\src\\logs\\error\\2023-11-26.log",
+            "hash": "5bd6eb8d687e8ea87e9810cbe26854d9fdc76bb56018d0d0cc2f84dec2b8786f"
         },
         {
-            "date": 1695553696283,
-            "name": "C:\\Users\\mouad\\Documents\\Projects\\feetflight\\feetflight\\src\\logs\\error\\2023-09-24.log",
-            "hash": "e1ecbe2d988a95a5c4ef733c5e6be036daab19f834cc62f7c68a28a661adb704"
+            "date": 1701174961079,
+            "name": "C:\\Users\\mouad\\Documents\\Projects\\feetflight\\feetflight\\src\\logs\\error\\2023-11-28.log",
+            "hash": "19a929ffaae4420d943f09067cffeacd2f0c28dc1da312464a100af65872126d"
         },
         {
-            "date": 1695895705142,
-            "name": "C:\\Users\\mouad\\Documents\\Projects\\feetflight\\feetflight\\src\\logs\\error\\2023-09-28.log",
-            "hash": "bab310c08e58bf9d2713c624b66b5dc3c938028c257f7a74dbbda2e5e3543005"
+            "date": 1701535129104,
+            "name": "C:\\Users\\mouad\\Documents\\Projects\\feetflight\\feetflight\\src\\logs\\error\\2023-12-02.log",
+            "hash": "a9d59fc2b5475b93964848e2385f35e51ad146d28accb4f14410730778f1c5ff"
         },
         {
-            "date": 1695985660385,
-            "name": "C:\\Users\\mouad\\Documents\\Projects\\feetflight\\feetflight\\src\\logs\\error\\2023-09-29.log",
-            "hash": "8894e26fe194b7db8ab8a39f718d17737e0410a6441c0e33cf04ba0c5fbe014c"
+            "date": 1701804839929,
+            "name": "C:\\Users\\mouad\\Documents\\Projects\\feetflight\\feetflight\\src\\logs\\error\\2023-12-05.log",
+            "hash": "ab84db3e0defd254c8359d9695d0941faded26fdd5c9f41c36af01c5c85eb75f"
         },
         {
-            "date": 1696076744575,
-            "name": "C:\\Users\\mouad\\Documents\\Projects\\feetflight\\feetflight\\src\\logs\\error\\2023-09-30.log",
-            "hash": "ddf6fd7728a0295104d2989bd231b4822f040a0018df40108225dfdd1129b7c7"
+            "date": 1701862194120,
+            "name": "C:\\Users\\mouad\\Documents\\Projects\\feetflight\\feetflight\\src\\logs\\error\\2023-12-06.log",
+            "hash": "68470d91bd6af7cd04ac42786ae98c4248873498c7fedd39db4e1c6e070c3410"
         },
         {
-            "date": 1696158393853,
-            "name": "C:\\Users\\mouad\\Documents\\Projects\\feetflight\\feetflight\\src\\logs\\error\\2023-10-01.log",
-            "hash": "f8e9f8cc9dc24257ad66f9383e4400721279459fdaeeb9974eacb61296a0fcbd"
+            "date": 1701950577508,
+            "name": "C:\\Users\\mouad\\Documents\\Projects\\feetflight\\feetflight\\src\\logs\\error\\2023-12-07.log",
+            "hash": "658ac972a0750c52ee6f46cd669a78ce2e4a65adf6167c86947b06337d5b53d8"
+        },
+        {
+            "date": 1702032585544,
+            "name": "C:\\Users\\mouad\\Documents\\Projects\\feetflight\\feetflight\\src\\logs\\error\\2023-12-08.log",
+            "hash": "114097e8c2045a05474e970b38607c6c5801630c7ca9a3c9b76cce625af8e9c9"
+        },
+        {
+            "date": 1702121334656,
+            "name": "C:\\Users\\mouad\\Documents\\Projects\\feetflight\\feetflight\\src\\logs\\error\\2023-12-09.log",
+            "hash": "b86086186c06d64c90ad5a7b64afb66604f66e11684161613a2c0c26b2110475"
+        },
+        {
+            "date": 1702206510077,
+            "name": "C:\\Users\\mouad\\Documents\\Projects\\feetflight\\feetflight\\src\\logs\\error\\2023-12-10.log",
+            "hash": "b4021f4fd788c98751d0c7b41f71e465155b9e6162cb301fa5b3abeb9d30e2ec"
+        },
+        {
+            "date": 1702292570715,
+            "name": "C:\\Users\\mouad\\Documents\\Projects\\feetflight\\feetflight\\src\\logs\\error\\2023-12-11.log",
+            "hash": "8e5894e9167689665f00090d9c44e742d6b5281db2fad6d9bcd71cce12b7176a"
+        },
+        {
+            "date": 1702380814202,
+            "name": "C:\\Users\\mouad\\Documents\\Projects\\feetflight\\feetflight\\src\\logs\\error\\2023-12-12.log",
+            "hash": "e7631521ecb21fb7b10e249256ac2965979f31a492dfee08f834060caa7924a2"
+        },
+        {
+            "date": 1702460714062,
+            "name": "C:\\Users\\mouad\\Documents\\Projects\\feetflight\\feetflight\\src\\logs\\error\\2023-12-13.log",
+            "hash": "5988266fc67157a937fccea28ba9197966a50361656b6c112667d57d50e8e4a1"
+        },
+        {
+            "date": 1702556579748,
+            "name": "C:\\Users\\mouad\\Documents\\Projects\\feetflight\\feetflight\\src\\logs\\error\\2023-12-14.log",
+            "hash": "de0dc9fa33df9b981a9f09e787d9ef842e5da65df200d6848a32af0d72bb5b53"
+        },
+        {
+            "date": 1702635916408,
+            "name": "C:\\Users\\mouad\\Documents\\Projects\\feetflight\\feetflight\\src\\logs\\error\\2023-12-15.log",
+            "hash": "12810e93f725dd05ee176eedc21e6bf4c75676472c79aa7a264ea90a1e2ee21f"
+        },
+        {
+            "date": 1702726230526,
+            "name": "C:\\Users\\mouad\\Documents\\Projects\\feetflight\\feetflight\\src\\logs\\error\\2023-12-16.log",
+            "hash": "0b90b70c6664525ac3eecfb029f4f95e17f3e6bb0862dba388ea202da77adf15"
+        },
+        {
+            "date": 1702810605280,
+            "name": "C:\\Users\\mouad\\Documents\\Projects\\feetflight\\feetflight\\src\\logs\\error\\2023-12-17.log",
+            "hash": "83b71c2cd8e95ac1dd13de1bd80ec587c75668ff08267ae8c2005b51bc390fe2"
+        },
+        {
+            "date": 1702915277263,
+            "name": "C:\\Users\\mouad\\Documents\\Projects\\feetflight\\feetflight\\src\\logs\\error\\2023-12-18.log",
+            "hash": "2255f0976d8fb1c437488ce5d0e95a9c0a91a8e1439c4c7e339b95936290b68d"
+        },
+        {
+            "date": 1702985750296,
+            "name": "C:\\Users\\mouad\\Documents\\Projects\\feetflight\\feetflight\\src\\logs\\error\\2023-12-19.log",
+            "hash": "746cbd546e2b9fc7269732af990f0cba1e04dd75c7d4a1a20d654a9cbbef3ad2"
+        },
+        {
+            "date": 1703073448863,
+            "name": "C:\\Users\\mouad\\Documents\\Projects\\feetflight\\feetflight\\src\\logs\\error\\2023-12-20.log",
+            "hash": "1f1e81e25ee774126518de3480e0a920d9d11fca1c6db4e7dfb3c72c69bbb921"
+        },
+        {
+            "date": 1703157361930,
+            "name": "C:\\Users\\mouad\\Documents\\Projects\\feetflight\\feetflight\\src\\logs\\error\\2023-12-21.log",
+            "hash": "2bb7da723332ced8da779745e0c9a5f690724ab4b7953042e13f2d2e5d4428b3"
+        },
+        {
+            "date": 1703239125340,
+            "name": "C:\\Users\\mouad\\Documents\\Projects\\feetflight\\feetflight\\src\\logs\\error\\2023-12-22.log",
+            "hash": "5f85a67a154bdd918d41310270369584a3124eeb4b2b09673c956eba30e669d0"
+        },
+        {
+            "date": 1703333524298,
+            "name": "C:\\Users\\mouad\\Documents\\Projects\\feetflight\\feetflight\\src\\logs\\error\\2023-12-23.log",
+            "hash": "4ceca4769f67308a26a5f5c959e030dd5840a0e32069f05fe79247d987599c36"
+        },
+        {
+            "date": 1703374122876,
+            "name": "C:\\Users\\mouad\\Documents\\Projects\\feetflight\\feetflight\\src\\logs\\error\\2023-12-24.log",
+            "hash": "a9438e9a3a009f0df5331b4a28f01fd4831713fa4865864c62142ec2af7fff59"
+        },
+        {
+            "date": 1703515308865,
+            "name": "C:\\Users\\mouad\\Documents\\Projects\\feetflight\\feetflight\\src\\logs\\error\\2023-12-25.log",
+            "hash": "7cd783af7af1b8b64aa007671fef2eff6c10da3cfa38e774c87b8bb32da48f1c"
+        },
+        {
+            "date": 1703590132294,
+            "name": "C:\\Users\\mouad\\Documents\\Projects\\feetflight\\feetflight\\src\\logs\\error\\2023-12-26.log",
+            "hash": "7109a10075ece743abc0e195f4838bdbfdf8f2cbb12d3166b3098f1c2ce50fa1"
+        },
+        {
+            "date": 1703670680243,
+            "name": "C:\\Users\\mouad\\Documents\\Projects\\feetflight\\feetflight\\src\\logs\\error\\2023-12-27.log",
+            "hash": "9f54065519ffc42993fe8a0573f47e74a318b030b69520ab324b2fdb4d7184e9"
+        },
+        {
+            "date": 1703770917279,
+            "name": "C:\\Users\\mouad\\Documents\\Projects\\feetflight\\feetflight\\src\\logs\\error\\2023-12-28.log",
+            "hash": "1db610b19379b5bedab564659b9c4388b00fd9659517cf4edb4d9b8797319292"
+        },
+        {
+            "date": 1703849236540,
+            "name": "C:\\Users\\mouad\\Documents\\Projects\\feetflight\\feetflight\\src\\logs\\error\\2023-12-29.log",
+            "hash": "a2590984f9077e949fd0b5f3097fcec88460d47dfc65601959ac85bd1cae94f0"
+        },
+        {
+            "date": 1703934040787,
+            "name": "C:\\Users\\mouad\\Documents\\Projects\\feetflight\\feetflight\\src\\logs\\error\\2023-12-30.log",
+            "hash": "086c27f705a0886ed7f011eecf524791a6b38e4efe2c8084c6d188174f1e98ef"
+        },
+        {
+            "date": 1704207929862,
+            "name": "C:\\Users\\mouad\\Documents\\Projects\\feetflight\\feetflight\\src\\logs\\error\\2024-01-02.log",
+            "hash": "918c2d7d3a3b29de809bebca822715a3db1301a7aa6493d3c0fecc392e0ff4ce"
         }
     ],
     "hashType": "sha256"

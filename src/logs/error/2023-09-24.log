@@ -1,3 +1,0 @@
-2023-09-24 12:35:23 error: [GET] /albums/categories >> StatusCode:: 404, Message:: Authentication token missing
-2023-09-24 12:36:26 error: [GET] /albums/categories >> StatusCode:: 403, Message:: Wrong authentication token
-2023-09-24 15:38:54 error: [POST] /albums/2dad18564868cbd395d5342cbd986fbe359d99c8 >> StatusCode:: 400, Message:: Unexpected token } in JSON at position 269
