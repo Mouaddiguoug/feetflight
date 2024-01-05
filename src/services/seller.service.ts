@@ -1,12 +1,11 @@
-import { initializeDbConnection } from '@/app';
-import Stripe from 'stripe';
+import { initializeDbConnection, stripe } from '@/app';
 import { Buffer } from 'node:buffer';
 import { writeFile } from 'node:fs';
 import path from 'node:path';
 import moment from 'moment';
 
 class sellerService {
-  private stripe = new Stripe(process.env.STRIPE_TEST_KEY, { apiVersion: '2022-11-15' });
+  
   public prices = [];
 
   public async createSubscribePlans(userId: string, subscriptionPlansData: any[]) {
@@ -18,6 +17,56 @@ class sellerService {
       const subscriptionPlans = await Promise.all(createdSubscriptionPlans);
 
       return subscriptionPlans;
+    } catch (error) {
+      console.log(error);
+    }
+  }
+
+  public async changePlans(plans: any[]) {
+    try {
+      const updatedPlans = plans.map(async plan => {
+        const oldPrice = await stripe.prices.retrieve(plan.id);
+        
+        await stripe.products.update(oldPrice.product.toString(), {
+          name: plan.name,
+        })
+        
+        const newPrice = await stripe.prices.create({
+          currency: "EUR",
+          product: oldPrice.product.toString(),
+          recurring: {
+            interval: "month",
+            interval_count: 1,
+          },
+          unit_amount: plan.price * 100
+        });
+        await stripe.prices.update(oldPrice.id, {
+          active: false
+        })
+        
+        return this.changePlansInDb(plan.id, newPrice.id, plan.name, plan.price);
+      })
+
+      return updatedPlans.length > 0 ? {"message": "plans were updated successfully"} : {"message": "Something went wrong"};
+    } catch (error) {
+      console.log(error);
+    }
+  }
+
+  public async changePlansInDb(oldPlanId: string, newPlanId: string, name: string, price: number) {
+    const changePlanSession = initializeDbConnection().session();
+    try {
+      const updatedPlan = await changePlanSession.executeWrite(tx =>
+        tx.run('match (plan:plan {id: $planId}) set plan.id = $newPlanId, plan.name = $name, plan.price = $price', {
+          planId: oldPlanId,
+          newPlanId: newPlanId,
+          name: name,
+          price: price
+        }),
+      );
+      
+
+      return updatedPlan;
     } catch (error) {
       console.log(error);
     }
@@ -42,7 +91,7 @@ class sellerService {
   public createSubscribePlan = async (subscriptionPlanPrice: number, subscriptionPlanTitle: string, userId: string) => {
     const createSubscribePlansSession = initializeDbConnection().session();
     try {
-      const product = await this.stripe.products.create({
+      const product = await stripe.products.create({
         name: subscriptionPlanTitle,
       });
 

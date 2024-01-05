@@ -41,6 +41,18 @@ class sellerController {
     }
   };
 
+  public updatePlans = async (req: Request, res: Response, next: NextFunction): Promise<void> => {
+    try {
+      const plans = req.body.data;
+      
+      const result = await this.sellerService.changePlans(plans);
+
+      res.status(201).json(result);
+    } catch (error) {
+      next(error);
+    }
+  };
+
   public uploadIdentityCard = async (req: Request, res: Response, next: NextFunction): Promise<void> => {
     try {
       const userId = String(req.params.id);

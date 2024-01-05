@@ -4,14 +4,12 @@ import { User } from '@interfaces/users.interface';
 import { writeFile } from 'node:fs';
 import { Buffer } from 'node:buffer';
 import { isEmpty } from '@utils/util';
-import { initializeDbConnection } from '@/app';
+import { initializeDbConnection, stripe } from '@/app';
 import { verify } from 'jsonwebtoken';
 import path from 'node:path';
-import Stripe from 'stripe';
 import OpenAi from 'openai';
 
 class UserService {
-  private stripe = new Stripe(process.env.STRIPE_TEST_KEY, { apiVersion: '2022-11-15' });
   public prices = [];
 
   public async findUserById(userId) {
@@ -128,7 +126,7 @@ class UserService {
       const pricesPromises = await saleData.data.posts.map(post => {
         return this.checkForSale(userId, post.id).then(exists => {
           if (exists) return null;
-          return this.stripe.prices
+          return stripe.prices
             .list({
               product: post.id,
             })
@@ -143,8 +141,8 @@ class UserService {
       if (prices.filter(price => price != null).length == 0) return { message: 'all posts selected have already been bought by this user' };
 
       const sellersPromises = await saleData.data.posts.map(post => {
-        return this.stripe.products.retrieve(post.id).then(product => {
-          return this.stripe.prices
+        return stripe.products.retrieve(post.id).then(product => {
+          return stripe.prices
             .list({
               product: post.id,
             })
@@ -156,7 +154,7 @@ class UserService {
 
       const sellers = await Promise.all(sellersPromises);
 
-      const session = await this.stripe.checkout.sessions.create({
+      const session = await stripe.checkout.sessions.create({
         success_url: 'https://example.com/success',
         line_items: prices.filter(price => price != null),
         mode: 'payment',
@@ -224,7 +222,7 @@ class UserService {
 
       if (await this.checkForSubscription(userId, sellerId)) return { message: 'Already subscribed' };
 
-      const session = await this.stripe.checkout.sessions.create({
+      const session = await stripe.checkout.sessions.create({
         success_url: 'https://example.com/success',
         line_items: [{ price: subscriptionData.data.subscriptionPlanId, quantity: 1 }],
         mode: 'subscription',

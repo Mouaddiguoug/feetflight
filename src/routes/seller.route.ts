@@ -3,6 +3,7 @@ import sellerController from '@controllers/seller.controller';
 import { Routes } from '@interfaces/routes.interface';
 import multer from 'multer';
 import fileMiddleware from '@/middlewares/fileValidation.middleware';
+import authMiddleware from '@/middlewares/auth.middleware';
 
 class sellerRoute implements Routes {
   public path = '/sellers';
@@ -14,9 +15,10 @@ class sellerRoute implements Routes {
   }
 
   private initializeRoutes() {
-    this.router.post(`${this.path}/plans/:id`, this.sellerController.createSubscribePlans);
-    this.router.get(`${this.path}/plans/:id`, this.sellerController.getSubscriptionPlans);
-    this.router.get(`${this.path}/followers/:id`, this.sellerController.getFollowersCount);
+    this.router.post(`${this.path}/plans/:id`, authMiddleware, this.sellerController.createSubscribePlans);
+    this.router.get(`${this.path}/plans/:id`, authMiddleware, this.sellerController.getSubscriptionPlans);
+    this.router.put(`${this.path}/plans`, authMiddleware, this.sellerController.updatePlans);
+    this.router.get(`${this.path}/followers/:id`, authMiddleware, this.sellerController.getFollowersCount);
     this.router.post(
       `${this.path}/upload/identitycard/:id`,
       multer().fields([

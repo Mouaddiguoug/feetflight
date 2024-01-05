@@ -6,21 +6,6 @@
     "auditLog": "C:\\Users\\mouad\\Documents\\Projects\\feetflight\\feetflight\\src\\logs\\debug\\.b9f8c1e2b74f30ac1a4e193084a7ca4f15d9d285-audit.json",
     "files": [
         {
-            "date": 1701353462355,
-            "name": "C:\\Users\\mouad\\Documents\\Projects\\feetflight\\feetflight\\src\\logs\\debug\\2023-11-30.log",
-            "hash": "1b18447f6bed7f5cd85341e497ada3463461cc5e0a3706ea5d0550728453237c"
-        },
-        {
-            "date": 1701429065942,
-            "name": "C:\\Users\\mouad\\Documents\\Projects\\feetflight\\feetflight\\src\\logs\\debug\\2023-12-01.log",
-            "hash": "5ca61f703ca230bd1c132994b94c6442dc3c83d0ad1f277716012e6073a2c4cd"
-        },
-        {
-            "date": 1701535129095,
-            "name": "C:\\Users\\mouad\\Documents\\Projects\\feetflight\\feetflight\\src\\logs\\debug\\2023-12-02.log",
-            "hash": "f161df977acb8f450f1603f3622bb23c749f2b16d27522c3eddd6bbba6e13943"
-        },
-        {
             "date": 1701804839924,
             "name": "C:\\Users\\mouad\\Documents\\Projects\\feetflight\\feetflight\\src\\logs\\debug\\2023-12-05.log",
             "hash": "253e3cfa07f5aebb7fcfc86cdd7b6c6d9d6c0c51ab671675f12861c8b0dce13a"
@@ -154,6 +139,21 @@
             "date": 1704207929852,
             "name": "C:\\Users\\mouad\\Documents\\Projects\\feetflight\\feetflight\\src\\logs\\debug\\2024-01-02.log",
             "hash": "50a635dde3818f304349ab3fc608deabba630444777f9a69da3d5e2aacbea3fc"
+        },
+        {
+            "date": 1704285412590,
+            "name": "C:\\Users\\mouad\\Documents\\Projects\\feetflight\\feetflight\\src\\logs\\debug\\2024-01-03.log",
+            "hash": "98a5ec697d6f026ab9ce71a5e1c9e6da68522b59921234a27e40ff67bdb0b3d0"
+        },
+        {
+            "date": 1704371307602,
+            "name": "C:\\Users\\mouad\\Documents\\Projects\\feetflight\\feetflight\\src\\logs\\debug\\2024-01-04.log",
+            "hash": "d06d07ca54c37f59238eb2de3a2a749578a45261d362b11987f7d092d5068228"
+        },
+        {
+            "date": 1704448904352,
+            "name": "C:\\Users\\mouad\\Documents\\Projects\\feetflight\\feetflight\\src\\logs\\debug\\2024-01-05.log",
+            "hash": "a81dc8fb0334be09990518f29446e55309127289b0e62c7f5867678578ed3a93"
         }
     ],
     "hashType": "sha256"

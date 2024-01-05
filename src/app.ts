@@ -33,6 +33,7 @@ export const transporter = nodemailer.createTransport({
 class App {
   public walletService = new walletService();
   public userService = new UserService();
+  
   public notificationService = new NotificationService();
   public app: express.Application;
   public env: string;
@@ -196,6 +197,8 @@ class App {
     this.app.use(errorMiddleware);
   }
 }
+
+export const stripe = new Stripe(process.env.STRIPE_TEST_KEY, { apiVersion: '2022-11-15' });
 
 export function initializeDbConnection() {
   try {

@@ -1,0 +1,5 @@
+2024-01-03 13:37:21 error: [GET] /wallet/cus_PBbQBKCT5KXiiH >> StatusCode:: 401, Message:: missing token
+2024-01-03 20:41:01 error: [GET] /users/cus_PBbQBKCT5KXiiH >> StatusCode:: 401, Message:: missing token
+2024-01-03 20:51:01 error: [GET] /users/cus_PBbQBKCT5KXiiH >> StatusCode:: 401, Message:: missing token
+2024-01-03 21:03:48 error: [GET] /users/cus_PBbQBKCT5KXiiH >> StatusCode:: 401, Message:: missing token
+2024-01-03 21:08:57 error: [GET] /wallet/cus_PBbQBKCT5KXiiH >> StatusCode:: 401, Message:: missing token

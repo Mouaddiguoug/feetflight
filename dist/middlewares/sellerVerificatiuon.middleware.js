@@ -19,7 +19,6 @@ const authMiddleware = async (req, res, next)=>{
                     userId: userId
                 }));
             if (isSellerVerified.records.map((record)=>record.get("s").properties.verified)) {
-                req.data.user = isSellerVerified.records.map((record)=>record.get("s").properties)[0];
                 next();
             } else {
                 next(new _HttpException.HttpException(401, 'this user is not verified yet'));
