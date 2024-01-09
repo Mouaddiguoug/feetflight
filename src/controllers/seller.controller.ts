@@ -53,6 +53,16 @@ class sellerController {
     }
   };
 
+  public getAllSellers = async (req: Request, res: Response, next: NextFunction): Promise<void> => {
+    try {
+      const result = await this.sellerService.getAllSellers();
+
+      res.status(201).json(result);
+    } catch (error) {
+      next(error);
+    }
+  };
+
   public uploadIdentityCard = async (req: Request, res: Response, next: NextFunction): Promise<void> => {
     try {
       const userId = String(req.params.id);

@@ -9,7 +9,6 @@ Object.defineProperty(exports, "default", {
     }
 });
 const _app = require("../app");
-const _stripe = /*#__PURE__*/ _interop_require_default(require("stripe"));
 const _nodebuffer = require("node:buffer");
 const _nodefs = require("node:fs");
 const _nodepath = /*#__PURE__*/ _interop_require_default(require("node:path"));
@@ -44,6 +43,50 @@ let sellerService = class sellerService {
             console.log(error);
         }
     }
+    async changePlans(plans) {
+        try {
+            const updatedPlans = plans.map(async (plan)=>{
+                const oldPrice = await _app.stripe.prices.retrieve(plan.id);
+                await _app.stripe.products.update(oldPrice.product.toString(), {
+                    name: plan.name
+                });
+                const newPrice = await _app.stripe.prices.create({
+                    currency: "EUR",
+                    product: oldPrice.product.toString(),
+                    recurring: {
+                        interval: "month",
+                        interval_count: 1
+                    },
+                    unit_amount: plan.price * 100
+                });
+                await _app.stripe.prices.update(oldPrice.id, {
+                    active: false
+                });
+                return this.changePlansInDb(plan.id, newPrice.id, plan.name, plan.price);
+            });
+            return updatedPlans.length > 0 ? {
+                "message": "plans were updated successfully"
+            } : {
+                "message": "Something went wrong"
+            };
+        } catch (error) {
+            console.log(error);
+        }
+    }
+    async changePlansInDb(oldPlanId, newPlanId, name, price) {
+        const changePlanSession = (0, _app.initializeDbConnection)().session();
+        try {
+            const updatedPlan = await changePlanSession.executeWrite((tx)=>tx.run('match (plan:plan {id: $planId}) set plan.id = $newPlanId, plan.name = $name, plan.price = $price', {
+                    planId: oldPlanId,
+                    newPlanId: newPlanId,
+                    name: name,
+                    price: price
+                }));
+            return updatedPlan;
+        } catch (error) {
+            console.log(error);
+        }
+    }
     async getSubscriptiionPlans(userId) {
         try {
             const getSubscriptionPlansSession = (0, _app.initializeDbConnection)().session();
@@ -56,14 +99,11 @@ let sellerService = class sellerService {
         }
     }
     constructor(){
-        _define_property(this, "stripe", new _stripe.default(process.env.STRIPE_TEST_KEY, {
-            apiVersion: '2022-11-15'
-        }));
         _define_property(this, "prices", []);
         _define_property(this, "createSubscribePlan", async (subscriptionPlanPrice, subscriptionPlanTitle, userId)=>{
             const createSubscribePlansSession = (0, _app.initializeDbConnection)().session();
             try {
-                const product = await this.stripe.products.create({
+                const product = await _app.stripe.products.create({
                     name: subscriptionPlanTitle
                 });
                 const price = await this.stripe.prices.create({

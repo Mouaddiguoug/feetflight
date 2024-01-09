@@ -88,6 +88,20 @@ class sellerService {
     }
   }
 
+  public async getAllSellers() {
+    try {
+      const getAllSellersSession = initializeDbConnection().session();
+
+      const allSellers = await getAllSellersSession.executeRead(tx =>
+        tx.run('match (u:user)-[:IS_A]-(s:seller) where exists((u)-[:IS_A]-(s)) return u'),
+      );
+
+      return allSellers.records.map(record => record.get('u').properties);
+    } catch (error) {
+      console.log(error);
+    }
+  }
+
   public createSubscribePlan = async (subscriptionPlanPrice: number, subscriptionPlanTitle: string, userId: string) => {
     const createSubscribePlansSession = initializeDbConnection().session();
     try {

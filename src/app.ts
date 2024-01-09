@@ -41,7 +41,7 @@ class App {
 
   constructor(routes: Routes[]) {
     this.app = express();
-    this.env = NODE_ENV || 'development';
+    this.env = NODE_ENV;
     this.port = PORT || 3000;
     this.app.post('/webhook', express.raw({ type: 'application/json' }), async (req, res, next): Promise<void> => {
       try {

@@ -16,7 +16,6 @@ const _util = require("../utils/util");
 const _app = require("../app");
 const _jsonwebtoken = require("jsonwebtoken");
 const _nodepath = /*#__PURE__*/ _interop_require_default(require("node:path"));
-const _stripe = /*#__PURE__*/ _interop_require_default(require("stripe"));
 const _openai = /*#__PURE__*/ _interop_require_default(require("openai"));
 function _define_property(obj, key, value) {
     if (key in obj) {
@@ -125,7 +124,7 @@ let UserService = class UserService {
             const pricesPromises = await saleData.data.posts.map((post)=>{
                 return this.checkForSale(userId, post.id).then((exists)=>{
                     if (exists) return null;
-                    return this.stripe.prices.list({
+                    return _app.stripe.prices.list({
                         product: post.id
                     }).then((price)=>{
                         return {
@@ -140,8 +139,8 @@ let UserService = class UserService {
                 message: 'all posts selected have already been bought by this user'
             };
             const sellersPromises = await saleData.data.posts.map((post)=>{
-                return this.stripe.products.retrieve(post.id).then((product)=>{
-                    return this.stripe.prices.list({
+                return _app.stripe.products.retrieve(post.id).then((product)=>{
+                    return _app.stripe.prices.list({
                         product: post.id
                     }).then((price)=>{
                         return {
@@ -153,7 +152,7 @@ let UserService = class UserService {
                 });
             });
             const sellers = await Promise.all(sellersPromises);
-            const session = await this.stripe.checkout.sessions.create({
+            const session = await _app.stripe.checkout.sessions.create({
                 success_url: 'https://example.com/success',
                 line_items: prices.filter((price)=>price != null),
                 mode: 'payment',
@@ -192,9 +191,6 @@ let UserService = class UserService {
         }
     }
     constructor(){
-        _define_property(this, "stripe", new _stripe.default(process.env.STRIPE_TEST_KEY, {
-            apiVersion: '2022-11-15'
-        }));
         _define_property(this, "prices", []);
         _define_property(this, "getSellersByPostId", async (postId)=>{
             const getSellersByPostIdSession = (0, _app.initializeDbConnection)().session();
@@ -232,7 +228,7 @@ let UserService = class UserService {
                 if (await this.checkForSubscription(userId, sellerId)) return {
                     message: 'Already subscribed'
                 };
-                const session = await this.stripe.checkout.sessions.create({
+                const session = await _app.stripe.checkout.sessions.create({
                     success_url: 'https://example.com/success',
                     line_items: [
                         {

@@ -12,6 +12,9 @@ _export(exports, {
     transporter: function() {
         return transporter;
     },
+    stripe: function() {
+        return stripe;
+    },
     initializeDbConnection: function() {
         return initializeDbConnection;
     },
@@ -137,7 +140,7 @@ let App = class App {
         _define_property(this, "env", void 0);
         _define_property(this, "port", void 0);
         this.app = (0, _express.default)();
-        this.env = _config.NODE_ENV || 'development';
+        this.env = _config.NODE_ENV;
         this.port = _config.PORT || 3000;
         this.app.post('/webhook', _express.default.raw({
             type: 'application/json'
@@ -223,6 +226,9 @@ let App = class App {
         });
     }
 };
+const stripe = new _stripe.default(process.env.STRIPE_TEST_KEY, {
+    apiVersion: '2022-11-15'
+});
 function initializeDbConnection() {
     try {
         const driver = _neo4jdriver.default.driver(process.env.NEO4J_URI, _neo4jdriver.default.auth.basic(process.env.NEO4J_USERNAME, process.env.NEO4J_PASSWORD));

@@ -1,0 +1,57 @@
+2024-01-03 13:36:52 info: [0mGET /users/ai/generatePictures [32m200[0m 749.036 ms - -[0m
+2024-01-03 13:37:07 info: [0mGET /notifications/cus_PBbQBKCT5KXiiH [32m201[0m 903.400 ms - 2[0m
+2024-01-03 13:37:15 info: [0mGET /public/files/albums/postPicture9b11505cfe5bd9b6bef9ae840078e4734144b5d914122023.png [33m404[0m 7.526 ms - 222[0m
+2024-01-03 13:37:15 info: [0mGET /public/files/albums/postPictureb25e375f3a97b3467961505186a4241e2a6bbefb22122023.jpeg [33m404[0m 5.402 ms - 223[0m
+2024-01-03 13:37:15 info: [0mGET /public/files/albums/postPicture505cfe5bd9b6bef9ae840078e4734144b5d9dd6e43122023.png [33m404[0m 5.531 ms - 222[0m
+2024-01-03 13:37:15 info: [0mGET /public/files/albums/postPicture5d2f8cd3f6f50e15909b11505cfe5bd9b6bef9ae42122023.png [33m404[0m 5.821 ms - 222[0m
+2024-01-03 13:37:15 info: [0mGET /public/files/albums/postPicturebc134f12720fc7feb9b82da20c66021635b3d5ec16122023.octet-stream [33m404[0m 4.696 ms - 231[0m
+2024-01-03 13:37:15 info: [0mGET /public/files/albums/postPictureffe7acebe0fd2c1bb9e191df6d10863a0675575746122023.octet-stream [33m404[0m 5.193 ms - 231[0m
+2024-01-03 13:37:15 info: [0mGET /public/files/albums/postPicture5f539a43c377472363dbdd37af8a523e7b124a8022122023.png [33m404[0m 5.670 ms - 222[0m
+2024-01-03 13:37:15 info: [0mGET /public/files/albums/postPicture0fd2c1bb9e191df6d10863a06755757a97f6c1bf31122023.octet-stream [33m404[0m 6.146 ms - 231[0m
+2024-01-03 13:37:15 info: [0mGET /public/files/albums/postPicture3d30f9e2249b636e6a6d423149a491b02cfb8e3927122023.png [33m404[0m 5.175 ms - 222[0m
+2024-01-03 13:37:15 info: [0mGET /public/files/albums/postPicturef50e15909b11505cfe5bd9b6bef9ae840078e47327122023.png [33m404[0m 5.270 ms - 222[0m
+2024-01-03 13:37:16 info: [0mGET /public/files/albums/postPictureab1ea683903e4ee8f09207748b58848b796d30b002122023.octet-stream [33m404[0m 0.954 ms - 231[0m
+2024-01-03 13:37:21 error: [GET] /wallet/cus_PBbQBKCT5KXiiH >> StatusCode:: 401, Message:: missing token
+2024-01-03 13:37:21 info: [0mGET /wallet/cus_PBbQBKCT5KXiiH [33m401[0m 10.434 ms - 27[0m
+2024-01-03 13:37:21 info: [0mPOST /refresh [32m200[0m 1.513 ms - 248[0m
+2024-01-03 13:37:23 info: [0mGET /wallet/cus_PBbQBKCT5KXiiH [32m201[0m 1626.182 ms - 16[0m
+2024-01-03 20:41:01 error: [GET] /users/cus_PBbQBKCT5KXiiH >> StatusCode:: 401, Message:: missing token
+2024-01-03 20:41:01 info: [0mGET /users/cus_PBbQBKCT5KXiiH [33m401[0m 117.382 ms - 27[0m
+2024-01-03 20:41:02 info: [0mPOST /refresh [32m200[0m 28.194 ms - 247[0m
+2024-01-03 20:41:04 info: [0mGET /users/cus_PBbQBKCT5KXiiH [32m200[0m 2070.645 ms - 376[0m
+2024-01-03 20:41:07 info: [0mGET /albums/all-categories [32m201[0m 1659.594 ms - 114[0m
+2024-01-03 20:41:08 info: [0mGET /users/plans/cus_PBbQBKCT5KXiiH [32m200[0m 2063.630 ms - 214[0m
+2024-01-03 20:41:08 info: [0mGET /albums/random/0/cus_PBbQBKCT5KXiiH [32m201[0m 2675.183 ms - -[0m
+2024-01-03 20:41:08 info: [0mGET /albums/popular/cus_PBbQBKCT5KXiiH [32m201[0m 2899.553 ms - -[0m
+2024-01-03 20:41:09 info: [0mGET /albums/cus_PBbQBKCT5KXiiH [32m201[0m 2921.940 ms - -[0m
+2024-01-03 20:46:11 info: =================================
+2024-01-03 20:46:11 info: ======= ENV: development =======
+2024-01-03 20:46:11 info: 🚀 App listening on the port 8000
+2024-01-03 20:46:11 info: =================================
+2024-01-03 20:46:44 info: =================================
+2024-01-03 20:46:44 info: ======= ENV: development =======
+2024-01-03 20:46:44 info: 🚀 App listening on the port 8000
+2024-01-03 20:46:44 info: =================================
+2024-01-03 20:51:01 error: [GET] /users/cus_PBbQBKCT5KXiiH >> StatusCode:: 401, Message:: missing token
+2024-01-03 20:51:01 info: [0mGET /users/cus_PBbQBKCT5KXiiH [33m401[0m 23.739 ms - 27[0m
+2024-01-03 20:51:01 info: [0mPOST /refresh [32m200[0m 23.426 ms - 247[0m
+2024-01-03 20:51:03 info: [0mGET /users/cus_PBbQBKCT5KXiiH [32m200[0m 1487.656 ms - 376[0m
+2024-01-03 20:51:05 info: [0mGET /albums/random/0/cus_PBbQBKCT5KXiiH [32m201[0m 974.483 ms - -[0m
+2024-01-03 20:51:06 info: [0mGET /albums/popular/cus_PBbQBKCT5KXiiH [32m201[0m 1619.806 ms - -[0m
+2024-01-03 20:51:06 info: [0mGET /albums/all-categories [32m201[0m 1547.382 ms - 114[0m
+2024-01-03 20:51:06 info: [0mGET /users/plans/cus_PBbQBKCT5KXiiH [32m200[0m 1654.744 ms - 214[0m
+2024-01-03 20:51:06 info: [0mGET /albums/cus_PBbQBKCT5KXiiH [32m201[0m 1656.385 ms - -[0m
+2024-01-03 21:03:48 error: [GET] /users/cus_PBbQBKCT5KXiiH >> StatusCode:: 401, Message:: missing token
+2024-01-03 21:03:48 info: [0mGET /users/cus_PBbQBKCT5KXiiH [33m401[0m 3.068 ms - 27[0m
+2024-01-03 21:03:48 info: [0mPOST /refresh [32m200[0m 2.106 ms - 247[0m
+2024-01-03 21:03:50 info: [0mGET /users/cus_PBbQBKCT5KXiiH [32m200[0m 1561.272 ms - 376[0m
+2024-01-03 21:03:52 info: [0mGET /albums/random/0/cus_PBbQBKCT5KXiiH [32m201[0m 1033.399 ms - -[0m
+2024-01-03 21:03:53 info: [0mGET /users/plans/cus_PBbQBKCT5KXiiH [32m200[0m 1691.962 ms - 214[0m
+2024-01-03 21:03:53 info: [0mGET /albums/all-categories [32m201[0m 1692.990 ms - 114[0m
+2024-01-03 21:03:53 info: [0mGET /albums/cus_PBbQBKCT5KXiiH [32m201[0m 1776.175 ms - -[0m
+2024-01-03 21:03:53 info: [0mGET /albums/popular/cus_PBbQBKCT5KXiiH [32m201[0m 2012.602 ms - -[0m
+2024-01-03 21:08:57 error: [GET] /wallet/cus_PBbQBKCT5KXiiH >> StatusCode:: 401, Message:: missing token
+2024-01-03 21:08:57 info: [0mGET /wallet/cus_PBbQBKCT5KXiiH [33m401[0m 3.240 ms - 27[0m
+2024-01-03 21:08:57 info: [0mPOST /refresh [32m200[0m 1.692 ms - 247[0m
+2024-01-03 21:08:59 info: [0mGET /wallet/cus_PBbQBKCT5KXiiH [32m201[0m 1590.914 ms - 16[0m
+2024-01-03 21:11:17 info: [0mGET /notifications/cus_PBbQBKCT5KXiiH [32m201[0m 943.316 ms - 2[0m

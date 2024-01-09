@@ -12,6 +12,7 @@ const _express = require("express");
 const _sellercontroller = /*#__PURE__*/ _interop_require_default(require("../controllers/seller.controller"));
 const _multer = /*#__PURE__*/ _interop_require_default(require("multer"));
 const _fileValidationmiddleware = /*#__PURE__*/ _interop_require_default(require("../middlewares/fileValidation.middleware"));
+const _authmiddleware = /*#__PURE__*/ _interop_require_default(require("../middlewares/auth.middleware"));
 function _define_property(obj, key, value) {
     if (key in obj) {
         Object.defineProperty(obj, key, {
@@ -32,9 +33,10 @@ function _interop_require_default(obj) {
 }
 let sellerRoute = class sellerRoute {
     initializeRoutes() {
-        this.router.post(`${this.path}/plans/:id`, this.sellerController.createSubscribePlans);
-        this.router.get(`${this.path}/plans/:id`, this.sellerController.getSubscriptionPlans);
-        this.router.get(`${this.path}/followers/:id`, this.sellerController.getFollowersCount);
+        this.router.post(`${this.path}/plans/:id`, _authmiddleware.default, this.sellerController.createSubscribePlans);
+        this.router.get(`${this.path}/plans/:id`, _authmiddleware.default, this.sellerController.getSubscriptionPlans);
+        this.router.put(`${this.path}/plans`, _authmiddleware.default, this.sellerController.updatePlans);
+        this.router.get(`${this.path}/followers/:id`, _authmiddleware.default, this.sellerController.getFollowersCount);
         this.router.post(`${this.path}/upload/identitycard/:id`, (0, _multer.default)().fields([
             {
                 name: 'frontSide',
