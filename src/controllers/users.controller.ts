@@ -116,6 +116,31 @@ class UsersController {
     }
   };
 
+  public generateOtp = async (req: Request, res: Response, next: NextFunction): Promise<void> => {
+    try {
+      const email = String(req.params.email);
+
+      const generatedHash = await this.userService.generateOtp(email);
+
+      res.status(200).json(generatedHash);
+    } catch (error) {
+      next(error);
+    }
+  };
+
+  public verifyOtp = async (req: Request, res: Response, next: NextFunction): Promise<void> => {
+    try {
+      const email = String(req.params.email);
+      const otpSettings = req.body;
+
+      const result: any = await this.userService.verifyOtp(otpSettings, email);
+
+      res.status(result.message == "success" ? 200 : 400).json(result);
+    } catch (error) {
+      next(error);
+    }
+  };
+
   public cancelSubscription = async (req: Request, res: Response, next: NextFunction): Promise<void> => {
 
     try {

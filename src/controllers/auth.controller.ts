@@ -27,6 +27,16 @@ class AuthController {
     }
   };
 
+  public resendVerificationEMail = async (req: Request, res: Response, next: NextFunction): Promise<void> => {
+    try {
+      const email = String(req.params.email);
+      await this.authService.resendVerificationEmail(email);
+      res.status(200);
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
   public changePassword = async (req: Request, res: Response, next: NextFunction): Promise<void> => {
     try {
       const userData = req.body;

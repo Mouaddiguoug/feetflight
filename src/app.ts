@@ -164,6 +164,7 @@ class App {
           extname: '.handlebars',
           layoutsDir: path.resolve(__dirname, '../public/views/'),
           partialsDir: path.resolve(__dirname, '../public/views/'),
+          defaultLayout: "verifying_email"
         },
         viewPath: path.resolve(__dirname, '../public/views/'),
         extName: '.handlebars',

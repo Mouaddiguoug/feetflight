@@ -5,20 +5,18 @@ import { HttpException } from '@exceptions/HttpException';
 import { User } from '@interfaces/users.interface';
 import userModel from '@models/users.model';
 import { isEmpty } from '@utils/util';
-import { initializeDbConnection } from '@/app';
+import { initializeDbConnection, stripe } from '@/app';
 import { RolesEnum } from '../enums/RolesEnums';
 import uid from 'uid';
 import moment from 'moment';
 import { transporter } from '@/app';
-import aws from 'aws-sdk';
-import Stripe from 'stripe';
 
 class AuthService {
   public users = userModel;
 
   public async signup(userData) {
     if (isEmpty(userData)) throw new HttpException(400, 'userData is empty');
-    const stripe = new Stripe(process.env.STRIPE_TEST_KEY, { apiVersion: '2022-11-15' });
+    
     const signupSession = initializeDbConnection().session({ database: 'neo4j' });
     const createWalletSession = initializeDbConnection().session({ database: 'neo4j' });
 
@@ -147,14 +145,48 @@ class AuthService {
   public async sendVerificationEmail(email: string, userName: string, token: string, role: string) {
     try {
       const mailOptions = {
-        template: 'main',
+        template: 'verifying_email',
         from: process.env.USER,
         to: email,
         subject: 'Verifying Email',
         context: {
           userName: userName,
           token: token,
+          domain: process.env.DOMAIN,
           role: role,
+        },
+      };
+
+      transporter.sendMail(mailOptions, (error: any, data: any) => {
+        if (error) console.log(error);
+        if (!error) console.log('sent');
+      });
+    } catch (error) {
+      console.log(error);
+    }
+  }
+
+  public async resendVerificationEmail(email: string) {
+    const getUserByEmailSession = initializeDbConnection().session();
+
+    try {
+      const user = await getUserByEmailSession.executeRead(tx => tx.run("match (u:user {email: $email})-[:IS_A]->(b:buyer) return u, b", {
+        email: email
+      }));
+  
+      const tokenData = this.createToken(process.env.EMAIL_SECRET, user.records.map(record => record.get('u').properties.id)[0])
+  
+
+      const mailOptions = {
+        template: 'verifying_email',
+        from: process.env.USER,
+        to: email,
+        subject: 'Verifying Email',
+        context: {
+          userName: user.records.map(record => record.get('u').properties.userName)[0],
+          token: tokenData.token,
+          domain: process.env.DOMAIN,
+          role: user.records.map(record => record.get('b').properties).length == 0 ? "Seller" : "Buyer",
         },
       };
 
@@ -261,7 +293,7 @@ class AuthService {
     try {
       const dataStoredInToken = { id: data };
       const secretKey: string = secret;
-      const expiresAt: string = '60s';
+      const expiresAt: string = '280s';
       const expiresIn: Date = new Date();
       console.log(expiresIn);
       expiresIn.setTime(expiresIn.getTime() + 60000);
@@ -280,7 +312,7 @@ class AuthService {
       const dataStoredInToken = { id: data, refresh: true };
 
       const secretKey: string = SECRET_KEY;
-      const expiresAt: string = '60s';
+      const expiresAt: string = '280s';
       const expiresIn: Date = new Date();
       expiresIn.setTime(expiresIn.getTime() + 60);
 

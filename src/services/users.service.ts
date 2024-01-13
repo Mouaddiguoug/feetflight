@@ -4,13 +4,18 @@ import { User } from '@interfaces/users.interface';
 import { writeFile } from 'node:fs';
 import { Buffer } from 'node:buffer';
 import { isEmpty } from '@utils/util';
+import otpGenerator from "otp-generator";
+import crypto from "crypto";
+import { transporter } from '@/app';
 import { initializeDbConnection, stripe } from '@/app';
 import { verify } from 'jsonwebtoken';
 import path from 'node:path';
 import OpenAi from 'openai';
+import AuthService from './auth.service';
 
 class UserService {
   public prices = [];
+  public authService = new AuthService();
 
   public async findUserById(userId) {
     const getUserSession = initializeDbConnection().session();
@@ -44,7 +49,7 @@ class UserService {
         n: 5,
         size: "256x256",
       })
-      
+
       return result.data
     } catch (error) {
       console.log(error);
@@ -78,9 +83,11 @@ class UserService {
     try {
       const tokenData: any = verify(token, process.env.EMAIL_SECRET);
 
+      console.log(tokenData.id);
+
       const checkConfirmation = await confirmEmailSession.executeRead(tx =>
         tx.run('match (u:user {id: $userId}) return u', {
-          userId: tokenData.data,
+          userId: tokenData.id,
         }),
       );
 
@@ -88,7 +95,7 @@ class UserService {
 
       const confirmed = await confirmEmailSession.executeWrite(tx =>
         tx.run('match (u:user {id: $userId}) set u.confirmed = true return u', {
-          userId: tokenData.data,
+          userId: tokenData.id,
         }),
       );
 
@@ -190,6 +197,75 @@ class UserService {
     }
   };
 
+  public generateOtp = async (email: string) => {
+    try {
+      const otp = otpGenerator.generate(4, {
+        digits: true,
+        specialChars: false,
+        lowerCaseAlphabets: false,
+        upperCaseAlphabets: false
+      });
+
+      const timeLeft = 2 * 60 * 1000;
+      const expiresIn = Date.now() + timeLeft;
+      const data = `${email}.${otp}.${expiresIn}`;
+      const hash = crypto.createHmac("sha256", process.env.SECRET_KEY).update(data).digest("hex");
+      const secondLayer = `${hash}.${expiresIn}`;
+
+
+      const to = email;
+
+      const mailOptions = {
+        html: `<div<h1>Feetflight</h1><br><br><h3>Hello again</h3><br><p>We have received a request to change the password associated with your account. As part of our security measures, we have generated an OTP to verify your identity for this action.</p><br><p>Your OTP is: ${otp}</p><br><p>Please ensure that you use the OTP within the next 2 minutes.</p><br><p>Best regards,</p><br><p>Feetflight,</p></div>`,
+        from: process.env.USER,
+        to: to,
+        subject: 'otp Verification Email',
+        context: {
+          otp: otp,
+        },
+      };
+
+      transporter.sendMail(mailOptions, (error: any, data: any) => {
+        if (error) console.log(error);
+        if (!error) console.log('sent');
+      });
+
+      return secondLayer;
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
+  public verifyOtp = async (otpSettings: any, email: string) => {
+    try {
+      const getUserByEmailSession = initializeDbConnection().session();
+      const [hashedValue, expiresIn] = otpSettings.hash.split(".");
+
+      let now = Date.now();
+
+      if (now > parseInt(expiresIn)) return { "message": "otp was expired" };
+
+      const data = `${email}.${otpSettings.otp}.${expiresIn}`;
+      const hash = crypto.createHmac("sha256", process.env.SECRET_KEY).update(data).digest("hex");
+
+      const secondLayer = `${hash}.${expiresIn}`;
+
+      if (hash != hashedValue) return { message: "Invalid otp" };
+
+      const user = await getUserByEmailSession.executeRead(tx => tx.run("match (u:user {email: $email})-[:IS_A]->(b:buyer) return u, b", {
+        email: email
+      }));
+
+      const tokenData = this.authService.createToken(process.env.EMAIL_SECRET, user.records.map(record => record.get('u').properties.id)[0])
+
+      return { message: "success", tokenData, data: user.records.map(record => record.get('u').properties)[0], role: user.records.map(record => record.get('b').properties).length == 0 ? "Seller" : "Buyer" }
+    } catch (error) {
+      console.log(error);
+
+    }
+
+  }
+
   public buyPost = async (postId: string, userId: string, sellerId: string, amount: number) => {
     const buyPostSession = initializeDbConnection().session();
     try {
@@ -257,7 +333,7 @@ class UserService {
           },
         );
       });
-      
+
     } catch (error) {
       console.log(error);
     } finally {
@@ -277,7 +353,7 @@ class UserService {
           sellerId: sellerId,
         });
       });
-      return {message: 'subscription was canceled successfuly'};
+      return { message: 'subscription was canceled successfuly' };
     } catch (error) {
       console.log(error);
     } finally {
@@ -294,7 +370,7 @@ class UserService {
           postId: postId,
         }),
       );
-      
+
 
       return saleAlreadyExists.records.map(record => record.get('bought')).length > 0 ? true : false;
     } catch (error) {
@@ -342,7 +418,7 @@ class UserService {
   public checkForSubscriptionbyUserId = async (userId: string, postId: string, plan: string) => {
     const checkForSubscriptionSession = initializeDbConnection().session();
     try {
-      
+
       const subscriptionAlreadyExist = await checkForSubscriptionSession.executeWrite(tx =>
         tx.run('match (u:user {id: $userId})-[subscribed:SUBSCRIBED_TO {subscriptionPlanTitle: $plan}]->(s:seller)-[:HAS_A]->(p:post {id: $postId}) return subscribed', {
           userId: userId,
@@ -350,7 +426,7 @@ class UserService {
           plan: plan
         }),
       );
-      
+
 
       return subscriptionAlreadyExist.records.map(record => record.get('subscribed')).length > 0 ? true : false;
     } catch (error) {
@@ -385,7 +461,7 @@ class UserService {
       const filecontent = Buffer.from(avatarData.buffer, 'binary');
 
       console.log(filecontent);
-      
+
 
       writeFile(
         path.join(__dirname, '../../public/files/avatars', `avatar${userId}.${avatarData.mimetype.split("/")[1]}`),
@@ -416,7 +492,7 @@ class UserService {
     }
   };
 
-  public async uploadDeviceToken(userId: string, token: string): Promise<void>  {
+  public async uploadDeviceToken(userId: string, token: string): Promise<void> {
     const uploadDeviceTokenSession = initializeDbConnection().session();
     try {
       await uploadDeviceTokenSession.executeWrite(tx =>

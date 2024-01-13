@@ -26,6 +26,8 @@ class UsersRoute implements Routes {
     this.router.get(`${this.path}/plans/:id`,authMiddleware, this.usersController.getSellerPlans);
     this.router.get(`${this.path}/ai/generatePictures`, this.usersController.generateAiPictures);
     this.router.put(`${this.path}/:id`, authMiddleware, this.usersController.updateUser);
+    this.router.post(`${this.path}/generateOtp/:email`, this.usersController.generateOtp);
+    this.router.post(`${this.path}/verifyOtp/:email`, this.usersController.verifyOtp);
     this.router.get(`${this.path}/verify/checkForSale/:userId/:postId/:plan`, this.usersController.checkForSale);
     this.router.post(`${this.path}/devices/token/:id`, authMiddleware, this.usersController.uploadDeviceToken);
     this.router.post(`${this.path}/desactivate/:id`, this.usersController.desactivateUser);
