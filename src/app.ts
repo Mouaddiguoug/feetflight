@@ -23,7 +23,7 @@ import NotificationService from './services/notification.service';
 
 export const transporter = nodemailer.createTransport({
   service: process.env.SERVICE,
-  secure: Boolean(process.env.SECURE),
+  secure: true,
   auth: {
     user: process.env.USER,
     pass: process.env.PASS,

@@ -1,2 +1,0 @@
-2023-12-12 12:36:29 error: [GET] /users/e1d640e916c8628de70bf8ec0bd97461577cc85a >> StatusCode:: 401, Message:: Wrong authentication token
-2023-12-12 13:36:50 error: [GET] /wallet/e1d640e916c8628de70bf8ec0bd97461577cc85a >> StatusCode:: 401, Message:: Wrong authentication token

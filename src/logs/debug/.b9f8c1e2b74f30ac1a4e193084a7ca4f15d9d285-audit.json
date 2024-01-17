@@ -6,16 +6,6 @@
     "auditLog": "C:\\Users\\mouad\\Documents\\Projects\\feetflight\\feetflight\\src\\logs\\debug\\.b9f8c1e2b74f30ac1a4e193084a7ca4f15d9d285-audit.json",
     "files": [
         {
-            "date": 1702380814198,
-            "name": "C:\\Users\\mouad\\Documents\\Projects\\feetflight\\feetflight\\src\\logs\\debug\\2023-12-12.log",
-            "hash": "9d34618a70063c3fdd25fb646994e4ea4d18e555640dce9b7e52ea55e68964bf"
-        },
-        {
-            "date": 1702460714056,
-            "name": "C:\\Users\\mouad\\Documents\\Projects\\feetflight\\feetflight\\src\\logs\\debug\\2023-12-13.log",
-            "hash": "0d7cbc67a80118a13c2ac2b7f28b18b4e9668c5824f4b5b6b14f7a5166a2d881"
-        },
-        {
             "date": 1702555993798,
             "name": "C:\\Users\\mouad\\Documents\\Projects\\feetflight\\feetflight\\src\\logs\\debug\\2023-12-14.log",
             "hash": "b2fa9ec342c6f68b2f70960541c257816da6a24dd94ec518e5bc48e5d4fe5e6c"
@@ -154,6 +144,16 @@
             "date": 1705144479762,
             "name": "C:\\Users\\mouad\\Documents\\Projects\\feetflight\\feetflight\\src\\logs\\debug\\2024-01-13.log",
             "hash": "90742a2ee47d2d9b700893de36133c79777754140da7e478c1cea3e10a75d2c8"
+        },
+        {
+            "date": 1705243654054,
+            "name": "C:\\Users\\mouad\\Documents\\Projects\\feetflight\\feetflight\\src\\logs\\debug\\2024-01-14.log",
+            "hash": "041407930ffc159b041128420deeb8ecae8ca86e739bd5c6bec0c877acb64048"
+        },
+        {
+            "date": 1705319426205,
+            "name": "C:\\Users\\mouad\\Documents\\Projects\\feetflight\\feetflight\\src\\logs\\debug\\2024-01-15.log",
+            "hash": "a2d7a478dd011697f943c934302d2ebc074d3bf0bee6595baf25e1d694704f1b"
         }
     ],
     "hashType": "sha256"
