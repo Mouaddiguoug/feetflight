@@ -36,11 +36,6 @@ class AuthService {
             balance: 0,
           });
 
-          const seller = await stripe.accounts.create({
-            email: userData.data.email,
-            type: 'express',
-          });
-
           const createUserSeller = await signupSession.executeWrite(tx =>
             tx.run(
               'create (u:user {id: $userId, name: $name, email: $email, userName: $userName, avatar: "", password: $password, createdAt: $createdAt, confirmed: false, verified: false, desactivated: false, phone: $phone, followers: $followers, followings: $followings})-[r: IS_A]->(s:seller {id: $sellerId, verified: $verified}) create (d:deviceToken {token: $token})<-[:logged_in_with]-(u) return u, s',
@@ -55,7 +50,7 @@ class AuthService {
                 userName: userData.data.userName,
                 name: userData.data.name,
                 password: hashedPassword,
-                sellerId: seller.id,
+                sellerId: uid.uid(40),
                 verified: false,
                 phone: userData.data.phone,
               },
@@ -146,7 +141,7 @@ class AuthService {
     try {
       const mailOptions = {
         template: 'verifying_email',
-        from: process.env.USER,
+        from: process.env.USER_EMAIL,
         to: email,
         subject: 'Verifying Email',
         context: {
@@ -168,25 +163,31 @@ class AuthService {
 
   public async resendVerificationEmail(email: string) {
     const getUserByEmailSession = initializeDbConnection().session();
-
+	const checkForRoleSession = initializeDbConnection().session();
     try {
-      const user = await getUserByEmailSession.executeRead(tx => tx.run("match (u:user {email: $email})-[:IS_A]->(b:buyer) return u, b", {
+      const user = await getUserByEmailSession.executeRead(tx => tx.run("match (u:user {email: $email}) return u", {
         email: email
       }));
+
+ 	const role = await checkForRoleSession.executeRead(tx => tx.run("match (user:user {email: $email}), (s:seller) with true as isSeller where exists((user)-[:IS_A]->(s)) return isSeller", {
+        email: email
+      }));
+
+	console.log(role.records.map(record => record.get('isSeller')));
   
       const tokenData = this.createToken(process.env.EMAIL_SECRET, user.records.map(record => record.get('u').properties.id)[0])
   
 
       const mailOptions = {
         template: 'verifying_email',
-        from: process.env.USER,
+        from: process.env.USER_EMAIL,
         to: email,
         subject: 'Verifying Email',
         context: {
           userName: user.records.map(record => record.get('u').properties.userName)[0],
           token: tokenData.token,
           domain: process.env.DOMAIN,
-          role: user.records.map(record => record.get('b').properties).length == 0 ? "Seller" : "Buyer",
+          role: role.records.map(record => record.get('isSeller')).length > 0 ? "Seller" : "Buyer",
         },
       };
 

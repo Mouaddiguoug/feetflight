@@ -83,7 +83,7 @@ class UserService {
     try {
       const tokenData: any = verify(token, process.env.EMAIL_SECRET);
 
-      console.log(tokenData.id);
+      console.log(tokenData, token);
 
       const checkConfirmation = await confirmEmailSession.executeRead(tx =>
         tx.run('match (u:user {id: $userId}) return u', {
@@ -217,7 +217,7 @@ class UserService {
 
       const mailOptions = {
         html: `<div<h1>Feetflight</h1><br><br><h3>Hello again</h3><br><p>We have received a request to change the password associated with your account. As part of our security measures, we have generated an OTP to verify your identity for this action.</p><br><p>Your OTP is: ${otp}</p><br><p>Please ensure that you use the OTP within the next 2 minutes.</p><br><p>Best regards,</p><br><p>Feetflight,</p></div>`,
-        from: process.env.USER,
+        from: process.env.USER_EMAIL,
         to: to,
         subject: 'otp Verification Email',
         context: {

@@ -48,6 +48,15 @@ let AuthController = class AuthController {
                 console.log(error);
             }
         });
+        _define_property(this, "resendVerificationEMail", async (req, res, next)=>{
+            try {
+                const email = String(req.params.email);
+                await this.authService.resendVerificationEmail(email);
+                res.status(200);
+            } catch (error) {
+                console.log(error);
+            }
+        });
         _define_property(this, "changePassword", async (req, res, next)=>{
             try {
                 const userData = req.body;

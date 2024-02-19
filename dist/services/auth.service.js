@@ -18,7 +18,6 @@ const _app = require("../app");
 const _RolesEnums = require("../enums/RolesEnums");
 const _uid = /*#__PURE__*/ _interop_require_default(require("uid"));
 const _moment = /*#__PURE__*/ _interop_require_default(require("moment"));
-const _stripe = /*#__PURE__*/ _interop_require_default(require("stripe"));
 function _define_property(obj, key, value) {
     if (key in obj) {
         Object.defineProperty(obj, key, {
@@ -40,9 +39,6 @@ function _interop_require_default(obj) {
 let AuthService = class AuthService {
     async signup(userData) {
         if ((0, _util.isEmpty)(userData)) throw new _HttpException.HttpException(400, 'userData is empty');
-        const stripe = new _stripe.default(process.env.STRIPE_TEST_KEY, {
-            apiVersion: '2022-11-15'
-        });
         const signupSession = (0, _app.initializeDbConnection)().session({
             database: 'neo4j'
         });
@@ -66,12 +62,12 @@ let AuthService = class AuthService {
                     if (!userData.data.phone || userData.data.plans.length == 0) return {
                         message: 'data missing'
                     };
-                    const sellerCustomer = await stripe.customers.create({
+                    const sellerCustomer = await _app.stripe.customers.create({
                         name: userData.data.name,
                         email: email,
                         balance: 0
                     });
-                    const seller = await stripe.accounts.create({
+                    const seller = await _app.stripe.accounts.create({
                         email: userData.data.email,
                         type: 'express'
                     });
@@ -99,10 +95,10 @@ let AuthService = class AuthService {
                             database: 'neo4j'
                         });
                         try {
-                            const stripeCreatedPlan = await stripe.products.create({
+                            const stripeCreatedPlan = await _app.stripe.products.create({
                                 name: plan.name
                             });
-                            const stripeCreatedPrice = await stripe.prices.create({
+                            const stripeCreatedPrice = await _app.stripe.prices.create({
                                 currency: "EUR",
                                 product: stripeCreatedPlan.id,
                                 recurring: {
@@ -132,7 +128,7 @@ let AuthService = class AuthService {
                     };
                     break;
                 case _RolesEnums.RolesEnum.BUYER:
-                    const buyer = await stripe.customers.create({
+                    const buyer = await _app.stripe.customers.create({
                         name: userData.data.name,
                         email: email,
                         balance: 0
@@ -166,14 +162,42 @@ let AuthService = class AuthService {
     async sendVerificationEmail(email, userName, token, role) {
         try {
             const mailOptions = {
-                template: 'main',
+                template: 'verifying_email',
                 from: process.env.USER,
                 to: email,
                 subject: 'Verifying Email',
                 context: {
                     userName: userName,
                     token: token,
+                    domain: process.env.DOMAIN,
                     role: role
+                }
+            };
+            _app.transporter.sendMail(mailOptions, (error, data)=>{
+                if (error) console.log(error);
+                if (!error) console.log('sent');
+            });
+        } catch (error) {
+            console.log(error);
+        }
+    }
+    async resendVerificationEmail(email) {
+        const getUserByEmailSession = (0, _app.initializeDbConnection)().session();
+        try {
+            const user = await getUserByEmailSession.executeRead((tx)=>tx.run("match (u:user {email: $email})-[:IS_A]->(b:buyer) return u, b", {
+                    email: email
+                }));
+            const tokenData = this.createToken(process.env.EMAIL_SECRET, user.records.map((record)=>record.get('u').properties.id)[0]);
+            const mailOptions = {
+                template: 'verifying_email',
+                from: process.env.USER,
+                to: email,
+                subject: 'Verifying Email',
+                context: {
+                    userName: user.records.map((record)=>record.get('u').properties.userName)[0],
+                    token: tokenData.token,
+                    domain: process.env.DOMAIN,
+                    role: user.records.map((record)=>record.get('b').properties).length == 0 ? "Seller" : "Buyer"
                 }
             };
             _app.transporter.sendMail(mailOptions, (error, data)=>{
@@ -280,7 +304,7 @@ let AuthService = class AuthService {
                 id: data
             };
             const secretKey = secret;
-            const expiresAt = '60s';
+            const expiresAt = '280s';
             const expiresIn = new Date();
             console.log(expiresIn);
             expiresIn.setTime(expiresIn.getTime() + 60000);
@@ -302,7 +326,7 @@ let AuthService = class AuthService {
                 refresh: true
             };
             const secretKey = _config.SECRET_KEY;
-            const expiresAt = '60s';
+            const expiresAt = '280s';
             const expiresIn = new Date();
             expiresIn.setTime(expiresIn.getTime() + 60);
             return {

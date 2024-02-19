@@ -1,0 +1,135 @@
+{
+    "keep": {
+        "days": false,
+        "amount": 30
+    },
+    "auditLog": "/home/ubuntu/feetflight/src/logs/debug/.d6bdfc7f7d164859bf16882081259b8f3f3805bc-audit.json",
+    "files": [
+        {
+            "date": 1706308570894,
+            "name": "/home/ubuntu/feetflight/src/logs/debug/2024-01-26.log",
+            "hash": "c401dc222fdf8094a8bea0902c784e7edf26e61a96171eb356fc5a77832b746d"
+        },
+        {
+            "date": 1706366665198,
+            "name": "/home/ubuntu/feetflight/src/logs/debug/2024-01-27.log",
+            "hash": "96fdb8b4ffa3dde7eec8b22fc89e9b01b166df42d33158f63ead15faeb0bb38c"
+        },
+        {
+            "date": 1706473583024,
+            "name": "/home/ubuntu/feetflight/src/logs/debug/2024-01-28.log",
+            "hash": "0c94120b510b2ecd17771f51dc496656b64d9a75c0696811fe24e2fc24aa4af0"
+        },
+        {
+            "date": 1706489021482,
+            "name": "/home/ubuntu/feetflight/src/logs/debug/2024-01-29.log",
+            "hash": "4c277e8fe5d7b81613e5df77ec8e20f4124ceba6e7ad5331c0f65fc6508c6a5c"
+        },
+        {
+            "date": 1706577100519,
+            "name": "/home/ubuntu/feetflight/src/logs/debug/2024-01-30.log",
+            "hash": "7df171a000607776fb2734071af7baa1e47f2d75ef29fc30e03aef0fcfd8019d"
+        },
+        {
+            "date": 1706682348064,
+            "name": "/home/ubuntu/feetflight/src/logs/debug/2024-01-31.log",
+            "hash": "e13c9887df2ab3bcb8622dac8c109940a891d80959479970aa4d8756683f7863"
+        },
+        {
+            "date": 1706746717284,
+            "name": "/home/ubuntu/feetflight/src/logs/debug/2024-02-01.log",
+            "hash": "511aa5fdfc91a09710a217f654d95bc6ec90495d74614670e41ba695005258b3"
+        },
+        {
+            "date": 1706839522475,
+            "name": "/home/ubuntu/feetflight/src/logs/debug/2024-02-02.log",
+            "hash": "1872cc0c4cebcc6d294752f30f0f2cbd366e1dec632c09f4bc07d60e87969fe3"
+        },
+        {
+            "date": 1706953378121,
+            "name": "/home/ubuntu/feetflight/src/logs/debug/2024-02-03.log",
+            "hash": "550fd78273ca58b9c97f06203c56ecd1344ded9b19f769a97f93a23483c3830a"
+        },
+        {
+            "date": 1707041283842,
+            "name": "/home/ubuntu/feetflight/src/logs/debug/2024-02-04.log",
+            "hash": "565a9af00d2a615ce78da09ba2d48f8bade51e3d8c3059581f0af5f0999c368c"
+        },
+        {
+            "date": 1707091412459,
+            "name": "/home/ubuntu/feetflight/src/logs/debug/2024-02-05.log",
+            "hash": "bb07f6ebca60a5d91cf0ee0db9f7fdd44d5e5041449966aab704076bcad49f0e"
+        },
+        {
+            "date": 1707177715610,
+            "name": "/home/ubuntu/feetflight/src/logs/debug/2024-02-06.log",
+            "hash": "089e8df2e9afa5f3277314f59210c203b2fe36c31cbf3208490a4a86a3d1350b"
+        },
+        {
+            "date": 1707329981479,
+            "name": "/home/ubuntu/feetflight/src/logs/debug/2024-02-07.log",
+            "hash": "71b8fdbcaae38813387091ea4d626817227d14420151f820d0217f0b51e24e1e"
+        },
+        {
+            "date": 1707350470861,
+            "name": "/home/ubuntu/feetflight/src/logs/debug/2024-02-08.log",
+            "hash": "da558f943cd16d20decbab76a35ad580b36098fadc1857d13b6225327544ca4d"
+        },
+        {
+            "date": 1707449947019,
+            "name": "/home/ubuntu/feetflight/src/logs/debug/2024-02-09.log",
+            "hash": "b547eda7c3f2d91078c761813e05094310ea9994404714fb40f3bd3430769896"
+        },
+        {
+            "date": 1707544361828,
+            "name": "/home/ubuntu/feetflight/src/logs/debug/2024-02-10.log",
+            "hash": "c608cba62da0e3442c6244d01ac44dd6933186e7a206845f96f11b4819c3e629"
+        },
+        {
+            "date": 1707643871462,
+            "name": "/home/ubuntu/feetflight/src/logs/debug/2024-02-11.log",
+            "hash": "8f25c7ec259e13b2558d3bc74dd68bbd3c0b275110f971a7635bd7cd309c64b9"
+        },
+        {
+            "date": 1707696074165,
+            "name": "/home/ubuntu/feetflight/src/logs/debug/2024-02-12.log",
+            "hash": "fcbcecfd433150099b2bd4734970fe05220d5e083603d980cf356462ac885235"
+        },
+        {
+            "date": 1707795781327,
+            "name": "/home/ubuntu/feetflight/src/logs/debug/2024-02-13.log",
+            "hash": "82df2ca88506a9fa687ef4d7be177fa2e4d2d7ed0937fdcbb300a799c897d6a8"
+        },
+        {
+            "date": 1707875911251,
+            "name": "/home/ubuntu/feetflight/src/logs/debug/2024-02-14.log",
+            "hash": "368fe8681e32b006df42e5b4b9ba6255757a9e7eaa3e717c015940ed2e0949cc"
+        },
+        {
+            "date": 1707956998278,
+            "name": "/home/ubuntu/feetflight/src/logs/debug/2024-02-15.log",
+            "hash": "8bba7d04bafe7d0cf81f80957724aa21ddb2d9b82303e027833875a65c508c26"
+        },
+        {
+            "date": 1708046425365,
+            "name": "/home/ubuntu/feetflight/src/logs/debug/2024-02-16.log",
+            "hash": "1fb2bb1ecf3e30022e02b9ebc4bbfbd26c9f991598e7a0ebaa1438124bea32ac"
+        },
+        {
+            "date": 1708153377589,
+            "name": "/home/ubuntu/feetflight/src/logs/debug/2024-02-17.log",
+            "hash": "1a3351f48fca19d099a99ebb7783316da108b6ee21e59e7f005b21d77a3187be"
+        },
+        {
+            "date": 1708231007626,
+            "name": "/home/ubuntu/feetflight/src/logs/debug/2024-02-18.log",
+            "hash": "dc4ddd78b7e4d6b665a0daa8ae0f86d5444b43ffb2eb1dff76b3a4218a9478a0"
+        },
+        {
+            "date": 1708332962035,
+            "name": "/home/ubuntu/feetflight/src/logs/debug/2024-02-19.log",
+            "hash": "285691e721877bef3d530596b9629dc1319cedfb8989d1a3a228ed0c6215c1e0"
+        }
+    ],
+    "hashType": "sha256"
+}

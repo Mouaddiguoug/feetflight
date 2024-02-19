@@ -73,6 +73,14 @@ let sellerController = class sellerController {
                 next(error);
             }
         });
+        _define_property(this, "getAllSellers", async (req, res, next)=>{
+            try {
+                const result = await this.sellerService.getAllSellers();
+                res.status(201).json(result);
+            } catch (error) {
+                next(error);
+            }
+        });
         _define_property(this, "uploadIdentityCard", async (req, res, next)=>{
             try {
                 const userId = String(req.params.id);

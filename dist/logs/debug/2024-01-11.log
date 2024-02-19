@@ -1,0 +1,439 @@
+2024-01-11 11:53:57 info: =================================
+2024-01-11 11:53:57 info: ======= ENV: development =======
+2024-01-11 11:53:57 info: 🚀 App listening on the port 8000
+2024-01-11 11:53:57 info: =================================
+2024-01-11 11:55:04 info: =================================
+2024-01-11 11:55:04 info: ======= ENV: development =======
+2024-01-11 11:55:04 info: 🚀 App listening on the port 8000
+2024-01-11 11:55:04 info: =================================
+2024-01-11 11:55:29 info: =================================
+2024-01-11 11:55:29 info: ======= ENV: development =======
+2024-01-11 11:55:29 info: 🚀 App listening on the port 8000
+2024-01-11 11:55:29 info: =================================
+2024-01-11 11:56:53 info: [0mPOST /signup [0m-[0m - ms - -[0m
+2024-01-11 12:06:58 info: [0mPOST /signup [32m201[0m 4508.545 ms - 573[0m
+2024-01-11 12:07:21 info: [0mGET /users/confirmation/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImN1c19QTTRFVlpldm4yY21RSyIsImlhdCI6MTcwNDk3MTIxOCwiZXhwIjoxNzA0OTcxMjc4fQ.BHrpYJW75SpXzdyEbQecqaHOt_34Q728lBHcmUr0T7A [36m302[0m 775.619 ms - 46[0m
+2024-01-11 12:07:21 info: [0mGET / [32m200[0m 2.606 ms - 2[0m
+2024-01-11 12:07:22 info: [0mGET /favicon.ico [33m404[0m 8.192 ms - 150[0m
+2024-01-11 12:08:00 info: [0mGET / [36m304[0m 3.583 ms - -[0m
+2024-01-11 12:08:04 info: =================================
+2024-01-11 12:08:04 info: ======= ENV: development =======
+2024-01-11 12:08:04 info: 🚀 App listening on the port 8000
+2024-01-11 12:08:04 info: =================================
+2024-01-11 12:08:06 info: [0mGET / [36m304[0m 3.357 ms - -[0m
+2024-01-11 12:08:10 info: [0mGET / [36m304[0m 3.511 ms - -[0m
+2024-01-11 12:08:20 info: [0mGET /users/confirmation/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImN1c19QTTRFVlpldm4yY21RSyIsImlhdCI6MTcwNDk3MTIxOCwiZXhwIjoxNzA0OTcxMjc4fQ.BHrpYJW75SpXzdyEbQecqaHOt_34Q728lBHcmUr0T7A [36m302[0m 23.450 ms - 46[0m
+2024-01-11 12:08:20 info: [0mGET / [36m304[0m 1.724 ms - -[0m
+2024-01-11 12:17:27 info: [0mPOST /signup [32m201[0m 2342.397 ms - 475[0m
+2024-01-11 12:19:04 info: [0mPOST /signup [33m400[0m 863.395 ms - 58[0m
+2024-01-11 12:19:46 info: [0mPOST /signup [32m201[0m 1934.325 ms - 477[0m
+2024-01-11 12:20:01 info: [0mGET /users/confirmation/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImN1c19QTTRSU2J3eGVuQVZBQSIsImlhdCI6MTcwNDk3MTk4NiwiZXhwIjoxNzA0OTcyMDQ2fQ.B9Mm1xk-IJ0NVTrIFnLjFOjwtCBPYrH7Mses8aG-dqY [36m302[0m 5.297 ms - 46[0m
+2024-01-11 12:20:02 info: [0mGET / [36m304[0m 1.694 ms - -[0m
+2024-01-11 12:20:03 info: [0mGET /favicon.ico [33m404[0m 7.705 ms - 150[0m
+2024-01-11 12:20:32 info: =================================
+2024-01-11 12:20:32 info: ======= ENV: development =======
+2024-01-11 12:20:32 info: 🚀 App listening on the port 8000
+2024-01-11 12:20:32 info: =================================
+2024-01-11 12:20:34 info: [0mGET / [32m200[0m 9.094 ms - 2[0m
+2024-01-11 12:20:41 info: [0mGET /users/confirmation/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImN1c19QTTRSU2J3eGVuQVZBQSIsImlhdCI6MTcwNDk3MTk4NiwiZXhwIjoxNzA0OTcyMDQ2fQ.B9Mm1xk-IJ0NVTrIFnLjFOjwtCBPYrH7Mses8aG-dqY [36m302[0m 870.441 ms - 46[0m
+2024-01-11 12:20:41 info: [0mGET / [36m304[0m 2.312 ms - -[0m
+2024-01-11 12:20:58 info: =================================
+2024-01-11 12:20:58 info: ======= ENV: development =======
+2024-01-11 12:20:58 info: 🚀 App listening on the port 8000
+2024-01-11 12:20:58 info: =================================
+2024-01-11 12:21:00 info: [0mGET /users/confirmation/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImN1c19QTTRSU2J3eGVuQVZBQSIsImlhdCI6MTcwNDk3MTk4NiwiZXhwIjoxNzA0OTcyMDQ2fQ.B9Mm1xk-IJ0NVTrIFnLjFOjwtCBPYrH7Mses8aG-dqY [36m302[0m 26.149 ms - 46[0m
+2024-01-11 12:21:01 info: [0mGET / [36m304[0m 5.583 ms - -[0m
+2024-01-11 12:21:30 info: =================================
+2024-01-11 12:21:30 info: ======= ENV: development =======
+2024-01-11 12:21:30 info: 🚀 App listening on the port 8000
+2024-01-11 12:21:30 info: =================================
+2024-01-11 12:25:03 info: [0mPOST /signup [32m201[0m 2742.313 ms - 485[0m
+2024-01-11 12:26:02 info: [0mGET /users/confirmation/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImN1c19QTTRQQjFXTTJvWkR6ViIsImlhdCI6MTcwNDk3MTg0NywiZXhwIjoxNzA0OTcxOTA3fQ.SOTzA4SvyejC4KJF5YA8M6A88ufyxQBI-VKsLovLaJk [36m302[0m 49.145 ms - 46[0m
+2024-01-11 12:26:02 info: [0mGET / [36m304[0m 3.077 ms - -[0m
+2024-01-11 12:26:03 info: [0mGET /favicon.ico [33m404[0m 9.744 ms - 150[0m
+2024-01-11 12:26:42 info: =================================
+2024-01-11 12:26:42 info: ======= ENV: development =======
+2024-01-11 12:26:42 info: 🚀 App listening on the port 8000
+2024-01-11 12:26:42 info: =================================
+2024-01-11 12:28:46 info: [0mPOST /signup [32m201[0m 2456.163 ms - 491[0m
+2024-01-11 12:29:01 info: [0mGET /users/confirmation/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImN1c19QTTRhdWdPUVd0UlkxSiIsImlhdCI6MTcwNDk3MjUyNiwiZXhwIjoxNzA0OTcyODA2fQ.4xlFuGyvKJ5TFNG-dqHdsU1Sp8NY9dACjTgdfG6agTQ [36m302[0m 1284.604 ms - 46[0m
+2024-01-11 12:29:01 info: [0mGET / [36m304[0m 2.852 ms - -[0m
+2024-01-11 12:29:02 info: [0mGET /favicon.ico [33m404[0m 9.446 ms - 150[0m
+2024-01-11 12:29:44 info: =================================
+2024-01-11 12:29:44 info: ======= ENV: development =======
+2024-01-11 12:29:44 info: 🚀 App listening on the port 8000
+2024-01-11 12:29:44 info: =================================
+2024-01-11 12:29:49 info: [0mGET /users/confirmation/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImN1c19QTTRhdWdPUVd0UlkxSiIsImlhdCI6MTcwNDk3MjUyNiwiZXhwIjoxNzA0OTcyODA2fQ.4xlFuGyvKJ5TFNG-dqHdsU1Sp8NY9dACjTgdfG6agTQ [36m302[0m 1252.536 ms - 46[0m
+2024-01-11 12:29:49 info: [0mGET / [36m304[0m 3.175 ms - -[0m
+2024-01-11 12:33:44 info: [0mPOST /login [32m200[0m 1735.955 ms - 490[0m
+2024-01-11 12:33:48 info: [0mGET /albums/random/0/cus_PM4augOQWtRY1J [32m201[0m 1242.739 ms - -[0m
+2024-01-11 12:33:49 info: [0mGET /albums/all-categories [32m201[0m 1769.660 ms - 114[0m
+2024-01-11 12:33:49 info: [0mGET /albums/cus_PM4augOQWtRY1J [32m201[0m 2009.514 ms - -[0m
+2024-01-11 12:33:49 info: [0mGET /albums/popular/cus_PM4augOQWtRY1J [32m201[0m 1922.551 ms - -[0m
+2024-01-11 12:33:49 info: [0mGET /public/files/albums/postPicture-f5b606e7-ea02-4b6d-abff-29e591ecedaa8594422175717132219jpg'8cbf7d8afa6550240c203bb59a5ce94ef6847d3f05122023.jpeg [32m200[0m 11.398 ms - 63414[0m
+2024-01-11 12:33:49 info: [0mGET /public/files/albums/postPicture-27d6b646-950f-4783-a244-a5d24771130b8314993466251131527jpg'f526f886bf9c48e7074b216f58f32573b03d539914122023.jpeg [32m200[0m 19.023 ms - 64254[0m
+2024-01-11 12:33:49 info: [0mGET /public/files/albums/postPicture-68a722d5-48db-4c56-9094-875d4930d6a96403750345436467466jpg'd8afa6550240c203bb59a5ce94ef6847d3fa453f30122023.png [32m200[0m 20.293 ms - 63629[0m
+2024-01-11 12:33:49 info: [0mGET /public/files/albums/postPicture-37072eed-ffa4-4732-901f-69ff0ebf31964283235459063127545jpg'4a7b30776d4b031071bc78bf6dc9f52192f93a9527122023.jpeg [32m200[0m 21.215 ms - 64166[0m
+2024-01-11 12:33:50 info: [0mGET /public/files/albums/postPicture-67cacd40-f40d-4408-b887-a888d25b2ab6327830558753184262jpg'9b12bf526f886bf9c48e7074b216f58f32573b0349122023.jpeg [32m200[0m 21.336 ms - 63629[0m
+2024-01-11 12:33:50 info: [0mGET /public/files/albums/postPicture-37072eed-ffa4-4732-901f-69ff0ebf31964283235459063127545jpg'7f004a7b30776d4b031071bc78bf6dc9f52192f919122023.jpeg [32m200[0m 27.921 ms - 64166[0m
+2024-01-11 12:33:55 info: [0mGET /public/files/albums/postPicture-1d039e14-9252-47d6-8d39-92f625d46f435867363189936475864jpg'0776d4b031071bc78bf6dc9f52192f93a957ba5247122023.jpeg [32m200[0m 10.414 ms - 63869[0m
+2024-01-11 12:33:55 info: [0mGET /public/files/albums/postPictureb25e375f3a97b3467961505186a4241e2a6bbefb22122023.jpeg [33m404[0m 20.434 ms - 223[0m
+2024-01-11 12:33:55 info: [0mGET /public/files/albums/postPicture9b11505cfe5bd9b6bef9ae840078e4734144b5d914122023.png [33m404[0m 19.806 ms - 222[0m
+2024-01-11 12:33:55 info: [0mGET /public/files/albums/postPicture505cfe5bd9b6bef9ae840078e4734144b5d9dd6e43122023.png [33m404[0m 13.214 ms - 222[0m
+2024-01-11 12:33:55 info: [0mGET /public/files/albums/postPicture-27d6b646-950f-4783-a244-a5d24771130b8314993466251131527jpg'956db2cb830fcd753b660667ff950cd132a6867812122023.jpeg [32m200[0m 21.470 ms - 64254[0m
+2024-01-11 12:33:55 info: [0mGET /public/files/albums/postPicture-f5b606e7-ea02-4b6d-abff-29e591ecedaa8594422175717132219jpg'b2cb830fcd753b660667ff950cd132a686781f6d46122023.jpeg [32m200[0m 24.518 ms - 63414[0m
+2024-01-11 12:33:56 info: [0mGET /public/files/albums/postPicture3d30f9e2249b636e6a6d423149a491b02cfb8e3927122023.png [33m404[0m 2.281 ms - 222[0m
+2024-01-11 12:33:57 info: [0mGET /public/files/albums/postPicture5d2f8cd3f6f50e15909b11505cfe5bd9b6bef9ae42122023.png [33m404[0m 2.781 ms - 222[0m
+2024-01-11 12:33:57 info: [0mGET /public/files/albums/postPicturef50e15909b11505cfe5bd9b6bef9ae840078e47327122023.png [33m404[0m 2.609 ms - 222[0m
+2024-01-11 12:33:57 info: [0mGET /public/files/albums/postPictureffe7acebe0fd2c1bb9e191df6d10863a0675575746122023.octet-stream [33m404[0m 1.942 ms - 231[0m
+2024-01-11 12:33:57 info: [0mGET /public/files/albums/postPicturebc134f12720fc7feb9b82da20c66021635b3d5ec16122023.octet-stream [33m404[0m 2.682 ms - 231[0m
+2024-01-11 12:33:58 info: [0mGET /public/files/albums/postPictureab1ea683903e4ee8f09207748b58848b796d30b002122023.octet-stream [33m404[0m 4.150 ms - 231[0m
+2024-01-11 12:33:58 info: [0mGET /public/files/albums/postPicture0fd2c1bb9e191df6d10863a06755757a97f6c1bf31122023.octet-stream [33m404[0m 1.413 ms - 231[0m
+2024-01-11 12:34:50 info: [0mGET /notifications/cus_PM4augOQWtRY1J [32m201[0m 861.587 ms - 2[0m
+2024-01-11 12:34:59 info: [0mGET /sellers [32m201[0m 1526.325 ms - -[0m
+2024-01-11 12:35:07 info: [0mGET /albums/seller/e1d640e916c8628de70bf8ec0bd97461577cc85a [32m201[0m 978.976 ms - -[0m
+2024-01-11 12:35:08 info: [0mGET /public/files/albums/postPicture505cfe5bd9b6bef9ae840078e4734144b5d9dd6e43122023.png [33m404[0m 2.354 ms - 222[0m
+2024-01-11 12:35:08 info: [0mGET /public/files/albums/postPictureb25e375f3a97b3467961505186a4241e2a6bbefb22122023.jpeg [33m404[0m 2.399 ms - 223[0m
+2024-01-11 12:35:08 info: [0mGET /public/files/albums/postPicture5d2f8cd3f6f50e15909b11505cfe5bd9b6bef9ae42122023.png [33m404[0m 11.794 ms - 222[0m
+2024-01-11 12:35:08 info: [0mGET /public/files/albums/postPicture9b11505cfe5bd9b6bef9ae840078e4734144b5d914122023.png [33m404[0m 13.316 ms - 222[0m
+2024-01-11 12:35:08 info: [0mGET /public/files/albums/postPicturef50e15909b11505cfe5bd9b6bef9ae840078e47327122023.png [33m404[0m 15.614 ms - 222[0m
+2024-01-11 12:35:08 info: [0mGET /public/files/albums/postPicture3d30f9e2249b636e6a6d423149a491b02cfb8e3927122023.png [33m404[0m 17.112 ms - 222[0m
+2024-01-11 12:35:08 info: [0mGET /public/files/albums/postPictureffe7acebe0fd2c1bb9e191df6d10863a0675575746122023.octet-stream [33m404[0m 6.639 ms - 231[0m
+2024-01-11 12:35:08 info: [0mGET /public/files/albums/postPicture0fd2c1bb9e191df6d10863a06755757a97f6c1bf31122023.octet-stream [33m404[0m 9.168 ms - 231[0m
+2024-01-11 12:35:08 info: [0mGET /public/files/albums/WhatsApp%20Image%202023-09-23%20at%201957.21.jpeg0e916c8628de70bf8ec0bd97461577cc85aa578627122023.jpeg [33m404[0m 11.922 ms - 261[0m
+2024-01-11 12:35:08 info: [0mGET /public/files/albums/postPicture5f539a43c377472363dbdd37af8a523e7b124a8022122023.png [33m404[0m 3.678 ms - 222[0m
+2024-01-11 12:35:09 info: [0mGET /public/files/albums/postPicturebc134f12720fc7feb9b82da20c66021635b3d5ec16122023.octet-stream [33m404[0m 4.288 ms - 231[0m
+2024-01-11 12:35:09 info: [0mGET /public/files/albums/postPictureab1ea683903e4ee8f09207748b58848b796d30b002122023.octet-stream [33m404[0m 1.677 ms - 231[0m
+2024-01-11 12:35:14 info: [0mGET /public/files/albums/postPicture505cfe5bd9b6bef9ae840078e4734144b5d9dd6e43122023.png [33m404[0m 0.956 ms - 222[0m
+2024-01-11 12:35:14 info: [0mGET /public/files/albums/postPicturef50e15909b11505cfe5bd9b6bef9ae840078e47327122023.png [33m404[0m 4.990 ms - 222[0m
+2024-01-11 12:35:14 info: [0mGET /public/files/albums/postPictureb25e375f3a97b3467961505186a4241e2a6bbefb22122023.jpeg [33m404[0m 6.243 ms - 223[0m
+2024-01-11 12:35:14 info: [0mGET /public/files/albums/postPicture9b11505cfe5bd9b6bef9ae840078e4734144b5d914122023.png [33m404[0m 6.779 ms - 222[0m
+2024-01-11 12:35:16 info: [0mGET /public/files/albums/postPicture-37072eed-ffa4-4732-901f-69ff0ebf31964283235459063127545jpg'0776d4b031071bc78bf6dc9f52192f93a957ba5247122023.jpeg [32m200[0m 15.473 ms - 64166[0m
+2024-01-11 12:35:16 info: [0mGET /public/files/albums/postPicture-845deff6-be96-43f5-b109-af54ffe139ae4617808164101427779jpg'0776d4b031071bc78bf6dc9f52192f93a957ba5247122023.jpeg [32m200[0m 16.285 ms - 64510[0m
+2024-01-11 12:35:16 info: [0mGET /public/files/albums/postPicturef50e15909b11505cfe5bd9b6bef9ae840078e47327122023.png [33m404[0m 2.662 ms - 222[0m
+2024-01-11 12:35:16 info: [0mGET /public/files/albums/postPictureb25e375f3a97b3467961505186a4241e2a6bbefb22122023.jpeg [33m404[0m 2.474 ms - 223[0m
+2024-01-11 12:35:16 info: [0mGET /public/files/albums/postPicture9b11505cfe5bd9b6bef9ae840078e4734144b5d914122023.png [33m404[0m 22.498 ms - 222[0m
+2024-01-11 12:35:16 info: [0mGET /public/files/albums/postPicture505cfe5bd9b6bef9ae840078e4734144b5d9dd6e43122023.png [33m404[0m 23.184 ms - 222[0m
+2024-01-11 12:35:17 info: [0mGET /albums/plan/30776d4b031071bc78bf6dc9f52192f93a957ba5 [32m200[0m 1716.542 ms - 68[0m
+2024-01-11 12:35:20 info: [0mGET /users/verify/checkForSale/cus_PM4augOQWtRY1J/30776d4b031071bc78bf6dc9f52192f93a957ba5/premium [32m200[0m 1443.351 ms - 5[0m
+2024-01-11 12:36:40 info: [0mGET /public/files/albums/postPicturef50e15909b11505cfe5bd9b6bef9ae840078e47327122023.png [33m404[0m 1.129 ms - 222[0m
+2024-01-11 12:36:40 info: [0mGET /public/files/albums/postPicture9b11505cfe5bd9b6bef9ae840078e4734144b5d914122023.png [33m404[0m 7.402 ms - 222[0m
+2024-01-11 12:36:40 info: [0mGET /public/files/albums/postPictureb25e375f3a97b3467961505186a4241e2a6bbefb22122023.jpeg [33m404[0m 8.282 ms - 223[0m
+2024-01-11 12:36:40 info: [0mGET /public/files/albums/postPicture505cfe5bd9b6bef9ae840078e4734144b5d9dd6e43122023.png [33m404[0m 7.132 ms - 222[0m
+2024-01-11 12:36:51 info: [0mGET /public/files/albums/postPictureb25e375f3a97b3467961505186a4241e2a6bbefb22122023.jpeg [33m404[0m 1.235 ms - 223[0m
+2024-01-11 12:36:51 info: [0mGET /public/files/albums/postPicture9b11505cfe5bd9b6bef9ae840078e4734144b5d914122023.png [33m404[0m 5.551 ms - 222[0m
+2024-01-11 12:36:51 info: [0mGET /public/files/albums/postPicture505cfe5bd9b6bef9ae840078e4734144b5d9dd6e43122023.png [33m404[0m 5.720 ms - 222[0m
+2024-01-11 12:36:51 info: [0mGET /public/files/albums/postPicturef50e15909b11505cfe5bd9b6bef9ae840078e47327122023.png [33m404[0m 7.282 ms - 222[0m
+2024-01-11 12:37:01 info: [0mGET /public/files/albums/postPicture505cfe5bd9b6bef9ae840078e4734144b5d9dd6e43122023.png [33m404[0m 3.602 ms - 222[0m
+2024-01-11 12:37:01 info: [0mGET /public/files/albums/postPictureb25e375f3a97b3467961505186a4241e2a6bbefb22122023.jpeg [33m404[0m 5.290 ms - 223[0m
+2024-01-11 12:37:01 info: [0mGET /public/files/albums/postPicture9b11505cfe5bd9b6bef9ae840078e4734144b5d914122023.png [33m404[0m 3.378 ms - 222[0m
+2024-01-11 12:37:01 info: [0mGET /public/files/albums/postPicturef50e15909b11505cfe5bd9b6bef9ae840078e47327122023.png [33m404[0m 5.029 ms - 222[0m
+2024-01-11 12:37:13 info: [0mGET /public/files/albums/postPictureb25e375f3a97b3467961505186a4241e2a6bbefb22122023.jpeg [33m404[0m 1.035 ms - 223[0m
+2024-01-11 12:37:13 info: [0mGET /public/files/albums/postPicture505cfe5bd9b6bef9ae840078e4734144b5d9dd6e43122023.png [33m404[0m 13.054 ms - 222[0m
+2024-01-11 12:37:13 info: [0mGET /public/files/albums/postPicturef50e15909b11505cfe5bd9b6bef9ae840078e47327122023.png [33m404[0m 17.810 ms - 222[0m
+2024-01-11 12:37:13 info: [0mGET /public/files/albums/postPictureffe7acebe0fd2c1bb9e191df6d10863a0675575746122023.octet-stream [33m404[0m 16.401 ms - 231[0m
+2024-01-11 12:37:13 info: [0mGET /public/files/albums/postPicture3d30f9e2249b636e6a6d423149a491b02cfb8e3927122023.png [33m404[0m 17.296 ms - 222[0m
+2024-01-11 12:37:13 info: [0mGET /public/files/albums/postPicture5d2f8cd3f6f50e15909b11505cfe5bd9b6bef9ae42122023.png [33m404[0m 18.503 ms - 222[0m
+2024-01-11 12:37:13 info: [0mGET /public/files/albums/postPicture9b11505cfe5bd9b6bef9ae840078e4734144b5d914122023.png [33m404[0m 20.517 ms - 222[0m
+2024-01-11 12:37:13 info: [0mGET /public/files/albums/postPicture5f539a43c377472363dbdd37af8a523e7b124a8022122023.png [33m404[0m 21.724 ms - 222[0m
+2024-01-11 12:37:13 info: [0mGET /public/files/albums/postPicturebc134f12720fc7feb9b82da20c66021635b3d5ec16122023.octet-stream [33m404[0m 23.478 ms - 231[0m
+2024-01-11 12:37:13 info: [0mGET /public/files/albums/postPicture0fd2c1bb9e191df6d10863a06755757a97f6c1bf31122023.octet-stream [33m404[0m 13.870 ms - 231[0m
+2024-01-11 12:37:14 info: [0mGET /public/files/albums/postPictureab1ea683903e4ee8f09207748b58848b796d30b002122023.octet-stream [33m404[0m 2.026 ms - 231[0m
+2024-01-11 13:52:28 info: [0mGET /favicon.ico [33m404[0m 10.531 ms - 150[0m
+2024-01-11 15:16:32 info: =================================
+2024-01-11 15:16:32 info: ======= ENV: development =======
+2024-01-11 15:16:32 info: 🚀 App listening on the port 8000
+2024-01-11 15:16:32 info: =================================
+2024-01-11 15:24:39 info: =================================
+2024-01-11 15:24:39 info: ======= ENV: development =======
+2024-01-11 15:24:39 info: 🚀 App listening on the port 8000
+2024-01-11 15:24:39 info: =================================
+2024-01-11 15:25:37 info: =================================
+2024-01-11 15:25:37 info: ======= ENV: development =======
+2024-01-11 15:25:37 info: 🚀 App listening on the port 8000
+2024-01-11 15:25:37 info: =================================
+2024-01-11 15:48:20 info: =================================
+2024-01-11 15:48:20 info: ======= ENV: development =======
+2024-01-11 15:48:20 info: 🚀 App listening on the port 8000
+2024-01-11 15:48:20 info: =================================
+2024-01-11 15:49:19 info: =================================
+2024-01-11 15:49:19 info: ======= ENV: development =======
+2024-01-11 15:49:19 info: 🚀 App listening on the port 8000
+2024-01-11 15:49:19 info: =================================
+2024-01-11 15:49:55 info: =================================
+2024-01-11 15:49:55 info: ======= ENV: development =======
+2024-01-11 15:49:55 info: 🚀 App listening on the port 8000
+2024-01-11 15:49:55 info: =================================
+2024-01-11 15:50:08 info: =================================
+2024-01-11 15:50:08 info: ======= ENV: development =======
+2024-01-11 15:50:08 info: 🚀 App listening on the port 8000
+2024-01-11 15:50:08 info: =================================
+2024-01-11 15:50:33 info: =================================
+2024-01-11 15:50:33 info: ======= ENV: development =======
+2024-01-11 15:50:33 info: 🚀 App listening on the port 8000
+2024-01-11 15:50:33 info: =================================
+2024-01-11 15:50:40 error: [GET] /users/generateOtp >> StatusCode:: 401, Message:: missing token
+2024-01-11 15:50:40 info: [0mGET /users/generateOtp [33m401[0m 91.341 ms - 27[0m
+2024-01-11 15:50:48 info: [0mPOST /users/generateOtp [33m404[0m 6.490 ms - 157[0m
+2024-01-11 15:50:57 info: =================================
+2024-01-11 15:50:57 info: ======= ENV: development =======
+2024-01-11 15:50:57 info: 🚀 App listening on the port 8000
+2024-01-11 15:50:57 info: =================================
+2024-01-11 15:51:04 info: =================================
+2024-01-11 15:51:04 info: ======= ENV: development =======
+2024-01-11 15:51:04 info: 🚀 App listening on the port 8000
+2024-01-11 15:51:04 info: =================================
+2024-01-11 15:51:16 info: =================================
+2024-01-11 15:51:16 info: ======= ENV: development =======
+2024-01-11 15:51:16 info: 🚀 App listening on the port 8000
+2024-01-11 15:51:16 info: =================================
+2024-01-11 15:52:08 info: =================================
+2024-01-11 15:52:08 info: ======= ENV: development =======
+2024-01-11 15:52:08 info: 🚀 App listening on the port 8000
+2024-01-11 15:52:08 info: =================================
+2024-01-11 15:52:13 info: =================================
+2024-01-11 15:52:13 info: ======= ENV: development =======
+2024-01-11 15:52:13 info: 🚀 App listening on the port 8000
+2024-01-11 15:52:13 info: =================================
+2024-01-11 15:52:33 info: =================================
+2024-01-11 15:52:33 info: ======= ENV: development =======
+2024-01-11 15:52:33 info: 🚀 App listening on the port 8000
+2024-01-11 15:52:33 info: =================================
+2024-01-11 15:52:37 info: [0mPOST /users/generateOtp [32m200[0m 1054.367 ms - 80[0m
+2024-01-11 15:53:27 info: [0mPOST /users/generateOtp [32m200[0m 1215.371 ms - 80[0m
+2024-01-11 15:54:44 info: =================================
+2024-01-11 15:54:44 info: ======= ENV: development =======
+2024-01-11 15:54:44 info: 🚀 App listening on the port 8000
+2024-01-11 15:54:44 info: =================================
+2024-01-11 15:54:47 info: [0mPOST /users/generateOtp [32m200[0m 708.441 ms - 80[0m
+2024-01-11 16:14:05 info: =================================
+2024-01-11 16:14:05 info: ======= ENV: development =======
+2024-01-11 16:14:05 info: 🚀 App listening on the port 8000
+2024-01-11 16:14:05 info: =================================
+2024-01-11 16:14:21 info: =================================
+2024-01-11 16:14:21 info: ======= ENV: development =======
+2024-01-11 16:14:21 info: 🚀 App listening on the port 8000
+2024-01-11 16:14:21 info: =================================
+2024-01-11 16:14:27 info: [0mPOST /users/generateOtp [32m200[0m 102.431 ms - 80[0m
+2024-01-11 16:15:01 info: [0mPOST /users/generateOtp [32m200[0m 4.663 ms - 80[0m
+2024-01-11 16:15:58 info: =================================
+2024-01-11 16:15:58 info: ======= ENV: development =======
+2024-01-11 16:15:58 info: 🚀 App listening on the port 8000
+2024-01-11 16:15:58 info: =================================
+2024-01-11 16:22:05 info: =================================
+2024-01-11 16:22:05 info: ======= ENV: development =======
+2024-01-11 16:22:05 info: 🚀 App listening on the port 8000
+2024-01-11 16:22:05 info: =================================
+2024-01-11 16:22:11 info: [0mPOST /users/generateOtp [32m200[0m 27.986 ms - 80[0m
+2024-01-11 16:25:53 info: =================================
+2024-01-11 16:25:53 info: ======= ENV: development =======
+2024-01-11 16:25:53 info: 🚀 App listening on the port 8000
+2024-01-11 16:25:53 info: =================================
+2024-01-11 16:26:02 info: =================================
+2024-01-11 16:26:02 info: ======= ENV: development =======
+2024-01-11 16:26:02 info: 🚀 App listening on the port 8000
+2024-01-11 16:26:02 info: =================================
+2024-01-11 16:26:11 info: [0mPOST /users/generateOtp [32m200[0m 39.019 ms - 80[0m
+2024-01-11 16:28:41 info: =================================
+2024-01-11 16:28:41 info: ======= ENV: development =======
+2024-01-11 16:28:41 info: 🚀 App listening on the port 8000
+2024-01-11 16:28:41 info: =================================
+2024-01-11 16:29:15 info: =================================
+2024-01-11 16:29:15 info: ======= ENV: development =======
+2024-01-11 16:29:15 info: 🚀 App listening on the port 8000
+2024-01-11 16:29:15 info: =================================
+2024-01-11 16:31:06 info: =================================
+2024-01-11 16:31:06 info: ======= ENV: development =======
+2024-01-11 16:31:06 info: 🚀 App listening on the port 8000
+2024-01-11 16:31:06 info: =================================
+2024-01-11 16:31:11 info: [0mPOST /users/generateOtp [32m200[0m 111.040 ms - 80[0m
+2024-01-11 16:31:34 info: =================================
+2024-01-11 16:31:34 info: ======= ENV: development =======
+2024-01-11 16:31:34 info: 🚀 App listening on the port 8000
+2024-01-11 16:31:34 info: =================================
+2024-01-11 16:31:36 info: [0mPOST /users/generateOtp [32m200[0m 43.987 ms - 80[0m
+2024-01-11 16:31:43 info: [0mPOST /users/generateOtp [32m200[0m 11.671 ms - 80[0m
+2024-01-11 16:31:55 info: =================================
+2024-01-11 16:31:55 info: ======= ENV: development =======
+2024-01-11 16:31:55 info: 🚀 App listening on the port 8000
+2024-01-11 16:31:55 info: =================================
+2024-01-11 16:32:28 info: [0mPOST /users/generateOtp [32m200[0m 134.486 ms - 80[0m
+2024-01-11 16:33:44 info: =================================
+2024-01-11 16:33:44 info: ======= ENV: development =======
+2024-01-11 16:33:44 info: 🚀 App listening on the port 8000
+2024-01-11 16:33:44 info: =================================
+2024-01-11 16:33:56 info: [0mPOST /users/generateOtp [32m200[0m 109.320 ms - 80[0m
+2024-01-11 16:39:01 info: =================================
+2024-01-11 16:39:01 info: ======= ENV: development =======
+2024-01-11 16:39:01 info: 🚀 App listening on the port 8000
+2024-01-11 16:39:01 info: =================================
+2024-01-11 16:39:23 info: [0mPOST /users/generateOtp [32m200[0m 119.909 ms - 80[0m
+2024-01-11 16:51:58 info: [0mPOST /users/generateOtp [32m200[0m 5.704 ms - 80[0m
+2024-01-11 16:56:14 info: =================================
+2024-01-11 16:56:14 info: ======= ENV: development =======
+2024-01-11 16:56:14 info: 🚀 App listening on the port 8000
+2024-01-11 16:56:14 info: =================================
+2024-01-11 16:56:17 info: [0mPOST /users/generateOtp [32m200[0m 45.123 ms - 80[0m
+2024-01-11 16:58:37 info: =================================
+2024-01-11 16:58:37 info: ======= ENV: development =======
+2024-01-11 16:58:37 info: 🚀 App listening on the port 8000
+2024-01-11 16:58:37 info: =================================
+2024-01-11 16:58:41 info: [0mPOST /users/generateOtp [32m200[0m 117.817 ms - 80[0m
+2024-01-11 16:59:06 info: =================================
+2024-01-11 16:59:06 info: ======= ENV: development =======
+2024-01-11 16:59:06 info: 🚀 App listening on the port 8000
+2024-01-11 16:59:06 info: =================================
+2024-01-11 16:59:09 info: [0mPOST /users/generateOtp [32m200[0m 115.015 ms - 80[0m
+2024-01-11 17:01:04 info: =================================
+2024-01-11 17:01:04 info: ======= ENV: development =======
+2024-01-11 17:01:04 info: 🚀 App listening on the port 8000
+2024-01-11 17:01:04 info: =================================
+2024-01-11 17:01:07 info: [0mPOST /users/generateOtp [32m200[0m 45.374 ms - 80[0m
+2024-01-11 19:11:42 info: =================================
+2024-01-11 19:11:42 info: ======= ENV: development =======
+2024-01-11 19:11:42 info: 🚀 App listening on the port 8000
+2024-01-11 19:11:42 info: =================================
+2024-01-11 19:11:54 info: =================================
+2024-01-11 19:11:54 info: ======= ENV: development =======
+2024-01-11 19:11:54 info: 🚀 App listening on the port 8000
+2024-01-11 19:11:54 info: =================================
+2024-01-11 19:11:58 info: [0mPOST /users/generateOtp [32m200[0m 28.412 ms - 80[0m
+2024-01-11 19:12:57 info: =================================
+2024-01-11 19:12:57 info: ======= ENV: development =======
+2024-01-11 19:12:57 info: 🚀 App listening on the port 8000
+2024-01-11 19:12:57 info: =================================
+2024-01-11 19:13:02 info: [0mPOST /users/generateOtp [32m200[0m 23.321 ms - 80[0m
+2024-01-11 19:13:56 info: =================================
+2024-01-11 19:13:56 info: ======= ENV: development =======
+2024-01-11 19:13:56 info: 🚀 App listening on the port 8000
+2024-01-11 19:13:56 info: =================================
+2024-01-11 19:14:00 info: [0mPOST /users/generateOtp [32m200[0m 26.565 ms - 80[0m
+2024-01-11 19:15:56 info: =================================
+2024-01-11 19:15:56 info: ======= ENV: development =======
+2024-01-11 19:15:56 info: 🚀 App listening on the port 8000
+2024-01-11 19:15:56 info: =================================
+2024-01-11 19:21:36 info: =================================
+2024-01-11 19:21:36 info: ======= ENV: development =======
+2024-01-11 19:21:36 info: 🚀 App listening on the port 8000
+2024-01-11 19:21:36 info: =================================
+2024-01-11 19:21:38 info: [0mPOST /users/generateOtp [32m200[0m 26.461 ms - 80[0m
+2024-01-11 19:22:30 info: =================================
+2024-01-11 19:22:30 info: ======= ENV: development =======
+2024-01-11 19:22:30 info: 🚀 App listening on the port 8000
+2024-01-11 19:22:30 info: =================================
+2024-01-11 19:22:45 info: =================================
+2024-01-11 19:22:45 info: ======= ENV: development =======
+2024-01-11 19:22:45 info: 🚀 App listening on the port 8000
+2024-01-11 19:22:45 info: =================================
+2024-01-11 19:29:40 info: =================================
+2024-01-11 19:29:40 info: ======= ENV: development =======
+2024-01-11 19:29:40 info: 🚀 App listening on the port 8000
+2024-01-11 19:29:40 info: =================================
+2024-01-11 19:31:25 info: =================================
+2024-01-11 19:31:25 info: ======= ENV: development =======
+2024-01-11 19:31:25 info: 🚀 App listening on the port 8000
+2024-01-11 19:31:25 info: =================================
+2024-01-11 19:31:28 info: [0mPOST /users/generateOtp [32m200[0m 21.472 ms - 80[0m
+2024-01-11 19:32:36 info: =================================
+2024-01-11 19:32:36 info: ======= ENV: development =======
+2024-01-11 19:32:36 info: 🚀 App listening on the port 8000
+2024-01-11 19:32:36 info: =================================
+2024-01-11 19:32:39 info: [0mPOST /users/generateOtp [32m200[0m 22.443 ms - 80[0m
+2024-01-11 19:33:20 info: =================================
+2024-01-11 19:33:20 info: ======= ENV: development =======
+2024-01-11 19:33:20 info: 🚀 App listening on the port 8000
+2024-01-11 19:33:20 info: =================================
+2024-01-11 19:33:23 info: [0mPOST /users/generateOtp [32m200[0m 19.601 ms - 80[0m
+2024-01-11 21:06:35 info: [0mPOST /users/generateOtp [32m200[0m 2.844 ms - 80[0m
+2024-01-11 21:15:19 info: =================================
+2024-01-11 21:15:19 info: ======= ENV: development =======
+2024-01-11 21:15:19 info: 🚀 App listening on the port 8000
+2024-01-11 21:15:19 info: =================================
+2024-01-11 21:15:25 info: =================================
+2024-01-11 21:15:25 info: ======= ENV: development =======
+2024-01-11 21:15:25 info: 🚀 App listening on the port 8000
+2024-01-11 21:15:25 info: =================================
+2024-01-11 21:15:32 info: [0mPOST /users/generateOtp [32m200[0m 25.515 ms - 80[0m
+2024-01-11 21:16:16 info: =================================
+2024-01-11 21:16:16 info: ======= ENV: development =======
+2024-01-11 21:16:16 info: 🚀 App listening on the port 8000
+2024-01-11 21:16:16 info: =================================
+2024-01-11 21:18:11 info: [0mPOST /users/generateOtp [32m200[0m 25.283 ms - 80[0m
+2024-01-11 21:19:17 info: [0mPOST /users/verifyOtp [33m400[0m 2.343 ms - 80[0m
+2024-01-11 21:19:32 info: =================================
+2024-01-11 21:19:32 info: ======= ENV: development =======
+2024-01-11 21:19:32 info: 🚀 App listening on the port 8000
+2024-01-11 21:19:32 info: =================================
+2024-01-11 21:19:50 error: [POST] /users/verifyOtp >> StatusCode:: 500, Message:: this.userService.verifyOtp is not a function
+2024-01-11 21:19:50 info: [0mPOST /users/verifyOtp [31m500[0m 18.525 ms - 58[0m
+2024-01-11 21:20:19 info: =================================
+2024-01-11 21:20:19 info: ======= ENV: development =======
+2024-01-11 21:20:19 info: 🚀 App listening on the port 8000
+2024-01-11 21:20:19 info: =================================
+2024-01-11 21:20:22 info: [0mPOST /users/verifyOtp [33m400[0m 19.151 ms - 29[0m
+2024-01-11 21:20:28 info: [0mPOST /users/generateOtp [32m200[0m 6.449 ms - 80[0m
+2024-01-11 21:20:56 info: [0mPOST /users/verifyOtp [33m400[0m 0.824 ms - 25[0m
+2024-01-11 21:21:02 info: [0mPOST /users/verifyOtp [33m400[0m 1.106 ms - 25[0m
+2024-01-11 21:21:40 info: [0mPOST /users/verifyOtp [33m400[0m 0.791 ms - 25[0m
+2024-01-11 21:21:41 info: [0mPOST /users/verifyOtp [33m400[0m 1.881 ms - 25[0m
+2024-01-11 21:22:16 info: =================================
+2024-01-11 21:22:16 info: ======= ENV: development =======
+2024-01-11 21:22:16 info: 🚀 App listening on the port 8000
+2024-01-11 21:22:16 info: =================================
+2024-01-11 21:22:18 info: [0mPOST /users/verifyOtp [33m400[0m 19.301 ms - 25[0m
+2024-01-11 21:22:51 info: =================================
+2024-01-11 21:22:51 info: ======= ENV: development =======
+2024-01-11 21:22:51 info: 🚀 App listening on the port 8000
+2024-01-11 21:22:51 info: =================================
+2024-01-11 21:22:53 info: [0mPOST /users/verifyOtp [33m400[0m 17.725 ms - 29[0m
+2024-01-11 21:23:08 info: =================================
+2024-01-11 21:23:08 info: ======= ENV: development =======
+2024-01-11 21:23:08 info: 🚀 App listening on the port 8000
+2024-01-11 21:23:08 info: =================================
+2024-01-11 21:23:14 info: [0mPOST /users/verifyOtp [33m400[0m 16.942 ms - 29[0m
+2024-01-11 21:23:57 info: =================================
+2024-01-11 21:23:57 info: ======= ENV: development =======
+2024-01-11 21:23:57 info: 🚀 App listening on the port 8000
+2024-01-11 21:23:57 info: =================================
+2024-01-11 21:23:59 info: [0mPOST /users/generateOtp [32m200[0m 23.380 ms - 80[0m
+2024-01-11 21:24:23 info: [0mPOST /users/verifyOtp [33m400[0m 2.654 ms - 25[0m
+2024-01-11 21:24:50 info: =================================
+2024-01-11 21:24:50 info: ======= ENV: development =======
+2024-01-11 21:24:50 info: 🚀 App listening on the port 8000
+2024-01-11 21:24:50 info: =================================
+2024-01-11 21:24:53 info: [0mPOST /users/verifyOtp [33m400[0m 20.709 ms - 25[0m
+2024-01-11 21:25:58 info: =================================
+2024-01-11 21:25:58 info: ======= ENV: development =======
+2024-01-11 21:25:58 info: 🚀 App listening on the port 8000
+2024-01-11 21:25:58 info: =================================
+2024-01-11 21:25:59 info: [0mPOST /users/verifyOtp [33m400[0m 22.663 ms - 29[0m
+2024-01-11 21:26:06 info: [0mPOST /users/generateOtp [32m200[0m 7.045 ms - 80[0m
+2024-01-11 21:26:27 info: [0mPOST /users/verifyOtp [33m400[0m 3.125 ms - 25[0m
+2024-01-11 21:27:04 info: =================================
+2024-01-11 21:27:04 info: ======= ENV: development =======
+2024-01-11 21:27:04 info: 🚀 App listening on the port 8000
+2024-01-11 21:27:04 info: =================================
+2024-01-11 21:27:05 info: [0mPOST /users/verifyOtp [32m200[0m 18.124 ms - 21[0m
+2024-01-11 21:27:16 info: =================================
+2024-01-11 21:27:16 info: ======= ENV: development =======
+2024-01-11 21:27:16 info: 🚀 App listening on the port 8000
+2024-01-11 21:27:16 info: =================================
+2024-01-11 21:27:19 info: =================================
+2024-01-11 21:27:19 info: ======= ENV: development =======
+2024-01-11 21:27:19 info: 🚀 App listening on the port 8000
+2024-01-11 21:27:19 info: =================================
+2024-01-11 21:27:21 info: [0mPOST /users/verifyOtp [32m200[0m 19.745 ms - 21[0m
+2024-01-11 21:28:09 info: =================================
+2024-01-11 21:28:09 info: ======= ENV: development =======
+2024-01-11 21:28:09 info: 🚀 App listening on the port 8000
+2024-01-11 21:28:09 info: =================================
+2024-01-11 21:28:17 info: =================================
+2024-01-11 21:28:17 info: ======= ENV: development =======
+2024-01-11 21:28:17 info: 🚀 App listening on the port 8000
+2024-01-11 21:28:17 info: =================================
+2024-01-11 21:28:25 info: [0mPOST /users/generateOtp [32m200[0m 25.961 ms - 80[0m
+2024-01-11 21:28:48 info: =================================
+2024-01-11 21:28:48 info: ======= ENV: development =======
+2024-01-11 21:28:48 info: 🚀 App listening on the port 8000
+2024-01-11 21:28:48 info: =================================
+2024-01-11 21:28:50 info: [0mPOST /users/generateOtp [32m200[0m 24.878 ms - 80[0m

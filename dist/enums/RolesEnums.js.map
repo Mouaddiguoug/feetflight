@@ -1,1 +1,1 @@
-{"version":3,"sources":["../../src/enums/RolesEnums.ts"],"sourcesContent":["export const RolesEnum = {\r\n  BUYER: \"Buyer\",\r\n  SELLER: \"Seller\"\r\n}\r\n"],"names":["RolesEnum","BUYER","SELLER"],"mappings":";;;;+BAAaA;;;eAAAA;;;AAAN,MAAMA,YAAY;IACvBC,OAAO;IACPC,QAAQ;AACV"}
+{"version":3,"sources":["../../src/enums/RolesEnums.ts"],"sourcesContent":["export const RolesEnum = {\n  BUYER: \"Buyer\",\n  SELLER: \"Seller\"\n}\n"],"names":["RolesEnum","BUYER","SELLER"],"mappings":";;;;+BAAaA;;;eAAAA;;;AAAN,MAAMA,YAAY;IACvBC,OAAO;IACPC,QAAQ;AACV"}

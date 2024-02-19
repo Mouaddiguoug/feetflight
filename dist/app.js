@@ -63,7 +63,7 @@ function _interop_require_default(obj) {
 }
 const transporter = _nodemailer.default.createTransport({
     service: process.env.SERVICE,
-    secure: Boolean(process.env.SECURE),
+    secure: true,
     auth: {
         user: process.env.USER,
         pass: process.env.PASS
@@ -102,7 +102,8 @@ let App = class App {
             viewEngine: {
                 extname: '.handlebars',
                 layoutsDir: _path.default.resolve(__dirname, '../public/views/'),
-                partialsDir: _path.default.resolve(__dirname, '../public/views/')
+                partialsDir: _path.default.resolve(__dirname, '../public/views/'),
+                defaultLayout: "verifying_email"
             },
             viewPath: _path.default.resolve(__dirname, '../public/views/'),
             extName: '.handlebars'

@@ -36,6 +36,7 @@ let AuthRoute = class AuthRoute {
         this.router.post(`${this.path}refresh`, this.authController.generateRefreshToken);
         this.router.post(`${this.path}logout`, _authmiddleware.default, this.authController.logOut);
         this.router.post(`${this.path}changePassword/:email`, _authmiddleware.default, this.authController.changePassword);
+        this.router.post(`${this.path}resendVerificationEmail/:email`, _authmiddleware.default, this.authController.resendVerificationEMail);
     }
     constructor(){
         _define_property(this, "path", '/');

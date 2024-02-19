@@ -98,6 +98,15 @@ let sellerService = class sellerService {
             console.log(error);
         }
     }
+    async getAllSellers() {
+        try {
+            const getAllSellersSession = (0, _app.initializeDbConnection)().session();
+            const allSellers = await getAllSellersSession.executeRead((tx)=>tx.run('match (u:user)-[:IS_A]-(s:seller) where exists((u)-[:IS_A]-(s)) return u'));
+            return allSellers.records.map((record)=>record.get('u').properties);
+        } catch (error) {
+            console.log(error);
+        }
+    }
     constructor(){
         _define_property(this, "prices", []);
         _define_property(this, "createSubscribePlan", async (subscriptionPlanPrice, subscriptionPlanTitle, userId)=>{

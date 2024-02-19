@@ -36,6 +36,7 @@ let sellerRoute = class sellerRoute {
         this.router.post(`${this.path}/plans/:id`, _authmiddleware.default, this.sellerController.createSubscribePlans);
         this.router.get(`${this.path}/plans/:id`, _authmiddleware.default, this.sellerController.getSubscriptionPlans);
         this.router.put(`${this.path}/plans`, _authmiddleware.default, this.sellerController.updatePlans);
+        this.router.get(`${this.path}`, _authmiddleware.default, this.sellerController.getAllSellers);
         this.router.get(`${this.path}/followers/:id`, _authmiddleware.default, this.sellerController.getFollowersCount);
         this.router.post(`${this.path}/upload/identitycard/:id`, (0, _multer.default)().fields([
             {

@@ -1,0 +1,39 @@
+2024-01-27 14:44:39 error: [GET] /users/cus_POhM4sebYS0ITQ >> StatusCode:: 401, Message:: missing token
+2024-01-27 14:44:39 error: uncaughtException: Could not perform discovery. No routing servers available. Known routing table: RoutingTable[database=default database, expirationTime=0, currentTime=1706366679496, routers=[], readers=[], writers=[]]
+Neo4jError: Could not perform discovery. No routing servers available. Known routing table: RoutingTable[database=default database, expirationTime=0, currentTime=1706366679496, routers=[], readers=[], writers=[]]
+    at new Neo4jError (/home/ubuntu/feetflight/node_modules/neo4j-driver-core/lib/error.js:77:16)
+    at newError (/home/ubuntu/feetflight/node_modules/neo4j-driver-core/lib/error.js:113:12)
+    at RoutingConnectionProvider.<anonymous> (/home/ubuntu/feetflight/node_modules/neo4j-driver-bolt-connection/lib/connection-provider/connection-provider-routing.js:704:68)
+    at step (/home/ubuntu/feetflight/node_modules/neo4j-driver-bolt-connection/lib/connection-provider/connection-provider-routing.js:100:23)
+    at Object.next (/home/ubuntu/feetflight/node_modules/neo4j-driver-bolt-connection/lib/connection-provider/connection-provider-routing.js:81:53)
+    at /home/ubuntu/feetflight/node_modules/neo4j-driver-bolt-connection/lib/connection-provider/connection-provider-routing.js:75:71
+    at new Promise (<anonymous>)
+    at __awaiter (/home/ubuntu/feetflight/node_modules/neo4j-driver-bolt-connection/lib/connection-provider/connection-provider-routing.js:71:12)
+    at RoutingConnectionProvider._applyRoutingTableIfPossible (/home/ubuntu/feetflight/node_modules/neo4j-driver-bolt-connection/lib/connection-provider/connection-provider-routing.js:698:16)
+    at RoutingConnectionProvider.<anonymous> (/home/ubuntu/feetflight/node_modules/neo4j-driver-bolt-connection/lib/connection-provider/connection-provider-routing.js:508:55)
+2024-01-27 14:44:39 error: uncaughtException: Could not perform discovery. No routing servers available. Known routing table: RoutingTable[database=default database, expirationTime=0, currentTime=1706366679539, routers=[], readers=[], writers=[]]
+Neo4jError: Could not perform discovery. No routing servers available. Known routing table: RoutingTable[database=default database, expirationTime=0, currentTime=1706366679539, routers=[], readers=[], writers=[]]
+    at new Neo4jError (/home/ubuntu/feetflight/node_modules/neo4j-driver-core/lib/error.js:77:16)
+    at newError (/home/ubuntu/feetflight/node_modules/neo4j-driver-core/lib/error.js:113:12)
+    at RoutingConnectionProvider.<anonymous> (/home/ubuntu/feetflight/node_modules/neo4j-driver-bolt-connection/lib/connection-provider/connection-provider-routing.js:704:68)
+    at step (/home/ubuntu/feetflight/node_modules/neo4j-driver-bolt-connection/lib/connection-provider/connection-provider-routing.js:100:23)
+    at Object.next (/home/ubuntu/feetflight/node_modules/neo4j-driver-bolt-connection/lib/connection-provider/connection-provider-routing.js:81:53)
+    at /home/ubuntu/feetflight/node_modules/neo4j-driver-bolt-connection/lib/connection-provider/connection-provider-routing.js:75:71
+    at new Promise (<anonymous>)
+    at __awaiter (/home/ubuntu/feetflight/node_modules/neo4j-driver-bolt-connection/lib/connection-provider/connection-provider-routing.js:71:12)
+    at RoutingConnectionProvider._applyRoutingTableIfPossible (/home/ubuntu/feetflight/node_modules/neo4j-driver-bolt-connection/lib/connection-provider/connection-provider-routing.js:698:16)
+    at RoutingConnectionProvider.<anonymous> (/home/ubuntu/feetflight/node_modules/neo4j-driver-bolt-connection/lib/connection-provider/connection-provider-routing.js:508:55)
+2024-01-27 14:44:39 error: uncaughtException: Could not perform discovery. No routing servers available. Known routing table: RoutingTable[database=default database, expirationTime=0, currentTime=1706366679616, routers=[], readers=[], writers=[]]
+Neo4jError: Could not perform discovery. No routing servers available. Known routing table: RoutingTable[database=default database, expirationTime=0, currentTime=1706366679616, routers=[], readers=[], writers=[]]
+    at new Neo4jError (/home/ubuntu/feetflight/node_modules/neo4j-driver-core/lib/error.js:77:16)
+    at newError (/home/ubuntu/feetflight/node_modules/neo4j-driver-core/lib/error.js:113:12)
+    at RoutingConnectionProvider.<anonymous> (/home/ubuntu/feetflight/node_modules/neo4j-driver-bolt-connection/lib/connection-provider/connection-provider-routing.js:704:68)
+    at step (/home/ubuntu/feetflight/node_modules/neo4j-driver-bolt-connection/lib/connection-provider/connection-provider-routing.js:100:23)
+    at Object.next (/home/ubuntu/feetflight/node_modules/neo4j-driver-bolt-connection/lib/connection-provider/connection-provider-routing.js:81:53)
+    at /home/ubuntu/feetflight/node_modules/neo4j-driver-bolt-connection/lib/connection-provider/connection-provider-routing.js:75:71
+    at new Promise (<anonymous>)
+    at __awaiter (/home/ubuntu/feetflight/node_modules/neo4j-driver-bolt-connection/lib/connection-provider/connection-provider-routing.js:71:12)
+    at RoutingConnectionProvider._applyRoutingTableIfPossible (/home/ubuntu/feetflight/node_modules/neo4j-driver-bolt-connection/lib/connection-provider/connection-provider-routing.js:698:16)
+    at RoutingConnectionProvider.<anonymous> (/home/ubuntu/feetflight/node_modules/neo4j-driver-bolt-connection/lib/connection-provider/connection-provider-routing.js:508:55)
+2024-01-27 14:50:05 error: [GET] /users/cus_POhM4sebYS0ITQ >> StatusCode:: 401, Message:: missing token
+2024-01-27 14:50:06 error: [GET] /users/cus_POhM4sebYS0ITQ >> StatusCode:: 400, Message:: Wrong authentication token

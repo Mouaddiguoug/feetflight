@@ -1,3 +1,0 @@
-2023-12-25 15:41:48 error: [GET] /albums/all-categories >> StatusCode:: 401, Message:: missing token
-2023-12-25 15:41:48 error: [GET] /albums/cus_PFkrPBF1tQEIJq >> StatusCode:: 401, Message:: missing token
-2023-12-25 15:41:48 error: [GET] /albums/popular/cus_PFkrPBF1tQEIJq >> StatusCode:: 401, Message:: missing token

@@ -1,4 +1,0 @@
-2023-12-30 12:00:40 error: [GET] /users/cus_PBbQBKCT5KXiiH >> StatusCode:: 401, Message:: missing token
-2023-12-30 12:57:14 error: [GET] /users/cus_PBbQBKCT5KXiiH >> StatusCode:: 401, Message:: missing token
-2023-12-30 15:08:54 error: [GET] /users/cus_PBbQBKCT5KXiiH >> StatusCode:: 401, Message:: missing token
-2023-12-30 15:10:56 error: [GET] /users/cus_PBbQBKCT5KXiiH >> StatusCode:: 401, Message:: missing token

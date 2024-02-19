@@ -128,6 +128,25 @@ let UsersController = class UsersController {
                 next(error);
             }
         });
+        _define_property(this, "generateOtp", async (req, res, next)=>{
+            try {
+                const email = String(req.params.email);
+                const generatedHash = await this.userService.generateOtp(email);
+                res.status(200).json(generatedHash);
+            } catch (error) {
+                next(error);
+            }
+        });
+        _define_property(this, "verifyOtp", async (req, res, next)=>{
+            try {
+                const email = String(req.params.email);
+                const otpSettings = req.body;
+                const result = await this.userService.verifyOtp(otpSettings, email);
+                res.status(result.message == "success" ? 200 : 400).json(result);
+            } catch (error) {
+                next(error);
+            }
+        });
         _define_property(this, "cancelSubscription", async (req, res, next)=>{
             try {
                 const userId = String(req.params.id);
