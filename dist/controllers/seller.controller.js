@@ -81,6 +81,17 @@ let sellerController = class sellerController {
                 next(error);
             }
         });
+        _define_property(this, "uploadSentPicture", async (req, res, next)=>{
+            try {
+                const userId = String(req.params.id);
+                const sentPictureData = req.file;
+                const path = await this.sellerService.uploadSentPicture(sentPictureData, userId);
+                console.log(path);
+                res.status(201).json(path);
+            } catch (error) {
+                next(error);
+            }
+        });
         _define_property(this, "uploadIdentityCard", async (req, res, next)=>{
             try {
                 const userId = String(req.params.id);

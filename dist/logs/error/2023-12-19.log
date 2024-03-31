@@ -1,0 +1,38 @@
+2023-12-19 12:35:50 error: [GET] /users/cus_PBbQBKCT5KXiiH >> StatusCode:: 401, Message:: missing token
+2023-12-19 14:01:44 error: [GET] /albums/subscribed/cus_P5cQY0t4LK3Wmq >> StatusCode:: 400, Message:: Authentication token missing
+2023-12-19 19:55:33 error: uncaughtException: Route.get() requires a callback function but got a [object Undefined]
+Error: Route.get() requires a callback function but got a [object Undefined]
+    at Route.<computed> [as get] (C:\Users\mouad\Documents\Projects\feetflight\feetflight\node_modules\express\lib\router\route.js:211:15)
+    at Function.proto.<computed> [as get] (C:\Users\mouad\Documents\Projects\feetflight\feetflight\node_modules\express\lib\router\index.js:521:19)
+    at postRoute.initializeRoutes (C:\Users\mouad\Documents\Projects\feetflight\feetflight\src\routes\post.route.ts:20:17)
+    at new postRoute (C:\Users\mouad\Documents\Projects\feetflight\feetflight\src\routes\post.route.ts:14:10)
+    at Object.<anonymous> (C:\Users\mouad\Documents\Projects\feetflight\feetflight\src\server.ts:14:99)
+    at Module._compile (node:internal/modules/cjs/loader:1256:14)
+    at Module.m._compile (C:\Users\mouad\Documents\Projects\feetflight\feetflight\node_modules\ts-node\src\index.ts:1618:23)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\mouad\Documents\Projects\feetflight\feetflight\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1119:32)
+2023-12-19 19:56:19 error: uncaughtException: Route.get() requires a callback function but got a [object Undefined]
+Error: Route.get() requires a callback function but got a [object Undefined]
+    at Route.<computed> [as get] (C:\Users\mouad\Documents\Projects\feetflight\feetflight\node_modules\express\lib\router\route.js:211:15)
+    at Function.proto.<computed> [as get] (C:\Users\mouad\Documents\Projects\feetflight\feetflight\node_modules\express\lib\router\index.js:521:19)
+    at postRoute.initializeRoutes (C:\Users\mouad\Documents\Projects\feetflight\feetflight\src\routes\post.route.ts:20:17)
+    at new postRoute (C:\Users\mouad\Documents\Projects\feetflight\feetflight\src\routes\post.route.ts:14:10)
+    at Object.<anonymous> (C:\Users\mouad\Documents\Projects\feetflight\feetflight\src\server.ts:14:99)
+    at Module._compile (node:internal/modules/cjs/loader:1256:14)
+    at Module.m._compile (C:\Users\mouad\Documents\Projects\feetflight\feetflight\node_modules\ts-node\src\index.ts:1618:23)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\mouad\Documents\Projects\feetflight\feetflight\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1119:32)
+2023-12-19 19:59:33 error: uncaughtException: Route.get() requires a callback function but got a [object Undefined]
+Error: Route.get() requires a callback function but got a [object Undefined]
+    at Route.<computed> [as get] (C:\Users\mouad\Documents\Projects\feetflight\feetflight\node_modules\express\lib\router\route.js:211:15)
+    at Function.proto.<computed> [as get] (C:\Users\mouad\Documents\Projects\feetflight\feetflight\node_modules\express\lib\router\index.js:521:19)
+    at postRoute.initializeRoutes (C:\Users\mouad\Documents\Projects\feetflight\feetflight\src\routes\post.route.ts:20:17)
+    at new postRoute (C:\Users\mouad\Documents\Projects\feetflight\feetflight\src\routes\post.route.ts:14:10)
+    at Object.<anonymous> (C:\Users\mouad\Documents\Projects\feetflight\feetflight\src\server.ts:14:99)
+    at Module._compile (node:internal/modules/cjs/loader:1256:14)
+    at Module.m._compile (C:\Users\mouad\Documents\Projects\feetflight\feetflight\node_modules\ts-node\src\index.ts:1618:23)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\mouad\Documents\Projects\feetflight\feetflight\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1119:32)

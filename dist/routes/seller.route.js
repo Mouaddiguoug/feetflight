@@ -48,6 +48,7 @@ let sellerRoute = class sellerRoute {
                 maxCount: 1
             }
         ]), _fileValidationmiddleware.default, this.sellerController.uploadIdentityCard);
+        this.router.post(`${this.path}/upload/sent/picture/:id`, _authmiddleware.default, (0, _multer.default)().single('sentPicture'), _fileValidationmiddleware.default, this.sellerController.uploadSentPicture);
     }
     constructor(){
         _define_property(this, "path", '/sellers');

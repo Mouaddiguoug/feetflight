@@ -84,6 +84,15 @@ let UsersController = class UsersController {
                 next(error);
             }
         });
+        _define_property(this, "getFollowedSellers", async (req, res, next)=>{
+            try {
+                const userId = String(req.params.id);
+                const followedSellers = await this.userService.getFollowedSellers(userId);
+                res.status(200).json(followedSellers);
+            } catch (error) {
+                next(error);
+            }
+        });
         _define_property(this, "changePassword", async (req, res, next)=>{
             try {
                 const email = String(req.params.email);

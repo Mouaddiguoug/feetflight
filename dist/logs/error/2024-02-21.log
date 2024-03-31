@@ -1,0 +1,24 @@
+2024-02-21 11:35:08 error: uncaughtException: listen EADDRINUSE: address already in use :::7000
+Error: listen EADDRINUSE: address already in use :::7000
+    at Server.setupListenHandle [as _listen2] (node:net:1751:16)
+    at listenInCluster (node:net:1799:12)
+    at Server.listen (node:net:1887:7)
+    at Function.listen (/Users/gk/Documents/feetflight/node_modules/express/lib/application.js:635:24)
+    at App.listen (/Users/gk/Documents/feetflight/src/app.ts:138:14)
+    at Object.<anonymous> (/Users/gk/Documents/feetflight/src/server.ts:16:5)
+    at Module._compile (node:internal/modules/cjs/loader:1256:14)
+    at Module.m._compile (/Users/gk/Documents/feetflight/node_modules/ts-node/src/index.ts:1618:23)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)
+    at Object.require.extensions.<computed> [as .ts] (/Users/gk/Documents/feetflight/node_modules/ts-node/src/index.ts:1621:12)
+2024-02-21 11:36:23 error: uncaughtException: listen EADDRINUSE: address already in use :::7000
+Error: listen EADDRINUSE: address already in use :::7000
+    at Server.setupListenHandle [as _listen2] (node:net:1751:16)
+    at listenInCluster (node:net:1799:12)
+    at Server.listen (node:net:1887:7)
+    at Function.listen (/Users/gk/Documents/feetflight/node_modules/express/lib/application.js:635:24)
+    at App.listen (/Users/gk/Documents/feetflight/src/app.ts:138:14)
+    at Object.<anonymous> (/Users/gk/Documents/feetflight/src/server.ts:16:5)
+    at Module._compile (node:internal/modules/cjs/loader:1256:14)
+    at Module.m._compile (/Users/gk/Documents/feetflight/node_modules/ts-node/src/index.ts:1618:23)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)
+    at Object.require.extensions.<computed> [as .ts] (/Users/gk/Documents/feetflight/node_modules/ts-node/src/index.ts:1621:12)

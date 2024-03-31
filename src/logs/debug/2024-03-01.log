@@ -1,0 +1,43 @@
+2024-03-01 09:15:36 info: =================================
+2024-03-01 09:15:36 info: ======= ENV: development =======
+2024-03-01 09:15:36 info: 🚀 App listening on the port 8000
+2024-03-01 09:15:36 info: =================================
+2024-03-01 09:26:49 info: =================================
+2024-03-01 09:26:49 info: ======= ENV: development =======
+2024-03-01 09:26:49 info: 🚀 App listening on the port 8000
+2024-03-01 09:26:49 info: =================================
+2024-03-01 11:42:19 info: [0mGET / [32m200[0m 22.961 ms - 2[0m
+2024-03-01 11:43:02 info: [0mGET /public/files/avatars/avatarcus_PNZmPNOuyYNnkL.jpeg [32m200[0m 41.105 ms - 191033[0m
+2024-03-01 11:44:07 info: [0mGET /albums/random/0/cus_PNZmPNOuyYNnkL [32m201[0m 674.363 ms - 2[0m
+2024-03-01 11:44:08 info: [0mGET /albums/popular/cus_PNZmPNOuyYNnkL [32m201[0m 1084.079 ms - 19[0m
+2024-03-01 11:44:08 info: [0mGET /albums/all-categories [32m201[0m 1028.826 ms - 106[0m
+2024-03-01 11:44:08 info: [0mGET /users/plans/cus_PNZmPNOuyYNnkL [32m200[0m 1113.459 ms - 149[0m
+2024-03-01 11:44:08 info: [0mGET /albums/cus_PNZmPNOuyYNnkL [32m201[0m 1140.003 ms - -[0m
+2024-03-01 14:17:33 info: [0mPOST /login [32m200[0m 1248.959 ms - 529[0m
+2024-03-01 14:17:33 info: [0mGET /public/files/avatars/avatarcus_POSezxlvFX1eXs.jpeg [32m200[0m 4.356 ms - 59708[0m
+2024-03-01 14:17:33 info: [0mGET /albums/random/0/cus_POSezxlvFX1eXs [32m201[0m 586.751 ms - -[0m
+2024-03-01 14:17:33 info: [0mGET /public/files/albums/postPicture-cec92993-2451-4b13-a838-33d5cabc9a6cfe04cbf2aab1a0582a9c0bcab243c0af69a4904356022024.jpeg [32m200[0m 8.175 ms - 113893[0m
+2024-03-01 14:17:33 info: [0mGET /public/files/albums/postPicture-Devicesf6f53fd8e510fb21a04628fda4a62edea2eb463021022024.jpeg [32m200[0m 5.514 ms - 27460[0m
+2024-03-01 14:17:33 info: [0mGET /public/files/albums/postPicture-Devices45436ef6f53fd8e510fb21a04628fda4a62edea233022024.jpeg [32m200[0m 4.057 ms - 45519[0m
+2024-03-01 14:17:33 info: [0mGET /public/files/albums/postPicture-610923f9-ed3d-4e26-90ec-5a4ebdeedc7d6bbfaf13a11b03e82d852c4a435c2415bd71ba5726022024.jpeg [32m200[0m 6.439 ms - 95884[0m
+2024-03-01 14:17:33 info: [0mGET /public/files/albums/postPicture-Devices36ef6f53fd8e510fb21a04628fda4a62edea2eb430022024.jpeg [32m200[0m 5.490 ms - 129323[0m
+2024-03-01 14:17:33 info: [0mGET /public/files/albums/postPicture-Devices53fd8e510fb21a04628fda4a62edea2eb4630c4900022024.jpeg [32m200[0m 6.353 ms - 178888[0m
+2024-03-01 14:17:34 info: [0mGET /albums/cus_POSezxlvFX1eXs [32m201[0m 1036.387 ms - -[0m
+2024-03-01 14:17:34 info: [0mGET /albums/popular/cus_POSezxlvFX1eXs [32m201[0m 1081.060 ms - -[0m
+2024-03-01 14:17:34 info: [0mGET /albums/all-categories [32m201[0m 1126.264 ms - 106[0m
+2024-03-01 14:17:51 info: [0mGET /users/cus_POSezxlvFX1eXs [32m200[0m 1194.336 ms - 278[0m
+2024-03-01 14:17:52 info: [0mGET /albums/random/0/cus_POSezxlvFX1eXs [32m201[0m 577.868 ms - -[0m
+2024-03-01 14:17:53 info: [0mGET /albums/all-categories [32m201[0m 1101.585 ms - 106[0m
+2024-03-01 14:17:53 info: [0mGET /albums/cus_POSezxlvFX1eXs [32m201[0m 1107.538 ms - -[0m
+2024-03-01 14:17:53 info: [0mGET /albums/popular/cus_POSezxlvFX1eXs [32m201[0m 1291.084 ms - -[0m
+2024-03-01 14:19:19 info: =================================
+2024-03-01 14:19:19 info: ======= ENV: development =======
+2024-03-01 14:19:19 info: 🚀 App listening on the port 8000
+2024-03-01 14:19:19 info: =================================
+2024-03-01 14:19:38 info: [0mPOST /login [32m200[0m 1272.786 ms - 511[0m
+2024-03-01 14:19:55 info: [0mPOST /login [32m200[0m 982.756 ms - 491[0m
+2024-03-01 14:21:06 info: [0mGET /users/cec93c4ab55b533857ef25a712a915772a01516f [32m200[0m 961.311 ms - 211[0m
+2024-03-01 14:23:04 info: [0mPOST /login [32m200[0m 1465.042 ms - 490[0m
+2024-03-01 14:24:18 info: [0mPOST /signup [33m400[0m 515.295 ms - 63[0m
+2024-03-01 14:24:31 info: [0mPOST /signup [33m400[0m 486.152 ms - 61[0m
+2024-03-01 14:24:53 info: [0mPOST /signup [32m201[0m 1548.919 ms - 573[0m

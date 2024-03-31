@@ -173,6 +173,24 @@ class sellerService {
     }
   };
 
+  public uploadSentPicture = async (sentPictureData: any, userId: string) => {
+    try {
+      const filecontent = Buffer.from(sentPictureData.buffer, 'binary');
+      let sentPicturePath = [];
+      writeFile(
+        path.join(__dirname, '../../public/files/sent', `sent${userId}${moment().format("ssMMyyyy")}.${sentPictureData.mimetype.split("/")[1]}`),
+        filecontent,
+        async err => {
+          if (err) return console.log(err);
+          sentPicturePath.push(`/public/files/sent/sent${userId}${moment().format("ssMMyyyy")}.${sentPictureData.mimetype.split("/")[1]}`) ;
+        },
+      );
+      return `/public/files/sent/sent${userId}${moment().format("ssMMyyyy")}.${sentPictureData.mimetype.split("/")[1]}`;
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
   public uploadIdentityCardToDb = async (location: string, userId: string, side: string) => {
     const uploadIdentityCardSession = initializeDbConnection().session();
     try {

@@ -1,0 +1,97 @@
+2023-12-22 10:58:45 error: [GET] /users/cus_PBbQBKCT5KXiiH >> StatusCode:: 401, Message:: missing token
+2023-12-22 10:59:07 error: uncaughtException: Could not perform discovery. No routing servers available. Known routing table: RoutingTable[database=default database, expirationTime=0, currentTime=1703239147630, routers=[], readers=[], writers=[]]
+Neo4jError: Could not perform discovery. No routing servers available. Known routing table: RoutingTable[database=default database, expirationTime=0, currentTime=1703239147630, routers=[], readers=[], writers=[]]
+    at new Neo4jError (C:\Users\mouad\Documents\Projects\feetflight\feetflight\node_modules\neo4j-driver-core\lib\error.js:77:16)
+    at newError (C:\Users\mouad\Documents\Projects\feetflight\feetflight\node_modules\neo4j-driver-core\lib\error.js:113:12)
+    at RoutingConnectionProvider.<anonymous> (C:\Users\mouad\Documents\Projects\feetflight\feetflight\node_modules\neo4j-driver-bolt-connection\lib\connection-provider\connection-provider-routing.js:704:68)
+    at step (C:\Users\mouad\Documents\Projects\feetflight\feetflight\node_modules\neo4j-driver-bolt-connection\lib\connection-provider\connection-provider-routing.js:100:23)
+    at Object.next (C:\Users\mouad\Documents\Projects\feetflight\feetflight\node_modules\neo4j-driver-bolt-connection\lib\connection-provider\connection-provider-routing.js:81:53)
+    at C:\Users\mouad\Documents\Projects\feetflight\feetflight\node_modules\neo4j-driver-bolt-connection\lib\connection-provider\connection-provider-routing.js:75:71
+    at new Promise (<anonymous>)
+    at __awaiter (C:\Users\mouad\Documents\Projects\feetflight\feetflight\node_modules\neo4j-driver-bolt-connection\lib\connection-provider\connection-provider-routing.js:71:12)
+    at RoutingConnectionProvider._applyRoutingTableIfPossible (C:\Users\mouad\Documents\Projects\feetflight\feetflight\node_modules\neo4j-driver-bolt-connection\lib\connection-provider\connection-provider-routing.js:698:16)
+    at RoutingConnectionProvider.<anonymous> (C:\Users\mouad\Documents\Projects\feetflight\feetflight\node_modules\neo4j-driver-bolt-connection\lib\connection-provider\connection-provider-routing.js:508:55)
+2023-12-22 10:59:07 error: uncaughtException: Could not perform discovery. No routing servers available. Known routing table: RoutingTable[database=default database, expirationTime=0, currentTime=1703239147674, routers=[], readers=[], writers=[]]
+Neo4jError: Could not perform discovery. No routing servers available. Known routing table: RoutingTable[database=default database, expirationTime=0, currentTime=1703239147674, routers=[], readers=[], writers=[]]
+    at new Neo4jError (C:\Users\mouad\Documents\Projects\feetflight\feetflight\node_modules\neo4j-driver-core\lib\error.js:77:16)
+    at newError (C:\Users\mouad\Documents\Projects\feetflight\feetflight\node_modules\neo4j-driver-core\lib\error.js:113:12)
+    at RoutingConnectionProvider.<anonymous> (C:\Users\mouad\Documents\Projects\feetflight\feetflight\node_modules\neo4j-driver-bolt-connection\lib\connection-provider\connection-provider-routing.js:704:68)
+    at step (C:\Users\mouad\Documents\Projects\feetflight\feetflight\node_modules\neo4j-driver-bolt-connection\lib\connection-provider\connection-provider-routing.js:100:23)
+    at Object.next (C:\Users\mouad\Documents\Projects\feetflight\feetflight\node_modules\neo4j-driver-bolt-connection\lib\connection-provider\connection-provider-routing.js:81:53)
+    at C:\Users\mouad\Documents\Projects\feetflight\feetflight\node_modules\neo4j-driver-bolt-connection\lib\connection-provider\connection-provider-routing.js:75:71
+    at new Promise (<anonymous>)
+    at __awaiter (C:\Users\mouad\Documents\Projects\feetflight\feetflight\node_modules\neo4j-driver-bolt-connection\lib\connection-provider\connection-provider-routing.js:71:12)
+    at RoutingConnectionProvider._applyRoutingTableIfPossible (C:\Users\mouad\Documents\Projects\feetflight\feetflight\node_modules\neo4j-driver-bolt-connection\lib\connection-provider\connection-provider-routing.js:698:16)
+    at RoutingConnectionProvider.<anonymous> (C:\Users\mouad\Documents\Projects\feetflight\feetflight\node_modules\neo4j-driver-bolt-connection\lib\connection-provider\connection-provider-routing.js:508:55)
+2023-12-22 10:59:07 error: uncaughtException: Could not perform discovery. No routing servers available. Known routing table: RoutingTable[database=default database, expirationTime=0, currentTime=1703239147686, routers=[], readers=[], writers=[]]
+Neo4jError: Could not perform discovery. No routing servers available. Known routing table: RoutingTable[database=default database, expirationTime=0, currentTime=1703239147686, routers=[], readers=[], writers=[]]
+    at new Neo4jError (C:\Users\mouad\Documents\Projects\feetflight\feetflight\node_modules\neo4j-driver-core\lib\error.js:77:16)
+    at newError (C:\Users\mouad\Documents\Projects\feetflight\feetflight\node_modules\neo4j-driver-core\lib\error.js:113:12)
+    at RoutingConnectionProvider.<anonymous> (C:\Users\mouad\Documents\Projects\feetflight\feetflight\node_modules\neo4j-driver-bolt-connection\lib\connection-provider\connection-provider-routing.js:704:68)
+    at step (C:\Users\mouad\Documents\Projects\feetflight\feetflight\node_modules\neo4j-driver-bolt-connection\lib\connection-provider\connection-provider-routing.js:100:23)
+    at Object.next (C:\Users\mouad\Documents\Projects\feetflight\feetflight\node_modules\neo4j-driver-bolt-connection\lib\connection-provider\connection-provider-routing.js:81:53)
+    at C:\Users\mouad\Documents\Projects\feetflight\feetflight\node_modules\neo4j-driver-bolt-connection\lib\connection-provider\connection-provider-routing.js:75:71
+    at new Promise (<anonymous>)
+    at __awaiter (C:\Users\mouad\Documents\Projects\feetflight\feetflight\node_modules\neo4j-driver-bolt-connection\lib\connection-provider\connection-provider-routing.js:71:12)
+    at RoutingConnectionProvider._applyRoutingTableIfPossible (C:\Users\mouad\Documents\Projects\feetflight\feetflight\node_modules\neo4j-driver-bolt-connection\lib\connection-provider\connection-provider-routing.js:698:16)
+    at RoutingConnectionProvider.<anonymous> (C:\Users\mouad\Documents\Projects\feetflight\feetflight\node_modules\neo4j-driver-bolt-connection\lib\connection-provider\connection-provider-routing.js:508:55)
+2023-12-22 11:06:24 error: [GET] /users/cus_PBbQBKCT5KXiiH >> StatusCode:: 401, Message:: missing token
+2023-12-22 11:09:51 error: [GET] /users/cus_PBbQBKCT5KXiiH >> StatusCode:: 401, Message:: missing token
+2023-12-22 11:12:08 error: [GET] /albums/popular/cus_PBbQBKCT5KXiiH >> StatusCode:: 401, Message:: missing token
+2023-12-22 11:12:08 error: [GET] /users/plans/cus_PBbQBKCT5KXiiH >> StatusCode:: 401, Message:: missing token
+2023-12-22 11:12:08 error: [GET] /albums/cus_PBbQBKCT5KXiiH >> StatusCode:: 401, Message:: missing token
+2023-12-22 11:12:08 error: [GET] /albums/all-categories >> StatusCode:: 401, Message:: missing token
+2023-12-22 11:13:17 error: [GET] /users/cus_PBbQBKCT5KXiiH >> StatusCode:: 401, Message:: missing token
+2023-12-22 11:19:41 error: [GET] /users/cus_PBbQBKCT5KXiiH >> StatusCode:: 401, Message:: missing token
+2023-12-22 11:20:44 error: [GET] /albums/all-categories >> StatusCode:: 401, Message:: missing token
+2023-12-22 11:20:44 error: [GET] /albums/cus_PBbQBKCT5KXiiH >> StatusCode:: 401, Message:: missing token
+2023-12-22 11:20:44 error: [GET] /albums/popular/cus_PBbQBKCT5KXiiH >> StatusCode:: 401, Message:: missing token
+2023-12-22 11:20:44 error: [GET] /users/plans/cus_PBbQBKCT5KXiiH >> StatusCode:: 401, Message:: missing token
+2023-12-22 11:21:44 error: [GET] /albums/popular/cus_PBbQBKCT5KXiiH >> StatusCode:: 401, Message:: missing token
+2023-12-22 11:21:44 error: [GET] /albums/cus_PBbQBKCT5KXiiH >> StatusCode:: 401, Message:: missing token
+2023-12-22 11:21:44 error: [GET] /users/plans/cus_PBbQBKCT5KXiiH >> StatusCode:: 401, Message:: missing token
+2023-12-22 11:21:44 error: [GET] /albums/all-categories >> StatusCode:: 401, Message:: missing token
+2023-12-22 11:23:14 error: [GET] /users/cus_PBbQBKCT5KXiiH >> StatusCode:: 401, Message:: missing token
+2023-12-22 11:24:15 error: [GET] /users/plans/cus_PBbQBKCT5KXiiH >> StatusCode:: 401, Message:: missing token
+2023-12-22 11:24:15 error: [GET] /albums/popular/cus_PBbQBKCT5KXiiH >> StatusCode:: 401, Message:: missing token
+2023-12-22 11:24:15 error: [GET] /albums/all-categories >> StatusCode:: 401, Message:: missing token
+2023-12-22 11:24:15 error: [GET] /albums/cus_PBbQBKCT5KXiiH >> StatusCode:: 401, Message:: missing token
+2023-12-22 11:27:42 error: [GET] /users/cus_PBbQBKCT5KXiiH >> StatusCode:: 401, Message:: missing token
+2023-12-22 11:28:55 error: [GET] /albums/all-categories >> StatusCode:: 401, Message:: missing token
+2023-12-22 11:28:55 error: [GET] /users/plans/cus_PBbQBKCT5KXiiH >> StatusCode:: 401, Message:: missing token
+2023-12-22 11:28:56 error: [GET] /albums/cus_PBbQBKCT5KXiiH >> StatusCode:: 401, Message:: missing token
+2023-12-22 11:28:56 error: [GET] /albums/popular/cus_PBbQBKCT5KXiiH >> StatusCode:: 401, Message:: missing token
+2023-12-22 11:31:32 error: [GET] /users/plans/cus_PBbQBKCT5KXiiH >> StatusCode:: 401, Message:: missing token
+2023-12-22 11:31:32 error: [GET] /albums/popular/cus_PBbQBKCT5KXiiH >> StatusCode:: 401, Message:: missing token
+2023-12-22 11:31:32 error: [GET] /albums/all-categories >> StatusCode:: 401, Message:: missing token
+2023-12-22 11:31:33 error: [GET] /albums/cus_PBbQBKCT5KXiiH >> StatusCode:: 401, Message:: missing token
+2023-12-22 11:33:08 error: [GET] /albums/cus_PBbQBKCT5KXiiH >> StatusCode:: 401, Message:: missing token
+2023-12-22 11:33:08 error: [GET] /albums/all-categories >> StatusCode:: 401, Message:: missing token
+2023-12-22 11:33:08 error: [GET] /users/plans/cus_PBbQBKCT5KXiiH >> StatusCode:: 401, Message:: missing token
+2023-12-22 11:33:09 error: [GET] /albums/popular/cus_PBbQBKCT5KXiiH >> StatusCode:: 401, Message:: missing token
+2023-12-22 11:43:11 error: [GET] /users/cus_PBbQBKCT5KXiiH >> StatusCode:: 401, Message:: missing token
+2023-12-22 11:52:42 error: [GET] /users/plans/cus_PBbQBKCT5KXiiH >> StatusCode:: 401, Message:: missing token
+2023-12-22 11:52:42 error: [GET] /albums/popular/cus_PBbQBKCT5KXiiH >> StatusCode:: 401, Message:: missing token
+2023-12-22 11:52:42 error: [GET] /albums/all-categories >> StatusCode:: 401, Message:: missing token
+2023-12-22 11:52:42 error: [GET] /albums/cus_PBbQBKCT5KXiiH >> StatusCode:: 401, Message:: missing token
+2023-12-22 11:54:57 error: [GET] /users/plans/cus_PBbQBKCT5KXiiH >> StatusCode:: 401, Message:: missing token
+2023-12-22 11:54:57 error: [GET] /albums/all-categories >> StatusCode:: 401, Message:: missing token
+2023-12-22 11:54:57 error: [GET] /albums/cus_PBbQBKCT5KXiiH >> StatusCode:: 401, Message:: missing token
+2023-12-22 11:54:57 error: [GET] /albums/popular/cus_PBbQBKCT5KXiiH >> StatusCode:: 401, Message:: missing token
+2023-12-22 11:57:03 error: [GET] /users/cus_PBbQBKCT5KXiiH >> StatusCode:: 401, Message:: missing token
+2023-12-22 11:59:24 error: [GET] /users/plans/cus_PBbQBKCT5KXiiH >> StatusCode:: 401, Message:: missing token
+2023-12-22 11:59:24 error: [GET] /albums/popular/cus_PBbQBKCT5KXiiH >> StatusCode:: 401, Message:: missing token
+2023-12-22 11:59:25 error: [GET] /albums/all-categories >> StatusCode:: 401, Message:: missing token
+2023-12-22 11:59:26 error: [GET] /albums/cus_PBbQBKCT5KXiiH >> StatusCode:: 401, Message:: missing token
+2023-12-22 12:01:22 error: [GET] /users/cus_PBbQBKCT5KXiiH >> StatusCode:: 401, Message:: missing token
+2023-12-22 12:01:37 error: [GET] /users/cus_PBbQBKCT5KXiiH >> StatusCode:: 401, Message:: missing token
+2023-12-22 12:02:54 error: [GET] /users/cus_PBbQBKCT5KXiiH >> StatusCode:: 401, Message:: missing token
+2023-12-22 12:38:32 error: [GET] /users/cus_PBbQBKCT5KXiiH >> StatusCode:: 401, Message:: missing token
+2023-12-22 12:39:58 error: [GET] /users/cus_PBbQBKCT5KXiiH >> StatusCode:: 401, Message:: missing token
+2023-12-22 12:44:34 error: [GET] /users/cus_PBbQBKCT5KXiiH >> StatusCode:: 401, Message:: missing token
+2023-12-22 12:46:59 error: [GET] /users/plans/cus_PBbQBKCT5KXiiH >> StatusCode:: 401, Message:: missing token
+2023-12-22 18:54:14 error: [GET] /users/cus_PBbQBKCT5KXiiH >> StatusCode:: 401, Message:: missing token
+2023-12-22 18:58:47 error: [GET] /users/cus_PBbQBKCT5KXiiH >> StatusCode:: 401, Message:: missing token
+2023-12-22 19:02:28 error: [GET] /wallet/cus_PBbQBKCT5KXiiH >> StatusCode:: 401, Message:: missing token
+2023-12-22 19:06:52 error: [GET] /users/e1d640e916c8628de70bf8ec0bd97461577cc85a >> StatusCode:: 401, Message:: missing token
+2023-12-22 19:18:29 error: [GET] /users/e1d640e916c8628de70bf8ec0bd97461577cc85a >> StatusCode:: 401, Message:: missing token

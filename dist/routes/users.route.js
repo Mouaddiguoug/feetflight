@@ -48,7 +48,9 @@ let UsersRoute = class UsersRoute {
         this.router.get(`${this.path}/verify/checkForSale/:userId/:postId/:plan`, this.usersController.checkForSale);
         this.router.post(`${this.path}/devices/token/:id`, _authmiddleware.default, this.usersController.uploadDeviceToken);
         this.router.post(`${this.path}/desactivate/:id`, this.usersController.desactivateUser);
+        this.router.get(`${this.path}/followed/:id`, this.usersController.getFollowedSellers);
         this.router.post(`${this.path}/upload/avatar/:id`, _authmiddleware.default, (0, _multer.default)().single('avatar'), _fileValidationmiddleware.default, this.usersController.uploadAvatar);
+        this.router.post(`${this.path}/upload/sent/picture/:id`, _authmiddleware.default, (0, _multer.default)().single('sentPicture'), _fileValidationmiddleware.default, this.usersController.uploadAvatar);
     }
     constructor(){
         _define_property(this, "path", '/users');

@@ -67,6 +67,17 @@ class UsersController {
     }
   };
 
+  public getFollowedSellers = async (req: Request, res: Response, next: NextFunction): Promise<void> => {
+    try {
+      const userId = String(req.params.id);
+      const followedSellers = await this.userService.getFollowedSellers(userId);
+
+      res.status(200).json(followedSellers);
+    } catch (error) {
+      next(error);
+    }
+  };
+
   public changePassword = async (req: Request, res: Response, next: NextFunction): Promise<void> => {
     try {
       const email = String(req.params.email);

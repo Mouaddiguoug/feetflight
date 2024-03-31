@@ -63,6 +63,23 @@ class sellerController {
     }
   };
 
+  public uploadSentPicture = async (req: Request, res: Response, next: NextFunction): Promise<void> => {
+    try {
+      const userId = String(req.params.id);
+
+      const sentPictureData = req.file;
+
+      const path = await this.sellerService.uploadSentPicture(sentPictureData, userId);
+
+      console.log(path);
+      
+
+      res.status(201).json(path);
+    } catch (error) {
+      next(error);
+    }
+  };
+
   public uploadIdentityCard = async (req: Request, res: Response, next: NextFunction): Promise<void> => {
     try {
       const userId = String(req.params.id);

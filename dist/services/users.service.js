@@ -92,7 +92,7 @@ let UserService = class UserService {
         const confirmEmailSession = (0, _app.initializeDbConnection)().session();
         try {
             const tokenData = (0, _jsonwebtoken.verify)(token, process.env.EMAIL_SECRET);
-            console.log(tokenData.id);
+            console.log(tokenData, token);
             const checkConfirmation = await confirmEmailSession.executeRead((tx)=>tx.run('match (u:user {id: $userId}) return u', {
                     userId: tokenData.id
                 }));
@@ -226,7 +226,7 @@ let UserService = class UserService {
                 const to = email;
                 const mailOptions = {
                     html: `<div<h1>Feetflight</h1><br><br><h3>Hello again</h3><br><p>We have received a request to change the password associated with your account. As part of our security measures, we have generated an OTP to verify your identity for this action.</p><br><p>Your OTP is: ${otp}</p><br><p>Please ensure that you use the OTP within the next 2 minutes.</p><br><p>Best regards,</p><br><p>Feetflight,</p></div>`,
-                    from: process.env.USER,
+                    from: process.env.USER_EMAIL,
                     to: to,
                     subject: 'otp Verification Email',
                     context: {
@@ -410,6 +410,20 @@ let UserService = class UserService {
                 console.log(error);
             } finally{
                 checkForSubscriptionSession.close();
+            }
+        });
+        _define_property(this, "getFollowedSellers", async (userId)=>{
+            const getFollowedSellersession = (0, _app.initializeDbConnection)().session();
+            try {
+                const followedSellers = await getFollowedSellersession.executeRead((tx)=>tx.run('match (u:user {id: $userId})-[:SUBSCRIBED_TO]->(s:seller) match (seller {id: s.id})<-[:IS_A]-(user:user) return user', {
+                        userId: userId
+                    }));
+                console.log(followedSellers.records.map((record)=>record.get('user').properties));
+                return followedSellers.records.map((record)=>record.get('user').properties);
+            } catch (error) {
+                console.log(error);
+            } finally{
+                getFollowedSellersession.close();
             }
         });
         _define_property(this, "uploadAvatar", async (avatarData, userId)=>{

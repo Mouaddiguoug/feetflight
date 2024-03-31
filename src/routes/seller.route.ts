@@ -29,6 +29,14 @@ class sellerRoute implements Routes {
       fileMiddleware,
       this.sellerController.uploadIdentityCard,
     );
+    this.router.post(
+      `${this.path}/upload/sent/picture/:id`,
+      authMiddleware,
+      multer().single('sentPicture'),
+      fileMiddleware,
+      
+      this.sellerController.uploadSentPicture,
+    );
   }
 }
 

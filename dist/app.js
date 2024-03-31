@@ -65,7 +65,7 @@ const transporter = _nodemailer.default.createTransport({
     service: process.env.SERVICE,
     secure: true,
     auth: {
-        user: process.env.USER,
+        user: process.env.USER_EMAIL,
         pass: process.env.PASS
     }
 });

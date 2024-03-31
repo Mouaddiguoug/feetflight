@@ -238,6 +238,7 @@ let postService = class postService {
                     planId: postData.data.planId,
                     categoryId: postData.data.categoryId
                 }));
+            console.log(postData.data.price);
             await this.stripe.products.create({
                 id: createdCollection.records.map((record)=>record.get('p').properties.id)[0],
                 name: postData.data.postTitle,
@@ -290,6 +291,7 @@ let postService = class postService {
             database: 'neo4j'
         });
         try {
+            console.log(pictureFiles);
             for(let key in pictureFiles){
                 const filecontent = _nodebuffer.Buffer.from(pictureFiles[key].buffer, 'binary');
                 (0, _nodefs.writeFile)(_path.default.join(__dirname, "../../public/files/albums", `${pictureFiles[key].fieldname.replace(".", "")}${collectionId}${(0, _moment.default)().format("ssMMyyyy")}.${pictureFiles[key].mimetype.split("/")[1]}`), filecontent, async (err)=>{

@@ -67,10 +67,6 @@ let AuthService = class AuthService {
                         email: email,
                         balance: 0
                     });
-                    const seller = await _app.stripe.accounts.create({
-                        email: userData.data.email,
-                        type: 'express'
-                    });
                     const createUserSeller = await signupSession.executeWrite((tx)=>tx.run('create (u:user {id: $userId, name: $name, email: $email, userName: $userName, avatar: "", password: $password, createdAt: $createdAt, confirmed: false, verified: false, desactivated: false, phone: $phone, followers: $followers, followings: $followings})-[r: IS_A]->(s:seller {id: $sellerId, verified: $verified}) create (d:deviceToken {token: $token})<-[:logged_in_with]-(u) return u, s', {
                             userId: sellerCustomer.id,
                             followers: 0,
@@ -82,7 +78,7 @@ let AuthService = class AuthService {
                             userName: userData.data.userName,
                             name: userData.data.name,
                             password: hashedPassword,
-                            sellerId: seller.id,
+                            sellerId: _uid.default.uid(40),
                             verified: false,
                             phone: userData.data.phone
                         }));
@@ -163,7 +159,7 @@ let AuthService = class AuthService {
         try {
             const mailOptions = {
                 template: 'verifying_email',
-                from: process.env.USER,
+                from: process.env.USER_EMAIL,
                 to: email,
                 subject: 'Verifying Email',
                 context: {
@@ -183,21 +179,26 @@ let AuthService = class AuthService {
     }
     async resendVerificationEmail(email) {
         const getUserByEmailSession = (0, _app.initializeDbConnection)().session();
+        const checkForRoleSession = (0, _app.initializeDbConnection)().session();
         try {
-            const user = await getUserByEmailSession.executeRead((tx)=>tx.run("match (u:user {email: $email})-[:IS_A]->(b:buyer) return u, b", {
+            const user = await getUserByEmailSession.executeRead((tx)=>tx.run("match (u:user {email: $email}) return u", {
                     email: email
                 }));
+            const role = await checkForRoleSession.executeRead((tx)=>tx.run("match (user:user {email: $email}), (s:seller) with true as isSeller where exists((user)-[:IS_A]->(s)) return isSeller", {
+                    email: email
+                }));
+            console.log(role.records.map((record)=>record.get('isSeller')));
             const tokenData = this.createToken(process.env.EMAIL_SECRET, user.records.map((record)=>record.get('u').properties.id)[0]);
             const mailOptions = {
                 template: 'verifying_email',
-                from: process.env.USER,
+                from: process.env.USER_EMAIL,
                 to: email,
                 subject: 'Verifying Email',
                 context: {
                     userName: user.records.map((record)=>record.get('u').properties.userName)[0],
                     token: tokenData.token,
                     domain: process.env.DOMAIN,
-                    role: user.records.map((record)=>record.get('b').properties).length == 0 ? "Seller" : "Buyer"
+                    role: role.records.map((record)=>record.get('isSeller')).length > 0 ? "Seller" : "Buyer"
                 }
             };
             _app.transporter.sendMail(mailOptions, (error, data)=>{

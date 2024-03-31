@@ -1,0 +1,2 @@
+2024-03-17 11:30:01 error: [GET] /users/cus_PNZmPNOuyYNnkL >> StatusCode:: 401, Message:: missing token
+2024-03-17 11:30:01 error: [GET] /users/cus_PNZmPNOuyYNnkL >> StatusCode:: 400, Message:: Wrong authentication token

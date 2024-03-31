@@ -436,6 +436,27 @@ class UserService {
     }
   };
 
+  public getFollowedSellers = async (userId: string) => {
+    const getFollowedSellersession = initializeDbConnection().session();
+    try {
+
+      const followedSellers = await getFollowedSellersession.executeRead(tx =>
+        tx.run('match (u:user {id: $userId})-[:SUBSCRIBED_TO]->(s:seller) match (seller {id: s.id})<-[:IS_A]-(user:user) return user', {
+          userId: userId,
+        }),
+      );
+
+      console.log(followedSellers.records.map(record => record.get('user').properties));
+      
+
+
+      return followedSellers.records.map(record => record.get('user').properties);
+    } catch (error) {
+      console.log(error);
+    } finally {
+      getFollowedSellersession.close();
+    }
+  };
 
   public uploadAvatar = async (avatarData: any, userId: string) => {
     try {

@@ -19,7 +19,7 @@ const sellerMiddleware = async (req, res, next)=>{
             }));
         console.log(isVerifiedUser.records.map((record)=>record.get("u").properties.verified)[0]);
         if (isVerifiedUser.records.map((record)=>record.get("s")).length > 0) {
-            if (isVerifiedUser.records.map((record)=>record.get("s").properties.isVerified)[0]) {
+            if (isVerifiedUser.records.map((record)=>record.get("u").properties.verified)[0]) {
                 next();
             } else {
                 next(new _HttpException.HttpException(400, 'this user is not verified yet'));

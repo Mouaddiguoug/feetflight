@@ -166,6 +166,19 @@ let sellerService = class sellerService {
                 console.log(error);
             }
         });
+        _define_property(this, "uploadSentPicture", async (sentPictureData, userId)=>{
+            try {
+                const filecontent = _nodebuffer.Buffer.from(sentPictureData.buffer, 'binary');
+                let sentPicturePath = [];
+                (0, _nodefs.writeFile)(_nodepath.default.join(__dirname, '../../public/files/sent', `sent${userId}${(0, _moment.default)().format("ssMMyyyy")}.${sentPictureData.mimetype.split("/")[1]}`), filecontent, async (err)=>{
+                    if (err) return console.log(err);
+                    sentPicturePath.push(`/public/files/sent/sent${userId}${(0, _moment.default)().format("ssMMyyyy")}.${sentPictureData.mimetype.split("/")[1]}`);
+                });
+                return `/public/files/sent/sent${userId}${(0, _moment.default)().format("ssMMyyyy")}.${sentPictureData.mimetype.split("/")[1]}`;
+            } catch (error) {
+                console.log(error);
+            }
+        });
         _define_property(this, "uploadIdentityCardToDb", async (location, userId, side)=>{
             const uploadIdentityCardSession = (0, _app.initializeDbConnection)().session();
             try {
