@@ -87,7 +87,8 @@ let UsersController = class UsersController {
         _define_property(this, "getFollowedSellers", async (req, res, next)=>{
             try {
                 const userId = String(req.params.id);
-                const followedSellers = await this.userService.getFollowedSellers(userId);
+                const role = String(req.params.role);
+                const followedSellers = await this.userService.getFollowedSellers(userId, role);
                 res.status(200).json(followedSellers);
             } catch (error) {
                 next(error);
@@ -110,7 +111,7 @@ let UsersController = class UsersController {
             try {
                 const token = String(req.params.token);
                 const confirmed = await this.userService.emailConfirming(token);
-                res.status(201).redirect("/");
+                res.status(201).redirect("/public/views/success_pages/verifyEmailSuccess.html");
             } catch (error) {
                 next(error);
             }
@@ -137,6 +138,16 @@ let UsersController = class UsersController {
                 next(error);
             }
         });
+        _define_property(this, "unlockSentPicture", async (req, res, next)=>{
+            try {
+                const userId = String(req.params.id);
+                const unlockSentPictureData = req.body;
+                const unlockSentPictureSession = await this.userService.unlockSentPicture(userId, unlockSentPictureData);
+                res.status(200).json(unlockSentPictureSession);
+            } catch (error) {
+                next(error);
+            }
+        });
         _define_property(this, "generateOtp", async (req, res, next)=>{
             try {
                 const email = String(req.params.email);
@@ -152,6 +163,14 @@ let UsersController = class UsersController {
                 const otpSettings = req.body;
                 const result = await this.userService.verifyOtp(otpSettings, email);
                 res.status(result.message == "success" ? 200 : 400).json(result);
+            } catch (error) {
+                next(error);
+            }
+        });
+        _define_property(this, "signOut", async (req, res, next)=>{
+            try {
+                const id = String(req.params.id);
+                const result = await this.userService.signOut(id);
             } catch (error) {
                 next(error);
             }

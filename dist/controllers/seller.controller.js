@@ -64,6 +64,50 @@ let sellerController = class sellerController {
                 next(error);
             }
         });
+        _define_property(this, "requestWithdraw", async (req, res, next)=>{
+            try {
+                const userId = String(req.params.id);
+                const payoutAccountId = String(req.params.payoutAccountId);
+                const requestedWithdraw = await this.sellerService.requestWithdraw(userId, payoutAccountId);
+                res.status(requestedWithdraw ? 201 : 400).json({
+                    message: requestedWithdraw ? "Your withdraw request is being account has been added successfully!" : "Something went wrong!"
+                });
+            } catch (error) {
+                next(error);
+            }
+        });
+        _define_property(this, "addPayoutAccount", async (req, res, next)=>{
+            try {
+                const userId = String(req.params.id);
+                const bankAccountData = req.body;
+                const payoutAccount = await this.sellerService.addPayoutAccount(userId, bankAccountData);
+                res.status(payoutAccount ? 201 : 400).json({
+                    message: payoutAccount ? "Your payout account has been added successfully!" : "Something went wrong!"
+                });
+            } catch (error) {
+                next(error);
+            }
+        });
+        _define_property(this, "deletePayoutAccount", async (req, res, next)=>{
+            try {
+                const id = String(req.params.payoutAccountId);
+                await this.sellerService.deletePayoutAccount(id);
+                res.status(201).json({
+                    message: "Your payout account has been deleted successfully!"
+                });
+            } catch (error) {
+                next(error);
+            }
+        });
+        _define_property(this, "getPayoutAccounts", async (req, res, next)=>{
+            try {
+                const userId = String(req.params.id);
+                const payoutAccount = await this.sellerService.getPayoutAccounts(userId);
+                res.status(201).json(payoutAccount);
+            } catch (error) {
+                next(error);
+            }
+        });
         _define_property(this, "updatePlans", async (req, res, next)=>{
             try {
                 const plans = req.body.data;
@@ -84,10 +128,11 @@ let sellerController = class sellerController {
         _define_property(this, "uploadSentPicture", async (req, res, next)=>{
             try {
                 const userId = String(req.params.id);
-                const sentPictureData = req.file;
-                const path = await this.sellerService.uploadSentPicture(sentPictureData, userId);
-                console.log(path);
-                res.status(201).json(path);
+                const tipAmount = String(req.params.tipAmount);
+                const receiverId = String(req.params.receiverId);
+                const sentPictureDataFile = req.file;
+                const sentPictureData = await this.sellerService.uploadSentPicture(sentPictureDataFile, userId, tipAmount, receiverId);
+                res.status(201).json(sentPictureData);
             } catch (error) {
                 next(error);
             }

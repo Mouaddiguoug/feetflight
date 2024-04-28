@@ -1,0 +1,15 @@
+{
+    "keep": {
+        "days": false,
+        "amount": 30
+    },
+    "auditLog": "/Users/gk/Documents/feetflight/dist/logs/error/.eb320221017c6fdc5f05384522c16bba0b37a0f9-audit.json",
+    "files": [
+        {
+            "date": 1714332854700,
+            "name": "/Users/gk/Documents/feetflight/dist/logs/error/2024-04-28.log",
+            "hash": "89b401619738a0359e7eca85f5aae8080931475bc0d62c4d6b4a47a236309bf1"
+        }
+    ],
+    "hashType": "sha256"
+}

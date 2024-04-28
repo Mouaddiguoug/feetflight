@@ -38,7 +38,7 @@ let NotificationService = class NotificationService {
             database: 'neo4j'
         });
         try {
-            const notifications = await getNotoficationsSession.executeRead((tx)=>tx.run('match (notification:notification)<-[:got_notified]-(u:user {id: $userId}) return notification', {
+            const notifications = await getNotoficationsSession.executeRead((tx)=>tx.run('match (notification:notification)<-[:got_notified]-(u:user {id: $userId}) return notification order by notification.time desc', {
                     userId: userId
                 }));
             notifications.records.map((record)=>{
@@ -86,7 +86,6 @@ let NotificationService = class NotificationService {
             const deviceToken = await getTokensSession.executeRead((tx)=>tx.run('match (seller {id: $sellerId})<-[:IS_A]-(user:user)-[:logged_in_with]->(deviceToken:deviceToken) return deviceToken', {
                     sellerId: sellerId
                 }));
-            console.log(deviceToken.records.map((record)=>record.get("deviceToken").properties.token)[0]);
             if (deviceToken.records.length > 0) {
                 const message = {
                     notification: {

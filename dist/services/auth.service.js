@@ -327,7 +327,7 @@ let AuthService = class AuthService {
                 refresh: true
             };
             const secretKey = _config.SECRET_KEY;
-            const expiresAt = '280s';
+            const expiresAt = '30d';
             const expiresIn = new Date();
             expiresIn.setTime(expiresIn.getTime() + 60);
             return {

@@ -15,6 +15,7 @@ const _nodebuffer = require("node:buffer");
 const _util = require("../utils/util");
 const _otpgenerator = /*#__PURE__*/ _interop_require_default(require("otp-generator"));
 const _crypto = /*#__PURE__*/ _interop_require_default(require("crypto"));
+const _RolesEnums = require("../enums/RolesEnums");
 const _app = require("../app");
 const _jsonwebtoken = require("jsonwebtoken");
 const _nodepath = /*#__PURE__*/ _interop_require_default(require("node:path"));
@@ -290,7 +291,7 @@ let UserService = class UserService {
                         userId: subscriptionData.data.sellerId
                     }));
                 const sellerId = seller.records.map((record)=>record.get("s").properties.id)[0];
-                if (await this.checkForSubscription(userId, sellerId)) return {
+                if (await this.checkForSubscription(userId, sellerId, subscriptionData.data.subscriptionPlanTitle)) return {
                     message: 'Already subscribed'
                 };
                 const session = await _app.stripe.checkout.sessions.create({
@@ -315,10 +316,64 @@ let UserService = class UserService {
                 console.log(error);
             }
         });
+        _define_property(this, "unlockSentPicture", async (userId, unlockSentPictureData)=>{
+            const getSellerIdSession = (0, _app.initializeDbConnection)().session();
+            try {
+                const seller = await getSellerIdSession.executeWrite((tx)=>tx.run('match (user {id: $userId})-[:IS_A]-(s:seller) return s', {
+                        userId: userId
+                    }));
+                const sellerId = seller.records.map((record)=>record.get("s").properties.id)[0];
+                const price = await _app.stripe.prices.list({
+                    product: unlockSentPictureData.pictureId
+                }).then((price)=>{
+                    return {
+                        price: price.data[0].id,
+                        quantity: 1
+                    };
+                });
+                console.log(unlockSentPictureData.chatRoomId);
+                const session = await _app.stripe.checkout.sessions.create({
+                    success_url: 'https://example.com/success',
+                    line_items: [
+                        price
+                    ],
+                    mode: 'payment',
+                    customer: userId,
+                    metadata: {
+                        sellerId: sellerId,
+                        messageId: unlockSentPictureData.messageId,
+                        pictureId: unlockSentPictureData.pictureId,
+                        amount: unlockSentPictureData.tipAmount,
+                        chatRoomId: unlockSentPictureData.chatRoomId,
+                        comingFrom: "sentPicturePayment"
+                    }
+                });
+                return session.url;
+            } catch (error) {
+                console.log(error);
+            } finally{
+                getSellerIdSession.close();
+            }
+        });
+        _define_property(this, "signOut", async (userId)=>{
+            const signOutSession = (0, _app.initializeDbConnection)().session();
+            try {
+                const signedOutData = await signOutSession.executeWrite((tx)=>{
+                    tx.run('match (d:deviceToken)<-[:logged_in_with]-(u:user {id: $userId}) detach delete dreturn true', {
+                        userId: userId
+                    });
+                });
+                console.log(signedOutData);
+            } catch (error) {
+                console.log(error);
+            } finally{
+                signOutSession.close();
+            }
+        });
         _define_property(this, "createSubscriptioninDb", async (userId, sellerId, subscriptionPlanTitle, subscriptionPlanPrice)=>{
             const subscribeSession = (0, _app.initializeDbConnection)().session();
             try {
-                if (await this.checkForSubscription(userId, sellerId)) return {
+                if (await this.checkForSubscription(userId, sellerId, subscriptionPlanTitle)) return {
                     message: 'Already subscribed'
                 };
                 await subscribeSession.executeWrite((tx)=>{
@@ -335,28 +390,25 @@ let UserService = class UserService {
                 subscribeSession.close();
             }
         });
-        _define_property(this, "cancelSubscription", async (userId, sellerId)=>{
-            const cancelSubscriptionSession = (0, _app.initializeDbConnection)().session();
-            try {
-                if (!await this.checkForSubscription(userId, sellerId)) return {
-                    message: 'no subscription'
-                };
-                await cancelSubscriptionSession.executeWrite((tx)=>{
-                    tx.run('match (u:user {id: $userId})-[sub:SUBSCRIBED_TO]->(s:seller {id: $sellerId}) detach delete sub', {
-                        userId: userId,
-                        sellerId: sellerId
-                    });
-                });
-                return {
-                    message: 'subscription was canceled successfuly'
-                };
-            } catch (error) {
-                console.log(error);
-            } finally{
-                cancelSubscriptionSession.close();
-            }
+        /* public cancelSubscription = async (userId: string, sellerId: string) => {
+
+    const cancelSubscriptionSession = initializeDbConnection().session();
+    try {
+      if (!(await this.checkForSubscription(userId, sellerId, ))) return { message: 'no subscription' };
+
+      await cancelSubscriptionSession.executeWrite(tx => {
+        tx.run('match (u:user {id: $userId})-[sub:SUBSCRIBED_TO]->(s:seller {id: $sellerId}) detach delete sub', {
+          userId: userId,
+          sellerId: sellerId,
         });
-        _define_property(this, "checkForSale", async (userId, postId)=>{
+      });
+      return { message: 'subscription was canceled successfuly' };
+    } catch (error) {
+      console.log(error);
+    } finally {
+      cancelSubscriptionSession.close();
+    }
+  }; */ _define_property(this, "checkForSale", async (userId, postId)=>{
             const checkForExistingRelationship = (0, _app.initializeDbConnection)().session();
             try {
                 const saleAlreadyExists = await checkForExistingRelationship.executeWrite((tx)=>tx.run('match (u:user {id: $userId})-[bought:BOUGHT_A]->(p:post {id: $postId}) return bought', {
@@ -383,12 +435,13 @@ let UserService = class UserService {
                 getSellerPlansSession.close();
             }
         });
-        _define_property(this, "checkForSubscription", async (userId, sellerId)=>{
+        _define_property(this, "checkForSubscription", async (userId, sellerId, plan)=>{
             const checkForSubscriptionSession = (0, _app.initializeDbConnection)().session();
             try {
-                const subscriptionAlreadyExist = await checkForSubscriptionSession.executeWrite((tx)=>tx.run('match (u:user {id: $userId})-[subscribed:SUBSCRIBED_TO]->(s:seller {id: $sellerId}) return subscribed', {
+                const subscriptionAlreadyExist = await checkForSubscriptionSession.executeWrite((tx)=>tx.run('match (u:user {id: $userId})-[subscribed:SUBSCRIBED_TO {subscriptionPlanTitle: $plan}]->(s:seller {id: $sellerId}) return subscribed', {
                         userId: userId,
-                        sellerId: sellerId
+                        sellerId: sellerId,
+                        plan: plan
                     }));
                 return subscriptionAlreadyExist.records.map((record)=>record.get('subscribed')).length > 0 ? true : false;
             } catch (error) {
@@ -412,14 +465,15 @@ let UserService = class UserService {
                 checkForSubscriptionSession.close();
             }
         });
-        _define_property(this, "getFollowedSellers", async (userId)=>{
+        _define_property(this, "getFollowedSellers", async (userId, role)=>{
             const getFollowedSellersession = (0, _app.initializeDbConnection)().session();
             try {
-                const followedSellers = await getFollowedSellersession.executeRead((tx)=>tx.run('match (u:user {id: $userId})-[:SUBSCRIBED_TO]->(s:seller) match (seller {id: s.id})<-[:IS_A]-(user:user) return user', {
+                const followedSellers = role == _RolesEnums.RolesEnum.BUYER ? await getFollowedSellersession.executeRead((tx)=>tx.run('match (u:user {id: $userId})-[:SUBSCRIBED_TO]->(s:seller) match (seller {id: s.id})<-[:IS_A]-(user:user) return user', {
+                        userId: userId
+                    })) : await getFollowedSellersession.executeRead((tx)=>tx.run('match (sellerUser:user {id: $userId})-[:IS_A]->(seller)<-[:SUBSCRIBED_TO]-(buyerUser:user) return buyerUser', {
                         userId: userId
                     }));
-                console.log(followedSellers.records.map((record)=>record.get('user').properties));
-                return followedSellers.records.map((record)=>record.get('user').properties);
+                return role == _RolesEnums.RolesEnum.BUYER ? followedSellers.records.map((record)=>record.get('user').properties) : followedSellers.records.map((record)=>record.get('buyerUser').properties);
             } catch (error) {
                 console.log(error);
             } finally{

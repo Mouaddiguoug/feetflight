@@ -32,7 +32,6 @@
     "express-fileupload": "^1.4.0",
     "express-handlebars": "^7.0.2",
     "fcm": "^1.0.3",
-    "firebase": "^10.11.0",
     "firebase-admin": "^11.11.0",
     "helmet": "^5.1.1",
     "hpp": "^0.2.3",

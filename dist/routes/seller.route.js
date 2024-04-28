@@ -13,6 +13,7 @@ const _sellercontroller = /*#__PURE__*/ _interop_require_default(require("../con
 const _multer = /*#__PURE__*/ _interop_require_default(require("multer"));
 const _fileValidationmiddleware = /*#__PURE__*/ _interop_require_default(require("../middlewares/fileValidation.middleware"));
 const _authmiddleware = /*#__PURE__*/ _interop_require_default(require("../middlewares/auth.middleware"));
+const _sellermiddleware = /*#__PURE__*/ _interop_require_default(require("../middlewares/seller.middleware"));
 function _define_property(obj, key, value) {
     if (key in obj) {
         Object.defineProperty(obj, key, {
@@ -35,7 +36,11 @@ let sellerRoute = class sellerRoute {
     initializeRoutes() {
         this.router.post(`${this.path}/plans/:id`, _authmiddleware.default, this.sellerController.createSubscribePlans);
         this.router.get(`${this.path}/plans/:id`, _authmiddleware.default, this.sellerController.getSubscriptionPlans);
+        this.router.get(`${this.path}/payout/:id`, _authmiddleware.default, _sellermiddleware.default, this.sellerController.getPayoutAccounts);
+        this.router.post(`${this.path}/payout/:id/:payoutAccountId`, _authmiddleware.default, _sellermiddleware.default, this.sellerController.deletePayoutAccount);
+        this.router.post(`${this.path}/withdrawal/:id/:payoutAccountId`, _authmiddleware.default, _sellermiddleware.default, this.sellerController.requestWithdraw);
         this.router.put(`${this.path}/plans`, _authmiddleware.default, this.sellerController.updatePlans);
+        this.router.post(`${this.path}/payout/:id`, _authmiddleware.default, _sellermiddleware.default, this.sellerController.addPayoutAccount);
         this.router.get(`${this.path}`, _authmiddleware.default, this.sellerController.getAllSellers);
         this.router.get(`${this.path}/followers/:id`, _authmiddleware.default, this.sellerController.getFollowersCount);
         this.router.post(`${this.path}/upload/identitycard/:id`, (0, _multer.default)().fields([
@@ -48,7 +53,7 @@ let sellerRoute = class sellerRoute {
                 maxCount: 1
             }
         ]), _fileValidationmiddleware.default, this.sellerController.uploadIdentityCard);
-        this.router.post(`${this.path}/upload/sent/picture/:id`, _authmiddleware.default, (0, _multer.default)().single('sentPicture'), _fileValidationmiddleware.default, this.sellerController.uploadSentPicture);
+        this.router.post(`${this.path}/upload/sent/picture/:id/:tipAmount/:receiverId`, (0, _multer.default)().single('sentPicture'), _fileValidationmiddleware.default, _authmiddleware.default, this.sellerController.uploadSentPicture);
     }
     constructor(){
         _define_property(this, "path", '/sellers');

@@ -9,7 +9,6 @@ Object.defineProperty(exports, "default", {
     }
 });
 const _app = require("../app");
-const _neo4jdriver = require("neo4j-driver");
 const _stripe = /*#__PURE__*/ _interop_require_default(require("stripe"));
 function _define_property(obj, key, value) {
     if (key in obj) {
@@ -46,8 +45,9 @@ let walletService = class walletService {
     async UpdateBalanceForPayment(sellerId, balanceAmount) {
         const updateAmountSession = (0, _app.initializeDbConnection)().session();
         try {
-            await updateAmountSession.executeWrite((tx)=>tx.run('match (w:wallet)<-[:HAS_A]-(s:seller {id: $sellerId}) set w.amount = w.amount + $newAmount return w, s', {
-                    newAmount: (0, _neo4jdriver.int)(balanceAmount),
+            console.log(balanceAmount);
+            await updateAmountSession.executeWrite((tx)=>tx.run('match (w:wallet)<-[:HAS_A]-(s:seller {id: $sellerId}) set w.amount = w.amount + $newAmount', {
+                    newAmount: Number(balanceAmount) - Number(balanceAmount) * 20 / 100,
                     sellerId: sellerId
                 }));
         } catch (error) {
@@ -60,11 +60,10 @@ let walletService = class walletService {
         const updateAmountSession = (0, _app.initializeDbConnection)().session();
         try {
             console.log(sellerId);
-            const updatedAmount = await updateAmountSession.executeWrite((tx)=>tx.run('match (w:wallet)<-[:HAS_A]-(s:seller)-[:IS_A]-(u:user) set w.amount = w.amount + $newAmount return w, u', {
-                    newAmount: (0, _neo4jdriver.int)(balanceAmount),
+            const updatedAmount = await updateAmountSession.executeWrite((tx)=>tx.run('match (w:wallet)<-[:HAS_A]-(s:seller {id: $sellerId}) set w.amount = w.amount + $newAmount return w', {
+                    newAmount: Number(balanceAmount) - Number(balanceAmount) * 30 / 100,
                     sellerId: sellerId
                 }));
-            console.log(updatedAmount.records);
             return updatedAmount.records.map((record)=>record.get('w').properties.amount)[0].low;
         } catch (error) {
             console.log(error);

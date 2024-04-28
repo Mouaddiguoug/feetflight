@@ -13,6 +13,7 @@ const _nodebuffer = require("node:buffer");
 const _nodefs = require("node:fs");
 const _nodepath = /*#__PURE__*/ _interop_require_default(require("node:path"));
 const _moment = /*#__PURE__*/ _interop_require_default(require("moment"));
+const _uid = require("uid");
 function _define_property(obj, key, value) {
     if (key in obj) {
         Object.defineProperty(obj, key, {
@@ -87,6 +88,19 @@ let sellerService = class sellerService {
             console.log(error);
         }
     }
+    async getPayoutAccounts(userId) {
+        const getPayoutAccountsSession = (0, _app.initializeDbConnection)().session();
+        try {
+            const payoutAccounts = await getPayoutAccountsSession.executeWrite((tx)=>tx.run('match (u:user {id: $userId})-[:IS_A]->(seller)-[:GETS_PAID]->(p:payoutAccount) return p', {
+                    userId: userId
+                }));
+            return payoutAccounts.records.map((record)=>record.get("p").properties);
+        } catch (error) {
+            console.log(error);
+        } finally{
+            getPayoutAccountsSession.close();
+        }
+    }
     async getSubscriptiionPlans(userId) {
         try {
             const getSubscriptionPlansSession = (0, _app.initializeDbConnection)().session();
@@ -96,6 +110,55 @@ let sellerService = class sellerService {
             return subscriptionPlans.records.map((record)=>record.get('subscriptionPlan').properties);
         } catch (error) {
             console.log(error);
+        }
+    }
+    async deletePayoutAccount(id) {
+        const deletePayoutAccountSession = (0, _app.initializeDbConnection)().session();
+        try {
+            const deletedPayoutAcount = await deletePayoutAccountSession.executeWrite((tx)=>tx.run('match (p:payoutAccount {id: $id}) detach delete p', {
+                    id: id
+                }));
+            return true;
+        } catch (error) {
+            console.log(error);
+        } finally{
+            deletePayoutAccountSession.close();
+        }
+    }
+    async addPayoutAccount(userId, bankAccountData) {
+        const addPayoutAccountSession = (0, _app.initializeDbConnection)().session();
+        try {
+            const addedPayoutAcount = await addPayoutAccountSession.executeWrite((tx)=>tx.run('match (user {id: $userId})-[:IS_A]->(s:seller) create (s)-[:GETS_PAID]->(p:payoutAccount {id: $id, bankCountry: $bankCountry, city: $city, bankName: $bankName, accountNumber: $accountNumber, swift: $swift, status: $status}) return p', {
+                    userId: userId,
+                    id: (0, _uid.uid)(10),
+                    bankCountry: bankAccountData.bankCountry,
+                    city: bankAccountData.city,
+                    status: "Pending",
+                    bankName: bankAccountData.bankName,
+                    accountNumber: bankAccountData.accountNumber,
+                    swift: bankAccountData.swift
+                }));
+            return addedPayoutAcount.records.map((record)=>record.get('p')).length ? true : false;
+        } catch (error) {
+            console.log(error);
+        } finally{
+            addPayoutAccountSession.close();
+        }
+    }
+    async requestWithdraw(userId, payoutAccountId) {
+        const requestWithdrawSession = (0, _app.initializeDbConnection)().session();
+        try {
+            const requestedWithdraw = await requestWithdrawSession.executeWrite((tx)=>tx.run('match (user {id: $userId})-[:IS_A]->(s:seller), (p:payoutAccount {id: $payoutAccountId}) create (s)-[:REQUESTED_WITHDRAW]->(r:withrawalRequest {id: $id, status: $status})-[:BY]->(p) return r', {
+                    userId: userId,
+                    payoutAccountId: payoutAccountId,
+                    status: "Pending",
+                    id: (0, _uid.uid)(10)
+                }));
+            return requestedWithdraw.records.map((record)=>record.get('r')).length ? true : false;
+        } catch (error) {
+            console.log(error);
+        } finally{
+            requestWithdrawSession.close();
         }
     }
     async getAllSellers() {
@@ -166,15 +229,36 @@ let sellerService = class sellerService {
                 console.log(error);
             }
         });
-        _define_property(this, "uploadSentPicture", async (sentPictureData, userId)=>{
+        _define_property(this, "uploadSentPicture", async (sentPictureData, userId, tipAmount, receiverId)=>{
             try {
                 const filecontent = _nodebuffer.Buffer.from(sentPictureData.buffer, 'binary');
                 let sentPicturePath = [];
-                (0, _nodefs.writeFile)(_nodepath.default.join(__dirname, '../../public/files/sent', `sent${userId}${(0, _moment.default)().format("ssMMyyyy")}.${sentPictureData.mimetype.split("/")[1]}`), filecontent, async (err)=>{
+                const encryptionDate = (0, _moment.default)().format("ssMMyyyy");
+                const uploadSentPictureSession = (0, _app.initializeDbConnection)().session();
+                (0, _nodefs.writeFile)(_nodepath.default.join(__dirname, '../../public/files/sent', `sent${userId}${encryptionDate}.${sentPictureData.mimetype.split("/")[1]}`), filecontent, async (err)=>{
                     if (err) return console.log(err);
-                    sentPicturePath.push(`/public/files/sent/sent${userId}${(0, _moment.default)().format("ssMMyyyy")}.${sentPictureData.mimetype.split("/")[1]}`);
+                    sentPicturePath.push(`/public/files/sent/sent${userId}${encryptionDate}.${sentPictureData.mimetype.split("/")[1]}`);
                 });
-                return `/public/files/sent/sent${userId}${(0, _moment.default)().format("ssMMyyyy")}.${sentPictureData.mimetype.split("/")[1]}`;
+                const pictureId = `${userId}PictureSent${(0, _moment.default)().format("ssMMyyyy")}${(0, _uid.uid)(10)}`;
+                const uploadedPicture = await uploadSentPictureSession.executeWrite((tx)=>tx.run('match (u:user {id: $userId})-[:IS_A]->(s:seller), (buyerUser:user {id: $receiverId}) create (s)-[:SENT]->(p:picture {id: $pictureId, tipAmount: $tipAmount, isPaid: $isPaid})-[:TO]->(buyerUser) return p, buyerUser, s', {
+                        userId: userId,
+                        receiverId: receiverId,
+                        tipAmount: tipAmount,
+                        pictureId: pictureId,
+                        isPaid: Number(tipAmount) == 0 ? false : true
+                    }));
+                await _app.stripe.products.create({
+                    id: pictureId,
+                    name: "Private sent photo",
+                    default_price_data: {
+                        currency: 'EUR',
+                        unit_amount: Number(tipAmount) * 100
+                    }
+                });
+                return {
+                    pictureId,
+                    path: `/public/files/sent/sent${userId}${encryptionDate}.${sentPictureData.mimetype.split("/")[1]}`
+                };
             } catch (error) {
                 console.log(error);
             }

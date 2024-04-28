@@ -45,7 +45,7 @@ class walletService {
     try {
       console.log(sellerId);
       const updatedAmount = await updateAmountSession.executeWrite(tx =>
-        tx.run('match (w:wallet)<-[:HAS_A]-(s:seller {id: $sellerId}) set w.amount = w.amount + $newAmount return w, u', {
+        tx.run('match (w:wallet)<-[:HAS_A]-(s:seller {id: $sellerId}) set w.amount = w.amount + $newAmount return w', {
           newAmount: Number(balanceAmount) - ((Number(balanceAmount) * 30)/100),
           sellerId: sellerId,
         }),
