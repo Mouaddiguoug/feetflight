@@ -16,7 +16,7 @@ class NotificationService {
     try {
       const notifications = await getNotoficationsSession.executeRead(tx =>
         tx.run(
-          'match (notification:notification)<-[:got_notified]-(u:user {id: $userId}) return notification',
+          'match (notification:notification)<-[:got_notified]-(u:user {id: $userId}) return notification order by notification.time desc',
           {
             userId: userId
           }
@@ -74,7 +74,6 @@ class NotificationService {
         ),
       );
   
-      console.log(deviceToken.records.map(record => record.get("deviceToken").properties.token)[0]);
 
       if(deviceToken.records.length > 0) {
         const message = {

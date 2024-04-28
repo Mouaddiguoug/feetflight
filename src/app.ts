@@ -5,8 +5,6 @@ import express from 'express';
 import helmet from 'helmet';
 import neo4j from 'neo4j-driver';
 import hpp from 'hpp';
-import https from "http";
-import fs from "fs";
 import admin from "firebase-admin";
 import morgan from 'morgan';
 import swaggerJSDoc from 'swagger-jsdoc';
@@ -60,40 +58,46 @@ class App {
 
         switch (event.type) {
           case 'charge.succeeded':
-            console.log(event.data.object);
           case 'checkout.session.completed':
             switch (event.data.object.mode) {
               case 'payment':
-                event.data.object.metadata.sellersIds.split(',').map((record: any) => {
-                  let sellerId = '';
-                  let postId = '';
-                  let amount = 0;
-                  record.split('.').map((record: any) => {
-                    switch (record.split(':')[0]) {
-                      case 'sellerId':
-                        sellerId = record.split(':')[1];
-                        break;
-                      case 'postId':
-                        postId = record.split(':')[1];
-                        break;
-                      case 'amount':
-                        amount = record.split(':')[1];
-                        break;
-                      default:
-                        break;
-                    }
+                if(event.data.object.metadata.comingFrom != null && event.data.object.metadata.comingFrom.includes("sentPicturePayment")){
+                  const db = admin.firestore();
+                  console.log(event.data.object.metadata.messageId);
+                  await db.collection("chat_room").doc(event.data.object.metadata.chatRoomId).collection("messages").doc(event.data.object.metadata.messageId).update({isBought: true});
+                  
+                  await this.walletService.UpdateBalanceForPayment(event.data.object.metadata.sellerId, event.data.object.metadata.amount);
+                } else {
+                  event.data.object.metadata.sellersIds.split(',').map((record: any) => {
+                    let sellerId = '';
+                    let postId = '';
+                    let amount = 0;
+                    record.split('.').map((record: any) => {
+                      switch (record.split(':')[0]) {
+                        case 'sellerId':
+                          sellerId = record.split(':')[1];
+                          break;
+                        case 'postId':
+                          postId = record.split(':')[1];
+                          break;
+                        case 'amount':
+                          amount = record.split(':')[1];
+                          break;
+                        default:
+                          break;
+                      }
+                    });
+                    this.userService.checkForSale(event.data.object.customer, postId).then(async exists => {
+                      if (exists) return;
+                      await this.userService.buyPost(postId, event.data.object.customer, sellerId, amount);
+                      await this.walletService.UpdateBalanceForPayment(sellerId, amount);
+                      const title = "Album Sold"
+                      const body = `congratulations, a customer just bought an album.`
+                      await this.notificationService.pushSellerNotificatons(sellerId, title, body)
+                    });
+  
                   });
-                  this.userService.checkForSale(event.data.object.customer, postId).then(async exists => {
-                    if (exists) return;
-                    await this.userService.buyPost(postId, event.data.object.customer, sellerId, amount);
-                    await this.walletService.UpdateBalanceForPayment(sellerId, amount);
-                    const title = "Album Sold"
-                    const body = `congratulations, a customer just bought an album.`
-                    await this.notificationService.pushSellerNotificatons(sellerId, title, body)
-                   
-                  });
-
-                });
+                }
                 break;
               case 'subscription':
                 this.userService.createSubscriptioninDb(

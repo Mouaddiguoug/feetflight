@@ -5,7 +5,9 @@ import { writeFile } from 'node:fs';
 import { Buffer } from 'node:buffer';
 import { isEmpty } from '@utils/util';
 import otpGenerator from "otp-generator";
+import admin from "firebase-admin";
 import crypto from "crypto";
+import { RolesEnum } from '@/enums/RolesEnums';
 import { transporter } from '@/app';
 import { initializeDbConnection, stripe } from '@/app';
 import { verify } from 'jsonwebtoken';
@@ -296,7 +298,7 @@ class UserService {
 
       const sellerId = seller.records.map(record => record.get("s").properties.id)[0];
 
-      if (await this.checkForSubscription(userId, sellerId)) return { message: 'Already subscribed' };
+      if (await this.checkForSubscription(userId, sellerId, subscriptionData.data.subscriptionPlanTitle)) return { message: 'Already subscribed' };
 
       const session = await stripe.checkout.sessions.create({
         success_url: 'https://example.com/success',
@@ -317,10 +319,79 @@ class UserService {
     }
   };
 
+  public unlockSentPicture = async (userId: string, unlockSentPictureData: any) => {
+
+    const getSellerIdSession = initializeDbConnection().session();
+
+    try {
+      const seller = await getSellerIdSession.executeWrite(tx =>
+        tx.run('match (user {id: $userId})-[:IS_A]-(s:seller) return s', {
+          userId: userId,
+        }),
+      );
+
+      const sellerId = seller.records.map(record => record.get("s").properties.id)[0];
+      const price = await stripe.prices
+        .list({
+          product: unlockSentPictureData.pictureId,
+        })
+        .then(price => {
+          return { price: price.data[0].id, quantity: 1 };
+        });
+
+      console.log(unlockSentPictureData.chatRoomId);
+
+      const session = await stripe.checkout.sessions.create({
+        success_url: 'https://example.com/success',
+        line_items: [price],
+        mode: 'payment',
+        customer: userId,
+        metadata: {
+          sellerId: sellerId,
+          messageId: unlockSentPictureData.messageId,
+          pictureId: unlockSentPictureData.pictureId,
+          amount: unlockSentPictureData.tipAmount,
+          chatRoomId: unlockSentPictureData.chatRoomId,
+          comingFrom: "sentPicturePayment"
+        },
+      });
+
+      return session.url;
+    } catch (error) {
+      console.log(error);
+    } finally {
+      getSellerIdSession.close();
+    }
+  };
+
+  public signOut = async (userId: string) => {
+    const signOutSession = initializeDbConnection().session();
+    try {
+
+      const signedOutData = await signOutSession.executeWrite(tx => {
+        tx.run(
+          'match (d:deviceToken)<-[:logged_in_with]-(u:user {id: $userId}) detach delete dreturn true',
+          {
+            userId: userId,
+          },
+        );
+      });
+
+      console.log(signedOutData);
+       
+
+    } catch (error) {
+      console.log(error);
+    } finally {
+      signOutSession.close();
+    }
+  };
+  
+
   public createSubscriptioninDb = async (userId: string, sellerId: string, subscriptionPlanTitle: string, subscriptionPlanPrice: number) => {
     const subscribeSession = initializeDbConnection().session();
     try {
-      if (await this.checkForSubscription(userId, sellerId)) return { message: 'Already subscribed' };
+      if (await this.checkForSubscription(userId, sellerId, subscriptionPlanTitle)) return { message: 'Already subscribed' };
 
       await subscribeSession.executeWrite(tx => {
         tx.run(
@@ -341,11 +412,11 @@ class UserService {
     }
   };
 
-  public cancelSubscription = async (userId: string, sellerId: string) => {
+  /* public cancelSubscription = async (userId: string, sellerId: string) => {
 
     const cancelSubscriptionSession = initializeDbConnection().session();
     try {
-      if (!(await this.checkForSubscription(userId, sellerId))) return { message: 'no subscription' };
+      if (!(await this.checkForSubscription(userId, sellerId, ))) return { message: 'no subscription' };
 
       await cancelSubscriptionSession.executeWrite(tx => {
         tx.run('match (u:user {id: $userId})-[sub:SUBSCRIBED_TO]->(s:seller {id: $sellerId}) detach delete sub', {
@@ -359,7 +430,7 @@ class UserService {
     } finally {
       cancelSubscriptionSession.close();
     }
-  };
+  }; */
 
   public checkForSale = async (userId: string, postId: string) => {
     const checkForExistingRelationship = initializeDbConnection().session();
@@ -397,13 +468,14 @@ class UserService {
     }
   };
 
-  public checkForSubscription = async (userId: string, sellerId: string) => {
+  public checkForSubscription = async (userId: string, sellerId: string, plan: string) => {
     const checkForSubscriptionSession = initializeDbConnection().session();
     try {
       const subscriptionAlreadyExist = await checkForSubscriptionSession.executeWrite(tx =>
-        tx.run('match (u:user {id: $userId})-[subscribed:SUBSCRIBED_TO]->(s:seller {id: $sellerId}) return subscribed', {
+        tx.run('match (u:user {id: $userId})-[subscribed:SUBSCRIBED_TO {subscriptionPlanTitle: $plan}]->(s:seller {id: $sellerId}) return subscribed', {
           userId: userId,
           sellerId: sellerId,
+          plan: plan
         }),
       );
 
@@ -436,21 +508,21 @@ class UserService {
     }
   };
 
-  public getFollowedSellers = async (userId: string) => {
+  public getFollowedSellers = async (userId: string, role: string) => {
     const getFollowedSellersession = initializeDbConnection().session();
     try {
 
-      const followedSellers = await getFollowedSellersession.executeRead(tx =>
+      const followedSellers = role == RolesEnum.BUYER ? await getFollowedSellersession.executeRead(tx =>
         tx.run('match (u:user {id: $userId})-[:SUBSCRIBED_TO]->(s:seller) match (seller {id: s.id})<-[:IS_A]-(user:user) return user', {
+          userId: userId,
+        }),
+      ) : await getFollowedSellersession.executeRead(tx =>
+        tx.run('match (sellerUser:user {id: $userId})-[:IS_A]->(seller)<-[:SUBSCRIBED_TO]-(buyerUser:user) return buyerUser', {
           userId: userId,
         }),
       );
 
-      console.log(followedSellers.records.map(record => record.get('user').properties));
-      
-
-
-      return followedSellers.records.map(record => record.get('user').properties);
+      return role == RolesEnum.BUYER ? followedSellers.records.map(record => record.get('user').properties) : followedSellers.records.map(record => record.get('buyerUser').properties);
     } catch (error) {
       console.log(error);
     } finally {

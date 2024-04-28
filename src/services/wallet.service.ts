@@ -25,9 +25,11 @@ class walletService {
   public async UpdateBalanceForPayment(sellerId: string, balanceAmount: any) {
     const updateAmountSession = initializeDbConnection().session();
     try {
+      console.log(balanceAmount);
+      
       await updateAmountSession.executeWrite(tx =>
-        tx.run('match (w:wallet)<-[:HAS_A]-(s:seller {id: $sellerId}) set w.amount = w.amount + $newAmount return w, s', {
-          newAmount: int(balanceAmount),
+        tx.run('match (w:wallet)<-[:HAS_A]-(s:seller {id: $sellerId}) set w.amount = w.amount + $newAmount', {
+          newAmount: Number(balanceAmount) - ((Number(balanceAmount) * 20)/100),
           sellerId: sellerId,
         }),
       );
@@ -43,14 +45,11 @@ class walletService {
     try {
       console.log(sellerId);
       const updatedAmount = await updateAmountSession.executeWrite(tx =>
-        tx.run('match (w:wallet)<-[:HAS_A]-(s:seller)-[:IS_A]-(u:user) set w.amount = w.amount + $newAmount return w, u', {
-          newAmount: int(balanceAmount),
+        tx.run('match (w:wallet)<-[:HAS_A]-(s:seller {id: $sellerId}) set w.amount = w.amount + $newAmount return w, u', {
+          newAmount: Number(balanceAmount) - ((Number(balanceAmount) * 30)/100),
           sellerId: sellerId,
         }),
       );
-
-      console.log(updatedAmount.records);
-      
 
       return updatedAmount.records.map(record => record.get('w').properties.amount)[0].low; 
     } catch (error) {

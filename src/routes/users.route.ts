@@ -20,6 +20,7 @@ class UsersRoute implements Routes {
     this.router.get(`${this.path}`, authMiddleware, this.usersController.getUsers);
     this.router.post(`${this.path}/buy/:id`, authMiddleware, this.usersController.buyPost);
     this.router.post(`${this.path}/subscribe/:id`, authMiddleware, this.usersController.subscribe);
+    this.router.post(`${this.path}/buy/sent/:id`, authMiddleware, this.usersController.unlockSentPicture);
     this.router.post(`${this.path}/unsubscribe/:id/:sellerId`, authMiddleware, this.usersController.cancelSubscription);
     this.router.get(`${this.path}/confirmation/:token`, this.usersController.emailConfirming);
     this.router.get(`${this.path}/:email`, authMiddleware, this.usersController.changePassword);
@@ -28,10 +29,11 @@ class UsersRoute implements Routes {
     this.router.put(`${this.path}/:id`, authMiddleware, this.usersController.updateUser);
     this.router.post(`${this.path}/generateOtp/:email`, this.usersController.generateOtp);
     this.router.post(`${this.path}/verifyOtp/:email`, this.usersController.verifyOtp);
+    this.router.post(`${this.path}/signout/:id`, this.usersController.signOut);
     this.router.get(`${this.path}/verify/checkForSale/:userId/:postId/:plan`, this.usersController.checkForSale);
     this.router.post(`${this.path}/devices/token/:id`, authMiddleware, this.usersController.uploadDeviceToken);
     this.router.post(`${this.path}/desactivate/:id`, this.usersController.desactivateUser);
-    this.router.get(`${this.path}/followed/:id`, this.usersController.getFollowedSellers);
+    this.router.get(`${this.path}/followed/:id/:role`, this.usersController.getFollowedSellers);
     this.router.post(
       `${this.path}/upload/avatar/:id`,
       authMiddleware,
@@ -40,14 +42,7 @@ class UsersRoute implements Routes {
       
       this.usersController.uploadAvatar,
     );
-    this.router.post(
-      `${this.path}/upload/sent/picture/:id`,
-      authMiddleware,
-      multer().single('sentPicture'),
-      fileMiddleware,
-      
-      this.usersController.uploadAvatar,
-    );
+    
   }
 }
 

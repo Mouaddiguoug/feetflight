@@ -70,7 +70,8 @@ class UsersController {
   public getFollowedSellers = async (req: Request, res: Response, next: NextFunction): Promise<void> => {
     try {
       const userId = String(req.params.id);
-      const followedSellers = await this.userService.getFollowedSellers(userId);
+      const role = String(req.params.role);
+      const followedSellers = await this.userService.getFollowedSellers(userId, role);
 
       res.status(200).json(followedSellers);
     } catch (error) {
@@ -95,7 +96,7 @@ class UsersController {
       const token = String(req.params.token);
       const confirmed = await this.userService.emailConfirming(token);
 
-      res.status(201).redirect("/");
+      res.status(201).redirect("/public/views/success_pages/verifyEmailSuccess.html");
     } catch (error) {
       next(error);
     }
@@ -127,6 +128,19 @@ class UsersController {
     }
   };
 
+  public unlockSentPicture = async (req: Request, res: Response, next: NextFunction): Promise<void> => {
+    try {
+      const userId = String(req.params.id);
+      const unlockSentPictureData = req.body;
+
+      const unlockSentPictureSession = await this.userService.unlockSentPicture(userId, unlockSentPictureData);
+
+      res.status(200).json(unlockSentPictureSession);
+    } catch (error) {
+      next(error);
+    }
+  };
+
   public generateOtp = async (req: Request, res: Response, next: NextFunction): Promise<void> => {
     try {
       const email = String(req.params.email);
@@ -147,6 +161,16 @@ class UsersController {
       const result: any = await this.userService.verifyOtp(otpSettings, email);
 
       res.status(result.message == "success" ? 200 : 400).json(result);
+    } catch (error) {
+      next(error);
+    }
+  };
+
+  public signOut = async (req: Request, res: Response, next: NextFunction): Promise<void> => {
+    try {
+      const id = String(req.params.id);
+
+      const result = await this.userService.signOut(id);
     } catch (error) {
       next(error);
     }

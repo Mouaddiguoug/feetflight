@@ -6,31 +6,6 @@
     "auditLog": "/Users/gk/Documents/feetflight/src/logs/error/.1ecc5fd8f21def0eab8effa84f1c7339bc85f05c-audit.json",
     "files": [
         {
-            "date": 1708544108019,
-            "name": "/Users/gk/Documents/feetflight/src/logs/error/2024-02-21.log",
-            "hash": "7d3763cc3470d7557d3d569816dd8d22132b5437c30f3a4e7b87d3c7c8b51a18"
-        },
-        {
-            "date": 1709199795997,
-            "name": "/Users/gk/Documents/feetflight/src/logs/error/2024-02-29.log",
-            "hash": "597e12e20e99d3e616db4a70fc3dc523e911192685e7750fdabcd4036bd85147"
-        },
-        {
-            "date": 1709313335507,
-            "name": "/Users/gk/Documents/feetflight/src/logs/error/2024-03-01.log",
-            "hash": "6cac39ab647918b736a11f8f8e43568b6abacfed601d2c692fd9c6c3c4ca4d73"
-        },
-        {
-            "date": 1709389209331,
-            "name": "/Users/gk/Documents/feetflight/src/logs/error/2024-03-02.log",
-            "hash": "9da828f1e266805fa1cecdb8366e4c7d77549c25761c9d91668cf31b7f979cbc"
-        },
-        {
-            "date": 1709475927999,
-            "name": "/Users/gk/Documents/feetflight/src/logs/error/2024-03-03.log",
-            "hash": "060eda8bc569feef5f0e552638bba597ca3524de6cd2acdb9e9ec575a765b11c"
-        },
-        {
             "date": 1709986881346,
             "name": "/Users/gk/Documents/feetflight/src/logs/error/2024-03-09.log",
             "hash": "315a9b032fc29e252838aae132bdd15031e1281856ad9aea637b4b704617e1e1"
@@ -109,6 +84,76 @@
             "date": 1711638974419,
             "name": "/Users/gk/Documents/feetflight/src/logs/error/2024-03-28.log",
             "hash": "c94fd53e568bbfa1b4995a7613fc88c0c11b7766e6fdd5339bb46dfd2ff62c68"
+        },
+        {
+            "date": 1713111240154,
+            "name": "/Users/gk/Documents/feetflight/src/logs/error/2024-04-14.log",
+            "hash": "f2daf630c42d6f19e4f4f15607492a56a9592f899b7c85d775ca53a7b9d8ca25"
+        },
+        {
+            "date": 1713183822137,
+            "name": "/Users/gk/Documents/feetflight/src/logs/error/2024-04-15.log",
+            "hash": "2cac9d2895f7073aca52ffc3e1ad03ed5d7863277393b247070a27f63b0bbbda"
+        },
+        {
+            "date": 1713269269773,
+            "name": "/Users/gk/Documents/feetflight/src/logs/error/2024-04-16.log",
+            "hash": "9a38407dc30ac00aec3170168e20cad0799d5a4a0b170e56e8876037c2c9f070"
+        },
+        {
+            "date": 1713351628741,
+            "name": "/Users/gk/Documents/feetflight/src/logs/error/2024-04-17.log",
+            "hash": "9320b93429bf9d20075009c972deaf8578c3f7e5a022c75ab7b52452ff009d58"
+        },
+        {
+            "date": 1713442684646,
+            "name": "/Users/gk/Documents/feetflight/src/logs/error/2024-04-18.log",
+            "hash": "d947cfe945b8febdfc3df13bd042210cea9f2ec145a1e91a37b5c1da5daebb0e"
+        },
+        {
+            "date": 1713530681764,
+            "name": "/Users/gk/Documents/feetflight/src/logs/error/2024-04-19.log",
+            "hash": "f3aaf8d5222f2e10241775df99d5f9c7bcfd12c33f61b3286f599368cdc1f0a5"
+        },
+        {
+            "date": 1713613790454,
+            "name": "/Users/gk/Documents/feetflight/src/logs/error/2024-04-20.log",
+            "hash": "bd50e573c0c20a94af4277cd6bd32468ddd4ab5ec7ecbb218cf3975c94dec616"
+        },
+        {
+            "date": 1713695470897,
+            "name": "/Users/gk/Documents/feetflight/src/logs/error/2024-04-21.log",
+            "hash": "d6d58dd9c8a2a85d3db3243830fc5a33b98947610cc95a8555fb79cd3629c870"
+        },
+        {
+            "date": 1713793022167,
+            "name": "/Users/gk/Documents/feetflight/src/logs/error/2024-04-22.log",
+            "hash": "e02994ddf444dd8983afac93d8f35786bc4d93d7b4ca2ba6cedbdd8b5a4d8ad0"
+        },
+        {
+            "date": 1713864253413,
+            "name": "/Users/gk/Documents/feetflight/src/logs/error/2024-04-23.log",
+            "hash": "7ae1bc7076d7610cd405233f78f7cd00ba0186466d50ae3ec5420835aaa88f37"
+        },
+        {
+            "date": 1713954817094,
+            "name": "/Users/gk/Documents/feetflight/src/logs/error/2024-04-24.log",
+            "hash": "9307b560fac79e41a478a8a88c04a52e60067f97b820d65d314170c629557f13"
+        },
+        {
+            "date": 1714065996934,
+            "name": "/Users/gk/Documents/feetflight/src/logs/error/2024-04-25.log",
+            "hash": "0eec48260d8497cc86d72f1ab365a04a6824ab1ffe9e3853f949156b607e9fec"
+        },
+        {
+            "date": 1714217395352,
+            "name": "/Users/gk/Documents/feetflight/src/logs/error/2024-04-27.log",
+            "hash": "b0a615ad01b6cccbdfdf8b573240c0876ffab55e8c4f665473dade8478453ddb"
+        },
+        {
+            "date": 1714299177248,
+            "name": "/Users/gk/Documents/feetflight/src/logs/error/2024-04-28.log",
+            "hash": "25c52ba8bc28f2d930c1adee526f50f9d04a23fc12c2f26f7e5b041fa1fdc824"
         }
     ],
     "hashType": "sha256"

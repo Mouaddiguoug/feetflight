@@ -16,7 +16,7 @@ class AuthService {
 
   public async signup(userData) {
     if (isEmpty(userData)) throw new HttpException(400, 'userData is empty');
-    
+
     const signupSession = initializeDbConnection().session({ database: 'neo4j' });
     const createWalletSession = initializeDbConnection().session({ database: 'neo4j' });
 
@@ -163,20 +163,19 @@ class AuthService {
 
   public async resendVerificationEmail(email: string) {
     const getUserByEmailSession = initializeDbConnection().session();
-	const checkForRoleSession = initializeDbConnection().session();
+    const checkForRoleSession = initializeDbConnection().session();
     try {
       const user = await getUserByEmailSession.executeRead(tx => tx.run("match (u:user {email: $email}) return u", {
         email: email
       }));
 
- 	const role = await checkForRoleSession.executeRead(tx => tx.run("match (user:user {email: $email}), (s:seller) with true as isSeller where exists((user)-[:IS_A]->(s)) return isSeller", {
+      const role = await checkForRoleSession.executeRead(tx => tx.run("match (user:user {email: $email}), (s:seller) with true as isSeller where exists((user)-[:IS_A]->(s)) return isSeller", {
         email: email
       }));
 
-	console.log(role.records.map(record => record.get('isSeller')));
-  
+      console.log(role.records.map(record => record.get('isSeller')));
+
       const tokenData = this.createToken(process.env.EMAIL_SECRET, user.records.map(record => record.get('u').properties.id)[0])
-  
 
       const mailOptions = {
         template: 'verifying_email',
@@ -252,7 +251,7 @@ class AuthService {
       const role = await loginSession.executeRead(tx =>
         tx.run('match (u:user {id: $id})-[:IS_A]-(r:seller) return r', { id: userId }),
       );
-      
+
       await loginSession.executeWrite(tx =>
         tx.run('match (u:user {id: $id})-[:logged_in_with]->(d:deviceToken) set d.token = $token', { id: userId, token: deviceToken }),
       );
@@ -263,8 +262,8 @@ class AuthService {
     } finally {
       loginSession.close();
     }
-  }  
-  
+  }
+
 
   public async refreshToken(id: string) {
 
@@ -313,7 +312,7 @@ class AuthService {
       const dataStoredInToken = { id: data, refresh: true };
 
       const secretKey: string = SECRET_KEY;
-      const expiresAt: string = '280s';
+      const expiresAt: string = '30d';
       const expiresIn: Date = new Date();
       expiresIn.setTime(expiresIn.getTime() + 60);
 

@@ -1,5 +1,0 @@
-2024-03-02 08:19:26 error: [GET] /users/cus_PeySCQ47c12nM2 >> StatusCode:: 401, Message:: missing token
-2024-03-02 08:20:59 error: [GET] /users/cus_PfFobWJDqzW8pg >> StatusCode:: 401, Message:: missing token
-2024-03-02 08:25:42 error: [GET] /users/cus_PfFtKzFgrdFKge >> StatusCode:: 401, Message:: missing token
-2024-03-02 08:50:48 error: [GET] /users/cus_PfFobWJDqzW8pg >> StatusCode:: 401, Message:: missing token
-2024-03-02 08:55:33 error: [GET] /users/cus_PfFobWJDqzW8pg >> StatusCode:: 401, Message:: missing token

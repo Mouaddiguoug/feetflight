@@ -258,8 +258,6 @@ class postService {
           },
         ),
       );
-
-	console.log(postData.data.price);
       
       await this.stripe.products.create({
         id: createdCollection.records.map(record => record.get('p').properties.id)[0],
@@ -320,7 +318,6 @@ class postService {
     const createPicturesSession = initializeDbConnection().session({ database: 'neo4j' });
 
     try {
-	console.log(pictureFiles);
       for (let key in pictureFiles) {
         const filecontent = Buffer.from(pictureFiles[key].buffer, 'binary');
         
