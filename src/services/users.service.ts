@@ -370,16 +370,14 @@ class UserService {
 
       const signedOutData = await signOutSession.executeWrite(tx => {
         tx.run(
-          'match (d:deviceToken)<-[:logged_in_with]-(u:user {id: $userId}) detach delete dreturn true',
+          'match (d:deviceToken)<-[:logged_in_with]-(u:user {id: $userId}) set d.token="" return true',
           {
             userId: userId,
           },
         );
       });
 
-      console.log(signedOutData);
-       
-
+      return true;
     } catch (error) {
       console.log(error);
     } finally {

@@ -171,6 +171,8 @@ class UsersController {
       const id = String(req.params.id);
 
       const result = await this.userService.signOut(id);
+
+      res.status(result ? 200 : 400).json({message: result ? "You have loged out successfully" : "Something went wrong"})
     } catch (error) {
       next(error);
     }

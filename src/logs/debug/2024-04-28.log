@@ -614,3 +614,58 @@
 2024-04-28 20:33:18 info: [0mGET /public/files/albums/postPicture-bbfb306c-07a4-4f17-8217-63ff61de29b0a389aa943df15da6a027bf78399267524eafd33647042024.jpeg [32m200[0m 13.339 ms - 67255[0m
 2024-04-28 20:33:29 info: [0mGET /notifications/cus_PvTUMZ8OOvcw4N [32m201[0m 481.848 ms - -[0m
 2024-04-28 20:33:36 info: [0mGET /notifications/cus_Q0eirSKXPvpxX1 [32m201[0m 442.073 ms - 2[0m
+2024-04-28 21:02:04 info: =================================
+2024-04-28 21:02:04 info: ======= ENV: development =======
+2024-04-28 21:02:04 info: 🚀 App listening on the port 8000
+2024-04-28 21:02:04 info: =================================
+2024-04-28 21:05:00 info: =================================
+2024-04-28 21:05:00 info: ======= ENV: development =======
+2024-04-28 21:05:00 info: 🚀 App listening on the port 8000
+2024-04-28 21:05:00 info: =================================
+2024-04-28 21:05:14 info: =================================
+2024-04-28 21:05:14 info: ======= ENV: development =======
+2024-04-28 21:05:14 info: 🚀 App listening on the port 8000
+2024-04-28 21:05:14 info: =================================
+2024-04-28 21:08:20 info: [0mPOST /login [32m200[0m 1114.373 ms - 627[0m
+2024-04-28 21:08:21 info: [0mGET /albums/random/0/cus_PvTUMZ8OOvcw4N [32m201[0m 562.977 ms - -[0m
+2024-04-28 21:08:21 info: [0mGET /albums/all-categories [32m201[0m 887.297 ms - 177[0m
+2024-04-28 21:08:21 info: [0mGET /users/plans/cus_PvTUMZ8OOvcw4N [32m200[0m 943.836 ms - 145[0m
+2024-04-28 21:08:21 info: [0mGET /albums/popular/cus_PvTUMZ8OOvcw4N [32m201[0m 971.826 ms - -[0m
+2024-04-28 21:08:21 info: [0mGET /albums/cus_PvTUMZ8OOvcw4N [32m201[0m 1095.621 ms - -[0m
+2024-04-28 21:09:22 info: [0mPOST /login [32m200[0m 1000.540 ms - 628[0m
+2024-04-28 21:09:23 info: [0mGET /albums/random/0/cus_PvTUMZ8OOvcw4N [32m201[0m 551.770 ms - -[0m
+2024-04-28 21:09:24 info: [0mGET /albums/all-categories [32m201[0m 879.073 ms - 177[0m
+2024-04-28 21:09:24 info: [0mGET /users/plans/cus_PvTUMZ8OOvcw4N [32m200[0m 895.213 ms - 145[0m
+2024-04-28 21:09:24 info: [0mGET /albums/popular/cus_PvTUMZ8OOvcw4N [32m201[0m 953.165 ms - -[0m
+2024-04-28 21:09:24 info: [0mGET /albums/cus_PvTUMZ8OOvcw4N [32m201[0m 1055.511 ms - -[0m
+2024-04-28 21:10:04 info: [0mPOST /login [32m200[0m 927.612 ms - 627[0m
+2024-04-28 21:10:05 info: [0mGET /albums/random/0/cus_PvTUMZ8OOvcw4N [32m201[0m 490.084 ms - -[0m
+2024-04-28 21:10:05 info: [0mGET /albums/all-categories [32m201[0m 868.589 ms - 177[0m
+2024-04-28 21:10:05 info: [0mGET /users/plans/cus_PvTUMZ8OOvcw4N [32m200[0m 873.009 ms - 145[0m
+2024-04-28 21:10:05 info: [0mGET /albums/popular/cus_PvTUMZ8OOvcw4N [32m201[0m 923.150 ms - -[0m
+2024-04-28 21:10:05 info: [0mGET /albums/cus_PvTUMZ8OOvcw4N [32m201[0m 966.758 ms - -[0m
+2024-04-28 21:10:53 info: [0mPOST /login [32m200[0m 930.731 ms - 628[0m
+2024-04-28 21:10:54 info: [0mGET /albums/random/0/cus_PvTUMZ8OOvcw4N [32m201[0m 535.478 ms - -[0m
+2024-04-28 21:10:54 info: [0mGET /users/plans/cus_PvTUMZ8OOvcw4N [32m200[0m 847.164 ms - 145[0m
+2024-04-28 21:10:54 info: [0mGET /albums/popular/cus_PvTUMZ8OOvcw4N [32m201[0m 917.833 ms - -[0m
+2024-04-28 21:10:54 info: [0mGET /albums/all-categories [32m201[0m 934.625 ms - 177[0m
+2024-04-28 21:10:55 info: [0mGET /albums/cus_PvTUMZ8OOvcw4N [32m201[0m 1034.744 ms - -[0m
+2024-04-28 21:11:17 info: [0mPOST /users/signout/cus_PvTUMZ8OOvcw4N [32m200[0m 511.849 ms - 45[0m
+2024-04-28 21:12:03 info: [0mPOST /login [32m200[0m 898.760 ms - 627[0m
+2024-04-28 21:12:04 info: [0mGET /albums/random/0/cus_PvTUMZ8OOvcw4N [32m201[0m 467.469 ms - -[0m
+2024-04-28 21:12:04 info: [0mGET /albums/all-categories [32m201[0m 867.824 ms - 177[0m
+2024-04-28 21:12:04 info: [0mGET /users/plans/cus_PvTUMZ8OOvcw4N [32m200[0m 905.119 ms - 145[0m
+2024-04-28 21:12:04 info: [0mGET /albums/popular/cus_PvTUMZ8OOvcw4N [32m201[0m 878.312 ms - -[0m
+2024-04-28 21:12:04 info: [0mGET /albums/cus_PvTUMZ8OOvcw4N [32m201[0m 978.678 ms - -[0m
+2024-04-28 21:15:42 info: =================================
+2024-04-28 21:15:42 info: ======= ENV: development =======
+2024-04-28 21:15:42 info: 🚀 App listening on the port 8000
+2024-04-28 21:15:42 info: =================================
+2024-04-28 21:17:24 info: [0mPOST /users/signout/cus_PvTUMZ8OOvcw4N [32m200[0m 690.692 ms - 45[0m
+2024-04-28 21:17:50 info: [0mPOST /login [32m200[0m 1016.479 ms - 628[0m
+2024-04-28 21:17:51 info: [0mGET /albums/random/0/cus_PvTUMZ8OOvcw4N [32m201[0m 490.363 ms - -[0m
+2024-04-28 21:17:52 info: [0mGET /albums/all-categories [32m201[0m 885.785 ms - 177[0m
+2024-04-28 21:17:52 info: [0mGET /users/plans/cus_PvTUMZ8OOvcw4N [32m200[0m 896.894 ms - 145[0m
+2024-04-28 21:17:52 info: [0mGET /albums/popular/cus_PvTUMZ8OOvcw4N [32m201[0m 978.210 ms - -[0m
+2024-04-28 21:17:52 info: [0mGET /albums/cus_PvTUMZ8OOvcw4N [32m201[0m 990.471 ms - -[0m
+2024-04-28 21:18:06 info: [0mPOST /users/signout/cus_PvTUMZ8OOvcw4N [32m200[0m 483.687 ms - 45[0m
