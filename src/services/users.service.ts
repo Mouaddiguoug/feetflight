@@ -509,16 +509,20 @@ class UserService {
   public getFollowedSellers = async (userId: string, role: string) => {
     const getFollowedSellersession = initializeDbConnection().session();
     try {
-
-      const followedSellers = role == RolesEnum.BUYER ? await getFollowedSellersession.executeRead(tx =>
-        tx.run('match (u:user {id: $userId})-[:SUBSCRIBED_TO]->(s:seller) match (seller {id: s.id})<-[:IS_A]-(user:user) return user', {
-          userId: userId,
-        }),
-      ) : await getFollowedSellersession.executeRead(tx =>
-        tx.run('match (sellerUser:user {id: $userId})-[:IS_A]->(seller)<-[:SUBSCRIBED_TO]-(buyerUser:user) return buyerUser', {
-          userId: userId,
-        }),
-      );
+      let followedSellers: any = {};
+      if(role == RolesEnum.BUYER) {
+        followedSellers = await getFollowedSellersession.executeRead(tx =>
+          tx.run('match (u:user {id: $userId})-[:SUBSCRIBED_TO]->(s:seller) match (seller {id: s.id})<-[:IS_A]-(user:user) return user', {
+            userId: userId,
+          }),
+        )
+      } else {
+        followedSellers = await getFollowedSellersession.executeRead(tx =>
+          tx.run('match (user {id: $userId})-[:IS_A]->(s:seller) match (s)-[:SUBSCRIBED_TO]-(buyerUser:user) return buyerUser', {
+            userId: userId,
+          }),
+        );
+      }
 
       return role == RolesEnum.BUYER ? followedSellers.records.map(record => record.get('user').properties) : followedSellers.records.map(record => record.get('buyerUser').properties);
     } catch (error) {

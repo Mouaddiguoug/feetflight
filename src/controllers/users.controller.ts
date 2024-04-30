@@ -73,6 +73,9 @@ class UsersController {
       const role = String(req.params.role);
       const followedSellers = await this.userService.getFollowedSellers(userId, role);
 
+      console.log(followedSellers);
+      
+
       res.status(200).json(followedSellers);
     } catch (error) {
       next(error);
