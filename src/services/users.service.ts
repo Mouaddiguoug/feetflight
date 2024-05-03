@@ -485,6 +485,24 @@ class UserService {
     }
   };
 
+  public async contact(contactData: any) {
+    try {
+      const mailOptions = {
+        html: `div><h1>Feetflight</h1><h3>Welcome back</h3><p>A contacted you through contact form </p><p>name: ${contactData.name} </p><p>email: ${contactData.email}</p><p>message: ${contactData.number}</p><p>message: ${contactData.message}</p></div>`,
+        from: process.env.USER_EMAIL,
+        to: process.env.USER_EMAIL,
+        subject: 'contact us form',
+      };
+
+      transporter.sendMail(mailOptions, (error: any, data: any) => {
+        if (error) console.log(error);
+        if (!error) console.log('sent');
+      });
+    } catch (error) {
+      console.log(error);
+    }
+  }
+
   public checkForSubscriptionbyUserId = async (userId: string, postId: string, plan: string) => {
     const checkForSubscriptionSession = initializeDbConnection().session();
     try {

@@ -72,8 +72,6 @@ class UsersController {
       const userId = String(req.params.id);
       const role = String(req.params.role);
       const followedSellers = await this.userService.getFollowedSellers(userId, role);
-
-      console.log(followedSellers);
       
 
       res.status(200).json(followedSellers);
@@ -176,6 +174,17 @@ class UsersController {
       const result = await this.userService.signOut(id);
 
       res.status(result ? 200 : 400).json({message: result ? "You have loged out successfully" : "Something went wrong"})
+    } catch (error) {
+      next(error);
+    }
+  };
+
+  public contact = async (req: Request, res: Response, next: NextFunction): Promise<void> => {
+    try {
+      const contactData = req.body;
+      console.log(contactData);
+      
+      await this.userService.contact(contactData);
     } catch (error) {
       next(error);
     }
