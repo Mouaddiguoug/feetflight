@@ -48,11 +48,11 @@ class App {
       try {
         const stripe = new Stripe(process.env.STRIPE_TEST_KEY, { apiVersion: '2022-11-15' });
         let signature = req.headers['stripe-signature'];
-        
+        const WEBHOOK_SIGNATURE = "whsec_GSO5u3To3FIBEFlVGTT52Xf3ozUwI9AC";
         if (!signature) res.status(201).json({ message: 'signature needed' });
         let event;
         try {
-          event = stripe.webhooks.constructEvent(req.body, signature, process.env.WEBHOOK_SIGNATURE);
+          event = stripe.webhooks.constructEvent(req.body, signature, WEBHOOK_SIGNATURE);
         } catch (err) {
           console.log(err.message);
         }
