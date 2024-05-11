@@ -1,0 +1,24 @@
+2024-05-09 12:13:58 error: uncaughtException: Could not perform discovery. No routing servers available. Known routing table: RoutingTable[database=default database, expirationTime=0, currentTime=1715253238444, routers=[], readers=[], writers=[]]
+Neo4jError: Could not perform discovery. No routing servers available. Known routing table: RoutingTable[database=default database, expirationTime=0, currentTime=1715253238444, routers=[], readers=[], writers=[]]
+    at new Neo4jError (/Users/gk/Documents/feetflight/node_modules/neo4j-driver-core/lib/error.js:77:16)
+    at newError (/Users/gk/Documents/feetflight/node_modules/neo4j-driver-core/lib/error.js:113:12)
+    at RoutingConnectionProvider.<anonymous> (/Users/gk/Documents/feetflight/node_modules/neo4j-driver-bolt-connection/lib/connection-provider/connection-provider-routing.js:704:68)
+    at step (/Users/gk/Documents/feetflight/node_modules/neo4j-driver-bolt-connection/lib/connection-provider/connection-provider-routing.js:100:23)
+    at Object.next (/Users/gk/Documents/feetflight/node_modules/neo4j-driver-bolt-connection/lib/connection-provider/connection-provider-routing.js:81:53)
+    at /Users/gk/Documents/feetflight/node_modules/neo4j-driver-bolt-connection/lib/connection-provider/connection-provider-routing.js:75:71
+    at new Promise (<anonymous>)
+    at __awaiter (/Users/gk/Documents/feetflight/node_modules/neo4j-driver-bolt-connection/lib/connection-provider/connection-provider-routing.js:71:12)
+    at RoutingConnectionProvider._applyRoutingTableIfPossible (/Users/gk/Documents/feetflight/node_modules/neo4j-driver-bolt-connection/lib/connection-provider/connection-provider-routing.js:698:16)
+    at RoutingConnectionProvider.<anonymous> (/Users/gk/Documents/feetflight/node_modules/neo4j-driver-bolt-connection/lib/connection-provider/connection-provider-routing.js:508:55)
+2024-05-09 12:15:05 error: uncaughtException: Could not perform discovery. No routing servers available. Known routing table: RoutingTable[database=default database, expirationTime=0, currentTime=1715253305374, routers=[], readers=[], writers=[]]
+Neo4jError: Could not perform discovery. No routing servers available. Known routing table: RoutingTable[database=default database, expirationTime=0, currentTime=1715253305374, routers=[], readers=[], writers=[]]
+    at new Neo4jError (/Users/gk/Documents/feetflight/node_modules/neo4j-driver-core/lib/error.js:77:16)
+    at newError (/Users/gk/Documents/feetflight/node_modules/neo4j-driver-core/lib/error.js:113:12)
+    at RoutingConnectionProvider.<anonymous> (/Users/gk/Documents/feetflight/node_modules/neo4j-driver-bolt-connection/lib/connection-provider/connection-provider-routing.js:704:68)
+    at step (/Users/gk/Documents/feetflight/node_modules/neo4j-driver-bolt-connection/lib/connection-provider/connection-provider-routing.js:100:23)
+    at Object.next (/Users/gk/Documents/feetflight/node_modules/neo4j-driver-bolt-connection/lib/connection-provider/connection-provider-routing.js:81:53)
+    at /Users/gk/Documents/feetflight/node_modules/neo4j-driver-bolt-connection/lib/connection-provider/connection-provider-routing.js:75:71
+    at new Promise (<anonymous>)
+    at __awaiter (/Users/gk/Documents/feetflight/node_modules/neo4j-driver-bolt-connection/lib/connection-provider/connection-provider-routing.js:71:12)
+    at RoutingConnectionProvider._applyRoutingTableIfPossible (/Users/gk/Documents/feetflight/node_modules/neo4j-driver-bolt-connection/lib/connection-provider/connection-provider-routing.js:698:16)
+    at RoutingConnectionProvider.<anonymous> (/Users/gk/Documents/feetflight/node_modules/neo4j-driver-bolt-connection/lib/connection-provider/connection-provider-routing.js:508:55)

@@ -1,0 +1,413 @@
+2024-05-09 12:15:33 info: =================================
+2024-05-09 12:15:33 info: ======= ENV: development =======
+2024-05-09 12:15:33 info: 🚀 App listening on the port 8000
+2024-05-09 12:15:33 info: =================================
+2024-05-09 12:15:45 info: [0mGET /users/cus_Q2oW1HioRc0q03 [32m200[0m 1011.043 ms - 317[0m
+2024-05-09 12:15:46 info: [0mGET /albums/random/0/cus_Q2oW1HioRc0q03 [32m201[0m 475.798 ms - 2[0m
+2024-05-09 12:15:46 info: [0mGET /albums/popular/cus_Q2oW1HioRc0q03 [32m201[0m 887.011 ms - 19[0m
+2024-05-09 12:15:46 info: [0mGET /users/plans/cus_Q2oW1HioRc0q03 [32m200[0m 839.286 ms - 147[0m
+2024-05-09 12:15:46 info: [0mGET /albums/cus_Q2oW1HioRc0q03 [32m201[0m 893.130 ms - -[0m
+2024-05-09 12:15:46 info: [0mGET /albums/all-categories [32m201[0m 889.784 ms - 72[0m
+2024-05-09 13:43:55 info: =================================
+2024-05-09 13:43:55 info: ======= ENV: development =======
+2024-05-09 13:43:55 info: 🚀 App listening on the port 8000
+2024-05-09 13:43:55 info: =================================
+2024-05-09 13:45:19 info: [0mGET /users/cus_Q2oW1HioRc0q03 [32m200[0m 1135.330 ms - 317[0m
+2024-05-09 13:45:20 info: [0mGET /albums/random/0/cus_Q2oW1HioRc0q03 [32m201[0m 430.518 ms - 2[0m
+2024-05-09 13:45:20 info: [0mGET /users/plans/cus_Q2oW1HioRc0q03 [32m200[0m 841.681 ms - 147[0m
+2024-05-09 13:45:20 info: [0mGET /albums/all-categories [32m201[0m 855.522 ms - 72[0m
+2024-05-09 13:45:20 info: [0mGET /albums/popular/cus_Q2oW1HioRc0q03 [32m201[0m 890.731 ms - 19[0m
+2024-05-09 13:45:20 info: [0mGET /albums/cus_Q2oW1HioRc0q03 [32m201[0m 856.647 ms - -[0m
+2024-05-09 13:45:25 info: [0mPOST /users/signout/cus_Q2oW1HioRc0q03 [32m200[0m 506.898 ms - 45[0m
+2024-05-09 13:45:39 info: [0mPOST /login [32m200[0m 973.419 ms - 471[0m
+2024-05-09 13:45:40 info: [0mGET /albums/random/0/cus_Q4dwKuSE6TC8Hp [32m201[0m 420.676 ms - -[0m
+2024-05-09 13:45:40 info: [0mGET /public/files/albums/postPicture-a0637652-4acf-4b34-a665-743b35da2a4b1a7663827a84b234a9799bb348d8e503a9cf662d55052024.jpeg [33m404[0m 13.770 ms - 260[0m
+2024-05-09 13:45:40 info: [0mGET /public/files/albums/postPicture-71d2b1fd-565e-4397-8020-85f5b0e930feb30151a7663827a84b234a9799bb348d8e503a9c49052024.jpeg [33m404[0m 3.424 ms - 260[0m
+2024-05-09 13:45:40 info: [0mGET /albums/all-categories [32m201[0m 876.568 ms - 72[0m
+2024-05-09 13:45:40 info: [0mGET /albums/cus_Q4dwKuSE6TC8Hp [32m201[0m 846.859 ms - -[0m
+2024-05-09 13:45:41 info: [0mGET /albums/popular/cus_Q4dwKuSE6TC8Hp [32m201[0m 1186.919 ms - -[0m
+2024-05-09 13:45:45 info: [0mGET /public/files/albums/postPicture-a0637652-4acf-4b34-a665-743b35da2a4b1a7663827a84b234a9799bb348d8e503a9cf662d55052024.jpeg [33m404[0m 2.271 ms - 260[0m
+2024-05-09 13:45:45 info: [0mGET /public/files/albums/postPicture-71d2b1fd-565e-4397-8020-85f5b0e930feb30151a7663827a84b234a9799bb348d8e503a9c49052024.jpeg [33m404[0m 6.627 ms - 260[0m
+2024-05-09 13:45:46 info: [0mGET /public/files/albums/postPicture-a0637652-4acf-4b34-a665-743b35da2a4b1a7663827a84b234a9799bb348d8e503a9cf662d55052024.jpeg [33m404[0m 3.318 ms - 260[0m
+2024-05-09 13:45:46 info: [0mGET /public/files/albums/postPicture-71d2b1fd-565e-4397-8020-85f5b0e930feb30151a7663827a84b234a9799bb348d8e503a9c49052024.jpeg [33m404[0m 12.303 ms - 260[0m
+2024-05-09 13:45:49 info: [0mGET /public/files/albums/postPicture-a9a69446-8951-419e-8716-1825fb2dd6f6b30151a7663827a84b234a9799bb348d8e503a9c49052024.jpeg [33m404[0m 3.292 ms - 260[0m
+2024-05-09 13:45:49 info: [0mGET /public/files/albums/postPicture-cdfe08d3-08f0-4226-87aa-3382466a9d45b30151a7663827a84b234a9799bb348d8e503a9c49052024.jpeg [33m404[0m 5.745 ms - 260[0m
+2024-05-09 13:45:49 info: [0mGET /public/files/albums/postPicture-71d2b1fd-565e-4397-8020-85f5b0e930feb30151a7663827a84b234a9799bb348d8e503a9c49052024.jpeg [33m404[0m 6.555 ms - 260[0m
+2024-05-09 13:45:49 info: [0mGET /public/files/albums/postPicture-a0637652-4acf-4b34-a665-743b35da2a4b1a7663827a84b234a9799bb348d8e503a9cf662d55052024.jpeg [33m404[0m 7.392 ms - 260[0m
+2024-05-09 13:45:49 info: [0mGET /albums/plan/8b30151a7663827a84b234a9799bb348d8e503a9 [32m200[0m 402.450 ms - 71[0m
+2024-05-09 13:45:50 info: [0mGET /users/verify/checkForSale/cus_Q4dwKuSE6TC8Hp/8b30151a7663827a84b234a9799bb348d8e503a9/standard [32m200[0m 856.959 ms - 5[0m
+2024-05-09 13:45:50 info: [0mGET /users/plans/cus_Q2oW1HioRc0q03 [32m200[0m 844.816 ms - 147[0m
+2024-05-09 13:45:53 info: [0mPOST /users/subscribe/cus_Q4dwKuSE6TC8Hp [32m200[0m 1744.395 ms - -[0m
+2024-05-09 13:45:59 info: [0mGET /users/plans/cus_Q2oW1HioRc0q03 [32m200[0m 842.762 ms - 147[0m
+2024-05-09 13:46:00 info: [0mPOST /users/subscribe/cus_Q4dwKuSE6TC8Hp [32m200[0m 1524.937 ms - -[0m
+2024-05-09 13:46:26 info: =================================
+2024-05-09 13:46:26 info: ======= ENV: development =======
+2024-05-09 13:46:26 info: 🚀 App listening on the port 8000
+2024-05-09 13:46:26 info: =================================
+2024-05-09 13:46:34 info: [0mPOST /users/subscribe/cus_Q4dwKuSE6TC8Hp [32m200[0m 2439.936 ms - -[0m
+2024-05-09 13:46:35 info: [0mGET /public/files/albums/postPicture-71d2b1fd-565e-4397-8020-85f5b0e930feb30151a7663827a84b234a9799bb348d8e503a9c49052024.jpeg [33m404[0m 12.776 ms - 260[0m
+2024-05-09 13:46:35 info: [0mGET /public/files/albums/postPicture-a9a69446-8951-419e-8716-1825fb2dd6f6b30151a7663827a84b234a9799bb348d8e503a9c49052024.jpeg [33m404[0m 14.570 ms - 260[0m
+2024-05-09 13:47:39 info: [0mGET /public/files/albums/postPicture-71d2b1fd-565e-4397-8020-85f5b0e930feb30151a7663827a84b234a9799bb348d8e503a9c49052024.jpeg [33m404[0m 6.376 ms - 260[0m
+2024-05-09 13:47:39 info: [0mGET /public/files/albums/postPicture-a9a69446-8951-419e-8716-1825fb2dd6f6b30151a7663827a84b234a9799bb348d8e503a9c49052024.jpeg [33m404[0m 1.541 ms - 260[0m
+2024-05-09 13:54:15 info: =================================
+2024-05-09 13:54:15 info: ======= ENV: development =======
+2024-05-09 13:54:15 info: 🚀 App listening on the port 8000
+2024-05-09 13:54:15 info: =================================
+2024-05-09 13:54:19 error: [GET] /users/plans/cus_Q2oW1HioRc0q03 >> StatusCode:: 401, Message:: missing token
+2024-05-09 13:54:19 info: [0mGET /users/plans/cus_Q2oW1HioRc0q03 [33m401[0m 36.316 ms - 27[0m
+2024-05-09 13:54:19 info: [0mPOST /refresh [32m200[0m 11.135 ms - 248[0m
+2024-05-09 13:54:20 info: [0mGET /users/plans/cus_Q2oW1HioRc0q03 [32m200[0m 852.066 ms - 147[0m
+2024-05-09 13:54:22 info: [0mPOST /users/subscribe/cus_Q4dwKuSE6TC8Hp [32m200[0m 2231.861 ms - -[0m
+2024-05-09 13:54:23 info: [0mGET /public/files/albums/postPicture-71d2b1fd-565e-4397-8020-85f5b0e930feb30151a7663827a84b234a9799bb348d8e503a9c49052024.jpeg [33m404[0m 8.527 ms - 260[0m
+2024-05-09 13:54:23 info: [0mGET /public/files/albums/postPicture-a9a69446-8951-419e-8716-1825fb2dd6f6b30151a7663827a84b234a9799bb348d8e503a9c49052024.jpeg [33m404[0m 18.464 ms - 260[0m
+2024-05-09 13:55:11 info: [0mGET /public/files/albums/postPicture-a9a69446-8951-419e-8716-1825fb2dd6f6b30151a7663827a84b234a9799bb348d8e503a9c49052024.jpeg [33m404[0m 4.639 ms - 260[0m
+2024-05-09 13:55:11 info: [0mGET /public/files/albums/postPicture-71d2b1fd-565e-4397-8020-85f5b0e930feb30151a7663827a84b234a9799bb348d8e503a9c49052024.jpeg [33m404[0m 0.933 ms - 260[0m
+2024-05-09 17:12:19 info: [0mGET /users/plans/cus_Q2oW1HioRc0q03 [32m200[0m 1014.002 ms - 147[0m
+2024-05-09 17:12:21 info: [0mGET /users/plans/cus_Q2oW1HioRc0q03 [32m200[0m 861.386 ms - 147[0m
+2024-05-09 17:12:24 info: [0mPOST /users/subscribe/cus_Q4dwKuSE6TC8Hp [32m200[0m 2326.477 ms - -[0m
+2024-05-09 17:12:25 info: [0mGET /public/files/albums/postPicture-a9a69446-8951-419e-8716-1825fb2dd6f6b30151a7663827a84b234a9799bb348d8e503a9c49052024.jpeg [33m404[0m 5.860 ms - 260[0m
+2024-05-09 17:12:25 info: [0mGET /public/files/albums/postPicture-71d2b1fd-565e-4397-8020-85f5b0e930feb30151a7663827a84b234a9799bb348d8e503a9c49052024.jpeg [33m404[0m 1.765 ms - 260[0m
+2024-05-09 17:13:51 info: [0mGET /public/files/albums/postPicture-71d2b1fd-565e-4397-8020-85f5b0e930feb30151a7663827a84b234a9799bb348d8e503a9c49052024.jpeg [33m404[0m 8.049 ms - 260[0m
+2024-05-09 17:13:51 info: [0mGET /public/files/albums/postPicture-a9a69446-8951-419e-8716-1825fb2dd6f6b30151a7663827a84b234a9799bb348d8e503a9c49052024.jpeg [33m404[0m 8.960 ms - 260[0m
+2024-05-09 17:13:57 info: =================================
+2024-05-09 17:13:57 info: ======= ENV: development =======
+2024-05-09 17:13:57 info: 🚀 App listening on the port 8000
+2024-05-09 17:13:57 info: =================================
+2024-05-09 17:14:04 info: [0mGET /users/plans/cus_Q2oW1HioRc0q03 [32m200[0m 980.337 ms - 147[0m
+2024-05-09 17:14:07 info: [0mPOST /users/subscribe/cus_Q4dwKuSE6TC8Hp [32m200[0m 2162.643 ms - -[0m
+2024-05-09 17:14:08 info: [0mGET /public/files/albums/postPicture-a9a69446-8951-419e-8716-1825fb2dd6f6b30151a7663827a84b234a9799bb348d8e503a9c49052024.jpeg [33m404[0m 21.418 ms - 260[0m
+2024-05-09 17:14:08 info: [0mGET /public/files/albums/postPicture-71d2b1fd-565e-4397-8020-85f5b0e930feb30151a7663827a84b234a9799bb348d8e503a9c49052024.jpeg [33m404[0m 21.715 ms - 260[0m
+2024-05-09 17:17:09 info: [0mGET /public/files/albums/postPicture-a9a69446-8951-419e-8716-1825fb2dd6f6b30151a7663827a84b234a9799bb348d8e503a9c49052024.jpeg [33m404[0m 6.738 ms - 260[0m
+2024-05-09 17:17:09 info: [0mGET /public/files/albums/postPicture-71d2b1fd-565e-4397-8020-85f5b0e930feb30151a7663827a84b234a9799bb348d8e503a9c49052024.jpeg [33m404[0m 2.332 ms - 260[0m
+2024-05-09 17:17:12 info: [0mPOST /users/subscribe/cus_Q4dwKuSE6TC8Hp [32m200[0m 2139.945 ms - -[0m
+2024-05-09 17:17:13 info: [0mGET /public/files/albums/postPicture-a9a69446-8951-419e-8716-1825fb2dd6f6b30151a7663827a84b234a9799bb348d8e503a9c49052024.jpeg [33m404[0m 1.544 ms - 260[0m
+2024-05-09 17:17:13 info: [0mGET /public/files/albums/postPicture-71d2b1fd-565e-4397-8020-85f5b0e930feb30151a7663827a84b234a9799bb348d8e503a9c49052024.jpeg [33m404[0m 1.480 ms - 260[0m
+2024-05-09 17:17:57 info: [0mGET /public/files/albums/postPicture-a9a69446-8951-419e-8716-1825fb2dd6f6b30151a7663827a84b234a9799bb348d8e503a9c49052024.jpeg [33m404[0m 6.036 ms - 260[0m
+2024-05-09 17:17:57 info: [0mGET /public/files/albums/postPicture-71d2b1fd-565e-4397-8020-85f5b0e930feb30151a7663827a84b234a9799bb348d8e503a9c49052024.jpeg [33m404[0m 6.856 ms - 260[0m
+2024-05-09 17:19:19 info: =================================
+2024-05-09 17:19:19 info: ======= ENV: development =======
+2024-05-09 17:19:19 info: 🚀 App listening on the port 8000
+2024-05-09 17:19:19 info: =================================
+2024-05-09 17:19:27 info: [0mGET /users/plans/cus_Q2oW1HioRc0q03 [32m200[0m 1021.929 ms - 147[0m
+2024-05-09 17:19:29 info: [0mPOST /users/subscribe/cus_Q4dwKuSE6TC8Hp [32m200[0m 2161.165 ms - -[0m
+2024-05-09 17:19:30 info: [0mGET /public/files/albums/postPicture-71d2b1fd-565e-4397-8020-85f5b0e930feb30151a7663827a84b234a9799bb348d8e503a9c49052024.jpeg [33m404[0m 10.394 ms - 260[0m
+2024-05-09 17:19:30 info: [0mGET /public/files/albums/postPicture-a9a69446-8951-419e-8716-1825fb2dd6f6b30151a7663827a84b234a9799bb348d8e503a9c49052024.jpeg [33m404[0m 4.618 ms - 260[0m
+2024-05-09 17:20:10 info: [0mGET /public/files/albums/postPicture-a9a69446-8951-419e-8716-1825fb2dd6f6b30151a7663827a84b234a9799bb348d8e503a9c49052024.jpeg [33m404[0m 2.821 ms - 260[0m
+2024-05-09 17:20:10 info: [0mGET /public/files/albums/postPicture-71d2b1fd-565e-4397-8020-85f5b0e930feb30151a7663827a84b234a9799bb348d8e503a9c49052024.jpeg [33m404[0m 9.759 ms - 260[0m
+2024-05-09 17:23:53 info: =================================
+2024-05-09 17:23:53 info: ======= ENV: development =======
+2024-05-09 17:23:53 info: 🚀 App listening on the port 8000
+2024-05-09 17:23:53 info: =================================
+2024-05-09 17:25:07 info: [0mPOST /users/buy/cus_Q4dwKuSE6TC8Hp [32m200[0m 2768.120 ms - 369[0m
+2024-05-09 17:25:08 info: [0mGET /public/files/albums/postPicture-71d2b1fd-565e-4397-8020-85f5b0e930feb30151a7663827a84b234a9799bb348d8e503a9c49052024.jpeg [33m404[0m 9.623 ms - 260[0m
+2024-05-09 17:25:08 info: [0mGET /public/files/albums/postPicture-a9a69446-8951-419e-8716-1825fb2dd6f6b30151a7663827a84b234a9799bb348d8e503a9c49052024.jpeg [33m404[0m 6.426 ms - 260[0m
+2024-05-09 17:25:09 info: [0mGET /public/files/albums/postPicture-a9a69446-8951-419e-8716-1825fb2dd6f6b30151a7663827a84b234a9799bb348d8e503a9c49052024.jpeg [33m404[0m 8.327 ms - 260[0m
+2024-05-09 17:25:09 info: [0mGET /public/files/albums/postPicture-71d2b1fd-565e-4397-8020-85f5b0e930feb30151a7663827a84b234a9799bb348d8e503a9c49052024.jpeg [33m404[0m 5.696 ms - 260[0m
+2024-05-09 17:25:14 info: [0mGET /users/plans/cus_Q2oW1HioRc0q03 [32m200[0m 885.117 ms - 147[0m
+2024-05-09 17:25:16 info: [0mPOST /users/subscribe/cus_Q4dwKuSE6TC8Hp [32m200[0m 1932.586 ms - -[0m
+2024-05-09 17:25:17 info: [0mGET /public/files/albums/postPicture-71d2b1fd-565e-4397-8020-85f5b0e930feb30151a7663827a84b234a9799bb348d8e503a9c49052024.jpeg [33m404[0m 1.483 ms - 260[0m
+2024-05-09 17:25:17 info: [0mGET /public/files/albums/postPicture-a9a69446-8951-419e-8716-1825fb2dd6f6b30151a7663827a84b234a9799bb348d8e503a9c49052024.jpeg [33m404[0m 2.531 ms - 260[0m
+2024-05-09 17:25:17 info: [0mGET /public/files/albums/postPicture-71d2b1fd-565e-4397-8020-85f5b0e930feb30151a7663827a84b234a9799bb348d8e503a9c49052024.jpeg [33m404[0m 1.960 ms - 260[0m
+2024-05-09 17:25:17 info: [0mGET /public/files/albums/postPicture-a9a69446-8951-419e-8716-1825fb2dd6f6b30151a7663827a84b234a9799bb348d8e503a9c49052024.jpeg [33m404[0m 1.705 ms - 260[0m
+2024-05-09 17:25:21 info: [0mPOST /users/subscribe/cus_Q4dwKuSE6TC8Hp [32m200[0m 1887.942 ms - -[0m
+2024-05-09 17:25:21 info: [0mGET /public/files/albums/postPicture-a9a69446-8951-419e-8716-1825fb2dd6f6b30151a7663827a84b234a9799bb348d8e503a9c49052024.jpeg [33m404[0m 9.961 ms - 260[0m
+2024-05-09 17:25:21 info: [0mGET /public/files/albums/postPicture-71d2b1fd-565e-4397-8020-85f5b0e930feb30151a7663827a84b234a9799bb348d8e503a9c49052024.jpeg [33m404[0m 2.633 ms - 260[0m
+2024-05-09 17:26:20 info: [0mGET /public/files/albums/postPicture-71d2b1fd-565e-4397-8020-85f5b0e930feb30151a7663827a84b234a9799bb348d8e503a9c49052024.jpeg [33m404[0m 1.653 ms - 260[0m
+2024-05-09 17:26:20 info: [0mGET /public/files/albums/postPicture-a9a69446-8951-419e-8716-1825fb2dd6f6b30151a7663827a84b234a9799bb348d8e503a9c49052024.jpeg [33m404[0m 4.037 ms - 260[0m
+2024-05-09 17:28:24 info: =================================
+2024-05-09 17:28:24 info: ======= ENV: development =======
+2024-05-09 17:28:24 info: 🚀 App listening on the port 8000
+2024-05-09 17:28:24 info: =================================
+2024-05-09 17:28:30 info: [0mGET /users/plans/cus_Q2oW1HioRc0q03 [32m200[0m 985.473 ms - 147[0m
+2024-05-09 17:28:33 info: [0mPOST /users/subscribe/cus_Q4dwKuSE6TC8Hp [32m200[0m 1732.478 ms - -[0m
+2024-05-09 17:28:36 info: [0mGET /public/files/albums/postPicture-a0637652-4acf-4b34-a665-743b35da2a4b1a7663827a84b234a9799bb348d8e503a9cf662d55052024.jpeg [33m404[0m 12.134 ms - 260[0m
+2024-05-09 17:28:36 info: [0mGET /public/files/albums/postPicture-71d2b1fd-565e-4397-8020-85f5b0e930feb30151a7663827a84b234a9799bb348d8e503a9c49052024.jpeg [33m404[0m 4.257 ms - 260[0m
+2024-05-09 17:28:38 info: [0mPOST /users/signout/cus_Q4dwKuSE6TC8Hp [32m200[0m 491.968 ms - 45[0m
+2024-05-09 17:28:52 info: [0mPOST /login [32m200[0m 975.944 ms - 569[0m
+2024-05-09 17:28:53 info: [0mGET /albums/random/0/cus_Q2oW1HioRc0q03 [32m201[0m 447.799 ms - 2[0m
+2024-05-09 17:28:53 info: [0mGET /users/plans/cus_Q2oW1HioRc0q03 [32m200[0m 847.448 ms - 147[0m
+2024-05-09 17:28:53 info: [0mGET /albums/all-categories [32m201[0m 890.102 ms - 72[0m
+2024-05-09 17:28:53 info: [0mGET /albums/popular/cus_Q2oW1HioRc0q03 [32m201[0m 898.007 ms - 19[0m
+2024-05-09 17:28:54 info: [0mGET /albums/cus_Q2oW1HioRc0q03 [32m201[0m 1354.508 ms - -[0m
+2024-05-09 17:29:20 info: [0mGET /users/plans/cus_Q2oW1HioRc0q03 [32m200[0m 852.734 ms - 147[0m
+2024-05-09 17:29:25 info: [0mPOST /albums/cus_Q2oW1HioRc0q03 [32m201[0m 2250.894 ms - 297[0m
+2024-05-09 17:29:32 info: [0mPOST /albums/upload/8c84fe6fa7633fe1331ba47bda5202722b7904cd [32m201[0m 6488.586 ms - 59[0m
+2024-05-09 17:29:36 info: [0mPOST /users/signout/cus_Q2oW1HioRc0q03 [32m200[0m 472.436 ms - 45[0m
+2024-05-09 17:31:27 info: [0mPOST /signup [32m201[0m 1664.860 ms - 564[0m
+2024-05-09 17:31:55 info: [0mGET /users/confirmation/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImN1c19RNGpMTFRmSzJ2UG5kciIsImlhdCI6MTcxNTI3MjI4NywiZXhwIjoxNzE1MjcyNTY3fQ.UWciJeBzgtjfifgQXHPPQyCQoSbcCCr5e70-S0mkJyc [36m302[0m 658.741 ms - 146[0m
+2024-05-09 17:31:55 info: [0mGET /public/views/success_pages/verifyEmailSuccess.html [32m200[0m 3.740 ms - -[0m
+2024-05-09 17:32:19 error: [GET] /users/cus_Q4jLLTfK2vPndr >> StatusCode:: 401, Message:: missing token
+2024-05-09 17:32:19 info: [0mGET /users/cus_Q4jLLTfK2vPndr [33m401[0m 21.536 ms - 27[0m
+2024-05-09 17:32:19 info: [0mPOST /refresh [32m200[0m 5.084 ms - 248[0m
+2024-05-09 17:32:20 info: [0mGET /users/cus_Q4jLLTfK2vPndr [32m200[0m 841.476 ms - 311[0m
+2024-05-09 17:32:21 info: [0mGET /albums/random/0/cus_Q4jLLTfK2vPndr [32m201[0m 572.067 ms - -[0m
+2024-05-09 17:32:21 info: [0mGET /users/plans/cus_Q4jLLTfK2vPndr [32m200[0m 869.185 ms - 145[0m
+2024-05-09 17:32:21 info: [0mGET /albums/all-categories [32m201[0m 821.475 ms - 72[0m
+2024-05-09 17:32:22 info: [0mGET /public/files/albums/postPicture-a0637652-4acf-4b34-a665-743b35da2a4b1a7663827a84b234a9799bb348d8e503a9cf662d55052024.jpeg [33m404[0m 2.558 ms - 260[0m
+2024-05-09 17:32:22 info: [0mGET /public/files/albums/postPicture-71d2b1fd-565e-4397-8020-85f5b0e930feb30151a7663827a84b234a9799bb348d8e503a9c49052024.jpeg [33m404[0m 3.701 ms - 260[0m
+2024-05-09 17:32:22 info: [0mGET /albums/cus_Q4jLLTfK2vPndr [32m201[0m 1026.185 ms - -[0m
+2024-05-09 17:32:22 info: [0mGET /albums/popular/cus_Q4jLLTfK2vPndr [32m201[0m 1008.094 ms - -[0m
+2024-05-09 17:32:22 info: [0mGET /public/files/albums/postPicture-Devices8c84fe6fa7633fe1331ba47bda5202722b7904cd32052024.jpeg [32m200[0m 2.386 ms - 1483818[0m
+2024-05-09 17:32:27 info: [0mGET /albums/random/1/cus_Q4jLLTfK2vPndr [32m201[0m 445.723 ms - 2[0m
+2024-05-09 18:36:17 info: [0mGET /public/files/albums/postPicture-a0637652-4acf-4b34-a665-743b35da2a4b1a7663827a84b234a9799bb348d8e503a9cf662d55052024.jpeg [33m404[0m 5.335 ms - 260[0m
+2024-05-09 18:36:17 info: [0mGET /public/files/albums/postPicture-71d2b1fd-565e-4397-8020-85f5b0e930feb30151a7663827a84b234a9799bb348d8e503a9c49052024.jpeg [33m404[0m 7.073 ms - 260[0m
+2024-05-09 18:36:18 info: [0mGET /albums/plan/78c84fe6fa7633fe1331ba47bda5202722b7904c [32m200[0m 580.068 ms - 71[0m
+2024-05-09 18:36:19 info: [0mGET /users/verify/checkForSale/cus_Q4jLLTfK2vPndr/78c84fe6fa7633fe1331ba47bda5202722b7904c/standard [32m200[0m 928.159 ms - 5[0m
+2024-05-09 18:36:21 info: [0mGET /users/plans/cus_Q2oW1HioRc0q03 [32m200[0m 839.851 ms - 147[0m
+2024-05-09 18:36:23 info: [0mGET /public/files/albums/postPicture-a0637652-4acf-4b34-a665-743b35da2a4b1a7663827a84b234a9799bb348d8e503a9cf662d55052024.jpeg [33m404[0m 7.370 ms - 260[0m
+2024-05-09 18:36:23 info: [0mGET /public/files/albums/postPicture-71d2b1fd-565e-4397-8020-85f5b0e930feb30151a7663827a84b234a9799bb348d8e503a9c49052024.jpeg [33m404[0m 2.940 ms - 260[0m
+2024-05-09 18:37:17 info: [0mGET /users/cus_Q4jLLTfK2vPndr [32m200[0m 853.250 ms - 310[0m
+2024-05-09 18:37:18 info: [0mGET /albums/random/0/cus_Q4jLLTfK2vPndr [32m201[0m 450.684 ms - -[0m
+2024-05-09 18:37:18 info: [0mGET /albums/all-categories [32m201[0m 829.442 ms - 72[0m
+2024-05-09 18:37:18 info: [0mGET /albums/popular/cus_Q4jLLTfK2vPndr [32m201[0m 851.007 ms - -[0m
+2024-05-09 18:37:18 info: [0mGET /public/files/albums/postPicture-71d2b1fd-565e-4397-8020-85f5b0e930feb30151a7663827a84b234a9799bb348d8e503a9c49052024.jpeg [33m404[0m 3.266 ms - 260[0m
+2024-05-09 18:37:18 info: [0mGET /users/plans/cus_Q4jLLTfK2vPndr [32m200[0m 877.169 ms - 145[0m
+2024-05-09 18:37:18 info: [0mGET /public/files/albums/postPicture-a0637652-4acf-4b34-a665-743b35da2a4b1a7663827a84b234a9799bb348d8e503a9cf662d55052024.jpeg [33m404[0m 3.173 ms - 260[0m
+2024-05-09 18:37:18 info: [0mGET /albums/cus_Q4jLLTfK2vPndr [32m201[0m 944.377 ms - -[0m
+2024-05-09 18:37:37 info: [0mGET /users/plans/cus_Q4jLLTfK2vPndr [32m200[0m 880.597 ms - 145[0m
+2024-05-09 18:37:43 info: [0mPOST /albums/cus_Q4jLLTfK2vPndr [32m201[0m 2226.378 ms - 294[0m
+2024-05-09 18:37:43 info: [0mPOST /albums/upload/6fa7633fe1331ba47bda5202722b7904cd5baf4a [32m201[0m 524.776 ms - 59[0m
+2024-05-09 18:37:47 info: [0mPOST /users/signout/cus_Q4jLLTfK2vPndr [32m200[0m 445.882 ms - 45[0m
+2024-05-09 18:38:23 info: [0mPOST /signup [32m201[0m 1156.719 ms - 473[0m
+2024-05-09 18:38:45 info: [0mGET /users/confirmation/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImN1c19RNGtRMnZTQVlUQWVuVSIsImlhdCI6MTcxNTI3NjMwMywiZXhwIjoxNzE1Mjc2NTgzfQ.vU5k7bB0nSjCvNdOLj9pIw75yzJFSd_Xc_UbFgk9f3s [36m302[0m 666.230 ms - 146[0m
+2024-05-09 18:38:45 info: [0mGET /public/views/success_pages/verifyEmailSuccess.html [36m304[0m 7.851 ms - -[0m
+2024-05-09 18:39:02 error: [GET] /users/cus_Q4kQ2vSAYTAenU >> StatusCode:: 401, Message:: missing token
+2024-05-09 18:39:02 info: [0mGET /users/cus_Q4kQ2vSAYTAenU [33m401[0m 40.249 ms - 27[0m
+2024-05-09 18:39:02 info: [0mPOST /refresh [32m200[0m 4.155 ms - 247[0m
+2024-05-09 18:39:03 info: [0mGET /users/cus_Q4kQ2vSAYTAenU [32m200[0m 838.047 ms - 221[0m
+2024-05-09 18:39:04 info: [0mGET /albums/random/0/cus_Q4kQ2vSAYTAenU [32m201[0m 454.568 ms - -[0m
+2024-05-09 18:39:04 info: [0mGET /public/files/albums/postPicture-71d2b1fd-565e-4397-8020-85f5b0e930feb30151a7663827a84b234a9799bb348d8e503a9c49052024.jpeg [33m404[0m 2.957 ms - 260[0m
+2024-05-09 18:39:04 info: [0mGET /public/files/albums/postPicture-a0637652-4acf-4b34-a665-743b35da2a4b1a7663827a84b234a9799bb348d8e503a9cf662d55052024.jpeg [33m404[0m 3.526 ms - 260[0m
+2024-05-09 18:39:04 info: [0mGET /public/files/albums/postPicture-Devices6fa7633fe1331ba47bda5202722b7904cd5baf4a43052024.jpeg [32m200[0m 3.532 ms - 107707[0m
+2024-05-09 18:39:04 info: [0mGET /albums/all-categories [32m201[0m 875.759 ms - 72[0m
+2024-05-09 18:39:04 info: [0mGET /albums/popular/cus_Q4kQ2vSAYTAenU [32m201[0m 846.468 ms - -[0m
+2024-05-09 18:39:05 info: [0mGET /albums/cus_Q4kQ2vSAYTAenU [32m201[0m 924.367 ms - -[0m
+2024-05-09 18:39:08 info: [0mGET /albums/random/1/cus_Q4kQ2vSAYTAenU [32m201[0m 433.980 ms - 2[0m
+2024-05-09 18:39:10 info: [0mGET /albums/plan/e6fa7633fe1331ba47bda5202722b7904cd5baf4 [32m200[0m 440.701 ms - 64[0m
+2024-05-09 18:39:11 info: [0mGET /users/verify/checkForSale/cus_Q4kQ2vSAYTAenU/e6fa7633fe1331ba47bda5202722b7904cd5baf4/vip [32m200[0m 898.304 ms - 5[0m
+2024-05-09 18:39:11 info: [0mGET /albums/seller/cus_Q4jLLTfK2vPndr [32m201[0m 485.571 ms - 749[0m
+2024-05-09 18:39:13 info: [0mGET /users/plans/cus_Q4jLLTfK2vPndr [32m200[0m 871.564 ms - 145[0m
+2024-05-09 18:39:17 info: [0mPOST /users/subscribe/cus_Q4kQ2vSAYTAenU [32m200[0m 1958.573 ms - -[0m
+2024-05-09 18:39:24 info: [0mPOST /users/signout/cus_Q4kQ2vSAYTAenU [32m200[0m 467.984 ms - 45[0m
+2024-05-09 18:39:45 info: [0mPOST /login [33m403[0m 477.753 ms - 44[0m
+2024-05-09 18:39:55 info: [0mPOST /login [32m200[0m 856.310 ms - 562[0m
+2024-05-09 18:39:56 info: [0mGET /albums/random/0/cus_Q4jLLTfK2vPndr [32m201[0m 447.144 ms - -[0m
+2024-05-09 18:39:56 info: [0mGET /public/files/albums/postPicture-a0637652-4acf-4b34-a665-743b35da2a4b1a7663827a84b234a9799bb348d8e503a9cf662d55052024.jpeg [33m404[0m 12.933 ms - 260[0m
+2024-05-09 18:39:56 info: [0mGET /public/files/albums/postPicture-71d2b1fd-565e-4397-8020-85f5b0e930feb30151a7663827a84b234a9799bb348d8e503a9c49052024.jpeg [33m404[0m 1.539 ms - 260[0m
+2024-05-09 18:39:57 info: [0mGET /albums/popular/cus_Q4jLLTfK2vPndr [32m201[0m 894.771 ms - -[0m
+2024-05-09 18:39:57 info: [0mGET /users/plans/cus_Q4jLLTfK2vPndr [32m200[0m 909.324 ms - 145[0m
+2024-05-09 18:39:57 info: [0mGET /albums/all-categories [32m201[0m 875.670 ms - 72[0m
+2024-05-09 18:39:57 info: [0mGET /albums/cus_Q4jLLTfK2vPndr [32m201[0m 896.204 ms - -[0m
+2024-05-09 18:40:13 info: [0mPUT /sellers/plans [32m201[0m 432.923 ms - 45[0m
+2024-05-09 18:40:28 info: =================================
+2024-05-09 18:40:28 info: ======= ENV: development =======
+2024-05-09 18:40:28 info: 🚀 App listening on the port 8000
+2024-05-09 18:40:28 info: =================================
+2024-05-09 18:40:33 info: [0mPUT /sellers/plans [32m201[0m 578.138 ms - 45[0m
+2024-05-09 18:40:40 info: =================================
+2024-05-09 18:40:40 info: ======= ENV: development =======
+2024-05-09 18:40:40 info: 🚀 App listening on the port 8000
+2024-05-09 18:40:40 info: =================================
+2024-05-09 18:41:05 info: [0mPUT /sellers/plans [32m201[0m 573.896 ms - 45[0m
+2024-05-09 18:42:26 info: =================================
+2024-05-09 18:42:26 info: ======= ENV: development =======
+2024-05-09 18:42:26 info: 🚀 App listening on the port 8000
+2024-05-09 18:42:26 info: =================================
+2024-05-09 18:42:34 info: [0mPUT /sellers/plans [32m201[0m 519.847 ms - 45[0m
+2024-05-09 18:42:41 info: =================================
+2024-05-09 18:42:41 info: ======= ENV: development =======
+2024-05-09 18:42:41 info: 🚀 App listening on the port 8000
+2024-05-09 18:42:41 info: =================================
+2024-05-09 18:45:49 error: [PUT] /sellers/plans >> StatusCode:: 401, Message:: missing token
+2024-05-09 18:45:49 info: [0mPUT /sellers/plans [33m401[0m 55.198 ms - 27[0m
+2024-05-09 18:45:49 info: [0mPOST /refresh [32m200[0m 3.952 ms - 248[0m
+2024-05-09 18:45:50 info: [0mPUT /sellers/plans [32m201[0m 470.150 ms - 45[0m
+2024-05-09 19:55:32 info: =================================
+2024-05-09 19:55:32 info: ======= ENV: development =======
+2024-05-09 19:55:32 info: 🚀 App listening on the port 8000
+2024-05-09 19:55:32 info: =================================
+2024-05-09 19:57:03 info: =================================
+2024-05-09 19:57:03 info: ======= ENV: development =======
+2024-05-09 19:57:03 info: 🚀 App listening on the port 8000
+2024-05-09 19:57:03 info: =================================
+2024-05-09 19:57:18 info: [0mGET /users/cus_Q4jLLTfK2vPndr [32m200[0m 1025.858 ms - 310[0m
+2024-05-09 19:57:19 info: [0mGET /albums/random/0/cus_Q4jLLTfK2vPndr [32m201[0m 575.003 ms - -[0m
+2024-05-09 19:57:20 info: [0mGET /albums/all-categories [32m201[0m 851.561 ms - 72[0m
+2024-05-09 19:57:20 info: [0mGET /users/plans/cus_Q4jLLTfK2vPndr [32m200[0m 882.908 ms - 145[0m
+2024-05-09 19:57:20 info: [0mGET /albums/cus_Q4jLLTfK2vPndr [32m201[0m 978.923 ms - -[0m
+2024-05-09 19:57:20 info: [0mGET /albums/popular/cus_Q4jLLTfK2vPndr [32m201[0m 1014.892 ms - -[0m
+2024-05-09 19:57:21 info: [0mGET /albums/seller/cus_Q4jLLTfK2vPndr [32m201[0m 483.317 ms - 749[0m
+2024-05-09 19:57:21 info: [0mGET /wallet/cus_Q4jLLTfK2vPndr [32m201[0m 863.354 ms - 10[0m
+2024-05-09 19:57:22 info: [0mGET /sellers/payout/cus_Q4jLLTfK2vPndr [32m201[0m 1319.597 ms - 2[0m
+2024-05-09 19:57:30 info: [0mPUT /sellers/plans [32m201[0m 507.032 ms - 45[0m
+2024-05-09 19:57:40 info: =================================
+2024-05-09 19:57:40 info: ======= ENV: development =======
+2024-05-09 19:57:40 info: 🚀 App listening on the port 8000
+2024-05-09 19:57:40 info: =================================
+2024-05-09 19:58:32 info: [0mPUT /sellers/plans [32m201[0m 552.379 ms - 45[0m
+2024-05-09 19:58:56 info: [0mGET /users/cus_Q4jLLTfK2vPndr [32m200[0m 954.915 ms - 310[0m
+2024-05-09 19:58:58 info: [0mGET /albums/random/0/cus_Q4jLLTfK2vPndr [32m201[0m 520.045 ms - -[0m
+2024-05-09 19:58:58 info: [0mGET /albums/all-categories [32m201[0m 859.963 ms - 72[0m
+2024-05-09 19:58:58 info: [0mGET /albums/popular/cus_Q4jLLTfK2vPndr [32m201[0m 949.361 ms - -[0m
+2024-05-09 19:58:58 info: [0mGET /users/plans/cus_Q4jLLTfK2vPndr [32m200[0m 904.908 ms - 147[0m
+2024-05-09 19:58:58 info: [0mGET /albums/cus_Q4jLLTfK2vPndr [32m201[0m 956.865 ms - -[0m
+2024-05-09 19:59:04 info: [0mPOST /users/signout/cus_Q4jLLTfK2vPndr [32m200[0m 515.820 ms - 45[0m
+2024-05-09 19:59:21 info: [0mPOST /login [32m200[0m 935.378 ms - 471[0m
+2024-05-09 19:59:21 info: [0mGET /albums/random/0/cus_Q4kQ2vSAYTAenU [32m201[0m 487.102 ms - -[0m
+2024-05-09 19:59:22 info: [0mGET /public/files/albums/postPicture-71d2b1fd-565e-4397-8020-85f5b0e930feb30151a7663827a84b234a9799bb348d8e503a9c49052024.jpeg [33m404[0m 8.674 ms - 260[0m
+2024-05-09 19:59:22 info: [0mGET /albums/popular/cus_Q4kQ2vSAYTAenU [32m201[0m 925.494 ms - -[0m
+2024-05-09 19:59:22 info: [0mGET /albums/all-categories [32m201[0m 886.027 ms - 72[0m
+2024-05-09 19:59:22 info: [0mGET /public/files/albums/postPicture-a0637652-4acf-4b34-a665-743b35da2a4b1a7663827a84b234a9799bb348d8e503a9cf662d55052024.jpeg [33m404[0m 4.805 ms - 260[0m
+2024-05-09 19:59:22 info: [0mGET /albums/cus_Q4kQ2vSAYTAenU [32m201[0m 935.532 ms - -[0m
+2024-05-09 19:59:24 info: [0mGET /public/files/albums/postPicture-a0637652-4acf-4b34-a665-743b35da2a4b1a7663827a84b234a9799bb348d8e503a9cf662d55052024.jpeg [33m404[0m 4.876 ms - 260[0m
+2024-05-09 19:59:24 info: [0mGET /public/files/albums/postPicture-71d2b1fd-565e-4397-8020-85f5b0e930feb30151a7663827a84b234a9799bb348d8e503a9c49052024.jpeg [33m404[0m 2.937 ms - 260[0m
+2024-05-09 19:59:28 info: [0mGET /public/files/albums/postPicture-71d2b1fd-565e-4397-8020-85f5b0e930feb30151a7663827a84b234a9799bb348d8e503a9c49052024.jpeg [33m404[0m 1.380 ms - 260[0m
+2024-05-09 19:59:28 info: [0mGET /public/files/albums/postPicture-a0637652-4acf-4b34-a665-743b35da2a4b1a7663827a84b234a9799bb348d8e503a9cf662d55052024.jpeg [33m404[0m 0.905 ms - 260[0m
+2024-05-09 19:59:28 info: [0mGET /albums/plan/e6fa7633fe1331ba47bda5202722b7904cd5baf4 [32m200[0m 476.848 ms - 66[0m
+2024-05-09 19:59:30 info: [0mGET /users/verify/checkForSale/cus_Q4kQ2vSAYTAenU/e6fa7633fe1331ba47bda5202722b7904cd5baf4/vip [32m200[0m 963.914 ms - 5[0m
+2024-05-09 19:59:30 info: [0mGET /albums/seller/cus_Q4jLLTfK2vPndr [32m201[0m 477.353 ms - 749[0m
+2024-05-09 19:59:33 info: [0mGET /users/plans/cus_Q4jLLTfK2vPndr [32m200[0m 930.908 ms - 147[0m
+2024-05-09 19:59:36 info: [0mPOST /users/subscribe/cus_Q4kQ2vSAYTAenU [32m200[0m 1958.780 ms - -[0m
+2024-05-09 20:00:23 info: [0mGET /public/files/albums/postPicture-a0637652-4acf-4b34-a665-743b35da2a4b1a7663827a84b234a9799bb348d8e503a9cf662d55052024.jpeg [33m404[0m 7.548 ms - 260[0m
+2024-05-09 20:00:23 info: [0mGET /public/files/albums/postPicture-71d2b1fd-565e-4397-8020-85f5b0e930feb30151a7663827a84b234a9799bb348d8e503a9c49052024.jpeg [33m404[0m 1.585 ms - 260[0m
+2024-05-09 20:00:24 info: [0mGET /public/files/albums/postPicture-71d2b1fd-565e-4397-8020-85f5b0e930feb30151a7663827a84b234a9799bb348d8e503a9c49052024.jpeg [33m404[0m 1.531 ms - 260[0m
+2024-05-09 20:00:24 info: [0mGET /public/files/albums/postPicture-a0637652-4acf-4b34-a665-743b35da2a4b1a7663827a84b234a9799bb348d8e503a9cf662d55052024.jpeg [33m404[0m 0.780 ms - 260[0m
+2024-05-09 20:00:25 info: [0mGET /public/files/albums/postPicture-a0637652-4acf-4b34-a665-743b35da2a4b1a7663827a84b234a9799bb348d8e503a9cf662d55052024.jpeg [33m404[0m 3.404 ms - 260[0m
+2024-05-09 20:00:25 info: [0mGET /public/files/albums/postPicture-71d2b1fd-565e-4397-8020-85f5b0e930feb30151a7663827a84b234a9799bb348d8e503a9c49052024.jpeg [33m404[0m 7.990 ms - 260[0m
+2024-05-09 20:00:28 info: [0mGET /public/files/albums/postPicture-a0637652-4acf-4b34-a665-743b35da2a4b1a7663827a84b234a9799bb348d8e503a9cf662d55052024.jpeg [33m404[0m 1.148 ms - 260[0m
+2024-05-09 20:00:28 info: [0mGET /public/files/albums/postPicture-71d2b1fd-565e-4397-8020-85f5b0e930feb30151a7663827a84b234a9799bb348d8e503a9c49052024.jpeg [33m404[0m 2.142 ms - 260[0m
+2024-05-09 20:00:30 info: [0mGET /public/files/albums/postPicture-71d2b1fd-565e-4397-8020-85f5b0e930feb30151a7663827a84b234a9799bb348d8e503a9c49052024.jpeg [33m404[0m 1.004 ms - 260[0m
+2024-05-09 20:00:30 info: [0mGET /public/files/albums/postPicture-a0637652-4acf-4b34-a665-743b35da2a4b1a7663827a84b234a9799bb348d8e503a9cf662d55052024.jpeg [33m404[0m 1.150 ms - 260[0m
+2024-05-09 20:00:30 info: [0mGET /albums/plan/e6fa7633fe1331ba47bda5202722b7904cd5baf4 [32m200[0m 462.949 ms - 66[0m
+2024-05-09 20:00:31 info: [0mGET /public/files/albums/postPicture-71d2b1fd-565e-4397-8020-85f5b0e930feb30151a7663827a84b234a9799bb348d8e503a9c49052024.jpeg [33m404[0m 4.558 ms - 260[0m
+2024-05-09 20:00:31 info: [0mGET /public/files/albums/postPicture-a0637652-4acf-4b34-a665-743b35da2a4b1a7663827a84b234a9799bb348d8e503a9cf662d55052024.jpeg [33m404[0m 5.275 ms - 260[0m
+2024-05-09 20:00:31 info: [0mGET /users/verify/checkForSale/cus_Q4kQ2vSAYTAenU/e6fa7633fe1331ba47bda5202722b7904cd5baf4/vip [32m200[0m 919.879 ms - 4[0m
+2024-05-09 20:00:32 info: [0mGET /public/files/albums/postPicture-71d2b1fd-565e-4397-8020-85f5b0e930feb30151a7663827a84b234a9799bb348d8e503a9c49052024.jpeg [33m404[0m 3.042 ms - 260[0m
+2024-05-09 20:00:32 info: [0mGET /public/files/albums/postPicture-a0637652-4acf-4b34-a665-743b35da2a4b1a7663827a84b234a9799bb348d8e503a9cf662d55052024.jpeg [33m404[0m 2.941 ms - 260[0m
+2024-05-09 20:00:34 info: [0mGET /users/followed/cus_Q4kQ2vSAYTAenU/Buyer [32m200[0m 462.340 ms - 312[0m
+2024-05-09 20:03:57 info: =================================
+2024-05-09 20:03:57 info: ======= ENV: development =======
+2024-05-09 20:03:57 info: 🚀 App listening on the port 8000
+2024-05-09 20:03:57 info: =================================
+2024-05-09 20:04:02 info: [0mPOST /users/signout/cus_Q4kQ2vSAYTAenU [32m200[0m 581.917 ms - 45[0m
+2024-05-09 20:04:22 info: [0mPOST /login [32m200[0m 968.006 ms - 557[0m
+2024-05-09 20:04:23 info: [0mGET /albums/random/0/cus_Q2oftscI5pBWQl [32m201[0m 504.493 ms - -[0m
+2024-05-09 20:04:23 info: [0mGET /public/files/albums/postPicture-71d2b1fd-565e-4397-8020-85f5b0e930feb30151a7663827a84b234a9799bb348d8e503a9c49052024.jpeg [33m404[0m 8.602 ms - 260[0m
+2024-05-09 20:04:23 info: [0mGET /public/files/albums/postPicture-a0637652-4acf-4b34-a665-743b35da2a4b1a7663827a84b234a9799bb348d8e503a9cf662d55052024.jpeg [33m404[0m 4.255 ms - 260[0m
+2024-05-09 20:04:23 info: [0mGET /albums/all-categories [32m201[0m 839.884 ms - 72[0m
+2024-05-09 20:04:23 info: [0mGET /users/plans/cus_Q2oftscI5pBWQl [32m200[0m 889.373 ms - 151[0m
+2024-05-09 20:04:23 info: [0mGET /albums/popular/cus_Q2oftscI5pBWQl [32m201[0m 954.593 ms - -[0m
+2024-05-09 20:04:23 info: [0mGET /albums/cus_Q2oftscI5pBWQl [32m201[0m 918.666 ms - -[0m
+2024-05-09 20:04:27 info: [0mGET /public/files/albums/postPicture-71d2b1fd-565e-4397-8020-85f5b0e930feb30151a7663827a84b234a9799bb348d8e503a9c49052024.jpeg [33m404[0m 4.863 ms - 260[0m
+2024-05-09 20:04:27 info: [0mGET /public/files/albums/postPicture-a0637652-4acf-4b34-a665-743b35da2a4b1a7663827a84b234a9799bb348d8e503a9cf662d55052024.jpeg [33m404[0m 9.679 ms - 260[0m
+2024-05-09 20:04:33 info: [0mPOST /users/signout/cus_Q2oftscI5pBWQl [32m200[0m 454.179 ms - 45[0m
+2024-05-09 20:04:49 info: [0mPOST /login [32m200[0m 913.221 ms - 486[0m
+2024-05-09 20:04:50 info: [0mGET /albums/random/0/cus_Q4dwKuSE6TC8Hp [32m201[0m 439.467 ms - -[0m
+2024-05-09 20:04:50 info: [0mGET /public/files/albums/postPicture-71d2b1fd-565e-4397-8020-85f5b0e930feb30151a7663827a84b234a9799bb348d8e503a9c49052024.jpeg [33m404[0m 4.029 ms - 260[0m
+2024-05-09 20:04:50 info: [0mGET /public/files/albums/postPicture-a0637652-4acf-4b34-a665-743b35da2a4b1a7663827a84b234a9799bb348d8e503a9cf662d55052024.jpeg [33m404[0m 1.944 ms - 260[0m
+2024-05-09 20:04:51 info: [0mGET /albums/all-categories [32m201[0m 847.142 ms - 72[0m
+2024-05-09 20:04:51 info: [0mGET /albums/cus_Q4dwKuSE6TC8Hp [32m201[0m 902.568 ms - -[0m
+2024-05-09 20:04:51 info: [0mGET /albums/popular/cus_Q4dwKuSE6TC8Hp [32m201[0m 915.234 ms - -[0m
+2024-05-09 20:04:52 info: [0mGET /public/files/albums/postPicture-71d2b1fd-565e-4397-8020-85f5b0e930feb30151a7663827a84b234a9799bb348d8e503a9c49052024.jpeg [33m404[0m 6.419 ms - 260[0m
+2024-05-09 20:04:52 info: [0mGET /public/files/albums/postPicture-a0637652-4acf-4b34-a665-743b35da2a4b1a7663827a84b234a9799bb348d8e503a9cf662d55052024.jpeg [33m404[0m 5.615 ms - 260[0m
+2024-05-09 20:04:52 info: [0mGET /albums/plan/78c84fe6fa7633fe1331ba47bda5202722b7904c [32m200[0m 443.857 ms - 71[0m
+2024-05-09 20:04:53 info: [0mGET /public/files/albums/postPicture-a0637652-4acf-4b34-a665-743b35da2a4b1a7663827a84b234a9799bb348d8e503a9cf662d55052024.jpeg [33m404[0m 1.781 ms - 260[0m
+2024-05-09 20:04:53 info: [0mGET /public/files/albums/postPicture-71d2b1fd-565e-4397-8020-85f5b0e930feb30151a7663827a84b234a9799bb348d8e503a9c49052024.jpeg [33m404[0m 2.427 ms - 260[0m
+2024-05-09 20:04:53 info: [0mGET /users/verify/checkForSale/cus_Q4dwKuSE6TC8Hp/78c84fe6fa7633fe1331ba47bda5202722b7904c/standard [32m200[0m 903.512 ms - 5[0m
+2024-05-09 20:04:54 info: [0mGET /public/files/albums/postPicture-a9a69446-8951-419e-8716-1825fb2dd6f6b30151a7663827a84b234a9799bb348d8e503a9c49052024.jpeg [33m404[0m 2.132 ms - 260[0m
+2024-05-09 20:04:54 info: [0mGET /public/files/albums/postPicture-cdfe08d3-08f0-4226-87aa-3382466a9d45b30151a7663827a84b234a9799bb348d8e503a9c49052024.jpeg [33m404[0m 2.042 ms - 260[0m
+2024-05-09 20:04:54 info: [0mGET /public/files/albums/postPicture-71d2b1fd-565e-4397-8020-85f5b0e930feb30151a7663827a84b234a9799bb348d8e503a9c49052024.jpeg [33m404[0m 7.812 ms - 260[0m
+2024-05-09 20:04:54 info: [0mGET /albums/plan/8b30151a7663827a84b234a9799bb348d8e503a9 [32m200[0m 428.158 ms - 71[0m
+2024-05-09 20:04:54 info: [0mGET /public/files/albums/postPicture-a0637652-4acf-4b34-a665-743b35da2a4b1a7663827a84b234a9799bb348d8e503a9cf662d55052024.jpeg [33m404[0m 2.770 ms - 260[0m
+2024-05-09 20:04:55 info: [0mGET /users/verify/checkForSale/cus_Q4dwKuSE6TC8Hp/8b30151a7663827a84b234a9799bb348d8e503a9/standard [32m200[0m 898.301 ms - 5[0m
+2024-05-09 20:04:55 info: [0mGET /public/files/albums/postPicture-a9a69446-8951-419e-8716-1825fb2dd6f6b30151a7663827a84b234a9799bb348d8e503a9c49052024.jpeg [33m404[0m 2.170 ms - 260[0m
+2024-05-09 20:04:55 info: [0mGET /public/files/albums/postPicture-71d2b1fd-565e-4397-8020-85f5b0e930feb30151a7663827a84b234a9799bb348d8e503a9c49052024.jpeg [33m404[0m 2.120 ms - 260[0m
+2024-05-09 20:04:55 info: [0mGET /albums/seller/cus_Q2oW1HioRc0q03 [32m201[0m 557.486 ms - -[0m
+2024-05-09 20:04:56 info: [0mGET /public/files/albums/postPicture-a0637652-4acf-4b34-a665-743b35da2a4b1a7663827a84b234a9799bb348d8e503a9cf662d55052024.jpeg [33m404[0m 1.905 ms - 260[0m
+2024-05-09 20:04:56 info: [0mGET /public/files/albums/postPicture-71d2b1fd-565e-4397-8020-85f5b0e930feb30151a7663827a84b234a9799bb348d8e503a9c49052024.jpeg [33m404[0m 2.655 ms - 260[0m
+2024-05-09 20:04:57 info: [0mGET /users/plans/cus_Q2oW1HioRc0q03 [32m200[0m 889.244 ms - 147[0m
+2024-05-09 20:05:00 info: [0mGET /users/plans/cus_Q2oW1HioRc0q03 [32m200[0m 839.619 ms - 147[0m
+2024-05-09 20:05:06 info: [0mPOST /users/subscribe/cus_Q4dwKuSE6TC8Hp [32m200[0m 2196.337 ms - -[0m
+2024-05-09 20:05:07 info: [0mGET /public/files/albums/postPicture-71d2b1fd-565e-4397-8020-85f5b0e930feb30151a7663827a84b234a9799bb348d8e503a9c49052024.jpeg [33m404[0m 2.333 ms - 260[0m
+2024-05-09 20:05:07 info: [0mGET /public/files/albums/postPicture-a0637652-4acf-4b34-a665-743b35da2a4b1a7663827a84b234a9799bb348d8e503a9cf662d55052024.jpeg [33m404[0m 2.361 ms - 260[0m
+2024-05-09 20:06:00 info: [0mGET /public/files/albums/postPicture-a0637652-4acf-4b34-a665-743b35da2a4b1a7663827a84b234a9799bb348d8e503a9cf662d55052024.jpeg [33m404[0m 3.378 ms - 260[0m
+2024-05-09 20:06:00 info: [0mGET /public/files/albums/postPicture-71d2b1fd-565e-4397-8020-85f5b0e930feb30151a7663827a84b234a9799bb348d8e503a9c49052024.jpeg [33m404[0m 6.182 ms - 260[0m
+2024-05-09 20:09:25 info: [0mGET /users/plans/cus_Q2oW1HioRc0q03 [32m200[0m 922.799 ms - 147[0m
+2024-05-09 20:09:27 info: [0mPOST /users/subscribe/cus_Q4dwKuSE6TC8Hp [32m200[0m 2087.258 ms - -[0m
+2024-05-09 20:09:28 info: [0mPOST /users/subscribe/cus_Q4dwKuSE6TC8Hp [32m200[0m 2100.002 ms - -[0m
+2024-05-09 20:09:28 info: [0mGET /public/files/albums/postPicture-a0637652-4acf-4b34-a665-743b35da2a4b1a7663827a84b234a9799bb348d8e503a9cf662d55052024.jpeg [33m404[0m 3.869 ms - 260[0m
+2024-05-09 20:09:28 info: [0mGET /public/files/albums/postPicture-71d2b1fd-565e-4397-8020-85f5b0e930feb30151a7663827a84b234a9799bb348d8e503a9c49052024.jpeg [33m404[0m 6.348 ms - 260[0m
+2024-05-09 20:10:19 info: [0mPOST / [33m404[0m 14.145 ms - 140[0m
+2024-05-09 20:10:19 info: [0mPOST / [33m404[0m 4.840 ms - 140[0m
+2024-05-09 20:10:19 info: [0mPOST / [33m404[0m 0.745 ms - 140[0m
+2024-05-09 20:10:19 info: [0mPOST / [33m404[0m 1.187 ms - 140[0m
+2024-05-09 20:10:19 info: [0mPOST / [33m404[0m 4.076 ms - 140[0m
+2024-05-09 20:10:20 info: [0mPOST / [33m404[0m 9.606 ms - 140[0m
+2024-05-09 20:10:20 info: [0mPOST / [33m404[0m 4.240 ms - 140[0m
+2024-05-09 20:10:20 info: [0mPOST / [33m404[0m 3.223 ms - 140[0m
+2024-05-09 20:10:20 info: [0mPOST / [33m404[0m 2.359 ms - 140[0m
+2024-05-09 20:10:20 info: [0mPOST / [33m404[0m 1.381 ms - 140[0m
+2024-05-09 20:10:20 info: [0mPOST / [33m404[0m 4.544 ms - 140[0m
+2024-05-09 20:10:20 info: [0mPOST / [33m404[0m 1.242 ms - 140[0m
+2024-05-09 20:10:21 info: [0mPOST / [33m404[0m 1.647 ms - 140[0m
+2024-05-09 20:10:31 info: [0mGET /public/files/albums/postPicture-a0637652-4acf-4b34-a665-743b35da2a4b1a7663827a84b234a9799bb348d8e503a9cf662d55052024.jpeg [33m404[0m 5.649 ms - 260[0m
+2024-05-09 20:10:31 info: [0mGET /public/files/albums/postPicture-71d2b1fd-565e-4397-8020-85f5b0e930feb30151a7663827a84b234a9799bb348d8e503a9c49052024.jpeg [33m404[0m 0.906 ms - 260[0m
+2024-05-09 20:10:34 info: [0mPOST / [33m404[0m 2.465 ms - 140[0m
+2024-05-09 20:10:34 info: [0mPOST / [33m404[0m 2.425 ms - 140[0m
+2024-05-09 20:10:36 info: [0mPOST / [33m404[0m 4.348 ms - 140[0m
+2024-05-09 20:12:19 info: =================================
+2024-05-09 20:12:19 info: ======= ENV: development =======
+2024-05-09 20:12:19 info: 🚀 App listening on the port 8000
+2024-05-09 20:12:19 info: =================================
+2024-05-09 20:12:23 error: [GET] /users/plans/cus_Q2oW1HioRc0q03 >> StatusCode:: 401, Message:: missing token
+2024-05-09 20:12:23 info: [0mGET /users/plans/cus_Q2oW1HioRc0q03 [33m401[0m 26.301 ms - 27[0m
+2024-05-09 20:12:23 info: [0mPOST /refresh [32m200[0m 14.185 ms - 248[0m
+2024-05-09 20:12:24 info: [0mGET /users/plans/cus_Q2oW1HioRc0q03 [32m200[0m 926.749 ms - 147[0m
+2024-05-09 20:12:26 info: [0mPOST /users/subscribe/cus_Q4dwKuSE6TC8Hp [32m200[0m 2234.198 ms - -[0m
+2024-05-09 20:12:26 info: [0mGET /public/files/albums/postPicture-71d2b1fd-565e-4397-8020-85f5b0e930feb30151a7663827a84b234a9799bb348d8e503a9c49052024.jpeg [33m404[0m 12.462 ms - 260[0m
+2024-05-09 20:12:26 info: [0mGET /public/files/albums/postPicture-a0637652-4acf-4b34-a665-743b35da2a4b1a7663827a84b234a9799bb348d8e503a9cf662d55052024.jpeg [33m404[0m 2.319 ms - 260[0m
+2024-05-09 20:13:20 info: [0mGET /public/files/albums/postPicture-a0637652-4acf-4b34-a665-743b35da2a4b1a7663827a84b234a9799bb348d8e503a9cf662d55052024.jpeg [33m404[0m 7.266 ms - 260[0m
+2024-05-09 20:13:20 info: [0mGET /public/files/albums/postPicture-71d2b1fd-565e-4397-8020-85f5b0e930feb30151a7663827a84b234a9799bb348d8e503a9c49052024.jpeg [33m404[0m 6.556 ms - 260[0m
+2024-05-09 20:15:13 info: [0mGET /public/files/albums/postPicture-a9a69446-8951-419e-8716-1825fb2dd6f6b30151a7663827a84b234a9799bb348d8e503a9c49052024.jpeg [33m404[0m 14.811 ms - 260[0m
+2024-05-09 20:15:13 info: [0mGET /public/files/albums/postPicture-71d2b1fd-565e-4397-8020-85f5b0e930feb30151a7663827a84b234a9799bb348d8e503a9c49052024.jpeg [33m404[0m 15.164 ms - 260[0m
+2024-05-09 20:15:15 info: [0mGET /public/files/albums/postPicture-71d2b1fd-565e-4397-8020-85f5b0e930feb30151a7663827a84b234a9799bb348d8e503a9c49052024.jpeg [33m404[0m 10.382 ms - 260[0m
+2024-05-09 20:15:15 info: [0mGET /public/files/albums/postPicture-a9a69446-8951-419e-8716-1825fb2dd6f6b30151a7663827a84b234a9799bb348d8e503a9c49052024.jpeg [33m404[0m 10.766 ms - 260[0m
+2024-05-09 20:15:15 info: [0mGET /albums/seller/cus_Q2oW1HioRc0q03 [32m201[0m 522.665 ms - -[0m
+2024-05-09 20:15:16 info: [0mGET /public/files/albums/postPicture-71d2b1fd-565e-4397-8020-85f5b0e930feb30151a7663827a84b234a9799bb348d8e503a9c49052024.jpeg [33m404[0m 9.192 ms - 260[0m
+2024-05-09 20:15:16 info: [0mGET /public/files/albums/postPicture-a0637652-4acf-4b34-a665-743b35da2a4b1a7663827a84b234a9799bb348d8e503a9cf662d55052024.jpeg [33m404[0m 1.385 ms - 260[0m
+2024-05-09 20:17:01 info: [0mGET /public/files/albums/postPicture-71d2b1fd-565e-4397-8020-85f5b0e930feb30151a7663827a84b234a9799bb348d8e503a9c49052024.jpeg [33m404[0m 20.922 ms - 260[0m
+2024-05-09 20:17:01 info: [0mGET /public/files/albums/postPicture-a9a69446-8951-419e-8716-1825fb2dd6f6b30151a7663827a84b234a9799bb348d8e503a9c49052024.jpeg [33m404[0m 0.542 ms - 260[0m
+2024-05-09 20:17:05 info: [0mGET /users/plans/cus_Q2oW1HioRc0q03 [32m200[0m 969.902 ms - 147[0m
+2024-05-09 20:17:07 info: [0mPOST /users/subscribe/cus_Q4dwKuSE6TC8Hp [32m200[0m 2110.405 ms - -[0m
+2024-05-09 20:17:08 info: [0mGET /public/files/albums/postPicture-a9a69446-8951-419e-8716-1825fb2dd6f6b30151a7663827a84b234a9799bb348d8e503a9c49052024.jpeg [33m404[0m 6.923 ms - 260[0m
+2024-05-09 20:17:08 info: [0mGET /public/files/albums/postPicture-71d2b1fd-565e-4397-8020-85f5b0e930feb30151a7663827a84b234a9799bb348d8e503a9c49052024.jpeg [33m404[0m 2.185 ms - 260[0m
+2024-05-09 20:17:19 info: =================================
+2024-05-09 20:17:19 info: ======= ENV: development =======
+2024-05-09 20:17:19 info: 🚀 App listening on the port 8000
+2024-05-09 20:17:19 info: =================================
+2024-05-09 20:17:23 info: [0mGET /public/files/albums/postPicture-71d2b1fd-565e-4397-8020-85f5b0e930feb30151a7663827a84b234a9799bb348d8e503a9c49052024.jpeg [33m404[0m 9.034 ms - 260[0m
+2024-05-09 20:17:23 info: [0mGET /public/files/albums/postPicture-a9a69446-8951-419e-8716-1825fb2dd6f6b30151a7663827a84b234a9799bb348d8e503a9c49052024.jpeg [33m404[0m 3.191 ms - 260[0m
+2024-05-09 20:17:27 info: [0mPOST /users/subscribe/cus_Q4dwKuSE6TC8Hp [32m200[0m 2283.315 ms - -[0m
+2024-05-09 20:17:28 info: [0mGET /public/files/albums/postPicture-71d2b1fd-565e-4397-8020-85f5b0e930feb30151a7663827a84b234a9799bb348d8e503a9c49052024.jpeg [33m404[0m 1.675 ms - 260[0m
+2024-05-09 20:17:28 info: [0mGET /public/files/albums/postPicture-a9a69446-8951-419e-8716-1825fb2dd6f6b30151a7663827a84b234a9799bb348d8e503a9c49052024.jpeg [33m404[0m 5.785 ms - 260[0m
+2024-05-09 20:18:17 info: [0mGET /public/files/albums/postPicture-71d2b1fd-565e-4397-8020-85f5b0e930feb30151a7663827a84b234a9799bb348d8e503a9c49052024.jpeg [33m404[0m 5.523 ms - 260[0m
+2024-05-09 20:18:17 info: [0mGET /public/files/albums/postPicture-a9a69446-8951-419e-8716-1825fb2dd6f6b30151a7663827a84b234a9799bb348d8e503a9c49052024.jpeg [33m404[0m 10.375 ms - 260[0m
+2024-05-09 20:33:22 info: [0mGET /users/plans/cus_Q2oW1HioRc0q03 [32m200[0m 1089.794 ms - 147[0m
+2024-05-09 20:33:24 info: [0mPOST /users/subscribe/cus_Q4dwKuSE6TC8Hp [32m200[0m 2267.657 ms - -[0m
+2024-05-09 20:33:25 info: [0mGET /public/files/albums/postPicture-71d2b1fd-565e-4397-8020-85f5b0e930feb30151a7663827a84b234a9799bb348d8e503a9c49052024.jpeg [33m404[0m 7.617 ms - 260[0m
+2024-05-09 20:33:25 info: [0mGET /public/files/albums/postPicture-a9a69446-8951-419e-8716-1825fb2dd6f6b30151a7663827a84b234a9799bb348d8e503a9c49052024.jpeg [33m404[0m 4.574 ms - 260[0m
+2024-05-09 20:35:18 info: [0mGET /public/files/albums/postPicture-71d2b1fd-565e-4397-8020-85f5b0e930feb30151a7663827a84b234a9799bb348d8e503a9c49052024.jpeg [33m404[0m 4.140 ms - 260[0m
+2024-05-09 20:35:18 info: [0mGET /public/files/albums/postPicture-a9a69446-8951-419e-8716-1825fb2dd6f6b30151a7663827a84b234a9799bb348d8e503a9c49052024.jpeg [33m404[0m 5.040 ms - 260[0m
+2024-05-09 20:35:56 info: =================================
+2024-05-09 20:35:56 info: ======= ENV: development =======
+2024-05-09 20:35:56 info: 🚀 App listening on the port 8000
+2024-05-09 20:35:56 info: =================================
+2024-05-09 20:36:09 info: [0mGET /users/plans/cus_Q2oW1HioRc0q03 [32m200[0m 973.493 ms - 147[0m
+2024-05-09 20:36:16 info: [0mPOST /users/subscribe/cus_Q4dwKuSE6TC8Hp [32m200[0m 2200.549 ms - -[0m
+2024-05-09 20:36:16 info: [0mGET /public/files/albums/postPicture-a9a69446-8951-419e-8716-1825fb2dd6f6b30151a7663827a84b234a9799bb348d8e503a9c49052024.jpeg [33m404[0m 9.926 ms - 260[0m
+2024-05-09 20:36:16 info: [0mGET /public/files/albums/postPicture-71d2b1fd-565e-4397-8020-85f5b0e930feb30151a7663827a84b234a9799bb348d8e503a9c49052024.jpeg [33m404[0m 5.136 ms - 260[0m
+2024-05-09 20:38:37 info: [0mGET /public/files/albums/postPicture-71d2b1fd-565e-4397-8020-85f5b0e930feb30151a7663827a84b234a9799bb348d8e503a9c49052024.jpeg [33m404[0m 8.206 ms - 260[0m
+2024-05-09 20:38:37 info: [0mGET /public/files/albums/postPicture-a9a69446-8951-419e-8716-1825fb2dd6f6b30151a7663827a84b234a9799bb348d8e503a9c49052024.jpeg [33m404[0m 9.658 ms - 260[0m
+2024-05-09 20:41:38 info: [0mGET /public/files/albums/postPicture-a0637652-4acf-4b34-a665-743b35da2a4b1a7663827a84b234a9799bb348d8e503a9cf662d55052024.jpeg [33m404[0m 28.704 ms - 260[0m
+2024-05-09 20:41:38 info: [0mGET /public/files/albums/postPicture-71d2b1fd-565e-4397-8020-85f5b0e930feb30151a7663827a84b234a9799bb348d8e503a9c49052024.jpeg [33m404[0m 32.647 ms - 260[0m
+2024-05-09 20:41:38 info: [0mGET /public/files/albums/postPicture-a9a69446-8951-419e-8716-1825fb2dd6f6b30151a7663827a84b234a9799bb348d8e503a9c49052024.jpeg [33m404[0m 30.705 ms - 260[0m

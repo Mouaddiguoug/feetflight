@@ -46,6 +46,7 @@ let UsersRoute = class UsersRoute {
         this.router.put(`${this.path}/:id`, _authmiddleware.default, this.usersController.updateUser);
         this.router.post(`${this.path}/generateOtp/:email`, this.usersController.generateOtp);
         this.router.post(`${this.path}/verifyOtp/:email`, this.usersController.verifyOtp);
+        this.router.post(`${this.path}/contact`, this.usersController.contact);
         this.router.post(`${this.path}/signout/:id`, this.usersController.signOut);
         this.router.get(`${this.path}/verify/checkForSale/:userId/:postId/:plan`, this.usersController.checkForSale);
         this.router.post(`${this.path}/devices/token/:id`, _authmiddleware.default, this.usersController.uploadDeviceToken);

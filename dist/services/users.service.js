@@ -173,6 +173,22 @@ let UserService = class UserService {
             console.log(error);
         }
     }
+    async contact(contactData) {
+        try {
+            const mailOptions = {
+                html: `div><h1>Feetflight</h1><h3>Welcome back</h3><p>A contacted you through contact form </p><p>name: ${contactData.name} </p><p>email: ${contactData.email}</p><p>message: ${contactData.number}</p><p>message: ${contactData.message}</p></div>`,
+                from: process.env.USER_EMAIL,
+                to: process.env.USER_EMAIL,
+                subject: 'contact us form'
+            };
+            _app.transporter.sendMail(mailOptions, (error, data)=>{
+                if (error) console.log(error);
+                if (!error) console.log('sent');
+            });
+        } catch (error) {
+            console.log(error);
+        }
+    }
     async uploadDeviceToken(userId, token) {
         const uploadDeviceTokenSession = (0, _app.initializeDbConnection)().session();
         try {
@@ -359,11 +375,11 @@ let UserService = class UserService {
             const signOutSession = (0, _app.initializeDbConnection)().session();
             try {
                 const signedOutData = await signOutSession.executeWrite((tx)=>{
-                    tx.run('match (d:deviceToken)<-[:logged_in_with]-(u:user {id: $userId}) detach delete dreturn true', {
+                    tx.run('match (d:deviceToken)<-[:logged_in_with]-(u:user {id: $userId}) set d.token="" return true', {
                         userId: userId
                     });
                 });
-                console.log(signedOutData);
+                return true;
             } catch (error) {
                 console.log(error);
             } finally{
@@ -468,11 +484,16 @@ let UserService = class UserService {
         _define_property(this, "getFollowedSellers", async (userId, role)=>{
             const getFollowedSellersession = (0, _app.initializeDbConnection)().session();
             try {
-                const followedSellers = role == _RolesEnums.RolesEnum.BUYER ? await getFollowedSellersession.executeRead((tx)=>tx.run('match (u:user {id: $userId})-[:SUBSCRIBED_TO]->(s:seller) match (seller {id: s.id})<-[:IS_A]-(user:user) return user', {
-                        userId: userId
-                    })) : await getFollowedSellersession.executeRead((tx)=>tx.run('match (sellerUser:user {id: $userId})-[:IS_A]->(seller)<-[:SUBSCRIBED_TO]-(buyerUser:user) return buyerUser', {
-                        userId: userId
-                    }));
+                let followedSellers = {};
+                if (role == _RolesEnums.RolesEnum.BUYER) {
+                    followedSellers = await getFollowedSellersession.executeRead((tx)=>tx.run('match (u:user {id: $userId})-[:SUBSCRIBED_TO]->(s:seller) match (seller {id: s.id})<-[:IS_A]-(user:user) return user', {
+                            userId: userId
+                        }));
+                } else {
+                    followedSellers = await getFollowedSellersession.executeRead((tx)=>tx.run('match (user {id: $userId})-[:IS_A]->(s:seller) match (s)-[:SUBSCRIBED_TO]-(buyerUser:user) return buyerUser', {
+                            userId: userId
+                        }));
+                }
                 return role == _RolesEnums.RolesEnum.BUYER ? followedSellers.records.map((record)=>record.get('user').properties) : followedSellers.records.map((record)=>record.get('buyerUser').properties);
             } catch (error) {
                 console.log(error);

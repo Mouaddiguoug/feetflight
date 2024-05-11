@@ -339,12 +339,11 @@ class UserService {
           return { price: price.data[0].id, quantity: 1 };
         });
 
-      console.log(unlockSentPictureData.chatRoomId);
-
       const session = await stripe.checkout.sessions.create({
         success_url: 'https://example.com/success',
         line_items: [price],
         mode: 'payment',
+        currency: "EUR",
         customer: userId,
         metadata: {
           sellerId: sellerId,

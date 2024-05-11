@@ -171,6 +171,18 @@ let UsersController = class UsersController {
             try {
                 const id = String(req.params.id);
                 const result = await this.userService.signOut(id);
+                res.status(result ? 200 : 400).json({
+                    message: result ? "You have loged out successfully" : "Something went wrong"
+                });
+            } catch (error) {
+                next(error);
+            }
+        });
+        _define_property(this, "contact", async (req, res, next)=>{
+            try {
+                const contactData = req.body;
+                console.log(contactData);
+                await this.userService.contact(contactData);
             } catch (error) {
                 next(error);
             }
