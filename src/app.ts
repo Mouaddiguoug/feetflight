@@ -64,7 +64,6 @@ class App {
               case 'payment':
                 if(event.data.object.metadata.comingFrom != null && event.data.object.metadata.comingFrom.includes("sentPicturePayment")){
                   const db = admin.firestore();
-                  console.log(event.data.object.metadata.messageId);
                   await db.collection("chat_room").doc(event.data.object.metadata.chatRoomId).collection("messages").doc(event.data.object.metadata.messageId).update({isBought: true});
                   
                   await this.walletService.UpdateBalanceForPayment(event.data.object.metadata.sellerId, event.data.object.metadata.amount);
@@ -102,6 +101,7 @@ class App {
                 break;
               case 'subscription':
                 this.userService.createSubscriptioninDb(
+                  event.data.object.subscription,
                   event.data.object.customer,
                   event.data.object.metadata.sellerId,
                   event.data.object.metadata.subscriptionPlanTitle,

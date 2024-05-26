@@ -1,0 +1,25 @@
+{
+    "keep": {
+        "days": false,
+        "amount": 30
+    },
+    "auditLog": "/Users/gk/Documents/projects/feetflight/src/logs/debug/.5f67f9022724166f59e294b24cc18a9c2b0fc59a-audit.json",
+    "files": [
+        {
+            "date": 1716114214753,
+            "name": "/Users/gk/Documents/projects/feetflight/src/logs/debug/2024-05-19.log",
+            "hash": "1c9c0c85d3423c0f75f87d1d2e51284162a349cb68335498d2d0fb542d5a2cdc"
+        },
+        {
+            "date": 1716672141030,
+            "name": "/Users/gk/Documents/projects/feetflight/src/logs/debug/2024-05-25.log",
+            "hash": "c8b5ce3bbcb1d0705bfffebe461b1239cd924536f72b39ff660df3359caff64d"
+        },
+        {
+            "date": 1716721804802,
+            "name": "/Users/gk/Documents/projects/feetflight/src/logs/debug/2024-05-26.log",
+            "hash": "91e08b3123203958ffcbfc70120b5695cbd74b2b3d4113e0f01fafe2210817d8"
+        }
+    ],
+    "hashType": "sha256"
+}

@@ -21,7 +21,7 @@ class UsersRoute implements Routes {
     this.router.post(`${this.path}/buy/:id`, authMiddleware, this.usersController.buyPost);
     this.router.post(`${this.path}/subscribe/:id`, authMiddleware, this.usersController.subscribe);
     this.router.post(`${this.path}/buy/sent/:id`, authMiddleware, this.usersController.unlockSentPicture);
-    this.router.post(`${this.path}/unsubscribe/:id/:sellerId`, authMiddleware, this.usersController.cancelSubscription);
+    this.router.delete(`${this.path}/subscription/:id`, authMiddleware, this.usersController.cancelSubscription);
     this.router.get(`${this.path}/confirmation/:token`, this.usersController.emailConfirming);
     this.router.get(`${this.path}/:email`, authMiddleware, this.usersController.changePassword);
     this.router.get(`${this.path}/plans/:id`,authMiddleware, this.usersController.getSellerPlans);
@@ -32,6 +32,7 @@ class UsersRoute implements Routes {
     this.router.post(`${this.path}/contact`, this.usersController.contact);
     this.router.post(`${this.path}/signout/:id`, this.usersController.signOut);
     this.router.get(`${this.path}/verify/checkForSale/:userId/:postId/:plan`, this.usersController.checkForSale);
+    this.router.get(`${this.path}/verify/checkForSubscription/:id`, this.usersController.checkForSubscribtion);
     this.router.post(`${this.path}/devices/token/:id`, authMiddleware, this.usersController.uploadDeviceToken);
     this.router.post(`${this.path}/desactivate/:id`, this.usersController.desactivateUser);
     this.router.get(`${this.path}/followed/:id/:role`, this.usersController.getFollowedSellers);

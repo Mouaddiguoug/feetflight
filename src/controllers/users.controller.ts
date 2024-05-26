@@ -2,6 +2,7 @@ import { NextFunction, Request, Response } from 'express';
 import { CreateUserDto } from '@dtos/users.dto';
 import { User } from '@interfaces/users.interface';
 import userService from '@services/users.service';
+import { initializeDbConnection, stripe } from '@/app';
 
 class UsersController {
   public userService = new userService();
@@ -191,14 +192,22 @@ class UsersController {
   };
 
   public cancelSubscription = async (req: Request, res: Response, next: NextFunction): Promise<void> => {
-
+    const getSellerIdSession = initializeDbConnection().session();
     try {
       const userId = String(req.params.id);
-      const sellerId = String(req.params.sellerId);
+      const sellerUserId = req.body.data.userId;
 
+      const seller = await getSellerIdSession.executeWrite(tx =>
+        tx.run('match (user {id: $userId})-[:IS_A]-(s:seller) return s', {
+          userId: sellerUserId,
+        }),
+      );
+
+      const sellerId = seller.records.map(record => record.get("s").properties.id)[0];
+      
       const canceledSubscription = await this.userService.cancelSubscription(userId, sellerId);
 
-      res.status(200).json({ canceledSubscription: canceledSubscription });
+      res.status(200).json(canceledSubscription);
     } catch (error) {
       next(error);
     }
@@ -207,11 +216,21 @@ class UsersController {
   public checkForSubscribtion = async (req: Request, res: Response, next: NextFunction): Promise<void> => {
     try {
       const userId = String(req.params.id);
-      const postId = req.body.data.postId;
+      const sellerUserId = req.body.data.userId;
 
-      const isSubscribed = await this.userService.checkForSubscription(userId, postId);
+      const getSellerIdSession = initializeDbConnection().session();
 
-      res.status(200).json({ data: isSubscribed });
+      const seller = await getSellerIdSession.executeWrite(tx =>
+        tx.run('match (user {id: $userId})-[:IS_A]-(s:seller) return s', {
+          userId: sellerUserId,
+        }),
+      );
+
+      const sellerId = seller.records.map(record => record.get("s").properties.id)[0];
+
+      const isSubscribed = await this.userService.checkForSubscription(userId, sellerId);
+
+      res.status(200).json(isSubscribed);
     } catch (error) {
       next(error);
     }

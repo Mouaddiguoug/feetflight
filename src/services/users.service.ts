@@ -298,7 +298,7 @@ class UserService {
 
       const sellerId = seller.records.map(record => record.get("s").properties.id)[0];
 
-      if (await this.checkForSubscription(userId, sellerId, subscriptionData.data.subscriptionPlanTitle)) return { message: 'Already subscribed' };
+      if (await this.checkForSubscription(userId, sellerId)) return { message: 'Already subscribed' };
 
       const session = await stripe.checkout.sessions.create({
         success_url: 'https://example.com/success',
@@ -383,21 +383,22 @@ class UserService {
       signOutSession.close();
     }
   };
-  
 
-  public createSubscriptioninDb = async (userId: string, sellerId: string, subscriptionPlanTitle: string, subscriptionPlanPrice: number) => {
+
+  public createSubscriptioninDb = async (subscriptionId: string, userId: string, sellerId: string, subscriptionPlanTitle: string, subscriptionPlanPrice: number) => {
     const subscribeSession = initializeDbConnection().session();
     try {
-      if (await this.checkForSubscription(userId, sellerId, subscriptionPlanTitle)) return { message: 'Already subscribed' };
+      if (await this.checkForSubscription(userId, sellerId)) return { message: 'Already subscribed' };
 
       await subscribeSession.executeWrite(tx => {
         tx.run(
-          'match (u:user {id: $userId}), (s:seller {id: $sellerId})<-[:IS_A]-(user:user) create (u)-[:SUBSCRIBED_TO {subscriptionPlanTitle: $subscriptionPlanTitle, subscriptionPlanPrice: $subscriptionPlanPrice}]->(s) set user.followers = user.followers + 1 set u.followings = u.followings + 1 return s',
+          'match (u:user {id: $userId}), (s:seller {id: $sellerId})<-[:IS_A]-(user:user) create (u)-[:SUBSCRIBED_TO {id: $subscriptionId, subscriptionPlanTitle: $subscriptionPlanTitle, subscriptionPlanPrice: $subscriptionPlanPrice}]->(s) set user.followers = user.followers + 1 set u.followings = u.followings + 1 return s',
           {
             userId: userId,
             sellerId: sellerId,
             subscriptionPlanTitle: subscriptionPlanTitle,
             subscriptionPlanPrice: subscriptionPlanPrice,
+            subscriptionId: subscriptionId
           },
         );
       });
@@ -409,11 +410,21 @@ class UserService {
     }
   };
 
-  /* public cancelSubscription = async (userId: string, sellerId: string) => {
+  public cancelSubscription = async (userId: string, sellerId: string) => {
 
     const cancelSubscriptionSession = initializeDbConnection().session();
+    const getSubscriptionIdSession = initializeDbConnection().session();
     try {
-      if (!(await this.checkForSubscription(userId, sellerId, ))) return { message: 'no subscription' };
+      if (!(await this.checkForSubscription(userId, sellerId,))) return { message: 'no subscription' };
+
+      const subscription = await getSubscriptionIdSession.executeWrite(tx =>
+        tx.run('match (u:user {id: $userId})-[subscribed:SUBSCRIBED_TO]->(s:seller {id: $sellerId}) return subscribed', {
+          userId: userId,
+          sellerId: sellerId,
+        }),
+      );
+
+      const subscriptionId = subscription.records.map(record => record.get('subscribed').properties.id)[0];
 
       await cancelSubscriptionSession.executeWrite(tx => {
         tx.run('match (u:user {id: $userId})-[sub:SUBSCRIBED_TO]->(s:seller {id: $sellerId}) detach delete sub', {
@@ -421,13 +432,16 @@ class UserService {
           sellerId: sellerId,
         });
       });
+
+      await stripe.subscriptions.cancel(subscriptionId);
+
       return { message: 'subscription was canceled successfuly' };
     } catch (error) {
       console.log(error);
     } finally {
       cancelSubscriptionSession.close();
     }
-  }; */
+  };
 
   public checkForSale = async (userId: string, postId: string) => {
     const checkForExistingRelationship = initializeDbConnection().session();
@@ -465,14 +479,13 @@ class UserService {
     }
   };
 
-  public checkForSubscription = async (userId: string, sellerId: string, plan: string) => {
+  public checkForSubscription = async (userId: string, sellerId: string) => {
     const checkForSubscriptionSession = initializeDbConnection().session();
     try {
       const subscriptionAlreadyExist = await checkForSubscriptionSession.executeWrite(tx =>
-        tx.run('match (u:user {id: $userId})-[subscribed:SUBSCRIBED_TO {subscriptionPlanTitle: $plan}]->(s:seller {id: $sellerId}) return subscribed', {
+        tx.run('match (u:user {id: $userId})-[subscribed:SUBSCRIBED_TO]->(s:seller {id: $sellerId}) return subscribed', {
           userId: userId,
           sellerId: sellerId,
-          plan: plan
         }),
       );
 
@@ -527,7 +540,7 @@ class UserService {
     const getFollowedSellersession = initializeDbConnection().session();
     try {
       let followedSellers: any = {};
-      if(role == RolesEnum.BUYER) {
+      if (role == RolesEnum.BUYER) {
         followedSellers = await getFollowedSellersession.executeRead(tx =>
           tx.run('match (u:user {id: $userId})-[:SUBSCRIBED_TO]->(s:seller) match (seller {id: s.id})<-[:IS_A]-(user:user) return user', {
             userId: userId,
