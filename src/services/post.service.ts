@@ -17,7 +17,7 @@ class postService {
     const popularPostsSessio = initializeDbConnection().session({ database: 'neo4j' });
     try {
       console.log(userId);
-      
+
       const popularPosts = await popularPostsSessio.executeRead(tx =>
         tx.run(
           'match (picture:picture)<-[:HAS_A]-(:collection)<-[:HAS_A]-(post:post)<-[:HAS_A]-(s:seller)-[:IS_A]-(user:user) where user.id <> $userId WITH post, collect(picture) AS pictures, user AS user return post{post, user, pictures} order by post.views DESC limit 20',
@@ -111,11 +111,27 @@ class postService {
     }
   }
 
+  public async deleteAlbum(albumId: string): Promise<any> {
+    const deleteAlbumSession = initializeDbConnection().session();
+    try {
+      await deleteAlbumSession.executeWrite(tx =>
+        tx.run('match (p:post {id: $albumId})-[:HAS_A]->(c:collection)-[:HAS_A]->(pi:picture) detach delete p, c, pi', {
+          albumId: albumId,
+        }),
+      );
+      return { message: "the album was delete successfully" }
+    } catch (error) {
+      console.log(error);
+    } finally {
+      deleteAlbumSession.close();
+    }
+  };
+
   public async getCategories() {
     const recentCategoriesSession = initializeDbConnection().session({ database: 'neo4j' });
     try {
       const categories = await recentCategoriesSession.executeRead(tx => tx.run('match (category:category) return category'));
-      
+
       return categories.records.map(record => record.get('category').properties);
     } catch (error) {
       console.log(error);
@@ -130,7 +146,7 @@ class postService {
       const plan = await getPostPlanSession.executeRead(tx => tx.run('match (plan:plan)<-[IS_OF]-(p:post {id: $albumId}) return plan', {
         albumId: albumId
       }));
-      
+
       return plan.records.map(record => record.get('plan').properties)[0];
     } catch (error) {
       console.log(error);
@@ -244,12 +260,13 @@ class postService {
         return { message: `missing data` };
       const createdCollection = await createPostSession.executeWrite(tx =>
         tx.run(
-          'match (u:user {id: $userId})-[IS_A]-(s:seller)-[:HAS_A]-(plan:plan {id: $planId}) create (s)-[h: HAS_A]->(p:post {id: $postId, description: $description, title: $title, price: $price, createdAt: $createdAt, views: 0, likes: 0, categoryId: $categoryId})-[:HAS_A]->(c:collection {id: $collectionId}) create (p)-[:IS_OF]->(plan) return c, p, u, s',
+          'match (u:user {id: $userId})-[IS_A]-(s:seller)-[:HAS_A]-(plan:plan {id: $planId}) create (s)-[h: HAS_A]->(p:post {id: $postId, description: $description, isWithPreview: $isWithPreview, title: $title, price: $price, createdAt: $createdAt, views: 0, likes: 0, categoryId: $categoryId})-[:HAS_A]->(c:collection {id: $collectionId}) create (p)-[:IS_OF]->(plan) return c, p, u, s',
           {
             userId: userId,
             postId: uid(40),
             createdAt: moment().format('MMMM DD, YYYY'),
             title: postData.data.postTitle,
+            isWithPreview: postData.data.isWithPreview,
             description: postData.data.postDescription,
             price: postData.data.price,
             collectionId: uid(40),
@@ -258,7 +275,7 @@ class postService {
           },
         ),
       );
-      
+
       await this.stripe.products.create({
         id: createdCollection.records.map(record => record.get('p').properties.id)[0],
         name: postData.data.postTitle,
@@ -300,7 +317,7 @@ class postService {
           userId: userId
         }),
       );
-      
+
       const sellerId = data.records.map(record => record.get("seller").properties.id)[0];
       const name = data.records.map(record => record.get("user").properties.name)[0];
       const title = "Like";
@@ -320,7 +337,7 @@ class postService {
     try {
       for (let key in pictureFiles) {
         const filecontent = Buffer.from(pictureFiles[key].buffer, 'binary');
-        
+
         writeFile(path.join(__dirname, "../../public/files/albums", `${pictureFiles[key].fieldname.replace(".", "")}${collectionId}${moment().format("ssMMyyyy")}.${pictureFiles[key].mimetype.split("/")[1]}`), filecontent, async (err) => {
           if (err) return console.log(err);
           await this.createPictures(pictureFiles[key].fieldname, `/public/files/albums/${pictureFiles[key].fieldname.replace(".", "")}${collectionId}${moment().format("ssMMyyyy")}.${pictureFiles[key].mimetype.split("/")[1]}`, collectionId);

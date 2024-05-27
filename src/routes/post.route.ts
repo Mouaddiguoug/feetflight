@@ -23,6 +23,7 @@ class postRoute implements Routes {
     this.router.get(`${this.path}/pictures/:id`, authMiddleware, this.postController.getPostPictures);
     this.router.get(`${this.path}/all-categories`, authMiddleware, this.postController.getCategories);
     this.router.get(`${this.path}/:id`, authMiddleware, this.postController.getAllAlbums);
+    this.router.delete(`${this.path}/:id`, authMiddleware, this.postController.deleteAlbum);
     this.router.get(`${this.path}/plan/:id`, this.postController.getAlbumPlan);
     this.router.post(`${this.path}/:id`, authMiddleware, sellerMiddleware, this.postController.createPost);
     this.router.post(`${this.path}/upload/:id`, multer().any(), fileMiddleware, this.postController.uploadPostPictures);

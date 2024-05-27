@@ -62,6 +62,18 @@ class postController {
     }
   };
 
+  public deleteAlbum = async (req: Request, res: Response, next: NextFunction): Promise<void> => {
+    try {
+      const albumId = String(req.params.id);
+      
+      const deletedAlbum = await this.postService.deleteAlbum(albumId);
+
+      res.status(201).json(deletedAlbum);
+    } catch (error) {
+      next(error);
+    }
+  };
+
   public getSellerAlbum = async (req: Request, res: Response, next: NextFunction): Promise<void> => {
     try {
       const userId = String(req.params.id);

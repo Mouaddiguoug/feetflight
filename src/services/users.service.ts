@@ -633,6 +633,21 @@ class UserService {
     }
   };
 
+  public async deleteAlbum(albumId: string): Promise<void> {
+    const deleteAlbumSession = initializeDbConnection().session();
+    try {
+      await deleteAlbumSession.executeWrite(tx =>
+        tx.run('match (p:post {id: albumId})-[:HAS_A]->(c:collection)-[:HAS_A]->(pi:picture) detach delete p, c, pi', {
+          albumId: albumId,
+        }),
+      );
+    } catch (error) {
+      console.log(error);
+    } finally {
+      deleteAlbumSession.close();
+    }
+  };
+
   public async desactivateUser(userId: number): Promise<User[]> {
     const desactivateUserSession = initializeDbConnection().session();
     try {
