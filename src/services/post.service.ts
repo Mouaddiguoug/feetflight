@@ -51,13 +51,14 @@ class postService {
     try {
       const popularPosts = await subscribedPostsSession.executeRead(tx =>
         tx.run(
-          'match (picture:picture)<-[:HAS_A]-(:collection)<-[:HAS_A]-(post:post)<-[:HAS_A]-(s:seller)-[:IS_A]-(user:user) where user.id <> $userId WITH post, collect(picture) AS pictures, user AS user return post{post, user, pictures} order by post.likes DESC skip toInteger($skip) limit 20',
+          'match (picture:picture)<-[:HAS_A]-(:collection)<-[:HAS_A]-(post:post)<-[:HAS_A]-(s:seller)-[:IS_A]-(user:user), (u:user {id: $userId}) where EXISTS((u)-[:SUBSCRIBED_TO]->(s)) WITH post, collect(picture) AS pictures, user AS user return post{post, user, pictures} order by post.likes DESC skip toInteger($skip) limit 20',
           {
             skip: Number(`${page}0`),
             userId: userId
           }
         ),
       );
+      
 
       return popularPosts.records.map(
         (record: any) =>

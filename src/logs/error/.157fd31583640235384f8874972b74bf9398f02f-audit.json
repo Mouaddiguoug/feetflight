@@ -24,6 +24,11 @@
             "date": 1716810342525,
             "name": "/Users/gk/Documents/projects/feetflight/src/logs/error/2024-05-27.log",
             "hash": "2425eaaa1634cddc6228bf727ed446c5cb5bfa211b4ace1db627b7c564322f95"
+        },
+        {
+            "date": 1716901027661,
+            "name": "/Users/gk/Documents/projects/feetflight/src/logs/error/2024-05-28.log",
+            "hash": "8233ac331699783e1d570d9bc5fefc4f8846dc1062e961e731dd3826b7cee1b1"
         }
     ],
     "hashType": "sha256"
