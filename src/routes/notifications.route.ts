@@ -14,6 +14,7 @@ class NotificationsRoute implements Routes {
 
   private initializeRoutes() {
     this.router.get(`${this.path}/:id`, this.notificationsController.getNotifications);
+    this.router.post(`${this.path}/:id`, this.notificationsController.pushNotification);
   }
 }
 

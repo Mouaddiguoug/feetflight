@@ -50,9 +50,8 @@ class UsersController {
       const checkedFOrSale = await this.userService.checkForSale(userId, postId);
       const checkForSubscription = await this.userService.checkForSubscriptionbyUserId(userId, postId, plan);
 
-      console.log(checkForSubscription);
       res.status(200).json(checkedFOrSale || checkForSubscription);
-    } catch (error) {
+    } catch (error) {4
       next(error);
     }
   };

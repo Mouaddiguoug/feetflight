@@ -60,11 +60,72 @@ class NotificationService {
     }
   }
 
+  public async pushMessageNotification(userId: string, title: string, body: string, avatar: string) {
+    const pushNotificatonsSession = initializeDbConnection().session({ database: 'neo4j' });
+    const getTokensSession = initializeDbConnection().session({ database: 'neo4j' });
+
+    try {
+      
+      const deviceToken = await getTokensSession.executeRead(tx =>
+        tx.run(
+          'match (user:user {id: $userId})-[:logged_in_with]->(deviceToken:deviceToken) return deviceToken',
+          {
+            userId: userId,
+          },
+        ),
+      );
+  
+
+      if(deviceToken.records.length > 0) {
+        console.log(`${process.env.DOMAIN}${avatar}`);
+        
+        const message = {
+          notification: {
+            title: title,
+            body: body
+          },
+          android: avatar ? {
+            notification: {
+              imageUrl: `${process.env.DOMAIN}${avatar}`
+            }
+          } : {},
+          apns: avatar ? {
+            payload: {
+              aps: {
+                'mutable-content': 1
+              }
+            },
+            fcm_options: {
+              image: `${process.env.DOMAIN}${avatar}`
+            }
+          } : {},
+          webpush: avatar ? {
+            headers: {
+              image: `${process.env.DOMAIN}${avatar}`
+            }
+          } : {},
+          token: deviceToken.records.map(record => record.get("deviceToken").properties.token)[0]
+        }
+        
+        getMessaging().send(message).then((res) => {
+          console.log("successfully sent");
+        }).catch((error) => {
+          console.log(error);
+        })
+      }
+    } catch (error) {
+      console.log(error);
+    } finally {
+      pushNotificatonsSession.close();
+    }
+  }
+
   public async pushSellerNotificatons(sellerId: string, title: string, body: string) {
     const pushNotificatonsSession = initializeDbConnection().session({ database: 'neo4j' });
     const getTokensSession = initializeDbConnection().session({ database: 'neo4j' });
 
     try {
+      
       const deviceToken = await getTokensSession.executeRead(tx =>
         tx.run(
           'match (seller {id: $sellerId})<-[:IS_A]-(user:user)-[:logged_in_with]->(deviceToken:deviceToken) return deviceToken',

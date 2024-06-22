@@ -30,7 +30,23 @@ class UserService {
 
       if (result.records.length == 0) throw new HttpException(409, "User doesn't exist");
 
-      return result.records.map(record => record.get('u').properties)[0];
+      return result.records.map(record => {
+        return {
+          "avatar": record.get('u').properties.avatar,
+          "confirmed": record.get('u').properties.confirmed,
+          "verified": record.get('u').properties.verified,
+          "createdAt": record.get('u').properties.createdAt,
+          "desactivated": record.get('u').properties.desactivated,
+          "email": record.get('u').properties.email,
+          "followers": record.get('u').properties.followers,
+          "followings": record.get('u').properties.followings,
+          "id": record.get('u').properties.id,
+          "phone": record.get('u').properties.phone,
+          "name": record.get('u').properties.name,
+          "userName": record.get('u').properties.userName,
+        }
+
+      })[0];
     } catch (error) {
       console.log(error);
     } finally {
@@ -630,21 +646,6 @@ class UserService {
       console.log(error);
     } finally {
       uploadDeviceTokenSession.close();
-    }
-  };
-
-  public async deleteAlbum(albumId: string): Promise<void> {
-    const deleteAlbumSession = initializeDbConnection().session();
-    try {
-      await deleteAlbumSession.executeWrite(tx =>
-        tx.run('match (p:post {id: albumId})-[:HAS_A]->(c:collection)-[:HAS_A]->(pi:picture) detach delete p, c, pi', {
-          albumId: albumId,
-        }),
-      );
-    } catch (error) {
-      console.log(error);
-    } finally {
-      deleteAlbumSession.close();
     }
   };
 

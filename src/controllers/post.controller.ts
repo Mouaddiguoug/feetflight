@@ -21,9 +21,6 @@ class postController {
       const userId = String(req.params.id);
       
       const randomAlbums = await this.postService.getRandomAlbums(page, userId);
-      
-      console.log(randomAlbums);
-      
 
       res.status(201).json( randomAlbums );
     } catch (error) {

@@ -29,7 +29,7 @@ class AuthService {
       switch (userData.data.role) {
         case RolesEnum.SELLER:
           if (!userData.data.phone || userData.data.plans.length == 0) return { message: 'data missing' };
-
+         
           const sellerCustomer = await stripe.customers.create({
             name: userData.data.name,
             email: email,
@@ -98,7 +98,22 @@ class AuthService {
           const sellerToken = this.createToken(process.env.EMAIL_SECRET, createUserSeller.records.map(record => record.get('u').properties.id)[0]);
 
           this.sendVerificationEmail(email, userData.data.userName, sellerToken.token, 'selling');
-          return { tokenData: sellerToken, data: createUserSeller.records.map(record => record.get('u').properties)[0], role: RolesEnum.SELLER };
+          return { tokenData: sellerToken, data: createUserSeller.records.map(record => {
+            return {
+              "avatar": record.get('u').properties.avatar,
+              "confirmed": record.get('u').properties.confirmed,
+              "createdAt": record.get('u').properties.createdAt,
+              "verified": record.get('u').properties.verified,
+              "desactivated": record.get('u').properties.desactivated,
+              "email": record.get('u').properties.email,
+              "followers": record.get('u').properties.followers,
+              "followings": record.get('u').properties.followings,
+              "id": record.get('u').properties.id,
+              "name": record.get('u').properties.name,
+              "phone": record.get('u').properties.phone,
+              "userName": record.get('u').properties.userName,
+            }
+          })[0], role: RolesEnum.SELLER };
           break;
         case RolesEnum.BUYER:
           const buyer = await stripe.customers.create({
@@ -126,7 +141,22 @@ class AuthService {
           const buyerToken = this.createToken(process.env.EMAIL_SECRET, createdUserBuyer.records.map(record => record.get('u').properties.id)[0]);
           this.sendVerificationEmail(email, userData.data.userName, buyerToken.token, 'finding');
 
-          return { tokenData: buyerToken, data: createdUserBuyer.records.map(record => record.get('u').properties)[0], role: RolesEnum.BUYER };
+          return { tokenData: buyerToken, data: createdUserBuyer.records.map(record => {
+            return {
+              "avatar": record.get('u').properties.avatar,
+              "confirmed": record.get('u').properties.confirmed,
+              "createdAt": record.get('u').properties.createdAt,
+              "verified": record.get('u').properties.verified,
+              "desactivated": record.get('u').properties.desactivated,
+              "email": record.get('u').properties.email,
+              "followers": record.get('u').properties.followers,
+              "followings": record.get('u').properties.followings,
+              "id": record.get('u').properties.id,
+              "name": record.get('u').properties.name,
+              "phone": record.get('u').properties.phone,
+              "userName": record.get('u').properties.userName,
+            }
+          })[0], role: RolesEnum.BUYER };
           break;
       }
     } catch (error) {
@@ -172,8 +202,6 @@ class AuthService {
       const role = await checkForRoleSession.executeRead(tx => tx.run("match (user:user {email: $email}), (s:seller) with true as isSeller where exists((user)-[:IS_A]->(s)) return isSeller", {
         email: email
       }));
-
-      console.log(role.records.map(record => record.get('isSeller')));
 
       const tokenData = this.createToken(process.env.EMAIL_SECRET, user.records.map(record => record.get('u').properties.id)[0])
 
@@ -232,6 +260,7 @@ class AuthService {
 
     try {
       const email = userData.data.email;
+      console.log(userData.data.deviceToken);
 
       const findUser = await loginSession.executeRead(tx => tx.run('match (u:user {email: $email}) return u', { email: email }));
       if (findUser.records.length == 0) return { message: `password or email is incorrect` };
@@ -256,7 +285,22 @@ class AuthService {
         tx.run('match (u:user {id: $id})-[:logged_in_with]->(d:deviceToken) set d.token = $token', { id: userId, token: deviceToken }),
       );
 
-      return { tokenData, data: findUser.records.map(record => record.get('u').properties)[0], role: role.records.length == 0 ? 'Buyer' : 'Seller' };
+      return { tokenData, data: findUser.records.map(record => {
+        return {
+          "avatar": record.get('u').properties.avatar,
+          "confirmed": record.get('u').properties.confirmed,
+          "createdAt": record.get('u').properties.createdAt,
+          "verified": record.get('u').properties.verified,
+          "desactivated": record.get('u').properties.desactivated,
+          "email": record.get('u').properties.email,
+          "followers": record.get('u').properties.followers,
+          "followings": record.get('u').properties.followings,
+          "id": record.get('u').properties.id,
+          "name": record.get('u').properties.name,
+          "phone": record.get('u').properties.phone,
+          "userName": record.get('u').properties.userName,
+        }
+      })[0], role: role.records.length == 0 ? 'Buyer' : 'Seller' };
     } catch (error) {
       console.log(error);
     } finally {

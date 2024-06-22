@@ -1,0 +1,4 @@
+2024-06-04 15:48:25 error: [GET] /users/cus_Q2oW1HioRc0q03 >> StatusCode:: 401, Message:: missing token
+2024-06-04 15:49:52 error: [GET] /users/cus_Q4dwKuSE6TC8Hp >> StatusCode:: 401, Message:: missing token
+2024-06-04 16:32:27 error: [GET] /users/cus_Q2oW1HioRc0q03 >> StatusCode:: 401, Message:: missing token
+2024-06-04 18:25:44 error: [GET] /users/cus_Q2oW1HioRc0q03 >> StatusCode:: 401, Message:: missing token
