@@ -1,6 +1,0 @@
-2024-01-15 12:50:26 info: [0mGET /users/confirmation/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE3MDUzMTkzOTIsImV4cCI6MTcwNTMxOTY3Mn0.FmNFtm3xLOlP4Nalqrvj3DKqHUZ6KAv-1rhaerCWrrs [36m302[0m 1544.231 ms - 46[0m
-2024-01-15 12:50:26 info: [0mGET / [36m304[0m 7.194 ms - -[0m
-2024-01-15 12:50:27 info: [0mGET /favicon.ico [33m404[0m 11.133 ms - 150[0m
-2024-01-15 12:59:12 info: [0mGET /users/confirmation/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE3MDUzMTk5MjYsImV4cCI6MTcwNTMyMDIwNn0.VbePBdhTgz0wmF2ajngk8oPpfyMq_mmFmUOSfU8Jr_Y [36m302[0m 969.280 ms - 46[0m
-2024-01-15 12:59:12 info: [0mGET / [36m304[0m 1.364 ms - -[0m
-2024-01-15 12:59:13 info: [0mGET /favicon.ico [33m404[0m 3.626 ms - 150[0m

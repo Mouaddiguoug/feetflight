@@ -1,8 +1,0 @@
-2024-03-28 08:16:14 error: [GET] /users/cus_PhpfmqpQ8zhgc5 >> StatusCode:: 401, Message:: missing token
-2024-03-28 08:16:14 info: [0mGET /users/cus_PhpfmqpQ8zhgc5 [33m401[0m 517.153 ms - 27[0m
-2024-03-28 08:16:23 info: [0mPOST /refresh [32m200[0m 268.541 ms - 248[0m
-2024-03-28 08:16:27 info: [0mGET /users/cus_PhpfmqpQ8zhgc5 [32m200[0m 1839.023 ms - 289[0m
-2024-03-28 08:16:37 info: [0mGET /albums/random/0/cus_PhpfmqpQ8zhgc5 [32m201[0m 478.210 ms - -[0m
-2024-03-28 08:16:38 info: [0mGET /albums/popular/cus_PhpfmqpQ8zhgc5 [32m201[0m 921.730 ms - -[0m
-2024-03-28 08:16:38 info: [0mGET /albums/all-categories [32m201[0m 898.233 ms - 119[0m
-2024-03-28 08:16:38 info: [0mGET /albums/cus_PhpfmqpQ8zhgc5 [32m201[0m 905.669 ms - -[0m

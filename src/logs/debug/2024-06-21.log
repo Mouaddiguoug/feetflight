@@ -1,7 +1,0 @@
-2024-06-21 18:40:14 info: [0mGET /users/cus_Q2oW1HioRc0q03 [32m200[0m 2143.673 ms - 299[0m
-2024-06-21 18:40:17 info: [0mGET /public/files/avatars/avatarcus_Q2oW1HioRc0q03.jpeg [32m200[0m 253.774 ms - 118237[0m
-2024-06-21 18:40:18 info: [0mGET /albums/random/0/cus_Q2oW1HioRc0q03 [32m201[0m 655.633 ms - 2[0m
-2024-06-21 18:40:18 info: [0mGET /albums/popular/cus_Q2oW1HioRc0q03 [32m201[0m 1238.072 ms - 19[0m
-2024-06-21 18:40:18 info: [0mGET /albums/cus_Q2oW1HioRc0q03 [32m201[0m 1121.895 ms - -[0m
-2024-06-21 18:40:18 info: [0mGET /albums/all-categories [32m201[0m 1110.527 ms - 72[0m
-2024-06-21 18:40:18 info: [0mGET /users/plans/cus_Q2oW1HioRc0q03 [32m200[0m 1154.210 ms - 149[0m

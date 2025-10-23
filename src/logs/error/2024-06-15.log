@@ -1,5 +1,0 @@
-2024-06-15 13:37:41 error: [GET] /wallet/cus_Q2oW1HioRc0q03 >> StatusCode:: 401, Message:: missing token
-2024-06-15 13:37:41 error: [GET] /sellers/payout/cus_Q2oW1HioRc0q03 >> StatusCode:: 401, Message:: missing token
-2024-06-15 13:37:52 error: [GET] /wallet/cus_Q2oW1HioRc0q03 >> StatusCode:: 401, Message:: missing token
-2024-06-15 13:37:52 error: [GET] /sellers/payout/cus_Q2oW1HioRc0q03 >> StatusCode:: 401, Message:: missing token
-2024-06-15 17:57:56 error: [GET] /users/cus_Q4kQ2vSAYTAenU >> StatusCode:: 401, Message:: missing token

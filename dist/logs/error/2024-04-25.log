@@ -1,5 +1,0 @@
-2024-04-25 19:05:24 error: [DELETE] /sellers/payout/73efe84c3a >> StatusCode:: 400, Message:: this user is not a seller
-2024-04-25 19:05:29 error: [DELETE] /sellers/payout/73efe84c3a >> StatusCode:: 400, Message:: this user is not a seller
-2024-04-25 19:08:45 error: [POST] /sellers/payout/173efe84c3 >> StatusCode:: 400, Message:: this user is not a seller
-2024-04-25 21:14:42 error: [GET] /wallet/cus_PvTUMZ8OOvcw4N >> StatusCode:: 401, Message:: missing token
-2024-04-25 21:14:42 error: [GET] /sellers/payout/cus_PvTUMZ8OOvcw4N >> StatusCode:: 401, Message:: missing token

@@ -1,3 +1,0 @@
-2024-01-13 14:34:43 error: [GET] /users/e1d640e916c8628de70bf8ec0bd97461577cc85a >> StatusCode:: 401, Message:: missing token
-2024-01-13 14:36:42 error: [GET] /users/e1d640e916c8628de70bf8ec0bd97461577cc85a >> StatusCode:: 401, Message:: missing token
-2024-01-13 14:43:54 error: [GET] /users/cus_P1bQWEqSZnbITu >> StatusCode:: 401, Message:: missing token
