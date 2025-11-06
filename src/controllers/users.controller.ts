@@ -4,6 +4,32 @@ import { User } from '@interfaces/users.interface';
 import userService from '@services/users.service';
 import { initializeDbConnection, stripe } from '@/app';
 
+/**
+ * @deprecated This Express controller is deprecated and will be removed in a future version.
+ * Controller logic has been migrated directly into Elysia route handlers in `src/routes/users.route.ts`.
+ *
+ * Migration:
+ * - Express pattern: Route → Controller → Service
+ * - Elysia pattern: Route (with inline handler) → Service
+ *
+ * Benefits of new pattern:
+ * - Eliminates unnecessary controller layer
+ * - Direct access to Elysia context (auth, neo4j, log plugins)
+ * - Type-safe request/response handling with TypeBox schemas
+ * - Automatic validation and error handling
+ * - Better performance (fewer function calls)
+ * - Modern email delivery with Resend + React Email (replaces nodemailer)
+ * - Proper file upload handling with Elysia's native multipart parsing
+ * - Fixed session leaks in Neo4j operations
+ *
+ * The controller's responsibilities are now handled by:
+ * 1. TypeBox schemas for validation (replaces manual checks)
+ * 2. Route handlers for request/response logic (replaces controller methods)
+ * 3. Error plugin for error handling (replaces try-catch with next(error))
+ * 4. Service layer for business logic (refactored to be context-free with dependency injection)
+ * 5. Resend + React Email for email delivery (replaces nodemailer)
+ * 6. Elysia's native file handling (replaces multer)
+ */
 class UsersController {
   public userService = new userService();
 
@@ -34,7 +60,6 @@ class UsersController {
       const category = req.body.category;
 
       const generatedPictures = await this.userService.generateAiPictures(color, category);
-      
 
       res.status(200).json(generatedPictures);
     } catch (error) {
@@ -51,7 +76,8 @@ class UsersController {
       const checkForSubscription = await this.userService.checkForSubscriptionbyUserId(userId, postId, plan);
 
       res.status(200).json(checkedFOrSale || checkForSubscription);
-    } catch (error) {4
+    } catch (error) {
+      4;
       next(error);
     }
   };
@@ -72,7 +98,6 @@ class UsersController {
       const userId = String(req.params.id);
       const role = String(req.params.role);
       const followedSellers = await this.userService.getFollowedSellers(userId, role);
-      
 
       res.status(200).json(followedSellers);
     } catch (error) {
@@ -97,7 +122,7 @@ class UsersController {
       const token = String(req.params.token);
       const confirmed = await this.userService.emailConfirming(token);
 
-      res.status(201).redirect("/public/views/success_pages/verifyEmailSuccess.html");
+      res.status(201).redirect('/public/views/success_pages/verifyEmailSuccess.html');
     } catch (error) {
       next(error);
     }
@@ -161,7 +186,7 @@ class UsersController {
 
       const result: any = await this.userService.verifyOtp(otpSettings, email);
 
-      res.status(result.message == "success" ? 200 : 400).json(result);
+      res.status(result.message == 'success' ? 200 : 400).json(result);
     } catch (error) {
       next(error);
     }
@@ -173,7 +198,7 @@ class UsersController {
 
       const result = await this.userService.signOut(id);
 
-      res.status(result ? 200 : 400).json({message: result ? "You have loged out successfully" : "Something went wrong"})
+      res.status(result ? 200 : 400).json({ message: result ? 'You have loged out successfully' : 'Something went wrong' });
     } catch (error) {
       next(error);
     }
@@ -183,7 +208,7 @@ class UsersController {
     try {
       const contactData = req.body;
       console.log(contactData);
-      
+
       await this.userService.contact(contactData);
     } catch (error) {
       next(error);
@@ -202,8 +227,8 @@ class UsersController {
         }),
       );
 
-      const sellerId = seller.records.map(record => record.get("s").properties.id)[0];
-      
+      const sellerId = seller.records.map(record => record.get('s').properties.id)[0];
+
       const canceledSubscription = await this.userService.cancelSubscription(userId, sellerId);
 
       res.status(200).json(canceledSubscription);
@@ -225,7 +250,7 @@ class UsersController {
         }),
       );
 
-      const sellerId = seller.records.map(record => record.get("s").properties.id)[0];
+      const sellerId = seller.records.map(record => record.get('s').properties.id)[0];
 
       const isSubscribed = await this.userService.checkForSubscription(userId, sellerId);
 
@@ -279,7 +304,7 @@ class UsersController {
 
       await this.userService.uploadAvatar(avatarData, userId);
 
-      res.status(201).json({ messazge: "avatar has been uploaded successfully" });
+      res.status(201).json({ messazge: 'avatar has been uploaded successfully' });
     } catch (error) {
       next(error);
     }

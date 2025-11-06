@@ -1,5 +1,9 @@
 {
-  "*.ts": [
-    "npm run lint"
+  "*.{ts,tsx}": [
+    "bun run lint:fix",
+    "bun run format"
+  ],
+  "*.{json,md}": [
+    "bun run format"
   ]
 }

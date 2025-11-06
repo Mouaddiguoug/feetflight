@@ -32,7 +32,7 @@ class sellerController {
   public getFollowersCount = async (req: Request, res: Response, next: NextFunction): Promise<void> => {
     try {
       const sellerId = String(req.params.id);
-      
+
       const followersCount = await this.sellerService.getFollowersCount(sellerId);
 
       res.status(201).json({ followers: followersCount });
@@ -45,10 +45,12 @@ class sellerController {
     try {
       const userId = String(req.params.id);
       const payoutAccountId = String(req.params.payoutAccountId);
-      
+
       const requestedWithdraw = await this.sellerService.requestWithdraw(userId, payoutAccountId);
 
-      res.status(requestedWithdraw ? 201 : 400).json({message: requestedWithdraw ? "Your withdraw request is being account has been added successfully!" : "Something went wrong!"});
+      res
+        .status(requestedWithdraw ? 201 : 400)
+        .json({ message: requestedWithdraw ? 'Your withdraw request is being account has been added successfully!' : 'Something went wrong!' });
     } catch (error) {
       next(error);
     }
@@ -58,10 +60,12 @@ class sellerController {
     try {
       const userId = String(req.params.id);
       const bankAccountData = req.body;
-      
+
       const payoutAccount = await this.sellerService.addPayoutAccount(userId, bankAccountData);
 
-      res.status(payoutAccount ? 201 : 400).json({message: payoutAccount ? "Your payout account has been added successfully!" : "Something went wrong!"});
+      res
+        .status(payoutAccount ? 201 : 400)
+        .json({ message: payoutAccount ? 'Your payout account has been added successfully!' : 'Something went wrong!' });
     } catch (error) {
       next(error);
     }
@@ -70,10 +74,10 @@ class sellerController {
   public deletePayoutAccount = async (req: Request, res: Response, next: NextFunction): Promise<void> => {
     try {
       const id = String(req.params.payoutAccountId);
-      
+
       await this.sellerService.deletePayoutAccount(id);
 
-      res.status(201).json({message: "Your payout account has been deleted successfully!"});
+      res.status(201).json({ message: 'Your payout account has been deleted successfully!' });
     } catch (error) {
       next(error);
     }
@@ -82,7 +86,7 @@ class sellerController {
   public getPayoutAccounts = async (req: Request, res: Response, next: NextFunction): Promise<void> => {
     try {
       const userId = String(req.params.id);
-      
+
       const payoutAccount = await this.sellerService.getPayoutAccounts(userId);
 
       res.status(201).json(payoutAccount);
@@ -94,7 +98,7 @@ class sellerController {
   public updatePlans = async (req: Request, res: Response, next: NextFunction): Promise<void> => {
     try {
       const plans = req.body.data;
-      
+
       const result = await this.sellerService.changePlans(plans);
 
       res.status(201).json(result);
@@ -131,12 +135,12 @@ class sellerController {
   public uploadIdentityCard = async (req: Request, res: Response, next: NextFunction): Promise<void> => {
     try {
       const userId = String(req.params.id);
-      
+
       const identityCardData = req.files;
-      
+
       await this.sellerService.uploadIdentityCard(identityCardData, userId);
 
-      res.status(201).json({ message: "identity card haq been uploaded successfully", status: 200 });
+      res.status(201).json({ message: 'identity card haq been uploaded successfully', status: 200 });
     } catch (error) {
       next(error);
     }

@@ -19,10 +19,10 @@ class postController {
     try {
       const page = Number(req.params.page);
       const userId = String(req.params.id);
-      
+
       const randomAlbums = await this.postService.getRandomAlbums(page, userId);
 
-      res.status(201).json( randomAlbums );
+      res.status(201).json(randomAlbums);
     } catch (error) {
       next(error);
     }
@@ -37,7 +37,7 @@ class postController {
     } catch (error) {
       next(error);
     }
-  }
+  };
 
   public getPostPictures = async (req: Request, res: Response, next: NextFunction): Promise<void> => {
     try {
@@ -54,7 +54,6 @@ class postController {
     try {
       const userId = String(req.params.userId);
       const allAlbums = await this.postService.getAllAlbums(userId);
-      
 
       res.status(201).json({ allAlbums });
     } catch (error) {
@@ -65,7 +64,7 @@ class postController {
   public deleteAlbum = async (req: Request, res: Response, next: NextFunction): Promise<void> => {
     try {
       const albumId = String(req.params.id);
-      
+
       const deletedAlbum = await this.postService.deleteAlbum(albumId);
 
       res.status(201).json(deletedAlbum);
@@ -78,9 +77,9 @@ class postController {
     try {
       const userId = String(req.params.id);
       console.log(userId);
-      
+
       const sellerAlbums = await this.postService.getSellerAlbums(userId);
-      
+
       res.status(201).json(sellerAlbums);
     } catch (error) {
       next(error);
@@ -92,7 +91,6 @@ class postController {
       const categories = await this.postService.getCategories();
 
       console.log(categories);
-      
 
       res.status(201).json({ categories });
     } catch (error) {
@@ -117,7 +115,7 @@ class postController {
       const userId = req.body.userId;
       await this.postService.likePost(albumId, userId);
 
-      res.status(201).json({ message: "post liked successfully" });
+      res.status(201).json({ message: 'post liked successfully' });
     } catch (error) {
       next(error);
     }
@@ -126,7 +124,7 @@ class postController {
   public getAlbumPlan = async (req: Request, res: Response, next: NextFunction): Promise<void> => {
     try {
       const albumId = String(req.params.id);
-      let plan = await this.postService.getAlbumPlan(albumId);
+      const plan = await this.postService.getAlbumPlan(albumId);
 
       res.status(200).json(plan);
     } catch (error) {
@@ -145,7 +143,6 @@ class postController {
       next(error);
     }
   };
-  
 
   public uploadPostPictures = async (req: Request, res: Response, next: NextFunction): Promise<void> => {
     try {
@@ -153,7 +150,7 @@ class postController {
       const collectionId = String(req.params.id);
       await this.postService.uploadPostPictures(pictureFiles, collectionId);
 
-      res.status(201).json({ message: "post pictures have been uploaded successfully" });
+      res.status(201).json({ message: 'post pictures have been uploaded successfully' });
     } catch (error) {
       next(error);
     }

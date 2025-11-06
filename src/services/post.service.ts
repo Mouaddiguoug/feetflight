@@ -1,7 +1,7 @@
 import { initializeDbConnection } from '@/app';
 import { uid } from 'uid';
 import aws from 'aws-sdk';
-import path from "path";
+import path from 'path';
 import moment from 'moment';
 import { writeFile } from 'node:fs';
 import { Buffer } from 'node:buffer';
@@ -22,8 +22,8 @@ class postService {
         tx.run(
           'match (picture:picture)<-[:HAS_A]-(:collection)<-[:HAS_A]-(post:post)<-[:HAS_A]-(s:seller)-[:IS_A]-(user:user) where user.id <> $userId WITH post, collect(picture) AS pictures, user AS user return post{post, user, pictures} order by post.views DESC limit 20',
           {
-            userId: userId
-          }
+            userId: userId,
+          },
         ),
       );
 
@@ -54,11 +54,10 @@ class postService {
           'match (picture:picture)<-[:HAS_A]-(:collection)<-[:HAS_A]-(post:post)<-[:HAS_A]-(s:seller)-[:IS_A]-(user:user), (u:user {id: $userId}) where EXISTS((u)-[:SUBSCRIBED_TO]->(s)) WITH post, collect(picture) AS pictures, user AS user return post{post, user, pictures} order by post.likes DESC skip toInteger($skip) limit 20',
           {
             skip: Number(`${page}0`),
-            userId: userId
-          }
+            userId: userId,
+          },
         ),
       );
-      
 
       return popularPosts.records.map(
         (record: any) =>
@@ -97,7 +96,7 @@ class postService {
             return {
               albumData: field.post.properties,
               user: field.user.properties,
-              pictres: await this.getPostPictures(field.post.properties.id)
+              pictres: await this.getPostPictures(field.post.properties.id),
             };
           })[0],
       );
@@ -120,13 +119,13 @@ class postService {
           albumId: albumId,
         }),
       );
-      return { message: "the album was delete successfully" }
+      return { message: 'the album was delete successfully' };
     } catch (error) {
       console.log(error);
     } finally {
       deleteAlbumSession.close();
     }
-  };
+  }
 
   public async getCategories() {
     const recentCategoriesSession = initializeDbConnection().session({ database: 'neo4j' });
@@ -144,9 +143,11 @@ class postService {
   public async getAlbumPlan(albumId: String) {
     const getPostPlanSession = initializeDbConnection().session({ database: 'neo4j' });
     try {
-      const plan = await getPostPlanSession.executeRead(tx => tx.run('match (plan:plan)<-[IS_OF]-(p:post {id: $albumId}) return plan', {
-        albumId: albumId
-      }));
+      const plan = await getPostPlanSession.executeRead(tx =>
+        tx.run('match (plan:plan)<-[IS_OF]-(p:post {id: $albumId}) return plan', {
+          albumId: albumId,
+        }),
+      );
 
       return plan.records.map(record => record.get('plan').properties)[0];
     } catch (error) {
@@ -163,8 +164,8 @@ class postService {
         tx.run(
           'match (picture:picture)<-[:HAS_A]-(:collection)<-[:HAS_A]-(post:post)<-[:HAS_A]-(s:seller)-[:IS_A]-(user:user) where user.id <> $userId WITH post, collect(picture) AS pictures, user AS user return post{post, user, pictures} order by post.views DESC',
           {
-            userId: userId
-          }
+            userId: userId,
+          },
         ),
       );
 
@@ -194,8 +195,8 @@ class postService {
         tx.run(
           'match (picture:picture)<-[:HAS_A]-(:collection)<-[:HAS_A]-(post:post)<-[:HAS_A]-(s:seller)-[:IS_A]-(user:user) where user.id = $userId WITH post, collect(picture) AS pictures, user as user return post{post, user, pictures} order by post.views DESC',
           {
-            userId: userId
-          }
+            userId: userId,
+          },
         ),
       );
 
@@ -257,8 +258,7 @@ class postService {
     try {
       const findUser = await createPostSession.executeRead(tx => tx.run('match (u:user {id: $userId}) return u', { userId: userId }));
       if (findUser.records.length == 0) return { message: `This user doesn't exist` };
-      if (!postData.data.postTitle || !postData.data.postDescription || !postData.data.price)
-        return { message: `missing data` };
+      if (!postData.data.postTitle || !postData.data.postDescription || !postData.data.price) return { message: `missing data` };
       const createdCollection = await createPostSession.executeWrite(tx =>
         tx.run(
           'match (u:user {id: $userId})-[IS_A]-(s:seller)-[:HAS_A]-(plan:plan {id: $planId}) create (s)-[h: HAS_A]->(p:post {id: $postId, description: $description, isWithPreview: $isWithPreview, title: $title, price: $price, createdAt: $createdAt, views: 0, likes: 0, categoryId: $categoryId})-[:HAS_A]->(c:collection {id: $collectionId}) create (p)-[:IS_OF]->(plan) return c, p, u, s',
@@ -313,15 +313,18 @@ class postService {
     const likePostSession = initializeDbConnection().session({ database: 'neo4j' });
     try {
       const data = await likePostSession.executeWrite(tx =>
-        tx.run('match (p:post {id: $postId})<-[:HAS_A]-(seller:seller), (user:user {id: $userId}) create (user)-[:liked]->(p) set p.likes = p.likes + 1 return seller, user', {
-          postId: albumId,
-          userId: userId
-        }),
+        tx.run(
+          'match (p:post {id: $postId})<-[:HAS_A]-(seller:seller), (user:user {id: $userId}) create (user)-[:liked]->(p) set p.likes = p.likes + 1 return seller, user',
+          {
+            postId: albumId,
+            userId: userId,
+          },
+        ),
       );
 
-      const sellerId = data.records.map(record => record.get("seller").properties.id)[0];
-      const name = data.records.map(record => record.get("user").properties.name)[0];
-      const title = "Like";
+      const sellerId = data.records.map(record => record.get('seller').properties.id)[0];
+      const name = data.records.map(record => record.get('user').properties.name)[0];
+      const title = 'Like';
       const body = `${name} just liked your post`;
 
       this.notificationsService.pushSellerNotificatons(sellerId, title, body);
@@ -336,13 +339,29 @@ class postService {
     const createPicturesSession = initializeDbConnection().session({ database: 'neo4j' });
 
     try {
-      for (let key in pictureFiles) {
+      for (const key in pictureFiles) {
         const filecontent = Buffer.from(pictureFiles[key].buffer, 'binary');
 
-        writeFile(path.join(__dirname, "../../public/files/albums", `${pictureFiles[key].fieldname.replace(".", "")}${collectionId}${moment().format("ssMMyyyy")}.${pictureFiles[key].mimetype.split("/")[1]}`), filecontent, async (err) => {
-          if (err) return console.log(err);
-          await this.createPictures(pictureFiles[key].fieldname, `/public/files/albums/${pictureFiles[key].fieldname.replace(".", "")}${collectionId}${moment().format("ssMMyyyy")}.${pictureFiles[key].mimetype.split("/")[1]}`, collectionId);
-        });
+        writeFile(
+          path.join(
+            __dirname,
+            '../../public/files/albums',
+            `${pictureFiles[key].fieldname.replace('.', '')}${collectionId}${moment().format('ssMMyyyy')}.${
+              pictureFiles[key].mimetype.split('/')[1]
+            }`,
+          ),
+          filecontent,
+          async err => {
+            if (err) return console.log(err);
+            await this.createPictures(
+              pictureFiles[key].fieldname,
+              `/public/files/albums/${pictureFiles[key].fieldname.replace('.', '')}${collectionId}${moment().format('ssMMyyyy')}.${
+                pictureFiles[key].mimetype.split('/')[1]
+              }`,
+              collectionId,
+            );
+          },
+        );
       }
     } catch (error) {
       console.log(error);

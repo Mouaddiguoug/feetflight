@@ -10,16 +10,12 @@ class adminService {
   public async getUnverifiedSellers() {
     const getSellerIdentityCardSession = initializeDbConnection().session({ database: 'neo4j' });
     try {
-      const seller = await getSellerIdentityCardSession.executeRead(tx =>
-        tx.run(
-          'match (s:seller {verified: false}) return s',
-        ),
-      );
-      return seller.records.map(record => record.get("s").properties);
+      const seller = await getSellerIdentityCardSession.executeRead(tx => tx.run('match (s:seller {verified: false}) return s'));
+      return seller.records.map(record => record.get('s').properties);
     } catch (error) {
       console.log(error);
     } finally {
-        getSellerIdentityCardSession.close();
+      getSellerIdentityCardSession.close();
     }
   }
 
@@ -27,18 +23,18 @@ class adminService {
     const getSellerIdentityCardSession = initializeDbConnection().session({ database: 'neo4j' });
     try {
       const seller = await getSellerIdentityCardSession.executeRead(tx =>
-        tx.run(
-          'match (user {id: $userid})-[:IS_A]-(s:seller) return s',
-          {
-            userid: userid,
-          },
-        ),
+        tx.run('match (user {id: $userid})-[:IS_A]-(s:seller) return s', {
+          userid: userid,
+        }),
       );
-      return {frontSide: seller.records.map(record => record.get("s").properties.frontIdentityCard)[0], backSide: seller.records.map(record => record.get("s").properties.backtIdentityCard)[0]};
+      return {
+        frontSide: seller.records.map(record => record.get('s').properties.frontIdentityCard)[0],
+        backSide: seller.records.map(record => record.get('s').properties.backtIdentityCard)[0],
+      };
     } catch (error) {
       console.log(error);
     } finally {
-        getSellerIdentityCardSession.close();
+      getSellerIdentityCardSession.close();
     }
   }
 }

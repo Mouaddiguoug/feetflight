@@ -1,4 +1,4 @@
 export const RolesEnum = {
-  BUYER: "Buyer",
-  SELLER: "Seller"
-}
+  BUYER: 'Buyer',
+  SELLER: 'Seller',
+};

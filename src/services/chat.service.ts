@@ -1,5 +1,3 @@
-import Stripe from "stripe";
+import Stripe from 'stripe';
 
-class chatService {
-    
-}
+class chatService {}

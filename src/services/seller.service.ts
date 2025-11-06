@@ -6,7 +6,6 @@ import moment from 'moment';
 import { uid } from 'uid';
 
 class sellerService {
-  
   public prices = [];
 
   public async createSubscribePlans(userId: string, subscriptionPlansData: any[]) {
@@ -27,28 +26,28 @@ class sellerService {
     try {
       const updatedPlans = plans.map(async plan => {
         const oldPrice = await stripe.prices.retrieve(plan.id);
-        
+
         await stripe.products.update(oldPrice.product.toString(), {
           name: plan.name,
-        })
-        
+        });
+
         const newPrice = await stripe.prices.create({
-          currency: "EUR",
+          currency: 'EUR',
           product: oldPrice.product.toString(),
           recurring: {
-            interval: "month",
+            interval: 'month',
             interval_count: 1,
           },
-          unit_amount: plan.price * 100
+          unit_amount: plan.price * 100,
         });
         await stripe.prices.update(oldPrice.id, {
-          active: false
-        })
-        
-        return this.changePlansInDb(plan.id, newPrice.id, plan.name, plan.price);
-      })
+          active: false,
+        });
 
-      return updatedPlans.length > 0 ? {"message": "plans were updated successfully"} : {"message": "Something went wrong"};
+        return this.changePlansInDb(plan.id, newPrice.id, plan.name, plan.price);
+      });
+
+      return updatedPlans.length > 0 ? { message: 'plans were updated successfully' } : { message: 'Something went wrong' };
     } catch (error) {
       console.log(error);
     }
@@ -62,10 +61,9 @@ class sellerService {
           planId: oldPlanId,
           newPlanId: newPlanId,
           name: name,
-          price: price
+          price: price,
         }),
       );
-      
 
       return updatedPlan;
     } catch (error) {
@@ -81,9 +79,8 @@ class sellerService {
           userId: userId,
         }),
       );
-      
 
-      return payoutAccounts.records.map(record => record.get("p").properties);
+      return payoutAccounts.records.map(record => record.get('p').properties);
     } catch (error) {
       console.log(error);
     } finally {
@@ -108,13 +105,12 @@ class sellerService {
   }
 
   public async deletePayoutAccount(id: string) {
-
     const deletePayoutAccountSession = initializeDbConnection().session();
 
     try {
       const deletedPayoutAcount = await deletePayoutAccountSession.executeWrite(tx =>
         tx.run('match (p:payoutAccount {id: $id}) detach delete p', {
-          id: id
+          id: id,
         }),
       );
 
@@ -127,21 +123,23 @@ class sellerService {
   }
 
   public async addPayoutAccount(userId: string, bankAccountData: any) {
-
     const addPayoutAccountSession = initializeDbConnection().session();
 
     try {
       const addedPayoutAcount = await addPayoutAccountSession.executeWrite(tx =>
-        tx.run('match (user {id: $userId})-[:IS_A]->(s:seller) create (s)-[:GETS_PAID]->(p:payoutAccount {id: $id, bankCountry: $bankCountry, city: $city, bankName: $bankName, accountNumber: $accountNumber, swift: $swift, status: $status}) return p', {
-          userId: userId,
-          id: uid(10),
-          bankCountry: bankAccountData.bankCountry,
-          city: bankAccountData.city,
-          status: "Pending",
-          bankName: bankAccountData.bankName,
-          accountNumber: bankAccountData.accountNumber,
-          swift: bankAccountData.swift,
-        }),
+        tx.run(
+          'match (user {id: $userId})-[:IS_A]->(s:seller) create (s)-[:GETS_PAID]->(p:payoutAccount {id: $id, bankCountry: $bankCountry, city: $city, bankName: $bankName, accountNumber: $accountNumber, swift: $swift, status: $status}) return p',
+          {
+            userId: userId,
+            id: uid(10),
+            bankCountry: bankAccountData.bankCountry,
+            city: bankAccountData.city,
+            status: 'Pending',
+            bankName: bankAccountData.bankName,
+            accountNumber: bankAccountData.accountNumber,
+            swift: bankAccountData.swift,
+          },
+        ),
       );
 
       return addedPayoutAcount.records.map(record => record.get('p')).length ? true : false;
@@ -153,17 +151,19 @@ class sellerService {
   }
 
   public async requestWithdraw(userId: string, payoutAccountId: string) {
-
     const requestWithdrawSession = initializeDbConnection().session();
 
     try {
       const requestedWithdraw = await requestWithdrawSession.executeWrite(tx =>
-        tx.run('match (user {id: $userId})-[:IS_A]->(s:seller), (p:payoutAccount {id: $payoutAccountId}) create (s)-[:REQUESTED_WITHDRAW]->(r:withrawalRequest {id: $id, status: $status})-[:BY]->(p) return r', {
-          userId: userId,
-          payoutAccountId: payoutAccountId,
-          status: "Pending",
-          id: uid(10)
-        }),
+        tx.run(
+          'match (user {id: $userId})-[:IS_A]->(s:seller), (p:payoutAccount {id: $payoutAccountId}) create (s)-[:REQUESTED_WITHDRAW]->(r:withrawalRequest {id: $id, status: $status})-[:BY]->(p) return r',
+          {
+            userId: userId,
+            payoutAccountId: payoutAccountId,
+            status: 'Pending',
+            id: uid(10),
+          },
+        ),
       );
 
       return requestedWithdraw.records.map(record => record.get('r')).length ? true : false;
@@ -233,8 +233,8 @@ class sellerService {
           sellerId: sellerId,
         }),
       );
-      
-      return followersCount.records.map(record => record.get("followersCount"))[0].low;
+
+      return followersCount.records.map(record => record.get('followersCount'))[0].low;
     } catch (error) {
       console.log(error);
     } finally {
@@ -244,15 +244,27 @@ class sellerService {
 
   public uploadIdentityCard = async (identityCardData: any, userId: string) => {
     try {
-      for (let key in identityCardData) {
+      for (const key in identityCardData) {
         console.log(identityCardData[key][0]);
-        
+
         const filecontent = Buffer.from(identityCardData[key][0].buffer, 'binary');
 
-        writeFile(path.join(__dirname, "../../public/files/identity_cards", `${moment().format("ssMMyyyy")}${userId}${identityCardData[key][0].originalname.replace(".", "")}`), filecontent, (err) => {
-          if (err) return console.log(err);
-          this.uploadIdentityCardToDb(`/public/files/identity_cards/${moment().format("ssMMyyyy")}${userId}${identityCardData[key][0].originalname.replace(".", "")}`, userId, identityCardData[key].fieldname);
-        });
+        writeFile(
+          path.join(
+            __dirname,
+            '../../public/files/identity_cards',
+            `${moment().format('ssMMyyyy')}${userId}${identityCardData[key][0].originalname.replace('.', '')}`,
+          ),
+          filecontent,
+          err => {
+            if (err) return console.log(err);
+            this.uploadIdentityCardToDb(
+              `/public/files/identity_cards/${moment().format('ssMMyyyy')}${userId}${identityCardData[key][0].originalname.replace('.', '')}`,
+              userId,
+              identityCardData[key].fieldname,
+            );
+          },
+        );
       }
     } catch (error) {
       console.log(error);
@@ -262,42 +274,44 @@ class sellerService {
   public uploadSentPicture = async (sentPictureData: any, userId: string, tipAmount: string, receiverId: string) => {
     try {
       const filecontent = Buffer.from(sentPictureData.buffer, 'binary');
-      let sentPicturePath = [];
-      const encryptionDate = moment().format("ssMMyyyy");
+      const sentPicturePath = [];
+      const encryptionDate = moment().format('ssMMyyyy');
       const uploadSentPictureSession = initializeDbConnection().session();
 
       writeFile(
-        path.join(__dirname, '../../public/files/sent', `sent${userId}${encryptionDate}.${sentPictureData.mimetype.split("/")[1]}`),
+        path.join(__dirname, '../../public/files/sent', `sent${userId}${encryptionDate}.${sentPictureData.mimetype.split('/')[1]}`),
         filecontent,
         async err => {
           if (err) return console.log(err);
-          sentPicturePath.push(`/public/files/sent/sent${userId}${encryptionDate}.${sentPictureData.mimetype.split("/")[1]}`) ;
+          sentPicturePath.push(`/public/files/sent/sent${userId}${encryptionDate}.${sentPictureData.mimetype.split('/')[1]}`);
         },
       );
 
-      const pictureId = `${userId}PictureSent${moment().format("ssMMyyyy")}${uid(10)}`
+      const pictureId = `${userId}PictureSent${moment().format('ssMMyyyy')}${uid(10)}`;
 
       const uploadedPicture = await uploadSentPictureSession.executeWrite(tx =>
-        tx.run('match (u:user {id: $userId})-[:IS_A]->(s:seller), (buyerUser:user {id: $receiverId}) create (s)-[:SENT]->(p:picture {id: $pictureId, tipAmount: $tipAmount, isPaid: $isPaid})-[:TO]->(buyerUser) return p, buyerUser, s', {
-          userId: userId,
-          receiverId: receiverId,
-          tipAmount: tipAmount,
-          pictureId: pictureId,
-          isPaid: Number(tipAmount) == 0 ? false : true
-        }),
+        tx.run(
+          'match (u:user {id: $userId})-[:IS_A]->(s:seller), (buyerUser:user {id: $receiverId}) create (s)-[:SENT]->(p:picture {id: $pictureId, tipAmount: $tipAmount, isPaid: $isPaid})-[:TO]->(buyerUser) return p, buyerUser, s',
+          {
+            userId: userId,
+            receiverId: receiverId,
+            tipAmount: tipAmount,
+            pictureId: pictureId,
+            isPaid: Number(tipAmount) == 0 ? false : true,
+          },
+        ),
       );
-      
-      
+
       await stripe.products.create({
         id: pictureId,
-        name: "Private sent photo",
+        name: 'Private sent photo',
         default_price_data: {
           currency: 'EUR',
           unit_amount: Number(tipAmount) * 100,
         },
       });
 
-      return {pictureId ,path: `/public/files/sent/sent${userId}${encryptionDate}.${sentPictureData.mimetype.split("/")[1]}`};
+      return { pictureId, path: `/public/files/sent/sent${userId}${encryptionDate}.${sentPictureData.mimetype.split('/')[1]}` };
     } catch (error) {
       console.log(error);
     }
@@ -332,8 +346,6 @@ class sellerService {
       uploadIdentityCardSession.close();
     }
   };
-
-  
 }
 
 export default sellerService;

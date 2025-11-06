@@ -1,224 +1,295 @@
-import compression from 'compression';
-import cookieParser from 'cookie-parser';
-import cors from 'cors';
-import express from 'express';
-import helmet from 'helmet';
-import neo4j from 'neo4j-driver';
-import hpp from 'hpp';
-import admin from "firebase-admin";
-import morgan from 'morgan';
-import swaggerJSDoc from 'swagger-jsdoc';
-import swaggerUi from 'swagger-ui-express';
-import { NODE_ENV, PORT, LOG_FORMAT, ORIGIN, CREDENTIALS } from '@config';
-import { Routes } from '@interfaces/routes.interface';
-import errorMiddleware from '@middlewares/error.middleware';
-import { logger, stream } from '@utils/logger';
-import nodemailer from 'nodemailer';
-import hbs from 'nodemailer-express-handlebars';
+import { Elysia } from 'elysia';
+import { cors } from '@elysiajs/cors';
+import { staticPlugin } from '@elysiajs/static';
+import { openapi } from '@elysiajs/openapi';
+import admin from 'firebase-admin';
 import path from 'path';
-import walletService from './services/wallet.service';
-import UserService from './services/users.service';
-import Stripe from 'stripe';
-import NotificationService from './services/notification.service';
-import { http } from 'winston';
 
-export const transporter = nodemailer.createTransport({
-  service: process.env.SERVICE,
-  secure: true,
-  auth: {
-    user: process.env.USER_EMAIL,
-    pass: process.env.PASS,
-  },
+import { errorPlugin, loggerPlugin, neo4jPlugin, authPlugin } from '@/plugins';
+import { stripe } from '@/utils/stripe';
+
+import { authRoutes } from '@/routes/auth.route';
+import { usersRoutes } from '@/routes/users.route';
+import { indexRoutes } from '@/routes/index.route';
+
+import { updateBalanceForPayment, updateBalanceForSubscription } from '@/services/wallet.service';
+import { checkForSale, buyPost, createSubscriptioninDb } from '@/services/users.service';
+
+
+const envPlugin = () => {
+  return new Elysia({ name: 'plugin.env', seed: 'plugin.env' }).onStart(() => {
+    const requiredVars = [
+      'PORT',
+      'NODE_ENV',
+      'SECRET_KEY',
+      'NEO4J_URI',
+      'NEO4J_USERNAME',
+      'NEO4J_PASSWORD',
+      'STRIPE_TEST_KEY',
+      'STRIPE_WEBHOOK_SECRET',
+      'RESEND_API_KEY',
+      'RESEND_FROM_EMAIL',
+    ];
+
+    const missing = requiredVars.filter(varName => !Bun.env[varName] && !process.env[varName]);
+
+    if (missing.length > 0) {
+      throw new Error(
+        `Missing required environment variables: ${missing.join(', ')}\n` +
+          `Please ensure these are set in your .env file.`,
+      );
+    }
+  });
+};
+
+
+admin.initializeApp({
+  credential: admin.credential.cert(path.join(__dirname, './config/push_notification_key.json')),
+  projectId: process.env.projectId || Bun.env.projectId,
 });
 
-class App {
-  public walletService = new walletService();
-  public userService = new UserService();
-  
-  public notificationService = new NotificationService();
-  public app: express.Application;
-  public env: string;
-  public port: string | number;
 
-  constructor(routes: Routes[]) {
-    this.app = express();
-    this.env = NODE_ENV;
-    this.port = PORT || 3000;
-    this.app.post('/webhook', express.raw({ type: 'application/json' }), async (req, res, next): Promise<void> => {
+export function createApp() {
+  const app = new Elysia()
+    .use(envPlugin())
+
+    .use(errorPlugin())
+    .use(loggerPlugin())
+    .use(neo4jPlugin())
+    .use(authPlugin())
+
+    .use(
+      cors({
+        origin: process.env.ORIGIN || Bun.env.ORIGIN || '*',
+        credentials: (process.env.CREDENTIALS || Bun.env.CREDENTIALS) === 'true',
+      }),
+    )
+
+    .use(
+      staticPlugin({
+        assets: path.join(__dirname, '../public'),
+        prefix: '/public',
+        alwaysStatic: false,
+      }),
+    )
+
+    .use(
+      openapi({
+        documentation: {
+          info: {
+            title: 'Feetflight API',
+            version: '1.0.0',
+            description: 'Feetflight API Documentation - Feet content marketplace platform',
+          },
+          tags: [
+            { name: 'Health', description: 'Health check endpoints' },
+            { name: 'Auth', description: 'Authentication endpoints' },
+            { name: 'Users', description: 'User management endpoints' },
+            { name: 'Sellers', description: 'Seller management endpoints' },
+            { name: 'Posts', description: 'Post/content endpoints' },
+            { name: 'Wallet', description: 'Wallet and payment endpoints' },
+            { name: 'Admin', description: 'Admin endpoints' },
+            { name: 'Notifications', description: 'Notification endpoints' },
+          ],
+        },
+        path: '/docs',
+        provider: 'scalar',
+      }),
+    );
+
+  const rawBodies = new WeakMap<Request, string>();
+
+  app
+    .onParse(async ({ request, headers }) => {
+      const url = new URL(request.url);
+      if (url.pathname === '/webhook' &&  headers["application/json"] === 'application/json') {
+        const rawBody = await request.text();
+        rawBodies.set(request, rawBody);
+        return JSON.parse(rawBody);
+      }
+    })
+
+    .post('/webhook', async ({ request, set, log, neo4j, auth }) => {
       try {
-        const stripe = new Stripe(process.env.STRIPE_TEST_KEY, { apiVersion: '2022-11-15' });
-        let signature = req.headers['stripe-signature'];
-        const WEBHOOK_SIGNATURE = "whsec_GSO5u3To3FIBEFlVGTT52Xf3ozUwI9AC";
-        if (!signature) res.status(201).json({ message: 'signature needed' });
-        let event;
-        try {
-          event = stripe.webhooks.constructEvent(req.body, signature, WEBHOOK_SIGNATURE);
-        } catch (err) {
-          console.log(err.message);
+        const signature = request.headers.get('stripe-signature');
+        const webhookSecret = process.env.STRIPE_WEBHOOK_SECRET || Bun.env.STRIPE_WEBHOOK_SECRET;
+
+        if (!signature) {
+          set.status = 400;
+          return { error: 'Missing stripe-signature header' };
         }
 
+        const rawBody = rawBodies.get(request);
+        if (!rawBody) {
+          set.status = 400;
+          return { error: 'Unable to verify webhook signature: raw body missing' };
+        }
+
+        let event;
+        try {
+          try {
+            event = stripe.webhooks.constructEvent(rawBody, signature, webhookSecret!);
+          } catch (err) {
+            const errorMessage = err instanceof Error ? err.message : String(err);
+            log?.error({ error: errorMessage }, 'Webhook signature verification failed');
+            set.status = 400;
+            return { error: `Webhook Error: ${errorMessage}` };
+          }
+
+        log?.info({ eventType: event.type, eventId: event.id }, 'Processing Stripe webhook event');
+
+        // Handle different event types
         switch (event.type) {
           case 'charge.succeeded':
-          case 'checkout.session.completed':
-            switch (event.data.object.mode) {
-              case 'payment':
-                if(event.data.object.metadata.comingFrom != null && event.data.object.metadata.comingFrom.includes("sentPicturePayment")){
+          case 'checkout.session.completed': {
+            const session = event.data.object as any;
+
+            switch (session.mode) {
+              case 'payment': {
+                // Check if this is a sent picture payment
+                if (session.metadata.comingFrom?.includes('sentPicturePayment')) {
+                  // Update Firestore message to mark as bought
                   const db = admin.firestore();
-                  await db.collection("chat_room").doc(event.data.object.metadata.chatRoomId).collection("messages").doc(event.data.object.metadata.messageId).update({isBought: true});
-                  
-                  await this.walletService.UpdateBalanceForPayment(event.data.object.metadata.sellerId, event.data.object.metadata.amount);
+                  await db
+                    .collection('chat_room')
+                    .doc(session.metadata.chatRoomId)
+                    .collection('messages')
+                    .doc(session.metadata.messageId)
+                    .update({ isBought: true });
+
+                  // Update seller's wallet balance
+                  await updateBalanceForPayment(session.metadata.sellerId, session.metadata.amount, { neo4j, log });
+
+                  log?.info(
+                    { sellerId: session.metadata.sellerId, amount: session.metadata.amount },
+                    'Sent picture payment processed',
+                  );
                 } else {
-                  event.data.object.metadata.sellersIds.split(',').map((record: any) => {
+                  // Regular post purchase - may have multiple sellers
+                  const sellerRecords = session.metadata.sellersIds.split(',');
+
+                  for (const record of sellerRecords) {
                     let sellerId = '';
                     let postId = '';
                     let amount = 0;
-                    record.split('.').map((record: any) => {
-                      switch (record.split(':')[0]) {
+
+                    // Parse seller record format: "sellerId:xxx.postId:yyy.amount:zzz"
+                    record.split('.').forEach((part: string) => {
+                      const [key, value] = part.split(':');
+                      switch (key) {
                         case 'sellerId':
-                          sellerId = record.split(':')[1];
+                          sellerId = value!;
                           break;
                         case 'postId':
-                          postId = record.split(':')[1];
+                          postId = value!;
                           break;
                         case 'amount':
-                          amount = record.split(':')[1];
-                          break;
-                        default:
+                          amount = Number(value);
                           break;
                       }
                     });
-                    this.userService.checkForSale(event.data.object.customer, postId).then(async exists => {
-                      if (exists) return;
-                      await this.userService.buyPost(postId, event.data.object.customer, sellerId, amount);
-                      await this.walletService.UpdateBalanceForPayment(sellerId, amount);
-                      const title = "Album Sold"
-                      const body = `congratulations, a customer just bought an album.`
-                      await this.notificationService.pushSellerNotificatons(sellerId, title, body)
-                    });
-  
-                  });
+
+                    const alreadyBought = await checkForSale(session.customer, postId, {auth, neo4j, log });
+                    if (alreadyBought) {
+                      log?.warn({ customerId: session.customer, postId }, 'Post already purchased, skipping');
+                      continue;
+                    }
+
+                    await buyPost(postId, session.customer,{auth, neo4j, log });
+
+                    await updateBalanceForPayment(sellerId, amount, { neo4j, log });
+
+                    await pushSellerNotificatons(
+                      sellerId,
+                      'Album Sold',
+                      'Congratulations, a customer just bought an album.',
+                      { log },
+                    );
+
+                    log?.info({ sellerId, postId, amount }, 'Post purchase processed');
+                  }
                 }
                 break;
-              case 'subscription':
-                this.userService.createSubscriptioninDb(
-                  event.data.object.subscription,
-                  event.data.object.customer,
-                  event.data.object.metadata.sellerId,
-                  event.data.object.metadata.subscriptionPlanTitle,
-                  event.data.object.metadata.subscriptionPlanPrice,
-                );
-                this.walletService.UpdateBalanceForSubscription(
-                  event.data.object.metadata.sellerId,
-                  event.data.object.metadata.subscriptionPlanPrice,
-                );
-                const title = "Subscription"
-                const body = `congratulations, a customer just subscribed to the plan ${event.data.object.metadata.subscriptionPlanTitle}`
+              }
 
-                this.notificationService.pushSellerNotificatons(event.data.object.metadata.sellerId, title, body)
+              case 'subscription': {
+                await createSubscriptioninDb(
+                  session.subscription,
+                  session.customer,
+                  session.metadata.sellerId,
+                  session.metadata.subscriptionPlanTitle,
+                  session.metadata.subscriptionPlanPrice,
+                  { auth, neo4j, log },
+                );
+
+                await updateBalanceForSubscription(session.metadata.sellerId, session.metadata.subscriptionPlanPrice, {
+                  neo4j,
+                  log,
+                });
+
+                await pushSellerNotificatons(
+                  session.metadata.sellerId,
+                  'Subscription',
+                  `Congratulations, a customer just subscribed to the plan ${session.metadata.subscriptionPlanTitle}`,
+                  { log },
+                );
+
+                log?.info(
+                  {
+                    sellerId: session.metadata.sellerId,
+                    plan: session.metadata.subscriptionPlanTitle,
+                    price: session.metadata.subscriptionPlanPrice,
+                  },
+                  'Subscription created',
+                );
                 break;
+              }
+
               default:
-                break;
+                log?.warn({ mode: session.mode }, 'Unknown session mode');
             }
-
             break;
-          case 'payment_method.attached':
+          }
+
+          case 'payment_method.attached': {
             const paymentMethod = event.data.object;
-            console.log(paymentMethod);
+            log?.info({ paymentMethod }, 'Payment method attached');
             break;
+          }
+
           default:
-            break;
+            log?.warn({ eventType: event.type }, 'Unhandled event type');
         }
+
+        set.status = 200;
+        return { received: true };
       } catch (error) {
-        console.log(error);
+        const errorMessage = error instanceof Error ? error.message : 'Unknown error';
+        log?.error({ error: errorMessage }, 'Webhook processing failed');
+        set.status = 500;
+        return { error: 'Webhook processing failed' };
       }
-    });
-    this.initializeMiddlewares();
-    this.initializeRoutes(routes);
-    this.initializeSwagger();
-    this.initializeErrorHandling();
-    admin.initializeApp({
-      credential: admin.credential.cert(path.join(__dirname, "./config/push_notification_key.json")),
-      projectId: process.env.projectId
-    })
-  }
+    } catch (e) {
+      if (e instanceof Error){
+        log.error(e.message)
+      }else {
+        log.error("fatal error")
+      }
+    }})
 
-  public listen() {
-    this.app.listen(this.port, () => {
-      logger.info(`=================================`);
-      logger.info(`======= ENV: ${this.env} =======`);
-      logger.info(`🚀 App listening on the port ${this.port}`);
-      logger.info(`=================================`);
-    });
-  }
+  app
+    .use(indexRoutes()) // Health check at /
+    .use(authRoutes()) // Auth routes (signup, login, etc.)
+    .use(usersRoutes()); // User routes (/users/*)
 
-  public getServer() {
-    return this.app;
-  }
+  // Additional route modules will be registered here as they're migrated:
+  // .use(sellerRoutes())
+  // .use(postRoutes())
+  // .use(walletRoutes())
+  // .use(adminRoutes())
+  // .use(notificationsRoutes())
 
-  private initializeMiddlewares() {
-    this.app.use(morgan(LOG_FORMAT, { stream }));
-    this.app.use(cors({ origin: ORIGIN, credentials: CREDENTIALS }));
-    this.app.use(hpp());
-    this.app.use(helmet());
-    this.app.use(compression());
-    this.app.use(express.json());
-    this.app.use(express.urlencoded({ extended: true }));
-    this.app.use(cookieParser());
-    this.app.use("/public", express.static(path.resolve(path.join(__dirname, "../public"))));
-    transporter.use(
-      'compile',
-      hbs({
-        viewEngine: {
-          extname: '.handlebars',
-          layoutsDir: path.resolve(__dirname, '../public/views/'),
-          partialsDir: path.resolve(__dirname, '../public/views/'),
-          defaultLayout: "verifying_email"
-        },
-        viewPath: path.resolve(__dirname, '../public/views/'),
-        extName: '.handlebars',
-      }),
-    );
-  }
-
-  private initializeRoutes(routes: Routes[]) {
-    routes.forEach(route => {
-      this.app.use('/', route.router);
-    });
-  }
-
-  private initializeSwagger() {
-    const options = {
-      swaggerDefinition: {
-        info: {
-          title: 'REST API',
-          version: '1.0.0',
-          description: 'Example docs',
-        },
-      },
-      apis: ['swagger.yaml'],
-    };
-
-    const specs = swaggerJSDoc(options);
-    this.app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(specs));
-  }
-
-  private initializeErrorHandling() {
-    this.app.use(errorMiddleware);
-  }
+  return app;
 }
 
-export const stripe = new Stripe(process.env.STRIPE_TEST_KEY, { apiVersion: '2022-11-15' });
-
-export function initializeDbConnection() {
-  try {
-    const driver = neo4j.driver(process.env.NEO4J_URI, neo4j.auth.basic(process.env.NEO4J_USERNAME, process.env.NEO4J_PASSWORD));
-
-    driver.verifyConnectivity();
-    console.log('Driver created');
-    return driver;
-  } catch (error) {
-    console.log(`connectivity verification failed. ${error}`);
-  }
-}
-
-export default App;
+export default createApp;

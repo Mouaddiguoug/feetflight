@@ -2,8 +2,8 @@ import { initializeDbConnection } from '@/app';
 import { uid } from 'uid';
 import path from 'path';
 import moment from 'moment';
-import admin from "firebase-admin";
-import {getMessaging} from "firebase-admin/messaging";
+import admin from 'firebase-admin';
+import { getMessaging } from 'firebase-admin/messaging';
 import Stripe from 'stripe';
 import UserService from './users.service';
 
@@ -15,44 +15,41 @@ class NotificationService {
     const getNotoficationsSession = initializeDbConnection().session({ database: 'neo4j' });
     try {
       const notifications = await getNotoficationsSession.executeRead(tx =>
-        tx.run(
-          'match (notification:notification)<-[:got_notified]-(u:user {id: $userId}) return notification order by notification.time desc',
-          {
-            userId: userId
-          }
-        ),
+        tx.run('match (notification:notification)<-[:got_notified]-(u:user {id: $userId}) return notification order by notification.time desc', {
+          userId: userId,
+        }),
       );
 
       notifications.records.map(record => {
-        let days = moment().diff(record.get("notification").properties.time, "days");
-        let hours = moment().diff(record.get("notification").properties.time, "hours");
-        let minutes = moment().diff(record.get("notification").properties.time, "minutes");
-        let seconds = moment().diff(record.get("notification").properties.time, "seconds");
-        
-        if(days == 0) {
-          if(hours == 0) {
-            if(minutes == 0) {
-              if(seconds < 60) {
-                record.get("notification").properties.time = `${seconds} seconds`;
+        const days = moment().diff(record.get('notification').properties.time, 'days');
+        const hours = moment().diff(record.get('notification').properties.time, 'hours');
+        const minutes = moment().diff(record.get('notification').properties.time, 'minutes');
+        const seconds = moment().diff(record.get('notification').properties.time, 'seconds');
+
+        if (days == 0) {
+          if (hours == 0) {
+            if (minutes == 0) {
+              if (seconds < 60) {
+                record.get('notification').properties.time = `${seconds} seconds`;
               } else {
-                record.get("notification").properties.time = `${minutes} minutes`;
+                record.get('notification').properties.time = `${minutes} minutes`;
               }
-            } else if(minutes < 60 ) {
-              record.get("notification").properties.time = `${minutes} minutes`;
+            } else if (minutes < 60) {
+              record.get('notification').properties.time = `${minutes} minutes`;
             } else {
-              record.get("notification").properties.time = `${hours} hours`;
+              record.get('notification').properties.time = `${hours} hours`;
             }
-          } else if(hours < 24) {
-            record.get("notification").properties.time = `${hours} hours`;
+          } else if (hours < 24) {
+            record.get('notification').properties.time = `${hours} hours`;
           } else {
-            record.get("notification").properties.time = `${days} days`;
+            record.get('notification').properties.time = `${days} days`;
           }
         } else {
-          record.get("notification").properties.time = `${days} days`;
+          record.get('notification').properties.time = `${days} days`;
         }
-      })
+      });
 
-      return notifications.records.map(record => record.get("notification").properties);
+      return notifications.records.map(record => record.get('notification').properties);
     } catch (error) {
       console.log(error);
     } finally {
@@ -65,53 +62,57 @@ class NotificationService {
     const getTokensSession = initializeDbConnection().session({ database: 'neo4j' });
 
     try {
-      
       const deviceToken = await getTokensSession.executeRead(tx =>
-        tx.run(
-          'match (user:user {id: $userId})-[:logged_in_with]->(deviceToken:deviceToken) return deviceToken',
-          {
-            userId: userId,
-          },
-        ),
+        tx.run('match (user:user {id: $userId})-[:logged_in_with]->(deviceToken:deviceToken) return deviceToken', {
+          userId: userId,
+        }),
       );
-  
 
-      if(deviceToken.records.length > 0) {
+      if (deviceToken.records.length > 0) {
         console.log(`${process.env.DOMAIN}${avatar}`);
-        
+
         const message = {
           notification: {
             title: title,
-            body: body
+            body: body,
           },
-          android: avatar ? {
-            notification: {
-              imageUrl: `${process.env.DOMAIN}${avatar}`
-            }
-          } : {},
-          apns: avatar ? {
-            payload: {
-              aps: {
-                'mutable-content': 1
+          android: avatar
+            ? {
+                notification: {
+                  imageUrl: `${process.env.DOMAIN}${avatar}`,
+                },
               }
-            },
-            fcm_options: {
-              image: `${process.env.DOMAIN}${avatar}`
-            }
-          } : {},
-          webpush: avatar ? {
-            headers: {
-              image: `${process.env.DOMAIN}${avatar}`
-            }
-          } : {},
-          token: deviceToken.records.map(record => record.get("deviceToken").properties.token)[0]
-        }
-        
-        getMessaging().send(message).then((res) => {
-          console.log("successfully sent");
-        }).catch((error) => {
-          console.log(error);
-        })
+            : {},
+          apns: avatar
+            ? {
+                payload: {
+                  aps: {
+                    'mutable-content': 1,
+                  },
+                },
+                fcm_options: {
+                  image: `${process.env.DOMAIN}${avatar}`,
+                },
+              }
+            : {},
+          webpush: avatar
+            ? {
+                headers: {
+                  image: `${process.env.DOMAIN}${avatar}`,
+                },
+              }
+            : {},
+          token: deviceToken.records.map(record => record.get('deviceToken').properties.token)[0],
+        };
+
+        getMessaging()
+          .send(message)
+          .then(res => {
+            console.log('successfully sent');
+          })
+          .catch(error => {
+            console.log(error);
+          });
       }
     } catch (error) {
       console.log(error);
@@ -125,34 +126,31 @@ class NotificationService {
     const getTokensSession = initializeDbConnection().session({ database: 'neo4j' });
 
     try {
-      
       const deviceToken = await getTokensSession.executeRead(tx =>
-        tx.run(
-          'match (seller {id: $sellerId})<-[:IS_A]-(user:user)-[:logged_in_with]->(deviceToken:deviceToken) return deviceToken',
-          {
-            sellerId: sellerId,
-          },
-        ),
+        tx.run('match (seller {id: $sellerId})<-[:IS_A]-(user:user)-[:logged_in_with]->(deviceToken:deviceToken) return deviceToken', {
+          sellerId: sellerId,
+        }),
       );
-  
 
-      if(deviceToken.records.length > 0) {
+      if (deviceToken.records.length > 0) {
         const message = {
           notification: {
             title: title,
-            body: body
+            body: body,
           },
-          token: deviceToken.records.map(record => record.get("deviceToken").properties.token)[0]
-        }
-        
-        getMessaging().send(message).then((res) => {
-          console.log("successfully sent");
-        }).catch((error) => {
-          console.log(error);
-        })
+          token: deviceToken.records.map(record => record.get('deviceToken').properties.token)[0],
+        };
+
+        getMessaging()
+          .send(message)
+          .then(res => {
+            console.log('successfully sent');
+          })
+          .catch(error => {
+            console.log(error);
+          });
       }
 
-    
       await pushNotificatonsSession.executeWrite(tx =>
         tx.run(
           'match (seller {id: $sellerId})<-[:IS_A]-(user:user) create (user)-[:got_notified]->(notification:notification {id: $notificationsId, title: $title, body: $body, time: $time}) return notification',
@@ -165,7 +163,6 @@ class NotificationService {
           },
         ),
       );
-
     } catch (error) {
       console.log(error);
     } finally {

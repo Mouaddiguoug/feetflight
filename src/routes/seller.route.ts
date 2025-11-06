@@ -36,7 +36,7 @@ class sellerRoute implements Routes {
     );
     this.router.post(
       `${this.path}/upload/sent/picture/:id/:tipAmount/:receiverId`,
-      
+
       multer().single('sentPicture'),
       fileMiddleware,
       authMiddleware,

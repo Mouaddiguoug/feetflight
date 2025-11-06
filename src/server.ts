@@ -1,16 +1,15 @@
-import App from '@/app';
-import AuthRoute from '@routes/auth.route';
-import IndexRoute from '@routes/index.route';
-import UsersRoute from '@routes/users.route';
-import walletRoute from './routes/wallet.route';
-import validateEnv from '@utils/validateEnv';
-import sellerRoute from './routes/seller.route';
-import postRoute from './routes/post.route';
-import AdminRoute from './routes/admin.route';
-import NotificationsRoute from './routes/notifications.route';
+import { createApp } from '@/app';
+import { appLogger } from '@/plugins/logger.plugin';
 
-validateEnv();
 
-const app = new App([new IndexRoute(), new UsersRoute(), new AuthRoute(), new NotificationsRoute, new postRoute(), new walletRoute(), new sellerRoute(), new AdminRoute()]);
+const app = createApp();
 
-app.listen();
+const port = Number(Bun.env.PORT || process.env.PORT || 3000);
+
+app.listen(port, () => {
+  appLogger.info(`======= ENV: ${Bun.env.NODE_ENV || process.env.NODE_ENV || 'development'} =======`);
+  appLogger.info(`🚀 App listening on port ${port}`);
+  appLogger.info(`📚 API Docs: http://localhost:${port}/docs`);
+});
+
+export default app;

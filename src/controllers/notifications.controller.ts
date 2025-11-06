@@ -6,10 +6,8 @@ class NotificationController {
   public notificationService = new NotificationService();
 
   public getNotifications = async (req: Request, res: Response, next: NextFunction): Promise<void> => {
-    const userId = req.params.id
+    const userId = req.params.id;
     try {
-      
-        
       const notifications = await this.notificationService.getNotofications(userId);
 
       res.status(201).json(notifications);
@@ -19,14 +17,19 @@ class NotificationController {
   };
 
   public pushNotification = async (req: Request, res: Response, next: NextFunction): Promise<void> => {
-    const userId = req.params.id
-    const messageData = req.body
+    const userId = req.params.id;
+    const messageData = req.body;
     try {
       console.log(messageData.avatar);
-      
-      await this.notificationService.pushMessageNotification(userId, "Message", `${messageData.userName} just sent you a message`, messageData.avatar);
 
-      res.status(201).json("sent successfully");
+      await this.notificationService.pushMessageNotification(
+        userId,
+        'Message',
+        `${messageData.userName} just sent you a message`,
+        messageData.avatar,
+      );
+
+      res.status(201).json('sent successfully');
     } catch (error) {
       console.log(error);
     }

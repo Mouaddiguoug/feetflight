@@ -1,19 +1,19 @@
-import { Router } from 'express';
-import IndexController from '@controllers/index.controller';
-import { Routes } from '@interfaces/routes.interface';
+import { Elysia, t } from 'elysia';
 
-class IndexRoute implements Routes {
-  public path = '/';
-  public router = Router();
-  public indexController = new IndexController();
 
-  constructor() {
-    this.initializeRoutes();
-  }
-
-  private initializeRoutes() {
-    this.router.get(`${this.path}`, this.indexController.index);
-  } 
+export function indexRoutes() {
+  return new Elysia({ name: 'routes.index' })
+    .get(
+      '/',
+      () => ({ status: 'ok', message: 'Feetflight API is running' }),
+      {
+        detail: {
+          tags: ['Health'],
+          summary: 'Health Check',
+          description: 'Returns API status to verify the server is running',
+        }
+      },
+    );
 }
 
-export default IndexRoute;
+export default indexRoutes;

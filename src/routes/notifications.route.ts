@@ -6,7 +6,7 @@ import NotificationController from '@/controllers/notifications.controller';
 class NotificationsRoute implements Routes {
   public path = '/notifications';
   public router = Router();
-  public notificationsController = new NotificationController;
+  public notificationsController = new NotificationController();
 
   constructor() {
     this.initializeRoutes();
