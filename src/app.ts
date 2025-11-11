@@ -2,6 +2,8 @@ import { Elysia } from 'elysia';
 import { cors } from '@elysiajs/cors';
 import { staticPlugin } from '@elysiajs/static';
 import { openapi } from '@elysiajs/openapi';
+import { Type as t, Static } from '@sinclair/typebox';
+import { Value } from '@sinclair/typebox/value';
 import admin from 'firebase-admin';
 import path from 'path';
 
@@ -10,35 +12,145 @@ import { stripe } from '@/utils/stripe';
 
 import { authRoutes } from '@/routes/auth.route';
 import { usersRoutes } from '@/routes/users.route';
+import { sellerRoutes } from '@/routes/seller.route';
 import { indexRoutes } from '@/routes/index.route';
+import { postRoutes } from '@/routes/post.route';
+import { walletRoutes } from '@/routes/wallet.route';
+import { adminRoutes } from '@/routes/admin.route';
+import { notificationsRoutes } from '@/routes/notifications.route';
 
 import { updateBalanceForPayment, updateBalanceForSubscription } from '@/services/wallet.service';
 import { checkForSale, buyPost, createSubscriptioninDb } from '@/services/users.service';
+import { pushSellerNotifications } from './services/notification.service';
+
+const EnvSchema = t.Object({
+  // Server Configuration
+  PORT: t.String({ pattern: '^[0-9]+$' }),
+  NODE_ENV: t.Union([t.Literal('development'), t.Literal('production'), t.Literal('test')]),
+  DOMAIN: t.Optional(t.String()),
+
+  // Security (with defaults applied before validation)
+  SECRET_KEY: t.String({ minLength: 32 }),
+  REFRESH_SECRET: t.Optional(t.String()),
+  EMAIL_SECRET: t.Optional(t.String()),
+
+  // Database
+  NEO4J_URI: t.String(),
+  NEO4J_USERNAME: t.String(),
+  NEO4J_PASSWORD: t.String(),
+
+  // Payment
+  STRIPE_TEST_KEY: t.String({ pattern: '^sk_(test|live)_' }),
+  STRIPE_WEBHOOK_SECRET: t.Optional(t.String()),
+
+  // Email
+  RESEND_API_KEY: t.String({ pattern: '^re_' }),
+  RESEND_FROM_EMAIL: t.String({ format: 'email' }),
+
+  // Logging
+  LOG_FORMAT: t.Optional(t.String()),
+  LOG_DIR: t.Optional(t.String()),
+  LOG_LEVEL: t.Optional(
+    t.Union([t.Literal('error'), t.Literal('warn'), t.Literal('info'), t.Literal('debug'), t.Literal('trace')]),
+  ),
+
+  // CORS
+  ORIGIN: t.Optional(t.String()),
+  CREDENTIALS: t.Optional(t.String({ pattern: '^(true|false)$' })),
+
+  // AI
+  OPENAI_API_KEY: t.Optional(t.String()),
+
+  // Firebase
+  projectId: t.Optional(t.String()),
+});
 
 
+export type Env = Static<typeof EnvSchema>;
 const envPlugin = () => {
   return new Elysia({ name: 'plugin.env', seed: 'plugin.env' }).onStart(() => {
-    const requiredVars = [
-      'PORT',
-      'NODE_ENV',
-      'SECRET_KEY',
-      'NEO4J_URI',
-      'NEO4J_USERNAME',
-      'NEO4J_PASSWORD',
-      'STRIPE_TEST_KEY',
-      'STRIPE_WEBHOOK_SECRET',
-      'RESEND_API_KEY',
-      'RESEND_FROM_EMAIL',
-    ];
+    const env = typeof Bun !== 'undefined' && Bun.env ? Bun.env : process.env;
 
-    const missing = requiredVars.filter(varName => !Bun.env[varName] && !process.env[varName]);
-
-    if (missing.length > 0) {
-      throw new Error(
-        `Missing required environment variables: ${missing.join(', ')}\n` +
-          `Please ensure these are set in your .env file.`,
-      );
+    if (!env.REFRESH_SECRET) {
+      env.REFRESH_SECRET = env.SECRET_KEY;
     }
+    if (!env.EMAIL_SECRET) {
+      env.EMAIL_SECRET = env.SECRET_KEY;
+    }
+    if (!env.LOG_LEVEL) {
+      env.LOG_LEVEL = 'info';
+    }
+    if (!env.ORIGIN) {
+      env.ORIGIN = '*';
+    }
+    if (!env.CREDENTIALS) {
+      env.CREDENTIALS = 'false';
+    }
+
+    const errors = [...Value.Errors(EnvSchema, env)];
+
+    if (errors.length > 0) {
+      const requiredMissing: string[] = [];
+      const formatInvalid: string[] = [];
+
+      errors.forEach(error => {
+        const path = error.path.substring(1);
+        const message = error.message;
+
+        if (message.includes('Required property')) {
+          requiredMissing.push(`  - ${path}: Missing required environment variable`);
+        } else if (message.includes('Expected string length greater or equal to')) {
+          formatInvalid.push(`  - ${path}: Must be at least 32 characters for security`);
+        } else if (message.includes('Expected string to match pattern')) {
+          if (path === 'PORT') {
+            formatInvalid.push(`  - ${path}: Must be a valid port number (e.g., 3000)`);
+          } else if (path === 'NEO4J_URI') {
+            formatInvalid.push(`  - ${path}: Must start with 'bolt://' or 'neo4j://' (e.g., bolt://localhost:7687)`);
+          } else if (path === 'STRIPE_TEST_KEY') {
+            formatInvalid.push(
+              `  - ${path}: Must be a valid Stripe key starting with 'sk_test_' or 'sk_live_'`,
+            );
+          } else if (path === 'RESEND_API_KEY') {
+            formatInvalid.push(`  - ${path}: Must be a valid Resend API key starting with 're_'`);
+          } else if (path === 'CREDENTIALS') {
+            formatInvalid.push(`  - ${path}: Must be 'true' or 'false'`);
+          } else {
+            formatInvalid.push(`  - ${path}: Invalid format - ${message}`);
+          }
+        } else if (message.includes('Expected string to match format')) {
+          formatInvalid.push(`  - ${path}: Must be a valid email address`);
+        } else if (message.includes('Expected union value')) {
+          if (path === 'NODE_ENV') {
+            formatInvalid.push(`  - ${path}: Must be 'development', 'production', or 'test'`);
+          } else if (path === 'LOG_LEVEL') {
+            formatInvalid.push(`  - ${path}: Must be 'error', 'warn', 'info', 'debug', or 'trace'`);
+          } else {
+            formatInvalid.push(`  - ${path}: ${message}`);
+          }
+        } else {
+          formatInvalid.push(`  - ${path}: ${message}`);
+        }
+      });
+
+      let errorMessage = 'Environment validation failed:\n\n';
+
+      if (requiredMissing.length > 0) {
+        errorMessage += 'Required variables missing:\n';
+        errorMessage += requiredMissing.join('\n') + '\n\n';
+      }
+
+      if (formatInvalid.length > 0) {
+        errorMessage += 'Invalid format or value:\n';
+        errorMessage += formatInvalid.join('\n') + '\n\n';
+      }
+
+      errorMessage += 'Please check your .env file and ensure all required variables are set correctly.\n';
+      errorMessage += 'See .env.example for documentation and examples.';
+
+      throw new Error(errorMessage);
+    }
+
+    console.log('Environment variables validated successfully');
   });
 };
 
@@ -108,7 +220,6 @@ export function createApp() {
         return JSON.parse(rawBody);
       }
     })
-
     .post('/webhook', async ({ request, set, log, neo4j, auth }) => {
       try {
         const signature = request.headers.get('stripe-signature');
@@ -199,11 +310,11 @@ export function createApp() {
 
                     await updateBalanceForPayment(sellerId, amount, { neo4j, log });
 
-                    await pushSellerNotificatons(
+                    await pushSellerNotifications(
                       sellerId,
                       'Album Sold',
                       'Congratulations, a customer just bought an album.',
-                      { log },
+                      { log, neo4j },
                     );
 
                     log?.info({ sellerId, postId, amount }, 'Post purchase processed');
@@ -227,11 +338,11 @@ export function createApp() {
                   log,
                 });
 
-                await pushSellerNotificatons(
+                await pushSellerNotifications(
                   session.metadata.sellerId,
                   'Subscription',
                   `Congratulations, a customer just subscribed to the plan ${session.metadata.subscriptionPlanTitle}`,
-                  { log },
+                  { log, neo4j },
                 );
 
                 log?.info(
@@ -278,16 +389,14 @@ export function createApp() {
     }})
 
   app
-    .use(indexRoutes()) // Health check at /
-    .use(authRoutes()) // Auth routes (signup, login, etc.)
-    .use(usersRoutes()); // User routes (/users/*)
-
-  // Additional route modules will be registered here as they're migrated:
-  // .use(sellerRoutes())
-  // .use(postRoutes())
-  // .use(walletRoutes())
-  // .use(adminRoutes())
-  // .use(notificationsRoutes())
+    .use(indexRoutes())
+    .use(authRoutes())
+    .use(usersRoutes())
+    .use(sellerRoutes())
+    .use(postRoutes())
+    .use(walletRoutes())
+    .use(adminRoutes())
+    .use(notificationsRoutes());
 
   return app;
 }

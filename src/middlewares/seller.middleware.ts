@@ -1,10 +1,5 @@
-import { NextFunction, Response } from 'express';
-import { verify } from 'jsonwebtoken';
-import { SECRET_KEY } from '@config';
-import { HttpException } from '@exceptions/HttpException';
-import { DataStoredInToken, RequestWithUser } from '@interfaces/auth.interface';
-import { initializeDbConnection } from '@/app';
-import { RolesEnum } from '@/enums/RolesEnums';
+//@ts-ignore
+
 
 /**
  * @deprecated This Express middleware is deprecated and will be removed in a future version.

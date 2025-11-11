@@ -1,36 +1,12 @@
-import { int, Session } from 'neo4j-driver';
 import { Logger } from 'pino';
 import { BadRequestError, InternalServerError, NotFoundError } from '@/plugins';
+import { Tneo4j } from '@/plugins/neo4j.plugin';
 
-/**
- * Wallet Service Dependencies Interface
- *
- * Defines the dependencies required by wallet service functions.
- * Enables dependency injection for better testability and decoupling.
- */
 export interface WalletServiceDeps {
-  neo4j: {
-    withSession: <T>(callback: (session: Session) => Promise<T>) => Promise<T>;
-  };
+  neo4j: Tneo4j
   log?: Logger;
 }
 
-/**
- * Get Balance
- *
- * Retrieves the wallet balance for a seller by user ID.
- *
- * @param userId - The user's unique identifier
- * @param deps - Service dependencies (neo4j, log)
- * @returns Promise resolving to the wallet balance amount
- * @throws NotFoundError if wallet not found for the user
- * @throws InternalServerError for unexpected errors
- *
- * @example
- * ```typescript
- * const balance = await getBalance(userId, { neo4j, log });
- * ```
- */
 export async function getBalance(userId: string, deps: WalletServiceDeps): Promise<number> {
   try {
     const amount = await deps.neo4j.withSession(async session => {
@@ -45,7 +21,7 @@ export async function getBalance(userId: string, deps: WalletServiceDeps): Promi
       }
 
       // Handle Neo4j integer conversion
-      const amountValue = result.records[0].get('w').properties.amount;
+      const amountValue = result.records[0]?.get('w').properties.amount;
       return typeof amountValue === 'object' && 'low' in amountValue ? amountValue.low : Number(amountValue);
     });
 
@@ -67,27 +43,92 @@ export async function getBalance(userId: string, deps: WalletServiceDeps): Promi
   }
 }
 
-/**
- * Update Balance For Payment
- *
- * Updates seller's wallet balance after a payment.
- * Applies 20% platform fee (seller receives 80% of payment).
- *
- * @param sellerId - The seller's unique identifier
- * @param balanceAmount - The payment amount before platform fee
- * @param deps - Service dependencies (neo4j, log)
- * @returns Promise resolving when balance is updated
- * @throws InternalServerError for unexpected errors
- *
- * Commission: 20% platform fee
- * Example: $100 payment → seller receives $80
- *
- * @example
- * ```typescript
- * await updateBalanceForPayment(sellerId, 100, { neo4j, log });
- * // Seller's wallet increases by $80
- * ```
- */
+export async function updateBalance(sellerId: string, balanceData: any, deps: WalletServiceDeps): Promise<number> {
+  try {
+    // Validate balanceData has required fields
+    if (!balanceData || typeof balanceData.amount !== 'number') {
+      deps.log?.warn({ sellerId, balanceData }, 'Invalid balance data: amount field is missing or not a number');
+      throw new BadRequestError('Invalid balance data: amount must be a number');
+    }
+
+    const amount = balanceData.amount;
+
+    const updatedAmount = await deps.neo4j.withSession(async session => {
+      // First, get the current balance
+      const currentResult = await session.executeRead(tx =>
+        tx.run('MATCH (w:wallet)<-[:HAS_A]-(s:seller {id: $sellerId}) RETURN w.amount as currentAmount', {
+          sellerId,
+        }),
+      );
+
+      if (currentResult.records.length === 0) {
+        return { success: false, amount: null, reason: 'not_found' };
+      }
+
+      // Handle Neo4j integer conversion for current balance
+      const currentAmountValue = currentResult.records[0]?.get('currentAmount');
+      const currentBalance =
+        typeof currentAmountValue === 'object' && 'low' in currentAmountValue
+          ? currentAmountValue.low
+          : Number(currentAmountValue);
+
+      // Calculate new balance
+      const newBalance = currentBalance + amount;
+
+      // Business rule: prevent negative balances
+      if (newBalance < 0) {
+        deps.log?.warn(
+          { sellerId, currentBalance, amount, wouldBeBalance: newBalance },
+          'Balance update rejected: would result in negative balance',
+        );
+        return { success: false, amount: null, reason: 'negative_balance', currentBalance, requestedAmount: amount };
+      }
+
+      // Perform the update
+      const result = await session.executeWrite(tx =>
+        tx.run('MATCH (w:wallet)<-[:HAS_A]-(s:seller {id: $sellerId}) SET w.amount = w.amount + $amount RETURN w', {
+          sellerId,
+          amount,
+        }),
+      );
+
+      if (result.records.length === 0) {
+        return { success: false, amount: null, reason: 'not_found' };
+      }
+
+      // Handle Neo4j integer conversion
+      const amountValue = result.records[0]?.get('w').properties.amount;
+      const finalAmount =
+        typeof amountValue === 'object' && 'low' in amountValue ? amountValue.low : Number(amountValue);
+
+      return { success: true, amount: finalAmount, reason: null };
+    });
+
+    if (!updatedAmount.success) {
+      if (updatedAmount.reason === 'not_found') {
+        deps.log?.warn({ sellerId }, 'Seller wallet not found for balance update');
+        throw new NotFoundError('Seller wallet not found');
+      } else if (updatedAmount.reason === 'negative_balance') {
+        throw new BadRequestError(
+          `Insufficient balance: current balance is ${updatedAmount.currentBalance}, cannot subtract ${Math.abs(updatedAmount.requestedAmount)}`,
+        );
+      }
+    }
+
+    deps.log?.info({ sellerId, amount, newBalance: updatedAmount.amount }, 'Updated wallet balance manually');
+    return updatedAmount.amount!;
+  } catch (error) {
+    if (error instanceof BadRequestError || error instanceof NotFoundError) {
+      throw error;
+    }
+
+    const errorMessage = error instanceof Error ? error.message : 'Unknown error';
+    deps.log?.error({ error: errorMessage, sellerId, balanceData }, 'Update balance failed');
+    throw new InternalServerError('Failed to update wallet balance');
+  }
+}
+
+
 export async function updateBalanceForPayment(
   sellerId: string,
   balanceAmount: number | string,
@@ -115,34 +156,13 @@ export async function updateBalanceForPayment(
   }
 }
 
-/**
- * Update Balance For Subscription
- *
- * Updates seller's wallet balance after a subscription payment.
- * Applies 30% platform fee (seller receives 70% of subscription).
- *
- * @param sellerId - The seller's unique identifier
- * @param balanceAmount - The subscription payment amount before platform fee
- * @param deps - Service dependencies (neo4j, log)
- * @returns Promise resolving to the updated wallet amount
- * @throws InternalServerError for unexpected errors
- *
- * Commission: 30% platform fee (higher than regular payments due to recurring nature)
- * Example: $100 subscription → seller receives $70
- *
- * @example
- * ```typescript
- * const newBalance = await updateBalanceForSubscription(sellerId, 100, { neo4j, log });
- * // Seller's wallet increases by $70, returns new balance
- * ```
- */
+
 export async function updateBalanceForSubscription(
   sellerId: string,
   balanceAmount: number | string,
   deps: WalletServiceDeps,
 ): Promise<number> {
   try {
-    // Calculate commission (30% platform fee for subscriptions)
     const amount = Number(balanceAmount);
     const sellerAmount = amount - (amount * 30) / 100;
 
@@ -159,7 +179,7 @@ export async function updateBalanceForSubscription(
       }
 
       // Handle Neo4j integer conversion
-      const amountValue = result.records[0].get('w').properties.amount;
+      const amountValue = result.records[0]?.get('w').properties.amount;
       return typeof amountValue === 'object' && 'low' in amountValue ? amountValue.low : Number(amountValue);
     });
 
@@ -193,35 +213,13 @@ export async function updateBalanceForSubscription(
 
 /**
  * @deprecated Deprecated class-based wallet service
- *
- * This class is deprecated. Use the exported functions instead:
- * - getBalance(userId, deps)
- * - updateBalanceForPayment(sellerId, amount, deps)
- * - updateBalanceForSubscription(sellerId, amount, deps)
- *
- * Migration Example:
- * ```typescript
- * // Old (deprecated):
- * const walletService = new walletService();
- * const balance = await walletService.getBalance(userId);
- *
- * // New (recommended):
- * import { getBalance } from '@/services/wallet.service';
- * const balance = await getBalance(userId, { neo4j, log });
- * ```
- *
- * The new functions use dependency injection which provides:
- * - Better testability (can mock dependencies)
- * - No session leaks (managed by neo4j plugin)
- * - Type-safe error handling
- * - Structured logging with context
- * - Framework-agnostic (works with Elysia, Express, etc.)
  */
 class walletService {
   constructor() {
     throw new Error(
       'walletService class is deprecated. Use exported functions instead:\n' +
         '- getBalance(userId, { neo4j, log })\n' +
+        '- updateBalance(sellerId, { amount }, { neo4j, log })\n' +
         '- updateBalanceForPayment(sellerId, amount, { neo4j, log })\n' +
         '- updateBalanceForSubscription(sellerId, amount, { neo4j, log })\n' +
         '\nSee file documentation for migration examples.',
@@ -230,40 +228,3 @@ class walletService {
 }
 
 export default walletService;
-
-/**
- * Migration Notes:
- *
- * This service has been refactored from class-based to functional approach with dependency injection.
- *
- * Key Changes:
- * - initializeDbConnection() → deps.neo4j.withSession() (from neo4j plugin)
- * - console.log() → deps.log?.info/error/warn() (structured logging)
- * - Manual session.close() → Automatic cleanup via withSession
- * - Class methods → Exported functions
- * - throw new Error() → throw new NotFoundError/InternalServerError
- *
- * Commission Rates:
- * - Regular payments: 20% platform fee (UpdateBalanceForPayment)
- * - Subscriptions: 30% platform fee (UpdateBalanceForSubscription)
- *
- * Dependencies:
- * - neo4j: Injected from neo4jPlugin via context
- * - log: Injected from loggerPlugin via context
- *
- * Usage in Routes:
- * ```typescript
- * import { getBalance } from '@/services/wallet.service';
- *
- * app.get('/balance/:userId', async ({ params, neo4j, log }) => {
- *   const balance = await getBalance(params.userId, { neo4j, log });
- *   return { balance };
- * });
- * ```
- *
- * Usage in Webhooks (app.ts):
- * ```typescript
- * await updateBalanceForPayment(sellerId, amount, { neo4j, log });
- * await updateBalanceForSubscription(sellerId, amount, { neo4j, log });
- * ```
- */

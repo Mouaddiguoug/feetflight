@@ -30,6 +30,20 @@ export const UserIdParamSchema = t.Object({
 export type UserIdParamDTO = Static<typeof UserIdParamSchema>;
 
 /**
+ * SellerIdParamSchema
+ * Use for validating seller ID parameter in routes
+ * Example: PUT /wallet/:sellerId
+ */
+export const SellerIdParamSchema = t.Object({
+  sellerId: t.String({
+    minLength: 1,
+    error: 'Seller ID is required',
+  }),
+});
+
+export type SellerIdParamDTO = Static<typeof SellerIdParamSchema>;
+
+/**
  * TokenParamSchema
  * Use for validating token parameter in routes
  * Example: GET /verify/:token

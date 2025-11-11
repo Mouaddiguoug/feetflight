@@ -1,7 +1,9 @@
 import NotificationService from '@/services/notification.service';
 import { NextFunction, Request, Response } from 'express';
-import { initializeDbConnection } from '@/app';
 
+/**
+ * @deprecated This Express controller is deprecated and will be removed in a future version.
+ */
 class NotificationController {
   public notificationService = new NotificationService();
 

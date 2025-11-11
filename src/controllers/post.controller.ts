@@ -1,6 +1,9 @@
 import { NextFunction, Request, Response } from 'express';
 import postService from '@/services/post.service';
 
+/**
+ * @deprecated This Express controller is deprecated and will be removed in a future version.
+ */
 class postController {
   public postService = new postService();
 

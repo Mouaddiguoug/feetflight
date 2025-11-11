@@ -52,14 +52,7 @@ export interface UserServiceDeps {
   resend?: Resend;
 }
 
-/**
- * Find user by ID
- *
- * @param userId - User ID to find
- * @param deps - Injected dependencies
- * @returns User data object
- * @throws NotFoundError if user doesn't exist
- */
+
 export async function findUserById(userId: string, deps: UserServiceDeps): Promise<any> {
   try {
     return await deps.neo4j.withSession(async session => {
@@ -96,15 +89,7 @@ export async function findUserById(userId: string, deps: UserServiceDeps): Promi
   }
 }
 
-/**
- * Generate AI pictures using OpenAI
- *
- * @param color - Nail polish color
- * @param category - Picture category
- * @param deps - Injected dependencies
- * @returns Array of generated images
- * @throws InternalServerError if generation fails
- */
+
 export async function generateAiPictures(color: string, category: string, deps: UserServiceDeps): Promise<any> {
   try {
     const openai = new OpenAi({
@@ -124,18 +109,7 @@ export async function generateAiPictures(color: string, category: string, deps: 
   }
 }
 
-/**
- * Change user password
- *
- * @param email - User email
- * @param userData - Object containing new password
- * @param deps - Injected dependencies
- * @param requesterId - Optional authenticated user ID for ownership validation
- * @returns Updated user data
- * @throws BadRequestError if userData is empty
- * @throws NotFoundError if user doesn't exist
- * @throws ForbiddenError if requester doesn't own the account
- */
+
 export async function changePassword(email: string, userData: any, deps: UserServiceDeps, requesterId?: string): Promise<any> {
   try {
     if (!userData?.data) {
@@ -182,14 +156,7 @@ export async function changePassword(email: string, userData: any, deps: UserSer
   }
 }
 
-/**
- * Email confirmation
- *
- * @param token - Email confirmation token
- * @param deps - Injected dependencies
- * @returns Confirmation status
- * @throws BadRequestError if token is invalid or already confirmed
- */
+
 export async function emailConfirming(token: string, deps: UserServiceDeps): Promise<any> {
   try {
     const tokenData = deps.auth.emailJwt.verify(token);
@@ -223,15 +190,7 @@ export async function emailConfirming(token: string, deps: UserServiceDeps): Pro
   }
 }
 
-/**
- * Update user profile
- *
- * @param userId - User ID
- * @param userData - Updated user data
- * @param deps - Injected dependencies
- * @returns Updated user data
- * @throws NotFoundError if user doesn't exist
- */
+
 export async function updateUser(userId: string, userData: any, deps: UserServiceDeps): Promise<any> {
   try {
     const existUser = await findUserById(userId, deps);
@@ -256,23 +215,14 @@ export async function updateUser(userId: string, userData: any, deps: UserServic
   }
 }
 
-/**
- * Buy posts (create Stripe checkout session)
- *
- * @param userId - User ID
- * @param saleData - Object containing posts to buy
- * @param deps - Injected dependencies
- * @returns Stripe checkout URL
- * @throws InternalServerError if Stripe is not available
- * @throws ConflictError if all posts are already bought
- */
+
 export async function buyPosts(userId: string, saleData: any, deps: UserServiceDeps): Promise<string> {
   if (!deps.stripe) {
     throw new InternalServerError('Stripe is not configured');
   }
 
   try {
-    const pricesPromises = await saleData.data.posts.map(post => {
+    const pricesPromises = await saleData.data.posts.map((post: { id: string; }) => {
       return checkForSale(userId, post.id, deps).then(exists => {
         if (exists) return null;
         return deps.stripe?.prices
@@ -291,7 +241,7 @@ export async function buyPosts(userId: string, saleData: any, deps: UserServiceD
       throw new ConflictError('All posts selected have already been bought by this user');
     }
 
-    const sellersPromises = await saleData.data.posts.map(post => {
+    const sellersPromises = await saleData.data.posts.map((post: { id: string; }) => {
       return deps?.stripe?.products.retrieve(post.id).then(product => {
         return deps?.stripe?.prices
           .list({
@@ -329,13 +279,7 @@ export async function buyPosts(userId: string, saleData: any, deps: UserServiceD
   }
 }
 
-/**
- * Get sellers by post ID
- *
- * @param postId - Post ID
- * @param deps - Injected dependencies
- * @returns Array of seller data
- */
+
 export async function getSellersByPostId(postId: string, deps: UserServiceDeps): Promise<any> {
   try {
     return await deps.neo4j.withSession(async session => {
@@ -352,14 +296,7 @@ export async function getSellersByPostId(postId: string, deps: UserServiceDeps):
   }
 }
 
-/**
- * Generate OTP and send email
- *
- * @param email - User email
- * @param deps - Injected dependencies
- * @returns OTP hash (for verification)
- * @throws InternalServerError if Resend is not available or email sending fails
- */
+
 export async function generateOtp(email: string, deps: UserServiceDeps): Promise<string> {
   if (!deps.resend) {
     throw new InternalServerError('Resend is not configured');
@@ -397,15 +334,7 @@ export async function generateOtp(email: string, deps: UserServiceDeps): Promise
   }
 }
 
-/**
- * Verify OTP
- *
- * @param otpSettings - Object containing otp and hash
- * @param email - User email
- * @param deps - Injected dependencies
- * @returns Object with tokenData, user data, and role
- * @throws BadRequestError if OTP is expired or invalid
- */
+
 export async function verifyOtp(otpSettings: any, email: string, deps: UserServiceDeps): Promise<any> {
   try {
     const [hashedValue, expiresIn] = otpSettings.hash.split('.');
@@ -448,15 +377,7 @@ export async function verifyOtp(otpSettings: any, email: string, deps: UserServi
   }
 }
 
-/**
- * Buy post (create purchase relationship)
- *
- * @param postId - Post ID
- * @param userId - User ID
- * @param sellerId - Seller ID
- * @param amount - Purchase amount
- * @param deps - Injected dependencies
- */
+
 export async function buyPost(postId: string, userId: string, deps: UserServiceDeps): Promise<void> {
   try {
     await deps.neo4j.withSession(async session => {
@@ -473,16 +394,7 @@ export async function buyPost(postId: string, userId: string, deps: UserServiceD
   }
 }
 
-/**
- * Subscribe to seller (create Stripe subscription checkout session)
- *
- * @param userId - User ID
- * @param subscriptionData - Subscription data
- * @param deps - Injected dependencies
- * @returns Stripe session object
- * @throws InternalServerError if Stripe is not available
- * @throws ConflictError if already subscribed
- */
+
 export async function subscribe(userId: string, subscriptionData: any, deps: UserServiceDeps): Promise<any> {
   if (!deps.stripe) {
     throw new InternalServerError('Stripe is not configured');
@@ -526,15 +438,7 @@ export async function subscribe(userId: string, subscriptionData: any, deps: Use
   }
 }
 
-/**
- * Unlock sent picture (create Stripe checkout session)
- *
- * @param userId - User ID
- * @param unlockSentPictureData - Picture data
- * @param deps - Injected dependencies
- * @returns Stripe checkout URL
- * @throws InternalServerError if Stripe is not available
- */
+
 export async function unlockSentPicture(userId: string, unlockSentPictureData: any, deps: UserServiceDeps): Promise<string> {
   if (!deps.stripe) {
     throw new InternalServerError('Stripe is not configured');
@@ -581,13 +485,7 @@ export async function unlockSentPicture(userId: string, unlockSentPictureData: a
   }
 }
 
-/**
- * Sign out user (clear device token)
- *
- * @param userId - User ID
- * @param deps - Injected dependencies
- * @returns true if successful
- */
+
 export async function signOut(userId: string, deps: UserServiceDeps): Promise<boolean> {
   try {
     await deps.neo4j.withSession(async session => {
@@ -605,17 +503,7 @@ export async function signOut(userId: string, deps: UserServiceDeps): Promise<bo
   }
 }
 
-/**
- * Create subscription in database
- *
- * @param subscriptionId - Stripe subscription ID
- * @param userId - User ID
- * @param sellerId - Seller ID
- * @param subscriptionPlanTitle - Plan title
- * @param subscriptionPlanPrice - Plan price
- * @param deps - Injected dependencies
- * @throws ConflictError if already subscribed
- */
+
 export async function createSubscriptioninDb(
   subscriptionId: string,
   userId: string,
@@ -652,16 +540,7 @@ export async function createSubscriptioninDb(
   }
 }
 
-/**
- * Cancel subscription
- *
- * @param userId - User ID
- * @param sellerId - Seller ID
- * @param deps - Injected dependencies
- * @returns Success message
- * @throws InternalServerError if Stripe is not available
- * @throws NotFoundError if no subscription found
- */
+
 export async function cancelSubscription(userId: string, sellerId: string, deps: UserServiceDeps): Promise<any> {
   if (!deps.stripe) {
     throw new InternalServerError('Stripe is not configured');
@@ -702,14 +581,7 @@ export async function cancelSubscription(userId: string, sellerId: string, deps:
   }
 }
 
-/**
- * Check if user has already bought a post
- *
- * @param userId - User ID
- * @param postId - Post ID
- * @param deps - Injected dependencies
- * @returns true if post is already bought
- */
+
 export async function checkForSale(userId: string, postId: string, deps: UserServiceDeps): Promise<boolean> {
   try {
     return await deps.neo4j.withSession(async session => {
@@ -728,13 +600,7 @@ export async function checkForSale(userId: string, postId: string, deps: UserSer
   }
 }
 
-/**
- * Get seller plans
- *
- * @param userId - User ID
- * @param deps - Injected dependencies
- * @returns Array of plan data
- */
+
 export async function getSellerPlans(userId: string, deps: UserServiceDeps): Promise<any> {
   try {
     return await deps.neo4j.withSession(async session => {
@@ -752,14 +618,7 @@ export async function getSellerPlans(userId: string, deps: UserServiceDeps): Pro
   }
 }
 
-/**
- * Check if user is subscribed to seller
- *
- * @param userId - User ID
- * @param sellerId - Seller ID
- * @param deps - Injected dependencies
- * @returns true if subscribed
- */
+
 export async function checkForSubscription(userId: string, sellerId: string, deps: UserServiceDeps): Promise<boolean> {
   try {
     return await deps.neo4j.withSession(async session => {
@@ -778,13 +637,7 @@ export async function checkForSubscription(userId: string, sellerId: string, dep
   }
 }
 
-/**
- * Contact form submission
- *
- * @param contactData - Contact form data
- * @param deps - Injected dependencies
- * @throws InternalServerError if Resend is not available or email sending fails
- */
+
 export async function contact(contactData: any, deps: UserServiceDeps): Promise<void> {
   if (!deps.resend) {
     throw new InternalServerError('Resend is not configured');
@@ -809,15 +662,7 @@ export async function contact(contactData: any, deps: UserServiceDeps): Promise<
   }
 }
 
-/**
- * Check if user is subscribed to seller by post ID
- *
- * @param userId - User ID
- * @param postId - Post ID
- * @param plan - Subscription plan title
- * @param deps - Injected dependencies
- * @returns true if subscribed
- */
+
 export async function checkForSubscriptionbyUserId(userId: string, postId: string, plan: string, deps: UserServiceDeps): Promise<boolean> {
   try {
     return await deps.neo4j.withSession(async session => {
@@ -840,14 +685,7 @@ export async function checkForSubscriptionbyUserId(userId: string, postId: strin
   }
 }
 
-/**
- * Get followed sellers
- *
- * @param userId - User ID
- * @param role - User role (Buyer or Seller)
- * @param deps - Injected dependencies
- * @returns Array of user data
- */
+
 export async function getFollowedSellers(userId: string, role: string, deps: UserServiceDeps): Promise<any> {
   try {
     return await deps.neo4j.withSession(async session => {
@@ -867,7 +705,9 @@ export async function getFollowedSellers(userId: string, role: string, deps: Use
       }
 
       return role === RolesEnum.BUYER
-        ? followedSellers.records.map(record => record.get('user').properties)
+      //@ts-ignore
+      ? followedSellers.records.map(record => record.get('user').properties)
+      //@ts-ignore
         : followedSellers.records.map(record => record.get('buyerUser').properties);
     });
   } catch (error) {
@@ -876,14 +716,7 @@ export async function getFollowedSellers(userId: string, role: string, deps: Use
   }
 }
 
-/**
- * Upload avatar
- *
- * @param avatarData - File data
- * @param userId - User ID
- * @param deps - Injected dependencies
- * @throws InternalServerError if file write fails
- */
+
 export async function uploadAvatar(avatarData: any, userId: string, deps: UserServiceDeps): Promise<void> {
   try {
     /* AWS S3 code (commented for reference)
@@ -918,13 +751,6 @@ export async function uploadAvatar(avatarData: any, userId: string, deps: UserSe
   }
 }
 
-/**
- * Upload avatar to database
- *
- * @param location - Avatar file path
- * @param userId - User ID
- * @param deps - Injected dependencies
- */
 export async function uploadAvatarToDb(location: string, userId: string, deps: UserServiceDeps): Promise<void> {
   try {
     await deps.neo4j.withSession(async session => {
@@ -941,13 +767,7 @@ export async function uploadAvatarToDb(location: string, userId: string, deps: U
   }
 }
 
-/**
- * Upload device token
- *
- * @param userId - User ID
- * @param token - Device token
- * @param deps - Injected dependencies
- */
+
 export async function uploadDeviceToken(userId: string, token: string, deps: UserServiceDeps): Promise<void> {
   try {
     await deps.neo4j.withSession(async session => {
@@ -964,13 +784,7 @@ export async function uploadDeviceToken(userId: string, token: string, deps: Use
   }
 }
 
-/**
- * Deactivate user
- *
- * @param userId - User ID
- * @param deps - Injected dependencies
- * @returns Deactivated user data
- */
+
 export async function desactivateUser(userId: string, deps: UserServiceDeps): Promise<any> {
   try {
     return await deps.neo4j.withSession(async session => {
@@ -989,15 +803,6 @@ export async function desactivateUser(userId: string, deps: UserServiceDeps): Pr
 
 /**
  * @deprecated UserService class is deprecated. Use Elysia route handlers with injected service functions instead.
- *
- * This class is kept for backward compatibility with the Express controller during migration.
- * All methods throw errors directing developers to use the new Elysia routes.
- *
- * Migration:
- * - Old: Route → Controller → Service (class)
- * - New: Route (with inline handler) → Service (functions with dependency injection)
- *
- * @see src/routes/users.route.ts for the new Elysia implementation
  */
 class UserService {
   public prices = [];

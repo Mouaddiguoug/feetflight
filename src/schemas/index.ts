@@ -2,8 +2,19 @@
  * Central export point for all TypeBox validation schemas.
  * Import schemas from this file in route handlers for consistent validation across the application.
  *
+ * Available schemas:
+ * - Auth schemas (signup, login, password management)
+ * - User schemas (profile updates, OTP verification, subscriptions)
+ * - Seller schemas (subscription plans, payout accounts, withdrawals)
+ * - Post schemas (create, like, album operations)
+ * - File schemas (avatar, identity card, post pictures, sent pictures)
+ * - Common schemas (ID params, pagination)
+ * - Wallet schemas (balance updates)
+ * - Admin schemas (identity card retrieval)
+ * - Notifications schemas (push notifications)
+ *
  * Example usage:
- * import { SignupSchema, LoginSchema, CreatePostSchema } from '@/schemas';
+ * import { SignupSchema, LoginSchema, CreatePostSchema, UpdateBalanceSchema } from '@/schemas';
  */
 
 // Auth schemas
@@ -92,8 +103,28 @@ export {
   type IdParamDTO,
   UserIdParamSchema,
   type UserIdParamDTO,
+  SellerIdParamSchema,
+  type SellerIdParamDTO,
   TokenParamSchema,
   type TokenParamDTO,
   PaginationQuerySchema,
   type PaginationQueryDTO,
 } from './common.schema';
+
+// Wallet schemas
+export {
+  UpdateBalanceSchema,
+  type UpdateBalanceDTO,
+} from './wallet.schema';
+
+// Admin schemas
+export {
+  GetIdentityCardParamSchema,
+  type GetIdentityCardParamDTO,
+} from './admin.schema';
+
+// Notifications schemas
+export {
+  PushNotificationSchema,
+  type PushNotificationDTO,
+} from './notifications.schema';

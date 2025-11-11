@@ -1,6 +1,9 @@
 import { NextFunction, Request, Response } from 'express';
 import sellerService from '@services/seller.service';
 
+/**
+ * @deprecated This Express controller is deprecated and will be removed in a future version.
+ */
 class sellerController {
   public sellerService = new sellerService();
 

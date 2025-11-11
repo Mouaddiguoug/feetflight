@@ -1,26 +1,31 @@
-import { initializeDbConnection } from '@/app';
 import { uid } from 'uid';
-import path from 'path';
 import moment from 'moment';
-import admin from 'firebase-admin';
 import { getMessaging } from 'firebase-admin/messaging';
-import Stripe from 'stripe';
-import UserService from './users.service';
+import {
+  InternalServerError
+} from '@/plugins/error.plugin';
+import type { Session } from 'neo4j-driver';
+import { Tneo4j } from '@/plugins/neo4j.plugin';
+import { Logger } from 'pino';
+export interface NotificationServiceDeps {
+  neo4j: Tneo4j;
+  log?: Logger;
+}
 
-class NotificationService {
-  private stripe = new Stripe(process.env.STRIPE_TEST_KEY, { apiVersion: '2022-11-15' });
-  public userService = new UserService();
+export async function getNotifications(userId: string, deps: NotificationServiceDeps): Promise<any[]> {
+  const { neo4j, log } = deps;
 
-  public async getNotofications(userId: String) {
-    const getNotoficationsSession = initializeDbConnection().session({ database: 'neo4j' });
-    try {
-      const notifications = await getNotoficationsSession.executeRead(tx =>
-        tx.run('match (notification:notification)<-[:got_notified]-(u:user {id: $userId}) return notification order by notification.time desc', {
-          userId: userId,
-        }),
+  try {
+    const notifications = await neo4j.withSession(async (session: Session) => {
+      const result = await session.executeRead(tx =>
+        tx.run(
+          'MATCH (notification:notification)<-[:got_notified]-(u:user {id: $userId}) RETURN notification ORDER BY notification.time DESC',
+          { userId }
+        )
       );
 
-      notifications.records.map(record => {
+      // Format time for each notification
+      result.records.forEach(record => {
         const days = moment().diff(record.get('notification').properties.time, 'days');
         const hours = moment().diff(record.get('notification').properties.time, 'hours');
         const minutes = moment().diff(record.get('notification').properties.time, 'minutes');
@@ -49,27 +54,39 @@ class NotificationService {
         }
       });
 
-      return notifications.records.map(record => record.get('notification').properties);
-    } catch (error) {
-      console.log(error);
-    } finally {
-      getNotoficationsSession.close();
-    }
+      return result.records.map(record => record.get('notification').properties);
+    });
+
+    return notifications;
+  } catch (error) {
+    log?.error({ error, userId }, 'Get notifications failed');
+    throw new InternalServerError(`Failed to get notifications: ${error instanceof Error ? error.message : 'Unknown error'}`);
   }
+}
 
-  public async pushMessageNotification(userId: string, title: string, body: string, avatar: string) {
-    const pushNotificatonsSession = initializeDbConnection().session({ database: 'neo4j' });
-    const getTokensSession = initializeDbConnection().session({ database: 'neo4j' });
+export async function pushMessageNotification(
+  userId: string,
+  title: string,
+  body: string,
+  avatar: string,
+  deps: NotificationServiceDeps
+): Promise<void> {
+  const { neo4j, log } = deps;
 
-    try {
-      const deviceToken = await getTokensSession.executeRead(tx =>
-        tx.run('match (user:user {id: $userId})-[:logged_in_with]->(deviceToken:deviceToken) return deviceToken', {
-          userId: userId,
-        }),
+  try {
+    await neo4j.withSession(async (session: Session) => {
+      // Get device token
+      const deviceTokenResult = await session.executeRead(tx =>
+        tx.run(
+          'MATCH (user:user {id: $userId})-[:logged_in_with]->(deviceToken:deviceToken) RETURN deviceToken',
+          { userId }
+        )
       );
 
-      if (deviceToken.records.length > 0) {
-        console.log(`${process.env.DOMAIN}${avatar}`);
+      if (deviceTokenResult.records.length > 0) {
+        const deviceToken = deviceTokenResult.records[0]?.get('deviceToken').properties.token;
+
+        log?.info({ userId, avatar: `${process.env.DOMAIN}${avatar}` }, 'Sending push notification');
 
         const message = {
           notification: {
@@ -102,72 +119,132 @@ class NotificationService {
                 },
               }
             : {},
-          token: deviceToken.records.map(record => record.get('deviceToken').properties.token)[0],
+          token: deviceToken,
         };
 
-        getMessaging()
-          .send(message)
-          .then(res => {
-            console.log('successfully sent');
-          })
-          .catch(error => {
-            console.log(error);
-          });
+        try {
+          await getMessaging().send(message);
+          log?.info({ userId }, 'Push notification sent successfully');
+        } catch (error) {
+          // Log Firebase errors but don't throw (graceful degradation)
+          log?.error({ error, userId }, 'Firebase push notification failed');
+        }
+      } else {
+        log?.info({ userId }, 'No device token found, skipping push notification');
       }
-    } catch (error) {
-      console.log(error);
-    } finally {
-      pushNotificatonsSession.close();
-    }
+    });
+  } catch (error) {
+    log?.error({ error, userId }, 'Push message notification failed');
+    throw new InternalServerError(`Failed to push message notification: ${error instanceof Error ? error.message : 'Unknown error'}`);
   }
+}
 
-  public async pushSellerNotificatons(sellerId: string, title: string, body: string) {
-    const pushNotificatonsSession = initializeDbConnection().session({ database: 'neo4j' });
-    const getTokensSession = initializeDbConnection().session({ database: 'neo4j' });
 
-    try {
-      const deviceToken = await getTokensSession.executeRead(tx =>
-        tx.run('match (seller {id: $sellerId})<-[:IS_A]-(user:user)-[:logged_in_with]->(deviceToken:deviceToken) return deviceToken', {
-          sellerId: sellerId,
-        }),
+export async function pushSellerNotifications(
+  sellerId: string,
+  title: string,
+  body: string,
+  deps: NotificationServiceDeps
+): Promise<void> {
+  const { neo4j, log } = deps;
+
+  try {
+    await neo4j.withSession(async (session: Session) => {
+      // Get device token
+      const deviceTokenResult = await session.executeRead(tx =>
+        tx.run(
+          'MATCH (seller {id: $sellerId})<-[:IS_A]-(user:user)-[:logged_in_with]->(deviceToken:deviceToken) RETURN deviceToken',
+          { sellerId }
+        )
       );
 
-      if (deviceToken.records.length > 0) {
+      // Send Firebase push notification if device token exists
+      if (deviceTokenResult.records.length > 0) {
+        const deviceToken = deviceTokenResult.records[0]?.get('deviceToken').properties.token;
+
         const message = {
           notification: {
             title: title,
             body: body,
           },
-          token: deviceToken.records.map(record => record.get('deviceToken').properties.token)[0],
+          token: deviceToken,
         };
 
-        getMessaging()
-          .send(message)
-          .then(res => {
-            console.log('successfully sent');
-          })
-          .catch(error => {
-            console.log(error);
-          });
+        try {
+          await getMessaging().send(message);
+          log?.info({ sellerId }, 'Push notification sent successfully to seller');
+        } catch (error) {
+          // Log Firebase errors but don't throw (graceful degradation)
+          log?.error({ error, sellerId }, 'Firebase push notification failed for seller');
+        }
+      } else {
+        log?.info({ sellerId }, 'No device token found for seller, skipping push notification');
       }
 
-      await pushNotificatonsSession.executeWrite(tx =>
+      // Create notification node in database
+      await session.executeWrite(tx =>
         tx.run(
-          'match (seller {id: $sellerId})<-[:IS_A]-(user:user) create (user)-[:got_notified]->(notification:notification {id: $notificationsId, title: $title, body: $body, time: $time}) return notification',
+          'MATCH (seller {id: $sellerId})<-[:IS_A]-(user:user) CREATE (user)-[:got_notified]->(notification:notification {id: $notificationsId, title: $title, body: $body, time: $time}) RETURN notification',
           {
             sellerId: sellerId,
             notificationsId: uid(10),
             title: title,
             body: body,
             time: moment().format('MMMM DD, YYYY, h:mm:ss a'),
-          },
-        ),
+          }
+        )
       );
-    } catch (error) {
-      console.log(error);
-    } finally {
-      pushNotificatonsSession.close();
+
+      log?.info({ sellerId }, 'Notification created in database for seller');
+    });
+  } catch (error) {
+    log?.error({ error, sellerId }, 'Push seller notifications failed');
+    throw new InternalServerError(`Failed to push seller notifications: ${error instanceof Error ? error.message : 'Unknown error'}`);
+  }
+}
+
+class NotificationService {
+  private deps: NotificationServiceDeps;
+
+  constructor(deps?: NotificationServiceDeps) {
+    if (!deps) {
+      throw new Error(
+        'NotificationService now requires dependencies to be passed to constructor. ' +
+          'Pass { neo4j, log } to the constructor, or use the exported functions directly.'
+      );
     }
+    this.deps = deps;
+  }
+
+  /**
+   * @deprecated Use the exported getNotifications() function instead
+   * Note: Typo was fixed - this method was originally named getNotofications
+   */
+  public async getNotofications(userId: string): Promise<any> {
+    return getNotifications(userId, this.deps);
+  }
+
+  /**
+   * @deprecated Use the exported pushMessageNotification() function instead
+   */
+  public async pushMessageNotification(userId: string, title: string, body: string, avatar: string): Promise<any> {
+    return pushMessageNotification(userId, title, body, avatar, this.deps);
+  }
+
+  /**
+   * Legacy method with typo - kept for backward compatibility
+   * @deprecated Use pushSellerNotifications() (correct spelling) or the exported function
+   */
+  public async pushSellerNotificatons(sellerId: string, title: string, body: string): Promise<any> {
+    return pushSellerNotifications(sellerId, title, body, this.deps);
+  }
+
+  /**
+   * @deprecated Use the exported pushSellerNotifications() function instead
+   * Note: This is the correctly spelled version of pushSellerNotificatons
+   */
+  public async pushSellerNotifications(sellerId: string, title: string, body: string): Promise<any> {
+    return pushSellerNotifications(sellerId, title, body, this.deps);
   }
 }
 

@@ -1,6 +1,9 @@
 import { NextFunction, Request, Response } from 'express';
 import adminService from '@/services/admin.service';
 
+/**
+ * @deprecated This Express controller is deprecated and will be removed in a future version.
+ */
 class AdminController {
   public adminService = new adminService();
 
