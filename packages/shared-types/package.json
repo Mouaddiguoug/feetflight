@@ -1,0 +1,21 @@
+{
+  "name": "@feetflight/shared-types",
+  "version": "0.0.1",
+  "private": true,
+  "description": "Shared TypeBox validation schemas and TypeScript types for FeetFlight monorepo",
+  "type": "module",
+  "main": "./src/index.ts",
+  "exports": {
+    ".": "./src/index.ts"
+  },
+  "peerDependencies": {
+    "elysia": ">=1.0.0",
+    "@sinclair/typebox": ">=0.32.0"
+  },
+  "devDependencies": {
+    "elysia": "latest",
+    "@sinclair/typebox": "latest",
+    "typescript": "latest",
+    "bun-types": "latest"
+  }
+}

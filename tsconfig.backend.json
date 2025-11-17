@@ -1,0 +1,31 @@
+{
+  "extends": "./tsconfig.base.json",
+  "compilerOptions": {
+    /* Emit */
+    "noEmit": true,
+    "declaration": true,
+    "declarationMap": true,
+
+    /* Bun-specific */
+    "types": ["bun-types"],
+
+    /* Path Mapping - Backend specific paths */
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["src/*"],
+      "@config/*": ["src/config/*"],
+      "@controllers/*": ["src/controllers/*"],
+      "@models/*": ["src/models/*"],
+      "@routes/*": ["src/routes/*"],
+      "@services/*": ["src/services/*"],
+      "@utils/*": ["src/utils/*"],
+      "@middlewares/*": ["src/middlewares/*"],
+      "@types/*": ["src/types/*"],
+      "@plugins/*": ["src/plugins/*"],
+      "@feetflight/shared-types": ["packages/shared-types/src/index.ts"],
+      "@feetflight/shared-utils": ["packages/shared-utils/src/index.ts"]
+    }
+  },
+  "include": ["src/**/*"],
+  "exclude": ["node_modules", "dist", "build", "**/*.spec.ts", "**/*.test.ts", "src/middlewares", "src/controllers"]
+}

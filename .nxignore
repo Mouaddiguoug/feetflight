@@ -1,0 +1,19 @@
+# Exclude node_modules from Nx project graph
+node_modules/
+
+# Exclude build outputs
+dist/
+tmp/
+
+# Exclude logs
+*.log
+
+# Exclude environment files (except example)
+.env*
+!.env.example
+
+# Exclude coverage reports
+coverage/
+
+# Exclude documentation
+docs/
