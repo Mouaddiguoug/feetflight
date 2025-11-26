@@ -20,13 +20,13 @@ export const neo4jPlugin = () => {
 
         if (!uri || !username || !password) {
           throw new Error(
-            'Neo4j connection credentials are not properly configured. Please check NEO4J_URI, NEO4J_USERNAME, and NEO4J_PASSWORD environment variables.'
+            'Neo4j connection credentials are not properly configured. Please check NEO4J_URI, NEO4J_USERNAME, and NEO4J_PASSWORD environment variables.',
           );
         }
 
         driverInstance = neo4j.driver(uri, neo4j.auth.basic(username, password));
 
-        await driverInstance.verifyConnectivity();
+        await driverInstance.verifyConnectivity()
         appLogger.info('Neo4j driver connected successfully');
       } catch (error) {
         if (driverInstance) {
@@ -52,10 +52,7 @@ export const neo4jPlugin = () => {
         }
         return driverInstance.session(config);
       },
-      async withSession<T>(
-        callback: (session: Session) => Promise<T>,
-        config?: SessionConfig
-      ): Promise<T> {
+      async withSession<T>(callback: (session: Session) => Promise<T>, config?: SessionConfig): Promise<T> {
         if (!driverInstance) {
           throw new Error('Neo4j driver not initialized');
         }
@@ -72,11 +69,6 @@ export const neo4jPlugin = () => {
         await driverInstance.close();
         driverInstance = null;
       }
-      if (driverInstance) {
-        await driverInstance.close();
-        appLogger.info('Neo4j driver closed');
-        driverInstance = null;
-      }
     });
 };
 
@@ -84,4 +76,4 @@ export type Tneo4j = {
   readonly driver: Driver;
   getSession(config?: SessionConfig): Session;
   withSession<T>(callback: (session: Session) => Promise<T>, config?: SessionConfig): Promise<T>;
-};
+}

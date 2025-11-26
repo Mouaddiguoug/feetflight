@@ -1,3 +1,4 @@
+import { RolesEnum } from './../enums/RolesEnums';
 import { hash, compare } from 'bcrypt';
 import { RolesEnum } from '../enums/RolesEnums';
 import { uid } from 'uid';
@@ -385,6 +386,113 @@ async function signupSeller(
   } catch (error) {
     log?.error({ error, email }, 'Seller signup failed');
     throw error;
+  }
+}
+
+/**
+ * Waitlist Service Function
+ *
+ * Adds a new user's email to the waitlist by creating a minimal Neo4j user node
+ * and linking it as either a buyer or seller.
+ *
+ * @param userData - Waitlist data containing email and role
+ * @param deps - Injected dependencies (neo4j, log)
+ * @returns Promise resolving to a success message
+ * @throws {BadRequestError} - Missing email or invalid role
+ * @throws {ConflictError} - Email already exists
+ * @throws {InternalServerError} - Database failures
+ */
+export async function waitlist(
+  userData: { data: { email: string; role: typeof RolesEnum.SELLER | typeof RolesEnum.BUYER } },
+  deps: AuthServiceDeps
+): Promise<{ message: string }> {
+  const { neo4j, log } = deps;
+
+  if (!userData?.data || !userData.data.email || !userData.data.role) {
+    throw new BadRequestError('Missing required fields: email and role');
+  }
+
+  if (!neo4j) {
+    throw new InternalServerError('Neo4j database client not available');
+  }
+
+  const email = userData.data.email;
+  const role = userData.data.role;
+  const userId = uid(40); // Generate a unique ID for the minimal user node
+  const createdAt = moment().format('MMMM DD, YYYY');
+
+  if (role !== RolesEnum.SELLER && role !== RolesEnum.BUYER) {
+    throw new BadRequestError('Invalid role specified. Must be SELLER or BUYER');
+  }
+
+  try {
+    const result = await neo4j.withSession(async (session: Session) => {
+      // Check if user already exists
+      const existingUser = await session.executeRead((tx) =>
+        tx.run('MATCH (u:user {email: $email}) RETURN u', { email })
+      );
+
+      if (existingUser.records.length > 0) {
+        throw new ConflictError(`This email ${email} is already on the waitlist or registered`);
+      }
+
+      let query;
+      let params = {
+        userId,
+        email,
+        createdAt,
+        roleId: uid(40), // Unique ID for the specific role node (buyer/seller)
+        roleLabel: role === RolesEnum.SELLER ? 'Seller' : 'Buyer',
+      };
+
+      // Create a minimal user node and link it to the appropriate role node
+      // Note: Minimal user node has confirmed=false, verified=false, desactivated=true
+      // because they are just on the waitlist and inactive.
+      if (role === RolesEnum.SELLER) {
+        query = `
+          CREATE (u:user {
+            id: $userId,
+            email: $email,
+            createdAt: $createdAt
+          })
+          CREATE (u)-[:IS_A]->(:seller {id: $roleId, verified: false})
+          RETURN u
+        `;
+      } else {
+        // RolesEnum.BUYER
+        query = `
+          CREATE (u:user {
+            id: $userId,
+            email: $email,
+            createdAt: $createdAt
+          })
+          CREATE (u)-[:IS_A]->(:buyer {id: $roleId})
+          RETURN u
+        `;
+      }
+
+      const createResult = await session.executeWrite((tx) => tx.run(query, params));
+      return createResult.records.length > 0;
+    });
+
+    if (result) {
+      log?.info({ email, role }, 'User successfully added to waitlist');
+      return { message: `Email ${email} successfully added to the ${role} waitlist` };
+    } else {
+      throw new InternalServerError('Failed to create waitlist user in Neo4j');
+    }
+  } catch (error) {
+    log?.error({ error, email, role }, 'Waitlist failed');
+
+    // Re-throw custom errors
+    if (error instanceof BadRequestError || error instanceof ConflictError) {
+      throw error;
+    }
+
+    // Wrap unexpected errors
+    throw new InternalServerError(
+      `Waitlist failed: ${error instanceof Error ? error.message : 'Unknown error'}`
+    );
   }
 }
 

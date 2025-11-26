@@ -5,7 +5,7 @@ const app = createApp();
 
 const port = Number(Bun.env.PORT || process.env.PORT || 3000);
 
-app.listen(port, () => {
+app.listen(8000, () => {
   appLogger.info(
     `======= ENV: ${Bun.env.NODE_ENV || process.env.NODE_ENV || 'development'} =======`
   );

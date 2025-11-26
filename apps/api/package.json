@@ -29,6 +29,7 @@
     "@labzzhq/compressor": "^1.1.1",
     "@react-email/components": "^1.0.1",
     "@react-email/render": "^2.0.0",
+    "@sinclair/typebox": "^0.34.41",
     "@vonage/server-sdk": "^3.25.1",
     "aws-sdk": "^2.1692.0",
     "bcrypt": "^6.0.0",

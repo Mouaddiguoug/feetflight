@@ -19,6 +19,7 @@ import {
   AvatarUploadSchema,
   IdParamSchema,
   TokenParamSchema,
+  SignupSchema,
 } from '@feetflight/shared-types';
 import { authGuard, authPlugin, ForbiddenError, loggerPlugin, neo4jPlugin } from '@/plugins';
 import {
@@ -46,6 +47,8 @@ import {
 } from '@/services/users.service';
 import { stripe } from '@/utils/stripe';
 import { resend } from '@/utils/resend';
+import { waitlist } from '@/services/auth.service';
+import { WaitlistSchema } from 'node_modules/@feetflight/shared-types/src/auth.schema';
 
 export function usersRoutes() {
   return new Elysia({ name: 'routes.users' }).group('/users', (app) =>
@@ -152,6 +155,29 @@ export function usersRoutes() {
             tags: ['Users'],
             summary: 'Contact Form',
             description: 'Submits contact form and sends email to admin',
+          },
+        }
+      )
+
+      .post(
+        '/waitlist',
+        async ({ body, auth, neo4j, set, log }) => {
+          try {
+            const result = await waitlist(body, { auth, neo4j, log, stripe, resend });
+
+            set.status = 201;
+
+            return result;
+          } catch (error) {
+            throw error;
+          }
+        },
+        {
+          body: WaitlistSchema,
+          detail: {
+            tags: ['Authentication'],
+            summary: 'User Registration Waitlist',
+            description: 'Register a new user on the waitlist',
           },
         }
       )

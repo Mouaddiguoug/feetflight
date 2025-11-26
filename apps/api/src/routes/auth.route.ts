@@ -14,6 +14,7 @@ import {
   logout,
   changePassword,
   resendVerificationEmail,
+  waitlist,
 } from '@/services/auth.service';
 import { stripe } from '@/utils/stripe';
 import { resend } from '@/utils/resend';
