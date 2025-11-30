@@ -1,3 +1,6 @@
 {
-    "rewrites": [{ "source": "/(.*)", "destination": "/api" }]
+  "buildCommand": "cd apps/api && bun install && bun run build",
+  "outputDirectory": "apps/api/dist",
+  "installCommand": "bun install",
+  "framework": null
 }

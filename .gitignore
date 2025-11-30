@@ -1,4 +1,65 @@
+# Node/Bun
 /node_modules
+
+# Nx
+.nx/cache
+.nx/workspace-data
+.nx/
+
+# Build outputs
 dist
+build/
+tmp/
+out/
 logs
+
+# App-specific outputs
+apps/*/dist/
+apps/*/build/
+apps/*/logs/
+apps/*/node_modules/
+
+# Coverage
+coverage/
+
+# Cache
+.eslintcache
+.jest/
+.vitest/
+.swc/
+
+# Environment files
 .env.development.local
+.env.local
+.env*.local
+!.env.example
+
+# App-specific environment files
+apps/*/.env
+apps/*/.env.local
+apps/*/.env*.local
+!apps/*/.env.example
+
+# Editors/OS
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/*
+!.vscode/extensions.json
+!.vscode/settings.json
+
+# Logs
+*.log
+.pnpm-debug.log*
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Framework-specific
+.next/
+.vercel/
+.cache/
+storybook-static/
+.cursor/rules/nx-rules.mdc
+.github/instructions/nx.instructions.md
+.claude/

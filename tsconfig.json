@@ -1,55 +1,20 @@
 {
-  "compilerOptions": {
-    /* Language and Environment */
-    "target": "ES2021",
-    "jsx": "react-jsx",
-
-    /* Modules */
-    "module": "ES2022",
-    "moduleResolution": "bundler",
-    "resolveJsonModule": true,
-    "allowImportingTsExtensions": true,
-    "allowSyntheticDefaultImports": true,
-    "esModuleInterop": true,
-    "forceConsistentCasingInFileNames": true,
-
-    /* Emit */
-    "noEmit": true,
-    "sourceMap": true,
-    "declaration": true,
-    "declarationMap": true,
-
-    /* Type Checking */
-    "strict": true,
-    "noUnusedLocals": true,
-    "noUnusedParameters": true,
-    "noFallthroughCasesInSwitch": true,
-    "noUncheckedIndexedAccess": true,
-    "noImplicitOverride": true,
-    "allowUnreachableCode": false,
-    "allowUnusedLabels": false,
-
-    /* Completeness */
-    "skipLibCheck": true,
-
-    /* Path Mapping */
-    "baseUrl": ".",
-    "paths": {
-      "@/*": ["src/*"],
-      "@config/*": ["src/config/*"],
-      "@controllers/*": ["src/controllers/*"],
-      "@models/*": ["src/models/*"],
-      "@routes/*": ["src/routes/*"],
-      "@services/*": ["src/services/*"],
-      "@utils/*": ["src/utils/*"],
-      "@middlewares/*": ["src/middlewares/*"],
-      "@types/*": ["src/types/*"],
-      "@plugins/*": ["src/plugins/*"]
+  "extends": "./tsconfig.base.json",
+  "files": [],
+  // UPDATED BY NX GENERATORS
+  "references": [
+    {
+      "path": "./apps/api"
     },
-
-    /* Bun-specific */
-    "types": ["bun-types"]
-  },
-  "include": ["src/**/*"],
-  "exclude": ["node_modules", "dist", "build", "**/*.spec.ts", "**/*.test.ts", "src/middlewares", "src/controllers"]
+    {
+      "path": "./apps/web"
+    },
+    {
+      "path": "./packages/shared-types"
+    },
+    {
+      "path": "./packages/shared-utils"
+    }
+  ],
+  "exclude": ["apps/*/dist", "apps/*/build", "node_modules", "tmp"]
 }

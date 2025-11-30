@@ -1,0 +1,78 @@
+{
+  "name": "api",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "apps/api/src",
+  "projectType": "application",
+  "tags": ["type:app", "platform:backend", "framework:elysia"],
+  "targets": {
+    "dev": {
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "cross-env NODE_ENV=development bun --env-file=../../.env.development.local --watch src/server.ts",
+        "cwd": "apps/api"
+      },
+      "dependsOn": ["^build"]
+    },
+    "build": {
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "bun build --compile --minify-whitespace --minify-syntax --target bun --outfile dist/server src/index.ts",
+        "cwd": "apps/api"
+      },
+      "outputs": ["{projectRoot}/dist"],
+      "dependsOn": ["^build"]
+    },
+    "build:js": {
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "bun build --minify-whitespace --minify-syntax --target bun --outfile dist/index.js src/index.ts",
+        "cwd": "apps/api"
+      },
+      "outputs": ["{projectRoot}/dist"],
+      "dependsOn": ["^build"]
+    },
+    "start": {
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "cross-env NODE_ENV=production dist/server",
+        "cwd": "apps/api"
+      },
+      "dependsOn": ["build"]
+    },
+    "test": {
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "bun --bun jest --forceExit --detectOpenHandles",
+        "cwd": "apps/api"
+      }
+    },
+    "typecheck": {
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "tsc --noEmit",
+        "cwd": "apps/api"
+      }
+    },
+    "lint": {
+      "executor": "@nx/eslint:lint",
+      "options": {
+        "lintFilePatterns": ["apps/api/src/**/*.ts"]
+      }
+    },
+    "deploy:prod": {
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "bun run build && pm2 start ecosystem.config.js --only prod",
+        "cwd": "apps/api"
+      },
+      "dependsOn": ["build"]
+    },
+    "deploy:dev": {
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "pm2 start ecosystem.config.js --only dev",
+        "cwd": "apps/api"
+      }
+    }
+  }
+}

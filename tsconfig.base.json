@@ -1,0 +1,49 @@
+{
+  "compilerOptions": {
+    /* Base Configuration */
+    "composite": false,
+    "declaration": false,
+
+    /* Language and Environment */
+    "target": "ES2022",
+    "jsx": "react-jsx",
+
+    /* Modules */
+    "module": "ES2022",
+    "moduleResolution": "bundler",
+    "resolveJsonModule": true,
+
+    /* Emit */
+    "sourceMap": true,
+
+    /* Type Checking */
+    "strict": true,
+    "strictNullChecks": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noFallthroughCasesInSwitch": true,
+    "noUncheckedIndexedAccess": true,
+    "noImplicitOverride": true,
+    "allowUnreachableCode": false,
+    "allowUnusedLabels": false,
+    "forceConsistentCasingInFileNames": true,
+
+    /* Interop Constraints */
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+
+    /* Completeness */
+    "skipLibCheck": true,
+
+    /* Path Mapping */
+    "baseUrl": ".",
+    "paths": {
+      "@feetflight/shared-types": ["packages/shared-types/src/index.ts"],
+      "@feetflight/shared-utils": ["packages/shared-utils/src/index.ts"]
+    },
+
+    /* Type Roots */
+    "typeRoots": ["./node_modules/@types"]
+  },
+  "exclude": ["node_modules", "tmp", "dist"]
+}
