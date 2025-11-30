@@ -10,6 +10,8 @@ export {
   type RefreshTokenDTO,
   EmailParamSchema,
   type EmailParamDTO,
+  WaitlistSchema,
+  type WaitlistDTO,
 } from './auth.schema';
 
 // User schemas

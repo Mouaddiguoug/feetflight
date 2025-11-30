@@ -72,11 +72,6 @@ export const neo4jPlugin = () => {
         await driverInstance.close();
         driverInstance = null;
       }
-      if (driverInstance) {
-        await driverInstance.close();
-        appLogger.info('Neo4j driver closed');
-        driverInstance = null;
-      }
     });
 };
 

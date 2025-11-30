@@ -132,6 +132,38 @@ export const RefreshTokenSchema = t.Object({
 export type RefreshTokenDTO = Static<typeof RefreshTokenSchema>;
 
 /**
+ * Waitlist Schema
+ *
+ * Defines the required structure for the waitlist request body,
+ * strictly requiring only email and a valid role.
+ *
+ * Request Body Example:
+ * {
+ * "data": {
+ * "email": "user@example.com",
+ * "role": "BUYER"
+ * }
+ * }
+ */
+export const WaitlistSchema = t.Object(
+  {
+    data: t.Object(
+      {
+        email: t.String({ format: 'email', minLength: 5, description: 'User email address' }),
+        // Assuming RolesEnum resolves to string literals 'SELLER' and 'BUYER'
+        role: t.Union([t.Literal('Seller', { description: 'User role: SELLER' }), t.Literal('Buyer', { description: 'User role: BUYER' })], {
+          description: 'The role the user is waitlisting for',
+        }),
+      },
+      { description: 'Container for waitlist data' },
+    ),
+  },
+  { description: 'Waitlist Request Body' },
+);
+
+export type WaitlistDTO = Static<typeof WaitlistSchema>;
+
+/**
  * EmailParamSchema
  * Use for validating email parameter in route params
  * Example: GET /users/:email
