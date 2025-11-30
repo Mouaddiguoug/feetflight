@@ -1,4 +1,4 @@
-import { Elysia, t } from 'elysia';
+import { Elysia } from 'elysia';
 
 export function indexRoutes() {
   return new Elysia({ name: 'routes.index' }).get(

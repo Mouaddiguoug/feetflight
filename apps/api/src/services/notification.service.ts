@@ -1,64 +1,67 @@
-import { uid } from 'uid';
 import moment from 'moment';
 import { getMessaging } from 'firebase-admin/messaging';
 import { InternalServerError } from '@/plugins/error.plugin';
 import type { Session } from 'neo4j-driver';
 import { Tneo4j } from '@/plugins/neo4j.plugin';
 import { Logger } from 'pino';
+import { NotificationRepository } from '@/domain/repositories/notification.repository';
+import { UserRepository } from '@/domain/repositories/user.repository';
+import type { GetNotificationsResponse, SendNotificationResponse } from '@feetflight/shared-types';
+
 export interface NotificationServiceDeps {
   neo4j: Tneo4j;
-  log?: Logger;
+  log: Logger;
 }
 
 export async function getNotifications(
   userId: string,
   deps: NotificationServiceDeps
-): Promise<any[]> {
+): Promise<GetNotificationsResponse> {
   const { neo4j, log } = deps;
+  const notificationRepo = new NotificationRepository({ neo4j, log });
 
   try {
-    const notifications = await neo4j.withSession(async (session: Session) => {
-      const result = await session.executeRead((tx) =>
-        tx.run(
-          'MATCH (notification:notification)<-[:got_notified]-(u:user {id: $userId}) RETURN notification ORDER BY notification.time DESC',
-          { userId }
-        )
-      );
+    const notifications = await notificationRepo.getUserNotifications(userId);
+    const unreadCount = await notificationRepo.getUnreadCount(userId);
 
-      // Format time for each notification
-      result.records.forEach((record) => {
-        const days = moment().diff(record.get('notification').properties.time, 'days');
-        const hours = moment().diff(record.get('notification').properties.time, 'hours');
-        const minutes = moment().diff(record.get('notification').properties.time, 'minutes');
-        const seconds = moment().diff(record.get('notification').properties.time, 'seconds');
+    // Format time for each notification
+    const formattedNotifications = notifications.map((notif) => {
+      // Convert Integer to string if needed
+      const timeValue =
+        typeof notif.time === 'object' && 'toNumber' in notif.time
+          ? (notif.time as any).toNumber()
+          : notif.time;
+      const days = moment().diff(timeValue, 'days');
+      const hours = moment().diff(timeValue, 'hours');
+      const minutes = moment().diff(timeValue, 'minutes');
+      const seconds = moment().diff(timeValue, 'seconds');
 
-        if (days == 0) {
-          if (hours == 0) {
-            if (minutes == 0) {
-              if (seconds < 60) {
-                record.get('notification').properties.time = `${seconds} seconds`;
-              } else {
-                record.get('notification').properties.time = `${minutes} minutes`;
-              }
-            } else if (minutes < 60) {
-              record.get('notification').properties.time = `${minutes} minutes`;
-            } else {
-              record.get('notification').properties.time = `${hours} hours`;
-            }
-          } else if (hours < 24) {
-            record.get('notification').properties.time = `${hours} hours`;
+      let formattedTime: string;
+      if (days === 0) {
+        if (hours === 0) {
+          if (minutes === 0) {
+            formattedTime = seconds < 60 ? `${seconds} seconds` : `${minutes} minutes`;
           } else {
-            record.get('notification').properties.time = `${days} days`;
+            formattedTime = minutes < 60 ? `${minutes} minutes` : `${hours} hours`;
           }
         } else {
-          record.get('notification').properties.time = `${days} days`;
+          formattedTime = hours < 24 ? `${hours} hours` : `${days} days`;
         }
-      });
+      } else {
+        formattedTime = `${days} days`;
+      }
 
-      return result.records.map((record) => record.get('notification').properties);
+      return {
+        ...notif,
+        time: formattedTime,
+      };
     });
 
-    return notifications;
+    return {
+      notifications: formattedNotifications,
+      total: formattedNotifications.length,
+      unreadCount,
+    };
   } catch (error) {
     log?.error({ error, userId }, 'Get notifications failed');
     throw new InternalServerError(
@@ -73,22 +76,21 @@ export async function pushMessageNotification(
   body: string,
   avatar: string,
   deps: NotificationServiceDeps
-): Promise<void> {
+): Promise<SendNotificationResponse> {
   const { neo4j, log } = deps;
+  const userRepo = new UserRepository({ neo4j, log });
+  const notificationRepo = new NotificationRepository({ neo4j, log });
 
   try {
-    await neo4j.withSession(async (session: Session) => {
-      // Get device token
-      const deviceTokenResult = await session.executeRead((tx) =>
-        tx.run(
-          'MATCH (user:user {id: $userId})-[:logged_in_with]->(deviceToken:deviceToken) RETURN deviceToken',
-          { userId }
-        )
-      );
+    // Get device tokens using repository
+    const deviceTokens = await userRepo.getDeviceTokens(userId);
 
-      if (deviceTokenResult.records.length > 0) {
-        const deviceToken = deviceTokenResult.records[0]?.get('deviceToken').properties.token;
+    if (deviceTokens.length > 0) {
+      const deviceToken = deviceTokens[0]; // Use first token
 
+      if (!deviceToken) {
+        log?.warn({ userId }, 'Device token is empty, skipping push notification');
+      } else {
         log?.info(
           { userId, avatar: `${process.env.DOMAIN}${avatar}` },
           'Sending push notification'
@@ -135,10 +137,18 @@ export async function pushMessageNotification(
           // Log Firebase errors but don't throw (graceful degradation)
           log?.error({ error, userId }, 'Firebase push notification failed');
         }
-      } else {
-        log?.info({ userId }, 'No device token found, skipping push notification');
       }
-    });
+    } else {
+      log?.info({ userId }, 'No device token found, skipping push notification');
+    }
+
+    // Create notification in database
+    const notification = await notificationRepo.create(userId, { title, body });
+
+    return {
+      message: 'Notification sent successfully',
+      notificationId: notification.id,
+    };
   } catch (error) {
     log?.error({ error, userId }, 'Push message notification failed');
     throw new InternalServerError(
@@ -154,21 +164,35 @@ export async function pushSellerNotifications(
   deps: NotificationServiceDeps
 ): Promise<void> {
   const { neo4j, log } = deps;
+  const userRepo = new UserRepository({ neo4j, log });
+  const notificationRepo = new NotificationRepository({ neo4j, log });
 
   try {
-    await neo4j.withSession(async (session: Session) => {
-      // Get device token
-      const deviceTokenResult = await session.executeRead((tx) =>
-        tx.run(
-          'MATCH (seller {id: $sellerId})<-[:IS_A]-(user:user)-[:logged_in_with]->(deviceToken:deviceToken) RETURN deviceToken',
-          { sellerId }
-        )
+    // Get user ID for the seller (need to query for this)
+    const userId = await neo4j.withSession(async (session: Session) => {
+      const result = await session.executeRead((tx) =>
+        tx.run('MATCH (seller {id: $sellerId})<-[:IS_A]-(user:user) RETURN user.id as userId', {
+          sellerId,
+        })
       );
+      return result.records[0]?.get('userId');
+    });
 
-      // Send Firebase push notification if device token exists
-      if (deviceTokenResult.records.length > 0) {
-        const deviceToken = deviceTokenResult.records[0]?.get('deviceToken').properties.token;
+    if (!userId) {
+      log?.warn({ sellerId }, 'Seller user not found');
+      return;
+    }
 
+    // Get device tokens using repository
+    const deviceTokens = await userRepo.getDeviceTokens(userId);
+
+    // Send Firebase push notification if device token exists
+    if (deviceTokens.length > 0) {
+      const deviceToken = deviceTokens[0]; // Use first token
+
+      if (!deviceToken) {
+        log?.warn({ sellerId }, 'Device token is empty, skipping push notification to seller');
+      } else {
         const message = {
           notification: {
             title: title,
@@ -184,26 +208,15 @@ export async function pushSellerNotifications(
           // Log Firebase errors but don't throw (graceful degradation)
           log?.error({ error, sellerId }, 'Firebase push notification failed for seller');
         }
-      } else {
-        log?.info({ sellerId }, 'No device token found for seller, skipping push notification');
       }
+    } else {
+      log?.info({ sellerId }, 'No device token found for seller, skipping push notification');
+    }
 
-      // Create notification node in database
-      await session.executeWrite((tx) =>
-        tx.run(
-          'MATCH (seller {id: $sellerId})<-[:IS_A]-(user:user) CREATE (user)-[:got_notified]->(notification:notification {id: $notificationsId, title: $title, body: $body, time: $time}) RETURN notification',
-          {
-            sellerId: sellerId,
-            notificationsId: uid(10),
-            title: title,
-            body: body,
-            time: moment().format('MMMM DD, YYYY, h:mm:ss a'),
-          }
-        )
-      );
+    // Create notification in database using repository
+    await notificationRepo.create(userId, { title, body });
 
-      log?.info({ sellerId }, 'Notification created in database for seller');
-    });
+    log?.info({ sellerId }, 'Notification created in database for seller');
   } catch (error) {
     log?.error({ error, sellerId }, 'Push seller notifications failed');
     throw new InternalServerError(

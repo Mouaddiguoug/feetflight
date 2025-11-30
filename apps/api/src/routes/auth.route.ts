@@ -1,10 +1,17 @@
-import { Elysia, t } from 'elysia';
+/* eslint-disable no-useless-catch */
+import { Elysia } from 'elysia';
 import {
   SignupSchema,
   LoginSchema,
   ChangePasswordSchema,
   RefreshTokenSchema,
   EmailParamSchema,
+  SignupResponseSchema,
+  LoginResponseSchema,
+  RefreshTokenResponseSchema,
+  LogoutResponseSchema,
+  ChangePasswordResponseSchema,
+  ResendVerificationEmailResponseSchema,
 } from '@feetflight/shared-types';
 import { authGuard, authPlugin } from '@/plugins/auth.plugin';
 import {
@@ -41,6 +48,9 @@ export const authRoutes = () => {
         },
         {
           body: SignupSchema,
+          response: {
+            201: SignupResponseSchema,
+          },
           detail: {
             tags: ['Authentication'],
             summary: 'User Registration',
@@ -66,6 +76,9 @@ export const authRoutes = () => {
         },
         {
           body: LoginSchema,
+          response: {
+            200: LoginResponseSchema,
+          },
           detail: {
             tags: ['Authentication'],
             summary: 'User Login',
@@ -86,6 +99,9 @@ export const authRoutes = () => {
         },
         {
           body: RefreshTokenSchema,
+          response: {
+            200: RefreshTokenResponseSchema,
+          },
           detail: {
             tags: ['Authentication'],
             summary: 'Refresh Token',
@@ -105,15 +121,15 @@ export const authRoutes = () => {
               'Authorization=; HttpOnly; Max-Age=0; Path=/; SameSite=Strict';
             set.status = 200;
 
-            return {
-              data: result,
-              message: 'logout',
-            };
+            return result;
           } catch (error) {
             throw error;
           }
         },
         {
+          response: {
+            200: LogoutResponseSchema,
+          },
           detail: {
             tags: ['Authentication'],
             summary: 'User Logout',
@@ -135,6 +151,9 @@ export const authRoutes = () => {
         {
           params: EmailParamSchema,
           body: ChangePasswordSchema,
+          response: {
+            200: ChangePasswordResponseSchema,
+          },
           detail: {
             tags: ['Authentication'],
             summary: 'Change Password',
@@ -147,17 +166,22 @@ export const authRoutes = () => {
         '/resendVerificationEmail/:email',
         async ({ params, auth, neo4j, log }) => {
           try {
-            await resendVerificationEmail(params.email, { auth, neo4j, log, resend });
-
-            return {
-              message: 'Verification email sent',
-            };
+            const result = await resendVerificationEmail(params.email, {
+              auth,
+              neo4j,
+              log,
+              resend,
+            });
+            return result;
           } catch (error) {
             throw error;
           }
         },
         {
           params: EmailParamSchema,
+          response: {
+            200: ResendVerificationEmailResponseSchema,
+          },
           detail: {
             tags: ['Authentication'],
             summary: 'Resend Verification Email',

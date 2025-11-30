@@ -5,6 +5,18 @@ import {
   GetRandomAlbumsParamSchema,
   PostPicturesUploadSchema,
   IdParamSchema,
+  GetPopularAlbumsResponseSchema,
+  GetRandomAlbumsResponseSchema,
+  GetAlbumByCategoryResponseSchema,
+  DeletePostResponseSchema,
+  GetSellerAlbumsResponseSchema,
+  GetAlbumPlanResponseSchema,
+  LikePostResponseSchema,
+  UploadPostPicturesResponseSchema,
+  GetPostPicturesResponseSchema,
+  GetCategoriesResponseSchema,
+  GetAllAlbumsResponseSchema,
+  UpdateViewsResponseSchema,
 } from '@feetflight/shared-types';
 import { authGuard } from '@/plugins/auth.plugin';
 import { sellerGuard } from '@/plugins/seller.plugin';
@@ -34,12 +46,15 @@ export function postRoutes() {
       .get(
         '/random/:page/:id',
         async ({ params, neo4j, log, set }) => {
-          const randomAlbums = await getRandomAlbums(params.page, params.id, { neo4j, log });
-          set.status = 201;
-          return randomAlbums;
+          const result = await getRandomAlbums(params.page, params.id, { neo4j, log });
+          set.status = 200;
+          return result;
         },
         {
           params: GetRandomAlbumsParamSchema,
+          response: {
+            200: GetRandomAlbumsResponseSchema,
+          },
           detail: {
             tags: ['Albums'],
             summary: 'Get Random Albums',
@@ -58,11 +73,14 @@ export function postRoutes() {
         '/seller/:id',
         async ({ params, neo4j, log, set }) => {
           const sellerAlbums = await getSellerAlbums(params.id, { neo4j, log });
-          set.status = 201;
+          set.status = 200;
           return sellerAlbums;
         },
         {
           params: IdParamSchema,
+          response: {
+            200: GetSellerAlbumsResponseSchema,
+          },
           detail: {
             tags: ['Albums'],
             summary: 'Get Seller Albums',
@@ -86,6 +104,9 @@ export function postRoutes() {
         },
         {
           params: IdParamSchema,
+          response: {
+            200: GetAlbumPlanResponseSchema,
+          },
           detail: {
             tags: ['Albums'],
             summary: 'Get Album Plan',
@@ -103,13 +124,16 @@ export function postRoutes() {
       .post(
         '/likes/:id',
         async ({ params, body, neo4j, log, set }) => {
-          await likePost(params.id, body.userId, { neo4j, log });
-          set.status = 201;
-          return { message: 'post liked successfully' };
+          const result = await likePost(params.id, body.userId, { neo4j, log });
+          set.status = 200;
+          return result;
         },
         {
           params: IdParamSchema,
           body: LikePostSchema,
+          response: {
+            200: LikePostResponseSchema,
+          },
           detail: {
             tags: ['Albums'],
             summary: 'Like Post',
@@ -143,16 +167,19 @@ export function postRoutes() {
             })
           );
 
-          await uploadPostPictures(fileObjects, params.id, { neo4j, log });
+          const result = await uploadPostPictures(fileObjects, params.id, { neo4j, log });
 
           set.status = 201;
-          return { message: 'post pictures have been uploaded successfully' };
+          return result;
         },
         {
           params: IdParamSchema,
           body: t.Object({
             pictures: PostPicturesUploadSchema,
           }),
+          response: {
+            201: UploadPostPicturesResponseSchema,
+          },
           detail: {
             tags: ['Albums'],
             summary: 'Upload Post Pictures',
@@ -173,12 +200,15 @@ export function postRoutes() {
       .get(
         '/popular/:id',
         async ({ params, neo4j, log, set }) => {
-          const popularPosts = await getPopularAlbums(params.id, { neo4j, log });
-          set.status = 201;
-          return { popularPosts };
+          const result = await getPopularAlbums(params.id, { neo4j, log });
+          set.status = 200;
+          return result;
         },
         {
           params: IdParamSchema,
+          response: {
+            200: GetPopularAlbumsResponseSchema,
+          },
           detail: {
             tags: ['Albums'],
             summary: 'Get Popular Albums',
@@ -196,12 +226,15 @@ export function postRoutes() {
       .get(
         '/category/:id',
         async ({ params, neo4j, log, set }) => {
-          const AlbumByCategory = await getAlbumByCategory(params.id, { neo4j, log });
-          set.status = 201;
-          return { AlbumByCategory };
+          const result = await getAlbumByCategory(params.id, { neo4j, log });
+          set.status = 200;
+          return result;
         },
         {
           params: IdParamSchema,
+          response: {
+            200: GetAlbumByCategoryResponseSchema,
+          },
           detail: {
             tags: ['Albums'],
             summary: 'Get Albums by Category',
@@ -220,11 +253,14 @@ export function postRoutes() {
         '/pictures/:id',
         async ({ params, neo4j, log, set }) => {
           const postPictures = await getPostPictures(params.id, { neo4j, log });
-          set.status = 201;
-          return { data: postPictures };
+          set.status = 200;
+          return postPictures;
         },
         {
           params: IdParamSchema,
+          response: {
+            200: GetPostPicturesResponseSchema,
+          },
           detail: {
             tags: ['Albums'],
             summary: 'Get Post Pictures',
@@ -243,10 +279,13 @@ export function postRoutes() {
         '/all-categories',
         async ({ neo4j, log, set }) => {
           const categories = await getCategories({ neo4j, log });
-          set.status = 201;
-          return { categories };
+          set.status = 200;
+          return categories;
         },
         {
+          response: {
+            200: GetCategoriesResponseSchema,
+          },
           detail: {
             tags: ['Albums'],
             summary: 'Get All Categories',
@@ -266,11 +305,14 @@ export function postRoutes() {
         '/:id',
         async ({ params, neo4j, log, set }) => {
           const allAlbums = await getAllAlbums(params.id, { neo4j, log });
-          set.status = 201;
-          return { allAlbums };
+          set.status = 200;
+          return allAlbums;
         },
         {
           params: IdParamSchema,
+          response: {
+            200: GetAllAlbumsResponseSchema,
+          },
           detail: {
             tags: ['Albums'],
             summary: 'Get All Albums',
@@ -288,12 +330,15 @@ export function postRoutes() {
       .delete(
         '/:id',
         async ({ params, neo4j, log, set }) => {
-          const deletedAlbum = await deleteAlbum(params.id, { neo4j, log });
-          set.status = 201;
-          return deletedAlbum;
+          const result = await deleteAlbum(params.id, { neo4j, log });
+          set.status = 200;
+          return result;
         },
         {
           params: IdParamSchema,
+          response: {
+            200: DeletePostResponseSchema,
+          },
           detail: {
             tags: ['Albums'],
             summary: 'Delete Album',
@@ -312,11 +357,14 @@ export function postRoutes() {
         '/views/:id',
         async ({ params, neo4j, log, set }) => {
           const updatedViews = await updateViews(params.id, { neo4j, log });
-          set.status = 201;
-          return { updatedViews };
+          set.status = 200;
+          return updatedViews;
         },
         {
           params: IdParamSchema,
+          response: {
+            200: UpdateViewsResponseSchema,
+          },
           detail: {
             tags: ['Albums'],
             summary: 'Update Views',

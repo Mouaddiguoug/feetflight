@@ -1,72 +1,74 @@
-import { InternalServerError, NotFoundError } from '@/plugins/error.plugin';
-import type { Session } from 'neo4j-driver';
 import { Tneo4j } from '@/plugins/neo4j.plugin';
 import { Logger } from 'pino';
+import { SellerRepository } from '@/domain/repositories/seller.repository';
+import type {
+  GetUnverifiedSellersResponse,
+  GetSellerIdentityCardResponse,
+} from '@feetflight/shared-types';
+
+/**
+ * Admin Service - Refactored to use Repository Pattern
+ *
+ * This service now delegates all database operations to repositories
+ * and returns properly typed responses using TypeBox schemas.
+ */
 
 export interface AdminServiceDeps {
   neo4j: Tneo4j;
-  log?: Logger;
+  log: Logger;
 }
 
-export async function getUnverifiedSellers(deps: AdminServiceDeps): Promise<any[]> {
-  const { neo4j, log } = deps;
+/**
+ * Get all unverified sellers awaiting approval
+ *
+ * @returns Typed response with sellers array and total count
+ */
+export async function getUnverifiedSellers(
+  deps: AdminServiceDeps
+): Promise<GetUnverifiedSellersResponse> {
+  const sellerRepo = new SellerRepository({ neo4j: deps.neo4j, log: deps.log });
 
-  try {
-    const sellers = await neo4j.withSession(async (session: Session) => {
-      const result = await session.executeRead((tx) =>
-        tx.run('MATCH (s:seller {verified: false}) RETURN s')
-      );
-      return result.records.map((record) => record.get('s').properties);
-    });
+  const sellers = await sellerRepo.getUnverified();
 
-    return sellers;
-  } catch (error) {
-    log?.error({ error }, 'Get unverified sellers failed');
-    throw new InternalServerError(
-      `Failed to get unverified sellers: ${error instanceof Error ? error.message : 'Unknown error'}`
-    );
-  }
+  return {
+    sellers: sellers.map((seller) => ({
+      id: seller.id,
+      name: seller.name,
+      email: seller.email,
+      userName: seller.userName,
+      phone: seller.phone || '',
+      createdAt: seller.createdAt,
+      verified: seller.verified,
+    })),
+    total: sellers.length,
+  };
 }
 
+/**
+ * Get seller identity card documents
+ *
+ * @param userId - Seller user ID
+ * @returns Typed response with identity card data
+ */
 export async function getSellerIdentityCard(
   userId: string,
   deps: AdminServiceDeps
-): Promise<{ frontSide: string; backSide: string }> {
-  const { neo4j, log } = deps;
+): Promise<GetSellerIdentityCardResponse> {
+  const sellerRepo = new SellerRepository({ neo4j: deps.neo4j, log: deps.log });
 
-  try {
-    const identityCard = await neo4j.withSession(async (session: Session) => {
-      const result = await session.executeRead((tx) =>
-        tx.run('MATCH (user {id: $userid})-[:IS_A]-(s:seller) RETURN s', {
-          userid: userId,
-        })
-      );
+  const identityCard = await sellerRepo.getIdentityCard(userId);
 
-      if (result.records.length === 0) {
-        throw new NotFoundError('Seller not found');
-      }
-
-      const sellerProperties = result.records[0]?.get('s').properties;
-
-      return {
-        frontSide: sellerProperties.frontIdentityCard,
-        backSide: sellerProperties.backIdentityCard, // Fixed typo: was backtIdentityCard
-      };
-    });
-
-    return identityCard;
-  } catch (error) {
-    log?.error({ error, userId }, 'Get seller identity card failed');
-
-    // Re-throw NotFoundError as-is
-    if (error instanceof NotFoundError) {
-      throw error;
-    }
-
-    throw new InternalServerError(
-      `Failed to get seller identity card: ${error instanceof Error ? error.message : 'Unknown error'}`
-    );
+  if (!identityCard) {
+    throw new Error('Identity card not found for seller');
   }
+
+  return {
+    identityCardData: {
+      frontSide: identityCard.frontSide,
+      backSide: identityCard.backSide,
+    },
+    sellerId: userId,
+  };
 }
 
 /**

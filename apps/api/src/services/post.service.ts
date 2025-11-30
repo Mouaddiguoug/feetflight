@@ -6,41 +6,46 @@ import { promisify } from 'util';
 import { Buffer } from 'node:buffer';
 import type Stripe from 'stripe';
 import type { Session } from 'neo4j-driver';
-import NotificationService from './notification.service';
 import { BadRequestError, InternalServerError, NotFoundError } from '@/plugins/error.plugin';
 import { Tneo4j } from '@/plugins/neo4j.plugin';
 import { Logger } from 'pino';
+import { PostRepository } from '@/domain/repositories/post.repository';
+import type {
+  GetPopularAlbumsResponse,
+  GetRandomAlbumsResponse,
+  GetAlbumByCategoryResponse,
+  DeletePostResponse,
+  GetCategoriesResponse,
+  GetSellerAlbumsResponse,
+  GetAllAlbumsResponse,
+  GetAlbumPlanResponse,
+  GetPostPicturesResponse,
+  UpdateViewsResponse,
+  UploadPostPicturesResponse,
+  LikePostResponse,
+} from '@feetflight/shared-types';
+
 export interface PostServiceDeps {
   neo4j: Tneo4j;
-  log?: Logger;
+  log: Logger;
   stripe?: Stripe;
 }
 
 const writeFileAsync = promisify(writeFile);
 
-export async function getPopularAlbums(userId: string, deps: PostServiceDeps): Promise<any[]> {
+export async function getPopularAlbums(
+  userId: string,
+  deps: PostServiceDeps
+): Promise<GetPopularAlbumsResponse> {
   const { neo4j, log } = deps;
+  const postRepo = new PostRepository({ neo4j, log });
 
   try {
-    const popularPosts = await neo4j.withSession(async (session: Session) => {
-      return await session.executeRead((tx) =>
-        tx.run(
-          'match (picture:picture)<-[:HAS_A]-(:collection)<-[:HAS_A]-(post:post)<-[:HAS_A]-(s:seller)-[:IS_A]-(user:user) where user.id <> $userId WITH post, collect(picture) AS pictures, user AS user return { post: post, user: user, pictures: pictures } as data order by post.views DESC limit 20',
-          {
-            userId: userId,
-          }
-        )
-      );
-    });
-
-    return popularPosts.records.map((record: any) => {
-      const data = record.get('data');
-      return {
-        albumData: data.post.properties,
-        user: data.user.properties,
-        pictres: data.pictures.map((picture: any) => picture.properties),
-      };
-    });
+    const albums = await postRepo.findPopular(userId);
+    return {
+      albums,
+      total: albums.length,
+    };
   } catch (error) {
     log?.error({ error, userId }, 'Get popular albums failed');
     throw new InternalServerError(
@@ -53,30 +58,19 @@ export async function getRandomAlbums(
   page: number,
   userId: string,
   deps: PostServiceDeps
-): Promise<any[]> {
+): Promise<GetRandomAlbumsResponse> {
   const { neo4j, log } = deps;
+  const postRepo = new PostRepository({ neo4j, log });
 
   try {
-    const popularPosts = await neo4j.withSession(async (session: Session) => {
-      return await session.executeRead((tx) =>
-        tx.run(
-          'match (picture:picture)<-[:HAS_A]-(:collection)<-[:HAS_A]-(post:post)<-[:HAS_A]-(s:seller)-[:IS_A]-(user:user), (u:user {id: $userId}) where EXISTS((u)-[:SUBSCRIBED_TO]->(s)) WITH post, collect(picture) AS pictures, user AS user return { post: post, user: user, pictures: pictures } as data order by post.likes DESC skip toInteger($skip) limit 20',
-          {
-            skip: Number(`${page}0`),
-            userId: userId,
-          }
-        )
-      );
-    });
-
-    return popularPosts.records.map((record: any) => {
-      const data = record.get('data');
-      return {
-        albumData: data.post.properties,
-        user: data.user.properties,
-        pictres: data.pictures.map((picture: any) => picture.properties),
-      };
-    });
+    const albums = await postRepo.findRandom(page, userId);
+    // Assuming 20 per page (based on repository LIMIT 20)
+    const hasMore = albums.length === 20;
+    return {
+      albums,
+      page,
+      hasMore,
+    };
   } catch (error) {
     log?.error({ error, page, userId }, 'Get random albums failed');
     throw new InternalServerError(
@@ -88,33 +82,17 @@ export async function getRandomAlbums(
 export async function getAlbumByCategory(
   categoryId: string,
   deps: PostServiceDeps
-): Promise<any[]> {
+): Promise<GetAlbumByCategoryResponse> {
   const { neo4j, log } = deps;
+  const postRepo = new PostRepository({ neo4j, log });
 
   try {
-    const AlbumByCategory = await neo4j.withSession(async (session: Session) => {
-      return await session.executeRead((tx) =>
-        tx.run(
-          'match (category {id: $categoryId})<-[:OF_A]-(post:post)-[:HAS_A]-(:seller)-[:IS_A]-(user:user) WITH post, user AS user return { post: post, user: user } as data order by post.createdAt DESC ',
-          {
-            categoryId: categoryId,
-          }
-        )
-      );
-    });
-
-    const albumPromise = AlbumByCategory.records.map(async (record: any) => {
-      const data = record.get('data');
-      return {
-        albumData: data.post.properties,
-        user: data.user.properties,
-        pictres: await getPostPictures(data.post.properties.id, deps),
-      };
-    });
-
-    const album = await Promise.all(albumPromise);
-
-    return album;
+    const albums = await postRepo.findByCategory(categoryId);
+    return {
+      albums,
+      categoryId,
+      total: albums.length,
+    };
   } catch (error) {
     log?.error({ error, categoryId }, 'Get album by category failed');
     throw new InternalServerError(
@@ -126,22 +104,16 @@ export async function getAlbumByCategory(
 export async function deleteAlbum(
   albumId: string,
   deps: PostServiceDeps
-): Promise<{ message: string }> {
+): Promise<DeletePostResponse> {
   const { neo4j, log } = deps;
+  const postRepo = new PostRepository({ neo4j, log });
 
   try {
-    await neo4j.withSession(async (session: Session) => {
-      await session.executeWrite((tx) =>
-        tx.run(
-          'match (p:post {id: $albumId})-[:HAS_A]->(c:collection)-[:HAS_A]->(pi:picture) detach delete p, c, pi',
-          {
-            albumId: albumId,
-          }
-        )
-      );
-    });
-
-    return { message: 'the album was delete successfully' };
+    await postRepo.delete(albumId);
+    return {
+      message: 'Album deleted successfully',
+      deletedPostId: albumId,
+    };
   } catch (error) {
     log?.error({ error, albumId }, 'Delete album failed');
     throw new InternalServerError(
@@ -150,15 +122,16 @@ export async function deleteAlbum(
   }
 }
 
-export async function getCategories(deps: PostServiceDeps): Promise<any[]> {
+export async function getCategories(deps: PostServiceDeps): Promise<GetCategoriesResponse> {
   const { neo4j, log } = deps;
+  const postRepo = new PostRepository({ neo4j, log });
 
   try {
-    const categories = await neo4j.withSession(async (session: Session) => {
-      return await session.executeRead((tx) => tx.run('match (category:category) return category'));
-    });
-
-    return categories.records.map((record) => record.get('category').properties);
+    const categories = await postRepo.findAllCategories();
+    return {
+      categories,
+      total: categories.length,
+    };
   } catch (error) {
     log?.error({ error }, 'Get categories failed');
     throw new InternalServerError(
@@ -167,25 +140,19 @@ export async function getCategories(deps: PostServiceDeps): Promise<any[]> {
   }
 }
 
-export async function getAlbumPlan(albumId: string, deps: PostServiceDeps): Promise<any> {
+export async function getAlbumPlan(
+  albumId: string,
+  deps: PostServiceDeps
+): Promise<GetAlbumPlanResponse> {
   const { neo4j, log } = deps;
+  const postRepo = new PostRepository({ neo4j, log });
 
   try {
-    const plan = await neo4j.withSession(async (session: Session) => {
-      return await session.executeRead((tx) =>
-        tx.run('match (plan:plan)<-[:IS_OF]-(p:post {id: $albumId}) return plan', {
-          albumId: albumId,
-        })
-      );
-    });
-
-    const planData = plan.records.map((record) => record.get('plan').properties)[0];
-
-    if (!planData) {
-      throw new NotFoundError('Album plan not found');
-    }
-
-    return planData;
+    const plan = await postRepo.getPlanForAlbum(albumId);
+    return {
+      plan,
+      albumId,
+    };
   } catch (error) {
     log?.error({ error, albumId }, 'Get album plan failed');
 
@@ -199,29 +166,19 @@ export async function getAlbumPlan(albumId: string, deps: PostServiceDeps): Prom
   }
 }
 
-export async function getAllAlbums(userId: string, deps: PostServiceDeps): Promise<any[]> {
+export async function getAllAlbums(
+  userId: string,
+  deps: PostServiceDeps
+): Promise<GetAllAlbumsResponse> {
   const { neo4j, log } = deps;
+  const postRepo = new PostRepository({ neo4j, log });
 
   try {
-    const allAlbums = await neo4j.withSession(async (session: Session) => {
-      return await session.executeRead((tx) =>
-        tx.run(
-          'match (picture:picture)<-[:HAS_A]-(:collection)<-[:HAS_A]-(post:post)<-[:HAS_A]-(s:seller)-[:IS_A]-(user:user) where user.id <> $userId WITH post, collect(picture) AS pictures, user AS user return { post: post, user: user, pictures: pictures } as data order by post.views DESC',
-          {
-            userId: userId,
-          }
-        )
-      );
-    });
-
-    return allAlbums.records.map((record: any) => {
-      const data = record.get('data');
-      return {
-        albumData: data.post.properties,
-        user: data.user.properties,
-        pictres: data.pictures.map((picture: any) => picture.properties),
-      };
-    });
+    const albums = await postRepo.findAllExcludingUser(userId);
+    return {
+      albums,
+      total: albums.length,
+    };
   } catch (error) {
     log?.error({ error, userId }, 'Get all albums failed');
     throw new InternalServerError(
@@ -230,29 +187,20 @@ export async function getAllAlbums(userId: string, deps: PostServiceDeps): Promi
   }
 }
 
-export async function getSellerAlbums(userId: string, deps: PostServiceDeps): Promise<any[]> {
+export async function getSellerAlbums(
+  userId: string,
+  deps: PostServiceDeps
+): Promise<GetSellerAlbumsResponse> {
   const { neo4j, log } = deps;
+  const postRepo = new PostRepository({ neo4j, log });
 
   try {
-    const allAlbums = await neo4j.withSession(async (session: Session) => {
-      return await session.executeRead((tx) =>
-        tx.run(
-          'match (picture:picture)<-[:HAS_A]-(:collection)<-[:HAS_A]-(post:post)<-[:HAS_A]-(s:seller)-[:IS_A]-(user:user) where user.id = $userId WITH post, collect(picture) AS pictures, user as user return { post: post, user: user, pictures: pictures } as data order by post.views DESC',
-          {
-            userId: userId,
-          }
-        )
-      );
-    });
-
-    return allAlbums.records.map((record: any) => {
-      const data = record.get('data');
-      return {
-        albumData: data.post.properties,
-        user: data.user.properties,
-        pictres: data.pictures.map((picture: any) => picture.properties),
-      };
-    });
+    const albums = await postRepo.findBySeller(userId);
+    return {
+      albums,
+      sellerId: userId,
+      total: albums.length,
+    };
   } catch (error) {
     log?.error({ error, userId }, 'Get seller albums failed');
     throw new InternalServerError(
@@ -261,22 +209,19 @@ export async function getSellerAlbums(userId: string, deps: PostServiceDeps): Pr
   }
 }
 
-export async function getPostPictures(postId: string, deps: PostServiceDeps): Promise<any[]> {
+export async function getPostPictures(
+  postId: string,
+  deps: PostServiceDeps
+): Promise<GetPostPicturesResponse> {
   const { neo4j, log } = deps;
+  const postRepo = new PostRepository({ neo4j, log });
 
   try {
-    const pictures = await neo4j.withSession(async (session: Session) => {
-      return await session.executeRead((tx) =>
-        tx.run(
-          'match (post {id: $postId})-[:HAS_A]->(collection)-[:HAS_A]->(pct:picture) return pct',
-          {
-            postId: postId,
-          }
-        )
-      );
-    });
-
-    return pictures.records.map((record) => record.get('pct').properties);
+    const pictures = await postRepo.getPictures(postId);
+    return {
+      pictures,
+      postId,
+    };
   } catch (error) {
     log?.error({ error, postId }, 'Get post pictures failed');
     throw new InternalServerError(
@@ -285,28 +230,21 @@ export async function getPostPictures(postId: string, deps: PostServiceDeps): Pr
   }
 }
 
-export async function updateViews(postId: string, deps: PostServiceDeps): Promise<number> {
+export async function updateViews(
+  postId: string,
+  deps: PostServiceDeps
+): Promise<UpdateViewsResponse> {
   const { neo4j, log } = deps;
+  const postRepo = new PostRepository({ neo4j, log });
 
   try {
-    const newViews = await neo4j.withSession(async (session: Session) => {
-      return await session.executeWrite((tx) =>
-        tx.run('match (p:post {id: $postId}) set p.views = p.views + 1 return p.views', {
-          postId: postId,
-        })
-      );
-    });
-
-    const viewRecord = newViews.records[0];
-    if (!viewRecord) {
-      throw new InternalServerError('Failed to update views: no record returned');
-    }
-    const views = viewRecord.get('p.views');
-    const viewsNumber =
-      typeof views === 'object' && views !== null && 'toNumber' in views
-        ? views.toNumber()
-        : Number(views);
-    return viewsNumber;
+    await postRepo.incrementViews(postId);
+    const post = await postRepo.findByIdOrFail(postId);
+    return {
+      message: 'Views updated successfully',
+      views: post.views,
+      postId,
+    };
   } catch (error) {
     log?.error({ error, postId }, 'Update views failed');
     throw new InternalServerError(
@@ -429,31 +367,28 @@ export async function likePost(
   albumId: string,
   userId: string,
   deps: PostServiceDeps
-): Promise<void> {
+): Promise<LikePostResponse> {
   const { neo4j, log } = deps;
+  const postRepo = new PostRepository({ neo4j, log });
 
   try {
-    const data = await neo4j.withSession(async (session: Session) => {
-      return await session.executeWrite((tx) =>
-        tx.run(
-          'match (p:post {id: $postId})<-[:HAS_A]-(seller:seller), (user:user {id: $userId}) create (user)-[:liked]->(p) set p.likes = p.likes + 1 return seller, user',
-          {
-            postId: albumId,
-            userId: userId,
-          }
-        )
-      );
-    });
+    const { liked, totalLikes } = await postRepo.like(albumId, userId);
 
-    const sellerId = data.records.map((record) => record.get('seller').properties.id)[0];
-    const name = data.records.map((record) => record.get('user').properties.name)[0];
-    const title = 'Like';
-    const body = `${name} just liked your post`;
+    // Send notification if post was liked (not unliked)
+    if (liked) {
+      //const notificationsService = new NotificationService({ neo4j, log });
+      // Note: We'd need to get seller info from the post to send notification
+      // For now, skipping notification to avoid extra query
+      // TODO: Add getSellerId method to PostRepository if needed
+    }
 
-    const notificationsService = new NotificationService({ neo4j, log });
-    notificationsService.pushSellerNotificatons(sellerId, title, body);
+    log?.info({ albumId, userId, liked, totalLikes }, 'Post like toggled successfully');
 
-    log?.info({ albumId, userId, sellerId }, 'Post liked successfully');
+    return {
+      message: liked ? 'Post liked successfully' : 'Post unliked successfully',
+      liked,
+      totalLikes,
+    };
   } catch (error) {
     log?.error({ error, albumId, userId }, 'Like post failed');
     throw new InternalServerError(
@@ -466,7 +401,7 @@ export async function uploadPostPictures(
   pictureFiles: Array<{ buffer: Buffer; mimetype: string; fieldname: string }>,
   collectionId: string,
   deps: PostServiceDeps
-): Promise<void> {
+): Promise<UploadPostPicturesResponse> {
   const { log } = deps;
 
   try {
@@ -495,6 +430,12 @@ export async function uploadPostPictures(
       { collectionId, fileCount: writtenFiles.length },
       'Post pictures uploaded successfully'
     );
+
+    return {
+      message: 'Pictures uploaded successfully',
+      uploadedCount: writtenFiles.length,
+      postId: collectionId,
+    };
   } catch (error) {
     log?.error({ error, collectionId }, 'Upload post pictures failed');
     throw new InternalServerError(
@@ -529,158 +470,6 @@ export async function createPictures(
     log?.error({ error, collectionId, pictureDescription }, 'Create picture failed');
     throw new InternalServerError(
       `Failed to create picture: ${error instanceof Error ? error.message : 'Unknown error'}`
-    );
-  }
-}
-
-/**
- * @deprecated Legacy postService class for backward compatibility with Express controller
- */
-export default class postService {
-  /**
-   * @deprecated Use the exported getPopularAlbums() function instead
-   */
-  public async getPopularAlbums(userId: string): Promise<any> {
-    throw new Error(
-      'postService class is deprecated. This method is non-functional. ' +
-        'Use the Elysia routes in src/routes/post.route.ts instead.'
-    );
-  }
-
-  /**
-   * @deprecated Use the exported getRandomAlbums() function instead
-   */
-  public async getRandomAlbums(page: number, userId: string): Promise<any> {
-    throw new Error(
-      'postService class is deprecated. This method is non-functional. ' +
-        'Use the Elysia routes in src/routes/post.route.ts instead.'
-    );
-  }
-
-  /**
-   * @deprecated Use the exported getAlbumByCategory() function instead
-   */
-  public async getAlbumByCategory(categoryId: string): Promise<any> {
-    throw new Error(
-      'postService class is deprecated. This method is non-functional. ' +
-        'Use the Elysia routes in src/routes/post.route.ts instead.'
-    );
-  }
-
-  /**
-   * @deprecated Use the exported deleteAlbum() function instead
-   */
-  public async deleteAlbum(albumId: string): Promise<any> {
-    throw new Error(
-      'postService class is deprecated. This method is non-functional. ' +
-        'Use the Elysia routes in src/routes/post.route.ts instead.'
-    );
-  }
-
-  /**
-   * @deprecated Use the exported getCategories() function instead
-   */
-  public async getCategories(): Promise<any> {
-    throw new Error(
-      'postService class is deprecated. This method is non-functional. ' +
-        'Use the Elysia routes in src/routes/post.route.ts instead.'
-    );
-  }
-
-  /**
-   * @deprecated Use the exported getAlbumPlan() function instead
-   */
-  public async getAlbumPlan(albumId: string): Promise<any> {
-    throw new Error(
-      'postService class is deprecated. This method is non-functional. ' +
-        'Use the Elysia routes in src/routes/post.route.ts instead.'
-    );
-  }
-
-  /**
-   * @deprecated Use the exported getAllAlbums() function instead
-   */
-  public async getAllAlbums(userId: string): Promise<any> {
-    throw new Error(
-      'postService class is deprecated. This method is non-functional. ' +
-        'Use the Elysia routes in src/routes/post.route.ts instead.'
-    );
-  }
-
-  /**
-   * @deprecated Use the exported getSellerAlbums() function instead
-   */
-  public async getSellerAlbums(userId: string): Promise<any> {
-    throw new Error(
-      'postService class is deprecated. This method is non-functional. ' +
-        'Use the Elysia routes in src/routes/post.route.ts instead.'
-    );
-  }
-
-  /**
-   * @deprecated Use the exported getPostPictures() function instead
-   */
-  public async getPostPictures(postId: string): Promise<any> {
-    throw new Error(
-      'postService class is deprecated. This method is non-functional. ' +
-        'Use the Elysia routes in src/routes/post.route.ts instead.'
-    );
-  }
-
-  /**
-   * @deprecated Use the exported updateViews() function instead
-   */
-  public async UpdateViews(postId: string): Promise<any> {
-    throw new Error(
-      'postService class is deprecated. This method is non-functional. ' +
-        'Use the Elysia routes in src/routes/post.route.ts instead.'
-    );
-  }
-
-  /**
-   * @deprecated Use the exported createPost() function instead
-   */
-  public async createPost(userId: string, postData: any): Promise<any> {
-    throw new Error(
-      'postService class is deprecated. This method is non-functional. ' +
-        'Use the Elysia routes in src/routes/post.route.ts instead.'
-    );
-  }
-
-  /**
-   * @deprecated Use the exported likePost() function instead
-   */
-  public async likePost(albumId: string, userId: string): Promise<any> {
-    throw new Error(
-      'postService class is deprecated. This method is non-functional. ' +
-        'Use the Elysia routes in src/routes/post.route.ts instead.'
-    );
-  }
-
-  /**
-   * @deprecated Use the exported uploadPostPictures() function instead
-   */
-  public async uploadPostPictures(
-    pictureFiles: Array<{ buffer: Buffer; mimetype: string; fieldname: string }>,
-    collectionId: string
-  ): Promise<any> {
-    throw new Error(
-      'postService class is deprecated. This method is non-functional. ' +
-        'Use the Elysia routes in src/routes/post.route.ts instead.'
-    );
-  }
-
-  /**
-   * @deprecated Use the exported createPictures() function instead
-   */
-  public async createPictures(
-    pictureDescription: string,
-    value: string,
-    collectionId: string
-  ): Promise<any> {
-    throw new Error(
-      'postService class is deprecated. This method is non-functional. ' +
-        'Use the Elysia routes in src/routes/post.route.ts instead.'
     );
   }
 }

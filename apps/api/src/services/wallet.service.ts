@@ -1,41 +1,30 @@
 import { Logger } from 'pino';
 import { BadRequestError, InternalServerError, NotFoundError } from '@/plugins';
 import { Tneo4j } from '@/plugins/neo4j.plugin';
+import { WalletRepository } from '@/domain/repositories/wallet.repository';
+import type { GetBalanceResponse, UpdateBalanceResponse } from '@feetflight/shared-types';
 
 export interface WalletServiceDeps {
   neo4j: Tneo4j;
-  log?: Logger;
+  log: Logger;
 }
 
-export async function getBalance(userId: string, deps: WalletServiceDeps): Promise<number> {
+export async function getBalance(
+  userId: string,
+  deps: WalletServiceDeps
+): Promise<GetBalanceResponse> {
+  const walletRepo = new WalletRepository({ neo4j: deps.neo4j, log: deps.log });
+
   try {
-    const amount = await deps.neo4j.withSession(async (session) => {
-      const result = await session.executeRead((tx) =>
-        tx.run('MATCH (w:wallet)<-[:HAS_A]-(s:seller)<-[:IS_A]-(:user {id: $userId}) RETURN w', {
-          userId,
-        })
-      );
-
-      if (result.records.length === 0) {
-        return null;
-      }
-
-      // Handle Neo4j integer conversion
-      const amountValue = result.records[0]?.get('w').properties.amount;
-      return typeof amountValue === 'object' && 'low' in amountValue
-        ? amountValue.low
-        : Number(amountValue);
-    });
-
-    if (amount === null) {
-      deps.log?.warn({ userId }, 'Wallet not found for user');
-      throw new NotFoundError('Wallet not found for this user');
-    }
-
+    const amount = await walletRepo.getBalance(userId);
     deps.log?.info({ userId, amount }, 'Retrieved wallet balance');
-    return amount;
+    return {
+      balance: amount,
+      sellerId: userId,
+    };
   } catch (error) {
     if (error instanceof NotFoundError) {
+      deps.log?.warn({ userId }, 'Wallet not found for user');
       throw error;
     }
 
@@ -49,7 +38,9 @@ export async function updateBalance(
   sellerId: string,
   balanceData: any,
   deps: WalletServiceDeps
-): Promise<number> {
+): Promise<UpdateBalanceResponse> {
+  const walletRepo = new WalletRepository({ neo4j: deps.neo4j, log: deps.log });
+
   try {
     // Validate balanceData has required fields
     if (!balanceData || typeof balanceData.amount !== 'number') {
@@ -62,87 +53,32 @@ export async function updateBalance(
 
     const amount = balanceData.amount;
 
-    const updatedAmount = await deps.neo4j.withSession(async (session) => {
-      // First, get the current balance
-      const currentResult = await session.executeRead((tx) =>
-        tx.run(
-          'MATCH (w:wallet)<-[:HAS_A]-(s:seller {id: $sellerId}) RETURN w.amount as currentAmount',
-          {
-            sellerId,
-          }
-        )
+    // Get current balance to check for negative
+    const currentBalance = await walletRepo.getBalance(sellerId);
+    const newBalance = currentBalance + amount;
+
+    // Business rule: prevent negative balances
+    if (newBalance < 0) {
+      deps.log?.warn(
+        { sellerId, currentBalance, amount, wouldBeBalance: newBalance },
+        'Balance update rejected: would result in negative balance'
       );
-
-      if (currentResult.records.length === 0) {
-        return { success: false, amount: null, reason: 'not_found' };
-      }
-
-      // Handle Neo4j integer conversion for current balance
-      const currentAmountValue = currentResult.records[0]?.get('currentAmount');
-      const currentBalance =
-        typeof currentAmountValue === 'object' && 'low' in currentAmountValue
-          ? currentAmountValue.low
-          : Number(currentAmountValue);
-
-      // Calculate new balance
-      const newBalance = currentBalance + amount;
-
-      // Business rule: prevent negative balances
-      if (newBalance < 0) {
-        deps.log?.warn(
-          { sellerId, currentBalance, amount, wouldBeBalance: newBalance },
-          'Balance update rejected: would result in negative balance'
-        );
-        return {
-          success: false,
-          amount: null,
-          reason: 'negative_balance',
-          currentBalance,
-          requestedAmount: amount,
-        };
-      }
-
-      // Perform the update
-      const result = await session.executeWrite((tx) =>
-        tx.run(
-          'MATCH (w:wallet)<-[:HAS_A]-(s:seller {id: $sellerId}) SET w.amount = w.amount + $amount RETURN w',
-          {
-            sellerId,
-            amount,
-          }
-        )
+      throw new BadRequestError(
+        `Insufficient balance: current balance is ${currentBalance}, cannot subtract ${Math.abs(amount)}`
       );
-
-      if (result.records.length === 0) {
-        return { success: false, amount: null, reason: 'not_found' };
-      }
-
-      // Handle Neo4j integer conversion
-      const amountValue = result.records[0]?.get('w').properties.amount;
-      const finalAmount =
-        typeof amountValue === 'object' && 'low' in amountValue
-          ? amountValue.low
-          : Number(amountValue);
-
-      return { success: true, amount: finalAmount, reason: null };
-    });
-
-    if (!updatedAmount.success) {
-      if (updatedAmount.reason === 'not_found') {
-        deps.log?.warn({ sellerId }, 'Seller wallet not found for balance update');
-        throw new NotFoundError('Seller wallet not found');
-      } else if (updatedAmount.reason === 'negative_balance') {
-        throw new BadRequestError(
-          `Insufficient balance: current balance is ${updatedAmount.currentBalance}, cannot subtract ${Math.abs(updatedAmount.requestedAmount)}`
-        );
-      }
     }
 
+    // Perform the update
+    const updatedAmount = await walletRepo.addToBalance(sellerId, amount);
+
     deps.log?.info(
-      { sellerId, amount, newBalance: updatedAmount.amount },
+      { sellerId, amount, newBalance: updatedAmount },
       'Updated wallet balance manually'
     );
-    return updatedAmount.amount!;
+    return {
+      message: 'Wallet balance updated successfully',
+      newBalance: updatedAmount,
+    };
   } catch (error) {
     if (error instanceof BadRequestError || error instanceof NotFoundError) {
       throw error;
@@ -159,22 +95,14 @@ export async function updateBalanceForPayment(
   balanceAmount: number | string,
   deps: WalletServiceDeps
 ): Promise<void> {
+  const walletRepo = new WalletRepository({ neo4j: deps.neo4j, log: deps.log });
+
   try {
     // Calculate commission (20% platform fee)
     const amount = Number(balanceAmount);
     const sellerAmount = amount - (amount * 20) / 100;
 
-    await deps.neo4j.withSession(async (session) => {
-      await session.executeWrite((tx) =>
-        tx.run(
-          'MATCH (w:wallet)<-[:HAS_A]-(s:seller {id: $sellerId}) SET w.amount = w.amount + $newAmount',
-          {
-            newAmount: sellerAmount,
-            sellerId,
-          }
-        )
-      );
-    });
+    await walletRepo.addToBalance(sellerId, sellerAmount);
 
     deps.log?.info(
       { sellerId, originalAmount: amount, sellerAmount, commission: amount - sellerAmount },
@@ -195,36 +123,13 @@ export async function updateBalanceForSubscription(
   balanceAmount: number | string,
   deps: WalletServiceDeps
 ): Promise<number> {
+  const walletRepo = new WalletRepository({ neo4j: deps.neo4j, log: deps.log });
+
   try {
     const amount = Number(balanceAmount);
     const sellerAmount = amount - (amount * 30) / 100;
 
-    const updatedAmount = await deps.neo4j.withSession(async (session) => {
-      const result = await session.executeWrite((tx) =>
-        tx.run(
-          'MATCH (w:wallet)<-[:HAS_A]-(s:seller {id: $sellerId}) SET w.amount = w.amount + $newAmount RETURN w',
-          {
-            newAmount: sellerAmount,
-            sellerId,
-          }
-        )
-      );
-
-      if (result.records.length === 0) {
-        return null;
-      }
-
-      // Handle Neo4j integer conversion
-      const amountValue = result.records[0]?.get('w').properties.amount;
-      return typeof amountValue === 'object' && 'low' in amountValue
-        ? amountValue.low
-        : Number(amountValue);
-    });
-
-    if (updatedAmount === null) {
-      deps.log?.warn({ sellerId }, 'Seller wallet not found for subscription update');
-      throw new NotFoundError('Seller wallet not found');
-    }
+    const updatedAmount = await walletRepo.addToBalance(sellerId, sellerAmount);
 
     deps.log?.info(
       {

@@ -3,6 +3,8 @@ import {
   UpdateBalanceSchema,
   UserIdParamSchema,
   SellerIdParamSchema,
+  GetBalanceResponseSchema,
+  UpdateBalanceResponseSchema,
 } from '@feetflight/shared-types';
 import { authGuard } from '@/plugins/auth.plugin';
 import { getBalance, updateBalance } from '@/services/wallet.service';
@@ -14,16 +16,15 @@ export const walletRoutes = () => {
       .get(
         '/:userId',
         async ({ params, neo4j, log, set }) => {
-          try {
-            const balance = await getBalance(params.userId, { neo4j, log });
-            set.status = 201;
-            return { data: balance };
-          } catch (error) {
-            throw error;
-          }
+          const result = await getBalance(params.userId, { neo4j, log });
+          set.status = 200;
+          return result;
         },
         {
           params: UserIdParamSchema,
+          response: {
+            200: GetBalanceResponseSchema,
+          },
           detail: {
             tags: ['Wallet'],
             summary: 'Get Wallet Balance',
@@ -35,17 +36,16 @@ export const walletRoutes = () => {
       .put(
         '/:sellerId',
         async ({ params, body, neo4j, log, set }) => {
-          try {
-            const newAmount = await updateBalance(params.sellerId, body, { neo4j, log });
-            set.status = 201;
-            return { data: newAmount };
-          } catch (error) {
-            throw error;
-          }
+          const result = await updateBalance(params.sellerId, body, { neo4j, log });
+          set.status = 200;
+          return result;
         },
         {
           params: SellerIdParamSchema,
           body: UpdateBalanceSchema,
+          response: {
+            200: UpdateBalanceResponseSchema,
+          },
           detail: {
             tags: ['Wallet'],
             summary: 'Update Wallet Balance',

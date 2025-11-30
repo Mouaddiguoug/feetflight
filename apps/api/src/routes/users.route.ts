@@ -19,6 +19,26 @@ import {
   AvatarUploadSchema,
   IdParamSchema,
   TokenParamSchema,
+  EmailConfirmationResponseSchema,
+  GenerateAiPicturesResponseSchema,
+  GetUserResponseSchema,
+  GenerateOtpResponseSchema,
+  VerifyOtpResponseSchema,
+  ContactResponseSchema,
+  SignOutResponseSchema,
+  SubscribeResponseSchema,
+  BuyPostsResponseSchema,
+  UnlockSentPictureResponseSchema,
+  CancelSubscriptionResponseSchema,
+  CheckForSaleResponseSchema,
+  GetSellerPlansResponseSchema,
+  GetFollowedSellersResponseSchema,
+  CheckSubscriptionByUserIdResponseSchema,
+  UpdateUserResponseSchema,
+  UploadAvatarResponseSchema,
+  UploadDeviceTokenResponseSchema,
+  DesactivateUserResponseSchema,
+  ChangePasswordResponseSchema,
 } from '@feetflight/shared-types';
 import { authGuard, authPlugin, ForbiddenError, loggerPlugin, neo4jPlugin } from '@/plugins';
 import {
@@ -42,7 +62,7 @@ import {
   uploadAvatar,
   uploadDeviceToken,
   desactivateUser,
-  checkForSubscription,
+  getAllSubscriptionsForUser,
 } from '@/services/users.service';
 import { stripe } from '@/utils/stripe';
 import { resend } from '@/utils/resend';
@@ -70,10 +90,14 @@ export function usersRoutes() {
         async ({ params, set, UserServiceDeps }) => {
           await emailConfirming(params.token, UserServiceDeps);
           set.redirect = '/public/views/success_pages/verifyEmailSuccess.html';
-          set.status = 201;
+          set.status = 200;
+          return { message: 'Email confirmed successfully' };
         },
         {
           params: TokenParamSchema,
+          response: {
+            200: EmailConfirmationResponseSchema,
+          },
           detail: {
             tags: ['Users'],
             summary: 'Email Confirmation',
@@ -91,6 +115,9 @@ export function usersRoutes() {
         },
         {
           query: GenerateAiPicturesSchema,
+          response: {
+            200: GenerateAiPicturesResponseSchema,
+          },
           detail: {
             tags: ['Users'],
             summary: 'Generate AI Pictures',
@@ -102,12 +129,16 @@ export function usersRoutes() {
 
       .post(
         '/generateOtp/:email',
-        async ({ params, UserServiceDeps }) => {
+        async ({ params, UserServiceDeps, set }) => {
           const hash = await generateOtp(params.email, UserServiceDeps);
+          set.status = 201;
           return hash;
         },
         {
           params: GenerateOtpParamSchema,
+          response: {
+            201: GenerateOtpResponseSchema,
+          },
           detail: {
             tags: ['Users'],
             summary: 'Generate OTP',
@@ -132,6 +163,10 @@ export function usersRoutes() {
         {
           params: GenerateOtpParamSchema,
           body: VerifyOtpSchema,
+          response: {
+            200: VerifyOtpResponseSchema,
+            400: VerifyOtpResponseSchema,
+          },
           detail: {
             tags: ['Users'],
             summary: 'Verify OTP',
@@ -142,12 +177,16 @@ export function usersRoutes() {
 
       .post(
         '/contact',
-        async ({ body, UserServiceDeps }) => {
+        async ({ body, UserServiceDeps, set }) => {
           await contact(body, UserServiceDeps);
+          set.status = 201;
           return { message: 'Contact form submitted successfully' };
         },
         {
           body: ContactFormSchema,
+          response: {
+            201: ContactResponseSchema,
+          },
           detail: {
             tags: ['Users'],
             summary: 'Contact Form',
@@ -166,10 +205,16 @@ export function usersRoutes() {
             params.plan,
             UserServiceDeps
           );
-          return checkedForSale || checkForSubscription;
+          return {
+            postId: params.postId,
+            hasPurchased: checkedForSale || checkForSubscription,
+          };
         },
         {
           params: CheckForSaleParamSchema,
+          response: {
+            200: CheckForSaleResponseSchema,
+          },
           detail: {
             tags: ['Users'],
             summary: 'Check For Sale',
@@ -187,6 +232,9 @@ export function usersRoutes() {
         },
         {
           params: IdParamSchema,
+          response: {
+            200: GetUserResponseSchema,
+          },
           detail: {
             tags: ['Users'],
             summary: 'Get User By ID',
@@ -198,12 +246,18 @@ export function usersRoutes() {
       .post(
         '/buy/:id',
         async ({ params, body, UserServiceDeps }) => {
-          const url = await buyPosts(params.id, body, UserServiceDeps);
-          return { url };
+          await buyPosts(params.id, body, UserServiceDeps);
+          return {
+            message: 'Posts purchased successfully',
+            purchasedPosts: body.data.posts.map((p: { id: string }) => p.id),
+          };
         },
         {
           params: IdParamSchema,
           body: BuyPostSchema,
+          response: {
+            200: BuyPostsResponseSchema,
+          },
           detail: {
             tags: ['Users'],
             summary: 'Buy Posts',
@@ -221,6 +275,9 @@ export function usersRoutes() {
         {
           params: IdParamSchema,
           body: SubscriptionSchema,
+          response: {
+            200: SubscribeResponseSchema,
+          },
           detail: {
             tags: ['Users'],
             summary: 'Subscribe to Seller',
@@ -232,12 +289,18 @@ export function usersRoutes() {
       .post(
         '/buy/sent/:id',
         async ({ params, body, UserServiceDeps }) => {
-          const url = await unlockSentPicture(params.id, body, UserServiceDeps);
-          return { url };
+          const pictureUrl = await unlockSentPicture(params.id, body, UserServiceDeps);
+          return {
+            message: 'Picture unlocked successfully',
+            pictureUrl,
+          };
         },
         {
           params: IdParamSchema,
           body: UnlockSentPictureSchema,
+          response: {
+            200: UnlockSentPictureResponseSchema,
+          },
           detail: {
             tags: ['Users'],
             summary: 'Unlock Sent Picture',
@@ -264,6 +327,9 @@ export function usersRoutes() {
         },
         {
           params: CancelSubscriptionParamSchema,
+          response: {
+            200: CancelSubscriptionResponseSchema,
+          },
           detail: {
             tags: ['Users'],
             summary: 'Cancel Subscription',
@@ -276,10 +342,13 @@ export function usersRoutes() {
         '/plans/:id',
         async ({ params, UserServiceDeps }) => {
           const plans = await getSellerPlans(params.id, UserServiceDeps);
-          return { data: plans };
+          return { plans };
         },
         {
           params: IdParamSchema,
+          response: {
+            200: GetSellerPlansResponseSchema,
+          },
           detail: {
             tags: ['Users'],
             summary: 'Get Seller Plans',
@@ -297,6 +366,9 @@ export function usersRoutes() {
         {
           params: IdParamSchema,
           body: UpdateUserSchema,
+          response: {
+            200: UpdateUserResponseSchema,
+          },
           detail: {
             tags: ['Users'],
             summary: 'Update User',
@@ -316,6 +388,10 @@ export function usersRoutes() {
         },
         {
           params: IdParamSchema,
+          response: {
+            200: SignOutResponseSchema,
+            400: SignOutResponseSchema,
+          },
           detail: {
             tags: ['Users'],
             summary: 'Sign Out',
@@ -326,21 +402,15 @@ export function usersRoutes() {
 
       .get(
         '/verify/checkForSubscription/:id/:sellerUserId',
-        async ({ params, neo4j, UserServiceDeps }) => {
-          const sellerId = await neo4j.withSession(async (session) => {
-            const result = await session.executeRead((tx) =>
-              tx.run('match (user {id: $userId})-[:IS_A]-(s:seller) return s', {
-                userId: params.sellerUserId,
-              })
-            );
-            return result.records[0]?.get('s').properties.id;
-          });
-
-          const isSubscribed = await checkForSubscription(params.id, sellerId, UserServiceDeps);
-          return isSubscribed;
+        async ({ params, UserServiceDeps }) => {
+          const subscriptions = await getAllSubscriptionsForUser(params.id, UserServiceDeps);
+          return { subscriptions };
         },
         {
           params: CheckSubscriptionParamSchema,
+          response: {
+            200: CheckSubscriptionByUserIdResponseSchema,
+          },
           detail: {
             tags: ['Users'],
             summary: 'Check For Subscription (GET)',
@@ -352,24 +422,16 @@ export function usersRoutes() {
 
       .post(
         '/verify/checkForSubscription/:id',
-        async ({ params, body, neo4j, UserServiceDeps }) => {
-          const sellerUserId = body.data.userId;
-
-          const sellerId = await neo4j.withSession(async (session) => {
-            const result = await session.executeRead((tx) =>
-              tx.run('match (user {id: $userId})-[:IS_A]-(s:seller) return s', {
-                userId: sellerUserId,
-              })
-            );
-            return result.records[0]?.get('s').properties.id;
-          });
-
-          const isSubscribed = await checkForSubscription(params.id, sellerId, UserServiceDeps);
-          return isSubscribed;
+        async ({ params, UserServiceDeps }) => {
+          const subscriptions = await getAllSubscriptionsForUser(params.id, UserServiceDeps);
+          return { subscriptions };
         },
         {
           params: IdParamSchema,
           body: CheckSubscriptionSchema,
+          response: {
+            200: CheckSubscriptionByUserIdResponseSchema,
+          },
           detail: {
             tags: ['Users'],
             summary: 'Check For Subscription',
@@ -387,6 +449,9 @@ export function usersRoutes() {
         {
           params: IdParamSchema,
           body: DeviceTokenSchema,
+          response: {
+            200: UploadDeviceTokenResponseSchema,
+          },
           detail: {
             tags: ['Users'],
             summary: 'Upload Device Token',
@@ -403,6 +468,9 @@ export function usersRoutes() {
         },
         {
           params: GetFollowedSellersParamSchema,
+          response: {
+            200: GetFollowedSellersResponseSchema,
+          },
           detail: {
             tags: ['Users'],
             summary: 'Get Followed Sellers',
@@ -424,13 +492,21 @@ export function usersRoutes() {
           };
 
           await uploadAvatar(avatarData, params.id, UserServiceDeps);
-          return { message: 'avatar has been uploaded successfully' };
+          const fileExt = avatarFile.type.split('/')[1];
+          const avatarUrl = `/public/files/avatars/avatar${params.id}.${fileExt}`;
+          return {
+            message: 'avatar has been uploaded successfully',
+            avatarUrl,
+          };
         },
         {
           params: IdParamSchema,
           body: t.Object({
             avatar: AvatarUploadSchema,
           }),
+          response: {
+            200: UploadAvatarResponseSchema,
+          },
           detail: {
             tags: ['Users'],
             summary: 'Upload Avatar',
@@ -441,13 +517,17 @@ export function usersRoutes() {
 
       .patch(
         '/password/:email',
-        async ({ params, body, UserServiceDeps, user }) => {
-          const result = await changePassword(params.email, body, UserServiceDeps, user.id);
-          return { data: result, message: 'Password changed successfully' };
+        async ({ params, body, UserServiceDeps, user, set }) => {
+          await changePassword(params.email, body, UserServiceDeps, user.id);
+          set.status = 200;
+          return { message: 'Password changed successfully' };
         },
         {
           params: EmailParamSchema,
           body: ChangePasswordSchema,
+          response: {
+            200: ChangePasswordResponseSchema,
+          },
           detail: {
             tags: ['Users'],
             summary: 'Change Password',
@@ -463,11 +543,14 @@ export function usersRoutes() {
             throw new ForbiddenError('You are not authorized to deactivate this account');
           }
 
-          const desactivatedUser = await desactivateUser(params.id, UserServiceDeps);
-          return { data: desactivatedUser };
+          await desactivateUser(params.id, UserServiceDeps);
+          return { message: 'User account has been deactivated' };
         },
         {
           params: IdParamSchema,
+          response: {
+            200: DesactivateUserResponseSchema,
+          },
           detail: {
             tags: ['Users'],
             summary: 'Deactivate User',

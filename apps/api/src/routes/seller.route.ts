@@ -8,6 +8,17 @@ import {
   IdentityCardUploadSchema,
   SentPictureUploadSchema,
   IdParamSchema,
+  CreateSubscriptionPlansResponseSchema,
+  UpdatePlansResponseSchema,
+  GetSellerPlansResponseSchema,
+  GetPayoutAccountsResponseSchema,
+  AddPayoutAccountResponseSchema,
+  DeletePayoutAccountResponseSchema,
+  RequestWithdrawResponseSchema,
+  GetAllSellersResponseSchema,
+  GetFollowersCountResponseSchema,
+  UploadIdentityCardResponseSchema,
+  UploadSentPictureResponseSchema,
 } from '@feetflight/shared-types';
 import { authGuard } from '@/plugins/auth.plugin';
 import { sellerGuard } from '@/plugins/seller.plugin';
@@ -38,18 +49,21 @@ export const sellerRoutes = () => {
         .post(
           '/plans/:id',
           async ({ params, body, neo4j, log, set }) => {
-            const createdSubscriptionPlans = await createSubscribePlans(params.id, body, {
+            const result = await createSubscribePlans(params.id, body, {
               neo4j,
               log,
               stripe,
             });
 
-            set.status = 200;
-            return { createdSubscriptionPlans };
+            set.status = 201;
+            return result;
           },
           {
             params: IdParamSchema,
             body: CreateSubscriptionPlansSchema,
+            response: {
+              201: CreateSubscriptionPlansResponseSchema,
+            },
             detail: {
               tags: ['Sellers'],
               summary: 'Create Subscription Plans',
@@ -62,13 +76,16 @@ export const sellerRoutes = () => {
         .get(
           '/plans/:id',
           async ({ params, neo4j, log, set }) => {
-            const subscriptionPlans = await getSubscriptionPlans(params.id, { neo4j, log });
+            const result = await getSubscriptionPlans(params.id, { neo4j, log });
 
             set.status = 200;
-            return { subscriptionPlans };
+            return result;
           },
           {
             params: IdParamSchema,
+            response: {
+              200: GetSellerPlansResponseSchema,
+            },
             detail: {
               tags: ['Sellers'],
               summary: 'Get Subscription Plans',
@@ -82,11 +99,14 @@ export const sellerRoutes = () => {
           async ({ body, neo4j, log, set }) => {
             const result = await changePlans(body.data.plans, { neo4j, log, stripe });
 
-            set.status = 201;
+            set.status = 200;
             return result;
           },
           {
             body: UpdatePlansSchema,
+            response: {
+              200: UpdatePlansResponseSchema,
+            },
             detail: {
               tags: ['Sellers'],
               summary: 'Update Subscription Plans',
@@ -100,10 +120,13 @@ export const sellerRoutes = () => {
           async ({ neo4j, log, set }) => {
             const result = await getAllSellers({ neo4j, log });
 
-            set.status = 201;
+            set.status = 200;
             return result;
           },
           {
+            response: {
+              200: GetAllSellersResponseSchema,
+            },
             detail: {
               tags: ['Sellers'],
               summary: 'Get All Sellers',
@@ -117,11 +140,14 @@ export const sellerRoutes = () => {
           async ({ params, neo4j, log, set }) => {
             const followersCount = await getFollowersCount(params.id, { neo4j, log });
 
-            set.status = 201;
+            set.status = 200;
             return { followers: followersCount };
           },
           {
             params: IdParamSchema,
+            response: {
+              200: GetFollowersCountResponseSchema,
+            },
             detail: {
               tags: ['Sellers'],
               summary: 'Get Followers Count',
@@ -136,11 +162,14 @@ export const sellerRoutes = () => {
           async ({ params, neo4j, log, set }) => {
             const payoutAccount = await getPayoutAccounts(params.id, { neo4j, log });
 
-            set.status = 201;
+            set.status = 200;
             return payoutAccount;
           },
           {
             params: IdParamSchema,
+            response: {
+              200: GetPayoutAccountsResponseSchema,
+            },
             detail: {
               tags: ['Sellers'],
               summary: 'Get Payout Accounts',
@@ -157,11 +186,14 @@ export const sellerRoutes = () => {
           async ({ params, neo4j, log, set }) => {
             await deletePayoutAccount(params.payoutAccountId, { neo4j, log });
 
-            set.status = 201;
+            set.status = 200;
             return { message: 'Your payout account has been deleted successfully!' };
           },
           {
             params: RequestWithdrawParamSchema,
+            response: {
+              200: DeletePayoutAccountResponseSchema,
+            },
             detail: {
               tags: ['Sellers'],
               summary: 'Delete Payout Account',
@@ -175,11 +207,14 @@ export const sellerRoutes = () => {
           async ({ params, neo4j, log, set }) => {
             await requestWithdraw(params.id, params.payoutAccountId, { neo4j, log });
 
-            set.status = 201;
+            set.status = 200;
             return { message: 'Your withdraw request is being processed!' };
           },
           {
             params: RequestWithdrawParamSchema,
+            response: {
+              200: RequestWithdrawResponseSchema,
+            },
             detail: {
               tags: ['Sellers'],
               summary: 'Request Withdrawal',
@@ -199,6 +234,9 @@ export const sellerRoutes = () => {
           {
             params: IdParamSchema,
             body: AddPayoutAccountSchema,
+            response: {
+              201: AddPayoutAccountResponseSchema,
+            },
             detail: {
               tags: ['Sellers'],
               summary: 'Add Payout Account',
@@ -220,7 +258,7 @@ export const sellerRoutes = () => {
           '/upload/identitycard/:id',
           async ({ params, body, neo4j, log, set }) => {
             const frontSideFiles = await Promise.all(
-              body.frontSide.map(async (file) => ({
+              body.frontSide.map(async (file: File) => ({
                 buffer: Buffer.from(await file.arrayBuffer()),
                 mimetype: file.type,
                 originalname: file.name,
@@ -229,7 +267,7 @@ export const sellerRoutes = () => {
             );
 
             const backSideFiles = await Promise.all(
-              body.backSide.map(async (file) => ({
+              body.backSide.map(async (file: File) => ({
                 buffer: Buffer.from(await file.arrayBuffer()),
                 mimetype: file.type,
                 originalname: file.name,
@@ -252,6 +290,9 @@ export const sellerRoutes = () => {
           {
             params: IdParamSchema,
             body: IdentityCardUploadSchema,
+            response: {
+              201: UploadIdentityCardResponseSchema,
+            },
             detail: {
               tags: ['Sellers'],
               summary: 'Upload Identity Card',
@@ -287,6 +328,9 @@ export const sellerRoutes = () => {
             body: t.Object({
               sentPicture: SentPictureUploadSchema,
             }),
+            response: {
+              201: UploadSentPictureResponseSchema,
+            },
             detail: {
               tags: ['Sellers'],
               summary: 'Upload Sent Picture',

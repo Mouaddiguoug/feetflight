@@ -26,6 +26,7 @@
     "lint:fix": "nx run-many --target=lint --all -- --fix",
     "lint:api": "nx lint api",
     "lint:web": "nx lint web",
+    "typecheck:api": "nx typecheck api",
     "format": "prettier --write .",
     "format:check": "prettier --check .",
     "typecheck:web": "nx typecheck web",

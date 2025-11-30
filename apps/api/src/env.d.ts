@@ -1,3 +1,4 @@
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 import type { Config } from './config';
 
 declare module 'bun' {
@@ -34,7 +35,7 @@ declare module 'bun' {
 
 declare global {
   namespace NodeJS {
-    interface ProcessEnv extends Bun.Env {}
+    type ProcessEnv = Bun.Env;
   }
 }
 

@@ -1,5 +1,3 @@
-import { HttpError } from '@/plugins/error.plugin';
-
 /**
  * @deprecated Use HttpError or specific error classes (BadRequestError, UnauthorizedError, etc.) from '@/plugins/error.plugin' instead.
  * This class is maintained for backward compatibility with Express routes during the migration to Elysia.

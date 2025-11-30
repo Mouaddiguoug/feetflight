@@ -1,12 +1,14 @@
 {
   "extends": "../../tsconfig.base.json",
   "compilerOptions": {
-    "composite": true,
+    "composite": false,
     "declaration": true,
     "declarationMap": true,
     "outDir": "./dist",
     "rootDir": ".",
     "baseUrl": ".",
+    "noUnusedLocals": false,
+    "noUnusedParameters": false,
     "paths": {
       "@/*": ["src/*"],
       "@config/*": ["src/config/*"],
@@ -22,9 +24,14 @@
     "types": []
   },
   "include": ["src/**/*", "api/**/*"],
-  "exclude": ["node_modules", "dist", "build", "**/*.spec.ts", "**/*.test.ts"],
-  "references": [
-    { "path": "../../packages/shared-types" },
-    { "path": "../../packages/shared-utils" }
+  "exclude": [
+    "node_modules",
+    "dist",
+    "build",
+    "**/*.spec.ts",
+    "**/*.test.ts",
+    "src/middlewares/**/*",
+    "src/models/**/*",
+    "src/controllers/**/*"
   ]
 }

@@ -1,3 +1,2 @@
-import Stripe from 'stripe';
-
-class chatService {}
+// Placeholder service - to be implemented
+// export class ChatService {}

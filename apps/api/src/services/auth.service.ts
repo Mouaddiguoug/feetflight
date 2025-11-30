@@ -1,7 +1,6 @@
 import { hash, compare } from 'bcrypt';
 import { RolesEnum } from '../enums/RolesEnums';
 import { uid } from 'uid';
-import moment from 'moment';
 import {
   BadRequestError,
   ConflictError,
@@ -14,6 +13,17 @@ import { render } from '@react-email/render';
 import type { Resend } from 'resend';
 import type Stripe from 'stripe';
 import type { Session } from 'neo4j-driver';
+import { UserRepository } from '@/domain/repositories/user.repository';
+import { SellerRepository } from '@/domain/repositories/seller.repository';
+import type { Tneo4j } from '@/plugins/neo4j.plugin';
+import type {
+  SignupResponse,
+  LoginResponse,
+  ChangePasswordResponse,
+  RefreshTokenResponse,
+  LogoutResponse,
+  ResendVerificationEmailResponse,
+} from '@feetflight/shared-types';
 
 /**
  * Authentication Service Dependencies
@@ -40,9 +50,7 @@ export interface AuthServiceDeps {
     }) => string;
   };
   /** Neo4j plugin instance for database operations (optional for refreshToken) */
-  neo4j?: {
-    withSession: <T>(fn: (session: Session) => Promise<T>) => Promise<T>;
-  };
+  neo4j?: Tneo4j;
   /** Optional structured logger instance */
   log?: any;
   /** Stripe client instance (required for signup) */
@@ -62,49 +70,15 @@ export interface TokenData {
 }
 
 /**
- * Signup Response Interface
- * Response structure for successful signup operation
+ * Helper function to convert Neo4j Integer to string or number
  */
-export interface SignupResponse {
-  tokenData: TokenData;
-  data: {
-    id: string;
-    name: string;
-    email: string;
-    userName: string;
-    avatar: string;
-    confirmed: boolean;
-    verified: boolean;
-    desactivated: boolean;
-    createdAt: string;
-    followers: number;
-    followings: number;
-    phone?: string;
-  };
-  role: string;
-}
-
-/**
- * Login Response Interface
- * Response structure for successful login operation
- */
-export interface LoginResponse {
-  tokenData: TokenData;
-  data: {
-    id: string;
-    name: string;
-    email: string;
-    userName: string;
-    avatar: string;
-    confirmed: boolean;
-    verified: boolean;
-    desactivated: boolean;
-    createdAt: string;
-    followers: number;
-    followings: number;
-    phone?: string;
-  };
-  role: string;
+function convertInteger(value: unknown): string | number {
+  if (typeof value === 'string') return value;
+  if (typeof value === 'number') return value;
+  if (value && typeof value === 'object' && 'toNumber' in value) {
+    return (value as any).toNumber();
+  }
+  return String(value);
 }
 
 /**
@@ -170,14 +144,12 @@ export async function signup(userData: any, deps: AuthServiceDeps): Promise<Sign
     throw new InternalServerError('Neo4j database client not available');
   }
 
+  // Create repository instances
+  const userRepo = new UserRepository({ neo4j, log });
+
   try {
-    // Check if user already exists
-    const existingUser = await neo4j.withSession(async (session: Session) => {
-      const result = await session.executeRead((tx) =>
-        tx.run('MATCH (u:user {email: $email}) RETURN u', { email })
-      );
-      return result.records.length > 0;
-    });
+    // Check if user already exists using repository
+    const existingUser = await userRepo.findByEmail(email);
 
     if (existingUser) {
       throw new ConflictError(`This email ${email} already exists`);
@@ -248,6 +220,14 @@ async function signupSeller(
     throw new BadRequestError('Seller signup requires phone and at least one plan');
   }
 
+  if (!neo4j) {
+    throw new InternalServerError('Neo4j client is not available');
+  }
+
+  // Create repository instances
+  const userRepo = new UserRepository({ neo4j, log });
+  const sellerRepo = new SellerRepository({ neo4j, log });
+
   try {
     // Create Stripe customer
     const sellerCustomer = await stripe!.customers.create({
@@ -256,66 +236,41 @@ async function signupSeller(
       balance: 0,
     });
 
-    // Create seller user in Neo4j with wallet
-    if (!neo4j) {
-      throw new InternalServerError('Neo4j client is not available');
-    }
-    const userRecord = await neo4j.withSession(async (session: Session) => {
-      // Create user, seller, device token, and wallet in single transaction
-      const createUserResult = await session.executeWrite((tx) =>
+    // Create user using repository
+    const user = await userRepo.create({
+      id: sellerCustomer.id,
+      email: email,
+      password: hashedPassword,
+      name: userData.data.name,
+      userName: userData.data.userName,
+      avatar: '',
+      phone: userData.data.phone,
+      confirmed: false,
+      verified: false,
+      desactivated: false,
+    });
+
+    // Add device token
+    await userRepo.addDeviceToken(user.id, userData.data.deviceToken);
+
+    // Create seller node using repository
+    const seller = await sellerRepo.create(user.id);
+
+    // Create wallet for seller (still needs direct query for now - will be refactored later)
+    await neo4j.withSession(async (session: Session) => {
+      await session.executeWrite((tx) =>
         tx.run(
-          `CREATE (u:user {
-            id: $userId,
-            name: $name,
-            email: $email,
-            userName: $userName,
-            avatar: "",
-            password: $password,
-            createdAt: $createdAt,
-            confirmed: false,
-            verified: false,
-            desactivated: false,
-            phone: $phone,
-            followers: $followers,
-            followings: $followings
-          })-[:IS_A]->(s:seller {id: $sellerId, verified: $verified})
-          CREATE (d:deviceToken {token: $token})<-[:logged_in_with]-(u)
-          CREATE (s)-[:HAS_A]->(:wallet {id: $walletId, amount: 0.0})
-          RETURN u, s`,
+          'MATCH (s:seller {id: $sellerId}) CREATE (s)-[:HAS_A]->(:wallet {id: $walletId, amount: 0.0})',
           {
-            userId: sellerCustomer.id,
-            followers: 0,
-            followings: 0,
-            token: userData.data.deviceToken,
-            createdAt: moment().format('MMMM DD, YYYY'),
-            email: email,
-            userName: userData.data.userName,
-            name: userData.data.name,
-            password: hashedPassword,
-            sellerId: uid(40),
-            verified: false,
-            phone: userData.data.phone,
+            sellerId: seller.id,
             walletId: uid(40),
           }
         )
       );
-
-      return createUserResult.records[0];
     });
 
-    if (!userRecord) {
-      throw new InternalServerError('Failed to create user and seller in Neo4j');
-    }
-
-    const sellerId = userRecord.get('s')?.properties?.id;
-    const userProperties = userRecord.get('u')?.properties;
-
-    if (!sellerId || !userProperties) {
-      throw new InternalServerError('Incomplete user or seller record returned from Neo4j');
-    }
-
     // Create Stripe products and plans in parallel
-    await Promise.all(
+    const plans = await Promise.all(
       userData.data.plans.map(async (plan: any) => {
         try {
           const stripeProduct = await stripe!.products.create({
@@ -335,20 +290,11 @@ async function signupSeller(
             unit_amount: unitAmount,
           });
 
-          // Create plan in Neo4j
-          await neo4j.withSession(async (session: Session) => {
-            await session.executeWrite((tx) =>
-              tx.run(
-                'MATCH (s:seller {id: $sellerId}) CREATE (s)-[:HAS_A]->(:plan {id: $planId, name: $name, price: $price})',
-                {
-                  sellerId: sellerId,
-                  planId: stripePrice.id,
-                  name: plan.name,
-                  price: plan.price,
-                }
-              )
-            );
-          });
+          return {
+            id: stripePrice.id,
+            name: plan.name,
+            price: plan.price,
+          };
         } catch (error) {
           log?.error({ error, planName: plan.name }, 'Failed to create plan');
           throw new InternalServerError(`Failed to create plan: ${plan.name}`);
@@ -356,29 +302,32 @@ async function signupSeller(
       })
     );
 
+    // Create plans in Neo4j using repository
+    await sellerRepo.createPlans(user.id, plans);
+
     // Generate email verification token (48 hour expiry)
-    const tokenData = await auth.signEmailToken(userProperties.id);
+    const tokenData = await auth.signEmailToken(user.id);
 
     // Send verification email
     await sendVerificationEmail(email, userData.data.userName, tokenData.token, 'selling', resend!);
 
-    log?.info({ userId: userProperties.id, role: 'Seller' }, 'Seller signup successful');
+    log?.info({ userId: user.id, role: 'Seller' }, 'Seller signup successful');
 
     return {
       tokenData,
       data: {
-        avatar: userProperties.avatar,
-        confirmed: userProperties.confirmed,
-        createdAt: userProperties.createdAt,
-        verified: userProperties.verified,
-        desactivated: userProperties.desactivated,
-        email: userProperties.email,
-        followers: userProperties.followers,
-        followings: userProperties.followings,
-        id: userProperties.id,
-        name: userProperties.name,
-        phone: userProperties.phone,
-        userName: userProperties.userName,
+        id: user.id,
+        name: user.name,
+        email: user.email,
+        userName: user.userName,
+        avatar: user.avatar,
+        confirmed: user.confirmed,
+        verified: user.verified,
+        desactivated: user.desactivated,
+        createdAt: String(convertInteger(user.createdAt)),
+        followers: user.followers,
+        followings: user.followings,
+        phone: user.phone,
       },
       role: 'Seller',
     };
@@ -401,6 +350,13 @@ async function signupBuyer(
 ): Promise<SignupResponse> {
   const { auth, neo4j, log, stripe, resend } = deps;
 
+  if (!neo4j) {
+    throw new InternalServerError('Neo4j instance is undefined');
+  }
+
+  // Create repository instances
+  const userRepo = new UserRepository({ neo4j, log });
+
   try {
     // Create Stripe customer
     const buyer = await stripe!.customers.create({
@@ -409,78 +365,55 @@ async function signupBuyer(
       balance: 0,
     });
 
-    if (!neo4j) {
-      throw new Error('Neo4j instance is undefined');
-    }
-
-    // Create buyer user in Neo4j
-    const userRecord = await neo4j.withSession(async (session: Session) => {
-      const result = await session.executeWrite((tx) =>
-        tx.run(
-          `CREATE (u:user {
-            id: $userId,
-            avatar: "",
-            name: $name,
-            email: $email,
-            userName: $userName,
-            password: $password,
-            createdAt: $createdAt,
-            confirmed: false,
-            verified: false,
-            desactivated: false,
-            followers: 0,
-            followings: 0
-          })-[:IS_A]->(b:buyer {id: $buyerId})
-          CREATE (d:deviceToken {token: $token})<-[:logged_in_with]-(u)
-          RETURN u`,
-          {
-            userId: buyer.id,
-            buyerId: uid(40),
-            token: userData.data.deviceToken,
-            createdAt: moment().format('MMMM DD, YYYY'),
-            email: email,
-            userName: userData.data.userName,
-            name: userData.data.name,
-            password: hashedPassword,
-          }
-        )
-      );
-
-      return result.records[0];
+    // Create user using repository
+    const user = await userRepo.create({
+      id: buyer.id,
+      email: email,
+      password: hashedPassword,
+      name: userData.data.name,
+      userName: userData.data.userName,
+      avatar: '',
+      confirmed: false,
+      verified: false,
+      desactivated: false,
     });
 
-    if (!userRecord) {
-      throw new Error('User record not found');
-    }
-    const userNode = userRecord.get('u');
-    if (!userNode || !userNode.properties) {
-      throw new Error('User node or its properties are undefined');
-    }
-    const userProperties = userNode.properties;
+    // Create buyer node (still needs direct query for now - will be refactored later)
+    await neo4j.withSession(async (session: Session) => {
+      await session.executeWrite((tx) =>
+        tx.run('MATCH (u:user {id: $userId}) CREATE (u)-[:IS_A]->(b:buyer {id: $buyerId})', {
+          userId: user.id,
+          buyerId: uid(40),
+        })
+      );
+    });
+
+    // Add device token
+    await userRepo.addDeviceToken(user.id, userData.data.deviceToken);
 
     // Generate email verification token (48 hour expiry)
-    const tokenData = await auth.signEmailToken(userProperties.id);
+    const tokenData = await auth.signEmailToken(user.id);
 
     // Send verification email
     await sendVerificationEmail(email, userData.data.userName, tokenData.token, 'finding', resend!);
 
-    log?.info({ userId: userProperties.id, role: 'Buyer' }, 'Buyer signup successful');
+    log?.info({ userId: user.id, role: 'Buyer' }, 'Buyer signup successful');
 
     return {
       tokenData,
       data: {
-        avatar: userProperties.avatar,
-        confirmed: userProperties.confirmed,
-        createdAt: userProperties.createdAt,
-        verified: userProperties.verified,
-        desactivated: userProperties.desactivated,
-        email: userProperties.email,
-        followers: userProperties.followers,
-        followings: userProperties.followings,
-        id: userProperties.id,
-        name: userProperties.name,
-        phone: userProperties.phone,
-        userName: userProperties.userName,
+        id: user.id,
+        name: user.name,
+        email: user.email,
+        userName: user.userName,
+        avatar: user.avatar,
+        confirmed: user.confirmed,
+        verified: user.verified,
+        desactivated: user.desactivated,
+        createdAt: String(convertInteger(user.createdAt)),
+        followers: user.followers,
+        followings: user.followings,
+        phone: user.phone,
       },
       role: 'Buyer',
     };
@@ -592,70 +525,53 @@ export async function login(userData: any, deps: AuthServiceDeps): Promise<Login
   const password = userData.data.password;
   const deviceToken = userData.data.deviceToken;
 
+  // Create repository instances
+  const userRepo = new UserRepository({ neo4j, log });
+
   try {
-    // Perform all database operations in single session
-    const result = await neo4j.withSession(async (session: Session) => {
-      // Find user and verify password
-      const findUserResult = await session.executeRead((tx) =>
-        tx.run('MATCH (u:user {email: $email}) RETURN u', { email })
-      );
+    // Find user by email using repository
+    const user = await userRepo.findByEmail(email);
 
-      if (findUserResult.records.length === 0) {
-        throw new ForbiddenError('Invalid email or password');
-      }
+    if (!user) {
+      throw new ForbiddenError('Invalid email or password');
+    }
 
-      const userRecord = findUserResult?.records[0]?.get('u').properties;
-      const isPasswordMatching = await compare(password, userRecord.password);
+    // Verify password
+    const isPasswordMatching = await compare(password, user.password);
 
-      if (!isPasswordMatching) {
-        throw new ForbiddenError('Invalid email or password');
-      }
+    if (!isPasswordMatching) {
+      throw new ForbiddenError('Invalid email or password');
+    }
 
-      const userId = userRecord.id;
+    // Get user role using repository
+    const role = await userRepo.getUserRole(user.id);
+    const userRole = role === 'Seller' ? 'Seller' : 'Buyer';
 
-      // Check if user is a seller
-      const roleResult = await session.executeRead((tx) =>
-        tx.run('MATCH (u:user {id: $id})-[:IS_A]-(r:seller) RETURN r', { id: userId })
-      );
-
-      const role = roleResult.records.length === 0 ? 'Buyer' : 'Seller';
-
-      // Update device token (merge to ensure node exists)
-      await session.executeWrite((tx) =>
-        tx.run(
-          'MATCH (u:user {id: $id}) MERGE (u)-[:logged_in_with]->(d:deviceToken) SET d.token = $token',
-          {
-            id: userId,
-            token: deviceToken,
-          }
-        )
-      );
-
-      return { userRecord, role };
-    });
+    // Update device token using repository
+    await userRepo.addDeviceToken(user.id, deviceToken);
 
     // Generate access token
-    const tokenData = await auth.signAccessToken(result.userRecord.id);
+    const tokenData = await auth.signAccessToken(user.id);
 
-    log?.info({ userId: result.userRecord.id, role: result.role }, 'User logged in successfully');
+    log?.info({ userId: user.id, role: userRole }, 'User logged in successfully');
 
     return {
       tokenData,
       data: {
-        avatar: result.userRecord.avatar,
-        confirmed: result.userRecord.confirmed,
-        createdAt: result.userRecord.createdAt,
-        verified: result.userRecord.verified,
-        desactivated: result.userRecord.desactivated,
-        email: result.userRecord.email,
-        followers: result.userRecord.followers,
-        followings: result.userRecord.followings,
-        id: result.userRecord.id,
-        name: result.userRecord.name,
-        phone: result.userRecord.phone,
-        userName: result.userRecord.userName,
+        id: user.id,
+        name: user.name,
+        email: user.email,
+        userName: user.userName,
+        avatar: user.avatar,
+        confirmed: user.confirmed,
+        verified: user.verified,
+        desactivated: user.desactivated,
+        createdAt: String(convertInteger(user.createdAt)),
+        followers: user.followers,
+        followings: user.followings,
+        phone: user.phone,
       },
-      role: result.role,
+      role: userRole,
     };
   } catch (error) {
     log?.error({ error, email }, 'Login failed');
@@ -692,50 +608,42 @@ export async function changePassword(
   email: string,
   userData: any,
   deps: AuthServiceDeps
-): Promise<any> {
+): Promise<ChangePasswordResponse> {
   const { neo4j, log } = deps;
 
   if (!neo4j) {
     throw new InternalServerError('Neo4j database client not available');
   }
 
+  // Create repository instances
+  const userRepo = new UserRepository({ neo4j, log });
+
   try {
-    const result = await neo4j.withSession(async (session: Session) => {
-      // Find user
-      const findUserResult = await session.executeRead((tx) =>
-        tx.run('MATCH (u:user {email: $email}) RETURN u', { email })
-      );
+    // Find user by email using repository
+    const user = await userRepo.findByEmail(email);
 
-      if (findUserResult.records.length === 0) {
-        throw new NotFoundError('User not found');
-      }
+    if (!user) {
+      throw new NotFoundError('User not found');
+    }
 
-      const userPassword = findUserResult?.records[0]?.get('u').properties.password;
+    // Verify old password
+    const isPasswordMatching = await compare(userData.data.oldPassword, user.password);
 
-      // Verify old password
-      const isPasswordMatching = await compare(userData.data.oldPassword, userPassword);
+    if (!isPasswordMatching) {
+      throw new ForbiddenError('Old password is incorrect');
+    }
 
-      if (!isPasswordMatching) {
-        throw new ForbiddenError('Old password is incorrect');
-      }
+    // Hash new password
+    const hashedPassword = await hash(userData.data.newPassword, 10);
 
-      // Hash new password
-      const hashedPassword = await hash(userData.data.newPassword, 10);
-
-      // Update password
-      const updateResult = await session.executeWrite((tx) =>
-        tx.run('MATCH (u:user {email: $email}) SET u.password = $newPassword RETURN u', {
-          email: email,
-          newPassword: hashedPassword,
-        })
-      );
-
-      return updateResult?.records[0]?.get('u').properties;
-    });
+    // Update password using repository
+    await userRepo.update(user.id, { password: hashedPassword });
 
     log?.info({ email }, 'Password changed successfully');
 
-    return result;
+    return {
+      message: 'Password changed successfully',
+    };
   } catch (error) {
     log?.error({ error, email }, 'Change password failed');
 
@@ -766,7 +674,10 @@ export async function changePassword(
  * - Replaced manual JWT signing with auth.signAccessToken()
  * - Added proper error handling
  */
-export async function resendVerificationEmail(email: string, deps: AuthServiceDeps): Promise<void> {
+export async function resendVerificationEmail(
+  email: string,
+  deps: AuthServiceDeps
+): Promise<ResendVerificationEmailResponse> {
   const { auth, neo4j, log, resend } = deps;
 
   if (!resend) {
@@ -786,44 +697,32 @@ export async function resendVerificationEmail(email: string, deps: AuthServiceDe
     );
   }
 
+  // Create repository instances
+  const userRepo = new UserRepository({ neo4j, log });
+
   try {
-    const result = await neo4j.withSession(async (session: Session) => {
-      // Find user
-      const userResult = await session.executeRead((tx) =>
-        tx.run('MATCH (u:user {email: $email}) RETURN u', { email })
-      );
+    // Find user by email using repository
+    const user = await userRepo.findByEmail(email);
 
-      if (userResult.records.length === 0) {
-        throw new NotFoundError('User not found');
-      }
+    if (!user) {
+      throw new NotFoundError('User not found');
+    }
 
-      const userProperties = userResult?.records[0]?.get('u').properties;
-
-      // Check if user is a seller (simplified, matching login approach)
-      const roleResult = await session.executeRead((tx) =>
-        tx.run('MATCH (u:user {email: $email})-[:IS_A]->(s:seller) RETURN s LIMIT 1', {
-          email,
-        })
-      );
-
-      const role = roleResult.records.length > 0 ? 'Seller' : 'Buyer';
-
-      return { userProperties, role };
-    });
+    // Get user role using repository
+    const role = await userRepo.getUserRole(user.id);
+    const userRole = role === 'Seller' ? 'selling' : 'finding';
 
     // Generate new verification token (48 hour expiry)
-    const tokenData = await auth.signEmailToken(result.userProperties.id);
+    const tokenData = await auth.signEmailToken(user.id);
 
     // Send verification email
-    await sendVerificationEmail(
-      email,
-      result.userProperties.userName,
-      tokenData.token,
-      result.role,
-      resend
-    );
+    await sendVerificationEmail(email, user.userName, tokenData.token, userRole, resend);
 
     log?.info({ email }, 'Verification email resent successfully');
+
+    return {
+      message: 'Verification email sent successfully',
+    };
   } catch (error) {
     log?.error({ error, email }, 'Resend verification email failed');
 
@@ -856,7 +755,7 @@ export async function resendVerificationEmail(email: string, deps: AuthServiceDe
 export async function refreshToken(
   id: string,
   deps: AuthServiceDeps
-): Promise<{ tokenData: TokenData }> {
+): Promise<RefreshTokenResponse> {
   const { auth, log } = deps;
 
   if (!id) {
@@ -868,7 +767,11 @@ export async function refreshToken(
 
     log?.info({ userId: id }, 'Refresh token generated');
 
-    return { tokenData };
+    return {
+      token: tokenData.token,
+      expiresIn: tokenData.expiresIn,
+      maxAgeSeconds: tokenData.maxAgeSeconds,
+    };
   } catch (error) {
     log?.error({ error, userId: id }, 'Refresh token generation failed');
     throw new InternalServerError(
@@ -892,20 +795,31 @@ export async function refreshToken(
  * - Implemented as no-op (cookie clearing happens in route handler)
  * - Could be extended to invalidate device token in Neo4j if needed
  */
-export async function logout(user: any, deps: AuthServiceDeps): Promise<any> {
-  const { log } = deps;
+export async function logout(user: any, deps: AuthServiceDeps): Promise<LogoutResponse> {
+  const { neo4j, log } = deps;
 
-  log?.info({ userId: user.id }, 'User logged out');
+  if (!neo4j) {
+    throw new InternalServerError('Neo4j database client not available');
+  }
 
-  await deps.neo4j?.withSession(async (session) => {
-    await session.executeWrite((tx) =>
-      tx.run('MATCH (u:user {id: $id})-[:logged_in_with]->(d:deviceToken) SET d.token = ""', {
-        id: user.id,
-      })
+  // Create repository instances
+  const userRepo = new UserRepository({ neo4j, log });
+
+  try {
+    // Remove all device tokens (logout from all devices)
+    await userRepo.removeAllDeviceTokens(user.id);
+
+    log?.info({ userId: user.id }, 'User logged out');
+
+    return {
+      message: 'Logged out successfully',
+    };
+  } catch (error) {
+    log?.error({ error, userId: user.id }, 'Logout failed');
+    throw new InternalServerError(
+      `Logout failed: ${error instanceof Error ? error.message : 'Unknown error'}`
     );
-  });
-
-  return user;
+  }
 }
 
 /**
@@ -918,64 +832,64 @@ export async function logout(user: any, deps: AuthServiceDeps): Promise<any> {
  *
  * This class will be removed when src/controllers/auth.controller.ts is deleted.
  */
-export default class AuthService {
-  /**
-   * @deprecated Use the exported signup() function instead
-   */
-  public async signup(userData: any): Promise<any> {
-    throw new Error(
-      'AuthService class is deprecated. This method is non-functional. ' +
-        'Use the Elysia routes in src/routes/auth.route.ts instead.'
-    );
-  }
+// export default class AuthService {
+//   /**
+//    * @deprecated Use the exported signup() function instead
+//    */
+//   public async signup(userData: any): Promise<any> {
+//     throw new Error(
+//       'AuthService class is deprecated. This method is non-functional. ' +
+//         'Use the Elysia routes in src/routes/auth.route.ts instead.'
+//     );
+//   }
 
-  /**
-   * @deprecated Use the exported login() function instead
-   */
-  public async login(userData: any): Promise<any> {
-    throw new Error(
-      'AuthService class is deprecated. This method is non-functional. ' +
-        'Use the Elysia routes in src/routes/auth.route.ts instead.'
-    );
-  }
+//   /**
+//    * @deprecated Use the exported login() function instead
+//    */
+//   public async login(userData: any): Promise<any> {
+//     throw new Error(
+//       'AuthService class is deprecated. This method is non-functional. ' +
+//         'Use the Elysia routes in src/routes/auth.route.ts instead.'
+//     );
+//   }
 
-  /**
-   * @deprecated Use the exported changePassword() function instead
-   */
-  public async changePassword(email: string, userData: any): Promise<any> {
-    throw new Error(
-      'AuthService class is deprecated. This method is non-functional. ' +
-        'Use the Elysia routes in src/routes/auth.route.ts instead.'
-    );
-  }
+//   /**
+//    * @deprecated Use the exported changePassword() function instead
+//    */
+//   public async changePassword(email: string, userData: any): Promise<any> {
+//     throw new Error(
+//       'AuthService class is deprecated. This method is non-functional. ' +
+//         'Use the Elysia routes in src/routes/auth.route.ts instead.'
+//     );
+//   }
 
-  /**
-   * @deprecated Use the exported resendVerificationEmail() function instead
-   */
-  public async resendVerificationEmail(email: string): Promise<void> {
-    throw new Error(
-      'AuthService class is deprecated. This method is non-functional. ' +
-        'Use the Elysia routes in src/routes/auth.route.ts instead.'
-    );
-  }
+//   /**
+//    * @deprecated Use the exported resendVerificationEmail() function instead
+//    */
+//   public async resendVerificationEmail(email: string): Promise<void> {
+//     throw new Error(
+//       'AuthService class is deprecated. This method is non-functional. ' +
+//         'Use the Elysia routes in src/routes/auth.route.ts instead.'
+//     );
+//   }
 
-  /**
-   * @deprecated Use the exported refreshToken() function instead
-   */
-  public async refreshToken(id: string): Promise<any> {
-    throw new Error(
-      'AuthService class is deprecated. This method is non-functional. ' +
-        'Use the Elysia routes in src/routes/auth.route.ts instead.'
-    );
-  }
+//   /**
+//    * @deprecated Use the exported refreshToken() function instead
+//    */
+//   public async refreshToken(id: string): Promise<any> {
+//     throw new Error(
+//       'AuthService class is deprecated. This method is non-functional. ' +
+//         'Use the Elysia routes in src/routes/auth.route.ts instead.'
+//     );
+//   }
 
-  /**
-   * @deprecated Use the exported logout() function instead
-   */
-  public async logout(userData: any): Promise<any> {
-    throw new Error(
-      'AuthService class is deprecated. This method is non-functional. ' +
-        'Use the Elysia routes in src/routes/auth.route.ts instead.'
-    );
-  }
-}
+//   /**
+//    * @deprecated Use the exported logout() function instead
+//    */
+//   public async logout(userData: any): Promise<any> {
+//     throw new Error(
+//       'AuthService class is deprecated. This method is non-functional. ' +
+//         'Use the Elysia routes in src/routes/auth.route.ts instead.'
+//     );
+//   }
+// }

@@ -8,11 +8,17 @@ import { uid } from 'uid';
 import type Stripe from 'stripe';
 import { Tneo4j } from '@/plugins/neo4j.plugin';
 import { Logger } from 'pino';
+import { SellerRepository } from '@/domain/repositories/seller.repository';
+import type {
+  CreateSubscriptionPlansResponse,
+  UpdatePlansResponse,
+  GetSellerPlansResponse,
+} from '@feetflight/shared-types';
 
 const writeFileAsync = promisify(writeFile);
 export interface SellerServiceDeps {
   neo4j: Tneo4j;
-  log?: Logger;
+  log: Logger;
   stripe?: Stripe;
 }
 
@@ -20,7 +26,7 @@ export async function createSubscribePlans(
   userId: string,
   subscriptionPlansData: any,
   deps: SellerServiceDeps
-): Promise<any[]> {
+): Promise<CreateSubscriptionPlansResponse> {
   try {
     if (!deps.stripe) {
       throw new InternalServerError('Stripe is not configured');
@@ -37,9 +43,12 @@ export async function createSubscribePlans(
       }
     );
 
-    const subscriptionPlans = await Promise.all(createdSubscriptionPlans);
+    const plans = await Promise.all(createdSubscriptionPlans);
 
-    return subscriptionPlans;
+    return {
+      message: 'Subscription plans created successfully',
+      plans: plans.flat(),
+    };
   } catch (error) {
     deps.log?.error({ error, userId }, 'Create subscription plans failed');
     if (error instanceof InternalServerError) {
@@ -52,7 +61,7 @@ export async function createSubscribePlans(
 export async function changePlans(
   plans: any[],
   deps: SellerServiceDeps
-): Promise<{ message: string }> {
+): Promise<UpdatePlansResponse> {
   try {
     if (!deps.stripe) {
       throw new InternalServerError('Stripe is not configured');
@@ -82,11 +91,12 @@ export async function changePlans(
       return changePlansInDb(plan.id, newPrice.id, plan.name, plan.price, deps);
     });
 
-    await Promise.all(updatedPlans);
+    const results = await Promise.all(updatedPlans);
 
-    return updatedPlans.length > 0
-      ? { message: 'plans were updated successfully' }
-      : { message: 'Something went wrong' };
+    return {
+      message: 'plans were updated successfully',
+      updatedPlans: results.flat(),
+    };
   } catch (error) {
     deps.log?.error({ error, plans }, 'Change plans failed');
     throw new InternalServerError('Failed to update plans');
@@ -145,20 +155,14 @@ export async function getPayoutAccounts(userId: string, deps: SellerServiceDeps)
 export async function getSubscriptionPlans(
   userId: string,
   deps: SellerServiceDeps
-): Promise<any[]> {
+): Promise<GetSellerPlansResponse> {
   try {
-    const subscriptionPlans = await deps.neo4j.withSession(async (session) => {
-      return await session.executeRead((tx) =>
-        tx.run(
-          'match (user {id: $userId})-[:IS_A]->(s:seller)-[:HAS_A]->(subscriptionPlan:subscriptionPlan) return subscriptionPlan',
-          {
-            userId: userId,
-          }
-        )
-      );
-    });
+    const sellerRepo = new SellerRepository({ neo4j: deps.neo4j, log: deps.log });
+    const plans = await sellerRepo.getPlans(userId);
 
-    return subscriptionPlans.records.map((record) => record.get('subscriptionPlan').properties);
+    return {
+      plans,
+    };
   } catch (error) {
     deps.log?.error({ error, userId }, 'Get subscription plans failed');
     throw new InternalServerError('Failed to retrieve subscription plans');
@@ -403,7 +407,7 @@ export async function uploadSentPicture(
             receiverId: receiverId,
             tipAmount: tipAmount,
             pictureId: pictureId,
-            isPaid: Number(tipAmount) == 0 ? false : true,
+            isPaid: Number(tipAmount) === 0 ? false : true,
           }
         )
       );

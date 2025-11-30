@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-non-null-asserted-optional-chain */
 import { hash } from 'bcrypt';
 import { writeFile } from 'node:fs/promises';
 import { Buffer } from 'node:buffer';
@@ -19,6 +20,20 @@ import {
 import { VerifyOtpTemplate } from '@/emails/verify-otp';
 import pino from 'pino';
 import { Tneo4j } from '@/plugins/neo4j.plugin';
+import { UserRepository } from '@/domain/repositories/user.repository';
+import type { UserDataResponse } from '@feetflight/shared-types';
+
+/**
+ * Helper function to convert Neo4j Integer to string or number
+ */
+function convertInteger(value: unknown): string | number {
+  if (typeof value === 'string') return value;
+  if (typeof value === 'number') return value;
+  if (value && typeof value === 'object' && 'toNumber' in value) {
+    return (value as any).toNumber();
+  }
+  return String(value);
+}
 
 /**
  * JWT Payload Interface (matches auth.plugin.ts)
@@ -51,36 +66,29 @@ export interface UserServiceDeps {
   resend?: Resend;
 }
 
-export async function findUserById(userId: string, deps: UserServiceDeps): Promise<any> {
+export async function findUserById(
+  userId: string,
+  deps: UserServiceDeps
+): Promise<UserDataResponse> {
+  const userRepo = new UserRepository({ neo4j: deps.neo4j, log: deps.log });
+
   try {
-    return await deps.neo4j.withSession(async (session) => {
-      const result = await session.executeRead((tx) =>
-        tx.run('match (u:user {id: $userId}) return u', {
-          userId: userId,
-        })
-      );
+    const user = await userRepo.findByIdOrFail(userId);
 
-      if (result.records.length === 0) {
-        throw new NotFoundError('User not found');
-      }
-
-      return result.records.map((record) => {
-        return {
-          avatar: record.get('u').properties.avatar,
-          confirmed: record.get('u').properties.confirmed,
-          verified: record.get('u').properties.verified,
-          createdAt: record.get('u').properties.createdAt,
-          desactivated: record.get('u').properties.desactivated,
-          email: record.get('u').properties.email,
-          followers: record.get('u').properties.followers,
-          followings: record.get('u').properties.followings,
-          id: record.get('u').properties.id,
-          phone: record.get('u').properties.phone,
-          name: record.get('u').properties.name,
-          userName: record.get('u').properties.userName,
-        };
-      })[0];
-    });
+    return {
+      id: user.id,
+      name: user.name,
+      email: user.email,
+      userName: user.userName,
+      avatar: user.avatar,
+      confirmed: user.confirmed,
+      verified: user.verified,
+      desactivated: user.desactivated,
+      createdAt: String(convertInteger(user.createdAt)),
+      followers: user.followers,
+      followings: user.followings,
+      phone: user.phone,
+    };
   } catch (error) {
     deps.log?.error({ error, userId }, 'Find user by ID failed');
     throw error instanceof NotFoundError ? error : new InternalServerError('Failed to find user');
@@ -115,43 +123,45 @@ export async function changePassword(
   userData: any,
   deps: UserServiceDeps,
   requesterId?: string
-): Promise<any> {
+): Promise<UserDataResponse> {
+  const userRepo = new UserRepository({ neo4j: deps.neo4j, log: deps.log });
+
   try {
     if (!userData?.data) {
       throw new BadRequestError('userData is empty');
     }
 
+    // Find user by email
+    const user = await userRepo.findByEmail(email);
+    if (!user) {
+      throw new NotFoundError('User not found');
+    }
+
+    // Validate ownership if requesterId is provided
+    if (requesterId && user.id !== requesterId) {
+      throw new ForbiddenError('You are not authorized to change this password');
+    }
+
+    // Hash new password
     const hashedPassword = await hash(userData.data.password, 10);
 
-    return await deps.neo4j.withSession(async (session) => {
-      // First, get the user to verify ownership
-      const userResult = await session.executeRead((tx) =>
-        tx.run('match (u:user {email: $email}) return u', {
-          email: email,
-        })
-      );
+    // Update password using repository
+    const updatedUser = await userRepo.update(user.id, { password: hashedPassword });
 
-      if (userResult.records.length === 0) {
-        throw new NotFoundError('User not found');
-      }
-
-      const user = userResult?.records[0]?.get('u').properties;
-
-      // Validate ownership if requesterId is provided
-      if (requesterId && user.id !== requesterId) {
-        throw new ForbiddenError('You are not authorized to change this password');
-      }
-
-      // Update password
-      const updatedUser = await session.executeWrite((tx) =>
-        tx.run('match (u:user {email: $email}) set u.password = $password return u', {
-          email: email,
-          password: hashedPassword,
-        })
-      );
-
-      return updatedUser.records.map((record) => record.get('u').properties);
-    });
+    return {
+      id: updatedUser.id,
+      name: updatedUser.name,
+      email: updatedUser.email,
+      userName: updatedUser.userName,
+      avatar: updatedUser.avatar,
+      confirmed: updatedUser.confirmed,
+      verified: updatedUser.verified,
+      desactivated: updatedUser.desactivated,
+      createdAt: String(convertInteger(updatedUser.createdAt)),
+      followers: updatedUser.followers,
+      followings: updatedUser.followings,
+      phone: updatedUser.phone,
+    };
   } catch (error) {
     deps.log?.error({ error, email }, 'Change password failed');
     if (
@@ -759,6 +769,37 @@ export async function checkForSubscriptionbyUserId(
   }
 }
 
+/**
+ * Get all subscriptions for a user
+ */
+export async function getAllSubscriptionsForUser(
+  userId: string,
+  deps: UserServiceDeps
+): Promise<
+  Array<{ sellerId: string; subscriptionId: string; planName: string; planPrice: number }>
+> {
+  try {
+    return await deps.neo4j.withSession(async (session) => {
+      const result = await session.executeRead((tx) =>
+        tx.run(
+          'match (u:user {id: $userId})-[subscribed:SUBSCRIBED_TO]->(s:seller) match (s)-[:HAS_A]->(p:subscription_plan {id: subscribed.subscriptionPlanId}) return s.id as sellerId, subscribed.subscriptionId as subscriptionId, p.name as planName, p.price as planPrice',
+          { userId }
+        )
+      );
+
+      return result.records.map((record) => ({
+        sellerId: record.get('sellerId'),
+        subscriptionId: record.get('subscriptionId'),
+        planName: record.get('planName'),
+        planPrice: record.get('planPrice'),
+      }));
+    });
+  } catch (error) {
+    deps.log?.error({ error, userId }, 'Get all subscriptions failed');
+    throw new InternalServerError('Failed to retrieve subscriptions');
+  }
+}
+
 export async function getFollowedSellers(
   userId: string,
   role: string,
@@ -788,10 +829,14 @@ export async function getFollowedSellers(
       }
 
       return role === RolesEnum.BUYER
-        ? //@ts-ignore
-          followedSellers.records.map((record) => record.get('user').properties)
-        : //@ts-ignore
-          followedSellers.records.map((record) => record.get('buyerUser').properties);
+        ? followedSellers.records.map(
+            (record: { get: (arg0: string) => { (): any; new (): any; properties: any } }) =>
+              record.get('user').properties
+          )
+        : followedSellers.records.map(
+            (record: { get: (arg0: string) => { (): any; new (): any; properties: any } }) =>
+              record.get('buyerUser').properties
+          );
     });
   } catch (error) {
     deps.log?.error({ error, userId, role }, 'Get followed sellers failed');
